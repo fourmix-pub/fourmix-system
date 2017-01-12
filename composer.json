@@ -9,17 +9,6 @@
         {
             "name": "Fourmix.Co.,Ltd",
             "email": "fourmix-system@fourmix.co.jp",
-            "role": "Company"
-        },
-        {
-            "name": "Wu Jie",
-            "email": "kgo@fourmix.co.jp",
-            "role": "Developer"
-        },
-        {
-            "name": "Sakura Tanaka",
-            "email": "stanaka@fourmix.co.jp ",
-            "role": "Developer"
         }
     ],
     "require": {
