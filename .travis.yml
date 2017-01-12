@@ -16,5 +16,4 @@ script:
   - phpunit
 
 notifications:
-  emails:
-    - fourmix-system@fourmix.co.jp
+  slack: fourmix-dev:I92hDzaBbZyU9fQBUTjXYvxr
