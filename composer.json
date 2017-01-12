@@ -4,11 +4,22 @@
     "keywords": ["Log System", "laravel", "Fourmix"],
     "license": "MIT",
     "type": "project",
+    "homepage": "http://www.fourmix.co.jp",
     "authors": [
         {
             "name": "Fourmix.Co.,Ltd",
             "email": "fourmix-system@fourmix.co.jp",
             "role": "Company"
+        },
+        {
+            "name": "Wu Jie",
+            "email": "kgo@fourmix.co.jp",
+            "role": "Developer"
+        },
+        {
+            "name": "Sakura Tanaka",
+            "email": "stanaka@fourmix.co.jp ",
+            "role": "Developer"
         }
     ],
     "require": {
