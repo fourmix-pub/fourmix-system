@@ -4,7 +4,7 @@ php:
   - 7.0
 
 before_script:
-  - mysql -e 'create database fourmix-log;'
+  - mysql -e 'CREATE DATABASE fourmix-log;'
   - composer self-update
   - composer install
   - cp .env.travis .env
