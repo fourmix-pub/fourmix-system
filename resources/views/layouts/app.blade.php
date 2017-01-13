@@ -21,6 +21,14 @@
         @include('layouts.common.footer')
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        //時間
+        $(function(){
+            setInterval(function(){
+                $(".currentTime").text(new Date().toLocaleString());
+            },100);
+        });
+    </script>
 </body>
 </html>

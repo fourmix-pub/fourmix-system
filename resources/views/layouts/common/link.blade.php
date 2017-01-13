@@ -7,17 +7,10 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 <!-- Styles -->
-<link href="/css/app.css" rel="stylesheet">
-<script src="/js/app.js"></script>
+<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
 <!-- Scripts -->
 <script>
-    //時間
-    $(function(){
-        setInterval(function(){
-            $(".currentTime").text(new Date().toLocaleString());
-        },100);
-    });
     //Token
     window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),

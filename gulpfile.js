@@ -15,8 +15,7 @@ require('laravel-elixir-vue-2');
 
 elixir(function(mix) {
 
-    mix.copy('node_modules/jquery/dist/jquery.min.js', 'resources/assets/js/jquery.js');
-
-    mix.sass('app.scss').webpack('app.js')
+    mix.sass('app.scss')
+        .webpack('app.js');
 
 });
