@@ -8,6 +8,8 @@
 require('./bootstrap');
 require('./bootstrap-off-canvas-nav');
 require('./bootstrap-select');
+require('./bootstrap-markdown');
+require('./bootstrap-datetimepicker');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

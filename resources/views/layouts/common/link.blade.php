@@ -10,6 +10,7 @@
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
 <!-- Scripts -->
+<script src="{{ asset('js/lib.js') }}"></script>
 <script>
     //Token
     window.Laravel = <?php echo json_encode([
