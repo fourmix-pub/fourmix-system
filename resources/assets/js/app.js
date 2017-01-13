@@ -7,6 +7,7 @@
 
 require('./bootstrap');
 require('./bootstrap-off-canvas-nav');
+require('./bootstrap-select');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

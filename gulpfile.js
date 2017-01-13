@@ -24,6 +24,12 @@ elixir(function(mix) {
     ).copy(
         'node_modules/font-awesome/css/font-awesome.min.css',
         'resources/assets/css/font-awesome.css'
+    ).copy(
+        'node_modules/bootstrap-select/dist/css/bootstrap-select.min.css',
+        'resources/assets/css/bootstrap-select.css'
+    ).copy(
+        'node_modules/bootstrap-select/dist/js/bootstrap-select.min.js',
+        'resources/assets/js/bootstrap-select.js'
     );
 
     mix.sass(
@@ -37,6 +43,7 @@ elixir(function(mix) {
         'main.css',
         'callouts.css',
         'font-awesome.css',
+        'bootstrap-select.css',
         'bootstrap-off-canvas-nav.css'
     ], 'public/css/app.css');
 
