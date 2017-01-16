@@ -15,11 +15,13 @@ require('laravel-elixir-vue-2');
 
 elixir(function(mix) {
 
+    // bootstrap
     mix.copy(
         'node_modules/bootstrap-sass/assets/fonts/bootstrap',
         'public/fonts/bootstrap'
     );
 
+    // アイコン
     mix.copy(
         'node_modules/font-awesome/fonts',
         'public/fonts'
@@ -28,6 +30,7 @@ elixir(function(mix) {
         'resources/assets/css/font-awesome.css'
     );
 
+    //　bootstrap：selectプラグイン
     mix.copy(
         'node_modules/bootstrap-select/dist/css/bootstrap-select.min.css',
         'resources/assets/css/bootstrap-select.css'
@@ -36,6 +39,7 @@ elixir(function(mix) {
         'resources/assets/js/bootstrap-select.js'
     );
 
+    // bootstrap：Markdownプラグイン
     mix.copy(
         'node_modules/bootstrap-markdown/css/bootstrap-markdown.min.css',
         'resources/assets/css/bootstrap-markdown.css'
@@ -44,11 +48,13 @@ elixir(function(mix) {
         'resources/assets/js/bootstrap-markdown.js'
     );
 
+    // Markdownプラグイン
     mix.copy(
         'node_modules/marked/lib/marked.js',
         'resources/assets/js/marked.js'
     );
 
+    // bootstrap：カレンダープラグイン
     mix.copy(
         'node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
         'resources/assets/css/bootstrap-datetimepicker.css'
@@ -57,6 +63,7 @@ elixir(function(mix) {
         'resources/assets/js/bootstrap-datetimepicker.js'
     );
 
+    // カレンダープラグイン
     mix.copy(
         'node_modules/moment/min/moment.min.js',
         'resources/assets/js/moment.js'
@@ -65,10 +72,12 @@ elixir(function(mix) {
         'resources/assets/js/locales.js'
     );
 
+    // jquery
     mix.copy(
         'node_modules/jquery/dist/jquery.min.js',
         'resources/assets/js/jquery.js'
     );
+
 
     mix.sass(
         'app.scss',
@@ -86,6 +95,7 @@ elixir(function(mix) {
         'bootstrap-datetimepicker.css',
         'bootstrap-markdown.css'
     ], 'public/css/app.css');
+
 
     mix.scripts([
         'marked.js',
