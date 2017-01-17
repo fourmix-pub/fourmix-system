@@ -77,7 +77,6 @@ Route::get('/setting/customers', function () {
     return view('layouts.setting.customers');
 });
 
-
 /*
 |--------------------------------------------------------------------------
 | プロフィール情報
