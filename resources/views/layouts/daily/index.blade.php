@@ -1,17 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+
+<div class="row">
+    <div class="container">
+
+        @include('layouts.daily.header')
+
+        <div class="col-md-8">
             <div class="panel panel-default">
-                <div class="panel-heading">日報入力</div>
+                <div class="panel-heading">daily</div>
 
                 <div class="panel-body">
-                    日報画面
+                    aaaaa
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
 @endsection

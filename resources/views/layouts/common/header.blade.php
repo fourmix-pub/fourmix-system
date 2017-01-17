@@ -11,52 +11,44 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name') }}
-            </a>
+            @if (Auth::guest())
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name') }}
+                </a>
+            @else
+                <a class="navbar-brand" href="{{ url('/home') }}">
+                    {{ config('app.name') }}
+                </a>
+            @endif
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             @if (Auth::guest())
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="{{ url('/') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="{{ trans('auth.home') }}">
+                        <a href="{{ url('/') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="ホーム">
                             <span class="glyphicon glyphicon-home"></span>
                         </a>
                         <a href="{{ url('/') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-home"></span> {{ trans('auth.home') }}
+                            <span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;ホーム
                         </a>
                     </li>
-                    <li class="dropdown visible-xs-block">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <span class="glyphicon glyphicon-globe"></span> {{ trans('header.'.Config::get('app.locale')) }} <strong class="caret"></strong>
+                    <li>
+                        <a href="{{ url('/login') }}" class="visible-xs-block">
+                            <span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;ログイン
                         </a>
-                        {{--<ul class="dropdown-menu">
-                            <li>
-                                <a href="{{ route('lang', ['lang' => 'en']) }}">English</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('lang', ['lang' => 'ja']) }}">日本語</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('lang', ['lang' => 'zh']) }}">中文</a>
-                            </li>
-                        </ul>--}}
+                        <a href="{{ url('/register') }}" class="visible-xs-block">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;新規登録
+                        </a>
                     </li>
                 </ul>
-        @else
+            @else
             <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <br class="visible-xs-block">
                     <li class="dropdown visible-xs-block">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <span>
-                                @if(Auth::user()->photo != '')
-                                    <img src="{{ asset('storage/'.Auth::user()->photo) }}" style="width: 50px;height: 50px;">
-                                @else
-                                    <img src="{{ asset(Colorable::lindaleProfileImg(Auth::user()->email)) }}" style="width: 50px;height: 50px;">
-                                @endif
-                            </span>
+                            
                             <h3 style="color: #9e9e9e">{{ Auth::user()->name }}</h3>
                         </a>
                         <ul class="dropdown-menu" role="menu">
@@ -64,7 +56,7 @@
                                 <a href="{{ url('/logout') }}"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                    {{ trans('auth.logout') }}
+                                    ログアウト
                                 </a>
                                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
@@ -74,39 +66,65 @@
                     </li>
                     <hr class="visible-xs-block">
                     <li>
-                        <a href="{{ url('/home') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="{{ trans('auth.home') }}">
-                            <span class="glyphicon glyphicon-home"></span>
-                        </a>
-                        <a href="{{ url('/home') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-home"></span> {{ trans('auth.home') }}
+                        <li role="presentation" class="dropdown">
+                            <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="閲覧">
+                                <i class="fa fa-book" aria-hidden="true"></i>&nbsp;
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation"><a href="{{ url('/daily') }}">日報</a></li>
+                                <li role="presentation"><a href="{{ url('/daily') }}">集計</a></li>
+                            </ul>
+                        </li>
+                        <a href="{{ url('/daily') }}" class="visible-xs-block">
+                            <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;閲覧
                         </a>
                     </li>
                     <li>
-                        <a href="{{ url('/project') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="{{ trans('header.project') }}">
-                            <span class="glyphicon glyphicon-briefcase"></span>
-                        </a>
+                        <li role="presentation" class="dropdown">
+                            <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="プロジェクト">
+                                <span class="glyphicon glyphicon-briefcase"></span>&nbsp;
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation"><a href="{{ url('/project') }}">一覧</a></li>
+                                <li role="presentation"><a href="{{ url('/project') }}">個人予算</a></li>
+                                <li role="presentation"><a href="{{ url('/project') }}">台帳</a></li>
+                                <li role="presentation"><a href="{{ url('/project') }}">予算対</a></li>
+                            </ul>
+                        </li>
                         <a href="{{ url('/project') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-briefcase"></span> {{ trans('header.project') }}
+                            <span class="glyphicon glyphicon-briefcase"></span>&nbsp;&nbsp;プロジェクト
                         </a>
                     </li>
                     <li>
-                        <a href="{{ url('/task') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="{{ trans('header.tasks') }}">
-                            <span class="glyphicon glyphicon-tasks"></span>
-                        </a>
-                        <a href="{{ url('/task') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-tasks"></span> {{ trans('header.tasks') }}
+                        <li role="presentation" class="dropdown">
+                            <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="基本設定">
+                                <span class="glyphicon glyphicon-wrench"></span>&nbsp;
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation"><a href="{{ url('/setting/staff') }}">担当者</a></li>
+                                <li role="presentation"><a href="{{ url('/setting/work') }}">作業分類</a></li>
+                                <li role="presentation"><a href="{{ url('/setting/departments') }}">部門</a></li>
+                                <li role="presentation"><a href="{{ url('/setting/service') }}">勤務分類</a></li>
+                                <li role="presentation"><a href="{{ url('/setting/customers') }}">顧客</a></li>
+                            </ul>
+                        </li>
+                        <a href="{{ url('/setting') }}" class="visible-xs-block">
+                            <span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;基本設定
                         </a>
                     </li>
                     <li>
-                        <a href="{{ url('/todo') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="TODO">
+                        <a href="{{ url('/home#') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="ツール">
                             <span class="glyphicon glyphicon-check"></span>
                         </a>
-                        <a href="{{ url('/todo') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-check"></span> TODO
+                        <a href="{{ url('/home#') }}" class="visible-xs-block">
+                            <span class="glyphicon glyphicon-check"></span> ツール
                         </a>
                     </li>
                     {{--<li>
-                        <a href="{{ url('/schedule') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="{{ trans('header.schedule') }}">
+                        <a href="{{ url('/schedule') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="スケジュール">
                             <span class="glyphicon glyphicon-calendar"></span>
                         </a>
                         <a href="{{ url('/schedule') }}" class="visible-xs-block">
@@ -137,38 +155,22 @@
                             <span class="glyphicon glyphicon-comment"></span> {{ trans('header.bbs') }}
                         </a>
                     </li>--}}
-                    <li class="dropdown visible-xs-block">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <span class="glyphicon glyphicon-globe"></span> {{ trans('header.'.Config::get('app.locale')) }} <strong class="caret"></strong>
-                        </a>
-                        {{--<ul class="dropdown-menu">
-                            <li>
-                                <a href="{{ route('lang', ['lang' => 'en']) }}">English</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('lang', ['lang' => 'ja']) }}">日本語</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('lang', ['lang' => 'zh']) }}">中文</a>
-                            </li>
-                        </ul>--}}
-                    </li>
                     <li>
-                        <a href="{{ url('/settings/profile') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-cog"></span> {{ trans('header.settings') }}
+                        <a href="{{ url('/config') }}" class="visible-xs-block">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;プロフィール
                         </a>
                     </li>
-                    @if(Admin::is_super_admin(Auth::user()))
+                    {{-- @if(Admin::is_super_admin(Auth::user())) --}}
                         <li>
-                            <a href="{{ url('/admin') }}" class="visible-xs-block">
-                                <span class="glyphicon glyphicon-wrench"></span> {{ trans('header.admin') }}
+                            <a href="{{ url('/home#') }}" class="visible-xs-block">
+                                <span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;管理者設定
                             </a>
                         </li>
-                    @endif
+                    {{-- @endif --}}
                     <br class="visible-xs-block">
                     <br class="visible-xs-block">
                 </ul>
-        @endif
+            @endif
 
         <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right hidden-xs">
@@ -176,48 +178,40 @@
                 @else
 
                     <li>
-                        <a href="{{ url('/settings/profile') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="{{ trans('header.settings') }}">
-                            <span class="glyphicon glyphicon-cog"></span>
+                        <a href="{{ url('/config') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="プロフィール">
+                            <span class="glyphicon glyphicon-user"></span>
                         </a>
                     </li>
 
-                    @if(Admin::is_super_admin(Auth::user()))
-                        <li>
-                            <a href="{{ url('/admin') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="{{ trans('header.admin') }}">
-                                <span class="glyphicon glyphicon-wrench"></span>
-                            </a>
-                        </li>
-                    @endif
+                    {{-- @if(Admin::is_super_admin(Auth::user())) --}}
+                    <li>
+                        <a href="{{ url('/home#') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="管理者設定">
+                            <span class="glyphicon glyphicon-cog"></span>
+                        </a>
+                    </li>
+                    {{-- @endif --}}
                 @endif
-            <!-- 言語切り替え -->
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <span class="glyphicon glyphicon-globe"></span> {{ trans('header.'.Config::get('app.locale')) }} <strong class="caret"></strong>
-                    </a>
-                   {{-- <ul class="dropdown-menu">
-                        <li>
-                            <a href="{{ route('lang', ['lang' => 'en']) }}">English</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('lang', ['lang' => 'ja']) }}">日本語</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('lang', ['lang' => 'zh']) }}">中文</a>
-                        </li>
-                    </ul>--}}
-                </li>
                 <!-- Authentication Links -->
                 @if (Auth::guest())
-                    <li><a href="{{ url('/login') }}">{{ trans('auth.login') }}</a></li>
+                    <li>
+                        <a href="{{ url('/login') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="ログイン">
+                            <span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;ログイン
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/register') }}" class="my-tooltip hidden-xs">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;新規登録
+                        </a>
+                    </li>
                 @else
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="{{ trans('auth.logout') }}">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="ログアウト">
                             <span>
-                                @if(Auth::user()->photo != '')
+                                {{-- @if(Auth::user()->photo != '')
                                     <img src="{{ asset('storage/'.Auth::user()->photo) }}" style="padding: 0px;width: 22px;height: 22px;">
                                 @else
-                                    <img src="{{ asset(Colorable::lindaleProfileImg(Auth::user()->email)) }}" style="padding: 0px;width: 22px;height: 22px;">
-                                @endif
+                                    <img src="{{ asset(Colorable::profileImg(Auth::user()->email)) }}" style="padding: 0px;width: 22px;height: 22px;">
+                                @endif --}}
                             </span>
                             <span class="caret"></span>
                         </a>
@@ -227,7 +221,7 @@
                                 <a href="#"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                    {{ trans('auth.logout') }}
+                                    &nbsp;&nbsp;ログアウト
                                 </a>
 
                                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
