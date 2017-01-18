@@ -4,7 +4,7 @@
 
     @include('layouts.common.link')
 
-    <title>{{ config('app.name') }}</title>
+    <title>@yield('title')</title>
 
 </head>
 <body>
@@ -28,6 +28,9 @@
             setInterval(function(){
                 $(".currentTime").text(new Date().toLocaleString());
             },100);
+        });
+        $(function () {
+            $('[data-toggle="popover"]').popover();
         });
     </script>
 </body>

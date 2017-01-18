@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
-@section('content')
+@section('title')
+    得意先設定
+@endsection
 
+@section('content')
 <div class="row">
     <div class="container">
 
