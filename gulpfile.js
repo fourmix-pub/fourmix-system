@@ -93,7 +93,8 @@ elixir(function(mix) {
         'bootstrap-select.css',
         'bootstrap-off-canvas-nav.css',
         'bootstrap-datetimepicker.css',
-        'bootstrap-markdown.css'
+        'bootstrap-markdown.css',
+        'button.css'
     ], 'public/css/app.css');
 
 
