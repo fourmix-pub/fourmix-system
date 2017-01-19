@@ -37,9 +37,9 @@
                         <a href="{{ url('/login') }}" class="visible-xs-block">
                             <span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;ログイン
                         </a>
-                        <a href="{{ url('/register') }}" class="visible-xs-block">
+                        {{-- <a href="{{ url('/register') }}" class="visible-xs-block">
                             <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;新規登録
-                        </a>
+                        </a> --}}
                     </li>
                 </ul>
             @else
@@ -76,9 +76,11 @@
                                 <li role="presentation"><a href="{{ url('/daily') }}">集計</a></li>
                             </ul>
                         </li>
-                        <a href="{{ url('/daily') }}" class="visible-xs-block">
-                            <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;閲覧
-                        </a>
+                        <li>
+                            <a href="{{ url('/daily') }}" class="visible-xs-block">
+                                <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;閲覧
+                            </a>
+                        </li>
                     </li>
                     <li>
                         <li role="presentation" class="dropdown">
@@ -93,9 +95,11 @@
                                 <li role="presentation"><a href="{{ url('/project') }}">予算対</a></li>
                             </ul>
                         </li>
-                        <a href="{{ url('/project') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-briefcase"></span>&nbsp;&nbsp;プロジェクト
-                        </a>
+                        <li>
+                            <a href="{{ url('/project') }}" class="visible-xs-block">
+                                <span class="glyphicon glyphicon-briefcase"></span>&nbsp;&nbsp;プロジェクト
+                            </a>
+                        </li>
                     </li>
                     <li>
                         <li role="presentation" class="dropdown">
@@ -111,9 +115,11 @@
                                 <li role="presentation"><a href="{{ url('/setting/customers') }}">顧客</a></li>
                             </ul>
                         </li>
-                        <a href="{{ url('/setting') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;基本設定
-                        </a>
+                        <li>
+                            <a href="{{ url('/setting/staff') }}" class="visible-xs-block">
+                                <span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;基本設定
+                            </a>
+                        </li>
                     </li>
                     <li>
                         <a href="{{ url('/home#') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="ツール">
@@ -198,11 +204,11 @@
                             <span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;ログイン
                         </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ url('/register') }}" class="my-tooltip hidden-xs">
                             <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;新規登録
                         </a>
-                    </li>
+                    </li> --}}
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="ログアウト">

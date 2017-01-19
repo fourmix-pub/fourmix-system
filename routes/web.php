@@ -27,13 +27,13 @@ Route::get('/home', 'HomeController@index');
 |--------------------------------------------------------------------------
 */
 Route::get('/daily/', function () {
-    return view('layouts.daily.index');
+    return view('layouts.content.daily.index');
 });
 Route::get('/daily/', function () {
-    return view('layouts.daily.index');
+    return view('layouts.content.daily.index');
 });
 Route::get('/daily/', function () {
-    return view('layouts.daily.index');
+    return view('layouts.content.daily.index');
 });
 
 /*
@@ -43,16 +43,16 @@ Route::get('/daily/', function () {
 |--------------------------------------------------------------------------
 */
 Route::get('/project/', function () {
-    return view('layouts.project.index');
+    return view('layouts.content.project.index');
 });
 Route::get('/project/', function () {
-    return view('layouts.project.index');
+    return view('layouts.content.project.index');
 });
 Route::get('/project/', function () {
-    return view('layouts.project.index');
+    return view('layouts.content.project.index');
 });
 Route::get('/project/', function () {
-    return view('layouts.project.index');
+    return view('layouts.content.project.index');
 });
 
 /*
@@ -62,19 +62,19 @@ Route::get('/project/', function () {
 |--------------------------------------------------------------------------
 */
 Route::get('/setting/staff', function () {
-    return view('layouts.setting.staff');
+    return view('layouts.content.setting.staff');
 });
 Route::get('/setting/work', function () {
-    return view('layouts.setting.work');
+    return view('layouts.content.setting.work');
 });
 Route::get('/setting/departments', function () {
-    return view('layouts.setting.departments');
+    return view('layouts.content.setting.departments');
 });
 Route::get('/setting/service', function () {
-    return view('layouts.setting.service');
+    return view('layouts.content.setting.service');
 });
 Route::get('/setting/customers', function () {
-    return view('layouts.setting.customers');
+    return view('layouts.content.setting.customers');
 });
 
 /*
@@ -83,7 +83,7 @@ Route::get('/setting/customers', function () {
 |--------------------------------------------------------------------------
 */
 Route::get('/config/', function () {
-    return view('layouts.config.index');
+    return view('layouts.content.config.index');
 });
 
 /*
@@ -92,5 +92,5 @@ Route::get('/config/', function () {
 |--------------------------------------------------------------------------
 */
 // Route::get('/config/', function () {
-//     return view('layouts.config.index');
+//     return view('layouts.content.config.index');
 // });

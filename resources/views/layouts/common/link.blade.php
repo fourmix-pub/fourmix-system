@@ -25,3 +25,15 @@
             'csrfToken' => csrf_token(),
     ]); ?>
 </script>
+<script type="text/javascript">
+    $(function () {
+        $('.datetimepicker3.started_time').datetimepicker({
+            format: 'LT'
+        });
+    });
+    $(function () {
+        $('.datetimepicker3.ended_time').datetimepicker({
+            format: 'LT'
+        });
+    });
+</script>
