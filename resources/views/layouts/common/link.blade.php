@@ -26,14 +26,22 @@
     ]); ?>
 </script>
 <script type="text/javascript">
+    // 担当者追加：始業時刻
     $(function () {
         $('.datetimepicker3.started_time').datetimepicker({
             format: 'LT'
         });
     });
+    // 担当者追加：終業時刻
     $(function () {
         $('.datetimepicker3.ended_time').datetimepicker({
             format: 'LT'
+        });
+    });
+    // プロジェクト追加・検索：開始日
+    $(function () {
+        $('.datetimepicker1.started_day').datetimepicker({
+            
         });
     });
 </script>

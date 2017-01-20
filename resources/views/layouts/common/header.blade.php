@@ -66,6 +66,14 @@
                     </li>
                     <hr class="visible-xs-block">
                     <li>
+                        <a href="{{ url('/home#') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="日報作成">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="{{ url('/home#') }}" class="visible-xs-block">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;日報作成
+                        </a>
+                    </li>
+                    <li>
                         <li role="presentation" class="dropdown">
                             <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="閲覧">
                                 <i class="fa fa-book" aria-hidden="true"></i>&nbsp;
@@ -98,26 +106,6 @@
                         <li>
                             <a href="{{ url('/project') }}" class="visible-xs-block">
                                 <span class="glyphicon glyphicon-briefcase"></span>&nbsp;&nbsp;プロジェクト
-                            </a>
-                        </li>
-                    </li>
-                    <li>
-                        <li role="presentation" class="dropdown">
-                            <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="基本設定">
-                                <span class="glyphicon glyphicon-wrench"></span>&nbsp;
-                                <i class="fa fa-caret-down" aria-hidden="true"></i>
-                            </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li role="presentation"><a href="{{ url('/setting/staff') }}">担当者</a></li>
-                                <li role="presentation"><a href="{{ url('/setting/work') }}">作業分類</a></li>
-                                <li role="presentation"><a href="{{ url('/setting/departments') }}">部門</a></li>
-                                <li role="presentation"><a href="{{ url('/setting/service') }}">勤務分類</a></li>
-                                <li role="presentation"><a href="{{ url('/setting/customers') }}">顧客</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="{{ url('/setting/staff') }}" class="visible-xs-block">
-                                <span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;基本設定
                             </a>
                         </li>
                     </li>
@@ -162,6 +150,11 @@
                         </a>
                     </li>--}}
                     <li>
+                        <a href="{{ url('/setting/staff') }}" class="visible-xs-block">
+                            <span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;基本設定
+                        </a>
+                    </li>
+                    <li>
                         <a href="{{ url('/config') }}" class="visible-xs-block">
                             <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;プロフィール
                         </a>
@@ -182,13 +175,21 @@
             <ul class="nav navbar-nav navbar-right hidden-xs">
                 @if(Auth::guest())
                 @else
-
                     <li>
-                        <a href="{{ url('/config') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="プロフィール">
-                            <span class="glyphicon glyphicon-user"></span>
-                        </a>
+                        <li role="presentation" class="dropdown">
+                            <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="基本設定">
+                                <span class="glyphicon glyphicon-wrench"></span>&nbsp;
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation"><a href="{{ url('/setting/staff') }}">担当者</a></li>
+                                <li role="presentation"><a href="{{ url('/setting/work') }}">作業分類</a></li>
+                                <li role="presentation"><a href="{{ url('/setting/departments') }}">部門</a></li>
+                                <li role="presentation"><a href="{{ url('/setting/service') }}">勤務分類</a></li>
+                                <li role="presentation"><a href="{{ url('/setting/customers') }}">顧客</a></li>
+                            </ul>
+                        </li>
                     </li>
-
                     {{-- @if(Admin::is_super_admin(Auth::user())) --}}
                     <li>
                         <a href="{{ url('/home#') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="管理者設定">
@@ -224,10 +225,15 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li>
+                                <a href="{{ url('/config') }}">
+                                    <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;プロフィール
+                                </a>
+                            </li>
+                            <li>
                                 <a href="#"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                    &nbsp;&nbsp;ログアウト
+                                    <span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;ログアウト
                                 </a>
 
                                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
