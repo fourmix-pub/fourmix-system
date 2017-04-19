@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-	プロジェクト一覧
+	個人予算一覧
 @endsection
 
 @section('content')
@@ -10,15 +10,18 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
-			<h2>
-				<i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;&nbsp;プロジェクト一覧
+			<div>
+				<h2><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;&nbsp;個人予算一覧</h2>
+			</div>
+
+			<div class="container">
 				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
 				</button>
 				<button type="button" class="btn btn-danger pull-right" style="margin-right: 5%;" data-toggle="modal" data-target="#add">
 					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;追加
 				</button>
-			</h2>
+			</div>
 		</div>
 	</div>
 </div>
@@ -30,7 +33,7 @@
 		{{-- PC版サイドメニュー --}}
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				@include('layouts.content.project.xs-side_menu')
+				@include('layouts.content.project.xs-side-menu')
 			</div>
 		</div>
 
@@ -132,41 +135,31 @@
 											<label class="col-xs-3 control-label" for="staff">責任者名*</label>
 											<div class="col-xs-8">
 												<select class="selectpicker form-control" data-live-search="true" title="責任者名">
-													<option data-tokens="user">田中咲良</option>
-													<option data-tokens="user">呉傑</option>
-													<option data-tokens="user"></option>
+													<option data-tokens="stanaka">田中咲良</option>
+													<option data-tokens="kgo">呉傑</option>
+													<option data-tokens="kyamamoto">山本耕史郎</option>
 												</select>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="col-xs-3 control-label" for="contract_money">受注金額</label>
 											<div class="col-xs-8">
-												<div class='input-group date datetimepicker3 contract_money'>
-													<input type='text' class="form-control" value="09:30" />
-													<span class="input-group-addon">
-														<span class="glyphicon glyphicon-time"></span>
-													</span>
-												</div>
+												<input type="text" class="form-control" id="contract_money"  placeholder="受注金額" />
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="col-xs-3 control-label" for="budget">実行予算</label>
 											<div class="col-xs-8">
-												<div class='input-group date datetimepicker3 budget'>
-													<input type='text' class="form-control" value="18:30"/>
-													<span class="input-group-addon">
-														<span class="glyphicon glyphicon-time"></span>
-													</span>
-												</div>
+												<input type="text" class="form-control" id="budget"  placeholder="実行予算" />
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="col-xs-3 control-label" for="started_day">開始日</label>
 											<div class="col-xs-8">
 												<div class='input-group date datetimepicker1 started_day'>
-													<input type='text' class="form-control" value="18:30"/>
+													<input type='text' class="form-control"/>
 													<span class="input-group-addon">
-														<span class="glyphicon glyphicon-time"></span>
+														 <span class="glyphicon glyphicon-calendar"></span>
 													</span>
 												</div>
 											</div>
@@ -177,7 +170,7 @@
 												<div class='input-group date datetimepicker3 ended_day'>
 													<input type='text' class="form-control" value="18:30"/>
 													<span class="input-group-addon">
-														<span class="glyphicon glyphicon-time"></span>
+														 <span class="glyphicon glyphicon-calendar"></span>
 													</span>
 												</div>
 											</div>
@@ -188,31 +181,22 @@
 												<div class='input-group date datetimepicker3 ended_time'>
 													<input type='text' class="form-control" value="18:30"/>
 													<span class="input-group-addon">
-														<span class="glyphicon glyphicon-time"></span>
+														 <span class="glyphicon glyphicon-calendar"></span>
 													</span>
 												</div>
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-xs-3 control-label" for="ended_time">非表示フラグ</label>
+											<label class="col-xs-3 control-label" for="note">備考</label>
 											<div class="col-xs-8">
-												<div class='input-group date datetimepicker3 ended_time'>
-													<input type='text' class="form-control" value="18:30"/>
-													<span class="input-group-addon">
-														<span class="glyphicon glyphicon-time"></span>
-													</span>
-												</div>
+												<textarea class="form-control" rows="3" id="note"></textarea>
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-xs-3 control-label" for="ended_time">備考</label>
+											<label class="col-xs-3 control-label" for="non-display_flag">非表示フラグ</label>
 											<div class="col-xs-8">
-												<div class='input-group date datetimepicker3 ended_time'>
-													<input type='text' class="form-control" value="18:30"/>
-													<span class="input-group-addon">
-														<span class="glyphicon glyphicon-time"></span>
-													</span>
-												</div>
+											<div></div>
+												<input type="checkbox" value="">
 											</div>
 										</div>
 									</div>
@@ -425,7 +409,7 @@
 	</div>
 	{{-- スマホ版サイドメニュー --}}
 	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-		@include('layouts.content.project.side_menu')
+		@include('layouts.content.project.side-menu')
 	</div>
 </div>
 @endsection

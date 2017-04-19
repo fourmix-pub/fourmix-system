@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="row-inline">
-    @include('layouts.content.daily.side_menu')
+    @include('layouts.content.daily.side-menu')
 </div>
 
 <div class="row-inline">

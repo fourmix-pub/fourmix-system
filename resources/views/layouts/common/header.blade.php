@@ -151,7 +151,7 @@
                     </li>--}}
                     <li>
                         <a href="{{ url('/setting/staff') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;基本設定
+                            <span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;基本設定
                         </a>
                     </li>
                     <li>
@@ -162,7 +162,7 @@
                     {{-- @if(Admin::is_super_admin(Auth::user())) --}}
                         <li>
                             <a href="{{ url('/home#') }}" class="visible-xs-block">
-                                <span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;管理者設定
+                                <span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;管理者設定
                             </a>
                         </li>
                     {{-- @endif --}}
@@ -178,7 +178,7 @@
                     <li>
                         <li role="presentation" class="dropdown">
                             <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="基本設定">
-                                <span class="glyphicon glyphicon-wrench"></span>&nbsp;
+                                <span class="glyphicon glyphicon-cog"></span>&nbsp;
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
@@ -193,7 +193,7 @@
                     {{-- @if(Admin::is_super_admin(Auth::user())) --}}
                     <li>
                         <a href="{{ url('/home#') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="管理者設定">
-                            <span class="glyphicon glyphicon-cog"></span>
+                            <span class="glyphicon glyphicon-wrench"></span>
                         </a>
                     </li>
                     {{-- @endif --}}

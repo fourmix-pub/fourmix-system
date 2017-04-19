@@ -42,17 +42,21 @@ Route::get('/daily/', function () {
 |	一覧、個人予算、台帳、予算対
 |--------------------------------------------------------------------------
 */
+// 一覧
 Route::get('/project/', function () {
-    return view('layouts.content.project.index');
+    return view('layouts.content.project.category.index');
 });
-Route::get('/project/', function () {
-    return view('layouts.content.project.index');
+// 個人予算
+Route::get('/project/personal-budget', function () {
+    return view('layouts.content.project.category.personal-budget');
 });
-Route::get('/project/', function () {
-    return view('layouts.content.project.index');
+// 台帳
+Route::get('/project/ledger', function () {
+    return view('layouts.content.project.category.ledger');
 });
-Route::get('/project/', function () {
-    return view('layouts.content.project.index');
+// 予算対
+Route::get('/project/project-budget', function () {
+    return view('layouts.content.project.category.project-budget');
 });
 
 /*
@@ -62,19 +66,19 @@ Route::get('/project/', function () {
 |--------------------------------------------------------------------------
 */
 Route::get('/setting/staff', function () {
-    return view('layouts.content.setting.staff');
+    return view('layouts.content.setting.category.staff');
 });
 Route::get('/setting/work', function () {
-    return view('layouts.content.setting.work');
+    return view('layouts.content.setting.category.work');
 });
 Route::get('/setting/departments', function () {
-    return view('layouts.content.setting.departments');
+    return view('layouts.content.setting.category.departments');
 });
 Route::get('/setting/service', function () {
-    return view('layouts.content.setting.service');
+    return view('layouts.content.setting.category.service');
 });
 Route::get('/setting/customers', function () {
-    return view('layouts.content.setting.customers');
+    return view('layouts.content.setting.category.customers');
 });
 
 /*
