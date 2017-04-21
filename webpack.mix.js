@@ -69,7 +69,7 @@ mix.copy(
 );
 
 mix.js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'resources/assets/css/lib.css');
+    .sass('resources/assets/sass/app.scss', '../resources/assets/css/lib.css');
 
 mix.styles([
     'resources/assets/css/lib.css',
