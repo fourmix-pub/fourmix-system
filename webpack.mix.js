@@ -72,7 +72,6 @@ mix.js('resources/assets/js/app.js', 'public/js')
     .sass('resources/assets/sass/app.scss', 'resources/assets/css/lib.css');
 
 mix.styles([
-<<<<<<< HEAD
     'resources/assets/css/lib.css',
     'resources/assets/css/main.css',
     'resources/assets/css/callouts.css',
@@ -82,30 +81,12 @@ mix.styles([
     'resources/assets/css/bootstrap-datetimepicker.css',
     'resources/assets/css/bootstrap-markdown.css',
     'resources/assets/css/button.css'
-=======
-    'lib.css',
-    'main.css',
-    'callouts.css',
-    'font-awesome.css',
-    'bootstrap-select.css',
-    'bootstrap-off-canvas-nav.css',
-    'bootstrap-datetimepicker.css',
-    'bootstrap-markdown.css',
-    'button.css'
->>>>>>> origin/master
 ], 'public/css/app.css');
 
 
 mix.scripts([
-<<<<<<< HEAD
     'resources/assets/js/marked.js',
     'resources/assets/js/moment.js',
     'resources/assets/js/locales.js',
     'resources/assets/js/jquery.js'
-=======
-    'marked.js',
-    'moment.js',
-    'locales.js',
-    'jquery.js'
->>>>>>> origin/master
 ], 'public/js/lib.js');
