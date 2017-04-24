@@ -40,31 +40,37 @@
 				<div class="collapse" id="search"　style="margin:1% 1%;">
 					<div class="panel panel-default">
 						<div class="panel-body">
-								<form class="form-inline">
-									<div class="row form text-center">
-										<label class="sr-only" for="staff">担当者</label>
-										<div class="btn-group" style="margin:1% 1%;">
-											<input type="text" class="form-control" id="staff" style="width:180px" placeholder="担当者" />
-										</div> 
-
-										<label class="sr-only" for="department">部門</label>
-										<div class="btn-group" style="margin:1% 1%;">
-											<select class="selectpicker" title="部門"　id="department" style="width:180px">
-												<option>システムデザイン</option>
-												<option>コンセプトデザイン</option>
-												<option>サポート</option>
-											</select>
-										</div>
-										<div class="btn-group" >
-											<button type="button" class="btn" onclick="location.href=''">   
-												<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
-											</button>
-										</div>
+							<form class="form-horizontal">
+								<div class="form-group">
+									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">担当者</label>
+									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+										<select class="selectpicker" data-width="100%" data-live-search="true" title="担当者">
+											<option data-tokens="">櫻井翔</option>
+											<option data-tokens="">佐々木希</option>
+										</select>
 									</div>
-								</form>
-							</div>
+								</div>
+								<div class="form-group">
+									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">部門名</label>
+									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+										<select class="selectpicker" data-width="100%" title="部門名">
+											<option>システムデザイン</option>
+											<option>コンセプトデザイン</option>
+											<option>サポート</option>
+										</select>
+									</div>
+								</div>
+								<div class="row text-center">
+									<div class="btn-group" style="margin:2% 0% 0% 0%;">
+										<button type="button" class="btn" onclick="location.href=''">
+											<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
+										</button>
+									</div>
+								</div>
+							</form>
 						</div>
-				<hr Width="100%">
+						<hr Width="100%">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -82,19 +88,19 @@
 							<form class="form-horizontal">
 								<div class="modal-body">
 									<div class="form-group">
-										<label class="col-xs-3 control-label" for="staff">担当者*</label>
+										<label class="col-xs-3 control-label" for="staff">担当者<span class="text-danger">*</span></label>
 										<div class="col-xs-8">
 											<input type="text" class="form-control" id="staff"  placeholder="担当者" />
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-xs-3 control-label" for="unit_cost">作業単価*</label>
+										<label class="col-xs-3 control-label" for="unit_cost">作業単価<span class="text-danger">*</span></label>
 										<div class="col-xs-8">
 											<input type="text" class="form-control" id="unit_cost"  placeholder="作業単価" />
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-xs-3 control-label" for="department">部門*</label>
+										<label class="col-xs-3 control-label" for="department">部門<span class="text-danger">*</span></label>
 											<select class="selectpicker col-xs-8" title="部門"　id="department">
 												<option>システムデザイン</option>
 												<option>コンセプトデザイン</option>
@@ -102,13 +108,13 @@
 											</select>
 									</div>
 									<div class="form-group">
-										<label class="col-xs-3 control-label" for="mail_address">メールアドレス*</label>
+										<label class="col-xs-3 control-label" for="mail_address">メールアドレス<span class="text-danger">*</span></label>
 										<div class="col-xs-8">
 											<input type="text" class="form-control" id="mail_address"  placeholder="メールアドレス" />
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-xs-3 control-label" for="started_time">始業時刻*</label>
+										<label class="col-xs-3 control-label" for="started_time">始業時刻<span class="text-danger">*</span></label>
 										<div class="col-xs-8">
 											<div class='input-group date datetimepicker3 started_time'>
 												<input type='text' class="form-control" value="09:30" />
@@ -119,7 +125,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-xs-3 control-label" for="ended_time">終業時刻*</label>
+										<label class="col-xs-3 control-label" for="ended_time">終業時刻<span class="text-danger">*</span></label>
 										<div class="col-xs-8">
 											<div class='input-group date datetimepicker3 ended_time'>
 												<input type='text' class="form-control" value="18:30"/>

@@ -11,7 +11,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
 			<div>
-				<h2><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;&nbsp;プロジェクト台帳</h2>
+				<h2><i class="fa fa-th-list" aria-hidden="true"></i>&nbsp;&nbsp;プロジェクト台帳</h2>
 			</div>
 
 			<div class="container">
@@ -39,93 +39,94 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="collapse" id="search" style="margin:1% 1%;">
 					<div class="panel panel-default">
-
-						<div class="row">
-							<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-
-							<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-								<div class="panel-body">
-										<form class="form-inline">
-
-											<div class="row text-center">
-												<div class="form-group">
-													<label class="sr-only" for="project">プロジェクト</label>
-													<select class="selectpicker" data-live-search="true" title="プロジェクト">
-														<option data-tokens="fourmix-system">社内ログ管理システム</option>
-														<option data-tokens="rhizo-me">株式会社リゾーム</option>
-														<option data-tokens="asics">株式会社アシックス</option>
-													</select>
-												</div>
-
-												<div class="form-group">
-													<label class="sr-only" for="staff">責任者</label>
-													<div class="btn-group" style="margin:1% 1%;">
-														<select class="selectpicker" title="責任者" id="staff" style="width:180px">
-															<option>中栄進</option>
-														</select>
-													</div>
-												</div>
-											</div>
-											<br>
-											<div class="row text-center">
-												<div class="form-group">
-													<label class="sr-only" for="department">部門*</label>
-													<select id="department" class="selectpicker" data-live-search="true" title="部門">
-														<option>システムデザイン</option>
-														<option>コンセプトデザイン</option>
-														<option>サポート</option>
-													</select>
-												</div>
-
-												<div class="form-group">
-													<label class="radio-inline">
-														<input type="radio" name="project_status" value="">全
-													</label>
-													<label class="radio-inline">
-														<input type="radio" name="project_status" value="">完
-													</label>
-													<label class="radio-inline">
-														<input type="radio" name="project_status" value="">未
-													</label>
-												</div>
-											</div>
-											<br>
-											<div class="row text-center">
-												<label class="sr-only" for="started_day">開始日</label>
-												<div class='input-group date datetimepicker1 started_day'>
-													<input type='text' class="form-control" placeholder="開始日" />
-													<span class="input-group-addon">
-														<span class="glyphicon glyphicon-calendar"></span>
-													</span>
-												</div>
-												<label>～</label>
-												<label class="sr-only" for="ended_day">終了日</label>
-												<div class='input-group date datetimepicker3 ended_day'>
-													<input type='text' class="form-control" placeholder="終了日" />
-													<span class="input-group-addon">
-														<span class="glyphicon glyphicon-calendar"></span>
-													</span>
-												</div>
-											</div>
-											<br>
-											<div class="row text-center">
-												<div class="btn-group" style="margin:2% 0% 0% 0%;">
-													<button type="button" class="btn" onclick="location.href=''">
-														<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
-													</button>
-												</div>
-											</div>
-											<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-										</form>
+						<div class="panel-body">
+							<form class="form-horizontal">
+								<div class="form-group">
+									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">プロジェクト</label>
+									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+										<select class="selectpicker" data-width="100%" data-live-search="true" title="プロジェクト">
+											<option data-tokens="fourmix-system">社内ログ管理システム</option>
+											<option data-tokens="rhizo-me">株式会社リゾーム</option>
+											<option data-tokens="asics">株式会社アシックス</option>
+										</select>
+									</div>
+									<div class="col-sm-1"></div>
+								</div>
+								<div class="form-group">
+									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">責任者</label>
+									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+										<select class="selectpicker" data-width="100%" data-live-search="true" title="責任者">
+											<option data-tokens="">櫻井翔</option>
+											<option data-tokens="">佐々木希</option>
+										</select>
 									</div>
 								</div>
-							</div>
+								<div class="form-group">
+									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">部門</label>
+									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+										<select class="selectpicker" data-width="100%" title="部門">
+											<option>システムデザイン</option>
+											<option>コンセプトデザイン</option>
+											<option>サポート</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">表示区分</label>
+									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+										<label class="radio-inline">
+											<input type="radio" name="project_status" value="">全て
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="project_status" value="">完了
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="project_status" value="">未完了
+										</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">期間</label>
+									<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+										<div class='input-group date datetimepicker1 started_day'>
+											<input type='text' class="form-control" placeholder="開始日" />
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+										</div>
+									</div>
+									<label class="col-xs-1 col-sm-1 col-md-1 col-lg-1 control-label" style="text-align: center">～</label>
+									<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+										<div class='input-group date datetimepicker1 started_day'>
+											<input type='text' class="form-control" placeholder="終了日" />
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+										</div>
+									</div>
+									<script type="text/javascript">
+                                        $(function () {
+                                            $('.datetimepicker1').datetimepicker({
+                                                format : 'YYYY-MM-DD',
+                                                locale : 'ja',
+                                                dayViewHeaderFormat : 'YYYY年M月'
+                                            });
+                                        });
+									</script>
+								</div>
+								<div class="row text-center">
+									<div class="btn-group" style="margin:2% 0% 0% 0%;">
+										<button type="button" class="btn" onclick="location.href=''">
+											<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
+										</button>
+									</div>
+								</div>
+							</form>
 						</div>
-
-					<hr Width="100%">
-
 					</div>
+					<hr Width="100%">
 				</div>
+			</div>
 
 
 			{{-- 一覧 --}}
@@ -160,7 +161,7 @@
 								<td>実行予算</td>
 								<td>3,000,000円</td>
 								<td>完成日</td>
-								<td>32009/04/02</td>
+								<td>2009/04/02</td>
 							</tr>
 						</table>
 					</div>

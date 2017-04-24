@@ -40,22 +40,33 @@
 				<div class="collapse" id="search"　style="margin:1% 1%;">
 					<div class="panel panel-default">
 						<div class="panel-body">
-							<form class="form-inline">
+							<form class="form-horizontal">
+								<div class="form-group">
+									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">企業名</label>
+									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+										<select class="selectpicker" data-width="100%" data-live-search="true" title="企業名">
+											<option data-tokens="fourmix-system">社内ログ管理システム</option>
+											<option data-tokens="rhizo-me">株式会社リゾーム</option>
+											<option data-tokens="asics">株式会社アシックス</option>
+										</select>
+									</div>
+									<div class="col-sm-1"></div>
+								</div>
+								<div class="form-group">
+									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">クライアント種類</label>
+									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+										<label class="checkbox-inline">
+											<input type="checkbox" value=""> エンド
+										</label>
+										<label class="checkbox-inline">
+											<input type="checkbox" value=""> プライマリ
+										</label>
+									</div>
+									<div class="col-sm-1"></div>
+								</div>
 								<div class="row form text-center">
-									<label class="sr-only" for="customer">顧客名</label>
-									<select class="selectpicker" data-live-search="true" title="顧客名">
-										<option data-tokens="meiji">株式会社明治</option>
-										<option data-tokens="rhizo-me">株式会社リゾーム</option>
-										<option data-tokens="asics">株式会社アシックス</option>
-									</select>
-
-									<label class="sr-only" for="customer_type"> クライアント種類 </label>
-									<select class="selectpicker" title="クライアント種類">
-										<option data-tokens="end">エンド</option>
-										<option data-tokens="primary">プライマリ</option>
-									</select>
-									<div class="btn-group" >
-										<button type="button" class="btn" onclick="location.href=''">   
+									<div class="btn-group" style="margin:2% 0% 0% 0%;">
+										<button type="button" class="btn" onclick="location.href=''">
 											<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
 										</button>
 									</div>
@@ -81,22 +92,20 @@
 							<form class="form-horizontal">
 								<div class="modal-body">
 									<div class="form-group">
-										<label class="col-xs-3 control-label" for="customer">顧客名*</label>
+										<label class="col-xs-3 control-label" for="project">企業名<span class="text-danger">*</span></label>
 										<div class="col-xs-8">
-											<select class="selectpicker form-control" data-live-search="true" title="顧客名">
-												<option data-tokens="meiji">株式会社明治</option>
-												<option data-tokens="rhizo-me">株式会社リゾーム</option>
-												<option data-tokens="asics">株式会社アシックス</option>
-											</select>
+											<input type="text" class="form-control" id="project"  placeholder="企業名" />
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-xs-3 control-label" for="customer_type">クライアント種類*</label>
+										<label class="col-xs-3 control-label" for="customer_type">クライアント種類<span class="text-danger">*</span></label>
 										<div class="col-xs-8">
-											<select class="selectpicker form-control" title="クライアント種類">
-												<option data-tokens="end">エンド</option>
-												<option data-tokens="primary">プライマリ</option>
-											</select>
+											<label class="radio-inline">
+												<input type="radio" name="project_status" value="">エンド
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="project_status" value="">プライマリ
+											</label>
 										</div>
 									</div>
 								</div>

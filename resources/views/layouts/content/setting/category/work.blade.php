@@ -44,7 +44,7 @@
                             <form class="form-horizontal">
                                  <div class="modal-body">
                                     <div class="form-group">
-                                        <label class="col-xs-3 control-label" for="work">作業分類名*</label>
+                                        <label class="col-xs-3 control-label" for="work">作業分類名<span class="text-danger">*</span></label>
                                         <div class="col-xs-8">
                                             <input type="text" class="form-control" id="work"  placeholder="作業分類名" />
                                         </div>
