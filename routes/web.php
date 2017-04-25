@@ -27,13 +27,13 @@ Route::get('/home', 'HomeController@index');
 |--------------------------------------------------------------------------
 */
 Route::get('/daily/', function () {
-    return view('layouts.content.daily.index');
+    return view('layouts.content.daily.category.index');
 });
-Route::get('/daily/', function () {
-    return view('layouts.content.daily.index');
+Route::get('/daily/view', function () {
+    return view('layouts.content.daily.category.view');
 });
-Route::get('/daily/', function () {
-    return view('layouts.content.daily.index');
+Route::get('/daily/total', function () {
+    return view('layouts.content.daily.category.total');
 });
 
 /*

@@ -80,12 +80,12 @@
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li role="presentation"><a href="{{ url('/daily') }}">日報</a></li>
-                                <li role="presentation"><a href="{{ url('/daily') }}">集計</a></li>
+                                <li role="presentation"><a href="{{ url('/daily/view') }}">日報</a></li>
+                                <li role="presentation"><a href="{{ url('/daily/total') }}">集計</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="{{ url('/daily') }}" class="visible-xs-block">
+                            <a href="{{ url('/daily/view') }}" class="visible-xs-block">
                                 <i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;閲覧
                             </a>
                         </li>
@@ -98,9 +98,9 @@
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li role="presentation"><a href="{{ url('/project') }}">一覧</a></li>
-                                <li role="presentation"><a href="{{ url('/project') }}">個人予算</a></li>
-                                <li role="presentation"><a href="{{ url('/project') }}">台帳</a></li>
-                                <li role="presentation"><a href="{{ url('/project') }}">予算対</a></li>
+                                <li role="presentation"><a href="{{ url('/project/personal-budget') }}">個人予算</a></li>
+                                <li role="presentation"><a href="{{ url('/project/ledger') }}">台帳</a></li>
+                                <li role="presentation"><a href="{{ url('/project/project-budget') }}">予算対</a></li>
                             </ul>
                         </li>
                         <li>
