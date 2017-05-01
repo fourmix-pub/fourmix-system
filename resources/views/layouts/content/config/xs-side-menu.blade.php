@@ -3,7 +3,7 @@
     <div class="visible-xs-block visible-sm-block" style="margin-bottom: 2%;">
         <ul class="nav nav-tabs">
           <li role="presentation" class="active">
-          	<a href="{{ url('/project/') }}">
+          	<a href="{{ url('/config/') }}">
           		<i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;
           		<span class="hidden-xs">プロジェクト一覧</span>
           	</a>

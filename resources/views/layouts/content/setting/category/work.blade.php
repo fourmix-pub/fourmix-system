@@ -11,7 +11,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="page-header">
             <h2>
-                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></i>&nbsp;&nbsp;作業分類
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;作業分類
                 <button type="button" class="btn btn-danger pull-right" style="margin-right: 15%;" data-toggle="modal" data-target="#add">
                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;追加
                 </button>

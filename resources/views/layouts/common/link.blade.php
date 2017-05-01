@@ -26,22 +26,20 @@
     ]); ?>
 </script>
 <script type="text/javascript">
-    // 担当者追加：始業時刻
+    // 時間入力
     $(function () {
-        $('.datetimepicker3.started_time').datetimepicker({
-            format: 'LT'
+        $('.time').datetimepicker({
+            format: 'HH:mm'
         });
     });
-    // 担当者追加：終業時刻
+    // 日付入力
     $(function () {
-        $('.datetimepicker3.ended_time').datetimepicker({
-            format: 'LT'
+        $('.day').datetimepicker({
+            format : 'YYYY-MM-DD',
+            locale : 'ja',
+            dayViewHeaderFormat : 'YYYY年M月'
         });
     });
-    // プロジェクト追加・検索：開始日
-    $(function () {
-        $('.datetimepicker1.started_day').datetimepicker({
-            
-        });
-    });
+
+
 </script>

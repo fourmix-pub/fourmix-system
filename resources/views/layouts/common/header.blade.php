@@ -66,20 +66,13 @@
                     </li>
                     <hr class="visible-xs-block">
                     <li>
-                        <a href="{{ url('/home#') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="日報作成">
-                            <span class="glyphicon glyphicon-pencil"></span>
-                        </a>
-                        <a href="{{ url('/home#') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;日報作成
-                        </a>
-                    </li>
-                    <li>
                         <li role="presentation" class="dropdown">
                             <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="閲覧">
-                                <i class="fa fa-book" aria-hidden="true"></i>&nbsp;
+                                <span class="glyphicon glyphicon-pencil"></span>
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
+                                <li role="presentation"><a href="{{ url('/daily') }}" >日報作成</a></li>
                                 <li role="presentation"><a href="{{ url('/daily/view') }}">日報</a></li>
                                 <li role="presentation"><a href="{{ url('/daily/total') }}">集計</a></li>
                             </ul>
@@ -110,9 +103,16 @@
                         </li>
                     </li>
                     <li>
-                        <a href="{{ url('/home#') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="ツール">
-                            <span class="glyphicon glyphicon-check"></span>
-                        </a>
+                        <li role="presentation" class="dropdown">
+                            <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="ツール">
+                                <span class="glyphicon glyphicon-check"></span>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation"><a href="{{ url('http://localhost/phpmyadmin/') }}" target="_blank">phpMyAdmin</a></li>
+                                <li role="presentation"><a href="{{ url('http://www.maatwebsite.nl/laravel-excel/docs') }}" target="_blank">Laravel Excel</a></li>
+                            </ul>
+                        </li>
                         <a href="{{ url('/home#') }}" class="visible-xs-block">
                             <span class="glyphicon glyphicon-check"></span> ツール
                         </a>
@@ -214,11 +214,12 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="ログアウト">
                             <span>
-                                {{-- @if(Auth::user()->photo != '')
-                                    <img src="{{ asset('storage/'.Auth::user()->photo) }}" style="padding: 0px;width: 22px;height: 22px;">
-                                @else
-                                    <img src="{{ asset(Colorable::profileImg(Auth::user()->email)) }}" style="padding: 0px;width: 22px;height: 22px;">
-                                @endif --}}
+                                {{--@if(Auth::user()->photo != '')--}}
+                                    {{--<img src="{{ asset('storage/'.Auth::user()->photo) }}" style="padding: 0px;width: 22px;height: 22px;">--}}
+                                {{--@else--}}
+                                    {{--<img src="{{ asset(Colorable::profileImg(Auth::user()->email)) }}" style="padding: 0px;width: 22px;height: 22px;">--}}
+                                {{--@endif--}}
+                                    {{ Auth::user()->name }}
                             </span>
                             <span class="caret"></span>
                         </a>

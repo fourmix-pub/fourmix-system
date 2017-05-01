@@ -12,8 +12,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+//Route::get('/home', 'HomeController@index');
 
+Route::get('/home/', function () {
+    return view('layouts.content.daily.category.index');
+});
 /*
 |--------------------------------------------------------------------------
 | モックルート
@@ -95,6 +98,5 @@ Route::get('/config/', function () {
 | 管理者設定
 |--------------------------------------------------------------------------
 */
-// Route::get('/config/', function () {
-//     return view('layouts.content.config.index');
-// });
+Route::post('/register/', 'Auth\RegisterController@register ' );
+Route::match(['get', 'head'], '/register/', 'Auth\RegisterController@showRegistrationForm ' )->name('register');

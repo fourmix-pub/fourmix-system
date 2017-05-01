@@ -69,8 +69,8 @@
 								</div>
 							</form>
 						</div>
-						<hr Width="100%">
 					</div>
+					<hr Width="100%">
 				</div>
 			</div>
 		</div>
@@ -116,7 +116,7 @@
 									<div class="form-group">
 										<label class="col-xs-3 control-label" for="started_time">始業時刻<span class="text-danger">*</span></label>
 										<div class="col-xs-8">
-											<div class='input-group date datetimepicker3 started_time'>
+											<div class='input-group time'>
 												<input type='text' class="form-control" value="09:30" />
 												<span class="input-group-addon">
 													<span class="glyphicon glyphicon-time"></span>
@@ -127,7 +127,7 @@
 									<div class="form-group">
 										<label class="col-xs-3 control-label" for="ended_time">終業時刻<span class="text-danger">*</span></label>
 										<div class="col-xs-8">
-											<div class='input-group date datetimepicker3 ended_time'>
+											<div class='input-group time'>
 												<input type='text' class="form-control" value="18:30"/>
 												<span class="input-group-addon">
 													<span class="glyphicon glyphicon-time"></span>
