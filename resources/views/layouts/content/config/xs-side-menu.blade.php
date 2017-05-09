@@ -8,24 +8,24 @@
           		<span class="hidden-xs">プロジェクト一覧</span>
           	</a>
           </li>
-          {{-- <li role="presentation">
-          	<a href="{{ url('/project/') }}">
+          <li role="presentation">
+          	<a href="{{ url('/config/password') }}">
           		<i class="fa fa-jpy" aria-hidden="true"></i>&nbsp;
-          		<span class="hidden-xs">個人予算</span>
+          		<span class="hidden-xs">パスワード変更</span>
           	</a>
           </li>
-          <li role="presentation">
-          	<a href="{{ url('/project/') }}">
-          		<i class="fa fa-th-list" aria-hidden="true"></i>&nbsp;
-          		<span class="hidden-xs">台帳</span>
-          	</a>
-          </li>
-          <li role="presentation">
-          	<a href="{{ url('/project/') }}">
-          		<i class="fa fa-table" aria-hidden="true"></i>&nbsp;
-          		<span class="hidden-xs">予算対実績表</span>
-          	</a>
-          </li> --}}
+          {{--<li role="presentation">--}}
+          	{{--<a href="{{ url('/project/') }}">--}}
+          		{{--<i class="fa fa-th-list" aria-hidden="true"></i>&nbsp;--}}
+          		{{--<span class="hidden-xs">台帳</span>--}}
+          	{{--</a>--}}
+          {{--</li>--}}
+          {{--<li role="presentation">--}}
+          	{{--<a href="{{ url('/project/') }}">--}}
+          		{{--<i class="fa fa-table" aria-hidden="true"></i>&nbsp;--}}
+          		{{--<span class="hidden-xs">予算対実績表</span>--}}
+          	{{--</a>--}}
+          {{--</li>--}}
         </ul>
     </div>
 </div>

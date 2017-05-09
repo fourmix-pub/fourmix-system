@@ -16,4 +16,14 @@ class ConfigController extends Controller
     {
         return view('config.index');
     }
+
+    /**
+     *パスワード変更
+     *
+     * @return mixed
+     */
+    public function resetPassword()
+    {
+        return view('config.password');
+    }
 }

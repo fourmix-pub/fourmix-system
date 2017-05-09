@@ -87,6 +87,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 Route::group(['prefix' => 'config', 'namespace' => 'Config'], function () {
     // プロフィール
     Route::get('/', 'ConfigController@index');
+    // パスワード変更
+    Route::get('/password', 'ConfigController@resetPassword');
 });
 
 /*

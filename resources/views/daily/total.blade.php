@@ -10,15 +10,12 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="page-header">
-            <div>
-                <h2><i class="fa fa-th-list" aria-hidden="true"></i>&nbsp;&nbsp;集計表</h2>
-            </div>
-
-            <div class="container">
+            <h2>
+                <i class="fa fa-th-list" aria-hidden="true"></i>&nbsp;&nbsp;集計表
                 <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
                 </button>
-            </div>
+            </h2>
         </div>
     </div>
 </div>

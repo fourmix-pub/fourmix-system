@@ -10,18 +10,15 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
-			<div>
-				<h2><i class="fa fa-jpy" aria-hidden="true"></i>&nbsp;&nbsp;個人予算一覧</h2>
-			</div>
-
-			<div class="container">
+			<h2>
+				<i class="fa fa-jpy" aria-hidden="true"></i>&nbsp;&nbsp;個人予算一覧
 				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
 				</button>
 				<button type="button" class="btn btn-danger pull-right" style="margin-right: 5%;" data-toggle="modal" data-target="#add">
 					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;追加
 				</button>
-			</div>
+			</h2>
 		</div>
 	</div>
 </div>
