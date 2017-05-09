@@ -14,9 +14,7 @@ Auth::routes();
 
 //Route::get('/home', 'HomeController@index');
 
-Route::get('/home/', function () {
-    return view('layouts.content.daily.category.index');
-});
+Route::get('/home', 'Daily\DailyController@index');
 /*
 |--------------------------------------------------------------------------
 | モックルート
@@ -29,14 +27,15 @@ Route::get('/home/', function () {
 |	入力、閲覧、集計
 |--------------------------------------------------------------------------
 */
-Route::get('/daily/', function () {
-    return view('layouts.content.daily.category.index');
-});
-Route::get('/daily/view', function () {
-    return view('layouts.content.daily.category.view');
-});
-Route::get('/daily/total', function () {
-    return view('layouts.content.daily.category.total');
+
+Route::group(['prefix' => 'daily', 'namespace' => 'Daily'], function () {
+
+    // 日報入力
+    Route::get('/', 'DailyController@index');
+    // 日報一覧
+    Route::get('/view', 'DailyController@view');
+    // 日報集計
+    Route::get('/total', 'DailyController@total');
 });
 
 /*
@@ -45,43 +44,38 @@ Route::get('/daily/total', function () {
 |	一覧、個人予算、台帳、予算対
 |--------------------------------------------------------------------------
 */
-// 一覧
-Route::get('/project/', function () {
-    return view('layouts.content.project.category.index');
-});
-// 個人予算
-Route::get('/project/personal-budget', function () {
-    return view('layouts.content.project.category.personal-budget');
-});
-// 台帳
-Route::get('/project/ledger', function () {
-    return view('layouts.content.project.category.ledger');
-});
-// 予算対
-Route::get('/project/project-budget', function () {
-    return view('layouts.content.project.category.project-budget');
+
+
+Route::group(['prefix' => 'project', 'namespace' => 'Project'], function () {
+
+    // 一覧
+    Route::get('/', 'ProjectController@index');
+    // 個人予算
+    Route::get('/personal-budget', 'ProjectController@personalBudget');
+    // 台帳
+    Route::get('/ledger', 'ProjectController@ledger');
+    // 予算対
+    Route::get('/project-budget', 'ProjectController@projectBudget');
 });
 
 /*
 |--------------------------------------------------------------------------
 | 基本設定
-|	担当者、作業分類、部門分類、勤務分類、得意先分類
+|	担当者、作業分類、部門分類、勤務分類、得意先一覧
 |--------------------------------------------------------------------------
 */
-Route::get('/setting/staff', function () {
-    return view('layouts.content.setting.category.staff');
-});
-Route::get('/setting/work', function () {
-    return view('layouts.content.setting.category.work');
-});
-Route::get('/setting/departments', function () {
-    return view('layouts.content.setting.category.departments');
-});
-Route::get('/setting/service', function () {
-    return view('layouts.content.setting.category.service');
-});
-Route::get('/setting/customers', function () {
-    return view('layouts.content.setting.category.customers');
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
+    //担当者
+    Route::get('/user', 'UserController@index');
+    //作業分類
+    Route::get('/category', 'CategoryController@index');
+    //部門分類
+    Route::get('/department', 'DepartmentController@index');
+    //勤務分類
+    Route::get('/work', 'WorkController@index');
+    //得意先一覧
+    Route::get('/customer', 'CustomerController@index');
 });
 
 /*
@@ -89,8 +83,10 @@ Route::get('/setting/customers', function () {
 | プロフィール情報
 |--------------------------------------------------------------------------
 */
-Route::get('/config/', function () {
-    return view('layouts.content.config.index');
+
+Route::group(['prefix' => 'config', 'namespace' => 'Config'], function () {
+    // プロフィール
+    Route::get('/', 'ConfigController@index');
 });
 
 /*
@@ -98,5 +94,5 @@ Route::get('/config/', function () {
 | 管理者設定
 |--------------------------------------------------------------------------
 */
-Route::post('/register/', 'Auth\RegisterController@register ' );
-Route::match(['get', 'head'], '/register/', 'Auth\RegisterController@showRegistrationForm ' )->name('register');
+//Route::post('/register/', 'Auth\RegisterController@register ' );
+//Route::match(['get', 'head'], '/register/', 'Auth\RegisterController@showRegistrationForm ')->name('register');

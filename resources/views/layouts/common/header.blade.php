@@ -117,38 +117,6 @@
                             <span class="glyphicon glyphicon-check"></span> ツール
                         </a>
                     </li>
-                    {{--<li>
-                        <a href="{{ url('/schedule') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="スケジュール">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </a>
-                        <a href="{{ url('/schedule') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-calendar"></span> {{ trans('header.schedule') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/time-sheet') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="{{ trans('header.time-sheet') }}">
-                            <span class="glyphicon glyphicon-time"></span>
-                        </a>
-                        <a href="{{ url('/time-sheet') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-time"></span> {{ trans('header.time-sheet') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/message') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="{{ trans('header.message') }}">
-                            <span class="glyphicon glyphicon-envelope"></span>
-                        </a>
-                        <a href="{{ url('/message') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-envelope"></span> {{ trans('header.message') }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/bbs') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="{{ trans('header.bbs') }}">
-                            <span class="glyphicon glyphicon-comment"></span>
-                        </a>
-                        <a href="{{ url('/bbs') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-comment"></span> {{ trans('header.bbs') }}
-                        </a>
-                    </li>--}}
                     <li>
                         <a href="{{ url('/setting/staff') }}" class="visible-xs-block">
                             <span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;基本設定
@@ -182,21 +150,14 @@
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li role="presentation"><a href="{{ url('/setting/staff') }}">担当者</a></li>
-                                <li role="presentation"><a href="{{ url('/setting/work') }}">作業分類</a></li>
-                                <li role="presentation"><a href="{{ url('/setting/departments') }}">部門</a></li>
-                                <li role="presentation"><a href="{{ url('/setting/service') }}">勤務分類</a></li>
-                                <li role="presentation"><a href="{{ url('/setting/customers') }}">顧客</a></li>
+                                <li role="presentation"><a href="{{ url('/admin/user') }}">担当者</a></li>
+                                <li role="presentation"><a href="{{ url('/admin/category') }}">作業分類</a></li>
+                                <li role="presentation"><a href="{{ url('/admin/department') }}">部門</a></li>
+                                <li role="presentation"><a href="{{ url('/admin/work') }}">勤務分類</a></li>
+                                <li role="presentation"><a href="{{ url('/admin/customer') }}">顧客</a></li>
                             </ul>
                         </li>
                     </li>
-                    {{-- @if(Admin::is_super_admin(Auth::user())) --}}
-                    <li>
-                        <a href="{{ url('/home#') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="管理者設定">
-                            <span class="glyphicon glyphicon-wrench"></span>
-                        </a>
-                    </li>
-                    {{-- @endif --}}
                 @endif
                 <!-- Authentication Links -->
                 @if (Auth::guest())
@@ -219,7 +180,7 @@
                                 {{--@else--}}
                                     {{--<img src="{{ asset(Colorable::profileImg(Auth::user()->email)) }}" style="padding: 0px;width: 22px;height: 22px;">--}}
                                 {{--@endif--}}
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->user_name }}
                             </span>
                             <span class="caret"></span>
                         </a>

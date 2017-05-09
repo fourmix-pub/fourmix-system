@@ -9,19 +9,19 @@
           	</a>
           </li>
           <li role="presentation">
-          	<a href="{{ url('/project/') }}">
+          	<a href="{{ url('/project/personal-budget') }}">
           		<i class="fa fa-jpy" aria-hidden="true"></i>&nbsp;
           		<span class="hidden-xs">個人予算</span>
           	</a>
           </li>
           <li role="presentation">
-          	<a href="{{ url('/project/') }}">
+          	<a href="{{ url('/project/ledger') }}">
           		<i class="fa fa-th-list" aria-hidden="true"></i>&nbsp;
           		<span class="hidden-xs">台帳</span>
           	</a>
           </li>
           <li role="presentation">
-          	<a href="{{ url('/project/') }}">
+          	<a href="{{ url('/project/project-budget') }}">
           		<i class="fa fa-table" aria-hidden="true"></i>&nbsp;
           		<span class="hidden-xs">予算対実績表</span>
           	</a>
