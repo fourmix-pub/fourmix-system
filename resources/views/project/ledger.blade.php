@@ -41,7 +41,8 @@
 								<div class="form-group">
 									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">プロジェクト</label>
 									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<select class="selectpicker" data-width="100%" data-live-search="true" title="プロジェクト">
+										<select class="selectpicker" data-width="100%" data-live-search="true" title="指定なし">
+											<option data-tokens="">指定なし</option>
 											<option data-tokens="fourmix-system">社内ログ管理システム</option>
 											<option data-tokens="rhizo-me">株式会社リゾーム</option>
 											<option data-tokens="asics">株式会社アシックス</option>
@@ -52,7 +53,8 @@
 								<div class="form-group">
 									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">責任者</label>
 									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<select class="selectpicker" data-width="100%" data-live-search="true" title="責任者">
+										<select class="selectpicker" data-width="100%" data-live-search="true" title="指定なし">
+											<option data-tokens="">指定なし</option>
 											<option data-tokens="">櫻井翔</option>
 											<option data-tokens="">佐々木希</option>
 										</select>
@@ -61,7 +63,8 @@
 								<div class="form-group">
 									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">部門</label>
 									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<select class="selectpicker" data-width="100%" title="部門">
+										<select class="selectpicker" data-width="100%" title="指定なし">
+											<option>指定なし</option>
 											<option>システムデザイン</option>
 											<option>コンセプトデザイン</option>
 											<option>サポート</option>
@@ -132,23 +135,23 @@
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<table class="table table-bordered">
 							<tr>
-								<td>プロジェクト名</td>
+								<td><b>プロジェクト名</b></td>
 								<td colspan="3">PCP・メンズポケットサーバー移行</td>
-								<td>開始日</td>
+								<td><b>開始日</b></td>
 								<td>2009/03/02</td>
 							</tr>
 							<tr>
-								<td>責任者</td>
+								<td><b>責任者</b></td>
 								<td colspan="3">碓井智</td>
-								<td>完成予定日</td>
+								<td><b>完成予定日</b></td>
 								<td>2009/03/02</td>
 							</tr>
 							<tr>
-								<td>受注金額	</td>
+								<td><b>受注金額</b></td>
 								<td>3,000,000円</td>
-								<td>実行予算</td>
+								<td><b>実行予算</b></td>
 								<td>3,000,000円</td>
-								<td>完成日</td>
+								<td><b>完成日</b></td>
 								<td>2009/04/02</td>
 							</tr>
 						</table>

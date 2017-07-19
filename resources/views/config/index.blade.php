@@ -33,27 +33,27 @@
 		<div class="row" style="margin: 0% 1%;">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="panel panel-default">
+
 					<div class="panel-body">
+						<div class="row">
+							<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+
+								<form>
+								@component('components.elements.form.user', ['name' => 'name'])
+									ユーザー名
+								@endcomponent
+								@component('components.elements.form.user', ['name' => 'mail'])
+									メールアドレス
+								@endcomponent
+								</form>
+
+							</div>
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							</div>
+						</div>
+					</div>
 						<form>
 							<div class="row">
-								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-									<div class="form-group">
-										<h3><small>ユーザー名</small></h3>
-										<input type="text" class="form-control" id="project"  placeholder="ユーザ名" />
-									</div>
-								</div>
-								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-									<div class="form-group">
-										<h3><small>メールアドレス</small></h3>
-										<input type="email" class="form-control" id="project"  placeholder="メールアドレス" />
-									</div>
-								</div>
-								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-									<div class="form-group">
-										<h3><small>所属部署</small></h3>
-										<span class="">部署名</span>
-									</div>
-								</div>
 								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 									<div class="form-group">
 										<h3><small>始業時刻</small></h3>

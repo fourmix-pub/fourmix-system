@@ -44,7 +44,8 @@
 								<div class="form-group">
 									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">プロジェクト</label>
 									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<select class="selectpicker" data-width="100%" data-live-search="true" title="プロジェクト">
+										<select class="selectpicker" data-width="100%" data-live-search="true" title="指定なし">
+											<option data-tokens="">指定なし</option>
 											<option data-tokens="fourmix-system">社内ログ管理システム</option>
 											<option data-tokens="rhizo-me">株式会社リゾーム</option>
 											<option data-tokens="asics">株式会社アシックス</option>
@@ -55,10 +56,36 @@
 								<div class="form-group">
 									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">責任者</label>
 									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<select class="selectpicker" data-width="100%" data-live-search="true" title="責任者">
+										<select class="selectpicker" data-width="100%" data-live-search="true" title="指定なし">
+											<option data-tokens="">指定なし</option>
 											<option data-tokens="">櫻井翔</option>
 											<option data-tokens="">佐々木希</option>
 										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">部門</label>
+									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+										<select class="selectpicker" data-width="100%" title="指定なし">
+											<option>指定なし</option>
+											<option>システムデザイン</option>
+											<option>コンセプトデザイン</option>
+											<option>サポート</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">表示区分</label>
+									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+										<label class="radio-inline">
+											<input type="radio" name="project_status" value="">全て
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="project_status" value="">完了
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="project_status" value="">未完了
+										</label>
 									</div>
 								</div>
 								<div class="form-group">
@@ -110,13 +137,14 @@
 										<div class="form-group">
 											<label class="col-xs-3 control-label" for="project">プロジェクト名<span class="text-danger">*</span></label>
 											<div class="col-xs-8">
-												<input type="text" class="form-control" id="project"  placeholder="プロジェクト名" />
+												<input type="text" class="form-control" id="project"  placeholder="指定なし" />
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="col-xs-3 control-label" for="primary_user">プライマリユーザ<span class="text-danger">*</span></label>
 											<div class="col-xs-8">
-												<select class="selectpicker form-control" data-live-search="true" title="プライマリユーザ">
+												<select class="selectpicker form-control" data-live-search="true" title="指定なし">
+													<option data-tokens="meiji">指定なし</option>
 													<option data-tokens="meiji">株式会社明治</option>
 													<option data-tokens="rhizo-me">株式会社リゾーム</option>
 													<option data-tokens="asics">株式会社アシックス</option>
@@ -126,7 +154,8 @@
 										<div class="form-group">
 											<label class="col-xs-3 control-label" for="end_user">エンドユーザ<span class="text-danger">*</span></label>
 												<div class="col-xs-8">
-												<select class="selectpicker form-control" data-live-search="true" title="エンドユーザ">
+												<select class="selectpicker form-control" data-live-search="true" title="指定なし">
+													<option data-tokens="meiji">指定なし</option>
 													<option data-tokens="meiji">株式会社明治</option>
 													<option data-tokens="rhizo-me">株式会社リゾーム</option>
 													<option data-tokens="asics">株式会社アシックス</option>
@@ -136,7 +165,8 @@
 										<div class="form-group">
 											<label class="col-xs-3 control-label" for="staff">責任者名<span class="text-danger">*</span></label>
 											<div class="col-xs-8">
-												<select class="selectpicker form-control" data-live-search="true" title="責任者名">
+												<select class="selectpicker form-control" data-live-search="true" title="指定なし">
+													<option data-tokens="stanaka">指定なし</option>
 													<option data-tokens="stanaka">田中咲良</option>
 													<option data-tokens="kgo">呉傑</option>
 													<option data-tokens="kyamamoto">山本耕史郎</option>
@@ -219,35 +249,44 @@
 						<thead>
 							<tr>
 								<th>ID</th>
-								<th>名前</th>
+								<th>プロジェクト名</th>
+								<th>責任者</th>
 								<th>作業単価</th>
 								<th>部署</th>
 								<th>退職</th>
+								<th>開始日</th>
+								<th>完了日</th>
 								<th></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<th scope="row">1</th>
+								<td><a href="ledger.blade.php">PCP・メンズポケットサーバー移行</a></td>
 								<td>田中咲良</td>
 								<td>2,500</td>
 								<td>システム</td>
 								<td></td>
+								<td>2015/4/1</td>
+								<td>2015/7/31</td>
 								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
+									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add" title="編集">
 										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
 									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
+									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal" title="削除">
 										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
 									</button>
 								</td>
 							</tr>
 							<tr>
 								<th scope="row">2</th>
+								<td></td>
 								<td>呉傑</td>
 								<td>2,500</td>
 								<td>システム</td>
 								<td></td>
+								<td>2015/4/1</td>
+								<td>2015/7/31</td>
 								<td align="center">
 									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
 										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -259,10 +298,13 @@
 							</tr>
 							<tr>
 								<th scope="row">3</th>
+								<td></td>
 								<td>山本耕史郎</td>
 								<td>2,500</td>
 								<td>システム</td>
 								<td></td>
+								<td>2015/4/1</td>
+								<td>2015/7/31</td>
 								<td align="center">
 									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
 										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -274,10 +316,13 @@
 							</tr>
 							<tr>
 								<th scope="row">4</th>
+								<td></td>
 								<td>木村拓哉</td>
 								<td>2,500</td>
 								<td>コンセプト</td>
 								<td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+								<td>2015/4/1</td>
+								<td>2015/7/31</td>
 								<td align="center">
 									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
 										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -289,10 +334,13 @@
 							</tr>
 							<tr>
 								<th scope="row">5</th>
+								<td></td>
 								<td>中居正広</td>
 								<td>2,500</td>
 								<td>サポート</td>
 								<td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+								<td>2015/4/1</td>
+								<td>2015/7/31</td>
 								<td align="center">
 									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
 										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -304,10 +352,13 @@
 							</tr>
 							<tr>
 								<th scope="row">6</th>
+								<td></td>
 								<td>稲垣吾郎</td>
 								<td>2,500</td>
 								<td>サポート</td>
 								<td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+								<td>2015/4/1</td>
+								<td>2015/7/31</td>
 								<td align="center">
 									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
 										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -319,10 +370,13 @@
 							</tr>
 							<tr>
 								<th scope="row">7</th>
+								<td></td>
 								<td>香取慎吾</td>
 								<td>2,500</td>
 								<td>サポート</td>
 								<td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+								<td>2015/4/1</td>
+								<td>2015/7/31</td>
 								<td align="center">
 									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
 										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -334,10 +388,13 @@
 							</tr>
 							<tr>
 								<th scope="row">8</th>
+								<td></td>
 								<td>草彅剛</td>
 								<td>2,500</td>
 								<td>サポート</td>
 								<td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+								<td>2015/4/1</td>
+								<td>2015/7/31</td>
 								<td align="center">
 									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
 										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -349,10 +406,13 @@
 							</tr>
 							<tr>
 								<th scope="row">9</th>
+								<td></td>
 								<td>新垣結衣</td>
 								<td>2,500</td>
 								<td>サポート</td>
 								<td></td>
+								<td>2015/4/1</td>
+								<td>2015/7/31</td>
 								<td align="center">
 									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
 										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -364,10 +424,13 @@
 							</tr>
 							<tr>
 								<th scope="row">10</th>
+								<td></td>
 								<td>北乃きい</td>
 								<td>2,500</td>
 								<td>サポート</td>
 								<td></td>
+								<td>2015/4/1</td>
+								<td>2015/7/31</td>
 								<td align="center">
 									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
 										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>

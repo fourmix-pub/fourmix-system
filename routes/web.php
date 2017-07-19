@@ -98,3 +98,6 @@ Route::group(['prefix' => 'config', 'namespace' => 'Config'], function () {
 */
 //Route::post('/register/', 'Auth\RegisterController@register ' );
 //Route::match(['get', 'head'], '/register/', 'Auth\RegisterController@showRegistrationForm ')->name('register');
+Route::get('test', function () {
+    return view('test');
+});

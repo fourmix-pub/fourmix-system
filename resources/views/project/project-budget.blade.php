@@ -41,7 +41,8 @@
 								<div class="form-group">
 									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">プロジェクト</label>
 									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<select class="selectpicker" data-width="100%" data-live-search="true" title="プロジェクト">
+										<select class="selectpicker" data-width="100%" data-live-search="true" title="指定なし">
+											<option data-tokens="">指定なし</option>
 											<option data-tokens="fourmix-system">社内ログ管理システム</option>
 											<option data-tokens="rhizo-me">株式会社リゾーム</option>
 											<option data-tokens="asics">株式会社アシックス</option>
@@ -52,7 +53,8 @@
 								<div class="form-group">
 									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">責任者</label>
 									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<select class="selectpicker" data-width="100%"  title="責任者">
+										<select class="selectpicker" data-width="100%"  title="指定なし">
+											<option>指定なし</option>
 											<option>櫻井翔</option>
 											<option>大野智</option>
 										</select>
@@ -62,7 +64,8 @@
 								<div class="form-group">
 									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">部門名</label>
 									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<select class="selectpicker" data-width="100%" title="部門名">
+										<select class="selectpicker" data-width="100%" title="指定なし">
+											<option>指定なし</option>
 											<option>システムデザイン</option>
 											<option>コンセプトデザイン</option>
 											<option>サポート</option>
