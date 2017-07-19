@@ -10,7 +10,7 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
-			<h2>
+			<h3>
 				<i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;&nbsp;顧客
 				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
@@ -18,7 +18,7 @@
 				<button type="button" class="btn btn-danger pull-right" style="margin-right: 5%;" data-toggle="modal" data-target="#add">
 					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;追加
 				</button>
-			</h2>
+			</h3>
 		</div>
 	</div>
 </div>
@@ -125,145 +125,32 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="table-responsive">
 					<table class="table table-bordered">
-						<thead>
-							<tr class="active">
-								<th>ID</th>
-								<th>企業名</th>
-								<th>クライアント種類</th>
-								<th></th>
-							</tr>
-						</thead>
+
+                        <?php
+                        $theads=['ID','企業名','クライアント種類',''];
+
+                        $tbody1=['id'=>1,'customer'=>'株式会社明治','category'=>'エンド'];
+                        $tbody2=['id'=>2,'customer'=>'株式会社リゾーム','category'=>'プライマリ'];
+                        $tbody3=['id'=>3,'customer'=>'株式会社アシックス','category'=>'エンド'];
+                        $tbody4=['id'=>4,'customer'=>'株式会社 思文閣出版','category'=>'プライマリ'];
+
+                        $tbodys=[$tbody1,$tbody2,$tbody3,$tbody4];
+                        ?>
+
+						@component('components.elements.table.admin.thead',['theads'=>$theads])
+						@endcomponent
+
+
 						<tbody>
+							@foreach($tbodys as $tbody)
 							<tr>
-								<th scope="row">1</th>
-								<td>株式会社明治</td>
-								<td>エンド</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
+								<th scope="row">{{ $tbody['id'] }}</th>
+								<td>{{ $tbody['customer'] }}</td>
+								<td>{{ $tbody['category'] }}</td>
+								@component('components.elements.table.admin.button')
+								@endcomponent
 							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>株式会社リゾーム</td>
-								<td>プライマリ</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td>株式会社アシックス</td>
-								<td>エンド</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">4</th>
-								<td>株式会社 思文閣出版</td>
-								<td>エンド</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">5</th>
-								<td>ミツワ電機工業株式会社</td>
-								<td>プライマリ</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">6</th>
-								<td>株式会社リゾーム</td>
-								<td>プライマリ</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">7</th>
-								<td>株式会社リゾーム</td>
-								<td>エンド</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">8</th>
-								<td>株式会社リゾーム</td>
-								<td>プライマリ</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">9</th>
-								<td>株式会社リゾーム</td>
-								<td>エンド</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">10</th>
-								<td>株式会社リゾーム</td>
-								<td>プライマリ</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
+							@endforeach
 						</tbody>
 					</table>
 				</div>

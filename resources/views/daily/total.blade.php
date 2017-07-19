@@ -10,9 +10,9 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="page-header">
-            <h2>
+            <h3>
                 <i class="fa fa-th-list" aria-hidden="true"></i>&nbsp;&nbsp;集計表
-            </h2>
+            </h3>
         </div>
     </div>
 </div>
@@ -270,6 +270,10 @@
                     </table>
                 </div>
             </div>
+
+            @component('components.elements.table.admin.pagenation')
+            @endcomponent
+
         </div>
     </div>
      {{--スマホ版サイドメニュー--}}

@@ -10,12 +10,12 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="page-header">
-                <h2>
+                <h3>
                     <i class="glyphicon glyphicon-eye-open"></i>&nbsp;&nbsp;日報閲覧
                     <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
                     </button>
-                </h2>
+                </h3>
             </div>
         </div>
     </div>
@@ -110,14 +110,8 @@
                                 <td>設計</td>
                                 <td>8.25</td>
                                 <td>20,000</td>
-                                <td align="center">
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                    </button>
-                                </td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
                             </tr>
                             <tr>
                                 <td>田中咲良</td>
@@ -126,14 +120,8 @@
                                 <td>設計</td>
                                 <td>8.25</td>
                                 <td>20,000</td>
-                                <td align="center">
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                    </button>
-                                </td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
                             </tr>
                             </tbody>
                             <tfoot>

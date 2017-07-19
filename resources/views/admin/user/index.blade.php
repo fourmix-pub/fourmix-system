@@ -10,7 +10,7 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
-			<h2>
+			<h3>
 				<i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;担当者
 				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
@@ -18,7 +18,7 @@
 				<button type="button" class="btn btn-danger pull-right" style="margin-right: 5%;" data-toggle="modal" data-target="#add">
 					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;追加
 				</button>
-			</h2>
+			</h3>
 		</div>
 	</div>
 </div>
@@ -148,201 +148,41 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="table-responsive">
 					<table class="table table-bordered">
-						<thead>
-							<tr class="active">
-								<th>ID</th>
-								<th>名前</th>
-								<th>作業単価</th>
-								<th>部署</th>
-								<th>退職</th>
-								<th></th>
-							</tr>
-						</thead>
+
+						<?php
+						$theads=['ID','名前','作業単価','部署','退職',''];
+
+						$tbody1=['id'=>1,'user'=>'田中咲良','cost'=>'2500','department'=>'システム','resignation'=>''];
+						$tbody2=['id'=>2,'user'=>'呉傑','cost'=>'2500','department'=>'システム','resignation'=>''];
+						$tbody3=['id'=>3,'user'=>'山本耕史郎','cost'=>'2500','department'=>'システム','resignation'=>'✔️'];
+						$tbody4=['id'=>4,'user'=>'木村拓哉','cost'=>'5000','department'=>'コンセプト','resignation'=>''];
+						$tbody5=['id'=>5,'user'=>'草なぎ剛','cost'=>'7000','department'=>'サポート','resignation'=>'✔️'];
+
+						$tbodys=[$tbody1,$tbody2,$tbody3,$tbody4,$tbody5];
+						?>
+
+						@component('components.elements.table.admin.thead',['theads'=>$theads])
+						@endcomponent
+
 						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td>田中咲良</td>
-								<td>2,500</td>
-								<td>システム</td>
-								<td align="center"></td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>呉傑</td>
-								<td>2,500</td>
-								<td>システム</td>
-								<td align="center"></td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　>
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td>山本耕史郎</td>
-								<td>2,500</td>
-								<td>システム</td>
-								<td align="center"></td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">4</th>
-								<td>木村拓哉</td>
-								<td>2,500</td>
-								<td>コンセプト</td>
-								<td align="center">
-									<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">5</th>
-								<td>中居正広</td>
-								<td>2,500</td>
-								<td>サポート</td>
-								<td align="center">
-									<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">6</th>
-								<td>稲垣吾郎</td>
-								<td>2,500</td>
-								<td>サポート</td>
-								<td align="center">
-									<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">7</th>
-								<td>香取慎吾</td>
-								<td>2,500</td>
-								<td>サポート</td>
-								<td align="center">
-									<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">8</th>
-								<td>草彅剛</td>
-								<td>2,500</td>
-								<td>サポート</td>
-								<td align="center">
-									<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								</td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">9</th>
-								<td>新垣結衣</td>
-								<td>2,500</td>
-								<td>サポート</td>
-								<td align="center"></td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">10</th>
-								<td>北乃きい</td>
-								<td>2,500</td>
-								<td>サポート</td>
-								<td align="center"></td>
-								<td align="center">
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
-							</tr>
+							@foreach($tbodys as $tbody)
+								<tr>
+									<th scope="row"><p>{{ $tbody['id'] }}</p></th>
+									<td><p>{{ $tbody['user'] }}</p></td>
+									<td align="right">{{ $tbody['cost'] }}</td>
+									<td>{{ $tbody['department'] }}</td>
+									<td align="center">{{ $tbody['resignation'] }}</td>
+									@component('components.elements.table.admin.button')
+									@endcomponent
+								</tr>
+							@endforeach
 						</tbody>
+
 					</table>
 				</div>
-				<div class="text-center">
-					<nav class="pagination">
-						<ul class="pagination">
-							<li>
-								<a href="#" aria-label="前のページへ">
-									<span aria-hidden="true">«</span>
-								</a>
-							</li>
-							<li class="active"><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
-							<li>
-								<a href="#" aria-label="次のページへ">
-									<span aria-hidden="true">»</span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
+
+				@component('components.elements.table.admin.pagenation')
+				@endcomponent
 			</div>
 		</div>
 	</div>

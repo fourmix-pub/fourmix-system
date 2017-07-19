@@ -10,12 +10,12 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="page-header">
-            <h2>
+            <h3>
                 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;作業分類
                 <button type="button" class="btn btn-danger pull-right" style="margin-right: 15%;" data-toggle="modal" data-target="#add">
                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;追加
                 </button>
-            </h2>
+            </h3>
         </div>
     </div>
 </div>
@@ -43,12 +43,6 @@
                             </div>
                             <form class="form-horizontal">
                                  <div class="modal-body">
-                                    {{--<div class="form-group">--}}
-                                        {{--<label class="col-xs-3 control-label" for="work">作業分類名<span class="text-danger">*</span></label>--}}
-                                        {{--<div class="col-xs-8">--}}
-                                            {{--<input type="text" class="form-control" id="work"  placeholder="作業分類名" />--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
                                      @component('components.elements.form.modal.text',['name'=>'name'])
                                          作業分類名
                                      @endcomponent
@@ -64,7 +58,7 @@
             </div>
         </div>
 
-{{-- モーダル：追加ボタン --}}
+        {{-- モーダル：追加ボタン --}}
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="modal fade" id="add" tabindex="-1">
@@ -105,158 +99,38 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="table-responsive">
                     <table class="table table-bordered">
-                        <thead>
-                            <tr class="active">
-                                <th>ID</th>
-                                <th>作業分類</th>
-                                <th></th>
-                            </tr>
-                        </thead>
+
+                        <?php
+                        $theads=['ID','作業分類',''];
+
+                        $tbody1=['id'=>1,'category'=>'調査'];
+                        $tbody2=['id'=>2,'category'=>'見積・営業活動'];
+                        $tbody3=['id'=>3,'category'=>'設計'];
+                        $tbody4=['id'=>4,'category'=>'実装'];
+                        $tbody5=['id'=>5,'category'=>'テスト'];
+
+                        $tbodys=[$tbody1,$tbody2,$tbody3,$tbody4,$tbody5];
+                        ?>
+
+                        @component('components.elements.table.admin.thead',['theads'=>$theads])
+                        @endcomponent
+
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>調査</td>
-                                <td align="center">
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>見積・営業活動</td>
-                                <td align="center">
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>分析</td>
-                                <td align="center">
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>設計</td>
-                                <td align="center">
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>実装</td>
-                                <td align="center">
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td>テスト</td>
-                                <td align="center">
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7</th>
-                                <td>納品作業</td>
-                                <td align="center">
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">8</th>
-                                <td>打合せ</td>
-                                <td align="center">
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">9</th>
-                                <td>その他</td>
-                                <td align="center">
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">10</th>
-                                <td>トラブル対応</td>
-                                <td align="center">
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-                                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                    </button>
-                                </td>
-                            </tr>
+                            @foreach($tbodys as $tbody)
+                                <tr>
+                                    <th scope="row">{{ $tbody['id'] }}</th>
+                                    <td>{{ $tbody['category'] }}</td>
+                                    @component('components.elements.table.admin.button')
+                                    @endcomponent
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
-                <div class="text-center">
-                    <nav class="pagination">
-                        <ul class="pagination">
-                            <li>
-                                <a href="#" aria-label="前のページへ">
-                                    <span aria-hidden="true">«</span>
-                                </a>
-                            </li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                                <a href="#" aria-label="次のページへ">
-                                    <span aria-hidden="true">»</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+
+                @component('components.elements.table.admin.pagenation')
+                @endcomponent
+
             </div>
         </div>
     </div>
