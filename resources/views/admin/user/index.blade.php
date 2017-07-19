@@ -87,18 +87,15 @@
 							</div>
 							<form class="form-horizontal">
 								<div class="modal-body">
-									<div class="form-group">
-										<label class="col-xs-3 control-label" for="staff">担当者<span class="text-danger">*</span></label>
-										<div class="col-xs-8">
-											<input type="text" class="form-control" id="staff"  placeholder="担当者" />
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-xs-3 control-label" for="unit_cost">作業単価<span class="text-danger">*</span></label>
-										<div class="col-xs-8">
-											<input type="text" class="form-control" id="unit_cost"  placeholder="作業単価" />
-										</div>
-									</div>
+
+									@component('components.elements.form.modal.text',['name'=>'name'])
+										担当者
+									@endcomponent
+
+									@component('components.elements.form.modal.text',['name'=>'cost'])
+										作業単価
+									@endcomponent
+
 									<div class="form-group">
 										<label class="col-xs-3 control-label" for="department">部門<span class="text-danger">*</span></label>
 											<select class="selectpicker col-xs-8" title="部門"　id="department">
@@ -107,12 +104,11 @@
 												<option>サポート</option>
 											</select>
 									</div>
-									<div class="form-group">
-										<label class="col-xs-3 control-label" for="mail_address">メールアドレス<span class="text-danger">*</span></label>
-										<div class="col-xs-8">
-											<input type="text" class="form-control" id="mail_address"  placeholder="メールアドレス" />
-										</div>
-									</div>
+
+									@component('components.elements.form.modal.text',['name'=>'mail'])
+										メールアドレス
+									@endcomponent
+
 									<div class="form-group">
 										<label class="col-xs-3 control-label" for="started_time">始業時刻<span class="text-danger">*</span></label>
 										<div class="col-xs-8">
