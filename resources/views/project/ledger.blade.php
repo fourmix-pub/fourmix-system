@@ -13,7 +13,7 @@
 			<h3>
 				<i class="fa fa-th-list" aria-hidden="true"></i>&nbsp;&nbsp;プロジェクト台帳
 				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
-					<span class="glyphicon glyphicon-search fa fa-search" aria-hidden="true"></span> 検索
+					<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
 				</button>
 			</h3>
 		</div>

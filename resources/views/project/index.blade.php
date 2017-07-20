@@ -12,10 +12,10 @@
 		<div class="page-header">
 			<h3>
 				<i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;&nbsp;プロジェクト一覧
-				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
+				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;" data-toggle="collapse" href="#search">
 					<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
 				</button>
-				<button type="button" class="btn btn-danger pull-right" style="margin-right: 5%;" data-toggle="modal" data-target="#add">
+				<button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal" data-target="#add">
 					<i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
 				</button>
 			</h3>
