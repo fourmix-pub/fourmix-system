@@ -24,6 +24,20 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 
+            {{-- モーダル：編集ボタン --}}
+            @component('components.elements.modal.update', ['title'=>'日報編集'])
+                @component('components.elements.form.modal.text',['name'=>'name'])
+                    プロジェクト名
+                @endcomponent
+                @component('components.elements.form.modal.text',['name'=>'name'])
+                    休憩時間
+                @endcomponent
+            @endcomponent
+
+            {{-- モーダル：削除ボタン --}}
+            @component('components.elements.modal.delete')
+            @endcomponent
+
             {{-- PC版サイドメニュー --}}
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -33,61 +47,51 @@
 
             {{-- アコーディオン：検索ボタン --}}
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="collapse" id="search" style="margin:1% 1%;">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <form class="form-horizontal">
-                                    <?php
-                                    $users = ['佐々木希','櫻井翔','松本潤'];
-                                    ?>
+                @component('components.elements.accordion.accordion')
 
-                                    @component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
-                                        担当者
-                                    @endcomponent
+                    <form class="form-horizontal">
+                        <?php
+                        $users = ['佐々木希','櫻井翔','松本潤'];
+                        ?>
+                        @component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
+                            担当者
+                        @endcomponent
 
-                                    <?php
-                                    $projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
-                                    ?>
+                        <?php
+                        $projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
+                        ?>
+                        @component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])
+                            プロジェクト名
+                        @endcomponent
 
-                                    @component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])
-                                        プロジェクト名
-                                    @endcomponent
+                        <?php
+                        $departments = ['システムデザイン','コンセプトデザイン','サポート'];
+                        ?>
+                        @component('components.elements.form.select.select', ['items'=>$departments,'search'=>'false'])
+                            部門
+                        @endcomponent
 
-                                    <?php
-                                    $departments = ['システムデザイン','コンセプトデザイン','サポート'];
-                                    ?>
+                        <?php
+                        $categories=['調査','実装','テスト']
+                        ?>
+                        @component('components.elements.form.select.select', ['items'=>$categories,'search'=>'false'])
+                            作業分類
+                        @endcomponent
 
-                                    @component('components.elements.form.select.select', ['items'=>$departments,'search'=>'false'])
-                                        部門
-                                    @endcomponent
+                        @component('components.elements.form.period')
+                        @endcomponent
 
-                                    <?php
-                                    $categories=['調査','実装','テスト']
-                                    ?>
-
-                                    @component('components.elements.form.select.select', ['items'=>$categories,'search'=>'false'])
-                                        作業分類
-                                    @endcomponent
-
-                                    @component('components.elements.form.period')
-                                    @endcomponent
-
-                                    <div class="row text-center">
-                                        <div class="btn-group" style="margin:2% 0% 0% 0%;">
-                                            <button type="button" class="btn" onclick="location.href=''">
-                                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
+                        <div class="row text-center">
+                            <div class="btn-group" style="margin:2% 0% 0% 0%;">
+                                <button type="button" class="btn" onclick="location.href=''">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
+                                </button>
                             </div>
                         </div>
-                        <hr Width="100%">
-                    </div>
-                </div>
+                    </form>
+                @endcomponent
 
-                {{-- 一覧 --}}
+            {{-- 一覧 --}}
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="row" style="margin: 0% 1%;">
                         <table class="table table-striped">
@@ -158,8 +162,10 @@
                         </table>
                     </div>
                 </div>
+
             </div>
         </div>
+
         {{-- スマホ版サイドメニュー --}}
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
             @include('layouts.content.daily.side-menu')

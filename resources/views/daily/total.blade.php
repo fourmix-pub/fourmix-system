@@ -33,6 +33,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-body">
+
                             <form class="form-horizontal">
                                 <?php
                                 $users = ['佐々木希','櫻井翔','松本潤'];
@@ -271,7 +272,7 @@
                 </div>
             </div>
 
-            @component('components.elements.table.admin.pagenation')
+            @component('components.elements.table.admin.pagination')
             @endcomponent
 
         </div>

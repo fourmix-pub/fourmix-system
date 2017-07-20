@@ -144,6 +144,10 @@ $next_month = $month + 1;
         </div>
     </div>
 
+    {{-- モーダル：削除ボタン --}}
+    @component('components.elements.modal.delete')
+    @endcomponent
+
     {{-- コンテンツ --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -280,8 +284,6 @@ $next_month = $month + 1;
 
             <div class="row">
                 <div class="table-responsive col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-
                     <table>
                         {{-- ▼ 入力画面 ▼ --}}
                         <form action="#">

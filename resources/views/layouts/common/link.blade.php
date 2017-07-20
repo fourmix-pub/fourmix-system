@@ -8,7 +8,12 @@
 
 <!-- Styles -->
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-<link href="{{ asset('/css/table.css')}}" rel="stylesheet">
+
+
+<!--fonts-->
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+<link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 
 <!-- fonts -->
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
