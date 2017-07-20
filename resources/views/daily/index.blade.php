@@ -1,8 +1,81 @@
 <?php
 
-// 現在の年月を取得
-$year = date('Y');
-$month = date('n');
+
+
+if(empty($_GET['month'])){
+
+    $month = date('n');
+    $year = date('Y');
+
+    if(isset($_GET['month'])){
+        $year = $_GET['year'] - 1;
+        $month = 12;
+    }
+
+}else{
+
+    $year = $_GET['year'];
+
+    switch ($_GET['month']){
+
+        case 1:
+            $month_eng = "Jan";
+            break;
+
+        case 2:
+            $month_eng = "Feb";
+            break;
+
+        case 3:
+            $month_eng = "Mar";
+            break;
+
+        case 4:
+            $month_eng = "Apr";
+            break;
+
+        case 5:
+            $month_eng = "May";
+            break;
+
+        case 6:
+            $month_eng = "Jun";
+            break;
+
+        case 7:
+            $month_eng = "Jul";
+            break;
+
+        case 8:
+            $month_eng = "Aug";
+            break;
+
+        case 9:
+            $month_eng = "Sep";
+            break;
+
+        case 10:
+            $month_eng = "Oct";
+            break;
+
+        case 11:
+            $month_eng = "Nov";
+            break;
+
+        case 12:
+            $month_eng = "Dec";
+            break;
+
+        case 13:
+            $month_eng = "Jan";
+            $year += 1;
+    }
+
+    $month = date('n', strtotime("$month_eng $year"));
+
+}
+
+
 
 // 月末日を取得
 $last_day = date('j', mktime(0, 0, 0, $month + 1, 0, $year));
@@ -46,6 +119,9 @@ for ($i = 1; $i < $last_day + 1; $i++) {
         }
     }
 }
+
+$previous_month = $month - 1;
+$next_month = $month + 1;
 ?>
 
 
@@ -107,7 +183,11 @@ for ($i = 1; $i < $last_day + 1; $i++) {
                             <?php endforeach; ?>
                         </tr>
                     </table>
+
+                        <a href="http://fourmix-system.app/daily?month=<?=$previous_month?>&year=<?=$year?>">＜前の月</a>
+                        <a href="http://fourmix-system.app/daily?month=<?=$next_month?>&year=<?=$year?>" style="float: right">次の月＞</a>
                 </div>
+
 
                 <style type="text/css">
                     table.calendar {
@@ -123,21 +203,6 @@ for ($i = 1; $i < $last_day + 1; $i++) {
                         padding: 5px;
                     }
                 </style>
-
-                {{--<style type="text/css">--}}
-                    {{--table {--}}
-                        {{--width: 100%;--}}
-                    {{--}--}}
-                    {{--table th {--}}
-                        {{--background: #EEEEEE;--}}
-                    {{--}--}}
-                    {{--table th,--}}
-                    {{--table td {--}}
-                        {{--border: 1px solid #CCCCCC;--}}
-                        {{--text-align: center;--}}
-                        {{--padding: 5px;--}}
-                    {{--}--}}
-                {{--</style>--}}
 
                 <div class="table-responsive col-xs-8 col-sm-8 col-md-8 col-lg-8">
                     <table class="table table-striped">
@@ -232,7 +297,7 @@ for ($i = 1; $i < $last_day + 1; $i++) {
                                                 <option data-tokens="asics">株式会社アシックス</option>
                                             </select>
                                         </td>
-                                        <td width="13%">
+                                        <td width="15%">
                                             <select class="selectpicker" data-width="100%" title="作業分類">
                                                 <option>作業</option>
                                                 <option>見積・営業活動</option>
@@ -246,7 +311,7 @@ for ($i = 1; $i < $last_day + 1; $i++) {
                                             <input type='text' class="form-control time" placeholder="終了時刻" />
                                         </td>
                                         <td width="15%">
-                                            <input type='text' class="form-control"  placeholder="休憩時間" />
+                                            <input type='text' class="form-control"  placeholder="休憩時間(分)" />
                                         </td>
                                         <td>
                                             <select class="selectpicker" data-width="100%" title="勤務分類">

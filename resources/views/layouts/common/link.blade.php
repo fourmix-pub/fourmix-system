@@ -8,6 +8,7 @@
 
 <!-- Styles -->
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+<link href="{{ asset('/css/table.css')}}" rel="stylesheet">
 
 <!-- Icon -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/apple-touch-icon.png') }}">

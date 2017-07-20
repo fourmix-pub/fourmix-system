@@ -99,7 +99,7 @@
                                 <th>作業分類</th>
                                 <th>作業時間</th>
                                 <th>作業金額</th>
-                                <th>アクション</th>
+                                <th></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -114,6 +114,9 @@
                                 @endcomponent
                             </tr>
                             <tr>
+                                <td colspan="7">備考欄</td>
+                            </tr>
+                            <tr>
                                 <td>田中咲良</td>
                                 <td>2016/07/31</td>
                                 <td>コメダコーヒー</td>
@@ -122,6 +125,9 @@
                                 <td>20,000</td>
                                 @component('components.elements.table.admin.button')
                                 @endcomponent
+                            </tr>
+                            <tr>
+                                <td colspan="7">備考欄</td>
                             </tr>
                             </tbody>
                             <tfoot>
