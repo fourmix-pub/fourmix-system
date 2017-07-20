@@ -76,11 +76,11 @@
 
 			<div class="form-group">
 				<label class="col-xs-3 control-label" for="department">部門<span class="text-danger">*</span></label>
-					<select class="selectpicker col-xs-8" title="部門"　id="department">
-						<option>システムデザイン</option>
-						<option>コンセプトデザイン</option>
-						<option>サポート</option>
-					</select>
+				<select class="selectpicker col-xs-8" title="部門"　id="department">
+					<option>システムデザイン</option>
+					<option>コンセプトデザイン</option>
+					<option>サポート</option>
+				</select>
 			</div>
 
 			@component('components.elements.form.modal.text',['name'=>'mail'])

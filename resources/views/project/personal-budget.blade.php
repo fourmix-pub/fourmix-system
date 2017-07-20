@@ -15,9 +15,6 @@
 				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
 				</button>
-				<button type="button" class="btn btn-danger pull-right" style="margin-right: 5%;" data-toggle="modal" data-target="#add">
-					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;追加
-				</button>
 			</h3>
 		</div>
 	</div>
@@ -36,147 +33,153 @@
 
 		{{-- アコーディオン：検索ボタン --}}
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<div class="collapse" id="search"　style="margin:1% 1%;">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<form class="form-horizontal">
-								<div class="form-group">
-									<?php
-									$users = ['佐々木希','櫻井翔','松本潤'];
-									?>
-									@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
-										担当者
-									@endcomponent
+			@component('components.elements.accordion.accordion')
+				<form class="form-horizontal">
+					<div class="form-group">
+                        <?php
+                        $projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
+                        ?>
+						@component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])
+							プロジェクト名
+						@endcomponent
 
-									<?php
-									$departments = ['システムデザイン','コンセプトデザイン','サポート'];
-									?>
-									@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'false'])
-										部門
-									@endcomponent
-								</div>
-								<div class="row form text-center">
-									<div class="btn-group" style="margin:2% 0% 0% 0%;">
-										<button type="button" class="btn" onclick="location.href=''">
-											<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
-										</button>
-									</div>
-								</div>
-							</form>
+                        <?php
+                        $users = ['佐々木希','櫻井翔','松本潤'];
+                        ?>
+						@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
+							責任者
+						@endcomponent
+
+                        <?php
+                        $departments = ['システムデザイン','コンセプトデザイン','サポート'];
+                        ?>
+						@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'false'])
+							部門
+						@endcomponent
+					</div>
+					<div class="form-group">
+						<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">表示区分</label>
+
+						<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+							<label class="radio-inline">
+								<input type="radio" name="project_status" value="">全て
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="project_status" value="">完了
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="project_status" value="">未完了
+							</label>
 						</div>
 					</div>
-				<hr Width="100%">
-				</div>
-			</div>
-
-			{{-- モーダル：追加ボタン --}}
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="modal fade" id="add" tabindex="-1">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header" style="margin:2% 0%;">
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-									<h4 class="modal-title">個人予算追加</h4>
-								</div>
-								<form class="form-horizontal">
-									<div class="modal-body">
-										<div class="form-group">
-											<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">プロジェクト<span class="text-danger">*</span> </label>
-											<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-												<select class="selectpicker" data-width="100%" data-live-search="true" title="指定なし">
-													<option data-tokens="fourmix-system">指定なし</option>
-													<option data-tokens="fourmix-system">社内ログ管理システム</option>
-													<option data-tokens="rhizo-me">株式会社リゾーム</option>
-													<option data-tokens="asics">株式会社アシックス</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">担当者<span class="text-danger">*</span> </label>
-											<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-												<select class="selectpicker" data-width="100%" data-live-search="true" title="指定なし">
-													<option data-tokens="">指定なし</option>
-													<option data-tokens="">櫻井翔</option>
-													<option data-tokens="">佐々木希</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">個人予算金額<span class="text-danger">*</span></label>
-											<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-												<input type="text" class="form-control" id="personal_budget" width="100%" placeholder="個人予算金額" />
-											</div>
-										</div>
-									</div>
-								</form>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
-									<button type="button" class="btn btn-primary"　 data-dismiss="modal">登録</button>
-								</div>
-							</div>
+					@component('components.elements.form.period')
+					@endcomponent
+					<div class="row text-center">
+						<div class="btn-group" style="margin:2% 0% 0% 0%;">
+							<button type="button" class="btn" onclick="location.href=''">
+								<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
+							</button>
 						</div>
 					</div>
-				</div>
-			</div>
+				</form>
+			@endcomponent
+
 
 			{{-- 一覧 --}}
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<div class="row" style="margin: 0% 1%;">
-					<table class="table table-striped table-bordered">
-						<thead>
-							<tr>
-								<th>プロジェクト</th>
-								<th>担当者</th>
-								<th>個人予算</th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>日本計画</td>
-								<td>佐々木希</td>
-								<td>100,000</td>
-								@component('components.elements.table.admin.button')
-								@endcomponent
-							</tr>
-							<tr>
-								<td>日本計画</td>
-								<td>佐々木希</td>
-								<td>100,000</td>
-								@component('components.elements.table.admin.button')
-								@endcomponent
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-								<td colspan="6" align="center">
-									<nav class="pagination text-right">
-										<ul class="pagination">
-											<li>
-												<a href="#" aria-label="前のページへ">
-													<span aria-hidden="true">«</span>
-												</a>
-											</li>
-											<li class="active"><a href="#">1</a></li>
-											<li><a href="#">2</a></li>
-											<li><a href="#">3</a></li>
-											<li><a href="#">4</a></li>
-											<li><a href="#">5</a></li>
-											<li>
-												<a href="#" aria-label="次のページへ">
-													<span aria-hidden="true">»</span>
-												</a>
-											</li>
-										</ul>
-									</nav>
-								</td>
-							</tr>
-						</tfoot>
-					</table>
+				<div class="row">
+					<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"></div>
+					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<button class="btn btn-default">
+							<span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
+						</button>
+					</div>
+
 				</div>
+				<br>
+				<div class="row" style="margin: 0% 1%;">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<table class="table table-bordered table-hover">
+							<tr>
+								<td><b>プロジェクト名</b></td>
+								<td colspan="3">PCP・メンズポケットサーバー移行</td>
+								<td><b>開始日</b></td>
+								<td>2009/03/02</td>
+							</tr>
+							<tr>
+								<td><b>責任者</b></td>
+								<td colspan="3">碓井智</td>
+								<td><b>完成予定日</b></td>
+								<td>2009/03/02</td>
+							</tr>
+							<tr>
+								<td><b>受注金額</b></td>
+								<td>3,000,000円</td>
+								<td><b>実行予算</b></td>
+								<td>3,000,000円</td>
+								<td><b>完成日</b></td>
+								<td>2009/04/02</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<br>
+
+				<div class="row" style="margin: 0% 1%;">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<table class="table table-bordered table-hover">
+							<thead>
+							<tr>
+								<th>作業分類名</th>
+								<th>作業時間</th>
+								<th>作業金額</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>設計</td>
+								<td>90.00</td>
+								<td>1,000,000</td>
+							</tr>
+							<tr>
+								<td>打合せ</td>
+								<td>90.00</td>
+								<td>1,000,000</td>
+							</tr>
+							<tr>
+								<td>打合せ</td>
+								<td>90.00</td>
+								<td>1,000,000</td>
+							</tr>
+							</tbody>
+						</table>
+						<div class="text-center">
+							<nav class="pagination">
+								<ul class="pagination">
+									<li>
+										<a href="#" aria-label="前のページへ">
+											<span aria-hidden="true">«</span>
+										</a>
+									</li>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li>
+										<a href="#" aria-label="次のページへ">
+											<span aria-hidden="true">»</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+
 			</div>
+
 		</div>
 	</div>
 	{{-- スマホ版サイドメニュー --}}
