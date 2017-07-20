@@ -1,0 +1,175 @@
+@extends('layouts.app')
+
+@section('title')
+    プロジェクト予算対
+@endsection
+
+@section('content')
+
+    {{-- タイトル --}}
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="page-header">
+                <h3>
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;&nbsp;プロジェクト予算対
+                    <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
+                    </button>
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="btn-group" role="group" aria-label="...">
+                <a type="button" class="btn btn-default" href="{{ url('/project-budget') }}">プロジェクト別</a>
+                <a type="button" class="btn btn-default" href="{{ url('/project-personal') }}">個人別</a>
+                <a type="button" class="btn btn-default" href="{{ url('/project-personal-budget') }}">個人予算別</a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    {{-- コンテンツ --}}
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+
+            {{-- PC版サイドメニュー --}}
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    @include('layouts.content.project.xs-side-menu')
+                </div>
+            </div>
+
+            {{-- アコーディオン：検索ボタン --}}
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="collapse" id="search" style="margin:1% 1%;">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <?php
+                                        $projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
+                                        ?>
+                                        @component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])
+                                            プロジェクト名
+                                        @endcomponent
+
+                                        <?php
+                                        $users = ['佐々木希','櫻井翔','松本潤'];
+                                        ?>
+                                        @component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
+                                            責任者
+                                        @endcomponent
+
+                                        <?php
+                                        $departments = ['システムデザイン','コンセプトデザイン','サポート'];
+                                        ?>
+                                        @component('components.elements.form.select.select', ['items'=>$departments,'search'=>'false'])
+                                            部門
+                                        @endcomponent
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">期間</label>
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                            <div class='input-group day'>
+                                                <input type='text' class="form-control" placeholder="開始日" />
+                                                <span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+                                            </div>
+                                        </div>
+                                        <label class="col-xs-1 col-sm-1 col-md-1 col-lg-1 control-label" style="text-align: center">～</label>
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                            <div class='input-group day'>
+                                                <input type='text' class="form-control" placeholder="終了日" />
+                                                <span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form text-center">
+                                        <div class="btn-group" style="margin:2% 0% 0% 0%;">
+                                            <button type="button" class="btn" onclick="location.href=''">
+                                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <hr Width="100%">
+                    </div>
+                </div>
+
+                {{-- 一覧 --}}
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="text-center">
+                        <h3>プロジェクト個人予算対実績表</h3>
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>プロジェクト</th>
+                            <th>担当者</th>
+                            <th>個人予算</th>
+                            <th>実績金額</th>
+                            <th>個人予算残高</th>
+                            <th>個人予算残％</th>
+                            <th>状態</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>○○プロジェクト</td>
+                            <td>櫻井翔</td>
+                            <td>3,000,000</td>
+                            <td>1,500,000</td>
+                            <td>1,500,000</td>
+                            <td>50.0%</td>
+                            <td>完了</td>
+                        </tr>
+                        <tr>
+                            <td>○○プロジェクト</td>
+                            <td>櫻井翔</td>
+                            <td>3,000,000</td>
+                            <td>3,000,000</td>
+                            <td>0</td>
+                            <td>0.0%</td>
+                            <td>完了</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center">
+                        <nav class="pagination">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="前のページへ">
+                                        <span aria-hidden="true">«</span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="次のページへ">
+                                        <span aria-hidden="true">»</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- スマホ版サイドメニュー --}}
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            @include('layouts.content.project.side-menu')
+        </div>
+    </div>
+@endsection

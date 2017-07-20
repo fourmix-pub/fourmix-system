@@ -10,7 +10,7 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
-			<h2>
+			<h3>
 				<i class="fa fa-jpy" aria-hidden="true"></i>&nbsp;&nbsp;個人予算一覧
 				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
@@ -18,7 +18,7 @@
 				<button type="button" class="btn btn-danger pull-right" style="margin-right: 5%;" data-toggle="modal" data-target="#add">
 					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;追加
 				</button>
-			</h2>
+			</h3>
 		</div>
 	</div>
 </div>
@@ -42,27 +42,19 @@
 						<div class="panel-body">
 							<form class="form-horizontal">
 								<div class="form-group">
-									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">担当者</label>
-									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<select class="selectpicker" data-width="100%"  title="指定なし">
-											<option>指定なし</option>
-											<option>櫻井翔</option>
-											<option>大野智</option>
-										</select>
-									</div>
-									<div class="col-sm-1"></div>
-								</div>
-								<div class="form-group">
-									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">部門名</label>
-									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<select class="selectpicker" data-width="100%" title="指定なし">
-											<option>指定なし</option>
-											<option>システムデザイン</option>
-											<option>コンセプトデザイン</option>
-											<option>サポート</option>
-										</select>
-									</div>
-									<div class="col-sm-1"></div>
+									<?php
+									$users = ['佐々木希','櫻井翔','松本潤'];
+									?>
+									@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
+										担当者
+									@endcomponent
+
+									<?php
+									$departments = ['システムデザイン','コンセプトデザイン','サポート'];
+									?>
+									@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'false'])
+										部門
+									@endcomponent
 								</div>
 								<div class="row form text-center">
 									<div class="btn-group" style="margin:2% 0% 0% 0%;">
@@ -146,27 +138,15 @@
 								<td>日本計画</td>
 								<td>佐々木希</td>
 								<td>100,000</td>
-								<td>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
+								@component('components.elements.table.admin.button')
+								@endcomponent
 							</tr>
 							<tr>
 								<td>日本計画</td>
 								<td>佐々木希</td>
 								<td>100,000</td>
-								<td>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#add"　title="編集">
-										<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#myModal"　title="削除">
-										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-									</button>
-								</td>
+								@component('components.elements.table.admin.button')
+								@endcomponent
 							</tr>
 						</tbody>
 						<tfoot>

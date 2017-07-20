@@ -10,12 +10,12 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
-			<h2>
+			<h3>
 				<i class="fa fa-th-list" aria-hidden="true"></i>&nbsp;&nbsp;プロジェクト台帳
 				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
 				</button>
-			</h2>
+			</h3>
 		</div>
 	</div>
 </div>
@@ -39,40 +39,31 @@
 						<div class="panel-body">
 							<form class="form-horizontal">
 								<div class="form-group">
-									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">プロジェクト</label>
-									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<select class="selectpicker" data-width="100%" data-live-search="true" title="指定なし">
-											<option data-tokens="">指定なし</option>
-											<option data-tokens="fourmix-system">社内ログ管理システム</option>
-											<option data-tokens="rhizo-me">株式会社リゾーム</option>
-											<option data-tokens="asics">株式会社アシックス</option>
-										</select>
-									</div>
-									<div class="col-sm-1"></div>
-								</div>
-								<div class="form-group">
-									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">責任者</label>
-									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<select class="selectpicker" data-width="100%" data-live-search="true" title="指定なし">
-											<option data-tokens="">指定なし</option>
-											<option data-tokens="">櫻井翔</option>
-											<option data-tokens="">佐々木希</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">部門</label>
-									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<select class="selectpicker" data-width="100%" title="指定なし">
-											<option>指定なし</option>
-											<option>システムデザイン</option>
-											<option>コンセプトデザイン</option>
-											<option>サポート</option>
-										</select>
-									</div>
+                                    <?php
+                                    $projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
+                                    ?>
+									@component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])
+										プロジェクト名
+									@endcomponent
+
+                                    <?php
+                                    $users = ['佐々木希','櫻井翔','松本潤'];
+                                    ?>
+									@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
+										責任者
+									@endcomponent
+
+                                    <?php
+                                    $departments = ['システムデザイン','コンセプトデザイン','サポート'];
+                                    ?>
+									@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'false'])
+										部門
+									@endcomponent
 								</div>
 								<div class="form-group">
 									<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">表示区分</label>
+
+
 									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 										<label class="radio-inline">
 											<input type="radio" name="project_status" value="">全て
