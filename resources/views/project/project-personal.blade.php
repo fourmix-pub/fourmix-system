@@ -23,7 +23,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="btn-group" role="group" aria-label="...">
                 <a type="button" class="btn btn-default" href="{{ url('/project-budget') }}">プロジェクト別</a>
-                <a type="button" class="btn btn-default" href="{{ url('/project-personal') }}">個人別</a>
+                <a type="button" class="btn btn-primary" href="{{ url('/project-personal') }}">個人別</a>
                 <a type="button" class="btn btn-default" href="{{ url('/project-personal-budget') }}">個人予算別</a>
             </div>
         </div>
@@ -110,7 +110,7 @@
                     <div class="text-center">
                         <h3>プロジェクト予算対実績表（個人）</h3>
                     </div>
-                    <table class="table table-striped">
+                    <table class="table table-striped table-bordered">
                         <thead>
                         <tr>
                             <th>プロジェクト</th>

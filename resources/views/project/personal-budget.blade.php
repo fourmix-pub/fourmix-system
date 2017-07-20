@@ -124,7 +124,7 @@
 			{{-- 一覧 --}}
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="row" style="margin: 0% 1%;">
-					<table class="table table-striped">
+					<table class="table table-striped table-bordered">
 						<thead>
 							<tr>
 								<th>プロジェクト</th>

@@ -211,18 +211,18 @@
 			{{-- 一覧 --}}
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="row" style="margin: 0% 1%;">
-					<table class="table table-striped">
+					<table class="table table-striped table-bordered">
 						<thead>
 							<tr>
 								<th>ID</th>
 								<th>プロジェクト名</th>
 								<th style="width: 86px">責任者</th>
 								<th style="width: 76px">受注金額</th>
-								<th style="width: 86px">実行予算</th>
+								<th style="width: 76px">実行予算</th>
 								<th>開始日</th>
 								<th style="width: 91px">完了予定日</th>
 								<th>完了日</th>
-								<th></th>
+								<th style="width: 105px"></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -230,8 +230,8 @@
 								<th scope="row">1</th>
 								<td>PCP・メンズポケットサーバー移行</td>
 								<td>田中咲良</td>
-								<td>2,500</td>
-								<td>システム</td>
+								<td align="right">2,500</td>
+								<td align="right">2,500</td>
 								<td>2014/12/1</td>
 								<td>2015/4/1</td>
 								<td>2015/7/31</td>
@@ -242,8 +242,8 @@
 								<th scope="row">2</th>
 								<td></td>
 								<td>呉傑</td>
-								<td>2,500</td>
-								<td>システム</td>
+								<td align="right">2,500</td>
+								<td align="right">2,500</td>
 								<td>2014/12/1</td>
 								<td>2015/4/1</td>
 								<td>2015/7/31</td>
@@ -254,8 +254,8 @@
 								<th scope="row">3</th>
 								<td></td>
 								<td>山本耕史郎</td>
-								<td>2,500</td>
-								<td>システム</td>
+								<td align="right">2,500</td>
+								<td align="right">2,500</td>
 								<td>2014/12/1</td>
 								<td>2015/4/1</td>
 								<td>2015/7/31</td>
@@ -266,8 +266,8 @@
 								<th scope="row">4</th>
 								<td></td>
 								<td>木村拓哉</td>
-								<td>2,500</td>
-								<td>コンセプト</td>
+								<td align="right">2,500</td>
+								<td align="right">2,500</td>
 								<td>2014/12/1</td>
 								<td>2015/4/1</td>
 								<td>2015/7/31</td>
@@ -278,8 +278,8 @@
 								<th scope="row">5</th>
 								<td></td>
 								<td>中居正広</td>
-								<td>2,500</td>
-								<td>サポート</td>
+								<td align="right">2,500</td>
+								<td align="right">2,500</td>
 								<td>2014/12/1</td>
 								<td>2015/4/1</td>
 								<td>2015/7/31</td>
@@ -290,8 +290,8 @@
 								<th scope="row">6</th>
 								<td></td>
 								<td>稲垣吾郎</td>
-								<td>2,500</td>
-								<td>サポート</td>
+								<td align="right">2,500</td>
+								<td align="right">2,500</td>
 								<td>2014/12/1</td>
 								<td>2015/4/1</td>
 								<td>2015/7/31</td>
@@ -302,8 +302,8 @@
 								<th scope="row">7</th>
 								<td></td>
 								<td>香取慎吾</td>
-								<td>2,500</td>
-								<td>サポート</td>
+								<td align="right">2,500</td>
+								<td align="right">2,500</td>
 								<td>2014/12/1</td>
 								<td>2015/4/1</td>
 								<td>2015/7/31</td>
@@ -314,8 +314,8 @@
 								<th scope="row">8</th>
 								<td></td>
 								<td>草彅剛</td>
-								<td>2,500</td>
-								<td>サポート</td>
+								<td align="right">2,500</td>
+								<td align="right">2,500</td>
 								<td>2014/12/1</td>
 								<td>2015/4/1</td>
 								<td>2015/7/31</td>
@@ -326,8 +326,8 @@
 								<th scope="row">9</th>
 								<td></td>
 								<td>新垣結衣</td>
-								<td>2,500</td>
-								<td>サポート</td>
+								<td align="right">2,500</td>
+								<td align="right">2,500</td>
 								<td>2014/12/1</td>
 								<td>2015/4/1</td>
 								<td>2015/7/31</td>
@@ -338,8 +338,8 @@
 								<th scope="row">10</th>
 								<td></td>
 								<td>北乃きい</td>
-								<td>2,500</td>
-								<td>サポート</td>
+								<td align="right">2,500</td>
+								<td align="right">2,500</td>
 								<td>2014/12/1</td>
 								<td>2015/4/1</td>
 								<td>2015/7/31</td>
@@ -347,32 +347,9 @@
 								@endcomponent
 							</tr>
 						</tbody>
-						<tfoot>
-							<tr>
-								<td colspan="6" align="center">
-									<nav class="pagination text-right">
-										<ul class="pagination">
-											<li>
-												<a href="#" aria-label="前のページへ">
-													<span aria-hidden="true">«</span>
-												</a>
-											</li>
-											<li class="active"><a href="#">1</a></li>
-											<li><a href="#">2</a></li>
-											<li><a href="#">3</a></li>
-											<li><a href="#">4</a></li>
-											<li><a href="#">5</a></li>
-											<li>
-												<a href="#" aria-label="次のページへ">
-													<span aria-hidden="true">»</span>
-												</a>
-											</li>
-										</ul>
-									</nav>
-								</td>
-							</tr>
-						</tfoot>
 					</table>
+					@component('components.elements.table.admin.pagenation')
+					@endcomponent
 				</div>
 			</div>
 		</div>
