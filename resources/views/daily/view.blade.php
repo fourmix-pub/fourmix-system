@@ -94,7 +94,7 @@
             {{-- 一覧 --}}
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="row" style="margin: 0% 1%;">
-                        <table class="table table-striped">
+                        <table class="table table-striped table-bordered table-hover">
                             <thead>
                             <tr>
                                 <th>担当者</th>
@@ -113,7 +113,7 @@
                                 <td>コメダコーヒー</td>
                                 <td>設計</td>
                                 <td>8.25</td>
-                                <td>20,000</td>
+                                <td align="right">20,000</td>
                                 @component('components.elements.table.admin.button')
                                 @endcomponent
                             </tr>
@@ -126,7 +126,7 @@
                                 <td>コメダコーヒー</td>
                                 <td>設計</td>
                                 <td>8.25</td>
-                                <td>20,000</td>
+                                <td align="right">20,000</td>
                                 @component('components.elements.table.admin.button')
                                 @endcomponent
                             </tr>

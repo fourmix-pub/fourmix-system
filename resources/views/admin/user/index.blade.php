@@ -129,11 +129,11 @@
 						<?php
 						$theads=['ID','名前','作業単価','部署','退職',''];
 
-						$tbody1=['id'=>1,'user'=>'田中咲良','cost'=>'2500','department'=>'システム','resignation'=>''];
-						$tbody2=['id'=>2,'user'=>'呉傑','cost'=>'2500','department'=>'システム','resignation'=>''];
-						$tbody3=['id'=>3,'user'=>'山本耕史郎','cost'=>'2500','department'=>'システム','resignation'=>'✔️'];
-						$tbody4=['id'=>4,'user'=>'木村拓哉','cost'=>'5000','department'=>'コンセプト','resignation'=>''];
-						$tbody5=['id'=>5,'user'=>'草なぎ剛','cost'=>'7000','department'=>'サポート','resignation'=>'✔️'];
+						$tbody1=['id'=>1,'user'=>'田中咲良','cost'=>'2,500','department'=>'システム','resignation'=>''];
+						$tbody2=['id'=>2,'user'=>'呉傑','cost'=>'2,500','department'=>'システム','resignation'=>''];
+						$tbody3=['id'=>3,'user'=>'山本耕史郎','cost'=>'2,500','department'=>'システム','resignation'=>'✔️'];
+						$tbody4=['id'=>4,'user'=>'木村拓哉','cost'=>'5,000','department'=>'コンセプト','resignation'=>''];
+						$tbody5=['id'=>5,'user'=>'草なぎ剛','cost'=>'7,000','department'=>'サポート','resignation'=>'✔️'];
 
 						$tbodys=[$tbody1,$tbody2,$tbody3,$tbody4,$tbody5];
 						?>
@@ -144,8 +144,8 @@
 						<tbody>
 							@foreach($tbodys as $tbody)
 								<tr>
-									<th scope="row"><p>{{ $tbody['id'] }}</p></th>
-									<td><p>{{ $tbody['user'] }}</p></td>
+									<th scope="row">{{ $tbody['id'] }}</th>
+									<td>{{ $tbody['user'] }}</td>
 									<td align="right">{{ $tbody['cost'] }}</td>
 									<td>{{ $tbody['department'] }}</td>
 									<td align="center">{{ $tbody['resignation'] }}</td>

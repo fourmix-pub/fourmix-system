@@ -31,56 +31,56 @@
         {{-- アコーディオン：検索ボタン --}}
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
+                <div class="panel panel-default">
+                    <div class="panel-body">
 
-                            <form class="form-horizontal">
-                                <?php
-                                $users = ['佐々木希','櫻井翔','松本潤'];
-                                ?>
+                        <form class="form-horizontal">
+                            <?php
+                            $users = ['佐々木希','櫻井翔','松本潤'];
+                            ?>
 
-                                @component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
-                                    担当者
-                                @endcomponent
+                            @component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
+                                担当者
+                            @endcomponent
 
-                                <?php
-                                $projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
-                                ?>
+                            <?php
+                            $projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
+                            ?>
 
-                                @component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])
-                                    プロジェクト名
-                                @endcomponent
+                            @component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])
+                                プロジェクト名
+                            @endcomponent
 
-                                <?php
-                                $departments = ['システムデザイン','コンセプトデザイン','サポート'];
-                                ?>
+                            <?php
+                            $departments = ['システムデザイン','コンセプトデザイン','サポート'];
+                            ?>
 
-                                @component('components.elements.form.select.select', ['items'=>$departments,'search'=>'false'])
-                                    部門
-                                @endcomponent
+                            @component('components.elements.form.select.select', ['items'=>$departments,'search'=>'false'])
+                                部門
+                            @endcomponent
 
-                                <?php
-                                $categories=['調査','実装','テスト']
-                                ?>
+                            <?php
+                            $categories=['調査','実装','テスト']
+                            ?>
 
-                                @component('components.elements.form.select.select', ['items'=>$categories,'search'=>'false'])
-                                    作業分類
-                                @endcomponent
+                            @component('components.elements.form.select.select', ['items'=>$categories,'search'=>'false'])
+                                作業分類
+                            @endcomponent
 
-                                 @component('components.elements.form.period')
-                                 @endcomponent
+                             @component('components.elements.form.period')
+                             @endcomponent
 
-                                <div class="row text-center">
-                                    <div class="btn-group" style="margin:2% 0% 0% 0%;">
-                                        <button type="button" class="btn" onclick="location.href=''">
-                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
-                                        </button>
-                                    </div>
+                            <div class="row text-center">
+                                <div class="btn-group" style="margin:2% 0% 0% 0%;">
+                                    <button type="button" class="btn" onclick="location.href=''">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
+                                    </button>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
-                    <hr Width="100%">
+                </div>
+                <hr Width="100%">
             </div>
 
             {{-- 一覧 --}}
@@ -97,7 +97,7 @@
                         </button>
                     </div>
 
-                    <table class="table table-striped">
+                    <table class="table table-striped table-bordered table-hover">
                         <thead>
                         <tr>
                             <th>作業分類</th>
@@ -109,22 +109,22 @@
                             <tr>
                                 <td>調査</td>
                                 <td>30.00</td>
-                                <td>￥100,000</td>
+                                <td align="right">￥100,000</td>
                             </tr>
                             <tr>
                                 <td>設計</td>
                                 <td>30.00</td>
-                                <td>￥100,000</td>
+                                <td align="right">￥100,000</td>
                             </tr>
                             <tr>
                                 <td>打ち合わせ</td>
                                 <td>30.00</td>
-                                <td>￥100,000</td>
+                                <td align="right">￥100,000</td>
                             </tr>
                             <tr>
                                 <th scope="row">合計</th>
                                 <td>90.00</td>
-                                <td>￥300,000</td>
+                                <td align="right">￥300,000</td>
                             </tr>
                         </tbody>
                     </table>
@@ -144,7 +144,7 @@
                         </button>
                     </div>
 
-                    <table class="table table-striped">
+                    <table class="table table-striped table-bordered table-hover">
                         <thead>
                         <tr>
                             <th>担当者</th>
@@ -156,22 +156,22 @@
                         <tr>
                             <td>山本耕史郎</td>
                             <td>30.00</td>
-                            <td>￥100,000</td>
+                            <td align="right">￥100,000</td>
                         </tr>
                         <tr>
                             <td>田中咲良</td>
                             <td>30.00</td>
-                            <td>￥100,000</td>
+                            <td align="right">￥100,000</td>
                         </tr>
                         <tr>
                             <td>呉傑</td>
                             <td>30.00</td>
-                            <td>￥100,000</td>
+                            <td align="right">￥100,000</td>
                         </tr>
                         <tr>
                             <th scope="row">合計</th>
                             <td>90.00</td>
-                            <td>￥300,000</td>
+                            <td align="right">￥300,000</td>
                         </tr>
                         </tbody>
                     </table>
@@ -191,7 +191,7 @@
                         </button>
                     </div>
 
-                    <table class="table table-striped">
+                    <table class="table table-striped table-bordered table-hover">
                         <thead>
                         <tr>
                             <th>作業分類</th>
@@ -203,22 +203,22 @@
                         <tr>
                             <td>調査</td>
                             <td>30.00</td>
-                            <td>￥100,000</td>
+                            <td align="right">￥100,000</td>
                         </tr>
                         <tr>
                             <td>設計</td>
                             <td>30.00</td>
-                            <td>￥100,000</td>
+                            <td align="right">￥100,000</td>
                         </tr>
                         <tr>
                             <td>打ち合わせ</td>
                             <td>30.00</td>
-                            <td>￥100,000</td>
+                            <td align="right">￥100,000</td>
                         </tr>
                         <tr>
                             <th scope="row">合計</th>
                             <td>90.00</td>
-                            <td>￥300,000</td>
+                            <td align="right">￥300,000</td>
                         </tr>
                         </tbody>
                     </table>
@@ -238,7 +238,7 @@
                         </button>
                     </div>
 
-                    <table class="table table-striped">
+                    <table class="table table-striped table-bordered table-hover">
                         <thead>
                         <tr>
                             <th>プロジェクト</th>
@@ -250,22 +250,22 @@
                         <tr>
                             <td>社内行事・その他</td>
                             <td>30.00</td>
-                            <td>￥100,000</td>
+                            <td align="right">￥100,000</td>
                         </tr>
                         <tr>
                             <td>日科技連サイト構築</td>
                             <td>30.00</td>
-                            <td>￥100,000</td>
+                            <td align="right">￥100,000</td>
                         </tr>
                         <tr>
                             <td>Win</td>
                             <td>30.00</td>
-                            <td>￥100,000</td>
+                            <td align="right">￥100,000</td>
                         </tr>
                         <tr>
                             <th scope="row">合計</th>
                             <td>90.00</td>
-                            <td>￥300,000</td>
+                            <td align="right">￥300,000</td>
                         </tr>
                         </tbody>
                     </table>

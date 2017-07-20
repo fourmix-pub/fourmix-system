@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse header-fourmix" role="navigation">
     <div class="container">
         <div class="navbar-header">
 
@@ -12,14 +12,15 @@
 
             <!-- Branding Image -->
             @if (Auth::guest())
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name') }}
-                </a>
+                <a class="navbar-brand" href="{{ url('/') }}"><img src="http://www.fourmix.co.jp/files/user/img/common/fourmix_w.png"></a>
             @else
-                <a class="navbar-brand" href="{{ url('/home') }}">
-                    {{ config('app.name') }}
-                </a>
+                <div id="fourmix">
+                    <a class="navbar-brand" href="{{ url('/home') }}">
+                        <img src="http://www.fourmix.co.jp/files/user/img/common/fourmix_w.png">
+                    </a>
+                </div>
             @endif
+
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -27,15 +28,15 @@
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="{{ url('/') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="ホーム">
-                            <span class="glyphicon glyphicon-home"></span>
+                            <span class="glyphicon glyphicon-home white"></span>
                         </a>
                         <a href="{{ url('/') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;ホーム
+                            <span class="glyphicon glyphicon-home white"></span>&nbsp;&nbsp;ホーム
                         </a>
                     </li>
                     <li>
                         <a href="{{ url('/login') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;ログイン
+                            <span class="glyphicon glyphicon-log-in white"></span>&nbsp;&nbsp;ログイン
                         </a>
                         {{-- <a href="{{ url('/register') }}" class="visible-xs-block">
                             <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;新規登録
@@ -48,7 +49,7 @@
                     <br class="visible-xs-block">
                     <li class="dropdown visible-xs-block">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            
+
                             <h3 style="color: #9e9e9e">{{ Auth::user()->name }}</h3>
                         </a>
                         <ul class="dropdown-menu" role="menu">
@@ -68,8 +69,8 @@
                     <li>
                         <li role="presentation" class="dropdown">
                             <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="閲覧">
-                                <span class="glyphicon glyphicon-pencil"></span>
-                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <span class="glyphicon glyphicon-pencil white"></span>
+                                <i class="fa fa-caret-down white" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li role="presentation"><a href="{{ url('/daily') }}" >日報作成</a></li>
@@ -86,8 +87,8 @@
                     <li>
                         <li role="presentation" class="dropdown">
                             <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="プロジェクト">
-                                <span class="glyphicon glyphicon-briefcase"></span>&nbsp;
-                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <span class="glyphicon glyphicon-briefcase white"></span>&nbsp;
+                                <i class="fa fa-caret-down white" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li role="presentation"><a href="{{ url('/project') }}">プロジェクト一覧</a></li>
@@ -98,15 +99,15 @@
                         </li>
                         <li>
                             <a href="{{ url('/project') }}" class="visible-xs-block">
-                                <span class="glyphicon glyphicon-briefcase"></span>&nbsp;&nbsp;プロジェクト
+                                <span class="glyphicon glyphicon-briefcase white"></span>&nbsp;&nbsp;プロジェクト
                             </a>
                         </li>
                     </li>
                     <li>
                         <li role="presentation" class="dropdown">
                             <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="ツール">
-                                <span class="glyphicon glyphicon-check"></span>
-                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <span class="glyphicon glyphicon-check white"></span>
+                                <i class="fa fa-caret-down white" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li role="presentation"><a href="{{ url('http://localhost/phpmyadmin/') }}" target="_blank">phpMyAdmin</a></li>
@@ -114,23 +115,23 @@
                             </ul>
                         </li>
                         <a href="{{ url('/home#') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-check"></span> ツール
+                            <span class="glyphicon glyphicon-check white"></span> ツール
                         </a>
                     </li>
                     <li>
                         <a href="{{ url('/setting/staff') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;基本設定
+                            <span class="glyphicon glyphicon-cog white"></span>&nbsp;&nbsp;基本設定
                         </a>
                     </li>
                     <li>
                         <a href="{{ url('/config') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;プロフィール
+                            <span class="glyphicon glyphicon-user white"></span>&nbsp;&nbsp;プロフィール
                         </a>
                     </li>
                     {{-- @if(Admin::is_super_admin(Auth::user())) --}}
                         <li>
                             <a href="{{ url('/home#') }}" class="visible-xs-block">
-                                <span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;管理者設定
+                                <span class="glyphicon glyphicon-wrench white"></span>&nbsp;&nbsp;管理者設定
                             </a>
                         </li>
                     {{-- @endif --}}
@@ -146,8 +147,8 @@
                     <li>
                         <li role="presentation" class="dropdown">
                             <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="基本設定">
-                                <span class="glyphicon glyphicon-cog"></span>&nbsp;
-                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                <span class="glyphicon glyphicon-cog white"></span>&nbsp;
+                                <i class="fa fa-caret-down white" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li role="presentation"><a href="{{ url('/admin/user') }}">担当者</a></li>
@@ -163,7 +164,7 @@
                 @if (Auth::guest())
                     <li>
                         <a href="{{ url('/login') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="ログイン">
-                            <span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;ログイン
+                            <span class="glyphicon glyphicon-log-in white"></span>&nbsp;&nbsp;ログイン
                         </a>
                     </li>
                     {{-- <li>
@@ -188,14 +189,13 @@
                         <ul class="dropdown-menu" role="menu">
                             <li>
                                 <a href="{{ url('/config') }}">
-                                    <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;プロフィール
+                                    <span class="glyphicon glyphicon-user white"></span>&nbsp;&nbsp;プロフィール
                                 </a>
                             </li>
                             <li>
-                                <a href="#"
-                                   onclick="event.preventDefault();
+                                <a href="#" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                    <span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;ログアウト
+                                    <span class="glyphicon glyphicon-log-out white"></span>&nbsp;&nbsp;ログアウト
                                 </a>
 
                                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">

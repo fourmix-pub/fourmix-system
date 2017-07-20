@@ -75,6 +75,7 @@ mix.styles([
     'resources/assets/css/lib.css',
     'resources/assets/css/main.css',
     'resources/assets/css/table.css',
+    'resources/assets/css/header.css',
     'resources/assets/css/callouts.css',
     'resources/assets/css/font-awesome.css',
     'resources/assets/css/bootstrap-select.css',

@@ -209,7 +209,7 @@ $next_month = $month + 1;
                 </style>
 
                 <div class="table-responsive col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                    <table class="table table-striped">
+                    <table class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th>日付</th>
@@ -223,59 +223,51 @@ $next_month = $month + 1;
                             </tr>
                             </thead>
                         <tbody>
-                            <form>
-                                <tr>
-                                    <td>2016/07/31</td>
-                                    <td>コメダコーヒー</td>
-                                    <td>設計</td>
-                                    <td>09:30</td>
-                                    <td>20:00</td>
-                                    <td>60</td>
-                                    <td>普通</td>
-                                    @component('components.elements.table.admin.button')
-                                    @endcomponent
-                                </tr>
-                            </form>
-                            <form>
-                                <tr>
-                                    <td>2016/08/21</td>
-                                    <td>コメダコーヒー</td>
-                                    <td>設計</td>
-                                    <td>09:30</td>
-                                    <td>20:00</td>
-                                    <td>60</td>
-                                    <td>普通</td>
-                                    @component('components.elements.table.admin.button')
-                                    @endcomponent
-                                </tr>
-                            </form>
-                            <form>
-                                <tr>
-                                    <td>2016/08/21</td>
-                                    <td>コメダコーヒー</td>
-                                    <td>設計</td>
-                                    <td>09:30</td>
-                                    <td>20:00</td>
-                                    <td>60</td>
-                                    <td>普通</td>
-                                    @component('components.elements.table.admin.button')
-                                    @endcomponent
-                                </tr>
-                            </form>
-                            <form>
-                                <tr>
-                                    <td>2016/08/31</td>
-                                    <td>タリーズ</td>
-                                    <td>設計</td>
-                                    <td>09:30</td>
-                                    <td>20:00</td>
-                                    <td>60</td>
-                                    <td>普通</td>
-                                    @component('components.elements.table.admin.button')
-                                    @endcomponent
-                                </tr>
-                            </form>
-                            </tbody>
+                            <tr>
+                                <td>2016/07/31</td>
+                                <td>コメダコーヒー</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td>60</td>
+                                <td>普通</td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                            <tr>
+                                <td>2016/08/21</td>
+                                <td>コメダコーヒー</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td>60</td>
+                                <td>普通</td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                            <tr>
+                                <td>2016/08/21</td>
+                                <td>コメダコーヒー</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td>60</td>
+                                <td>普通</td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                            <tr>
+                                <td>2016/08/31</td>
+                                <td>タリーズ</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td>60</td>
+                                <td>普通</td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -330,7 +322,7 @@ $next_month = $month + 1;
                                     </tr>
                                 </table>
                             <table class="parent"></table>
-                            <div class="text-right">
+                            <div align="middle">
                                 <button type="submit" class="btn btn-primary">登録</button>
                             </div>
                         </form>

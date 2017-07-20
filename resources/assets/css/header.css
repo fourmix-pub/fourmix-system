@@ -1,0 +1,32 @@
+.header-fourmix{
+    background-color: #FF5810;
+    box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5 );
+    border-color: #FF5810;
+}
+
+.white{
+    color: white;
+}
+
+#fourmix {
+    vertical-align: middle;
+    padding: 0px 20px 3px 0px;
+    box-sizing: border-box;
+    display: table-cell;
+}
+
+#fourmix img {
+    display: block;
+    width: 100%;
+    max-width: 140px;
+    border: none;
+}
+
+.navbar-brand{
+    padding: 10px;
+    height: 0px;
+}
+
+.navbar{
+    border: 0px;
+}
