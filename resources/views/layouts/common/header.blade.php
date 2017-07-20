@@ -69,7 +69,7 @@
                     <li>
                         <li role="presentation" class="dropdown">
                             <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="閲覧">
-                                <span class="glyphicon glyphicon-pencil white"></span>
+                                <span class="glyphicon glyphicon-pencil white"></span> DIALIES
                                 <i class="fa fa-caret-down white" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
@@ -87,7 +87,7 @@
                     <li>
                         <li role="presentation" class="dropdown">
                             <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="プロジェクト">
-                                <span class="glyphicon glyphicon-briefcase white"></span>&nbsp;
+                                <span class="glyphicon glyphicon-briefcase white"></span>&nbsp;PROJECTS
                                 <i class="fa fa-caret-down white" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
@@ -106,7 +106,7 @@
                     <li>
                         <li role="presentation" class="dropdown">
                             <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="ツール">
-                                <span class="glyphicon glyphicon-check white"></span>
+                                <i class="fa fa-wrench" aria-hidden="true"></i> TOOLS
                                 <i class="fa fa-caret-down white" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">
@@ -147,7 +147,7 @@
                     <li>
                         <li role="presentation" class="dropdown">
                             <a href="#" class="my-tooltip hidden-xs dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="基本設定">
-                                <span class="glyphicon glyphicon-cog white"></span>&nbsp;
+                                <span class="glyphicon glyphicon-cog white"></span>&nbsp;SETTINGS
                                 <i class="fa fa-caret-down white" aria-hidden="true"></i>
                             </a>
                             <ul class="dropdown-menu" role="menu">

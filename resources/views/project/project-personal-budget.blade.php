@@ -13,7 +13,7 @@
                 <h3>
                     <i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;&nbsp;プロジェクト予算対
                     <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
+                        <i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
                     </button>
                 </h3>
             </div>
