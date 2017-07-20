@@ -56,6 +56,7 @@ Route::group(['prefix' => 'project', 'namespace' => 'Project'], function () {
     Route::get('/ledger', 'ProjectController@ledger');
     // 予算対
     Route::get('/project-budget', 'ProjectController@projectBudget');
+
 });
 
 /*
@@ -100,4 +101,17 @@ Route::group(['prefix' => 'config', 'namespace' => 'Config'], function () {
 //Route::match(['get', 'head'], '/register/', 'Auth\RegisterController@showRegistrationForm ')->name('register');
 Route::get('test', function () {
     return view('test');
+});
+
+
+Route::get('/project-personal', function () {
+    return view('project.project-personal');
+});
+
+Route::get('/project-personal-budget', function () {
+    return view('project.project-personal-budget');
+});
+
+Route::get('/project-budget', function () {
+    return view('project.project-budget');
 });

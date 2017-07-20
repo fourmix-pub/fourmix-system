@@ -11,7 +11,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
 			<div>
-				<h2><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;&nbsp;プロフィール</h2>
+				<h3><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;&nbsp;プロフィール</h3>
 			</div>
 		</div>
 	</div>

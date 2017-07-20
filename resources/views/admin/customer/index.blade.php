@@ -91,12 +91,9 @@
 							</div>
 							<form class="form-horizontal">
 								<div class="modal-body">
-									<div class="form-group">
-										<label class="col-xs-3 control-label" for="project">企業名<span class="text-danger">*</span></label>
-										<div class="col-xs-8">
-											<input type="text" class="form-control" id="project"  placeholder="企業名" />
-										</div>
-									</div>
+									@component('components.elements.form.modal.text',['name'=>'name'])
+										企業名
+									@endcomponent
 									<div class="form-group">
 										<label class="col-xs-3 control-label" for="customer_type">クライアント種類<span class="text-danger">*</span></label>
 										<div class="col-xs-8">

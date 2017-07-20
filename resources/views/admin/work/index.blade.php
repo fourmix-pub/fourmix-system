@@ -43,18 +43,14 @@
 							</div>
 							<form class="form-horizontal">
 								<div class="modal-body">
-									<div class="form-group">
-										<label class="col-xs-3 control-label" for="service">勤務分類名<span class="text-danger">*</span></label>
-										<div class="col-xs-8">
-											<input type="text" class="form-control" id="service"  placeholder="作業分類名" />
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="col-xs-3 control-label" for="cost_rate">単価掛率<span class="text-danger">*</span></label>
-										<div class="col-xs-8">
-											<input type="text" class="form-control" id="cost_rate"  placeholder="単価掛率" />
-										</div>
-									</div>
+									@component('components.elements.form.modal.text',['name'=>'name'])
+										勤務分類名
+									@endcomponent
+
+									@component('components.elements.form.modal.text',['name'=>'cost_rate'])
+										単価掛率
+									@endcomponent
+
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
