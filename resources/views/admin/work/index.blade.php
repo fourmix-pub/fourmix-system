@@ -32,42 +32,33 @@
 		</div>
 
 	   {{-- モーダル：追加ボタン --}}
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<div class="modal fade" id="add" tabindex="-1">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header" style="margin:2% 0%;">
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-								<h4 class="modal-title">作業分類追加</h4>
-							</div>
-							<form class="form-horizontal">
-								<div class="modal-body">
-									@component('components.elements.form.modal.text',['name'=>'name'])
-										勤務分類名
-									@endcomponent
+		@component('components.elements.modal.add', ['title'=>'勤務分類追加'])
+			@component('components.elements.form.modal.text',['name'=>'name'])
+				勤務分類名
+			@endcomponent
 
-									@component('components.elements.form.modal.text',['name'=>'cost_rate'])
-										単価掛率
-									@endcomponent
+			@component('components.elements.form.modal.text',['name'=>'cost_rate'])
+				単価掛率
+			@endcomponent
+		@endcomponent
 
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
-									<button type="button" class="btn btn-primary"　 data-dismiss="modal">登録</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		{{-- モーダル：編集ボタン --}}
+		@component('components.elements.modal.update', ['title'=>'勤務分類編集'])
+			@component('components.elements.form.modal.text',['name'=>'name'])
+				勤務分類名
+			@endcomponent
+
+			@component('components.elements.form.modal.text',['name'=>'cost_rate'])
+				単価掛率
+			@endcomponent
+		@endcomponent
+
+		{{-- モーダル：削除ボタン --}}
+		@component('components.elements.modal.delete')
+		@endcomponent
 
 		{{-- 一覧 --}}
-		<div class="row" style="margin: 0% 1%;">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<div class="table-responsive">
-					<table class="table table-bordered">
+		@component('components.elements.table.admin.table')
 
                         <?php
                         $theads=['ID','勤務分類','単価掛率',''];
@@ -94,12 +85,7 @@
 							</tr>
 							@endforeach
 						</tbody>
-					</table>
-				</div>
-				@component('components.elements.table.admin.pagenation')
-				@endcomponent
-			</div>
-		</div>
+		@endcomponent
 	</div>
 
 	{{-- スマホ版サイドメニュー --}}
