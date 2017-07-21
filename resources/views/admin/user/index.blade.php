@@ -11,7 +11,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
 			<h3>
-				<i class="fa fa-users" aria-hidden="true"></i> 担当者
+				<i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;担当者
 				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;" data-toggle="collapse" href="#search">
 					<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
 				</button>
