@@ -94,7 +94,7 @@
             {{-- 一覧 --}}
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="row" style="margin: 0% 1%;">
-                        <table class="table table-striped table-bordered table-hover">
+                        <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
                                 <th>担当者</th>
@@ -134,32 +134,30 @@
                                 <td colspan="7">備考欄</td>
                             </tr>
                             </tbody>
-                            <tfoot>
-                            <tr>
-                                <td colspan="7" align="center">
-                                    <nav class="pagination text-right">
-                                        <ul class="pagination">
-                                            <li>
-                                                <a href="#" aria-label="前のページへ">
-                                                    <span aria-hidden="true">«</span>
-                                                </a>
-                                            </li>
-                                            <li class="active"><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li>
-                                                <a href="#" aria-label="次のページへ">
-                                                    <span aria-hidden="true">»</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </td>
-                            </tr>
-                            </tfoot>
                         </table>
+
+                        <div align="center">
+                            <nav class="pagination">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="#" aria-label="前のページへ">
+                                            <span aria-hidden="true">«</span>
+                                        </a>
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="次のページへ">
+                                            <span aria-hidden="true">»</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
                     </div>
                 </div>
 

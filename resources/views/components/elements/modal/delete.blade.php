@@ -8,7 +8,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
-                        <button type="button" class="btn btn-primary"　 data-dismiss="modal">削除</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">削除</button>
                     </div>
                 </div>
             </div>
