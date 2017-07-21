@@ -154,7 +154,7 @@
                     <div class="row" style="margin: 0% 1%;">
                         <table class="table table-bordered table-hover">
                             <thead>
-                            <tr>
+                            <tr class="active">
                                 <th>担当者</th>
                                 <th>日付</th>
                                 <th>プロジェクト名</th>

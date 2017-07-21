@@ -107,7 +107,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <table class="table table-bordered table-hover">
                                 <thead>
-                                <tr>
+                                <tr class="active">
                                     <th>作業分類</th>
                                     <th>作業時間</th>
                                     <th>作業金額</th>
@@ -164,7 +164,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <table class="table table-bordered table-hover">
                                 <thead>
-                                <tr>
+                                <tr class="active">
                                     <th>担当者</th>
                                     <th>作業時間</th>
                                     <th>作業金額</th>
@@ -221,7 +221,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <table class="table table-bordered table-hover">
                                 <thead>
-                                    <tr>
+                                    <tr class="active">
                                         <th>作業分類</th>
                                         <th>作業時間</th>
                                         <th>作業金額</th>
@@ -278,7 +278,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <table class="table table-bordered table-hover">
                                 <thead>
-                                    <tr>
+                                    <tr class="active">
                                     <th>プロジェクト</th>
                                     <th>作業時間</th>
                                     <th>作業金額</th>
