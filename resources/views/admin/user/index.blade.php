@@ -87,6 +87,13 @@
 				メールアドレス
 			@endcomponent
 
+			@component('components.elements.form.modal.pass', ['name' => 'password'])
+					パスワード
+			@endcomponent
+			@component('components.elements.form.modal.pass', ['name' => 'password_confirmation'])
+				パスワード確認
+			@endcomponent
+
 			<div class="form-group">
 				<label class="col-xs-3 control-label" for="started_time">始業時刻<span class="text-danger">*</span></label>
 				<div class="col-xs-8">

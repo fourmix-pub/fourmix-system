@@ -176,10 +176,9 @@
 			</div>
 
 		</div>
-	</div>
 	{{-- スマホ版サイドメニュー --}}
 	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 		@include('layouts.content.project.side-menu')
+		@endsection
 	</div>
 </div>
-@endsection

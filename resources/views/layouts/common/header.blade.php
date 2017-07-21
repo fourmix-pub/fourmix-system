@@ -46,13 +46,13 @@
                         <ul class="dropdown-menu" role="menu">
                             <li>
                                 <a href="{{ url('/config') }}">
-                                    <span class="glyphicon glyphicon-user "></span>&nbsp;&nbsp;プロフィール
+                                    プロフィール
                                 </a>
                             </li>
                             <li>
                                 <a href="#" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                    <span class="glyphicon glyphicon-log-out "></span>&nbsp;&nbsp;ログアウト
+                                    ログアウト
                                 </a>
 
                                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
@@ -175,13 +175,13 @@
                         <ul class="dropdown-menu" role="menu">
                             <li>
                                 <a href="{{ url('/config') }}">
-                                    <span class="glyphicon glyphicon-user "></span>&nbsp;&nbsp;プロフィール
+                                    プロフィール
                                 </a>
                             </li>
                             <li>
                                 <a href="#" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                    <span class="glyphicon glyphicon-log-out "></span>&nbsp;&nbsp;ログアウト
+                                    ログアウト
                                 </a>
 
                                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
