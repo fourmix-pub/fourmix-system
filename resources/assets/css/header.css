@@ -15,7 +15,7 @@
     display: table-cell;
 }
 
-#fourmix img {
+.fourmix img {
     display: block;
     width: 100%;
     max-width: 140px;
