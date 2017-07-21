@@ -1,2 +1,36 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Header
+.header-fourmix{
+  background-color: #000000;
+  box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5 );
+  border-color: #000000;
+  color: #ffffff;
+  a {
+    color: #FFFFFF !important;
+  }
+  #fourmix {
+    vertical-align: middle;
+    padding: 0px 20px 3px 0px;
+    box-sizing: border-box;
+    display: table-cell;
+  }
+  .fourmix img {
+    display: block;
+    width: 100%;
+    max-width: 140px;
+    border: none;
+  }
+  .navbar-brand{
+    padding: 10px;
+    height: 0px;
+  }
+  .navbar{
+    border: 0px;
+  }
+  .navbar-collapse{
+    background-color: #000;
+    color: #fff;
+  }
+}
