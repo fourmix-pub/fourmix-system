@@ -164,27 +164,29 @@
 							</tr>
 						</tbody>
 					</table>
-					<div class="text-center">
-						<nav class="pagination">
-							<ul class="pagination">
-								<li>
-									<a href="#" aria-label="前のページへ">
-										<span aria-hidden="true">«</span>
-									</a>
-								</li>
-								<li class="active"><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li>
-									<a href="#" aria-label="次のページへ">
-										<span aria-hidden="true">»</span>
-									</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
+					@component('components.elements.table.admin.pagination')
+					@endcomponent
+					{{--<div class="text-center">--}}
+						{{--<nav class="pagination">--}}
+							{{--<ul class="pagination">--}}
+								{{--<li>--}}
+									{{--<a href="#" aria-label="前のページへ">--}}
+										{{--<span aria-hidden="true">«</span>--}}
+									{{--</a>--}}
+								{{--</li>--}}
+								{{--<li class="active"><a href="#">1</a></li>--}}
+								{{--<li><a href="#">2</a></li>--}}
+								{{--<li><a href="#">3</a></li>--}}
+								{{--<li><a href="#">4</a></li>--}}
+								{{--<li><a href="#">5</a></li>--}}
+								{{--<li>--}}
+									{{--<a href="#" aria-label="次のページへ">--}}
+										{{--<span aria-hidden="true">»</span>--}}
+									{{--</a>--}}
+								{{--</li>--}}
+							{{--</ul>--}}
+						{{--</nav>--}}
+					{{--</div>--}}
 				</div>
 			</div>
 		</div>
@@ -192,6 +194,6 @@
 	{{-- PC版サイドメニュー --}}
 	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 		@include('layouts.content.project.side-menu')
-		@endsection
 	</div>
 </div>
+@endsection
