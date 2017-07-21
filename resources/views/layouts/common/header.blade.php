@@ -12,9 +12,13 @@
 
             <!-- Branding Image -->
             @if (Auth::guest())
-                <a class="navbar-brand" href="{{ url('/') }}"><img src="http://www.fourmix.co.jp/files/user/img/common/fourmix_w.png"></a>
+                <div class="fourmix">
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img src="http://www.fourmix.co.jp/files/user/img/common/fourmix_w.png">
+                    </a>
+                </div>
             @else
-                <div id="fourmix">
+                <div class="fourmix">
                     <a class="navbar-brand" href="{{ url('/home') }}">
                         <img src="http://www.fourmix.co.jp/files/user/img/common/fourmix_w.png">
                     </a>
@@ -28,15 +32,15 @@
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="{{ url('/') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="ホーム">
-                            <span class="glyphicon glyphicon-home white"></span>
+                            <span class="glyphicon glyphicon-home white"></span>&nbsp;&nbsp;HOME
                         </a>
                         <a href="{{ url('/') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-home white"></span>&nbsp;&nbsp;ホーム
+                            <span class="glyphicon glyphicon-home white"></span>
                         </a>
                     </li>
                     <li>
                         <a href="{{ url('/login') }}" class="visible-xs-block">
-                            <span class="glyphicon glyphicon-log-in white"></span>&nbsp;&nbsp;ログイン
+                            <span class="glyphicon glyphicon-log-in white"></span>&nbsp;&nbsp;LOGIN
                         </a>
                         {{-- <a href="{{ url('/register') }}" class="visible-xs-block">
                             <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;新規登録
@@ -49,15 +53,14 @@
                     <br class="visible-xs-block">
                     <li class="dropdown visible-xs-block">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-
-                            <h3 style="color: #9e9e9e">{{ Auth::user()->name }}</h3>
+                            <h3 style="color: #9e9e9e">{{ Auth::user()->name }} </h3>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
                                 <a href="{{ url('/logout') }}"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                    ログアウト
+                                    LOGOUT
                                 </a>
                                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
@@ -164,7 +167,7 @@
                 @if (Auth::guest())
                     <li>
                         <a href="{{ url('/login') }}" class="my-tooltip hidden-xs" data-placement="bottom" title="ログイン">
-                            <span class="glyphicon glyphicon-log-in white"></span>&nbsp;&nbsp;ログイン
+                            <span class="glyphicon glyphicon-log-in white"></span>&nbsp;&nbsp;LOGIN
                         </a>
                     </li>
                     {{-- <li>
@@ -174,15 +177,14 @@
                     </li> --}}
                 @else
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="ログアウト">
-                            <span>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="ユーザー">
+                            <span class="glyphicon glyphicon glyphicon-user white"></span>
                                 {{--@if(Auth::user()->photo != '')--}}
                                     {{--<img src="{{ asset('storage/'.Auth::user()->photo) }}" style="padding: 0px;width: 22px;height: 22px;">--}}
                                 {{--@else--}}
                                     {{--<img src="{{ asset(Colorable::profileImg(Auth::user()->email)) }}" style="padding: 0px;width: 22px;height: 22px;">--}}
                                 {{--@endif--}}
-                                    {{ Auth::user()->user_name }}
-                            </span>
+                                    {{ Auth::user()->name }}
                             <span class="caret"></span>
                         </a>
 
