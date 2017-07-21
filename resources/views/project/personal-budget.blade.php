@@ -94,66 +94,53 @@
 							<span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
 						</button>
 					</div>
-
 				</div>
+				<br>
 				<br>
 				<div class="row" style="margin: 0% 1%;">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<table class="table table-bordered table-hover">
-							<tr>
-								<td><b>プロジェクト名</b></td>
-								<td colspan="3">PCP・メンズポケットサーバー移行</td>
-								<td><b>開始日</b></td>
-								<td>2009/03/02</td>
-							</tr>
-							<tr>
-								<td><b>責任者</b></td>
-								<td colspan="3">碓井智</td>
-								<td><b>完成予定日</b></td>
-								<td>2009/03/02</td>
-							</tr>
-							<tr>
-								<td><b>受注金額</b></td>
-								<td>3,000,000円</td>
-								<td><b>実行予算</b></td>
-								<td>3,000,000円</td>
-								<td><b>完成日</b></td>
-								<td>2009/04/02</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-
-				<br>
-
-				<div class="row" style="margin: 0% 1%;">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<table class="table table-bordered table-hover">
-							<thead>
-							<tr>
-								<th>作業分類名</th>
-								<th>作業時間</th>
-								<th>作業金額</th>
-							</tr>
-							</thead>
-							<tbody>
-							<tr>
-								<td>設計</td>
-								<td>90.00</td>
-								<td>1,000,000</td>
-							</tr>
-							<tr>
-								<td>打合せ</td>
-								<td>90.00</td>
-								<td>1,000,000</td>
-							</tr>
-							<tr>
-								<td>打合せ</td>
-								<td>90.00</td>
-								<td>1,000,000</td>
-							</tr>
-							</tbody>
-						</table>
+						<div class="col-md-12">
+							<table class="table table-bordered table-hover">
+								<thead>
+								<tr>
+									<th>プロジェクト</th>
+									<th>担当者</th>
+									<th>個人予算</th>
+									<th></th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>日本計画</td>
+									<td>佐々木希</td>
+									<td align="right">100,000</td>
+									@component('components.elements.table.admin.button')
+									@endcomponent
+								</tr>
+								<tr class="active">
+									<td>アメリカ計画</td>
+									<td>佐々木希</td>
+									<td align="right">250,000</td>
+										@component('components.elements.table.admin.button')
+										@endcomponent
+								</tr>
+								<tr>
+									<td>ドイツ計画</td>
+									<td>佐々木希</td>
+									<td align="right">2,000,000</td>
+									@component('components.elements.table.admin.button')
+									@endcomponent
+								</tr>
+								<tr class="active">
+									<td>イギリス計画</td>
+									<td>佐々木希</td>
+									<td align="right">4,000,000</td>
+									@component('components.elements.table.admin.button')
+									@endcomponent
+								</tr>
+								</tbody>
+							</table>
+						</div>
 						<div class="text-center">
 							<nav class="pagination">
 								<ul class="pagination">
