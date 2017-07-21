@@ -86,97 +86,92 @@
 
 
 			{{-- 一覧 --}}
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<div class="row">
-					<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"></div>
-					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-						<button class="btn btn-default">
-	                        <span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
-	                    </button>
-					</div>
-
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
+					<button class="btn btn-default">
+						<span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
+					</button>
 				</div>
-				<br>
-				<div class="row" style="margin: 0% 1%;">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<table class="table table-bordered table-hover">
-							<tr>
-								<td><b>プロジェクト名</b></td>
-								<td colspan="3">PCP・メンズポケットサーバー移行</td>
-								<td><b>開始日</b></td>
-								<td>2009/03/02</td>
-							</tr>
-							<tr>
-								<td><b>責任者</b></td>
-								<td colspan="3">碓井智</td>
-								<td><b>完成予定日</b></td>
-								<td>2009/03/02</td>
-							</tr>
-							<tr>
-								<td><b>受注金額</b></td>
-								<td align="right">3,000,000</td>
-								<td><b>実行予算</b></td>
-								<td align="right">3,000,000</td>
-								<td><b>完成日</b></td>
-								<td>2009/04/02</td>
-							</tr>
-						</table>
-					</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<table class="table table-bordered table-hover">
+						<tr>
+							<td class="active"><b>プロジェクト名</b></td>
+							<td colspan="3">PCP・メンズポケットサーバー移行</td>
+							<td class="active"><b>開始日</b></td>
+							<td>2009/03/02</td>
+						</tr>
+						<tr>
+							<td class="active"><b>責任者</b></td>
+							<td colspan="3">碓井智</td>
+							<td class="active"><b>完成予定日</b></td>
+							<td>2009/03/02</td>
+						</tr>
+						<tr>
+							<td class="active"><b>受注金額</b></td>
+							<td align="right">3,000,000</td>
+							<td class="active"><b>実行予算</b></td>
+							<td align="right">3,000,000</td>
+							<td class="active"><b>完成日</b></td>
+							<td>2009/04/02</td>
+						</tr>
+					</table>
 				</div>
-
-				<br>
-
-				<div class="row" style="margin: 0% 1%;">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<table class="table table-bordered table-hover">
-							<thead>
-								<tr class="active">
-									<th>作業分類名</th>
-									<th>作業時間</th>
-									<th>作業金額</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>設計</td>
-									<td>90.00</td>
-									<td align="right">1,000,000</td>
-								</tr>
-								<tr>
-									<td>打合せ</td>
-									<td>90.00</td>
-									<td align="right">1,000,000</td>
-								</tr>
-								<tr>
-									<td>打合せ</td>
-									<td>90.00</td>
-									<td align="right">1,000,000</td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="text-center">
-							<nav class="pagination">
-								<ul class="pagination">
-									<li>
-										<a href="#" aria-label="前のページへ">
-											<span aria-hidden="true">«</span>
-										</a>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<table class="table table-bordered table-hover">
+						<thead>
+							<tr class="active">
+								<th>作業分類名</th>
+								<th>作業時間</th>
+								<th>作業金額</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>設計</td>
+								<td>90.00</td>
+								<td align="right">1,000,000</td>
+							</tr>
+							<tr>
+								<td>打合せ</td>
+								<td>90.00</td>
+								<td align="right">1,000,000</td>
+							</tr>
+							<tr>
+								<td>打合せ</td>
+								<td>90.00</td>
+								<td align="right">1,000,000</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="text-center">
+						<nav class="pagination">
+							<ul class="pagination">
+								<li>
+									<a href="#" aria-label="前のページへ">
+										<span aria-hidden="true">«</span>
+									</a>
 									</li>
 									<li class="active"><a href="#">1</a></li>
 									<li><a href="#">2</a></li>
 									<li><a href="#">3</a></li>
 									<li><a href="#">4</a></li>
 									<li><a href="#">5</a></li>
-									<li>
-										<a href="#" aria-label="次のページへ">
-											<span aria-hidden="true">»</span>
-										</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
+								<li>
+									<a href="#" aria-label="次のページへ">
+										<span aria-hidden="true">»</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
 					</div>
 				</div>
+			</div>
 
 			</div>
 

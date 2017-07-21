@@ -12,8 +12,8 @@
 		<div class="page-header">
 			<h3>
 				<i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;勤務分類設定
-				<button type="button" class="btn btn-danger pull-right" style="margin-right: 15%;" data-toggle="modal" data-target="#add">
-					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;追加
+				<button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal" data-target="#add">
+					<i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
 				</button>
 			</h3>
 		</div>
