@@ -56,3 +56,13 @@ button {
   border-bottom-right-radius: initial !important;
   border-top-right-radius: initial !important;
 }
+
+.list-group-item:first-child {
+  border-top-right-radius: initial !important;
+  border-top-left-radius: initial !important;
+}
+
+.list-group-item:last-child {
+  border-bottom-right-radius: initial !important;
+  border-bottom-left-radius: initial !important;
+}
