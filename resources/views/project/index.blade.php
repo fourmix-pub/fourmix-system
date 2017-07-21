@@ -121,39 +121,17 @@
 					@component('components.elements.form.modal.text',['name'=>'budget'])
 						実行予算
 					@endcomponent
-					<div class="form-group">
-						<label class="col-xs-3 control-label" for="started_day">開始日</label>
-						<div class="col-xs-8">
-							<div class='input-group day'>
-								<input type='text' class="form-control"/>
-								<span class="input-group-addon">
-									<span class="glyphicon glyphicon-calendar"></span>
-								</span>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-xs-3 control-label" for="ended_day">完了予定日</label>
-						<div class="col-xs-8">
-							<div class='input-group day'>
-								<input type='text' class="form-control"/>
-								<span class="input-group-addon">
-														 <span class="glyphicon glyphicon-calendar"></span>
-													</span>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-xs-3 control-label" for="ended_time">完了日</label>
-						<div class="col-xs-8">
-							<div class='input-group day'>
-								<input type='text' class="form-control"/>
-								<span class="input-group-addon">
-														 <span class="glyphicon glyphicon-calendar"></span>
-													</span>
-							</div>
-						</div>
-					</div>
+					@component('components.elements.form.modal.day')
+						開始日
+					@endcomponent
+
+					@component('components.elements.form.modal.day')
+						完了予定日
+					@endcomponent
+
+					@component('components.elements.form.modal.day')
+						完了日
+					@endcomponent
 					<div class="form-group">
 						<label class="col-xs-3 control-label" for="note">備考</label>
 						<div class="col-xs-8">
@@ -202,39 +180,14 @@
 					@component('components.elements.form.modal.day')
 						開始日
 					@endcomponent
-					{{--<div class="form-group">--}}
-						{{--<label class="col-xs-3 control-label" for="started_day">開始日</label>--}}
-						{{--<div class="col-xs-8">--}}
-							{{--<div class='input-group day'>--}}
-								{{--<input type='text' class="form-control"/>--}}
-								{{--<span class="input-group-addon">--}}
-									 {{--<i class="fa fa-calendar" aria-hidden="true"></i>--}}
-								{{--</span>--}}
-							{{--</div>--}}
-						{{--</div>--}}
-					{{--</div>--}}
-					<div class="form-group">
-						<label class="col-xs-3 control-label" for="ended_day">完了予定日</label>
-						<div class="col-xs-8">
-							<div class='input-group day'>
-								<input type='text' class="form-control"/>
-								<span class="input-group-addon">
-														 <span class="glyphicon glyphicon-calendar"></span>
-													</span>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-xs-3 control-label" for="ended_time">完了日</label>
-						<div class="col-xs-8">
-							<div class='input-group day'>
-								<input type='text' class="form-control"/>
-								<span class="input-group-addon">
-														 <span class="glyphicon glyphicon-calendar"></span>
-													</span>
-							</div>
-						</div>
-					</div>
+
+					@component('components.elements.form.modal.day')
+						完了予定日
+					@endcomponent
+
+					@component('components.elements.form.modal.day')
+						完了日
+					@endcomponent
 					<div class="form-group">
 						<label class="col-xs-3 control-label" for="note">備考</label>
 						<div class="col-xs-8">
