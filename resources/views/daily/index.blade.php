@@ -144,9 +144,79 @@ $next_month = $month + 1;
     </div>
 </div>
 
+{{-- モーダル：編集ボタン --}}
+@component('components.elements.modal.update', ['title'=>'日報編集'])
+    @component('components.elements.form.modal.day')
+        日付
+    @endcomponent
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label" for="department">プロジェクト名<span class="text-danger">*</span></label>
+        <select class="selectpicker col-xs-8" data-live-search="true" id="department" title="プロジェクト名">
+            <option></option>
+            <option>社内ログ管理システム</option>
+            <option>パタゴニア</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label" for="department">作業分類<span class="text-danger">*</span></label>
+        <select class="selectpicker col-xs-8" title="作業分類" id="department">
+            <option>調査</option>
+            <option>分析</option>
+            <option>営業</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label" for="started_time">開始<span class="text-danger">*</span></label>
+        <div class="col-xs-8">
+            <div class='input-group time'>
+                <input type='text' class="form-control" value="09:30" />
+                <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label" for="ended_time">終了<span class="text-danger">*</span></label>
+        <div class="col-xs-8">
+            <div class='input-group time'>
+                <input type='text' class="form-control" value="18:30"/>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label" for="department">勤務分類<span class="text-danger">*</span></label>
+        <select class="selectpicker col-xs-8" title="勤務分類" id="department">
+            <option>通常</option>
+            <option>残業</option>
+            <option>休日</option>
+        </select>
+    </div>
+
+    @component('components.elements.form.modal.text', ['name'=>'break'])
+        休憩
+    @endcomponent
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label" for="staff">
+            備考欄
+        </label>
+        <div class="col-xs-8">
+            <textarea name="note" rows="1" style="resize: vertical;" class="form-control" placeholder="備考欄">
+            </textarea>
+        </div>
+    </div>
+@endcomponent
+
 {{-- モーダル：削除ボタン --}}
 @component('components.elements.modal.delete')
 @endcomponent
+
+
 
 {{-- コンテンツ --}}
 <div class="row">
@@ -154,8 +224,7 @@ $next_month = $month + 1;
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <h4><?php echo $year; ?>年<?php echo $month; ?>月のカレンダー</h4>
-                <br>
+                <h4 style="padding: 8px"><?php echo $year; ?>年<?php echo $month; ?>月のカレンダー</h4>
 
                 <table class="calendar">
                     <tr>
@@ -204,8 +273,7 @@ $next_month = $month + 1;
             </style>
 
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                <h4>日報一覧</h4>
-                <br>
+                <h4 style="padding: 8px">日報一覧</h4>
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr class="active">
@@ -276,52 +344,118 @@ $next_month = $month + 1;
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <table class="table field">
-                            <tr>
-                                <td width="14%">
-                                    <input type='text' class="form-control day" value="{{ \Carbon\Carbon::today()->format('Y-m-d') }}" />
-                                </td>
-                                <td width="22%">
-                                    <select class="selectpicker" data-width="100%" data-live-search="true" title="プロジェクト名">
-                                        <option data-tokens="fourmix-system">社内ログ管理システム</option>
-                                        <option data-tokens="rhizo-me">株式会社リゾーム</option>
-                                        <option data-tokens="asics">株式会社アシックス</option>
-                                    </select>
-                                </td>
-                                <td width="15%">
-                                    <select class="selectpicker" data-width="100%" title="作業分類">
-                                        <option>作業</option>
-                                        <option>見積・営業活動</option>
-                                        <option>分析</option>
-                                    </select>
-                                </td>
-                                <td width="12%">
-                                    <input type='text' class="form-control time" placeholder="開始時刻" />
-                                </td>
-                                <td width="12%">
-                                    <input type='text' class="form-control time" placeholder="終了時刻" />
-                                </td>
-                                <td width="15%">
-                                    <input type='text' class="form-control"  placeholder="休憩時間(分)" />
-                                </td>
-                                <td>
-                                    <select class="selectpicker" data-width="100%" title="勤務分類">
-                                        <option>通常</option>
-                                        <option>残業</option>
-                                        <option>休日</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr style="border-style: hidden none none;">
-                                <td colspan="8">
-                                    <textarea name="note" rows="1" style="resize: vertical;" class="form-control" placeholder="備考欄"></textarea>
-                                </td>
-                            </tr>
-                        </table>
-                        <div align="middle">
-                            <button type="submit" class="btn btn-primary">登録</button>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                                <div class="row">
+
+                                    <div class="hidden-xs hidden-sm col-md-2 col-lg-2" style="padding-bottom: 7px;">
+                                        <input type='text' class="form-control day" value="{{ \Carbon\Carbon::today()->format('Y-m-d') }}"/>
+                                    </div>
+
+                                    <div class="colxs--12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                        <input type='text' class="form-control day" value="{{ \Carbon\Carbon::today()->format('Y-m-d') }}"/>
+                                    </div>
+
+
+                                    <div class="hidden-xs hidden-sm col-md-3 col-lg-3" style="padding-bottom: 7px;">
+                                        <select class="selectpicker" data-width="100%" data-live-search="true" title="プロジェクト名">
+                                            <option data-tokens="fourmix-system">社内ログ管理システム</option>
+                                            <option data-tokens="rhizo-me">株式会社リゾーム</option>
+                                            <option data-tokens="asics">株式会社アシックス</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                        <select class="selectpicker" data-width="100%" data-live-search="true" title="プロジェクト名">
+                                            <option data-tokens="fourmix-system">社内ログ管理システム</option>
+                                            <option data-tokens="rhizo-me">株式会社リゾーム</option>
+                                            <option data-tokens="asics">株式会社アシックス</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="hidden-xs hidden-sm col-md-2 col-lg-2" style="padding-bottom: 7px;">
+                                        <select class="selectpicker" data-width="100%" title="作業分類">
+                                            <option>作業</option>
+                                            <option>見積・営業活動</option>
+                                            <option>分析</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                        <select class="selectpicker" data-width="100%" title="作業分類">
+                                            <option>作業</option>
+                                            <option>見積・営業活動</option>
+                                            <option>分析</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style="padding-bottom: 7px;">
+                                        <input type='text' class="form-control time" placeholder="開始"/>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                        <input type='text' class="form-control time" placeholder="開始"/>
+                                    </div>
+
+
+                                    <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style="padding-bottom: 7px;">
+                                        <input type='text' class="form-control time" placeholder="終了"/>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                        <input type='text' class="form-control time" placeholder="終了"/>
+                                    </div>
+
+
+                                    <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style="padding-bottom: 7px;">
+                                        <input type='text' class="form-control" placeholder="休憩(分)"/>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                        <input type='text' class="form-control" placeholder="休憩(分)"/>
+                                    </div>
+
+                                    <div class="hidden-xs hidden-sm col-md-2 col-lg-2" style="padding-bottom: 7px;">
+                                        <select class="selectpicker" data-width="100%" title="勤務分類">
+                                            <option>通常</option>
+                                            <option>残業</option>
+                                            <option>休日</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                        <select class="selectpicker" data-width="100%" title="勤務分類">
+                                            <option>通常</option>
+                                            <option>残業</option>
+                                            <option>休日</option>
+                                        </select>
+                                    </div>
+
+
+                                </div>
+
+                                <br>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <textarea name="note" rows="1" style="resize: vertical;" class="form-control" placeholder="備考欄"></textarea>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div align="middle">
+                                    <button type="submit" class="btn btn-primary">登録</button>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </div>

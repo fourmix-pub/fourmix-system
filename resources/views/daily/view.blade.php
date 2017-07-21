@@ -26,12 +26,70 @@
 
             {{-- モーダル：編集ボタン --}}
             @component('components.elements.modal.update', ['title'=>'日報編集'])
-                @component('components.elements.form.modal.text',['name'=>'name'])
-                    プロジェクト名
+                @component('components.elements.form.modal.day')
+                    日付
                 @endcomponent
-                @component('components.elements.form.modal.text',['name'=>'name'])
-                    休憩時間
+
+                <div class="form-group">
+                    <label class="col-xs-3 control-label" for="department">プロジェクト名<span class="text-danger">*</span></label>
+                    <select class="selectpicker col-xs-8" data-live-search="true" id="department" title="プロジェクト名">
+                        <option></option>
+                        <option>社内ログ管理システム</option>
+                        <option>パタゴニア</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-xs-3 control-label" for="department">作業分類<span class="text-danger">*</span></label>
+                    <select class="selectpicker col-xs-8" title="作業分類" id="department">
+                        <option>調査</option>
+                        <option>分析</option>
+                        <option>営業</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-xs-3 control-label" for="started_time">開始<span class="text-danger">*</span></label>
+                    <div class="col-xs-8">
+                        <div class='input-group time'>
+                            <input type='text' class="form-control" value="09:30" />
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-xs-3 control-label" for="ended_time">終了<span class="text-danger">*</span></label>
+                    <div class="col-xs-8">
+                        <div class='input-group time'>
+                            <input type='text' class="form-control" value="18:30"/>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-xs-3 control-label" for="department">勤務分類<span class="text-danger">*</span></label>
+                    <select class="selectpicker col-xs-8" title="勤務分類" id="department">
+                        <option>通常</option>
+                        <option>残業</option>
+                        <option>休日</option>
+                    </select>
+                </div>
+
+                @component('components.elements.form.modal.text', ['name'=>'break'])
+                    休憩
                 @endcomponent
+
+                <div class="form-group">
+                    <label class="col-xs-3 control-label" for="staff">
+                        備考欄
+                    </label>
+                    <div class="col-xs-8">
+            <textarea name="note" rows="1" style="resize: vertical;" class="form-control" placeholder="備考欄">
+            </textarea>
+                    </div>
+                </div>
             @endcomponent
 
             {{-- モーダル：削除ボタン --}}

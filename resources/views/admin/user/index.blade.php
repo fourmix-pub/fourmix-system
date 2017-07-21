@@ -76,7 +76,7 @@
 
 			<div class="form-group">
 				<label class="col-xs-3 control-label" for="department">部門<span class="text-danger">*</span></label>
-				<select class="selectpicker col-xs-8" title="部門"　id="department">
+				<select class="selectpicker col-xs-8" title="部門" id="department">
 					<option>システムデザイン</option>
 					<option>コンセプトデザイン</option>
 					<option>サポート</option>
@@ -90,6 +90,7 @@
 			@component('components.elements.form.modal.pass', ['name' => 'password'])
 					パスワード
 			@endcomponent
+
 			@component('components.elements.form.modal.pass', ['name' => 'password_confirmation'])
 				パスワード確認
 			@endcomponent
@@ -121,9 +122,59 @@
 
 		{{-- モーダル：編集ボタン --}}
 		@component('components.elements.modal.update', ['title'=>'担当者編集'])
+
 			@component('components.elements.form.modal.text',['name'=>'name'])
-				作業分類名
+				担当者
 			@endcomponent
+
+			@component('components.elements.form.modal.text',['name'=>'cost'])
+				作業単価
+			@endcomponent
+
+			<div class="form-group">
+				<label class="col-xs-3 control-label" for="department">部門<span class="text-danger">*</span></label>
+				<select class="selectpicker col-xs-8" title="部門"　id="department">
+					<option>システムデザイン</option>
+					<option>コンセプトデザイン</option>
+					<option>サポート</option>
+				</select>
+			</div>
+
+			@component('components.elements.form.modal.text',['name'=>'mail'])
+				メールアドレス
+			@endcomponent
+
+			@component('components.elements.form.modal.pass', ['name' => 'password'])
+				パスワード
+			@endcomponent
+			@component('components.elements.form.modal.pass', ['name' => 'password_confirmation'])
+				パスワード確認
+			@endcomponent
+
+			<div class="form-group">
+				<label class="col-xs-3 control-label" for="started_time">始業時刻<span class="text-danger">*</span></label>
+				<div class="col-xs-8">
+					<div class='input-group time'>
+						<input type='text' class="form-control" value="09:30" />
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-time"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-xs-3 control-label" for="ended_time">終業時刻<span class="text-danger">*</span></label>
+				<div class="col-xs-8">
+					<div class='input-group time'>
+						<input type='text' class="form-control" value="18:30"/>
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-time"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+
 		@endcomponent
 
 		{{-- モーダル：削除ボタン --}}
@@ -133,52 +184,52 @@
 		{{-- 一覧 --}}
 		@component('components.elements.table.admin.table')
 
-						<?php
-						$theads=['ID','名前','作業単価','部署','退職',''];
+			<?php
+			$theads=['ID','名前','作業単価','部署','退職',''];
 
-						$tbody1=['id'=>1,'user'=>'田中咲良','cost'=>'2,500','department'=>'システム'];
-						$tbody2=['id'=>2,'user'=>'呉傑','cost'=>'2,500','department'=>'システム'];
-						$tbody3=['id'=>3,'user'=>'山本耕史郎','cost'=>'2,500','department'=>'システム'];
-						$tbody4=['id'=>4,'user'=>'木村拓哉','cost'=>'5,000','department'=>'コンセプト'];
-						$tbody5=['id'=>5,'user'=>'草なぎ剛','cost'=>'7,000','department'=>'サポート'];
+			$tbody1=['id'=>1,'user'=>'田中咲良','cost'=>'2,500','department'=>'システム'];
+			$tbody2=['id'=>2,'user'=>'呉傑','cost'=>'2,500','department'=>'システム'];
+			$tbody3=['id'=>3,'user'=>'山本耕史郎','cost'=>'2,500','department'=>'システム'];
+			$tbody4=['id'=>4,'user'=>'木村拓哉','cost'=>'5,000','department'=>'コンセプト'];
+			$tbody5=['id'=>5,'user'=>'草なぎ剛','cost'=>'7,000','department'=>'サポート'];
 
-						$tbodys=[$tbody1,$tbody2,$tbody3,$tbody4,$tbody5];
-						?>
+			$tbodys=[$tbody1,$tbody2,$tbody3,$tbody4,$tbody5];
+			?>
 
-						@component('components.elements.table.admin.thead',['theads'=>$theads])
+			@component('components.elements.table.admin.thead',['theads'=>$theads])
+			@endcomponent
+
+			<tbody>
+				@foreach($tbodys as $tbody)
+					<tr>
+						<th scope="row">{{ $tbody['id'] }}</th>
+						<td>{{ $tbody['user'] }}</td>
+						<td align="right">{{ $tbody['cost'] }}</td>
+						<td>{{ $tbody['department'] }}</td>
+						<td align="center"></td>
+						@component('components.elements.table.admin.button')
 						@endcomponent
-
-						<tbody>
-							@foreach($tbodys as $tbody)
-								<tr>
-									<th scope="row">{{ $tbody['id'] }}</th>
-									<td>{{ $tbody['user'] }}</td>
-									<td align="right">{{ $tbody['cost'] }}</td>
-									<td>{{ $tbody['department'] }}</td>
-									<td align="center"></td>
-									@component('components.elements.table.admin.button')
-									@endcomponent
-								</tr>
-							@endforeach
-							<tr>
-								<th scope="row">6</th>
-								<td>稲垣吾郎</td>
-								<td align="right">8000</td>
-								<td>サポート</td>
-								<td align="center"><span class="glyphicon glyphicon-ok-circle" style="color: red; font-size: large"></span></td>
-								@component('components.elements.table.admin.button')
-								@endcomponent
-							</tr>
-							<tr>
-								<th scope="row">7</th>
-								<td>香取慎吾</td>
-								<td align="right">8000</td>
-								<td>システム</td>
-								<td align="center"><span class="glyphicon glyphicon-ok-circle" style="color: red"></span></td>
-								@component('components.elements.table.admin.button')
-								@endcomponent
-							</tr>
-						</tbody>
+					</tr>
+				@endforeach
+				<tr>
+					<th scope="row">6</th>
+					<td>稲垣吾郎</td>
+					<td align="right">8000</td>
+					<td>サポート</td>
+					<td align="center"><span class="glyphicon glyphicon-ok-circle" style="color: red; font-size: large"></span></td>
+					@component('components.elements.table.admin.button')
+					@endcomponent
+				</tr>
+				<tr>
+					<th scope="row">7</th>
+					<td>香取慎吾</td>
+					<td align="right">8000</td>
+					<td>システム</td>
+					<td align="center"><span class="glyphicon glyphicon-ok-circle" style="color: red; font-size: large"></span></td>
+					@component('components.elements.table.admin.button')
+					@endcomponent
+				</tr>
+			</tbody>
 		@endcomponent
 	</div>
 
