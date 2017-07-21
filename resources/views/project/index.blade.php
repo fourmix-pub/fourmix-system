@@ -127,8 +127,8 @@
 							<div class='input-group day'>
 								<input type='text' class="form-control"/>
 								<span class="input-group-addon">
-														 <span class="glyphicon glyphicon-calendar"></span>
-													</span>
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
 							</div>
 						</div>
 					</div>
@@ -171,7 +171,7 @@
 				{{-- モーダル：編集ボタン --}}
 				@component('components.elements.modal.update', ['title'=>'編集'])
 					@component('components.elements.form.modal.text',['name'=>'name'])
-						プロジェクト名
+
 					@endcomponent
 					<div class="form-group">
 						<label class="col-xs-3 control-label" for="customer_type">クライアント種類<span class="text-danger">*</span></label>
@@ -248,8 +248,8 @@
 
 
 			{{-- 一覧 --}}
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<div class="row" style="margin: 0% 1%;">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<table class="table table-bordered table-hover">
 						<thead>
 							<tr class="active">

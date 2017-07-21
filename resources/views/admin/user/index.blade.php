@@ -11,12 +11,12 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
 			<h3>
-				<i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;担当者
-				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
-					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
+				<i class="fa fa-users" aria-hidden="true"></i> 担当者
+				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;" data-toggle="collapse" href="#search">
+					<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
 				</button>
-				<button type="button" class="btn btn-danger pull-right" style="margin-right: 5%;" data-toggle="modal" data-target="#add">
-					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;追加
+				<button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal" data-target="#add">
+					<i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
 				</button>
 			</h3>
 		</div>
@@ -129,11 +129,11 @@
 						<?php
 						$theads=['ID','名前','作業単価','部署','退職',''];
 
-						$tbody1=['id'=>1,'user'=>'田中咲良','cost'=>'2,500','department'=>'システム','resignation'=>''];
-						$tbody2=['id'=>2,'user'=>'呉傑','cost'=>'2,500','department'=>'システム','resignation'=>''];
-						$tbody3=['id'=>3,'user'=>'山本耕史郎','cost'=>'2,500','department'=>'システム','resignation'=>'✔️'];
-						$tbody4=['id'=>4,'user'=>'木村拓哉','cost'=>'5,000','department'=>'コンセプト','resignation'=>''];
-						$tbody5=['id'=>5,'user'=>'草なぎ剛','cost'=>'7,000','department'=>'サポート','resignation'=>'✔️'];
+						$tbody1=['id'=>1,'user'=>'田中咲良','cost'=>'2,500','department'=>'システム'];
+						$tbody2=['id'=>2,'user'=>'呉傑','cost'=>'2,500','department'=>'システム'];
+						$tbody3=['id'=>3,'user'=>'山本耕史郎','cost'=>'2,500','department'=>'システム'];
+						$tbody4=['id'=>4,'user'=>'木村拓哉','cost'=>'5,000','department'=>'コンセプト'];
+						$tbody5=['id'=>5,'user'=>'草なぎ剛','cost'=>'7,000','department'=>'サポート'];
 
 						$tbodys=[$tbody1,$tbody2,$tbody3,$tbody4,$tbody5];
 						?>
@@ -148,11 +148,29 @@
 									<td>{{ $tbody['user'] }}</td>
 									<td align="right">{{ $tbody['cost'] }}</td>
 									<td>{{ $tbody['department'] }}</td>
-									<td align="center">{{ $tbody['resignation'] }}</td>
+									<td align="center"></td>
 									@component('components.elements.table.admin.button')
 									@endcomponent
 								</tr>
 							@endforeach
+							<tr>
+								<th scope="row">6</th>
+								<td>稲垣吾郎</td>
+								<td align="right">8000</td>
+								<td>サポート</td>
+								<td align="center"><span class="glyphicon glyphicon-ok-circle" style="color: red; font-size: large"></span></td>
+								@component('components.elements.table.admin.button')
+								@endcomponent
+							</tr>
+							<tr>
+								<th scope="row">7</th>
+								<td>香取慎吾</td>
+								<td align="right">8000</td>
+								<td>システム</td>
+								<td align="center"><span class="glyphicon glyphicon-ok-circle" style="color: red"></span></td>
+								@component('components.elements.table.admin.button')
+								@endcomponent
+							</tr>
 						</tbody>
 		@endcomponent
 	</div>
