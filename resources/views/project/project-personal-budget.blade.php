@@ -102,35 +102,35 @@
                     </div>
                     <table class="table table-hover table-bordered">
                         <thead>
-                        <tr class="active">
-                            <th>プロジェクト</th>
-                            <th>担当者</th>
-                            <th>個人予算</th>
-                            <th>実績金額</th>
-                            <th>個人予算残高</th>
-                            <th>個人予算残％</th>
-                            <th>状態</th>
-                        </tr>
+                            <tr class="active">
+                                <th>プロジェクト</th>
+                                <th>担当者</th>
+                                <th>個人予算</th>
+                                <th>実績金額</th>
+                                <th>個人予算残高</th>
+                                <th>個人予算残％</th>
+                                <th>状態</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>○○プロジェクト</td>
-                            <td>櫻井翔</td>
-                            <td align="right">3,000,000</td>
-                            <td align="right">1,500,000</td>
-                            <td align="right">1,500,000</td>
-                            <td>50.0%</td>
-                            <td>完了</td>
-                        </tr>
-                        <tr>
-                            <td>○○プロジェクト</td>
-                            <td>櫻井翔</td>
-                            <td align="right">3,000,000</td>
-                            <td align="right">3,000,000</td>
-                            <td align="right">0</td>
-                            <td>0.0%</td>
-                            <td>完了</td>
-                        </tr>
+                            <tr>
+                                <td>○○プロジェクト</td>
+                                <td>櫻井翔</td>
+                                <td align="right">3,000,000</td>
+                                <td align="right">1,500,000</td>
+                                <td align="right">1,500,000</td>
+                                <td>50.0%</td>
+                                <td>完了</td>
+                            </tr>
+                            <tr>
+                                <td>○○プロジェクト</td>
+                                <td>櫻井翔</td>
+                                <td align="right">3,000,000</td>
+                                <td align="right">3,000,000</td>
+                                <td align="right">0</td>
+                                <td>0.0%</td>
+                                <td>完了</td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="text-center">
@@ -140,13 +140,13 @@
                                     <a href="#" aria-label="前のページへ">
                                         <span aria-hidden="true">«</span>
                                     </a>
-                                </li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
                                     <a href="#" aria-label="次のページへ">
                                         <span aria-hidden="true">»</span>
                                     </a>
