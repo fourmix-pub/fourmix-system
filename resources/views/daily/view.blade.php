@@ -151,7 +151,7 @@
 
             {{-- 一覧 --}}
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="row" style="margin: 0% 1%;">
+                    <div class="row table-responsive" style="margin: 0% 1%;">
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr class="active">
@@ -193,30 +193,11 @@
                             </tr>
                             </tbody>
                         </table>
-
-                        <div align="center">
-                            <nav class="pagination">
-                                <ul class="pagination">
-                                    <li>
-                                        <a href="#" aria-label="前のページへ">
-                                            <span aria-hidden="true">«</span>
-                                        </a>
-                                    </li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li>
-                                        <a href="#" aria-label="次のページへ">
-                                            <span aria-hidden="true">»</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-
                     </div>
+
+                    @component('components.elements.table.admin.pagination')
+                    @endcomponent
+
                 </div>
 
             </div>
