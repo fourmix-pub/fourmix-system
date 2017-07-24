@@ -1,0 +1,44 @@
+.daily-table > tbody > tr > td > span{
+    font-size: 100%;
+    border-radius: 0 !important;
+}
+
+.daily-form{
+    padding-left: 11px;
+    padding-right: 2px;
+}
+
+.daily-form > div{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.daily-form > .date-form{
+    width: 15%;
+}
+
+.daily-form > .rest-form{
+    width: 9%;
+}
+
+.panel{
+    border-radius: 0 !important;
+
+}
+
+.pagination>.active>a{
+    background-color: #0d6ecf;
+    border-color: #0d6ecf;
+}
+
+a{
+    color: #0d6ecf;
+}
+
+.label-info{
+    background-color: #0dcfc0;
+}
+
+.dropdown-menu>.active>a{
+    background-color: #0d6ecf;
+}

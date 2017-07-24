@@ -52,12 +52,77 @@ button {
   background-color: #0d6ecf !important;
 }
 .btn-danger {
-  background-color: #d9534f !important;
+  background-color: #f30f22!important;
   border: none;
 }
 
 .btn-warning {
   color: #fff;
-  background-color: #f39f0f;
+  background-color: #ffc310;
   border: none;
 }
+
+.print-budget{
+  background-color: black;
+  border: initial;
+  color: white;
+}
+
+.print-budget:hover{
+  background-color: #ff5810;
+  color: white;
+}
+
+.print-budget > span{
+  font-weight: bolder;
+}
+
+.btn-group-vertical>.btn, .btn-group>.btn{
+  border-radius: 0 !important;
+}
+
+.btn-group>.btn-primary{
+  border-color: #2e6da4 !important;
+  border: thin solid;
+}
+
+.total-view > div > div > .btn-default{
+  background-color: black;
+  border: initial;
+  color: white;
+}
+
+.total-view > div > div > .btn-default > span{
+  font-weight: bolder;
+}
+
+.total-view > div > div > .btn-default:hover{
+  background-color: #ff5810;
+}
+
+.panel-body > form > div > div > button{
+  background-color: black;
+  border: initial;
+  color: white;
+}
+
+.panel-body > form > div > div > button:hover{
+  background-color: #ff5810;
+  color: white;
+}
+
+.print-budget{
+  background-color: black;
+  border: initial;
+  color: white;
+}
+
+.print-budget:hover{
+  background-color: #ff5810;
+  color: white;
+}
+
+.print-budget > span{
+  font-weight: bolder;
+}
+

@@ -31,3 +31,8 @@
     color: #ff5810 !important;
     background-color: #000;
 }
+
+.navbar-inverse {
+    background-color: #000;
+    border-color: #000;
+}
