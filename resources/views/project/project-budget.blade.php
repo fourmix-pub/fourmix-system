@@ -85,7 +85,7 @@
 						@component('components.elements.form.period')
 						@endcomponent
 						<div class="row text-center">
-							<div class="btn-group" style="margin:2% 0% 0% 0%;">
+							<div class="btn-group">
 								<button type="button" class="btn" onclick="location.href=''">
 									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
 								</button>
