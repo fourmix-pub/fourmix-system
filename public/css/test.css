@@ -25,6 +25,23 @@ input{
     border-radius: 0 !important;
 }
 
+.input-group-addon{
+    border-radius: 0 !important;
+}
+
+.form-control{
+    border-radius: 0 !important;
+}
+
+.btn-group-vertical>.btn, .btn-group>.btn{
+    border-radius: 0 !important;
+}
+
+.btn-group>.btn-primary{
+    border-color: #2e6da4 !important;
+    border: thin solid;
+}
+
 textarea{
     border-radius: 0 !important;
 }
@@ -79,6 +96,10 @@ textarea{
 .panel-body > form > div > div > button:hover{
     background-color: #ff5810;
     color: white;
+}
+
+.nav-tabs>li>a {
+    border-radius: 0 0 0 0 !important;
 }
 
 .print-budget{
