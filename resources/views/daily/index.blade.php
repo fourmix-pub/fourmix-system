@@ -161,7 +161,7 @@ $next_month = $month + 1;
 
     <div class="form-group">
         <label class="col-xs-3 control-label" for="department">作業分類<span class="text-danger">*</span></label>
-        <select class="selectpicker col-xs-8" title="作業分類" id="department">
+        <select class="selectpicker col-xs-8" data-live-search="true" title="作業分類" id="department">
             <option>調査</option>
             <option>分析</option>
             <option>営業</option>
@@ -190,7 +190,7 @@ $next_month = $month + 1;
 
     <div class="form-group">
         <label class="col-xs-3 control-label" for="department">勤務分類<span class="text-danger">*</span></label>
-        <select class="selectpicker col-xs-8" title="勤務分類" id="department">
+        <select class="selectpicker col-xs-8" data-live-search="true" title="勤務分類" id="department">
             <option>通常</option>
             <option>残業</option>
             <option>休日</option>
@@ -276,7 +276,7 @@ $next_month = $month + 1;
                 <h4 style="padding: 8px">日報一覧</h4>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 table-responsive">
-                <table class="table table-bordered table-hover">
+                <table class="table table-bordered table-hover daily-table">
                     <thead>
                         <tr class="active">
                             <th>日付</th>
@@ -297,7 +297,7 @@ $next_month = $month + 1;
                             <td>09:30</td>
                             <td>20:00</td>
                             <td align="right">60</td>
-                            <td>普通</td>
+                            <td><span class="label label-info">普通</span></td>
                             @component('components.elements.table.admin.button')
                             @endcomponent
                         </tr>
@@ -308,7 +308,7 @@ $next_month = $month + 1;
                             <td>09:30</td>
                             <td>20:00</td>
                             <td align="right">60</td>
-                            <td>普通</td>
+                            <td><span class="label label-info">普通</span></td>
                             @component('components.elements.table.admin.button')
                             @endcomponent
                         </tr>
@@ -319,7 +319,7 @@ $next_month = $month + 1;
                             <td>09:30</td>
                             <td>20:00</td>
                             <td align="right">60</td>
-                            <td>普通</td>
+                            <td><span class="label label-info">普通</span></td>
                             @component('components.elements.table.admin.button')
                             @endcomponent
                         </tr>
@@ -330,7 +330,7 @@ $next_month = $month + 1;
                             <td>09:30</td>
                             <td>20:00</td>
                             <td align="right">60</td>
-                            <td>普通</td>
+                            <td><span class="label label-info">普通</span></td>
                             @component('components.elements.table.admin.button')
                             @endcomponent
                         </tr>
@@ -352,7 +352,7 @@ $next_month = $month + 1;
 
                                 <div class="row daily-form">
 
-                                    <div class="hidden-xs hidden-sm col-md-2 col-lg-2" style="padding-bottom: 7px;">
+                                    <div class="hidden-xs hidden-sm col-md-2 col-lg-2 date-form" style="padding-bottom: 7px;">
                                         <input type='text' class="form-control day" value="{{ \Carbon\Carbon::today()->format('Y-m-d') }}"/>
                                     </div>
 
@@ -379,7 +379,7 @@ $next_month = $month + 1;
 
 
                                     <div class="hidden-xs hidden-sm col-md-2 col-lg-2" style="padding-bottom: 7px;">
-                                        <select class="selectpicker" data-width="100%" title="作業分類">
+                                        <select class="selectpicker" data-width="100%" data-live-search="true" title="作業分類">
                                             <option>作業</option>
                                             <option>見積・営業活動</option>
                                             <option>分析</option>
@@ -387,7 +387,7 @@ $next_month = $month + 1;
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
-                                        <select class="selectpicker" data-width="100%" title="作業分類">
+                                        <select class="selectpicker" data-width="100%" data-live-search="true" title="作業分類">
                                             <option>作業</option>
                                             <option>見積・営業活動</option>
                                             <option>分析</option>
@@ -422,7 +422,7 @@ $next_month = $month + 1;
                                     </div>
 
                                     <div class="hidden-xs hidden-sm col-md-2 col-lg-2" style="padding-bottom: 7px;">
-                                        <select class="selectpicker" data-width="100%" title="勤務分類">
+                                        <select class="selectpicker" data-width="100%" data-live-search="true" title="勤務分類">
                                             <option>通常</option>
                                             <option>残業</option>
                                             <option>休日</option>
@@ -430,7 +430,7 @@ $next_month = $month + 1;
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
-                                        <select class="selectpicker" data-width="100%" title="勤務分類">
+                                        <select class="selectpicker" data-width="100%" data-live-search="true" title="勤務分類">
                                             <option>通常</option>
                                             <option>残業</option>
                                             <option>休日</option>

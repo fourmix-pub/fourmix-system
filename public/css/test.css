@@ -1,17 +1,74 @@
+.daily-table > tbody > tr > td > span{
+    font-size: 100%;
+    border-radius: 0 !important;
+}
+
+.daily-form{
+    padding-left: 11px;
+    padding-right: 2px;
+}
+
 .daily-form > div{
     padding-left: 4px;
     padding-right: 4px;
 }
 
-.daily-form > div > textarea{
-    padding-right: 2px;
-    padding-left: 2px;
+.daily-form > .date-form{
+    width: 15%;
 }
 
 .daily-form > .rest-form{
-    width: 13%;
+    width: 9%;
 }
 
 input{
     border-radius: 0 !important;
+}
+
+textarea{
+    border-radius: 0 !important;
+}
+
+.day > span{
+    border-radius: 0 !important;
+}
+
+.time > span{
+    border-radius: 0 !important;
+}
+
+.modal-content{
+    border-radius: 0 !important;
+}
+
+.
+
+.panel{
+    border-radius: 0 !important;
+
+}
+
+.total-view > div > div > .btn-default{
+    background-color: black;
+    border: initial;
+    color: white;
+}
+
+.total-view > div > div > .btn-default > span{
+    font-weight: bolder;
+}
+
+.total-view > div > div > .btn-default:hover{
+    background-color: #ff5810;
+}
+
+.panel-body > form > div > div > button{
+    background-color: black;
+    border: initial;
+    color: white;
+}
+
+.panel-body > form > div > div > button:hover{
+    background-color: #ff5810;
+    color: white;
 }

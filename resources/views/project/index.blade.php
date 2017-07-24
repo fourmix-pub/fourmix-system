@@ -60,7 +60,7 @@
                         <?php
                         $departments = ['システムデザイン','コンセプトデザイン','サポート'];
                         ?>
-						@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'false'])
+						@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'true'])
 							部門
 						@endcomponent
 					</div>

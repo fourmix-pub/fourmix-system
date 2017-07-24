@@ -41,7 +41,7 @@
 
                 <div class="form-group">
                     <label class="col-xs-3 control-label" for="department">作業分類<span class="text-danger">*</span></label>
-                    <select class="selectpicker col-xs-8" title="作業分類" id="department">
+                    <select class="selectpicker col-xs-8" data-live-search="true" title="作業分類" id="department">
                         <option>調査</option>
                         <option>分析</option>
                         <option>営業</option>
@@ -70,7 +70,7 @@
 
                 <div class="form-group">
                     <label class="col-xs-3 control-label" for="department">勤務分類<span class="text-danger">*</span></label>
-                    <select class="selectpicker col-xs-8" title="勤務分類" id="department">
+                    <select class="selectpicker col-xs-8" data-live-search="true" title="勤務分類" id="department">
                         <option>通常</option>
                         <option>残業</option>
                         <option>休日</option>
@@ -125,14 +125,14 @@
                         <?php
                         $departments = ['システムデザイン','コンセプトデザイン','サポート'];
                         ?>
-                        @component('components.elements.form.select.select', ['items'=>$departments,'search'=>'false'])
+                        @component('components.elements.form.select.select', ['items'=>$departments,'search'=>'true'])
                             部門
                         @endcomponent
 
                         <?php
                         $categories=['調査','実装','テスト']
                         ?>
-                        @component('components.elements.form.select.select', ['items'=>$categories,'search'=>'false'])
+                        @component('components.elements.form.select.select', ['items'=>$categories,'search'=>'true'])
                             作業分類
                         @endcomponent
 

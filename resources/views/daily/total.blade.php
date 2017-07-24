@@ -57,7 +57,7 @@
                                     $departments = ['システムデザイン','コンセプトデザイン','サポート'];
                                     ?>
 
-                                    @component('components.elements.form.select.select', ['items'=>$departments,'search'=>'false'])
+                                    @component('components.elements.form.select.select', ['items'=>$departments,'search'=>'true'])
                                         部門
                                     @endcomponent
 
@@ -65,7 +65,7 @@
                                     $categories=['調査','実装','テスト']
                                     ?>
 
-                                    @component('components.elements.form.select.select', ['items'=>$categories,'search'=>'false'])
+                                    @component('components.elements.form.select.select', ['items'=>$categories,'search'=>'true'])
                                         作業分類
                                     @endcomponent
 
@@ -87,13 +87,13 @@
                 </div>
 
                 {{-- 一覧 --}}
-                <div class="row" style="margin: 0% 1%;">
+                <div class="row total-view" style="margin: 0% 1%;">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h2 class="text-center">
+                        <h3 class="text-center">
                             プロジェクト別作業分類集計表
                             <br>
                             <small>プロジェクト：J-BEC　　責任者：金子聡</small>
-                        </h2>
+                        </h3>
 
                         <div align="right">
                             <button class="btn btn-default">
@@ -144,13 +144,13 @@
                 <hr Width="100%">
                 <br>
 
-                <div class="row" style="margin: 0% 1%;">
+                <div class="row total-view" style="margin: 0% 1%;" >
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h2 class="text-center">
+                        <h3 class="text-center">
                             プロジェクト別担当者集計表
                             <br>
                             <small>プロジェクト：SES・Fivestartoto　　責任者：金子聡</small>
-                        </h2>
+                        </h3>
 
                         <div align="right">
                             <button class="btn btn-default">
@@ -201,13 +201,13 @@
                 <hr Width="100%">
                 <br>
 
-                <div class="row" style="margin: 0% 1%;">
+                <div class="row total-view" style="margin: 0% 1%;">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h2 class="text-center">
+                        <h3 class="text-center">
                             担当者別作業分類集計表
                             <br>
                             <small>担当者：呉傑　部門：システムデザイン</small>
-                        </h2>
+                        </h3>
 
                         <div align="right">
                             <button class="btn btn-default">
@@ -258,13 +258,13 @@
                 <hr Width="100%">
                 <br>
 
-                <div class="row" style="margin: 0% 1%;">
+                <div class="row total-view" style="margin: 0% 1%;">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h2 class="text-center">
+                        <h3 class="text-center">
                             担当者別プロジェクト集計表
                             <br>
                             <small>担当者：呉傑　　部門：システムデザイン</small>
-                        </h2>
+                        </h3>
 
                         <div align="right">
                             <button class="btn btn-default">
