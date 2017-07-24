@@ -298,7 +298,7 @@ $next_month = $month + 1;
                             <td>09:30</td>
                             <td>20:00</td>
                             <td align="right">60</td>
-                            <td><span class="label label-info">普通</span></td>
+                            <td align="center"><span class="label label-info">普通</span></td>
                             @component('components.elements.table.admin.button')
                             @endcomponent
                         </tr>
@@ -309,7 +309,7 @@ $next_month = $month + 1;
                             <td>09:30</td>
                             <td>20:00</td>
                             <td align="right">60</td>
-                            <td><span class="label label-info">普通</span></td>
+                            <td align="center"><span class="label label-info">普通</span></td>
                             @component('components.elements.table.admin.button')
                             @endcomponent
                         </tr>
@@ -320,7 +320,7 @@ $next_month = $month + 1;
                             <td>09:30</td>
                             <td>20:00</td>
                             <td align="right">60</td>
-                            <td><span class="label label-info">普通</span></td>
+                            <td align="center"><span class="label label-info">普通</span></td>
                             @component('components.elements.table.admin.button')
                             @endcomponent
                         </tr>
@@ -331,7 +331,7 @@ $next_month = $month + 1;
                             <td>09:30</td>
                             <td>20:00</td>
                             <td align="right">60</td>
-                            <td><span class="label label-info">普通</span></td>
+                            <td align="center"><span class="label label-info">普通</span></td>
                             @component('components.elements.table.admin.button')
                             @endcomponent
                         </tr>

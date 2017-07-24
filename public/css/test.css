@@ -89,8 +89,37 @@ textarea{
 
 .print-budget:hover{
     background-color: #ff5810;
+    color: white;
 }
 
 .print-budget > span{
     font-weight: bolder;
+}
+
+.btn-danger {
+    background-color: #f30f22!important;
+    border: none;
+}
+
+.btn-warning {
+    color: #fff;
+    background-color: #ffc310;
+    border: none;
+}
+
+.pagination>.active>a{
+    background-color: #0d6ecf;
+    border-color: #0d6ecf;
+}
+
+a{
+    color: #0d6ecf;
+}
+
+.label-info{
+    background-color: #0dcfc0;
+}
+
+.dropdown-menu>.active>a{
+    background-color: #0d6ecf;
 }
