@@ -19,17 +19,6 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="btn-group" role="group" aria-label="...">
-                <a type="button" class="btn btn-default"  href="{{ url('/project-budget') }}">プロジェクト別</a>
-                <a type="button" class="btn btn-default" href="{{ url('/project-personal') }}">個人別</a>
-                <a type="button" class="btn btn-primary" href="{{ url('/project-personal-budget') }}">個人予算別</a>
-            </div>
-        </div>
-    </div>
-
-    <br>
 
     {{-- コンテンツ --}}
     <div class="row">
@@ -41,7 +30,16 @@
                     @include('layouts.content.project.xs-side-menu')
                 </div>
             </div>
-
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="btn-group" role="group" aria-label="...">
+                        <a type="button" class="btn btn-default"  href="{{ url('/project-budget') }}">プロジェクト別</a>
+                        <a type="button" class="btn btn-default" href="{{ url('/project-personal') }}">個人別</a>
+                        <a type="button" class="btn btn-primary" href="{{ url('/project-personal-budget') }}">個人予算別</a>
+                    </div>
+                </div>
+            </div>
+            <br>
             {{-- アコーディオン：検索ボタン --}}
             <div class="row">
                 @component('components.elements.accordion.accordion')
@@ -96,7 +94,7 @@
                 @endcomponent
 
                 {{-- 一覧 --}}
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive">
                     <div class="text-center">
                         <h3>プロジェクト個人予算対実績表</h3>
                     </div>

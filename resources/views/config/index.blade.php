@@ -47,7 +47,7 @@
 									<div class="row">
 										<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 											<div class="form-group">
-												<h3><small>始業時刻</small></h3>
+												<label for="name" class="control-label">始業時刻</label>
 												<div class='input-group time'>
 													<input type='text' class="form-control" value="09:30" />
 													<span class="input-group-addon">
@@ -60,7 +60,7 @@
 									<div class="row">
 										<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 											<div class="form-group">
-												<h3><small>終業時刻</small></h3>
+												<label for="name" class="control-label">終業時刻</label>
 												<div class='input-group time'>
 													<input type='text' class="form-control" value="18:30" />
 													<span class="input-group-addon">

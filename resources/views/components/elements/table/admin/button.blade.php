@@ -1,5 +1,5 @@
 <td align="center">
-    <button type="button" class="btn btn-xs btn-info" data-toggle="modal" data-target="#update" title="編集" style="margin: 4px">
+    <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#update" title="編集" style="margin: 4px">
         <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
     </button>
     {{--&nbsp;--}}

@@ -95,7 +95,7 @@
 			</div>
 			<br>
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive">
 					<table class="table table-bordered table-hover">
 						<tr>
 							<td class="active"><b>プロジェクト名</b></td>
@@ -179,6 +179,6 @@
 	{{-- スマホ版サイドメニュー --}}
 	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 		@include('layouts.content.project.side-menu')
-		@endsection
 	</div>
 </div>
+@endsection

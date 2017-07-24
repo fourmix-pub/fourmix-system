@@ -66,3 +66,18 @@ button {
   border-bottom-right-radius: initial !important;
   border-bottom-left-radius: initial !important;
 }
+
+.btn-primary {
+  border: none;
+  background-color: #0d6ecf !important;
+}
+.btn-danger {
+  background-color: #d9534f !important;
+  border: none;
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #f39f0f;
+  border: none;
+}
