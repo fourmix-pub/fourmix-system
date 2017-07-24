@@ -1,0 +1,9 @@
+.modal-footer > .btn-default{
+    background-color: black;
+    border: initial;
+    color: white;
+}
+
+.modal-footer > .btn-default:hover{
+    background-color: #ff5810;
+}
