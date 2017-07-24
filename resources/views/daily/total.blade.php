@@ -31,6 +31,18 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="btn-group" role="group" aria-label="...">
+                            <a type="button" class="btn btn-primary" href="{{ url('/total') }}">プロジェクト別作業分類</a>
+                            <a type="button" class="btn btn-default" href="{{ url('/total-project') }}">プロジェクト別担当者</a>
+                            <a type="button" class="btn btn-default" href="{{ url('/total-personal') }}">担当者別作業分類</a>
+                            <a type="button" class="btn btn-default" href="{{ url('/personal-project') }}">担当者別プロジェクト</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
                 {{-- アコーディオン：検索ボタン --}}
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -87,21 +99,22 @@
                 </div>
 
                 {{-- 一覧 --}}
-                <div class="row total-view" style="margin: 0% 1%;">
+                <div class="row total-view">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <h3 class="text-center">
                             プロジェクト別作業分類集計表
                             <br>
                             <small>プロジェクト：J-BEC　　責任者：金子聡</small>
                         </h3>
-
-                        <div align="right">
-                            <button class="btn btn-default">
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
+                            <button class="btn btn-default print-budget">
                                 <span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
                             </button>
                         </div>
-                        <br>
                     </div>
+                    <br>
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -144,172 +157,172 @@
                 <hr Width="100%">
                 <br>
 
-                <div class="row total-view" style="margin: 0% 1%;" >
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h3 class="text-center">
-                            プロジェクト別担当者集計表
-                            <br>
-                            <small>プロジェクト：SES・Fivestartoto　　責任者：金子聡</small>
-                        </h3>
+                {{--<div class="row total-view" style="margin: 0% 1%;" >--}}
+                    {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                        {{--<h3 class="text-center">--}}
+                            {{--プロジェクト別担当者集計表--}}
+                            {{--<br>--}}
+                            {{--<small>プロジェクト：SES・Fivestartoto　　責任者：金子聡</small>--}}
+                        {{--</h3>--}}
 
-                        <div align="right">
-                            <button class="btn btn-default">
-                                <span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
-                            </button>
-                        </div>
-                        <br>
-                    </div>
+                        {{--<div align="right">--}}
+                            {{--<button class="btn btn-default">--}}
+                                {{--<span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>--}}
+                            {{--</button>--}}
+                        {{--</div>--}}
+                        {{--<br>--}}
+                    {{--</div>--}}
 
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                <tr class="active">
-                                    <th>担当者</th>
-                                    <th>作業時間</th>
-                                    <th>作業金額</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>山本耕史郎</td>
-                                    <td>30.00</td>
-                                    <td align="right">￥100,000</td>
-                                </tr>
-                                <tr>
-                                    <td>田中咲良</td>
-                                    <td>30.00</td>
-                                    <td align="right">￥100,000</td>
-                                </tr>
-                                <tr>
-                                    <td>呉傑</td>
-                                    <td>30.00</td>
-                                    <td align="right">￥100,000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">合計</th>
-                                    <td>90.00</td>
-                                    <td align="right">￥300,000</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                    {{--<div class="row">--}}
+                        {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                            {{--<table class="table table-bordered table-hover">--}}
+                                {{--<thead>--}}
+                                {{--<tr class="active">--}}
+                                    {{--<th>担当者</th>--}}
+                                    {{--<th>作業時間</th>--}}
+                                    {{--<th>作業金額</th>--}}
+                                {{--</tr>--}}
+                                {{--</thead>--}}
+                                {{--<tbody>--}}
+                                {{--<tr>--}}
+                                    {{--<td>山本耕史郎</td>--}}
+                                    {{--<td>30.00</td>--}}
+                                    {{--<td align="right">￥100,000</td>--}}
+                                {{--</tr>--}}
+                                {{--<tr>--}}
+                                    {{--<td>田中咲良</td>--}}
+                                    {{--<td>30.00</td>--}}
+                                    {{--<td align="right">￥100,000</td>--}}
+                                {{--</tr>--}}
+                                {{--<tr>--}}
+                                    {{--<td>呉傑</td>--}}
+                                    {{--<td>30.00</td>--}}
+                                    {{--<td align="right">￥100,000</td>--}}
+                                {{--</tr>--}}
+                                {{--<tr>--}}
+                                    {{--<th scope="row">合計</th>--}}
+                                    {{--<td>90.00</td>--}}
+                                    {{--<td align="right">￥300,000</td>--}}
+                                {{--</tr>--}}
+                                {{--</tbody>--}}
+                            {{--</table>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
 
-                <br>
-                <hr Width="100%">
-                <br>
+                {{--<br>--}}
+                {{--<hr Width="100%">--}}
+                {{--<br>--}}
 
-                <div class="row total-view" style="margin: 0% 1%;">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h3 class="text-center">
-                            担当者別作業分類集計表
-                            <br>
-                            <small>担当者：呉傑　部門：システムデザイン</small>
-                        </h3>
+                {{--<div class="row total-view" style="margin: 0% 1%;">--}}
+                    {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                        {{--<h3 class="text-center">--}}
+                            {{--担当者別作業分類集計表--}}
+                            {{--<br>--}}
+                            {{--<small>担当者：呉傑　部門：システムデザイン</small>--}}
+                        {{--</h3>--}}
 
-                        <div align="right">
-                            <button class="btn btn-default">
-                                <span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
-                            </button>
-                        </div>
-                        <br>
-                    </div>
+                        {{--<div align="right">--}}
+                            {{--<button class="btn btn-default">--}}
+                                {{--<span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>--}}
+                            {{--</button>--}}
+                        {{--</div>--}}
+                        {{--<br>--}}
+                    {{--</div>--}}
 
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr class="active">
-                                        <th>作業分類</th>
-                                        <th>作業時間</th>
-                                        <th>作業金額</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>調査</td>
-                                        <td>30.00</td>
-                                        <td align="right">￥100,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>設計</td>
-                                        <td>30.00</td>
-                                        <td align="right">￥100,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>打ち合わせ</td>
-                                        <td>30.00</td>
-                                        <td align="right">￥100,000</td>
-                                    </tr>
-                                    <tr>
-                                    <th scope="row">合計</th>
-                                        <td>90.00</td>
-                                        <td align="right">￥300,000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                    {{--<div class="row">--}}
+                        {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                            {{--<table class="table table-bordered table-hover">--}}
+                                {{--<thead>--}}
+                                    {{--<tr class="active">--}}
+                                        {{--<th>作業分類</th>--}}
+                                        {{--<th>作業時間</th>--}}
+                                        {{--<th>作業金額</th>--}}
+                                    {{--</tr>--}}
+                                {{--</thead>--}}
+                                {{--<tbody>--}}
+                                    {{--<tr>--}}
+                                        {{--<td>調査</td>--}}
+                                        {{--<td>30.00</td>--}}
+                                        {{--<td align="right">￥100,000</td>--}}
+                                    {{--</tr>--}}
+                                    {{--<tr>--}}
+                                        {{--<td>設計</td>--}}
+                                        {{--<td>30.00</td>--}}
+                                        {{--<td align="right">￥100,000</td>--}}
+                                    {{--</tr>--}}
+                                    {{--<tr>--}}
+                                        {{--<td>打ち合わせ</td>--}}
+                                        {{--<td>30.00</td>--}}
+                                        {{--<td align="right">￥100,000</td>--}}
+                                    {{--</tr>--}}
+                                    {{--<tr>--}}
+                                    {{--<th scope="row">合計</th>--}}
+                                        {{--<td>90.00</td>--}}
+                                        {{--<td align="right">￥300,000</td>--}}
+                                    {{--</tr>--}}
+                                {{--</tbody>--}}
+                            {{--</table>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
 
-                <br>
-                <hr Width="100%">
-                <br>
+                {{--<br>--}}
+                {{--<hr Width="100%">--}}
+                {{--<br>--}}
 
-                <div class="row total-view" style="margin: 0% 1%;">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h3 class="text-center">
-                            担当者別プロジェクト集計表
-                            <br>
-                            <small>担当者：呉傑　　部門：システムデザイン</small>
-                        </h3>
+                {{--<div class="row total-view" style="margin: 0% 1%;">--}}
+                    {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                        {{--<h3 class="text-center">--}}
+                            {{--担当者別プロジェクト集計表--}}
+                            {{--<br>--}}
+                            {{--<small>担当者：呉傑　　部門：システムデザイン</small>--}}
+                        {{--</h3>--}}
 
-                        <div align="right">
-                            <button class="btn btn-default">
-                                <span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
-                            </button>
-                        </div>
-                        <br>
-                    </div>
+                        {{--<div align="right">--}}
+                            {{--<button class="btn btn-default">--}}
+                                {{--<span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>--}}
+                            {{--</button>--}}
+                        {{--</div>--}}
+                        {{--<br>--}}
+                    {{--</div>--}}
 
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr class="active">
-                                    <th>プロジェクト</th>
-                                    <th>作業時間</th>
-                                    <th>作業金額</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>社内行事・その他</td>
-                                        <td>30.00</td>
-                                        <td align="right">￥100,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>日科技連サイト構築</td>
-                                        <td>30.00</td>
-                                        <td align="right">￥100,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Win</td>
-                                        <td>30.00</td>
-                                        <td align="right">￥100,000</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">合計</th>
-                                        <td>90.00</td>
-                                        <td align="right">￥300,000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                    {{--<div class="row">--}}
+                        {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                            {{--<table class="table table-bordered table-hover">--}}
+                                {{--<thead>--}}
+                                    {{--<tr class="active">--}}
+                                    {{--<th>プロジェクト</th>--}}
+                                    {{--<th>作業時間</th>--}}
+                                    {{--<th>作業金額</th>--}}
+                                    {{--</tr>--}}
+                                {{--</thead>--}}
+                                {{--<tbody>--}}
+                                    {{--<tr>--}}
+                                        {{--<td>社内行事・その他</td>--}}
+                                        {{--<td>30.00</td>--}}
+                                        {{--<td align="right">￥100,000</td>--}}
+                                    {{--</tr>--}}
+                                    {{--<tr>--}}
+                                        {{--<td>日科技連サイト構築</td>--}}
+                                        {{--<td>30.00</td>--}}
+                                        {{--<td align="right">￥100,000</td>--}}
+                                    {{--</tr>--}}
+                                    {{--<tr>--}}
+                                        {{--<td>Win</td>--}}
+                                        {{--<td>30.00</td>--}}
+                                        {{--<td align="right">￥100,000</td>--}}
+                                    {{--</tr>--}}
+                                    {{--<tr>--}}
+                                        {{--<th scope="row">合計</th>--}}
+                                        {{--<td>90.00</td>--}}
+                                        {{--<td align="right">￥300,000</td>--}}
+                                    {{--</tr>--}}
+                                {{--</tbody>--}}
+                            {{--</table>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
 
 
                 @component('components.elements.table.admin.pagination')

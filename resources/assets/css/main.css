@@ -5,3 +5,23 @@ body{
 	padding-bottom: 70px;
 	padding-top: 70px;
 }
+
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+	border-bottom-left-radius: initial !important;
+	border-top-left-radius: initial !important;
+}
+
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+	border-bottom-right-radius: initial !important;
+	border-top-right-radius: initial !important;
+}
+
+.list-group-item:first-child {
+	border-top-right-radius: initial !important;
+	border-top-left-radius: initial !important;
+}
+
+.list-group-item:last-child {
+	border-bottom-right-radius: initial !important;
+	border-bottom-left-radius: initial !important;
+}

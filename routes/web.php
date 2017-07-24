@@ -103,7 +103,7 @@ Route::get('test', function () {
     return view('test');
 });
 
-
+//プロジェクト関連
 Route::get('/project-personal', function () {
     return view('project.project-personal');
 });
@@ -114,4 +114,22 @@ Route::get('/project-personal-budget', function () {
 
 Route::get('/project-budget', function () {
     return view('project.project-budget');
+});
+
+
+//集計
+Route::get('/total', function () {
+    return view('daily.total');
+});
+
+Route::get('/total-project', function () {
+    return view('daily.total-project');
+});
+
+Route::get('/total-personal', function () {
+    return view('daily.total-personal');
+});
+
+Route::get('/personal-project', function () {
+    return view('daily.personal-project');
 });
