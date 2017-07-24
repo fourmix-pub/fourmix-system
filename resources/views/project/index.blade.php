@@ -150,7 +150,7 @@
 				{{-- モーダル：編集ボタン --}}
 				@component('components.elements.modal.update', ['title'=>'編集'])
 					@component('components.elements.form.modal.text',['name'=>'name'])
-
+						プロジェクト名
 					@endcomponent
 					<div class="form-group">
 						<label class="col-xs-3 control-label" for="customer_type">クライアント種類<span class="text-danger">*</span></label>
