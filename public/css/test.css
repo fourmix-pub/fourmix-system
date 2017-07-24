@@ -1,0 +1,17 @@
+.daily-form > div{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.daily-form > div > textarea{
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.daily-form > .rest-form{
+    width: 13%;
+}
+
+input{
+    border-radius: 0 !important;
+}

@@ -8,6 +8,8 @@
 
 <!-- Styles -->
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+<link href="{{ asset('/css/test.css') }}" rel="stylesheet">
+
 
 
 <!--fonts-->

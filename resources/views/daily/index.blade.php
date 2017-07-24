@@ -350,7 +350,7 @@ $next_month = $month + 1;
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-                                <div class="row">
+                                <div class="row daily-form">
 
                                     <div class="hidden-xs hidden-sm col-md-2 col-lg-2" style="padding-bottom: 7px;">
                                         <input type='text' class="form-control day" value="{{ \Carbon\Carbon::today()->format('Y-m-d') }}"/>
@@ -413,7 +413,7 @@ $next_month = $month + 1;
                                     </div>
 
 
-                                    <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style="padding-bottom: 7px;">
+                                    <div class="hidden-xs hidden-sm col-md-1 col-lg-1 rest-form" style="padding-bottom: 7px;">
                                         <input type='text' class="form-control" placeholder="休憩(分)"/>
                                     </div>
 
