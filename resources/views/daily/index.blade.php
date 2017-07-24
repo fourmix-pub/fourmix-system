@@ -274,6 +274,8 @@ $next_month = $month + 1;
 
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                 <h4 style="padding: 8px">日報一覧</h4>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 table-responsive">
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr class="active">
@@ -294,7 +296,7 @@ $next_month = $month + 1;
                             <td>設計</td>
                             <td>09:30</td>
                             <td>20:00</td>
-                            <td>60</td>
+                            <td align="right">60</td>
                             <td>普通</td>
                             @component('components.elements.table.admin.button')
                             @endcomponent
@@ -305,7 +307,7 @@ $next_month = $month + 1;
                             <td>設計</td>
                             <td>09:30</td>
                             <td>20:00</td>
-                            <td>60</td>
+                            <td align="right">60</td>
                             <td>普通</td>
                             @component('components.elements.table.admin.button')
                             @endcomponent
@@ -316,7 +318,7 @@ $next_month = $month + 1;
                             <td>設計</td>
                             <td>09:30</td>
                             <td>20:00</td>
-                            <td>60</td>
+                            <td align="right">60</td>
                             <td>普通</td>
                             @component('components.elements.table.admin.button')
                             @endcomponent
@@ -327,7 +329,7 @@ $next_month = $month + 1;
                             <td>設計</td>
                             <td>09:30</td>
                             <td>20:00</td>
-                            <td>60</td>
+                            <td align="right">60</td>
                             <td>普通</td>
                             @component('components.elements.table.admin.button')
                             @endcomponent
