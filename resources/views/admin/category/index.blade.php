@@ -10,12 +10,12 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="page-header">
-            <h3>
-                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;作業分類
+            <h2>
+                Category
                 <button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal" data-target="#add">
                     <i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
                 </button>
-            </h3>
+            </h2>
         </div>
     </div>
 </div>

@@ -138,11 +138,17 @@ $next_month = $month + 1;
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="page-header">
             <div>
-                <h3><i class="glyphicon glyphicon-pencil"></i>&nbsp;&nbsp;作業日報入力</h3>
+                <h2 align="center">Write a daily</h2>
             </div>
         </div>
     </div>
 </div>
+
+<?php
+        $tabs=['active','',''];
+?>
+@component('components.elements.tab.daily',['tabs'=>$tabs])
+@endcomponent
 
 {{-- モーダル：編集ボタン --}}
 @component('components.elements.modal.update', ['title'=>'日報編集'])
@@ -335,6 +341,72 @@ $next_month = $month + 1;
                             @component('components.elements.table.admin.button')
                             @endcomponent
                         </tr>
+                        <tr>
+                            <td>2016/07/31</td>
+                            <td>コメダコーヒー</td>
+                            <td>設計</td>
+                            <td>09:30</td>
+                            <td>20:00</td>
+                            <td align="right">60</td>
+                            <td align="center"><span class="label label-info">普通</span></td>
+                            @component('components.elements.table.admin.button')
+                            @endcomponent
+                        </tr>
+                        <tr>
+                            <td>2016/07/31</td>
+                            <td>コメダコーヒー</td>
+                            <td>設計</td>
+                            <td>09:30</td>
+                            <td>20:00</td>
+                            <td align="right">60</td>
+                            <td align="center"><span class="label label-info">普通</span></td>
+                            @component('components.elements.table.admin.button')
+                            @endcomponent
+                        </tr>
+                        <tr>
+                            <td>2016/07/31</td>
+                            <td>コメダコーヒー</td>
+                            <td>設計</td>
+                            <td>09:30</td>
+                            <td>20:00</td>
+                            <td align="right">60</td>
+                            <td align="center"><span class="label label-info">普通</span></td>
+                            @component('components.elements.table.admin.button')
+                            @endcomponent
+                        </tr>
+                        <tr>
+                            <td>2016/07/31</td>
+                            <td>コメダコーヒー</td>
+                            <td>設計</td>
+                            <td>09:30</td>
+                            <td>20:00</td>
+                            <td align="right">60</td>
+                            <td align="center"><span class="label label-info">普通</span></td>
+                            @component('components.elements.table.admin.button')
+                            @endcomponent
+                        </tr>
+                        <tr>
+                            <td>2016/07/31</td>
+                            <td>コメダコーヒー</td>
+                            <td>設計</td>
+                            <td>09:30</td>
+                            <td>20:00</td>
+                            <td align="right">60</td>
+                            <td align="center"><span class="label label-info">普通</span></td>
+                            @component('components.elements.table.admin.button')
+                            @endcomponent
+                        </tr>
+                        <tr>
+                            <td>2016/07/31</td>
+                            <td>コメダコーヒー</td>
+                            <td>設計</td>
+                            <td>09:30</td>
+                            <td>20:00</td>
+                            <td align="right">60</td>
+                            <td align="center"><span class="label label-info">普通</span></td>
+                            @component('components.elements.table.admin.button')
+                            @endcomponent
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -452,7 +524,7 @@ $next_month = $month + 1;
                                 <br>
 
                                 <div align="middle">
-                                    <button type="submit" class="btn btn-primary">登録</button>
+                                    <button type="submit" class="btn registration-daily">登録</button>
                                 </div>
                             </div>
                         </div>
@@ -464,7 +536,7 @@ $next_month = $month + 1;
         </div>
     </div>
 
-    {{-- スマホ版サイドメニュー --}}
+     {{--スマホ版サイドメニュー --}}
     {{--<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">--}}
         {{--@include('layouts.content.daily.side-menu')--}}
     {{--</div>--}}

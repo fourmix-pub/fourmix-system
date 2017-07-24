@@ -10,19 +10,25 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="page-header">
-                <h3>
-                    <i class="glyphicon glyphicon-eye-open"></i>&nbsp;&nbsp;日報閲覧
+                <h2>
+                    Daily view
                     <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
                     </button>
-                </h3>
+                </h2>
             </div>
         </div>
     </div>
 
+    <?php
+    $tabs=['','active',''];
+    ?>
+    @component('components.elements.tab.daily',['tabs'=>$tabs])
+    @endcomponent
+
     {{-- コンテンツ --}}
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
             {{-- モーダル：編集ボタン --}}
             @component('components.elements.modal.update', ['title'=>'日報編集'])
@@ -177,7 +183,7 @@
                                 @endcomponent
                             </tr>
                             <tr>
-                                <td colspan="7">備考欄</td>
+                                <td colspan="7">備考欄：</td>
                             </tr>
                             <tr>
                                 <td>田中咲良</td>
@@ -190,7 +196,7 @@
                                 @endcomponent
                             </tr>
                             <tr>
-                                <td colspan="7">備考欄</td>
+                                <td colspan="7">備考欄：</td>
                             </tr>
                             </tbody>
                         </table>
@@ -202,11 +208,6 @@
                 </div>
 
             </div>
-        </div>
-
-        {{-- スマホ版サイドメニュー --}}
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            @include('layouts.content.daily.side-menu')
         </div>
     </div>
 @endsection
