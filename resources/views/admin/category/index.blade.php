@@ -46,7 +46,8 @@
         @endcomponent
 
         {{-- モーダル：削除ボタン --}}
-        @component('components.elements.modal.delete')
+        @component('components.elements.modal.delete', ['title'=>'作業分類削除'])
+            テスト
         @endcomponent
 
         {{-- 一覧 --}}

@@ -46,7 +46,8 @@
         @endcomponent
 
         {{-- モーダル：削除ボタン --}}
-        @component('components.elements.modal.delete')
+        @component('components.elements.modal.delete', ['title'=>'部門削除'])
+            その他
         @endcomponent
  
         {{-- 一覧 --}}

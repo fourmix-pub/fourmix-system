@@ -35,7 +35,8 @@
 		</div>
 
 		{{-- モーダル：削除ボタン --}}
-		@component('components.elements.modal.delete')
+		@component('components.elements.modal.delete',['title'=>'プロジェクト削除'])
+			PCP・メンズポケットサーバー移行
 		@endcomponent
 
 		{{-- アコーディオン：検索ボタン --}}

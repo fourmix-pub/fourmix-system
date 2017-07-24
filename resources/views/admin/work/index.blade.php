@@ -54,7 +54,8 @@
 		@endcomponent
 
 		{{-- モーダル：削除ボタン --}}
-		@component('components.elements.modal.delete')
+		@component('components.elements.modal.delete', ['title'=>'勤務分類削除'])
+			深夜残業
 		@endcomponent
 
 		{{-- 一覧 --}}

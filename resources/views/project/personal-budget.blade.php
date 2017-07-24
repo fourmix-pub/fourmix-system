@@ -35,7 +35,8 @@
 </div>
 
 		{{-- モーダル：削除ボタン --}}
-		@component('components.elements.modal.delete')
+		@component('components.elements.modal.delete',['title'=>'プロジェクト削除'])
+			日本計画
 		@endcomponent
 
 		{{-- アコーディオン：検索ボタン --}}
@@ -116,7 +117,7 @@
 			{{-- 一覧 --}}
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
-						<button class="btn btn-default">
+						<button class="btn btn-default print-budget">
 							<span class="glyphicon glyphicon-print"> 出力</span>
 						</button>
 				</div>

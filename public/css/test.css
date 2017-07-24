@@ -41,7 +41,15 @@ textarea{
     border-radius: 0 !important;
 }
 
-.
+.modal-footer > .btn-default{
+    background-color: black;
+    border: initial;
+    color: white;
+}
+
+.modal-footer > .btn-default:hover{
+    background-color: #ff5810;
+}
 
 .panel{
     border-radius: 0 !important;
@@ -71,4 +79,18 @@ textarea{
 .panel-body > form > div > div > button:hover{
     background-color: #ff5810;
     color: white;
+}
+
+.print-budget{
+    background-color: black;
+    border: initial;
+    color: white;
+}
+
+.print-budget:hover{
+    background-color: #ff5810;
+}
+
+.print-budget > span{
+    font-weight: bolder;
 }

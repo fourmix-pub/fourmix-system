@@ -93,7 +93,8 @@
             @endcomponent
 
             {{-- モーダル：削除ボタン --}}
-            @component('components.elements.modal.delete')
+            @component('components.elements.modal.delete',['title'=>'日報削除'])
+                田中咲良の日報
             @endcomponent
 
             {{-- PC版サイドメニュー --}}

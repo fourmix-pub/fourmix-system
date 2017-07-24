@@ -213,7 +213,8 @@ $next_month = $month + 1;
 @endcomponent
 
 {{-- モーダル：削除ボタン --}}
-@component('components.elements.modal.delete')
+@component('components.elements.modal.delete',['title'=>'日報削除'])
+    2016/7/31の日報
 @endcomponent
 
 

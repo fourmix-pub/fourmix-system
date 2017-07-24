@@ -178,7 +178,8 @@
 		@endcomponent
 
 		{{-- モーダル：削除ボタン --}}
-		@component('components.elements.modal.delete')
+		@component('components.elements.modal.delete', ['title'=>'担当者削除'])
+			稲垣吾郎
 		@endcomponent
 
 		{{-- 一覧 --}}
