@@ -31,11 +31,6 @@
                 </div>
             </div>
 
-            <?php
-            $tabs = ['', '', '','active'];
-            ?>
-            @component('components.elements.tab.project', ['tabs'=>$tabs])
-            @endcomponent
             <br>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -91,7 +86,7 @@
                         @component('components.elements.form.period')
                         @endcomponent
                         <div class="row text-center">
-                            <div class="btn-group" style="margin:2% 0% 0% 0%;">
+                            <div class="btn-group">
                                 <button type="button" class="btn" onclick="location.href=''">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
                                 </button>
@@ -101,7 +96,7 @@
                 @endcomponent
 
                 {{-- 一覧 --}}
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="text-center">
                         <h3>プロジェクト個人予算対実績表</h3>
                     </div>
@@ -124,7 +119,7 @@
                                 <td align="right">3,000,000</td>
                                 <td align="right">1,500,000</td>
                                 <td align="right">1,500,000</td>
-                                <td>50.0%</td>
+                                <td align="right">50.0%</td>
                                 <td>完了</td>
                             </tr>
                             <tr>
@@ -133,7 +128,7 @@
                                 <td align="right">3,000,000</td>
                                 <td align="right">3,000,000</td>
                                 <td align="right">0</td>
-                                <td>0.0%</td>
+                                <td align="right">0.0%</td>
                                 <td>完了</td>
                             </tr>
                         </tbody>

@@ -12,9 +12,6 @@
 		<div class="page-header">
 			<h2 align="center">
 				PROJECT LEDGER
-				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
-					<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
-				</button>
 			</h2>
 		</div>
 	</div>
@@ -24,6 +21,12 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
+		<button type="button" class="btn btn-primary pull-right" data-toggle="collapse" href="#search">
+			<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
+		</button>
+	</div>
+</div>
+<br>
 		{{-- PC版サイドメニュー --}}
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -86,11 +89,6 @@
 
 
 			{{-- 一覧 --}}
-                <?php
-                $tabs = ['', '', 'active', ''];
-                ?>
-			@component('components.elements.tab.project', ['tabs'=>$tabs])
-			@endcomponent
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
 					<button class="btn btn-default print-budget">
@@ -100,7 +98,7 @@
 			</div>
 			<br>
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<table class="table table-bordered table-hover">
 						<tr>
 							<td class="active"><b>プロジェクト名</b></td>
@@ -180,10 +178,8 @@
 
 			</div>
 
-		</div>
 	{{-- スマホ版サイドメニュー --}}
 	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 		@include('layouts.content.project.side-menu')
 	</div>
-</div>
 @endsection

@@ -12,12 +12,7 @@
 		<div class="page-header">
 			<h2>
 				PERSONAL BUDGET LIST
-				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
-					<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
-				</button>
-				<button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal" data-target="#add">
-					<i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
-				</button>
+
 			</h2>
 		</div>
 	</div>
@@ -26,7 +21,15 @@
 {{-- コンテンツ --}}
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
+		<button type="button" class="btn btn-primary pull-right" data-toggle="collapse" href="#search">
+			<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
+		</button>
+		<button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal" data-target="#add">
+			<i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
+		</button>
+	</div>
+</div>
+<br>
 {{-- SM版サイドメニュー --}}
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -115,11 +118,6 @@
 
 
 			{{-- 一覧 --}}
-			<?php
-			$tabs = ['', 'active', '', ''];
-			?>
-			@component('components.elements.tab.project', ['tabs'=>$tabs])
-			@endcomponent
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
 						<button class="btn btn-default print-budget">
@@ -196,10 +194,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
 	{{-- PC版サイドメニュー --}}
 	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 		@include('layouts.content.project.side-menu')
 	</div>
-</div>
 @endsection
