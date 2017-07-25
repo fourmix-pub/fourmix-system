@@ -11,7 +11,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="page-header">
             <h2>
-                Total table
+                TOTALIZATION TABLE
             </h2>
         </div>
     </div>
@@ -23,105 +23,82 @@ $tabs=['','','active'];
 @component('components.elements.tab.daily',['tabs'=>$tabs])
 @endcomponent
 
+<br>
+
 {{-- コンテンツ --}}
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
+        {{-- アコーディオン：検索ボタン --}}
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <?php
+                            $users = ['佐々木希','櫻井翔','松本潤'];
+                            ?>
 
-                {{-- PC版サイドメニュー --}}
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        @include('layouts.content.daily.xs-side-menu')
-                    </div>
-                </div>
+                            @component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
+                                担当者
+                            @endcomponent
 
-                <br>
+                            <?php
+                            $projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
+                            ?>
 
-                {{-- アコーディオン：検索ボタン --}}
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <form class="form-horizontal">
-                                    <?php
-                                    $users = ['佐々木希','櫻井翔','松本潤'];
-                                    ?>
+                            @component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])
+                                プロジェクト名
+                            @endcomponent
 
-                                    @component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
-                                        担当者
-                                    @endcomponent
+                            <?php
+                            $departments = ['システムデザイン','コンセプトデザイン','サポート'];
+                            ?>
 
-                                    <?php
-                                    $projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
-                                    ?>
+                            @component('components.elements.form.select.select', ['items'=>$departments,'search'=>'true'])
+                                部門
+                            @endcomponent
 
-                                    @component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])
-                                        プロジェクト名
-                                    @endcomponent
+                            <?php
+                            $categories=['調査','実装','テスト']
+                            ?>
 
-                                    <?php
-                                    $departments = ['システムデザイン','コンセプトデザイン','サポート'];
-                                    ?>
+                            @component('components.elements.form.select.select', ['items'=>$categories,'search'=>'true'])
+                                作業分類
+                            @endcomponent
 
-                                    @component('components.elements.form.select.select', ['items'=>$departments,'search'=>'true'])
-                                        部門
-                                    @endcomponent
+                             @component('components.elements.form.period')
+                             @endcomponent
 
-                                    <?php
-                                    $categories=['調査','実装','テスト']
-                                    ?>
-
-                                    @component('components.elements.form.select.select', ['items'=>$categories,'search'=>'true'])
-                                        作業分類
-                                    @endcomponent
-
-                                     @component('components.elements.form.period')
-                                     @endcomponent
-
-                                    <div class="row text-center">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn" onclick="location.href=''">
-                                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
+                            <div class="row text-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn" onclick="location.href=''">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                        <hr Width="100%">
+                        </form>
                     </div>
                 </div>
+                <hr Width="100%">
+            </div>
+        </div>
 
-                {{-- 一覧 --}}
-                <div class="row total-view">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h3 class="text-center">
-                            プロジェクト別作業分類集計表
-                            <br>
-                            <small>プロジェクト：J-BEC　　責任者：金子聡</small>
-                        </h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
-                            <button class="btn btn-default print-budget">
-                                <span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
-                            </button>
-                        </div>
-                    </div>
+        {{-- 一覧 --}}
+        <div class="row total-view">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <table class="table table-bordered table-hover">
-                                <thead>
+                @component('components.elements.tab.total',['title'=>'プロジェクト別作業分類集計表','sub_title'=>'プロジェクト：J-BEC　　責任者：金子聡'])
+                    @slot('tab1')
+                        <table class="table table-bordered table-hover">
+                            <thead>
                                 <tr class="active">
                                     <th>作業分類</th>
                                     <th>作業時間</th>
                                     <th>作業金額</th>
                                 </tr>
-                                </thead>
-                                <tbody>
+                            </thead>
+                            <tbody>
                                 <tr>
                                     <td>調査</td>
                                     <td>30.00</td>
@@ -142,38 +119,31 @@ $tabs=['','','active'];
                                     <td>90.00</td>
                                     <td align="right">￥300,000</td>
                                 </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                            </tbody>
+                        </table>
+                    @endslot
 
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h3 class="text-center">
-                            プロジェクト別担当者集計表
-                            <br>
-                            <small>プロジェクト：SES・Fivestartoto　　責任者：金子聡</small>
-                        </h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
-                            <button class="btn btn-default print-budget">
-                                <span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
-                            </button>
-                        </div>
-                    </div>
-                    <br>
+                    @slot('tab2')
+                        チャート1
+                    @endslot
 
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <table class="table table-bordered table-hover">
-                                <thead>
+                    @slot('tab3')
+                        チャート2
+                    @endslot
+
+                @endcomponent
+
+                @component('components.elements.tab.total',['title'=>'プロジェクト別担当者集計表','sub_title'=>'プロジェクト：SES・Fivestartoto　　責任者：金子聡'])
+                    @slot('tab1')
+                        <table class="table table-bordered table-hover">
+                            <thead>
                                 <tr class="active">
                                     <th>担当者</th>
                                     <th>作業時間</th>
                                     <th>作業金額</th>
                                 </tr>
-                                </thead>
-                                <tbody>
+                            </thead>
+                            <tbody>
                                 <tr>
                                     <td>山本耕史郎</td>
                                     <td>30.00</td>
@@ -194,119 +164,114 @@ $tabs=['','','active'];
                                     <td>90.00</td>
                                     <td align="right">￥300,000</td>
                                 </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                            </tbody>
+                        </table>
+                    @endslot
 
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h3 class="text-center">
-                            担当者別作業分類集計表
-                            <br>
-                            <small>担当者：呉傑　部門：システムデザイン</small>
-                        </h3>
+                    @slot('tab2')
+                        チャート1
+                    @endslot
 
-                        <div align="right">
-                            <button class="btn btn-default">
-                                <span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
-                            </button>
-                        </div>
-                        <br>
-                    </div>
+                    @slot('tab3')
+                        チャート2
+                    @endslot
 
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr class="active">
-                                        <th>作業分類</th>
-                                        <th>作業時間</th>
-                                        <th>作業金額</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>調査</td>
-                                        <td>30.00</td>
-                                        <td align="right">￥100,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>設計</td>
-                                        <td>30.00</td>
-                                        <td align="right">￥100,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>打ち合わせ</td>
-                                        <td>30.00</td>
-                                        <td align="right">￥100,000</td>
-                                    </tr>
-                                    <tr>
-                                    <th scope="row">合計</th>
-                                        <td>90.00</td>
-                                        <td align="right">￥300,000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                @endcomponent
 
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h3 class="text-center">
-                            担当者別プロジェクト集計表
-                            <br>
-                            <small>担当者：呉傑　　部門：システムデザイン</small>
-                        </h3>
+                @component('components.elements.tab.total',['title'=>'担当者別作業分類集計表','sub_title'=>'担当者：呉傑　部門：システムデザイン'])
+                    @slot('tab1')
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr class="active">
+                                <th>作業分類</th>
+                                <th>作業時間</th>
+                                <th>作業金額</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>調査</td>
+                                <td>30.00</td>
+                                <td align="right">￥100,000</td>
+                            </tr>
+                            <tr>
+                                <td>設計</td>
+                                <td>30.00</td>
+                                <td align="right">￥100,000</td>
+                            </tr>
+                            <tr>
+                                <td>打ち合わせ</td>
+                                <td>30.00</td>
+                                <td align="right">￥100,000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">合計</th>
+                                <td>90.00</td>
+                                <td align="right">￥300,000</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    @endslot
 
-                        <div align="right">
-                            <button class="btn btn-default">
-                                <span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
-                            </button>
-                        </div>
-                        <br>
-                    </div>
+                    @slot('tab2')
+                        チャート1
+                    @endslot
 
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr class="active">
-                                    <th>プロジェクト</th>
-                                    <th>作業時間</th>
-                                    <th>作業金額</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>社内行事・その他</td>
-                                        <td>30.00</td>
-                                        <td align="right">￥100,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>日科技連サイト構築</td>
-                                        <td>30.00</td>
-                                        <td align="right">￥100,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Win</td>
-                                        <td>30.00</td>
-                                        <td align="right">￥100,000</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">合計</th>
-                                        <td>90.00</td>
-                                        <td align="right">￥300,000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    @slot('tab3')
+                        チャート2
+                    @endslot
 
-                </div>
+                @endcomponent
 
-                @component('components.elements.table.admin.pagination')
+                @component('components.elements.tab.total',['title'=>'担当者別プロジェクト集計表','sub_title'=>'担当者：呉傑　　部門：システムデザイン'])
+                    @slot('tab1')
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr class="active">
+                                <th>プロジェクト</th>
+                                <th>作業時間</th>
+                                <th>作業金額</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>社内行事・その他</td>
+                                <td>30.00</td>
+                                <td align="right">￥100,000</td>
+                            </tr>
+                            <tr>
+                                <td>日科技連サイト構築</td>
+                                <td>30.00</td>
+                                <td align="right">￥100,000</td>
+                            </tr>
+                            <tr>
+                                <td>Win</td>
+                                <td>30.00</td>
+                                <td align="right">￥100,000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">合計</th>
+                                <td>90.00</td>
+                                <td align="right">￥300,000</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    @endslot
+
+                    @slot('tab2')
+                        チャート1
+                    @endslot
+
+                    @slot('tab3')
+                        チャート2
+                    @endslot
+
                 @endcomponent
             </div>
         </div>
+
+        @component('components.elements.table.admin.pagination')
+        @endcomponent
 
     </div>
 </div>
