@@ -10,18 +10,18 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="page-header">
-				<h3>
-					<i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;&nbsp;プロジェクト予算対
+				<h2>
+					PROJECT BUDGET
 					<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
 						<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
 					</button>
-				</h3>
+				</h2>
 			</div>
 		</div>
 	</div>
 	{{-- コンテンツ --}}
 	<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
 			{{-- PC版サイドメニュー --}}
 			<div class="row">
@@ -29,6 +29,14 @@
 					@include('layouts.content.project.xs-side-menu')
 				</div>
 			</div>
+
+            <?php
+            $tabs = ['', '', '','active'];
+            ?>
+			@component('components.elements.tab.project', ['tabs'=>$tabs])
+			@endcomponent
+
+			<br>
 
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -95,6 +103,7 @@
 				@endcomponent
 
 				{{-- 一覧 --}}
+
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive">
 					<div class="text-center">
 						<h3>プロジェクト予算対実績表（全体）</h3>

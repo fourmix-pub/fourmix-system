@@ -10,22 +10,22 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
-			<h3>
-				<i class="fa fa-jpy" aria-hidden="true"></i>&nbsp;&nbsp;個人予算一覧
+			<h2>
+				PERSONAL BUDGET LIST
 				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
 					<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
 				</button>
 				<button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal" data-target="#add">
 					<i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
 				</button>
-			</h3>
+			</h2>
 		</div>
 	</div>
 </div>
 
 {{-- コンテンツ --}}
 <div class="row">
-	<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
 {{-- SM版サイドメニュー --}}
 <div class="row">
@@ -115,6 +115,11 @@
 
 
 			{{-- 一覧 --}}
+			<?php
+			$tabs = ['', 'active', '', ''];
+			?>
+			@component('components.elements.tab.project', ['tabs'=>$tabs])
+			@endcomponent
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
 						<button class="btn btn-default print-budget">

@@ -6,12 +6,14 @@
 
 @section('content')
 
+
+
 {{-- タイトル --}}
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
 			<div>
-				<h3><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;&nbsp;パスワード変更</h3>
+				<h2>PASSWORD RESET</h2>
 			</div>
 		</div>
 	</div>

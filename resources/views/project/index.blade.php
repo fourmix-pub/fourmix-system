@@ -10,22 +10,22 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
-			<h3>
-				<i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;&nbsp;プロジェクト一覧
+			<h2 align="center">
+				PROJECT LIST
 				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;" data-toggle="collapse" href="#search">
 					<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
 				</button>
 				<button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal" data-target="#add">
 					<i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
 				</button>
-			</h3>
+			</h2>
 		</div>
 	</div>
 </div>
 
 {{-- コンテンツ --}}
 <div class="row">
-	<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
 		{{-- SM版サイドメニュー --}}
 		<div class="row">
@@ -206,7 +206,10 @@
 
 
 			{{-- 一覧 --}}
-			@component('components.elements.tab.tab')
+				<?php
+					$tabs = ['active', '', '', ''];
+				?>
+			@component('components.elements.tab.project', ['tabs'=>$tabs])
 			@endcomponent
 			<br>
 			<div class="row">
@@ -216,13 +219,13 @@
 							<tr class="active">
 								<th>ID</th>
 								<th>プロジェクト名</th>
-								<th style="width: 86px">責任者</th>
-								<th style="width: 76px">受注金額</th>
-								<th style="width: 76px">実行予算</th>
+								<th>責任者</th>
+								<th>受注金額</th>
+								<th>実行予算</th>
 								<th>開始日</th>
-								<th style="width: 91px">完了予定日</th>
+								<th>完了予定日</th>
 								<th>完了日</th>
-								<th style="width: 105px"></th>
+								<th></th>
 							</tr>
 						</thead>
 						<tbody>

@@ -10,19 +10,19 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
-			<h3>
-				<i class="fa fa-th-list" aria-hidden="true"></i>&nbsp;&nbsp;プロジェクト台帳
+			<h2 align="center">
+				PROJECT LEDGER
 				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
 					<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
 				</button>
-			</h3>
+			</h2>
 		</div>
 	</div>
 </div>
 
 {{-- コンテンツ --}}
 <div class="row">
-	<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
 		{{-- PC版サイドメニュー --}}
 		<div class="row">
@@ -86,6 +86,11 @@
 
 
 			{{-- 一覧 --}}
+                <?php
+                $tabs = ['', '', 'active', ''];
+                ?>
+			@component('components.elements.tab.project', ['tabs'=>$tabs])
+			@endcomponent
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
 					<button class="btn btn-default print-budget">
