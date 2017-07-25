@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row">{{-- XXX: 使えない --}}
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="modal fade" id="delete" tabindex="-1">
             <div class="modal-dialog">
