@@ -11,22 +11,18 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="page-header">
                 <h2>
-                    Daily view
-                    <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
-                    </button>
+                    DAILY VIEW
                 </h2>
             </div>
         </div>
     </div>
 
-    <?php
-    $tabs=['','active',''];
-    ?>
-    @component('components.elements.tab.daily',['tabs'=>$tabs])
-    @endcomponent
-
-    <br>
+    <div class="row">
+    <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
+    </button>
+        <br>
+    </div>
 
     {{-- コンテンツ --}}
     <div class="row">
@@ -107,6 +103,7 @@
 
             {{-- アコーディオン：検索ボタン --}}
             <div class="row">
+                <br>
                 @component('components.elements.accordion.accordion')
 
                     <form class="form-horizontal">
@@ -152,54 +149,56 @@
                 @endcomponent
 
             {{-- 一覧 --}}
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="row table-responsive" style="margin: 0% 1%;">
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                            <tr class="active">
-                                <th>担当者</th>
-                                <th>日付</th>
-                                <th>プロジェクト名</th>
-                                <th>作業分類</th>
-                                <th>作業時間</th>
-                                <th>作業金額</th>
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>田中咲良</td>
-                                <td>2016/07/31</td>
-                                <td>コメダコーヒー</td>
-                                <td>設計</td>
-                                <td>8.25</td>
-                                <td align="right">20,000</td>
-                                @component('components.elements.table.admin.button')
-                                @endcomponent
-                            </tr>
-                            <tr>
-                                <td colspan="7">備考欄：</td>
-                            </tr>
-                            <tr>
-                                <td>田中咲良</td>
-                                <td>2016/07/31</td>
-                                <td>コメダコーヒー</td>
-                                <td>設計</td>
-                                <td>8.25</td>
-                                <td align="right">20,000</td>
-                                @component('components.elements.table.admin.button')
-                                @endcomponent
-                            </tr>
-                            <tr>
-                                <td colspan="7">備考欄：</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                <tr class="active">
+                                    <th>担当者</th>
+                                    <th>日付</th>
+                                    <th>プロジェクト名</th>
+                                    <th>作業分類</th>
+                                    <th>作業時間</th>
+                                    <th>作業金額</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>田中咲良</td>
+                                    <td>2016/07/31</td>
+                                    <td>コメダコーヒー</td>
+                                    <td>設計</td>
+                                    <td>8.25</td>
+                                    <td align="right">20,000</td>
+                                    @component('components.elements.table.admin.button')
+                                    @endcomponent
+                                </tr>
+                                <tr>
+                                    <td colspan="7">備考：</td>
+                                </tr>
+                                <tr>
+                                    <td>田中咲良</td>
+                                    <td>2016/07/31</td>
+                                    <td>コメダコーヒー</td>
+                                    <td>設計</td>
+                                    <td>8.25</td>
+                                    <td align="right">20,000</td>
+                                    @component('components.elements.table.admin.button')
+                                    @endcomponent
+                                </tr>
+                                <tr>
+                                    <td colspan="7">備考：</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        @component('components.elements.table.admin.pagination')
+                        @endcomponent
+
                     </div>
-
-                    @component('components.elements.table.admin.pagination')
-                    @endcomponent
-
                 </div>
 
             </div>

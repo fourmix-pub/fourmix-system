@@ -138,17 +138,14 @@ $next_month = $month + 1;
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="page-header">
             <div>
-                <h2 align="center">Write a daily</h2>
+                <h2>
+                    DAILY REPORTS
+                </h2>
             </div>
         </div>
     </div>
 </div>
 
-<?php
-        $tabs=['active','',''];
-?>
-@component('components.elements.tab.daily',['tabs'=>$tabs])
-@endcomponent
 
 {{-- モーダル：編集ボタン --}}
 @component('components.elements.modal.update', ['title'=>'日報編集'])
@@ -282,135 +279,136 @@ $next_month = $month + 1;
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                 <h4 style="padding: 8px">日報一覧</h4>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 table-responsive">
-                <table class="table table-bordered table-hover daily-table">
-                    <thead>
-                        <tr class="active">
-                            <th>日付</th>
-                            <th>プロジェクト名</th>
-                            <th>作業分類</th>
-                            <th>開始時刻</th>
-                            <th>終了時刻</th>
-                            <th>休憩時間(分)</th>
-                            <th>勤務分類</th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                    <tbody>
-                        <tr>
-                            <td>2016/07/31</td>
-                            <td>コメダコーヒー</td>
-                            <td>設計</td>
-                            <td>09:30</td>
-                            <td>20:00</td>
-                            <td align="right">60</td>
-                            <td align="center"><span class="label label-info">普通</span></td>
-                            @component('components.elements.table.admin.button')
-                            @endcomponent
-                        </tr>
-                        <tr>
-                            <td>2016/08/21</td>
-                            <td>コメダコーヒー</td>
-                            <td>設計</td>
-                            <td>09:30</td>
-                            <td>20:00</td>
-                            <td align="right">60</td>
-                            <td align="center"><span class="label label-info">普通</span></td>
-                            @component('components.elements.table.admin.button')
-                            @endcomponent
-                        </tr>
-                        <tr>
-                            <td>2016/08/21</td>
-                            <td>コメダコーヒー</td>
-                            <td>設計</td>
-                            <td>09:30</td>
-                            <td>20:00</td>
-                            <td align="right">60</td>
-                            <td align="center"><span class="label label-info">普通</span></td>
-                            @component('components.elements.table.admin.button')
-                            @endcomponent
-                        </tr>
-                        <tr>
-                            <td>2016/08/31</td>
-                            <td>タリーズ</td>
-                            <td>設計</td>
-                            <td>09:30</td>
-                            <td>20:00</td>
-                            <td align="right">60</td>
-                            <td align="center"><span class="label label-info">普通</span></td>
-                            @component('components.elements.table.admin.button')
-                            @endcomponent
-                        </tr>
-                        <tr>
-                            <td>2016/07/31</td>
-                            <td>コメダコーヒー</td>
-                            <td>設計</td>
-                            <td>09:30</td>
-                            <td>20:00</td>
-                            <td align="right">60</td>
-                            <td align="center"><span class="label label-info">普通</span></td>
-                            @component('components.elements.table.admin.button')
-                            @endcomponent
-                        </tr>
-                        <tr>
-                            <td>2016/07/31</td>
-                            <td>コメダコーヒー</td>
-                            <td>設計</td>
-                            <td>09:30</td>
-                            <td>20:00</td>
-                            <td align="right">60</td>
-                            <td align="center"><span class="label label-info">普通</span></td>
-                            @component('components.elements.table.admin.button')
-                            @endcomponent
-                        </tr>
-                        <tr>
-                            <td>2016/07/31</td>
-                            <td>コメダコーヒー</td>
-                            <td>設計</td>
-                            <td>09:30</td>
-                            <td>20:00</td>
-                            <td align="right">60</td>
-                            <td align="center"><span class="label label-info">普通</span></td>
-                            @component('components.elements.table.admin.button')
-                            @endcomponent
-                        </tr>
-                        <tr>
-                            <td>2016/07/31</td>
-                            <td>コメダコーヒー</td>
-                            <td>設計</td>
-                            <td>09:30</td>
-                            <td>20:00</td>
-                            <td align="right">60</td>
-                            <td align="center"><span class="label label-info">普通</span></td>
-                            @component('components.elements.table.admin.button')
-                            @endcomponent
-                        </tr>
-                        <tr>
-                            <td>2016/07/31</td>
-                            <td>コメダコーヒー</td>
-                            <td>設計</td>
-                            <td>09:30</td>
-                            <td>20:00</td>
-                            <td align="right">60</td>
-                            <td align="center"><span class="label label-info">普通</span></td>
-                            @component('components.elements.table.admin.button')
-                            @endcomponent
-                        </tr>
-                        <tr>
-                            <td>2016/07/31</td>
-                            <td>コメダコーヒー</td>
-                            <td>設計</td>
-                            <td>09:30</td>
-                            <td>20:00</td>
-                            <td align="right">60</td>
-                            <td align="center"><span class="label label-info">普通</span></td>
-                            @component('components.elements.table.admin.button')
-                            @endcomponent
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover daily-table">
+                        <thead>
+                            <tr class="active">
+                                <th>日付</th>
+                                <th>プロジェクト名</th>
+                                <th>作業分類</th>
+                                <th>開始時刻</th>
+                                <th>終了時刻</th>
+                                <th>休憩時間(分)</th>
+                                <th>勤務分類</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                        <tbody>
+                            <tr>
+                                <td>2016/07/31</td>
+                                <td>コメダコーヒー</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td align="right">60</td>
+                                <td align="center"><span class="label label-info">普通</span></td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                            <tr>
+                                <td>2016/08/21</td>
+                                <td>コメダコーヒー</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td align="right">60</td>
+                                <td align="center"><span class="label label-info">普通</span></td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                            <tr>
+                                <td>2016/08/21</td>
+                                <td>コメダコーヒー</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td align="right">60</td>
+                                <td align="center"><span class="label label-info">普通</span></td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                            <tr>
+                                <td>2016/08/31</td>
+                                <td>タリーズ</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td align="right">60</td>
+                                <td align="center"><span class="label label-info">普通</span></td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                            <tr>
+                                <td>2016/07/31</td>
+                                <td>コメダコーヒー</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td align="right">60</td>
+                                <td align="center"><span class="label label-info">普通</span></td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                            <tr>
+                                <td>2016/07/31</td>
+                                <td>コメダコーヒー</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td align="right">60</td>
+                                <td align="center"><span class="label label-info">普通</span></td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                            <tr>
+                                <td>2016/07/31</td>
+                                <td>コメダコーヒー</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td align="right">60</td>
+                                <td align="center"><span class="label label-info">普通</span></td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                            <tr>
+                                <td>2016/07/31</td>
+                                <td>コメダコーヒー</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td align="right">60</td>
+                                <td align="center"><span class="label label-info">普通</span></td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                            <tr>
+                                <td>2016/07/31</td>
+                                <td>コメダコーヒー</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td align="right">60</td>
+                                <td align="center"><span class="label label-info">普通</span></td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                            <tr>
+                                <td>2016/07/31</td>
+                                <td>コメダコーヒー</td>
+                                <td>設計</td>
+                                <td>09:30</td>
+                                <td>20:00</td>
+                                <td align="right">60</td>
+                                <td align="center"><span class="label label-info">普通</span></td>
+                                @component('components.elements.table.admin.button')
+                                @endcomponent
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-
         </div>
 
         <br>
@@ -496,7 +494,7 @@ $next_month = $month + 1;
 
                                     <div class="hidden-xs hidden-sm col-md-2 col-lg-2" style="padding-bottom: 7px;">
                                         <select class="selectpicker" data-width="100%" data-live-search="true" title="勤務分類">
-                                            <option>通常</option>
+                                            <option selected>通常</option>
                                             <option>残業</option>
                                             <option>休日</option>
                                         </select>
@@ -504,7 +502,7 @@ $next_month = $month + 1;
 
                                     <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hided" style="padding-bottom: 7px;">
                                         <select class="selectpicker" data-width="100%" data-live-search="true" title="勤務分類">
-                                            <option>通常</option>
+                                            <option selected>通常</option>
                                             <option>残業</option>
                                             <option>休日</option>
                                         </select>
