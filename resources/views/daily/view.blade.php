@@ -26,6 +26,8 @@
     @component('components.elements.tab.daily',['tabs'=>$tabs])
     @endcomponent
 
+    <br>
+
     {{-- コンテンツ --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -102,13 +104,6 @@
             @component('components.elements.modal.delete',['title'=>'日報削除'])
                 田中咲良の日報
             @endcomponent
-
-            {{-- PC版サイドメニュー --}}
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    @include('layouts.content.daily.xs-side-menu')
-                </div>
-            </div>
 
             {{-- アコーディオン：検索ボタン --}}
             <div class="row">

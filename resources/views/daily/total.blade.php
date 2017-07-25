@@ -23,21 +23,14 @@ $tabs=['','','active'];
 @component('components.elements.tab.daily',['tabs'=>$tabs])
 @endcomponent
 
+<br>
+
 {{-- コンテンツ --}}
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-                {{-- PC版サイドメニュー --}}
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        @include('layouts.content.daily.xs-side-menu')
-                    </div>
-                </div>
-
-                <br>
 
                 {{-- アコーディオン：検索ボタン --}}
                 <div class="row">
@@ -96,6 +89,7 @@ $tabs=['','','active'];
 
                 {{-- 一覧 --}}
                 <div class="row total-view">
+
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <h3 class="text-center">
                             プロジェクト別作業分類集計表
@@ -103,6 +97,7 @@ $tabs=['','','active'];
                             <small>プロジェクト：J-BEC　　責任者：金子聡</small>
                         </h3>
                     </div>
+
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
                             <button class="btn btn-default print-budget">
@@ -110,6 +105,8 @@ $tabs=['','','active'];
                             </button>
                         </div>
                     </div>
+
+                    <br>
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -161,6 +158,7 @@ $tabs=['','','active'];
                             </button>
                         </div>
                     </div>
+
                     <br>
 
                     <div class="row">
@@ -205,14 +203,17 @@ $tabs=['','','active'];
                             <br>
                             <small>担当者：呉傑　部門：システムデザイン</small>
                         </h3>
+                    </div>
 
-                        <div align="right">
-                            <button class="btn btn-default">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
+                            <button class="btn btn-default print-budget">
                                 <span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
                             </button>
                         </div>
-                        <br>
                     </div>
+
+                    <br>
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -256,14 +257,16 @@ $tabs=['','','active'];
                             <br>
                             <small>担当者：呉傑　　部門：システムデザイン</small>
                         </h3>
-
-                        <div align="right">
-                            <button class="btn btn-default">
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
+                            <button class="btn btn-default print-budget">
                                 <span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
                             </button>
                         </div>
-                        <br>
                     </div>
+
+                    <br>
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

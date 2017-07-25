@@ -429,7 +429,7 @@ $next_month = $month + 1;
                                         <input type='text' class="form-control day" value="{{ \Carbon\Carbon::today()->format('Y-m-d') }}"/>
                                     </div>
 
-                                    <div class="colxs--12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hided" style="padding-bottom: 7px;">
                                         <input type='text' class="form-control day" value="{{ \Carbon\Carbon::today()->format('Y-m-d') }}"/>
                                     </div>
 
@@ -442,7 +442,7 @@ $next_month = $month + 1;
                                         </select>
                                     </div>
 
-                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hided" style="padding-bottom: 7px;">
                                         <select class="selectpicker" data-width="100%" data-live-search="true" title="プロジェクト名">
                                             <option data-tokens="fourmix-system">社内ログ管理システム</option>
                                             <option data-tokens="rhizo-me">株式会社リゾーム</option>
@@ -459,7 +459,7 @@ $next_month = $month + 1;
                                         </select>
                                     </div>
 
-                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hided" style="padding-bottom: 7px;">
                                         <select class="selectpicker" data-width="100%" data-live-search="true" title="作業分類">
                                             <option>作業</option>
                                             <option>見積・営業活動</option>
@@ -472,7 +472,7 @@ $next_month = $month + 1;
                                         <input type='text' class="form-control time" placeholder="開始"/>
                                     </div>
 
-                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hided" style="padding-bottom: 7px;">
                                         <input type='text' class="form-control time" placeholder="開始"/>
                                     </div>
 
@@ -481,7 +481,7 @@ $next_month = $month + 1;
                                         <input type='text' class="form-control time" placeholder="終了"/>
                                     </div>
 
-                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hided" style="padding-bottom: 7px;">
                                         <input type='text' class="form-control time" placeholder="終了"/>
                                     </div>
 
@@ -490,7 +490,7 @@ $next_month = $month + 1;
                                         <input type='text' class="form-control" placeholder="休憩(分)"/>
                                     </div>
 
-                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hided" style="padding-bottom: 7px;">
                                         <input type='text' class="form-control" placeholder="休憩(分)"/>
                                     </div>
 
@@ -502,7 +502,7 @@ $next_month = $month + 1;
                                         </select>
                                     </div>
 
-                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg" style="padding-bottom: 7px;">
+                                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hided" style="padding-bottom: 7px;">
                                         <select class="selectpicker" data-width="100%" data-live-search="true" title="勤務分類">
                                             <option>通常</option>
                                             <option>残業</option>
@@ -512,8 +512,6 @@ $next_month = $month + 1;
 
 
                                 </div>
-
-                                <br>
 
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
