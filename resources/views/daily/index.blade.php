@@ -1,7 +1,5 @@
 <?php
 
-
-
 if(empty($_GET['month'])){
 
     $month = date('n');
@@ -72,7 +70,6 @@ if(empty($_GET['month'])){
     }
 
     $month = date('n', strtotime("$month_eng $year"));
-
 }
 
 

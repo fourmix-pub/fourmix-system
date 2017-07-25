@@ -29,9 +29,7 @@
 
 		{{-- PC版サイドメニュー --}}
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				@include('layouts.content.setting.xs-side-menu')
-			</div>
+			@include('layouts.content.setting.xs-side-menu')
 		</div>
 
 		{{-- アコーディオン：検索ボタン --}}
@@ -238,5 +236,6 @@
 	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 		@include('layouts.content.setting.side-menu')
 	</div>
+
 </div>
 @endsection
