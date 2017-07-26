@@ -11,7 +11,7 @@
                         <h4>{{ $slot }} を削除しますか？</h4>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                        <button type="button" class="btn closed btn-default" data-dismiss="modal">閉じる</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">削除</button>
                     </div>
                 </div>

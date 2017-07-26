@@ -102,7 +102,6 @@
         @endcomponent
 
         {{-- アコーディオン：検索ボタン --}}
-        <div class="row">
             <br>
             @component('components.elements.accordion.accordion')
 
@@ -147,7 +146,6 @@
                     </div>
                 </form>
             @endcomponent
-        </div>
 
         {{-- 一覧 --}}
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

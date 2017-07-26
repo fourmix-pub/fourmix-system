@@ -42,3 +42,22 @@ a{
 .dropdown-menu>.active>a{
     background-color: #0d6ecf;
 }
+
+.registration-daily{
+    background-color: black;
+    color: white;
+    width: 150px;
+}
+
+.registration-daily:hover{
+    background-color: #ff5810;
+    color: white;
+}
+
+.hided{
+    padding-right: 13px !important;
+}
+
+.pagination>li>a {
+    color: #0d6ecf;
+}
