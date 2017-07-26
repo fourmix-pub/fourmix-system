@@ -6,36 +6,36 @@
 
 @section('content')
 
-    {{-- タイトル --}}
+{{-- タイトル --}}
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="page-header">
+            <h2>
+                PROJECT BUDGET
+            </h2>
+        </div>
+    </div>
+</div>
+
+{{-- コンテンツ --}}
+<div class="row">
+
+    <br>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="page-header">
-                <h2>
-                    PROJECT BUDGET
-                </h2>
+            <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
+                <i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
+            </button>
+            <div class="btn-group" role="group" aria-label="...">
+                <a type="button" class="btn btn-default"  href="{{ url('/project-budget') }}">プロジェクト別</a>
+                <a type="button" class="btn btn-default" href="{{ url('/project-personal') }}">個人別</a>
+                <a type="button" class="btn btn-primary" href="{{ url('/project-personal-budget') }}">個人予算別</a>
             </div>
         </div>
     </div>
-
-    {{-- コンテンツ --}}
-    <div class="row">
-
-            <br>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
-                        <i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
-                    </button>
-                    <div class="btn-group" role="group" aria-label="...">
-                        <a type="button" class="btn btn-default"  href="{{ url('/project-budget') }}">プロジェクト別</a>
-                        <a type="button" class="btn btn-default" href="{{ url('/project-personal') }}">個人別</a>
-                        <a type="button" class="btn btn-primary" href="{{ url('/project-personal-budget') }}">個人予算別</a>
-                    </div>
-                </div>
-            </div>
-            <br>
+    <br>
             {{-- アコーディオン：検索ボタン --}}
-            <div class="row">
+
                 @component('components.elements.accordion.accordion')
                     <form class="form-horizontal">
                         <div class="form-group">
@@ -151,5 +151,5 @@
                     </div>
                 </div>
             </div>
-        </div>
+
 @endsection
