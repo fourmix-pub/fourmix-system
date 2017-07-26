@@ -95,6 +95,7 @@
 					<b>PCP・メンズポケットサーバー移行</b>　責任者：<b>碓井智</b>
 				</h4>
 				<br>
+				<div class="table-responsive">
 					<table class="table table-bordered table-hover">
 						<thead>
 							<tr class="active">
@@ -116,9 +117,11 @@
 						</tbody>
 					</table>
 				</div>
+				</div>
 				 <br>
 
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="table-responsive">
 					<table class="table table-bordered table-hover">
 						<thead>
 							<tr class="active">
@@ -145,6 +148,7 @@
 							</tr>
 						</tbody>
 					</table>
+					</div>
 				</div>
 			</div>
 		</div>
