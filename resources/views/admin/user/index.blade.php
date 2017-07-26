@@ -11,7 +11,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
 			<h2>
-				User
+				USERS
 			</h2>
 		</div>
 	</div>
@@ -79,14 +79,12 @@
 				作業単価
 			@endcomponent
 
-			<div class="form-group">
-				<label class="col-xs-3 control-label" for="department">部門<span class="text-danger">*</span></label>
-				<select class="selectpicker col-xs-8" title="部門" id="department">
-					<option>システムデザイン</option>
-					<option>コンセプトデザイン</option>
-					<option>サポート</option>
-				</select>
-			</div>
+			@php
+				$departments = ['システムデザイン','コンセプトデザイン','サポート'];
+			@endphp
+			@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'true'])
+				部門
+			@endcomponent
 
 			@component('components.elements.form.modal.text',['name'=>'mail'])
 				メールアドレス
@@ -100,29 +98,12 @@
 				パスワード確認
 			@endcomponent
 
-			<div class="form-group">
-				<label class="col-xs-3 control-label" for="started_time">始業時刻<span class="text-danger">*</span></label>
-				<div class="col-xs-8">
-					<div class='input-group time'>
-						<input type='text' class="form-control" value="09:30" />
-						<span class="input-group-addon">
-							<span class="glyphicon glyphicon-time"></span>
-						</span>
-					</div>
-				</div>
-			</div>
+			@component('components.elements.form.modal.time',['title'=>'始業時間','time'=>'09:30'])
+			@endcomponent
 
-			<div class="form-group">
-				<label class="col-xs-3 control-label" for="ended_time">終業時刻<span class="text-danger">*</span></label>
-				<div class="col-xs-8">
-					<div class='input-group time'>
-						<input type='text' class="form-control" value="18:30"/>
-						<span class="input-group-addon">
-							<span class="glyphicon glyphicon-time"></span>
-						</span>
-					</div>
-				</div>
-			</div>
+			@component('components.elements.form.modal.time',['title'=>'終業時間','time'=>'18:30'])
+			@endcomponent
+
 		@endcomponent
 
 		{{-- モーダル：編集ボタン --}}
@@ -136,14 +117,12 @@
 				作業単価
 			@endcomponent
 
-			<div class="form-group">
-				<label class="col-xs-3 control-label" for="department">部門<span class="text-danger">*</span></label>
-				<select class="selectpicker col-xs-8" title="部門"　id="department">
-					<option>システムデザイン</option>
-					<option>コンセプトデザイン</option>
-					<option>サポート</option>
-				</select>
-			</div>
+			@php
+				$departments = ['システムデザイン','コンセプトデザイン','サポート'];
+			@endphp
+			@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'true'])
+				部門
+			@endcomponent
 
 			@component('components.elements.form.modal.text',['name'=>'mail'])
 				メールアドレス
@@ -152,33 +131,16 @@
 			@component('components.elements.form.modal.pass', ['name' => 'password'])
 				パスワード
 			@endcomponent
+
 			@component('components.elements.form.modal.pass', ['name' => 'password_confirmation'])
 				パスワード確認
 			@endcomponent
 
-			<div class="form-group">
-				<label class="col-xs-3 control-label" for="started_time">始業時刻<span class="text-danger">*</span></label>
-				<div class="col-xs-8">
-					<div class='input-group time'>
-						<input type='text' class="form-control" value="09:30" />
-						<span class="input-group-addon">
-							<span class="glyphicon glyphicon-time"></span>
-						</span>
-					</div>
-				</div>
-			</div>
+			@component('components.elements.form.modal.time',['title'=>'始業時間','time'=>'09:30'])
+			@endcomponent
 
-			<div class="form-group">
-				<label class="col-xs-3 control-label" for="ended_time">終業時刻<span class="text-danger">*</span></label>
-				<div class="col-xs-8">
-					<div class='input-group time'>
-						<input type='text' class="form-control" value="18:30"/>
-						<span class="input-group-addon">
-							<span class="glyphicon glyphicon-time"></span>
-						</span>
-					</div>
-				</div>
-			</div>
+			@component('components.elements.form.modal.time',['title'=>'終業時間','time'=>'18:30'])
+			@endcomponent
 
 		@endcomponent
 

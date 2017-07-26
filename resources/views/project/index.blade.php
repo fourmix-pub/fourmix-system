@@ -59,23 +59,27 @@
 		@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'true'])
 			部門
 		@endcomponent
-		<div class="form-group">
-    <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">表示区分</label>
 
-    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-        <label class="radio-inline">
-            <input type="radio" name="project_status" value="">全て
-        </label>
-        <label class="radio-inline">
-            <input type="radio" name="project_status" value="">完了
-        </label>
-        <label class="radio-inline">
-            <input type="radio" name="project_status" value="">未完了
-        </label>
-    </div>
-</div>
+		<div class="form-group">
+			<label class="hidden-xs col-sm-3 col-md-3 col-lg-3 control-label text-right">表示区分</label>
+			<label class="col-xs-12 visible-xs">表示区分</label>
+
+			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+				<label class="radio-inline">
+					<input type="radio" name="project_status" value="">全て
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="project_status" value="">完了
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="project_status" value="">未完了
+				</label>
+			</div>
+    	</div>
+
 		@component('components.elements.form.period')
 		@endcomponent
+
 		<div class="row text-center">
 				<div class="btn-group">
 					<button type="button" class="btn" onclick="location.href=''">
@@ -93,8 +97,8 @@
 		プロジェクト名
 	@endcomponent
 	<div class="form-group">
-		<label class="col-xs-3 control-label" for="customer_type">クライアント種類<span class="text-danger">*</span></label>
-		<div class="col-xs-8">
+		<label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label" for="customer_type">クライアント種類<span class="text-danger">*</span></label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 			<label class="radio-inline">
 				<input type="radio" name="project_status" value="">エンド
 			</label>
@@ -129,14 +133,14 @@
 	完了日
 	@endcomponent
 	<div class="form-group">
-		<label class="col-xs-3 control-label" for="note">備考</label>
-		<div class="col-xs-8">
+		<label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label" for="note">備考</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 			<textarea class="form-control" rows="3" id="note"></textarea>
 		</div>
 	</div>
 	<div class="form-group">
-		<label class="col-xs-3 control-label" for="non-display_flag">非表示フラグ</label>
-		<div class="col-xs-8 checkbox" style="margin-left: 20px;">
+		<label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label" for="non-display_flag">非表示フラグ</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 checkbox" style="margin-left: 20px;">
 			<input type="checkbox" value="1">
 		</div>
 	</div>

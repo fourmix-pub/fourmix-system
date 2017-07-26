@@ -66,10 +66,12 @@
                                 部門
                             @endcomponent
                         </div>
-                        <div class="form-group">
-                            <label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">表示区分</label>
 
-                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <div class="form-group">
+                            <label class="hidden-xs col-sm-3 col-md-3 col-lg-3 control-label text-right">表示区分</label>
+                            <label class="col-xs-12 visible-xs">表示区分</label>
+
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                                 <label class="radio-inline">
                                     <input type="radio" name="project_status" value="">全て
                                 </label>
@@ -81,7 +83,8 @@
                                 </label>
                             </div>
                         </div>
-                        @component('components.elements.form.period')
+
+                    @component('components.elements.form.period')
                         @endcomponent
                         <div class="row text-center">
                             <div class="btn-group">

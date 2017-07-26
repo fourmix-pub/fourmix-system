@@ -2,7 +2,7 @@
 
     <div class="bonfire-pageloader-icon">
         <div align="center">
-            <img alt="Bootstrap Image Preview" id="loading-12-icon" src="http://www.fourmix.co.jp/files/user/img/favicon.ico" width="80%"/>
+            <img alt="Bootstrap Image Preview" id="loading-12-icon" src="http://www.fourmix.co.jp/files/user/img/common/logo_o.png" width="250%" style="margin-left: -90px" />
         </div>
         <div align="center">
             <h4>

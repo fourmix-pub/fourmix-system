@@ -15,7 +15,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
-                            <button type="button" class="btn btn-primary"　 data-dismiss="modal">登録</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">登録</button>
                         </div>
                     </form>
                 </div>

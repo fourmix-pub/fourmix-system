@@ -150,62 +150,42 @@ $next_month = $month + 1;
         日付
     @endcomponent
 
-    <div class="form-group">
-        <label class="col-xs-3 control-label" for="department">プロジェクト名<span class="text-danger">*</span></label>
-        <select class="selectpicker col-xs-8" data-live-search="true" id="department" title="プロジェクト名">
-            <option></option>
-            <option>社内ログ管理システム</option>
-            <option>パタゴニア</option>
-        </select>
-    </div>
+    @php
+        $projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
+    @endphp
+    @component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])
+        プロジェクト名
+    @endcomponent
 
-    <div class="form-group">
-        <label class="col-xs-3 control-label" for="department">作業分類<span class="text-danger">*</span></label>
-        <select class="selectpicker col-xs-8" data-live-search="true" title="作業分類" id="department">
-            <option>調査</option>
-            <option>分析</option>
-            <option>営業</option>
-        </select>
-    </div>
+    @php
+        $works = ['調査','分析','営業'];
+    @endphp
+    @component('components.elements.form.select.select', ['items'=>$works,'search'=>'true'])
+        作業分類
+    @endcomponent
 
-    <div class="form-group">
-        <label class="col-xs-3 control-label" for="started_time">開始<span class="text-danger">*</span></label>
-        <div class="col-xs-8">
-            <div class='input-group time'>
-                <input type='text' class="form-control" value="09:30" />
-                <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
-            </div>
-        </div>
-    </div>
+    @component('components.elements.form.modal.time',['title'=>'開始','time'=>'09:30'])
+    @endcomponent
 
-    <div class="form-group">
-        <label class="col-xs-3 control-label" for="ended_time">終了<span class="text-danger">*</span></label>
-        <div class="col-xs-8">
-            <div class='input-group time'>
-                <input type='text' class="form-control" value="18:30"/>
-                <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
-            </div>
-        </div>
-    </div>
+    @component('components.elements.form.modal.time',['title'=>'終了','time'=>'18:30'])
+    @endcomponent
 
-    <div class="form-group">
-        <label class="col-xs-3 control-label" for="department">勤務分類<span class="text-danger">*</span></label>
-        <select class="selectpicker col-xs-8" data-live-search="true" title="勤務分類" id="department">
-            <option>通常</option>
-            <option>残業</option>
-            <option>休日</option>
-        </select>
-    </div>
+    @php
+        $jobs = ['通常','残業','休日'];
+    @endphp
+    @component('components.elements.form.select.select', ['items'=>$jobs,'search'=>'true'])
+        勤務分類
+    @endcomponent
 
     @component('components.elements.form.modal.text', ['name'=>'break'])
         休憩
     @endcomponent
 
     <div class="form-group">
-        <label class="col-xs-3 control-label" for="staff">
+        <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label" for="staff">
             備考欄
         </label>
-        <div class="col-xs-8">
+        <div class="col-xs-12 col-xs-12 col-sm-8 col-md-8 col-lg-8">
             <textarea name="note" rows="1" style="resize: vertical;" class="form-control" placeholder="備考欄">
             </textarea>
         </div>

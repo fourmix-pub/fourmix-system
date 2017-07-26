@@ -25,7 +25,6 @@
 
 .pagination>li>a{
     color: #0d6ecf;
-
 }
 
 /* login */
@@ -130,4 +129,14 @@ form {
 
 .checkbox input{
     height: 18px !important;
+}
+
+.form-horizontal{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.form-horizontal .form-group {
+     margin-left: 0;
+     margin-right: 0;
 }

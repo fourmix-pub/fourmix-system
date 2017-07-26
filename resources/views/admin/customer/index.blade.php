@@ -11,7 +11,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
 			<h2>
-				Customer
+				CUSTOMERS
 			</h2>
 		</div>
 	</div>
@@ -52,8 +52,10 @@
 				@endcomponent
 
 				<div class="form-group">
-					<label class="col-xs-3 col-sm-3 col-md-3 col-lg-3 control-label text-right">クライアント種類</label>
-					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+					<label class="hidden-xs col-sm-3 col-md-3 col-lg-3 control-label text-right">クライアント種類</label>
+					<label class="visible-xs col-xs-12 control-label">クライアント種類</label>
+
+					<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 						<label class="checkbox-inline">
 							<input type="checkbox" value=""> エンド
 						</label>
@@ -63,6 +65,7 @@
 					</div>
 					<div class="col-sm-1"></div>
 				</div>
+
 				<div class="row form text-center">
 					<div class="btn-group" style="margin:2% 0% 0% 0%;">
 						<button type="button" class="btn" onclick="location.href=''">
@@ -79,15 +82,18 @@
 				企業名
 			@endcomponent
 			<div class="form-group">
-				<label class="col-xs-3 control-label" for="customer_type">クライアント種類<span class="text-danger">*</span></label>
-				<div class="col-xs-8">
-					<label class="radio-inline">
-						<input type="radio" name="project_status" value="">エンド
+				<label class="hidden-xs col-sm-3 col-md-3 col-lg-3 control-label text-right">クライアント種類</label>
+				<label class="visible-xs col-xs-12 control-label">クライアント種類</label>
+
+				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+					<label class="checkbox-inline">
+						<input type="checkbox" value=""> エンド
 					</label>
-					<label class="radio-inline">
-						<input type="radio" name="project_status" value="">プライマリ
+					<label class="checkbox-inline">
+						<input type="checkbox" value=""> プライマリ
 					</label>
 				</div>
+				<div class="col-sm-1"></div>
 			</div>
 		@endcomponent
 
@@ -97,15 +103,18 @@
 				企業名
 			@endcomponent
 			<div class="form-group">
-				<label class="col-xs-3 control-label" for="customer_type">クライアント種類<span class="text-danger">*</span></label>
-				<div class="col-xs-8">
-					<label class="radio-inline">
-						<input type="radio" name="project_status" value="">エンド
+				<label class="hidden-xs col-sm-3 col-md-3 col-lg-3 control-label text-right">クライアント種類</label>
+				<label class="visible-xs col-xs-12 control-label">クライアント種類</label>
+
+				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+					<label class="checkbox-inline">
+						<input type="checkbox" value=""> エンド
 					</label>
-					<label class="radio-inline">
-						<input type="radio" name="project_status" value="">プライマリ
+					<label class="checkbox-inline">
+						<input type="checkbox" value=""> プライマリ
 					</label>
 				</div>
+				<div class="col-sm-1"></div>
 			</div>
 		@endcomponent
 

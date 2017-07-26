@@ -8,8 +8,8 @@
 }
 
 .modal-footer > .closed{
-    background-color: white;
-    color:black;
+    background-color: #30d50d;
+    border: none;
 }
 
 .modal-footer > .closed:hover{
