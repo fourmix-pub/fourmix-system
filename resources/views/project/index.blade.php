@@ -207,6 +207,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="table-responsive">
+				<div class="table-responsive">
 				<table class="table table-bordered table-hover">
 					<thead>
 					<tr class="active">
@@ -344,12 +345,11 @@
 					</tr>
 					</tbody>
 				</table>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-{{-- 一覧 --}}
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         @component('components.elements.table.admin.pagination')

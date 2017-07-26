@@ -7,30 +7,33 @@
 @section('content')
 
 	{{-- タイトル --}}
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="page-header">
+			<h2>
+				PROJECT BUDGET
+			</h2>
+		</div>
+	</div>
+</div>
+
+	{{-- ボタン --}}
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div class="page-header">
-				<h2>
-					PROJECT BUDGET
-				</h2>
+			<button type="button" class="btn btn-primary pull-right" data-toggle="collapse" href="#search">
+				<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
+			</button>
+			<div class="btn-group" role="group" aria-label="...">
+				<a type="button" class="btn btn-primary" href="{{ url('/project-budget') }}">プロジェクト別</a>
+				<a type="button" class="btn btn-default" href="{{ url('/project-personal') }}">個人別</a>
+				<a type="button" class="btn btn-default" href="{{ url('/project-personal-budget') }}">個人予算別</a>
 			</div>
 		</div>
 	</div>
+	<br>
+
 	{{-- コンテンツ --}}
 <div class="row">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
-					<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
-				</button>
-				<div class="btn-group" role="group" aria-label="...">
-					<a type="button" class="btn btn-primary" href="{{ url('/project-budget') }}">プロジェクト別</a>
-					<a type="button" class="btn btn-default" href="{{ url('/project-personal') }}">個人別</a>
-					<a type="button" class="btn btn-default" href="{{ url('/project-personal-budget') }}">個人予算別</a>
-				</div>
-			</div>
-		</div>
-<br>
 
 {{-- アコーディオン：検索ボタン --}}
 @component('components.elements.accordion.accordion')
@@ -89,13 +92,13 @@
 @endcomponent
 
 	{{-- 一覧 --}}
-
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="text-center">
 					<h3>プロジェクト予算対実績表（全体）</h3>
 				</div>
+				<div class="table-responsive">
 				<table class="table table-hover table-bordered">
 					<thead>
 					<tr class="active">
@@ -126,29 +129,15 @@
 					</tr>
 					</tbody>
 				</table>
-				<div class="text-center">
-				<nav class="pagination">
-					<ul class="pagination">
-						<li>
-							<a href="#" aria-label="前のページへ">
-								<span aria-hidden="true">«</span>
-							</a>
-						</li>
-						<li class="active"><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li>
-							<a href="#" aria-label="次のページへ">
-								<span aria-hidden="true">»</span>
-							</a>
-						</li>
-					</ul>
-				</nav>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-</div>
+<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			@component('components.elements.table.admin.pagination')
+			@endcomponent
+		</div>
+	</div>
 @endsection

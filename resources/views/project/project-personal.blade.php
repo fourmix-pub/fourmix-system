@@ -96,6 +96,7 @@
                 <div class="text-center">
                     <h3>プロジェクト予算対実績表（個人）</h3>
                 </div>
+                <div class="table-responsive">
                 <table class="table table-hover table-bordered">
                     <thead>
                     <tr class="active">
@@ -126,6 +127,7 @@
                     </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     </div>

@@ -24,6 +24,7 @@
 {{--</div>--}}
 {{--<br>--}}
 
+
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
 		<button class="btn btn-default print-budget pull-right">
@@ -104,74 +105,68 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h3 class="text-center">
-					PCP・メンズポケットサーバー移行
-					<br>
-					<small>責任者：碓井智</small>
-				</h3>
+				<h4 align="center">プロジェクト名：
+					<b>PCP・メンズポケットサーバー移行</b>　責任者：<b>碓井智</b>
+				</h4>
+				<br>
+				<div class="table-responsive">
+					<table class="table table-bordered table-hover">
+						<thead>
+							<tr class="active">
+								<th>受注金額</th>
+								<th>実行予算</th>
+								<th>開始日</th>
+								<th>完成予定日</th>
+								<th>完成日</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="right">3,000,000</td>
+								<td align="right">3,000,000</td>
+								<td>2009/03/02</td>
+								<td>2009/03/02</td>
+								<td>2009/04/02</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				</div>
+				 <br>
+
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="table-responsive">
+					<table class="table table-bordered table-hover">
+						<thead>
+							<tr class="active">
+								<th>作業分類名</th>
+								<th>作業時間</th>
+								<th>作業金額</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>設計</td>
+								<td>90.00</td>
+								<td align="right">1,000,000</td>
+							</tr>
+							<tr>
+								<td>打合せ</td>
+								<td>90.00</td>
+								<td align="right">1,000,000</td>
+							</tr>
+							<tr>
+								<td>打合せ</td>
+								<td>90.00</td>
+								<td align="right">1,000,000</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+				</div>
 			</div>
-		</div>
-
-		<br>
-
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div class="table-responsive">
-				<table class="table table-bordered table-hover">
-					<thead>
-						<tr class="active">
-							<th>受注金額</th>
-							<th>実行予算</th>
-							<th>開始日</th>
-							<th>完成予定日</th>
-							<th>完成日</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td align="right">3,000,000</td>
-							<td align="right">3,000,000</td>
-							<td>2009/03/02</td>
-							<td>2009/03/02</td>
-							<td>2009/04/02</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-
-		<br>
-
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<table class="table table-bordered table-hover">
-				<thead>
-					<tr class="active">
-						<th>作業分類名</th>
-						<th>作業時間</th>
-						<th>作業金額</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>設計</td>
-						<td>90.00</td>
-						<td align="right">1,000,000</td>
-					</tr>
-					<tr>
-						<td>打合せ</td>
-						<td>90.00</td>
-						<td align="right">1,000,000</td>
-					</tr>
-					<tr>
-						<td>打合せ</td>
-						<td>90.00</td>
-						<td align="right">1,000,000</td>
-					</tr>
-				</tbody>
-			</table>
 		</div>
 	</div>
-</div>
-
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		@component('components.elements.table.admin.pagination')
