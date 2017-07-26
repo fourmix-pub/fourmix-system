@@ -41,7 +41,7 @@
 
                                 <form>
                                     @component('components.elements.form.password', ['name' => 'old_password'])
-                                        パスワード
+                                        現在のパスワード
                                     @endcomponent
                                     @component('components.elements.form.password', ['name' => 'password'])
                                         新しいパスワード

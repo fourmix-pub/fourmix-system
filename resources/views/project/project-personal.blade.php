@@ -12,25 +12,18 @@
             <div class="page-header">
                 <h2>
                    PROJECT BUDGET
-                    <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
-                        <i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
-                    </button>
                 </h2>
             </div>
         </div>
     </div>
     {{-- コンテンツ --}}
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-            {{-- PC版サイドメニュー --}}
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    @include('layouts.content.project.xs-side-menu')
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
+                        <i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
+                    </button>
                     <div class="btn-group" role="group" aria-label="...">
                         <a type="button" class="btn btn-default" href="{{ url('/project-budget') }}">プロジェクト別</a>
                         <a type="button" class="btn btn-primary" href="{{ url('/project-personal') }}">個人別</a>
@@ -97,67 +90,51 @@
                 @endcomponent
 
                 {{-- 一覧 --}}
+            <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="text-center">
-                        <h3>プロジェクト予算対実績表（個人）</h3>
-                    </div>
-                    <table class="table table-hover table-bordered">
-                        <thead>
-                        <tr class="active">
-                            <th>プロジェクト</th>
-                            <th>担当者</th>
-                            <th>実績金額</th>
-                            <th>予算残高</th>
-                            <th>予算残％</th>
-                            <th>状態</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>○○プロジェクト</td>
-                            <td>櫻井翔</td>
-                            <td align="right">3,000,000</td>
-                            <td align="right">0</td>
-                            <td align="right">33.3%</td>
-                            <td>完了</td>
-                        </tr>
-                        <tr>
-                            <td>○○プロジェクト</td>
-                            <td>櫻井翔</td>
-                            <td align="right">3,000,000</td>
-                            <td align="right">0</td>
-                            <td align="right">0.0%</td>
-                            <td>完了</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <div class="text-center">
-                        <nav class="pagination">
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="前のページへ">
-                                        <span aria-hidden="true">«</span>
-                                    </a>
-                                </li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="次のページへ">
-                                        <span aria-hidden="true">»</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="text-center">
+                            <h3>プロジェクト予算対実績表（個人）</h3>
+                        </div>
+                        <table class="table table-hover table-bordered">
+                            <thead>
+                            <tr class="active">
+                                <th>プロジェクト</th>
+                                <th>担当者</th>
+                                <th>実績金額</th>
+                                <th>予算残高</th>
+                                <th>予算残％</th>
+                                <th>状態</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>○○プロジェクト</td>
+                                <td>櫻井翔</td>
+                                <td align="right">3,000,000</td>
+                                <td align="right">0</td>
+                                <td align="right">33.3%</td>
+                                <td>完了</td>
+                            </tr>
+                            <tr>
+                                <td>○○プロジェクト</td>
+                                <td>櫻井翔</td>
+                                <td align="right">3,000,000</td>
+                                <td align="right">0</td>
+                                <td align="right">0.0%</td>
+                                <td>完了</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-        {{-- スマホ版サイドメニュー --}}
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            @include('layouts.content.project.side-menu')
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            @component('components.elements.table.admin.pagination')
+            @endcomponent
         </div>
     </div>
 @endsection

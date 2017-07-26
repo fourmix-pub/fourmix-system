@@ -6,6 +6,31 @@
 
 @section('content')
 
+	{{-- タイトル --}}
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+				<h2>
+					PROJECT BUDGET
+				</h2>
+			</div>
+		</div>
+	</div>
+	{{-- コンテンツ --}}
+	<div class="row">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
+					<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
+				</button>
+				<div class="btn-group" role="group" aria-label="...">
+					<a type="button" class="btn btn-primary" href="{{ url('/project-budget') }}">プロジェクト別</a>
+					<a type="button" class="btn btn-default" href="{{ url('/project-personal') }}">個人別</a>
+					<a type="button" class="btn btn-default" href="{{ url('/project-personal-budget') }}">個人予算別</a>
+				</div>
+			</div>
+		</div>
+		<br>
 {{-- タイトル --}}
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -92,16 +117,11 @@
 	</form>
 @endcomponent
 
-			{{-- 一覧 --}}
+		{{-- 一覧 --}}
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <?php
-                    $tabs=['active', '', ''];
-                    ?>
-					@component('components.elements.tab.project',['tabs'=>$tabs])
-					@endcomponent
 					<div class="text-center">
 						<h3>プロジェクト予算対実績表（全体）</h3>
 					</div>

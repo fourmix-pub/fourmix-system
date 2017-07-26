@@ -18,51 +18,16 @@
 	</div>
 </div>
 
-{{-- コンテンツ --}}
-<div class="row">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<button type="button" class="btn btn-primary pull-right" data-toggle="collapse" href="#search">
-			<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
-		</button>
-		<button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal" data-target="#add">
-			<i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
-		</button>
-	</div>
-</div>
-<br>
+{{-- コンテンツ --}}{{--xxx 検索ボタン元の位置--}}
+{{--<div class="row">--}}
+	{{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+	{{--</div>--}}
+{{--</div>--}}
+{{--<br>--}}
 
 {{-- モーダル：削除ボタン --}}
 @component('components.elements.modal.delete',['title'=>'プロジェクト削除'])
 	日本計画
-@endcomponent
-
-{{-- アコーディオン：検索ボタン --}}
-@component('components.elements.accordion.accordion')
-	<form class="form-horizontal">
-		<div class="form-group">
-
-			<?php
-			$users = ['佐々木希','櫻井翔','松本潤'];
-			?>
-			@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
-				担当者
-			@endcomponent
-
-			<?php
-			$departments = ['システムデザイン','コンセプトデザイン','サポート'];
-			?>
-			@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'true'])
-				部門
-			@endcomponent
-		</div>
-		<div class="row text-center">
-			<div class="btn-group">
-				<button type="button" class="btn" onclick="location.href=''">
-					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
-				</button>
-			</div>
-		</div>
-	</form>
 @endcomponent
 
 {{-- モーダル：追加ボタン --}}
@@ -109,17 +74,52 @@
 @endcomponent
 
 
-
-{{-- 一覧 --}}
+{{-- ボタン --}}
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive">
 		<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
-			<button class="btn btn-default print-budget">
-				<span class="glyphicon glyphicon-print"> 出力</span>
-			</button>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
+				<button class="btn btn-default print-budget pull-right">
+					<span class="glyphicon glyphicon-print"> 出力</span>
+				</button>
+				<button type="button" class="btn btn-primary pull-right" style="margin-right: 10px;" data-toggle="collapse" href="#search">
+					<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
+				</button>
+				<button type="button" class="btn btn-danger" style="margin-right: 10px;" data-toggle="modal" data-target="#add">
+					<i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
+				</button>
+			</div>
 		</div>
-	</div>
 <br>
+		{{-- アコーディオン：検索ボタン --}}
+		@component('components.elements.accordion.accordion')
+			<form class="form-horizontal">
+				<div class="form-group">
+
+                    <?php
+                    $users = ['佐々木希','櫻井翔','松本潤'];
+                    ?>
+					@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
+						担当者
+					@endcomponent
+
+                    <?php
+                    $departments = ['システムデザイン','コンセプトデザイン','サポート'];
+                    ?>
+					@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'true'])
+						部門
+					@endcomponent
+				</div>
+				<div class="row text-center">
+					<div class="btn-group">
+						<button type="button" class="btn" onclick="location.href=''">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
+						</button>
+					</div>
+				</div>
+			</form>
+		@endcomponent
+
+		{{-- 一覧 --}}
 		<table class="table table-bordered table-hover">
 			<thead>
 				<tr class="active">
@@ -162,9 +162,5 @@
 		</table>
 		@component('components.elements.table.admin.pagination')
 		@endcomponent
-	</div>
-	{{-- PC版サイドメニュー --}}
-	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-		@include('layouts.content.project.side-menu')
 	</div>
 @endsection

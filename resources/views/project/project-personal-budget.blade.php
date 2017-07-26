@@ -12,9 +12,6 @@
             <div class="page-header">
                 <h2>
                     PROJECT BUDGET
-                    <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
-                        <i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
-                    </button>
                 </h2>
             </div>
         </div>
@@ -22,18 +19,13 @@
 
     {{-- コンテンツ --}}
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-            {{-- PC版サイドメニュー --}}
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    @include('layouts.content.project.xs-side-menu')
-                </div>
-            </div>
 
             <br>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;"  data-toggle="collapse" href="#search">
+                        <i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
+                    </button>
                     <div class="btn-group" role="group" aria-label="...">
                         <a type="button" class="btn btn-default"  href="{{ url('/project-budget') }}">プロジェクト別</a>
                         <a type="button" class="btn btn-default" href="{{ url('/project-personal') }}">個人別</a>
@@ -160,9 +152,4 @@
                 </div>
             </div>
         </div>
-        {{-- スマホ版サイドメニュー --}}
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            @include('layouts.content.project.side-menu')
-        </div>
-    </div>
 @endsection
