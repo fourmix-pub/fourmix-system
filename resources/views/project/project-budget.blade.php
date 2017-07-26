@@ -85,15 +85,15 @@
 	@endcomponent
 
 			{{-- 一覧 --}}
-		<ul class="nav nav-tabs">
-			<li role="presentation" class="active"><a href="#">表</a></li>
-			<li role="presentation"><a href="#">グラフ</a></li>
-			<li role="presentation"><a href="#">Messages</a></li>
-		</ul>
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <?php
+                    $tabs=['active', '', ''];
+                    ?>
+					@component('components.elements.tab.project',['tabs'=>$tabs])
+					@endcomponent
 					<div class="text-center">
 						<h3>プロジェクト予算対実績表（全体）</h3>
 					</div>

@@ -108,17 +108,18 @@
 	@endcomponent
 @endcomponent
 
-<div class="row">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
-		<button class="btn btn-default print-budget">
-			<span class="glyphicon glyphicon-print"> 出力</span>
-		</button>
-	</div>
-</div>
-<br>
+
 
 {{-- 一覧 --}}
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive">
+		<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
+			<button class="btn btn-default print-budget">
+				<span class="glyphicon glyphicon-print"> 出力</span>
+			</button>
+		</div>
+	</div>
+<br>
 		<table class="table table-bordered table-hover">
 			<thead>
 				<tr class="active">

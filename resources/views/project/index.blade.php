@@ -76,14 +76,12 @@
 </div>
 		@component('components.elements.form.period')
 		@endcomponent
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="row text-center">
 				<div class="btn-group">
 					<button type="button" class="btn" onclick="location.href=''">
 						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
 					</button>
 				</div>
-			</div>
 		</div>
 	</form>
 @endcomponent
