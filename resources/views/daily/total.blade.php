@@ -11,23 +11,31 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="page-header">
             <h2>
-                TOTALIZATION TABLE
+                ANALYTICS
             </h2>
         </div>
     </div>
 </div>
 
-<?php
-$tabs=['','','active'];
-?>
-@component('components.elements.tab.daily',['tabs'=>$tabs])
-@endcomponent
+
 
 <br>
 
 {{-- コンテンツ --}}
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        {{--<div class="row">--}}
+            {{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+                {{--<div class="btn-group" role="group" aria-label="...">--}}
+                    {{--<a type="button" class="btn btn-primary">プロジェクト別作業分類</a>--}}
+                    {{--<a type="button" class="btn btn-default">プロジェクト別担当者</a>--}}
+                    {{--<a type="button" class="btn btn-default">担当者別作業分類</a>--}}
+                    {{--<a type="button" class="btn btn-default">担当者別プロジェクト集計表</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<br>--}}
 
         {{-- アコーディオン：検索ボタン --}}
         <div class="row">
