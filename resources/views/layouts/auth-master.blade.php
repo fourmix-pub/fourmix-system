@@ -30,6 +30,9 @@
             background-color: rgba(255, 255, 255, 0.72);
             border: none;
         }
+        .panel h2 {
+            color: #ff5810;
+        }
         .login-link {
             color: #ff5810;
             font-size: 16px;
@@ -42,6 +45,9 @@
         .btn-default:hover {
             background-color: #ff5810;
             color: #ffffff;
+        }
+        .btn-default.focus, .btn-default:focus, .btn-default:active:focus {
+            outline: none;
         }
     </style>
 
