@@ -27,10 +27,7 @@
 
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
-		<button class="btn btn-default print-budget pull-right">
-			<span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
-		</button>
-		<button type="button" class="btn btn-primary" style="margin-right: 10px;" data-toggle="collapse" href="#search">
+		<button type="button" class="btn btn-primary" style="margin-right: 18px;" data-toggle="collapse" href="#search">
 			<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
 		</button>
 	</div>
@@ -102,7 +99,13 @@
 				</h3>
 			</div>
 		</div>
-
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
+				<button class="btn btn-default print-budget pull-right" style="margin-bottom: 20px">
+					<span class="glyphicon glyphicon-print" aria-hidden="true"> 出力</span>
+				</button>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="table-responsive">
