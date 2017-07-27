@@ -16,7 +16,7 @@
 		</div>
 	</div>
 </div>
-{{--検索ボタン--}}}
+{{--検索ボタン--}}
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
 		<button type="button" class="btn btn-primary" style="margin-right: 18px;" data-toggle="collapse" href="#search">
@@ -74,9 +74,7 @@
 		</div>
 	</form>
 @endcomponent
-
 <br>
-
 {{-- 一覧 --}}
 <div class="panel panel-default">
 	<div class="panel-body">

@@ -28,7 +28,7 @@
 		</button>
 	</div>
 </div>
-
+<br>
 {{-- モーダル：削除ボタン --}}
 @component('components.elements.modal.delete',['title'=>'プロジェクト削除']){{-- XXX --}}
 	PCP・メンズポケットサーバー移行
