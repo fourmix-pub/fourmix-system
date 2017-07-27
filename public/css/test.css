@@ -24,3 +24,8 @@
 .active > th {
     text-align: center;
 }
+
+tbody  .bold{
+    font-weight: bolder;
+    font-family: 'Rounded Mplus 1c',sans-serif;
+}

@@ -124,8 +124,8 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">合計</th>
-                                    <td align="right">90.00</td>
-                                    <td align="right">￥300,000</td>
+                                    <td align="right" class="bold">90.00</td>
+                                    <td align="right" class="bold">￥300,000</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -169,8 +169,8 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">合計</th>
-                                    <td align="right">90.00</td>
-                                    <td align="right">￥300,000</td>
+                                    <td align="right" class="bold">90.00</td>
+                                    <td align="right" class="bold">￥300,000</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -214,8 +214,8 @@
                             </tr>
                             <tr>
                                 <th scope="row">合計</th>
-                                <td align="right">90.00</td>
-                                <td align="right">￥300,000</td>
+                                <td align="right" class="bold">90.00</td>
+                                <td align="right" class="bold">￥300,000</td>
                             </tr>
                             </tbody>
                         </table>
@@ -259,8 +259,8 @@
                             </tr>
                             <tr>
                                 <th scope="row">合計</th>
-                                <td align="right">90.00</td>
-                                <td align="right">￥300,000</td>
+                                <td align="right" class="bold">90.00</td>
+                                <td align="right" class="bold">￥300,000</td>
                             </tr>
                             </tbody>
                         </table>
