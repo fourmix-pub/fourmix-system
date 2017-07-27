@@ -93,22 +93,18 @@
 {{-- 一覧 --}}
 <div class="panel panel-default">
 	<div class="panel-body">
-
-
-			{{--<h4 align="center">--}}
-				{{--プロジェクト名：<b></b>--}}
-				{{--<br>--}}
-				{{----}}
-			{{--</h4>--}}
-		{{----}}
-			{{--<br>--}}
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h3 class="text-center">
+					PCP・メンズポケットサーバー移行
+					<br>
+					<small>碓井智</small>
+				</h3>
+			</div>
+		</div>
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h4 align="center">プロジェクト名：
-					<b>PCP・メンズポケットサーバー移行</b>　責任者：<b>碓井智</b>
-				</h4>
-				<br>
 				<div class="table-responsive">
 					<table class="table table-bordered table-hover">
 						<thead>
@@ -131,8 +127,9 @@
 						</tbody>
 					</table>
 				</div>
-				</div>
-				 <br>
+			</div>
+
+			<br>
 
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<div class="table-responsive">

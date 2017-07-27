@@ -1,17 +1,14 @@
-.modal-footer > .btn-default{
-    background-color: black;
-    color: white;
-}
-
-.modal-footer > .btn-default:hover{
-    background-color: #ff5810;
-}
-
 .modal-footer > .closed{
     background-color: #30d50d;
     border: none;
 }
 
 .modal-footer > .closed:hover{
-    background-color: initial;
+    background-color: #30d50d;
+    border: none;
+}
+
+.modal-footer > .closed:hover{
+    background-color: #30d50d;
+    border: none;
 }
