@@ -45,7 +45,6 @@ Route::group(['prefix' => 'daily', 'namespace' => 'Daily'], function () {
 |--------------------------------------------------------------------------
 */
 
-
 Route::group(['prefix' => 'project', 'namespace' => 'Project'], function () {
 
     // 一覧
@@ -56,7 +55,6 @@ Route::group(['prefix' => 'project', 'namespace' => 'Project'], function () {
     Route::get('/ledger', 'ProjectController@ledger');
     // 予算対
     Route::get('/project-budget', 'ProjectController@projectBudget');
-
 });
 
 /*
@@ -115,7 +113,6 @@ Route::get('/project-personal-budget', function () {
 Route::get('/project-budget', function () {
     return view('project.project-budget');
 });
-
 
 //集計
 Route::get('/total', function () {

@@ -27,10 +27,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-
     /**
      * 作業日報　取得
-     * 1対多
+     * 1対多.
      *
      * @return  \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -41,7 +40,7 @@ class User extends Authenticatable
 
     /**
      * プロジェクト　取得
-     * 1対多
+     * 1対多.
      *
      * @return  \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -52,7 +51,7 @@ class User extends Authenticatable
 
     /**
      * 個人予算　取得
-     * 1対多
+     * 1対多.
      *
      * @return  \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -63,7 +62,7 @@ class User extends Authenticatable
 
     /**
      * 部門 取得
-     * 1対1
+     * 1対1.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */

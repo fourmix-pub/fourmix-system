@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Daily;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class DailyController extends Controller
@@ -18,7 +17,7 @@ class DailyController extends Controller
     }
 
     /**
-     *日報 閲覧
+     *日報 閲覧.
      *
      * @return mixed
      */
@@ -28,7 +27,7 @@ class DailyController extends Controller
     }
 
     /**
-     *日報 集計
+     *日報 集計.
      *
      * @return mixed
      */
@@ -36,5 +35,4 @@ class DailyController extends Controller
     {
         return view('daily.total');
     }
-
 }

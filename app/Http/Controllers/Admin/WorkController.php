@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class WorkController extends Controller
@@ -16,5 +15,4 @@ class WorkController extends Controller
     {
         return view('admin.work.index');
     }
-
 }

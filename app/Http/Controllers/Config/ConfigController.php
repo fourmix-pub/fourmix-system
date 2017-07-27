@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Config;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class ConfigController extends Controller
@@ -18,7 +17,7 @@ class ConfigController extends Controller
     }
 
     /**
-     *パスワード変更
+     *パスワード変更.
      *
      * @return mixed
      */

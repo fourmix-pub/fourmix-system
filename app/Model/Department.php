@@ -10,7 +10,7 @@ class Department extends Model
     use SoftDeletes;
 
     /**
-     * 削除日 更新
+     * 削除日 更新.
      *
      * @var array
      */
@@ -18,7 +18,7 @@ class Department extends Model
 
     /**
      * 担当者　取得
-     * 1対多
+     * 1対多.
      *
      * @return  \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -26,5 +26,4 @@ class Department extends Model
     {
         return $this->hasMany('App\User', 'department_id', 'id');
     }
-
 }

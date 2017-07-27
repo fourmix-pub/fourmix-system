@@ -10,7 +10,7 @@ class ProjectUser extends Model
     use SoftDeletes;
 
     /**
-     * 削除日 更新
+     * 削除日 更新.
      *
      * @var array
      */
@@ -18,7 +18,7 @@ class ProjectUser extends Model
 
     /**
      * プロジェクト 取得
-     * 1対1
+     * 1対1.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
@@ -29,7 +29,7 @@ class ProjectUser extends Model
 
     /**
      * 担当者 取得
-     * 1対1
+     * 1対1.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
