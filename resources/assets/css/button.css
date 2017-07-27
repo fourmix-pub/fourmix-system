@@ -50,10 +50,10 @@ button {
 
 .btn-primary {
   border: none;
-  background-color: #0d6ecf !important;
+  background-color: #0d6ecf;
 }
 .btn-danger {
-  background-color: #f30f22!important;
+  background-color: #f30f22;
   border: none;
 }
 
