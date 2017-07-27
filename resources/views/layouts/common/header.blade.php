@@ -14,13 +14,13 @@
             @if (Auth::guest())
                 <div class="fourmix">
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="http://www.fourmix.co.jp/files/user/img/common/fourmix_w.png">
+                        <img src="{{ asset('img/fourmix_w.png') }}">
                     </a>
                 </div>
             @else
                 <div class="fourmix">
                     <a class="navbar-brand" href="{{ url('/home') }}">
-                        <img src="http://www.fourmix.co.jp/files/user/img/common/fourmix_w.png">
+                        <img src="{{ asset('img/fourmix_w.png') }}">
                     </a>
                 </div>
             @endif

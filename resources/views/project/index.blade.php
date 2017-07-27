@@ -97,6 +97,12 @@
 		プロジェクト名
 	@endcomponent
 	<div class="form-group">
+		<label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label" for="non-display_flag">非表示フラグ</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 checkbox" style="margin-left: 20px;">
+			<input type="checkbox" value="1">
+		</div>
+	</div>
+	<div class="form-group">
 		<label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label" for="customer_type">クライアント種類<span class="text-danger">*</span></label>
 		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 			<label class="radio-inline">
@@ -138,12 +144,6 @@
 			<textarea class="form-control" rows="3" id="note"></textarea>
 		</div>
 	</div>
-	<div class="form-group">
-		<label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label" for="non-display_flag">非表示フラグ</label>
-		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 checkbox" style="margin-left: 20px;">
-			<input type="checkbox" value="1">
-		</div>
-	</div>
 @endcomponent
 
 {{-- モーダル：編集ボタン --}}
@@ -151,6 +151,12 @@
 	@component('components.elements.form.modal.text',['name'=>'name'])
 		プロジェクト名
 	@endcomponent
+	<div class="form-group">
+		<label class="col-xs-3 control-label" for="non-display_flag">非表示フラグ</label>
+		<div class="col-xs-8 checkbox" style="margin-left: 20px;">
+			<input type="checkbox" value="1" >
+		</div>
+	</div>
 	<div class="form-group">
 		<label class="col-xs-3 control-label" for="customer_type">クライアント種類<span class="text-danger">*</span></label>
 		<div class="col-xs-8">
@@ -192,12 +198,6 @@
 		<label class="col-xs-3 control-label" for="note">備考</label>
 		<div class="col-xs-8">
 			<textarea class="form-control" rows="3" id="note"></textarea>
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-xs-3 control-label" for="non-display_flag">非表示フラグ</label>
-		<div class="col-xs-8 checkbox" style="margin-left: 20px;">
-			<input type="checkbox" value="1" >
 		</div>
 	</div>
 @endcomponent

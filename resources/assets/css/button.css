@@ -45,6 +45,7 @@ button.btn-ghost.btn-white:hover {
 
 button {
   border-radius: initial !important;
+  outline: none !important;
 }
 
 .btn-primary {
