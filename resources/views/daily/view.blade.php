@@ -154,7 +154,8 @@
                         @endcomponent
                     </tr>
                     <tr>
-                        <td colspan="7">備考：</td>
+                        <td></td>
+                        <td colspan="6">備考：</td>
                     </tr>
                     <tr>
                         <td>田中咲良</td>
@@ -167,7 +168,8 @@
                         @endcomponent
                     </tr>
                     <tr>
-                        <td colspan="7">備考：</td>
+                        <td></td>
+                        <td colspan="6">備考：</td>
                     </tr>
                     </tbody>
                 </table>

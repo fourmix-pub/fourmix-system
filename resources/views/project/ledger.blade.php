@@ -139,17 +139,17 @@
 						<tbody>
 							<tr>
 								<td>設計</td>
-								<td>90.00</td>
+								<td align="right">90.00</td>
 								<td align="right">1,000,000</td>
 							</tr>
 							<tr>
 								<td>打合せ</td>
-								<td>90.00</td>
+								<td align="right">90.00</td>
 								<td align="right">1,000,000</td>
 							</tr>
 							<tr>
 								<td>打合せ</td>
-								<td>90.00</td>
+								<td align="right">90.00</td>
 								<td align="right">1,000,000</td>
 							</tr>
 						</tbody>
