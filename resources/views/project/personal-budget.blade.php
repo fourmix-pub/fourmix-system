@@ -93,7 +93,6 @@
 {{-- アコーディオン：検索ボタン --}}
 @component('components.elements.accordion.accordion')
 	<form class="form-horizontal">
-		<div class="form-group">
 
 			<?php
 			$users = ['佐々木希','櫻井翔','松本潤'];
@@ -108,7 +107,7 @@
 			@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'true'])
 				部門
 			@endcomponent
-		</div>
+
 		<div class="row text-center">
 			<div class="btn-group">
 				<button type="button" class="btn" onclick="location.href=''">
