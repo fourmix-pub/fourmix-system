@@ -17,8 +17,6 @@
 	</div>
 </div>
 
-<div class="row">
-
 {{-- コンテンツ --}}{{--xxx 検索ボタン元の位置--}}
 {{--<div class="row">--}}
 	{{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
@@ -119,9 +117,6 @@
 		</div>
 	</form>
 @endcomponent
-
-
-</div>
 {{-- 一覧 --}}
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
