@@ -20,3 +20,7 @@
 /*}*/
 
 /* Form Layout */
+
+.active > th {
+    text-align: center;
+}
