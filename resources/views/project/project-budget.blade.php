@@ -33,33 +33,30 @@
 <br>
 
 	{{-- コンテンツ --}}
-<div class="row">
 
 {{-- アコーディオン：検索ボタン --}}
 @component('components.elements.accordion.accordion')
 	<form class="form-horizontal">
-		<div class="form-group">
-			<?php
-			$projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
-			?>
-			@component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])
-				プロジェクト名
-			@endcomponent
+		<?php
+		$projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
+		?>
+		@component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])
+			プロジェクト名
+		@endcomponent
 
-			<?php
-			$users = ['佐々木希','櫻井翔','松本潤'];
-			?>
-			@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
-				責任者
-			@endcomponent
+		<?php
+		$users = ['佐々木希','櫻井翔','松本潤'];
+		?>
+		@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
+			責任者
+		@endcomponent
 
-			<?php
-			$departments = ['システムデザイン','コンセプトデザイン','サポート'];
-			?>
-			@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'true'])
-				部門
-			@endcomponent
-		</div>
+		<?php
+		$departments = ['システムデザイン','コンセプトデザイン','サポート'];
+		?>
+		@component('components.elements.form.select.select', ['items'=>$departments,'search'=>'true'])
+			部門
+		@endcomponent
 
 		<div class="form-group">
 			<label class="hidden-xs col-sm-3 col-md-3 col-lg-3 control-label text-right">表示区分</label>
@@ -133,7 +130,6 @@
 			</div>
 		</div>
 	</div>
-</div>
 {{--pagenatuon--}}
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

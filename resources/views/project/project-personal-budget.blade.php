@@ -29,13 +29,13 @@
         </div>
     </div>
 </div>
-{{-- コンテンツ --}}
-<div class="row">
 
+<br>
+
+{{-- コンテンツ --}}
     {{-- アコーディオン：検索ボタン --}}
     @component('components.elements.accordion.accordion')
         <form class="form-horizontal">
-            <div class="form-group">
                 <?php
                 $projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
                 ?>
@@ -56,26 +56,25 @@
                 @component('components.elements.form.select.select', ['items'=>$departments,'search'=>'false'])
                     部門
                 @endcomponent
-            </div>
 
-            <div class="form-group">
-                <label class="hidden-xs col-sm-3 col-md-3 col-lg-3 control-label text-right">表示区分</label>
-                <label class="col-xs-12 visible-xs">表示区分</label>
+                <div class="form-group">
+                    <label class="hidden-xs col-sm-3 col-md-3 col-lg-3 control-label text-right">表示区分</label>
+                    <label class="col-xs-12 visible-xs">表示区分</label>
 
-                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                    <label class="radio-inline">
-                        <input type="radio" name="project_status" value="">全て
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="project_status" value="">完了
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="project_status" value="">未完了
-                    </label>
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <label class="radio-inline">
+                            <input type="radio" name="project_status" value="">全て
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="project_status" value="">完了
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="project_status" value="">未完了
+                        </label>
+                    </div>
                 </div>
-            </div>
 
-        @component('components.elements.form.period')
+            @component('components.elements.form.period')
             @endcomponent
             <div class="row text-center">
                 <div class="btn-group">
@@ -132,7 +131,6 @@
             </div>
         </div>
     </div>
-</div>
 {{--pagenation--}}
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
