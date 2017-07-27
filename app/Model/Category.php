@@ -10,7 +10,7 @@ class Category extends Model
     use SoftDeletes;
 
     /**
-     * 削除日 更新
+     * 削除日 更新.
      *
      * @var array
      */
@@ -18,7 +18,7 @@ class Category extends Model
 
     /**
      * 作業日報　取得
-     * 1対多
+     * 1対多.
      *
      * @return  \Illuminate\Database\Eloquent\Relations\HasMany
      */

@@ -10,7 +10,7 @@ class Project extends Model
     use SoftDeletes;
 
     /**
-     * 削除日 更新
+     * 削除日 更新.
      *
      * @var array
      */
@@ -18,7 +18,7 @@ class Project extends Model
 
     /**
      * 作業日報　取得
-     * 1対多
+     * 1対多.
      *
      * @return  \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -29,7 +29,7 @@ class Project extends Model
 
     /**
      * 個人予算　取得
-     * 1対多
+     * 1対多.
      *
      * @return  \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -40,7 +40,7 @@ class Project extends Model
 
     /**
      * 担当者 取得
-     * 1対1
+     * 1対1.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */

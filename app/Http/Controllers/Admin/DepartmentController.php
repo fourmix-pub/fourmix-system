@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class DepartmentController extends Controller
@@ -16,5 +15,4 @@ class DepartmentController extends Controller
     {
         return view('admin.department.index');
     }
-
 }

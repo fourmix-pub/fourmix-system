@@ -10,7 +10,7 @@ class Work extends Model
     use SoftDeletes;
 
     /**
-     * 削除日 更新
+     * 削除日 更新.
      *
      * @var array
      */
@@ -18,7 +18,7 @@ class Work extends Model
 
     /**
      * 作業日報　取得
-     * 1対多
+     * 1対多.
      *
      * @return  \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -26,5 +26,4 @@ class Work extends Model
     {
         return $this->hasMany('App\Model\Daily', 'work_id', 'id');
     }
-
 }

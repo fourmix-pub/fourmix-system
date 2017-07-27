@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Collection;
 
 if (! function_exists('bg_img')) {

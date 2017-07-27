@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Project;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class ProjectController extends Controller
@@ -28,7 +27,7 @@ class ProjectController extends Controller
     }
 
     /**
-     *プロジェクト 台帳
+     *プロジェクト 台帳.
      *
      * @return mixed
      */
@@ -38,7 +37,7 @@ class ProjectController extends Controller
     }
 
     /**
-     *プロジェクト 予算対実績表
+     *プロジェクト 予算対実績表.
      *
      * @return mixed
      */

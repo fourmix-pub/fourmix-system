@@ -10,7 +10,7 @@ class Daily extends Model
     use SoftDeletes;
 
     /**
-     * 削除日 更新
+     * 削除日 更新.
      *
      * @var array
      */
@@ -18,7 +18,7 @@ class Daily extends Model
 
     /**
      * 作業分類 取得
-     * 1対1
+     * 1対1.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
@@ -29,7 +29,7 @@ class Daily extends Model
 
     /**
      * 勤務分類 取得
-     * 1対1
+     * 1対1.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
@@ -40,7 +40,7 @@ class Daily extends Model
 
     /**
      * 担当者 取得
-     * 1対1
+     * 1対1.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
@@ -51,7 +51,7 @@ class Daily extends Model
 
     /**
      * プロジェクト 取得
-     * 1対1
+     * 1対1.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
