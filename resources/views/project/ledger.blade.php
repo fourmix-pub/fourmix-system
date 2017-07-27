@@ -98,7 +98,7 @@
 				<h3 class="text-center">
 					PCP・メンズポケットサーバー移行
 					<br>
-					<small>碓井智</small>
+					<small>担当者：碓井智</small>
 				</h3>
 			</div>
 		</div>

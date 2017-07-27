@@ -1,14 +1,11 @@
 .modal-footer > .closed{
     background-color: #30d50d;
     border: none;
+    color: white;
 }
 
 .modal-footer > .closed:hover{
-    background-color: #30d50d;
+    background-color: #2e8e08;
     border: none;
-}
-
-.modal-footer > .closed:hover{
-    background-color: #30d50d;
-    border: none;
+    color: white;
 }

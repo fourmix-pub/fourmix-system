@@ -45,7 +45,6 @@ button.btn-ghost.btn-white:hover {
 
 button {
   border-radius: initial !important;
-  outline: none !important;
 }
 
 .btn-primary {
@@ -125,4 +124,8 @@ button {
 
 .print-budget > span{
   font-weight: bolder;
+}
+
+.btn.focus, .btn:focus, .btn:active:focus {
+  outline: none;
 }

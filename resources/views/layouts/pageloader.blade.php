@@ -2,7 +2,7 @@
 
     <div class="bonfire-pageloader-icon">
         <div align="center">
-            <img alt="Bootstrap Image Preview" id="loading-12-icon" src="{{ asset('img/logo_o.png') }}" width="200%" style="margin-left: -55px" />
+            <img alt="Bootstrap Image Preview" id="loading-12-icon" src="{{ asset('img/logo_o.png') }}" width="150%" style="margin-left: -30px" />
         </div>
         <div align="center">
             <h4>
