@@ -148,7 +148,7 @@
                         <td>2016/07/31</td>
                         <td>コメダコーヒー</td>
                         <td>設計</td>
-                        <td>8.25</td>
+                        <td align="right">8.25</td>
                         <td align="right">20,000</td>
                         @component('components.elements.table.admin.button')
                         @endcomponent
@@ -161,7 +161,7 @@
                         <td>2016/07/31</td>
                         <td>コメダコーヒー</td>
                         <td>設計</td>
-                        <td>8.25</td>
+                        <td align="right">8.25</td>
                         <td align="right">20,000</td>
                         @component('components.elements.table.admin.button')
                         @endcomponent

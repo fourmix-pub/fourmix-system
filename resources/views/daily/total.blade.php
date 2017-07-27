@@ -109,22 +109,22 @@
                             <tbody>
                                 <tr>
                                     <td>調査</td>
-                                    <td>30.00</td>
+                                    <td align="right">30.00</td>
                                     <td align="right">￥100,000</td>
                                 </tr>
                                 <tr>
                                     <td>設計</td>
-                                    <td>30.00</td>
+                                    <td align="right">30.00</td>
                                     <td align="right">￥100,000</td>
                                 </tr>
                                 <tr>
                                     <td>打ち合わせ</td>
-                                    <td>30.00</td>
+                                    <td align="right">30.00</td>
                                     <td align="right">￥100,000</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">合計</th>
-                                    <td>90.00</td>
+                                    <td align="right">90.00</td>
                                     <td align="right">￥300,000</td>
                                 </tr>
                             </tbody>
@@ -154,22 +154,22 @@
                             <tbody>
                                 <tr>
                                     <td>山本耕史郎</td>
-                                    <td>30.00</td>
+                                    <td align="right">30.00</td>
                                     <td align="right">￥100,000</td>
                                 </tr>
                                 <tr>
                                     <td>田中咲良</td>
-                                    <td>30.00</td>
+                                    <td align="right">30.00</td>
                                     <td align="right">￥100,000</td>
                                 </tr>
                                 <tr>
                                     <td>呉傑</td>
-                                    <td>30.00</td>
+                                    <td align="right">30.00</td>
                                     <td align="right">￥100,000</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">合計</th>
-                                    <td>90.00</td>
+                                    <td align="right">90.00</td>
                                     <td align="right">￥300,000</td>
                                 </tr>
                             </tbody>
@@ -199,22 +199,22 @@
                             <tbody>
                             <tr>
                                 <td>調査</td>
-                                <td>30.00</td>
+                                <td align="right">30.00</td>
                                 <td align="right">￥100,000</td>
                             </tr>
                             <tr>
                                 <td>設計</td>
-                                <td>30.00</td>
+                                <td align="right">30.00</td>
                                 <td align="right">￥100,000</td>
                             </tr>
                             <tr>
                                 <td>打ち合わせ</td>
-                                <td>30.00</td>
+                                <td align="right">30.00</td>
                                 <td align="right">￥100,000</td>
                             </tr>
                             <tr>
                                 <th scope="row">合計</th>
-                                <td>90.00</td>
+                                <td align="right">90.00</td>
                                 <td align="right">￥300,000</td>
                             </tr>
                             </tbody>
@@ -244,22 +244,22 @@
                             <tbody>
                             <tr>
                                 <td>社内行事・その他</td>
-                                <td>30.00</td>
+                                <td align="right">30.00</td>
                                 <td align="right">￥100,000</td>
                             </tr>
                             <tr>
                                 <td>日科技連サイト構築</td>
-                                <td>30.00</td>
+                                <td align="right">30.00</td>
                                 <td align="right">￥100,000</td>
                             </tr>
                             <tr>
                                 <td>Win</td>
-                                <td>30.00</td>
+                                <td align="right">30.00</td>
                                 <td align="right">￥100,000</td>
                             </tr>
                             <tr>
                                 <th scope="row">合計</th>
-                                <td>90.00</td>
+                                <td align="right">90.00</td>
                                 <td align="right">￥300,000</td>
                             </tr>
                             </tbody>
