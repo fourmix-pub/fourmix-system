@@ -11,7 +11,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
 			<h2 align="center">
-				PROJECT LEDGER
+				PROJECT DETAILS
 			</h2>
 		</div>
 	</div>
@@ -24,8 +24,9 @@
 		</button>
 	</div>
 </div>
-
 <br>
+
+<div class="row">
 
 {{-- アコーディオン：検索ボタン --}}
 @component('components.elements.accordion.accordion')
@@ -77,6 +78,7 @@
 	</form>
 @endcomponent
 <br>
+
 {{-- 一覧 --}}
 <div class="panel panel-default">
 	<div class="panel-body">
@@ -157,6 +159,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		@component('components.elements.table.admin.pagination')
