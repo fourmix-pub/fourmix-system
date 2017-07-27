@@ -25,6 +25,8 @@
 	</div>
 </div>
 
+<br>
+
 {{-- アコーディオン：検索ボタン --}}
 @component('components.elements.accordion.accordion')
 	<form class="form-horizontal">
