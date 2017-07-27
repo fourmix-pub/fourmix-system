@@ -86,11 +86,11 @@
 				<label class="visible-xs col-xs-12 control-label">クライアント種類</label>
 
 				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-					<label class="checkbox-inline">
-						<input type="checkbox" value=""> エンド
+					<label class="radio-inline">
+						<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> エンド
 					</label>
-					<label class="checkbox-inline">
-						<input type="checkbox" value=""> プライマリ
+					<label class="radio-inline">
+						<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> プライマリ
 					</label>
 				</div>
 				<div class="col-sm-1"></div>
@@ -107,11 +107,11 @@
 				<label class="visible-xs col-xs-12 control-label">クライアント種類</label>
 
 				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-					<label class="checkbox-inline">
-						<input type="checkbox" value=""> エンド
+					<label class="radio-inline">
+						<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> エンド
 					</label>
-					<label class="checkbox-inline">
-						<input type="checkbox" value=""> プライマリ
+					<label class="radio-inline">
+						<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> プライマリ
 					</label>
 				</div>
 				<div class="col-sm-1"></div>
