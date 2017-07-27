@@ -16,23 +16,22 @@
         </div>
     </div>
 </div>
-
-{{-- コンテンツ --}}
-<div class="row">
 {{-- ボタン--}}
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <button type="button" class="btn btn-primary pull-right" data-toggle="collapse" href="#search">
-                <i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
-            </button>
-            <div class="btn-group" role="group" aria-label="...">
-                <a type="button" class="btn btn-default"  href="{{ url('/project-budget') }}">プロジェクト別</a>
-                <a type="button" class="btn btn-default" href="{{ url('/project-personal') }}">個人別</a>
-                <a type="button" class="btn btn-primary" href="{{ url('/project-personal-budget') }}">個人予算別</a>
-            </div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <button type="button" class="btn btn-primary pull-right" data-toggle="collapse" href="#search">
+            <i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
+        </button>
+        <div class="btn-group" role="group" aria-label="...">
+            <a type="button" class="btn btn-default"  href="{{ url('/project-budget') }}">プロジェクト別</a>
+            <a type="button" class="btn btn-default" href="{{ url('/project-personal') }}">個人別</a>
+            <a type="button" class="btn btn-primary" href="{{ url('/project-personal-budget') }}">個人予算別</a>
         </div>
     </div>
-    <br>
+</div>
+{{-- コンテンツ --}}
+<div class="row">
+
     {{-- アコーディオン：検索ボタン --}}
     @component('components.elements.accordion.accordion')
         <form class="form-horizontal">
@@ -134,6 +133,7 @@
         </div>
     </div>
 </div>
+{{--pagenation--}}
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         @component('components.elements.table.admin.pagination')

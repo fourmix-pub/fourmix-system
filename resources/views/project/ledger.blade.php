@@ -16,15 +16,7 @@
 		</div>
 	</div>
 </div>
-
-{{-- コンテンツ --}}{{--xxx 前のボタンの位置--}}
-{{--<div class="row">--}}
-	{{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
-	{{--</div>--}}
-{{--</div>--}}
-{{--<br>--}}
-
-
+{{--検索ボタン--}}}
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
 		<button type="button" class="btn btn-primary" style="margin-right: 18px;" data-toggle="collapse" href="#search">
@@ -32,8 +24,6 @@
 		</button>
 	</div>
 </div>
-
-	<br>
 
 {{-- アコーディオン：検索ボタン --}}
 @component('components.elements.accordion.accordion')
