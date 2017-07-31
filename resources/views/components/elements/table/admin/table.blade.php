@@ -1,13 +1,11 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
 
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="table-responsive">
-        <table class="table table-bordered table-hover">
+                {{ $slot }}
 
-            {{ $slot }}
-
-        </table>
+            </table>
+        </div>
     </div>
-
-    @component('components.elements.table.admin.pagination')
-    @endcomponent
 </div>

@@ -78,7 +78,9 @@ Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function () {
     //勤務分類
     Route::get('/work', 'WorkController@index');
     //得意先一覧
-    Route::get('/customer', 'CustomerController@index');
+    Route::resource('customers', 'CustomerController', ['except' => [
+        'create', 'show', 'edit'
+    ]]);
 });
 
 /*

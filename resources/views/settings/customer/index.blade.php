@@ -124,31 +124,22 @@
 		@endcomponent
 
 		{{-- 一覧 --}}
+
 		@component('components.elements.table.admin.table')
-
-			<?php
-			$theads=['ID','企業名','クライアント種類',''];
-
-			$tbody1=['id'=>1,'customer'=>'株式会社明治','category'=>'エンド'];
-			$tbody2=['id'=>2,'customer'=>'株式会社リゾーム','category'=>'プライマリ'];
-			$tbody3=['id'=>3,'customer'=>'株式会社アシックス','category'=>'エンド'];
-			$tbody4=['id'=>4,'customer'=>'株式会社 思文閣出版','category'=>'プライマリ'];
-
-			$tbodys=[$tbody1,$tbody2,$tbody3,$tbody4];
-			?>
-
-			@component('components.elements.table.admin.thead',['theads'=>$theads])
+			@component('components.elements.table.admin.thead')
+				<th>ID</th>
+				<th>企業名</th>
+				<th>クライアント種類</th>
+				<th></th>
 			@endcomponent
-
-
 			<tbody>
 				@foreach($customers as $customer)
 				<tr>
 					<th scope="row">{{ $customer->id }}</th>
 					<td>{{ $customer->name }}</td>
 					<td>{{ $customer->type_id }}</td>
-					@component('components.elements.table.admin.button')
-					@endcomponent
+					<td></td>
+					<td></td>
 				</tr>
 				@endforeach
 			</tbody>
