@@ -13,7 +13,7 @@ interface WorkTypeRepositoryContract
 {
     /**
      *
-     * 全件取得契約
+     * リソース取得契約
      * @return mixed
      */
     public function workTypeResources();

@@ -2,12 +2,24 @@
 
 namespace App\Http\Controllers\Settings;
 
+use App\Contracts\Repositories\WorkTypeRepositoryContract;
 use App\Models\WorkType;
+use App\Repositories\WorkTypeRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class WorkTypeController extends Controller
 {
+
+    /**
+     * WorkTypeController constructor.
+     */
+    public function __construct(WorkTypeRepositoryContract $repository)
+    {
+
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +27,7 @@ class WorkTypeController extends Controller
      */
     public function index()
     {
+
         return view('settings.work-types.index');
     }
 
