@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Settings;
 
+use App\Models\WorkType;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,7 @@ class WorkTypeController extends Controller
      */
     public function index()
     {
-        return view('admin.category.index');
+        return view('settings.work-types.index');
     }
 
     /**
