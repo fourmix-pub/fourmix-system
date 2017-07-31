@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\WorkType;
 
 class CategoryController extends Controller
 {
@@ -11,8 +12,12 @@ class CategoryController extends Controller
      *
      * @return mixed
      */
-    public function index()
+    public function index(WorkType $workType)
     {
-        return view('admin.category.index');
+
+        //全件検索
+        dd($workType);
+
+        return view('admin.category.index', compact('workType'));
     }
 }
