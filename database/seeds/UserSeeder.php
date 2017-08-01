@@ -12,7 +12,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->delete();
-        \App\User::create([
+        App\User::create([
             'id' => 1,
             'name'   => 'Admin',
             'email'    => 'fourmix-system@fourmix.co.jp',

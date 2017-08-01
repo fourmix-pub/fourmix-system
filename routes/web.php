@@ -74,7 +74,10 @@ Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function () {
     ]]);
 
     //部門分類
-    Route::get('/department', 'DepartmentController@index');
+    Route::resource('job-type', 'JobTypeController', ['except' => [
+        'create', 'edit', 'show',
+    ]]);
+
     //勤務分類
     Route::get('/work', 'WorkController@index');
     //得意先一覧
