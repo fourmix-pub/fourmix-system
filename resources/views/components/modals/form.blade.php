@@ -10,7 +10,6 @@
                 <h4 class="modal-title">{{ $modalTitle }}</h4>
             </div>
             <form class="form-horizontal" action="{{ $url }}" method="POST" style="display: inline;">
-                {{ $method }}
                 <div class="modal-body">
                     {{ $slot }}
                 </div>

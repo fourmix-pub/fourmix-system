@@ -17,6 +17,8 @@
     </div>
 </div>
 
+@include('layouts.common.message')
+
 <br>
 
 {{-- モーダル:追加ボタン --}}
@@ -41,14 +43,14 @@
         @component('components.elements.table.setting.table')
 
             @slot('thead')
-            <th class="active">
-                ID
-            </th>
-            <th class="active">
-                作業分類
-            </th>
-            <th class="active">
-            </th>
+                <th class="active">
+                    ID
+                </th>
+                <th class="active">
+                    作業分類
+                </th>
+                <th class="active">
+                </th>
             @endslot
 
             @slot('tbody')

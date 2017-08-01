@@ -42,12 +42,12 @@
 		</div>
 
 		{{-- アコーディオン：検索ボタン --}}
-		@component('components.elements.accordion.accordion')
+		@component('components.elements.components.accordions.accordion')
 			<form class="form-horizontal">
 				<?php
 				$users = ['株式会社キャリアデザインセンター','株式会社リゾーム','株式会社アシックス'];
 				?>
-				@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
+				@component('components.elements.form.select', ['items'=>$users,'search'=>'true'])
 					企業名
 				@endcomponent
 

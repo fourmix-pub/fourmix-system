@@ -12,15 +12,13 @@
         {{ route('work-type.destroy', compact('workType')) }}
     @endslot
 
-    @slot('method')
-        {{ method_field('DELETE') }}
-    @endslot
-
     {{ $workType->name }} を削除しますか？
 
     @slot('modalFooter')
+        {{ method_field('DELETE') }}
+        {{ csrf_field() }}
         <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
-        <button type="submit" class="btn btn-danger" data-dismiss="modal">削除</button>
+        <button type="submit" class="btn btn-danger">削除</button>
     @endslot
 
 @endcomponent

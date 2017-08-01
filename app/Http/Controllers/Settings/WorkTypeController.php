@@ -42,11 +42,7 @@ class WorkTypeController extends Controller
      */
     public function store(Request $request)
     {
-        if($this->repository->workTypeStore($request)){
-            return view('settings.work-types.index');
-        }else{
-            return view('settings.work-types.index');
-        }
+        return response()->save($this->repository->workTypeStore($request));
     }
 
     /**
@@ -58,12 +54,7 @@ class WorkTypeController extends Controller
      */
     public function update(Request $request, WorkType $workType)
     {
-
-        if($this->repository->workTypeUpdate($request, $workType)){
-            return view('settings.work-types.index');
-        }else{
-            return view('settings.work-types.index');
-        }
+        return response()->update($this->repository->workTypeUpdate($request, $workType));
     }
 
     /**
@@ -74,10 +65,6 @@ class WorkTypeController extends Controller
      */
     public function destroy(WorkType $workType)
     {
-        if($workType->delete()){
-            return view('settings.work-types.index');
-        }else{
-            return view('settings.work-types.index');
-        }
+        return response()->delete($workType->delete());
     }
 }

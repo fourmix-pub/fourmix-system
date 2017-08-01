@@ -136,3 +136,7 @@ Route::get('/total-personal', function () {
 Route::get('/personal-project', function () {
     return view('daily.personal-project');
 });
+
+Route::get('/customer', function () {
+    return view('admin.customer.index');
+});
