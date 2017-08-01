@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Settings;
 
 use App\Contracts\Repositories\WorkTypeRepositoryContract;
+use App\Http\Requests\Settings\WorkTypeRequest;
 use App\Models\WorkType;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -40,7 +41,7 @@ class WorkTypeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(WorkTypeRequest $request)
     {
         return response()->save($this->repository->workTypeStore($request));
     }
@@ -52,7 +53,7 @@ class WorkTypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, WorkType $workType)
+    public function update(WorkTypeRequest $request, WorkType $workType)
     {
         return response()->update($this->repository->workTypeUpdate($request, $workType));
     }

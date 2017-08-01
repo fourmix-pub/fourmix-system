@@ -29,6 +29,7 @@ class WorkTypeRouteTest extends TestCase
     {
         $response = $this->actingAs($this->user)->get('/settings/work-type');
         $response->assertStatus(200);
+        $response->assertViewHasAll(['workTypes']);
     }
 
     /**
