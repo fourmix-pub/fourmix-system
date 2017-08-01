@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Settings;
 
 use App\Contracts\Repositories\CustomerRepositoryContract;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -40,29 +41,33 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return response()->save($this->repository->customerStore($request));
+
+
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param Customer $customer
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Customer $customer)
     {
-        //
+        return response()->update($this->repository->customerUpdate($request, $customer));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param Customer $customer
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
-    public function destroy($id)
+    public function destroy(Customer $customer)
     {
-        //
+        return response()->delete($customer->delete());
     }
 }

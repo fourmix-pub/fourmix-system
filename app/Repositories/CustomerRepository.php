@@ -17,4 +17,31 @@ class CustomerRepository implements CustomerRepositoryContract
         $customers = Customer::latest()->get();
         return compact('customers');
     }
+
+
+    /**
+     * 顧客更新
+     * @param $request
+     * @param Customer $customer
+     * @return bool
+     */
+    public function customerUpdate($request, Customer $customer)
+    {
+        $customer->name = $request->get('name');
+        $customer->type_id = $request->get('type_id');
+        return $customer->update();
+    }
+
+    /**
+     * 顧客保存
+     * @param $request
+     * @return bool
+     */
+    public function customerStore($request)
+    {
+        $customer = new Customer();
+        $customer->name = $request->get('name');
+        $customer->type_id = $request->get('type_id');
+        return $customer->save();
+    }
 }
