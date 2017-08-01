@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Routes\SettingRouteTests;
 
+use App\Models\WorkType;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -10,7 +11,17 @@ use App\User;
 
 class WorkTypeRouteTest extends TestCase
 {
+    /**
+     * テストユーザー
+     * @var
+     */
     private $user;
+
+    /**
+     * テスト作業分類
+     * @var
+     */
+    private $workType;
 
     /**
      *
@@ -18,7 +29,8 @@ class WorkTypeRouteTest extends TestCase
      */
     public function create_test_data()
     {
-        $this->user = User::where('name','Admin')->first();
+        $this->user = factory(User::class)->create();
+        $this->workType = factory(WorkType::class)->create();
     }
 
     /**
@@ -57,7 +69,7 @@ class WorkTypeRouteTest extends TestCase
             'name' => '編集テスト',
         ];
 
-        $response = $this->actingAs($this->user)->patch('/settings/work-type/27', array_merge($data, ['_token' => csrf_token()]));
+        $response = $this->actingAs($this->user)->patch('/settings/work-type/'.$this->workType->id, array_merge($data, ['_token' => csrf_token()]));
         $this->assertDatabaseHas('work_types', $data);
         $response->assertStatus(302);
     }
@@ -68,7 +80,7 @@ class WorkTypeRouteTest extends TestCase
      */
     public function it_can_delete()
     {
-        $response = $this->actingAs($this->user)->delete('/settings/work-type/14');
+        $response = $this->actingAs($this->user)->delete('/settings/work-type/'.$this->workType->id);
         $response->assertStatus(302);
     }
 }
