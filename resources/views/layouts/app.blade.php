@@ -10,6 +10,7 @@
 <body>
         @include('layouts.pageloader')
         @include('layouts.common.header')
+        @include('layouts.common.message')
 
         <div class="container">
             <div class="row">
