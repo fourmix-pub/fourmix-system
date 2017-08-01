@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Contracts\Repositories\WorkTypeRepositoryContract;
+use App\Repositories\WorkTypeRepository;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -26,6 +28,11 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             'App\Contracts\Repositories\CustomerRepositoryContract',
             'App\Repositories\CustomerRepository'
+        );
+
+        $this->app->bind(
+            'App\Contracts\Repositories\WorkTypeRepositoryContract',
+            'App\Repositories\WorkTypeRepository'
         );
     }
 }

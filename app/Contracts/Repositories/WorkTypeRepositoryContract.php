@@ -8,6 +8,7 @@
 
 namespace App\Contracts\Repositories;
 
+use App\Models\WorkType;
 
 interface WorkTypeRepositoryContract
 {
@@ -17,4 +18,21 @@ interface WorkTypeRepositoryContract
      * @return mixed
      */
     public function workTypeResources();
+
+    /**
+     *
+     * 更新契約
+     * @param $request
+     * @param WorkType $workType
+     * @return mixed
+     */
+    public function workTypeUpdate($request, WorkType $workType);
+
+    /**
+     *
+     * 保存契約
+     * @param $request
+     * @return mixed
+     */
+    public function workTypeStore($request);
 }

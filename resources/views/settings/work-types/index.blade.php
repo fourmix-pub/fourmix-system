@@ -17,16 +17,14 @@
     </div>
 </div>
 
+<br>
 
+{{-- モーダル:追加ボタン --}}
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <button type="button" class="btn btn-danger pull-right" style="margin-right: 5%;" data-toggle="modal" data-target="#add">
-            <i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
-        </button>
+        @include('layouts.work-types.create')
     </div>
 </div>
-
-<br>
 
 {{-- コンテンツ --}}
 <div class="row">
@@ -38,54 +36,34 @@
                 @include('layouts.content.setting.xs-side-menu')
             </div>
         </div>
-            
-        {{-- モーダル：追加ボタン --}}
-        @component('components.elements.modal.add', ['title'=>'作業分類追加'])
-            @component('components.elements.form.modal.text',['name'=>'name'])
-            作業分類名
-            @endcomponent
-        @endcomponent
-
-        {{-- モーダル：編集ボタン --}}
-        @component('components.elements.modal.update', ['title'=>'作業分類編集'])
-            @component('components.elements.form.modal.text',['name'=>'name'])
-                作業分類名
-            @endcomponent
-        @endcomponent
-
-        {{-- モーダル：削除ボタン --}}
-        @component('components.elements.modal.delete', ['title'=>'作業分類削除'])
-            テスト
-        @endcomponent
 
         {{-- 一覧 --}}
-        @component('components.elements.table.admin.table')
+        @component('components.elements.table.setting.table')
 
-            <?php
-            $theads=['ID','作業分類',''];
+            @slot('thead')
+            <th class="active">
+                ID
+            </th>
+            <th class="active">
+                作業分類
+            </th>
+            <th class="active">
+            </th>
+            @endslot
 
-            $tbody1=['id'=>1,'category'=>'調査'];
-            $tbody2=['id'=>2,'category'=>'見積・営業活動'];
-            $tbody3=['id'=>3,'category'=>'設計'];
-            $tbody4=['id'=>4,'category'=>'実装'];
-            $tbody5=['id'=>5,'category'=>'テスト'];
-
-            $tbodys=[$tbody1,$tbody2,$tbody3,$tbody4,$tbody5];
-            ?>
-
-            @component('components.elements.table.admin.thead',['theads'=>$theads])
-            @endcomponent
-
-            <tbody>
-                @foreach($tbodys as $tbody)
+            @slot('tbody')
+                @foreach($workTypes as $workType)
                     <tr>
-                        <th scope="row">{{ $tbody['id'] }}</th>
-                        <td>{{ $tbody['category'] }}</td>
-                        @component('components.elements.table.admin.button')
-                        @endcomponent
+                        <th scope="row">{{ $workType->id }}</th>
+                        <td>{{ $workType->name }}</td>
+                        <td>
+                            {{-- モーダル：編集ボタン --}}
+                            @include('layouts.work-types.edit')
+                            @include('layouts.work-types.delete')
+                        </td>
                     </tr>
                 @endforeach
-            </tbody>
+            @endslot
 
         @endcomponent
 

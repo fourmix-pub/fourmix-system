@@ -4,19 +4,23 @@ namespace App\Http\Controllers\Settings;
 
 use App\Contracts\Repositories\WorkTypeRepositoryContract;
 use App\Models\WorkType;
-use App\Repositories\WorkTypeRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Repositories\WorkTypeRepository;
 
 class WorkTypeController extends Controller
 {
+    /**
+     * @var WorkTypeRepositoryContract
+     */
+    protected $repository;
 
     /**
      * WorkTypeController constructor.
      */
     public function __construct(WorkTypeRepositoryContract $repository)
     {
-
+        $this->repository = $repository;
     }
 
 
@@ -27,8 +31,7 @@ class WorkTypeController extends Controller
      */
     public function index()
     {
-
-        return view('settings.work-types.index');
+        return view('settings.work-types.index', $this->repository->workTypeResources());
     }
 
     /**
@@ -39,7 +42,11 @@ class WorkTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($this->repository->workTypeStore($request)){
+            return view('settings.work-types.index');
+        }else{
+            return view('settings.work-types.index');
+        }
     }
 
     /**
@@ -49,9 +56,14 @@ class WorkTypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, WorkType $workType)
     {
-        //
+
+        if($this->repository->workTypeUpdate($request, $workType)){
+            return view('settings.work-types.index');
+        }else{
+            return view('settings.work-types.index');
+        }
     }
 
     /**
@@ -60,8 +72,12 @@ class WorkTypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(WorkType $workType)
     {
-        //
+        if($workType->delete()){
+            return view('settings.work-types.index');
+        }else{
+            return view('settings.work-types.index');
+        }
     }
 }
