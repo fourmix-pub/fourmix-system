@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Settings;
 
-use App\Contracts\Repositories\CustomerRepositoryContract;
-use App\Http\Requests\Settings\CustomerRequest;
 use App\Models\Customer;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Settings\CustomerRequest;
+use App\Contracts\Repositories\CustomerRepositoryContract;
 
 class CustomerController extends Controller
 {
@@ -42,8 +42,6 @@ class CustomerController extends Controller
     public function store(CustomerRequest $request)
     {
         return response()->save($this->repository->customerStore($request));
-
-
     }
 
     /**

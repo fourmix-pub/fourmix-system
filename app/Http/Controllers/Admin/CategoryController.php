@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\WorkType;
+use App\Http\Controllers\Controller;
 
 class CategoryController extends Controller
 {

@@ -13,7 +13,7 @@ class JobTypeSeeder extends Seeder
     {
         DB::table('job_types')->delete();
 
-        for ($i = 0; $i < 3; $i++){
+        for ($i = 0; $i < 3; $i++) {
             \App\Models\JobType::create([
                 'name' => '勤務'.$i,
                 'unit_betting_rate' => 1.00,

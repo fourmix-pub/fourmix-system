@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-use App\Contracts\Repositories\WorkTypeRepositoryContract;
-use App\Repositories\WorkTypeRepository;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
