@@ -3,21 +3,18 @@
  * Created by PhpStorm.
  * User: YUTA
  * Date: 2017/07/31
- * Time: 18:58
+ * Time: 18:58.
  */
 
 namespace App\Repositories;
 
-
-use App\Contracts\Repositories\WorkTypeRepositoryContract;
 use App\Models\WorkType;
+use App\Contracts\Repositories\WorkTypeRepositoryContract;
 
 class WorkTypeRepository implements WorkTypeRepositoryContract
 {
-
     /**
-     *
-     * リソース取得
+     * リソース取得.
      * @return mixed
      */
     public function workTypeResources()
@@ -28,8 +25,7 @@ class WorkTypeRepository implements WorkTypeRepositoryContract
     }
 
     /**
-     *
-     * 更新
+     * 更新.
      * @param $request
      * @param WorkType $workType
      * @return mixed
@@ -42,8 +38,7 @@ class WorkTypeRepository implements WorkTypeRepositoryContract
     }
 
     /**
-     *
-     * 新規作成
+     * 新規作成.
      * @param $request
      * @return mixed
      */

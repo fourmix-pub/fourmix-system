@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers\Settings;
 
-use App\Contracts\Repositories\WorkTypeRepositoryContract;
-use App\Http\Requests\Settings\WorkTypeRequest;
 use App\Models\WorkType;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Repositories\WorkTypeRepository;
+use App\Http\Requests\Settings\WorkTypeRequest;
+use App\Contracts\Repositories\WorkTypeRepositoryContract;
 
 class WorkTypeController extends Controller
 {
@@ -23,7 +21,6 @@ class WorkTypeController extends Controller
     {
         $this->repository = $repository;
     }
-
 
     /**
      * Display a listing of the resource.

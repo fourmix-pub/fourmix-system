@@ -17,3 +17,11 @@ $factory->define(App\Models\WorkType::class, function (Faker\Generator $faker) {
         'name' => $faker->name,
     ];
 });
+
+/* @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Customer::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'type_id' => 1,
+    ];
+});

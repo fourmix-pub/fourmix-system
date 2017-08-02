@@ -8,7 +8,7 @@ use App\Models\JobType;
 interface JobTypeRepositoryContract
 {
     /**
-     * リソース取得契約
+     * リソース取得契約.
      * @return mixed
      */
     public function jobTypeResources();
