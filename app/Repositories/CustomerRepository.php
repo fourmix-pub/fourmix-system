@@ -14,8 +14,21 @@ class CustomerRepository implements CustomerRepositoryContract
      */
     public function customerResources()
     {
-        $customers = Customer::latest()->get();
-        return compact('customers');
+        $customers = Customer::latest();
+
+        if ($customerId = request('customer_id')) {
+            $customers = $customers->where('id', $customerId);
+        }
+
+        if ($type_id = request('type_id')) {
+            $customers = $customers->where('type_id', $type_id);
+        }
+
+        $customers = $customers->get();
+
+        $customersSelect = Customer::all();
+
+        return compact('customers', 'customersSelect', 'customerId');
     }
 
 

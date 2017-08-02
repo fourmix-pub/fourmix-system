@@ -4,6 +4,10 @@
         <i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
     @endslot
 
+    @slot('design')
+        style="margin-right: 10px;"
+    @endslot
+
     @slot('modalTitle')
         顧客追加
     @endslot
@@ -16,16 +20,12 @@
         顧客名
     @endcomponent
 
-    @foreach(config('system.customer.name') as $key => $value)
-        <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="{{ $key }}">{{ $value }}
-        </label>
-    @endforeach
+    @include('layouts.customers.customer-types')
 
     @slot('modalFooter')
         {{ csrf_field() }}
         <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
-        <button type="submit" class="btn btn-primary" data-dismiss="modal">登録</button>
+        <button type="submit" class="btn btn-primary">登録</button>
     @endslot
 
 @endcomponent

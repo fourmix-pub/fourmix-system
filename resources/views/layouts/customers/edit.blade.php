@@ -1,4 +1,4 @@
-@component('components.modals.form', ['target' => 'editCustomer-'.$customer->id, 'buttonColor' => 'btn-warning'])
+@component('components.modals.form', ['target' => 'editCustomer-'.$customer->id, 'buttonColor' => 'btn-xs btn-warning'])
 
     @slot('buttonIcon')
         <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
@@ -16,17 +16,13 @@
         顧客名
     @endcomponent
 
-    @foreach(config('system.customer.name') as $key => $value)
-        <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="{{ $key }}">{{ $value }}
-        </label>
-    @endforeach
+    @include('layouts.customers.customer-types')
 
     @slot('modalFooter')
         {{ method_field('PATCH') }}
         {{ csrf_field() }}
         <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
-        <button type="submit" class="btn btn-primary" data-dismiss="modal">登録</button>
+        <button type="submit" class="btn btn-primary">登録</button>
     @endslot
 
 @endcomponent
