@@ -2,12 +2,9 @@
 
 namespace Tests\Feature\Routes\SettingRouteTests;
 
-use App\Models\WorkType;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use App\User;
+use Tests\TestCase;
+use App\Models\WorkType;
 
 class WorkTypeRouteTest extends TestCase
 {
@@ -18,13 +15,13 @@ class WorkTypeRouteTest extends TestCase
     private $user;
 
     /**
-     * テスト作業分類
+     * テスト作業分類.
      * @var
      */
     private $workType;
 
     /**
-     * テストデータ作成
+     * テストデータ作成.
      * @before
      */
     public function create_test_data()
@@ -34,7 +31,7 @@ class WorkTypeRouteTest extends TestCase
     }
 
     /**
-     * インデックスページにアクセスできる
+     * インデックスページにアクセスできる.
      * @test
      */
     public function it_can_access_index()
@@ -45,7 +42,7 @@ class WorkTypeRouteTest extends TestCase
     }
 
     /**
-     * 追加できる
+     * 追加できる.
      * @test
      */
     public function it_can_add()
@@ -61,7 +58,7 @@ class WorkTypeRouteTest extends TestCase
     }
 
     /**
-     * 追加できない
+     * 追加できない.
      * @test
      */
     public function it_can_not_add()
@@ -76,7 +73,7 @@ class WorkTypeRouteTest extends TestCase
     }
 
     /**
-     * 編集できる
+     * 編集できる.
      * @test
      */
     public function it_can_edit()
@@ -92,7 +89,7 @@ class WorkTypeRouteTest extends TestCase
     }
 
     /**
-     * 編集できない
+     * 編集できない.
      * @test
      */
     public function it_can_not_edit()
@@ -107,7 +104,7 @@ class WorkTypeRouteTest extends TestCase
     }
 
     /**
-     * 削除できる
+     * 削除できる.
      * @test
      */
     public function it_can_delete()

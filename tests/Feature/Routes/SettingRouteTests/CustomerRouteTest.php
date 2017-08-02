@@ -2,12 +2,9 @@
 
 namespace Tests\Feature\Routes\SettingRouteTests;
 
-use App\Models\Customer;
 use App\User;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use App\Models\Customer;
 
 class CustomerRouteTest extends TestCase
 {
@@ -17,16 +14,13 @@ class CustomerRouteTest extends TestCase
      */
     private $user;
 
-
     /**
-     * テスト作業分類
+     * テスト作業分類.
      * @var
      */
     private $customer;
 
-
     /**
-     *
      * @before
      */
     public function create_test_data()
@@ -35,9 +29,7 @@ class CustomerRouteTest extends TestCase
         $this->customer = factory(Customer::class)->create();
     }
 
-
     /**
-     *
      * @test
      */
     public function it_can_access_index()
@@ -47,9 +39,7 @@ class CustomerRouteTest extends TestCase
         $response->assertViewHasAll(['customers']);
     }
 
-
     /**
-     *
      * @test
      */
     public function it_can_add()
@@ -63,9 +53,7 @@ class CustomerRouteTest extends TestCase
         $response->assertStatus(302);
     }
 
-
     /**
-     *
      * @test
      */
     public function it_can_edit()
@@ -79,9 +67,7 @@ class CustomerRouteTest extends TestCase
         $response->assertStatus(302);
     }
 
-
     /**
-     *
      * @test
      */
     public function it_can_delete()
@@ -90,9 +76,7 @@ class CustomerRouteTest extends TestCase
         $response->assertStatus(302);
     }
 
-
     /**
-     *
      * @test
      */
     public function it_can_search()
@@ -105,5 +89,4 @@ class CustomerRouteTest extends TestCase
         $this->assertDatabaseHas('customers', $data);
         $response->assertViewHasAll(['customers']);
     }
-
 }

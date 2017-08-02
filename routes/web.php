@@ -81,7 +81,7 @@ Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function () {
     ]]);
     //得意先一覧
     Route::resource('customers', 'CustomerController', ['except' => [
-        'create', 'edit', 'show'
+        'create', 'edit', 'show',
     ]]);
 });
 
