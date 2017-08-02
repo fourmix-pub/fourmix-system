@@ -10,9 +10,14 @@
 <body>
         @include('layouts.pageloader')
         @include('layouts.common.header')
-        @include('layouts.common.message')
 
         <div class="container">
+            <br>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    @include('layouts.common.message')
+                </div>
+            </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     @yield('content')

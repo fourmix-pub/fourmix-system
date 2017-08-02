@@ -43,7 +43,7 @@ class WorkTypeController extends Controller
      */
     public function store(WorkTypeRequest $request)
     {
-        return response()->save($this->repository->workTypeStore($request));
+        return response()->save($this->repository->create($request));
     }
 
     /**
@@ -55,7 +55,7 @@ class WorkTypeController extends Controller
      */
     public function update(WorkTypeRequest $request, WorkType $workType)
     {
-        return response()->update($this->repository->workTypeUpdate($request, $workType));
+        return response()->update($this->repository->update($request, $workType));
     }
 
     /**

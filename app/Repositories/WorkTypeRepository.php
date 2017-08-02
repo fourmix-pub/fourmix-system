@@ -22,7 +22,7 @@ class WorkTypeRepository implements WorkTypeRepositoryContract
      */
     public function workTypeResources()
     {
-        $workTypes = WorkType::latest()->get();
+        $workTypes = WorkType::latest()->paginate(10);
 
         return compact('workTypes');
     }
@@ -34,7 +34,7 @@ class WorkTypeRepository implements WorkTypeRepositoryContract
      * @param WorkType $workType
      * @return mixed
      */
-    public function workTypeUpdate($request, WorkType $workType)
+    public function update($request, WorkType $workType)
     {
         $workType->name = $request->get('name');
 
@@ -43,11 +43,11 @@ class WorkTypeRepository implements WorkTypeRepositoryContract
 
     /**
      *
-     * 保存
+     * 新規作成
      * @param $request
      * @return mixed
      */
-    public function workTypeStore($request)
+    public function create($request)
     {
         $workType = new WorkType();
         $workType->name = $request->get('name');

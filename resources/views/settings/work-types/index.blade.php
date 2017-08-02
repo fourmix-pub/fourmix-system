@@ -17,16 +17,14 @@
     </div>
 </div>
 
-@include('layouts.common.message')
-
-<br>
-
 {{-- モーダル:追加ボタン --}}
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         @include('layouts.work-types.create')
     </div>
 </div>
+
+<br>
 
 {{-- コンテンツ --}}
 <div class="row">
@@ -66,8 +64,13 @@
                     </tr>
                 @endforeach
             @endslot
-
         @endcomponent
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
+                {{ $workTypes->links() }}
+            </div>
+        </div>
 
     </div>
 

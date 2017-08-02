@@ -25,14 +25,20 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        //顧客レポジトリ契約登録
         $this->app->bind(
             'App\Contracts\Repositories\CustomerRepositoryContract',
             'App\Repositories\CustomerRepository'
         );
-
+        //作業分類レポジトリ契約登録
         $this->app->bind(
             'App\Contracts\Repositories\WorkTypeRepositoryContract',
             'App\Repositories\WorkTypeRepository'
+        );
+        //勤務分類レポジトリー契約登録
+        $this->app->bind(
+            'App\Contracts\Repositories\JobTypeRepositoryContract',
+            'App\Repositories\JobTypeRepository'
         );
     }
 }
