@@ -36,7 +36,7 @@ class CustomerRepository implements CustomerRepositoryContract
      * @param Customer $customer
      * @return bool
      */
-    public function customerUpdate($request, Customer $customer)
+    public function update($request, Customer $customer)
     {
         $customer->name = $request->get('name');
         $customer->type_id = $request->get('type_id');
@@ -49,7 +49,7 @@ class CustomerRepository implements CustomerRepositoryContract
      * @param $request
      * @return bool
      */
-    public function customerStore($request)
+    public function create($request)
     {
         $customer = new Customer();
         $customer->name = $request->get('name');

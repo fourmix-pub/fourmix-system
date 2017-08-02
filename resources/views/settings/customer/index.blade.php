@@ -33,7 +33,7 @@
 	@slot('side')
 		@include('layouts.content.setting.side-menu')
 	@endslot
-	{{-- PC版サイドメニュー --}}
+	{{-- SM版サイドメニュー --}}
 	@include('layouts.content.setting.xs-side-menu')
 
 	{{-- アコーディオン：検索ボタン --}}
@@ -42,5 +42,4 @@
 	{{-- 一覧 --}}
 	@include('layouts.customers.list')
 @endcomponent
-
 @endsection
