@@ -67,22 +67,21 @@ Route::group(['prefix' => 'project', 'namespace' => 'Project'], function () {
 Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function () {
     //担当者
     Route::get('/user', 'UserController@index');
-
     //作業分類
     Route::resource('work-type', 'WorkTypeController', ['except' => [
         'create', 'edit', 'show',
     ]]);
-
-    //部門分類
+//    //部門分類
+//    Route::resource('department', 'DepartmentController', ['except' => [
+//        'create', 'edit', 'show',
+//    ]]);
+    //勤務分類
     Route::resource('job-type', 'JobTypeController', ['except' => [
         'create', 'edit', 'show',
     ]]);
-
-    //勤務分類
-    Route::get('/work', 'WorkController@index');
     //得意先一覧
     Route::resource('customers', 'CustomerController', ['except' => [
-        'create', 'show', 'edit',
+        'create', 'edit', 'show'
     ]]);
 });
 

@@ -24,7 +24,7 @@ class WorkTypeRouteTest extends TestCase
     private $workType;
 
     /**
-     *
+     * テストデータ作成
      * @before
      */
     public function create_test_data()
@@ -34,7 +34,7 @@ class WorkTypeRouteTest extends TestCase
     }
 
     /**
-     *
+     * インデックスページにアクセスできる
      * @test
      */
     public function it_can_access_index()
@@ -45,7 +45,7 @@ class WorkTypeRouteTest extends TestCase
     }
 
     /**
-     *
+     * 追加できる
      * @test
      */
     public function it_can_add()
@@ -57,10 +57,26 @@ class WorkTypeRouteTest extends TestCase
         $response = $this->actingAs($this->user)->post('/settings/work-type', array_merge($data, ['_token' => csrf_token()]));
         $this->assertDatabaseHas('work_types', $data);
         $response->assertStatus(302);
+        $response->assertSessionHas('status');
     }
 
     /**
-     *
+     * 追加できない
+     * @test
+     */
+    public function it_can_not_add()
+    {
+        $data = [
+            'name' => '',
+        ];
+
+        $response = $this->actingAs($this->user)->post('/settings/work-type', array_merge($data, ['_token' => csrf_token()]));
+        $response->assertStatus(302);
+        $response->assertSessionHasErrors(['name']);
+    }
+
+    /**
+     * 編集できる
      * @test
      */
     public function it_can_edit()
@@ -72,15 +88,32 @@ class WorkTypeRouteTest extends TestCase
         $response = $this->actingAs($this->user)->patch('/settings/work-type/'.$this->workType->id, array_merge($data, ['_token' => csrf_token()]));
         $this->assertDatabaseHas('work_types', $data);
         $response->assertStatus(302);
+        $response->assertSessionHas('status');
     }
 
     /**
-     *
+     * 編集できない
+     * @test
+     */
+    public function it_can_not_edit()
+    {
+        $data = [
+            'name' => '',
+        ];
+
+        $response = $this->actingAs($this->user)->patch('/settings/work-type/'.$this->workType->id, array_merge($data, ['_token' => csrf_token()]));
+        $response->assertStatus(302);
+        $response->assertSessionHasErrors('name');
+    }
+
+    /**
+     * 削除できる
      * @test
      */
     public function it_can_delete()
     {
         $response = $this->actingAs($this->user)->delete('/settings/work-type/'.$this->workType->id);
         $response->assertStatus(302);
+        $response->assertSessionHas('status');
     }
 }

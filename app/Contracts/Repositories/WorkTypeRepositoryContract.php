@@ -26,13 +26,13 @@ interface WorkTypeRepositoryContract
      * @param WorkType $workType
      * @return mixed
      */
-    public function workTypeUpdate($request, WorkType $workType);
+    public function update($request, WorkType $workType);
 
     /**
      *
-     * 保存契約
+     * 新規作成契約
      * @param $request
      * @return mixed
      */
-    public function workTypeStore($request);
+    public function create($request);
 }
