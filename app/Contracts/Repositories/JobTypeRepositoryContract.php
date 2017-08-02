@@ -1,13 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: YUTA
- * Date: 2017/08/01
- * Time: 16:42
- */
 
 namespace App\Contracts\Repositories;
 
+
+use App\Models\JobType;
 
 interface JobTypeRepositoryContract
 {
@@ -16,4 +12,16 @@ interface JobTypeRepositoryContract
      * @return mixed
      */
     public function jobTypeResources();
+
+    /**
+     * 新規作成契約
+     * @return mixed
+     */
+    public function create($request);
+
+    /**
+     * 更新契約
+     * @return mixed
+     */
+    public function update($request, JobType $jobType);
 }
