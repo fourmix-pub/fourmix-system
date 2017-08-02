@@ -18,12 +18,12 @@ interface CustomerRepositoryContract
      * @param Customer $customer
      * @return mixed
      */
-    public function customerUpdate($request, Customer $customer);
+    public function update($request, Customer $customer);
 
     /**
      * 追加契約.
      * @param $request
      * @return mixed
      */
-    public function customerStore($request);
+    public function create($request);
 }

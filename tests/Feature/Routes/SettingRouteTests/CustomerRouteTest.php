@@ -51,6 +51,24 @@ class CustomerRouteTest extends TestCase
         $response = $this->actingAs($this->user)->post('/settings/customers', array_merge($data, ['_token' => csrf_token()]));
         $this->assertDatabaseHas('customers', $data);
         $response->assertStatus(302);
+        $response->assertSessionHas('status');
+    }
+
+
+    /**
+     *　追加できない
+     * @test
+     */
+    public function it_can_not_add()
+    {
+        $data = [
+            'name' => '',
+            'type_id' => '',
+        ];
+        $response = $this->actingAs($this->user)->post('/settings/customers', array_merge($data, ['_token' => csrf_token()]));
+        $response->assertStatus(302);
+        $response->assertSessionHasErrors('name');
+        $response->assertSessionHasErrors('type_id');
     }
 
     /**
@@ -65,6 +83,24 @@ class CustomerRouteTest extends TestCase
         $response = $this->actingAs($this->user)->patch('/settings/customers/'.$this->customer->id, array_merge($data, ['_token' => csrf_token()]));
         $this->assertDatabaseHas('customers', $data);
         $response->assertStatus(302);
+        $response->assertSessionHas('status');
+    }
+
+
+    /**
+     *　編集できない
+     * @test
+     */
+    public function it_can_not_edit()
+    {
+        $data = [
+            'name' => '',
+            'type_id' => '',
+        ];
+        $response = $this->actingAs($this->user)->patch('/settings/customers/'.$this->customer->id, array_merge($data, ['_token' => csrf_token()]));
+        $response->assertStatus(302);
+        $response->assertSessionHasErrors('name');
+        $response->assertSessionHasErrors('type_id');
     }
 
     /**
