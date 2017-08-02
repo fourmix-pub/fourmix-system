@@ -2,7 +2,6 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="form-group">
             <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label text-right">期間</label>
-            {{--<label class="col-xs-12 visible-xs control-label">期間</label>--}}
 
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                 <div class='input-group day'>

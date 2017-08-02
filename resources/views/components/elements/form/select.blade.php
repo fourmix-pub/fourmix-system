@@ -4,9 +4,6 @@
             <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label text-right">
                 {{ $slot }}
             </label>
-            {{--<label class="col-xs-12 visible-xs control-label text-left">--}}
-                {{--{{ $slot }}--}}
-            {{--</label>--}}
 
             <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
                 <select class="selectpicker" data-width="100%" data-live-search="true">{{-- TODO: Label BUG --}}
