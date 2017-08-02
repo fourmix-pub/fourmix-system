@@ -41,7 +41,7 @@ class CustomerController extends Controller
      */
     public function store(CustomerRequest $request)
     {
-        return response()->save($this->repository->customerStore($request));
+        return response()->save($this->repository->create($request));
     }
 
     /**
@@ -54,15 +54,14 @@ class CustomerController extends Controller
      */
     public function update(CustomerRequest $request, Customer $customer)
     {
-        return response()->update($this->repository->customerUpdate($request, $customer));
+        return response()->update($this->repository->update($request, $customer));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param Customer $customer
+     * @param  int  $id
      * @return \Illuminate\Http\Response
-     * @internal param int $id
      */
     public function destroy(Customer $customer)
     {

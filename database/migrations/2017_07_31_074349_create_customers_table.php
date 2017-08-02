@@ -18,6 +18,7 @@ class CreateCustomersTable extends Migration
             $table->string('name', 100);
             $table->integer('type_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
