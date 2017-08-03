@@ -10,6 +10,7 @@ use App\Contracts\Repositories\WorkTypeRepositoryContract;
 class WorkTypeController extends Controller
 {
     /**
+     * 作業分類倉庫契約（インターフェース）
      * @var WorkTypeRepositoryContract
      */
     protected $repository;

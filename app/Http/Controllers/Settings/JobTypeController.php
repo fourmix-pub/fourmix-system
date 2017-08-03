@@ -10,6 +10,11 @@ use App\Http\Controllers\Controller;
 
 class JobTypeController extends Controller
 {
+
+    /**
+     * 勤務分類倉庫契約（インターフェース）
+     * @var JobTypeRepositoryContract
+     */
     protected $repository;
 
     /**
