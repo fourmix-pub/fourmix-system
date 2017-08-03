@@ -18,7 +18,7 @@ $factory->define(App\Models\WorkType::class, function (Faker\Generator $faker) {
     ];
 });
 
-/**
+/*
  * 顧客一覧
  * @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\Models\Customer::class, function (Faker\Generator $faker) {
