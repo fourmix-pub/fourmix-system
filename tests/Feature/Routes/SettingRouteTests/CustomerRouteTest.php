@@ -54,9 +54,8 @@ class CustomerRouteTest extends TestCase
         $response->assertSessionHas('status');
     }
 
-
     /**
-     *　追加できない
+     *　追加できない.
      * @test
      */
     public function it_can_not_add()
@@ -86,9 +85,8 @@ class CustomerRouteTest extends TestCase
         $response->assertSessionHas('status');
     }
 
-
     /**
-     *　編集できない
+     *　編集できない.
      * @test
      */
     public function it_can_not_edit()
