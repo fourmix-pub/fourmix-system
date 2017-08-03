@@ -48,5 +48,3 @@ $factory->define(App\Models\Department::class, function (Faker\Generator $faker)
         'name' => $faker->name,
     ];
 });
-
-

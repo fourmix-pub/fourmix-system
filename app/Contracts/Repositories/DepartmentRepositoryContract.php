@@ -7,13 +7,13 @@ use App\Models\Department;
 interface DepartmentRepositoryContract
 {
     /**
-     * リソース取得契約
+     * リソース取得契約.
      * @return mixed
      */
     public function departmentResources();
 
     /**
-     * 更新契約
+     * 更新契約.
      * @param $request
      * @param Department $department
      * @return mixed
@@ -21,7 +21,7 @@ interface DepartmentRepositoryContract
     public function update($request, Department $department);
 
     /**
-     * 新規作成契約
+     * 新規作成契約.
      * @param $request
      * @return mixed
      */
