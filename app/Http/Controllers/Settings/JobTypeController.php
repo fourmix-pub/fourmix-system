@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Settings;
 
-use App\Contracts\Repositories\JobTypeRepositoryContract;
-use App\Http\Requests\Settings\JobTypeRequest;
 use App\Models\JobType;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Settings\JobTypeRequest;
+use App\Contracts\Repositories\JobTypeRepositoryContract;
 
 class JobTypeController extends Controller
 {
@@ -24,7 +23,6 @@ class JobTypeController extends Controller
     {
         $this->repository = $repository;
     }
-
 
     /**
      * Display a listing of the resource.
