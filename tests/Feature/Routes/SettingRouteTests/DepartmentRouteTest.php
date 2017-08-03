@@ -2,11 +2,14 @@
 
 namespace Tests\Feature\Routes\SettingRouteTests;
 
+use App\Models\Department;
 use App\User;
 use Tests\TestCase;
-use App\Models\JobType;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class JobTypeRouteTest extends TestCase
+class DepartmentRouteTest extends TestCase
 {
     /**
      * テストユーザー
@@ -15,10 +18,10 @@ class JobTypeRouteTest extends TestCase
     private $user;
 
     /**
-     * テスト勤務分類.
+     * テスト部門.
      * @var
      */
-    private $jobType;
+    private $department;
 
     /**
      * テストデータ作成.
@@ -27,7 +30,7 @@ class JobTypeRouteTest extends TestCase
     public function create_test_data()
     {
         $this->user = factory(User::class)->create();
-        $this->jobType = factory(JobType::class)->create();
+        $this->department = factory(Department::class)->create();
     }
 
     /**
@@ -36,9 +39,9 @@ class JobTypeRouteTest extends TestCase
      */
     public function it_can_access_index()
     {
-        $response = $this->actingAs($this->user)->get('/settings/job-types');
+        $response = $this->actingAs($this->user)->get('/settings/departments');
         $response->assertStatus(200);
-        $response->assertViewHasAll(['jobTypes']);
+        $response->assertViewHasAll(['departments']);
     }
 
     /**
@@ -49,11 +52,10 @@ class JobTypeRouteTest extends TestCase
     {
         $data = [
             'name' => '追加テスト',
-            'unit_betting_rate' => 1.23,
         ];
 
-        $response = $this->actingAs($this->user)->post('/settings/job-types', array_merge($data, ['_token' => csrf_token()]));
-        $this->assertDatabaseHas('job_types', $data);
+        $response = $this->actingAs($this->user)->post('/settings/departments', array_merge($data, ['_token' => csrf_token()]));
+        $this->assertDatabaseHas('departments', $data);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
     }
@@ -66,13 +68,11 @@ class JobTypeRouteTest extends TestCase
     {
         $data = [
             'name' => '',
-            'unit_betting_rate' => '',
         ];
 
-        $response = $this->actingAs($this->user)->post('/settings/job-types', array_merge($data, ['_token' => csrf_token()]));
+        $response = $this->actingAs($this->user)->post('/settings/departments', array_merge($data, ['_token' => csrf_token()]));
         $response->assertStatus(302);
-        $response->assertSessionHasErrors('name');
-        $response->assertSessionHasErrors('unit_betting_rate');
+        $response->assertSessionHasErrors(['name']);
     }
 
     /**
@@ -83,11 +83,10 @@ class JobTypeRouteTest extends TestCase
     {
         $data = [
             'name' => '編集テスト',
-            'unit_betting_rate' => 1.23,
         ];
 
-        $response = $this->actingAs($this->user)->patch('/settings/job-types/'.$this->jobType->id, array_merge($data, ['_token' => csrf_token()]));
-        $this->assertDatabaseHas('job_types', $data);
+        $response = $this->actingAs($this->user)->patch('/settings/departments/'.$this->department->id, array_merge($data, ['_token' => csrf_token()]));
+        $this->assertDatabaseHas('departments', $data);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
     }
@@ -100,13 +99,11 @@ class JobTypeRouteTest extends TestCase
     {
         $data = [
             'name' => '',
-            'unit_betting_rate' => '',
         ];
 
-        $response = $this->actingAs($this->user)->patch('/settings/job-types/'.$this->jobType->id, array_merge($data, ['_token' => csrf_token()]));
+        $response = $this->actingAs($this->user)->patch('/settings/departments/'.$this->department->id, array_merge($data, ['_token' => csrf_token()]));
         $response->assertStatus(302);
         $response->assertSessionHasErrors('name');
-        $response->assertSessionHasErrors('unit_betting_rate');
     }
 
     /**
@@ -115,7 +112,7 @@ class JobTypeRouteTest extends TestCase
      */
     public function it_can_delete()
     {
-        $response = $this->actingAs($this->user)->delete('/settings/job-types/'.$this->jobType->id);
+        $response = $this->actingAs($this->user)->delete('/settings/departments/'.$this->department->id);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
     }

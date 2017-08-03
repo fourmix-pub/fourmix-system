@@ -39,3 +39,14 @@ $factory->define(App\Models\JobType::class, function (Faker\Generator $faker) {
         'unit_betting_rate' => 1.22,
     ];
 });
+
+/*
+ * 部門ダミーデータ
+ * @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Department::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+    ];
+});
+
+
