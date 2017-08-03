@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers\Settings;
 
-use App\Contracts\Repositories\DepartmentRepositoryContract;
-use App\Http\Requests\Settings\DepartmentRequest;
 use App\Models\Department;
-use App\Models\WorkType;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Settings\DepartmentRequest;
+use App\Contracts\Repositories\DepartmentRepositoryContract;
 
 class DepartmentController extends Controller
 {
@@ -20,7 +18,6 @@ class DepartmentController extends Controller
     {
         $this->repository = $repository;
     }
-
 
     /**
      * Display a listing of the resource.
