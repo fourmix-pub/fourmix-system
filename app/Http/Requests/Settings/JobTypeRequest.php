@@ -25,7 +25,7 @@ class JobTypeRequest extends FormRequest
     {
         return [
             'name' => 'required|max:20',
-            'unit_betting_rate' => 'required|numeric'
+            'unit_betting_rate' => 'required|numeric',
         ];
     }
 }

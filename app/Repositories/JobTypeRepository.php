@@ -2,8 +2,8 @@
 
 namespace App\Repositories;
 
-use App\Contracts\Repositories\JobTypeRepositoryContract;
 use App\Models\JobType;
+use App\Contracts\Repositories\JobTypeRepositoryContract;
 
 class JobTypeRepository implements JobTypeRepositoryContract
 {
@@ -19,7 +19,7 @@ class JobTypeRepository implements JobTypeRepositoryContract
     }
 
     /**
-     * 新規作成
+     * 新規作成.
      * @return mixed
      */
     public function create($request)
@@ -32,7 +32,7 @@ class JobTypeRepository implements JobTypeRepositoryContract
     }
 
     /**
-     * 更新
+     * 更新.
      * @return mixed
      */
     public function update($request, JobType $jobType)

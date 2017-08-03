@@ -13,7 +13,7 @@
 
 /**
  * 作業分類ダミーデータ
- * @var \Illuminate\Database\Eloquent\Factory $factory */
+ * @var \Illuminate\Database\Eloquent\Factory */
 $factory->define(App\Models\WorkType::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,

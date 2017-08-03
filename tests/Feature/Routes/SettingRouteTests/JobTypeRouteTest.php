@@ -2,12 +2,9 @@
 
 namespace Tests\Feature\Routes\SettingRouteTests;
 
-use App\Models\JobType;
 use App\User;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use App\Models\JobType;
 
 class JobTypeRouteTest extends TestCase
 {
