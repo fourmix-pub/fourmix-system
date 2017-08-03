@@ -17,11 +17,10 @@
 	</div>
 </div>
 
+{{-- モーダル:追加ボタン --}}
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<button type="button" class="btn btn-danger pull-right" style="margin-right: 5%;" data-toggle="modal" data-target="#add">
-			<i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
-		</button>
+		@include('layouts.job-types.create')
 	</div>
 </div>
 
@@ -38,62 +37,39 @@
 			</div>
 		</div>
 
-	   {{-- モーダル：追加ボタン --}}
-		@component('components.elements.modal.add', ['title'=>'勤務分類追加'])
-			@component('components.elements.form.modal.text',['name'=>'name'])
-				勤務分類名
-			@endcomponent
-
-			@component('components.elements.form.modal.text',['name'=>'cost_rate'])
-				単価掛率
-			@endcomponent
-		@endcomponent
-
-		{{-- モーダル：編集ボタン --}}
-		@component('components.elements.modal.update', ['title'=>'勤務分類編集'])
-			@component('components.elements.form.modal.text',['name'=>'name'])
-				勤務分類名
-			@endcomponent
-
-			@component('components.elements.form.modal.text',['name'=>'cost_rate'])
-				単価掛率
-			@endcomponent
-		@endcomponent
-
-		{{-- モーダル：削除ボタン --}}
-		@component('components.elements.modal.delete', ['title'=>'勤務分類削除'])
-			深夜残業
-		@endcomponent
-
 		{{-- 一覧 --}}
-		@component('components.elements.table.admin.table')
+		@component('components.elements.table.setting.table')
 
-                        <?php
-                        $theads=['ID','勤務分類','単価掛率',''];
+			@slot('thead')
+				<th class="active">
+					ID
+				</th>
+				<th class="active">
+					勤務分類
+				</th>
+				<th class="active">
+					単価掛率
+				</th>
+				<th class="active">
+				</th>
+			@endslot
 
-                        $tbody1=['id'=>1,'work'=>'普通勤務','cost_rate'=>'1.00'];
-                        $tbody2=['id'=>2,'work'=>'休日勤務','cost_rate'=>'1.25'];
-                        $tbody3=['id'=>3,'work'=>'普通残業','cost_rate'=>'1.25'];
-                        $tbody4=['id'=>4,'work'=>'深夜残業','cost_rate'=>'1.50'];
-
-                        $tbodys=[$tbody1,$tbody2,$tbody3,$tbody4];
-                        ?>
-
-						@component('components.elements.table.admin.thead',['theads'=>$theads])
-						@endcomponent
-
-						<tbody>
-							@foreach($tbodys as $tbody)
-							<tr>
-								<th scope="row">{{ $tbody['id'] }}</th>
-								<td>{{ $tbody['work'] }}</td>
-								<td align="right">{{ $tbody['cost_rate'] }}</td>
-								@component('components.elements.table.admin.button')
-								@endcomponent
-							</tr>
-							@endforeach
-						</tbody>
+			@slot('tbody')
+				@foreach($jobTypes as $jobType)
+					<tr>
+						<th scope="row">{{ $jobType->id }}</th>
+						<td>{{ $jobType->name }}</td>
+						<td align="right">{{ number_format($jobType->unit_betting_rate, 2)  }}</td>
+						<td>
+							{{-- モーダル：編集ボタン --}}
+							@include('layouts.job-types.edit')
+							@include('layouts.job-types.delete')
+						</td>
+					</tr>
+				@endforeach
+			@endslot
 		@endcomponent
+
 	</div>
 
 	{{-- スマホ版サイドメニュー --}}

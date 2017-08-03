@@ -18,6 +18,7 @@ class CreateJobTypesTable extends Migration
             $table->string('name');
             $table->double('unit_betting_rate', 3, 2);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

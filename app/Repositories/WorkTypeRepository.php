@@ -2,8 +2,8 @@
 
 namespace App\Repositories;
 
-use App\Models\WorkType;
 use App\Contracts\Repositories\WorkTypeRepositoryContract;
+use App\Models\WorkType;
 
 class WorkTypeRepository implements WorkTypeRepositoryContract
 {
@@ -44,3 +44,4 @@ class WorkTypeRepository implements WorkTypeRepositoryContract
         return $workType->save();
     }
 }
+

@@ -1,19 +1,23 @@
-@component('components.modals.form', ['target' => 'editWorkType-'.$workType->id, 'buttonColor' => 'btn-xs btn-warning'])
+@component('components.modals.form', ['target' => 'editJobType-'.$jobType->id, 'buttonColor' => 'btn-xs btn-warning'])
 
     @slot('buttonIcon')
         <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
     @endslot
 
     @slot('modalTitle')
-        作業分類編集
+        勤務分類編集
     @endslot
 
     @slot('url')
-        {{ route('work-types.update', compact('workType')) }}
+        {{ route('job-types.update', compact('jobType')) }}
     @endslot
 
-    @component('components.elements.form.text',['name'=>'name','value'=>$workType->name])
-        作業分類名
+    @component('components.elements.form.text',['name'=>'name','value'=>$jobType->name])
+        勤務分類名
+    @endcomponent
+
+    @component('components.elements.form.text',['name'=>'unit_betting_rate','value'=>$jobType->unit_betting_rate])
+        単価掛率
     @endcomponent
 
     @slot('modalFooter')

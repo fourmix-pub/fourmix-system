@@ -11,7 +11,9 @@
 |
 */
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+/**
+ * 作業分類ダミーデータ
+ * @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\Models\WorkType::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
@@ -19,11 +21,21 @@ $factory->define(App\Models\WorkType::class, function (Faker\Generator $faker) {
 });
 
 /*
- * 顧客一覧
+ * 顧客ダミーデータ
  * @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\Models\Customer::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'type_id' => 1,
+    ];
+});
+
+/*
+ * 勤務分類ダミーデータ
+ * @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\JobType::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'unit_betting_rate' => 1.22,
     ];
 });

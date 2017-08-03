@@ -33,17 +33,6 @@ class WorkTypeController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(WorkTypeRequest $request)
-    {
-        return response()->save($this->repository->create($request));
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -53,6 +42,17 @@ class WorkTypeController extends Controller
     public function update(WorkTypeRequest $request, WorkType $workType)
     {
         return response()->update($this->repository->update($request, $workType));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(WorkTypeRequest $request)
+    {
+        return response()->save($this->repository->create($request));
     }
 
     /**
