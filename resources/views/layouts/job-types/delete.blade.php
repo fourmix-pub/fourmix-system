@@ -1,18 +1,18 @@
-@component('components.modals.form', ['target' => 'deleteWorkType-'.$workType->id, 'buttonColor' => 'btn-xs btn-danger'])
+@component('components.modals.form', ['target' => 'deleteJobType-'.$jobType->id, 'buttonColor' => 'btn-xs btn-danger'])
 
     @slot('buttonIcon')
         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
     @endslot
 
     @slot('modalTitle')
-        作業分類削除
+        勤務分類削除
     @endslot
 
     @slot('url')
-        {{ route('work-types.destroy', compact('workType')) }}
+        {{ route('job-types.destroy', compact('jobType')) }}
     @endslot
 
-    {{ $workType->name }} を削除しますか？
+    {{ $jobType->name }} を削除しますか？
 
     @slot('modalFooter')
         {{ method_field('DELETE') }}
