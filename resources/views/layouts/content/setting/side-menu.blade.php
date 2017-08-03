@@ -1,5 +1,4 @@
-{{-- PC用 --}}
- <div class="list-group hidden-sm hidden-xs">
+<div class="list-group hidden-sm hidden-xs">
     <a class="list-group-item" href="{{ url('/admin/user') }}">
         <i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;担当者
     </a>

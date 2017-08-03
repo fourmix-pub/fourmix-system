@@ -42,12 +42,12 @@
 		</div>
 
 		{{-- アコーディオン：検索ボタン --}}
-		@component('components.elements.accordion.accordion')
+		@component('components.elements.components.accordions.accordion')
 			<form class="form-horizontal">
 				<?php
 				$users = ['株式会社キャリアデザインセンター','株式会社リゾーム','株式会社アシックス'];
 				?>
-				@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
+				@component('components.elements.form.select', ['items'=>$users,'search'=>'true'])
 					企業名
 				@endcomponent
 
@@ -142,11 +142,11 @@
 
 
 			<tbody>
-				@foreach($tbodys as $tbody)
+				@foreach($customers as $customer)
 				<tr>
-					<th scope="row">{{ $tbody['id'] }}</th>
-					<td>{{ $tbody['customer'] }}</td>
-					<td>{{ $tbody['category'] }}</td>
+					<th scope="row">{{ $customer->id }}</th>
+					<td>{{ $customer->name }}</td>
+					<td>{{ $customer->type_id }}</td>
 					@component('components.elements.table.admin.button')
 					@endcomponent
 				</tr>

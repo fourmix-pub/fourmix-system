@@ -64,17 +64,25 @@ Route::group(['prefix' => 'project', 'namespace' => 'Project'], function () {
 |--------------------------------------------------------------------------
 */
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
+Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function () {
     //担当者
     Route::get('/user', 'UserController@index');
     //作業分類
-    Route::get('/category', 'CategoryController@index');
-    //部門分類
-    Route::get('/department', 'DepartmentController@index');
+    Route::resource('work-type', 'WorkTypeController', ['except' => [
+        'create', 'edit', 'show',
+    ]]);
+//    //部門分類
+//    Route::resource('department', 'DepartmentController', ['except' => [
+//        'create', 'edit', 'show',
+//    ]]);
     //勤務分類
-    Route::get('/work', 'WorkController@index');
+    Route::resource('job-type', 'JobTypeController', ['except' => [
+        'create', 'edit', 'show',
+    ]]);
     //得意先一覧
-    Route::get('/customer', 'CustomerController@index');
+    Route::resource('customers', 'CustomerController', ['except' => [
+        'create', 'edit', 'show',
+    ]]);
 });
 
 /*
@@ -129,4 +137,8 @@ Route::get('/total-personal', function () {
 
 Route::get('/personal-project', function () {
     return view('daily.personal-project');
+});
+
+Route::get('/customer', function () {
+    return view('admin.customer.index');
 });

@@ -10,6 +10,7 @@ require('./bootstrap-select');
 require('./bootstrap-markdown');
 require('./bootstrap-datetimepicker');
 require('./bootstrap-off-canvas-nav');
+require('./bootstrap-notify');
 require('./pageloader');
 
 window.Vue = require('vue');
