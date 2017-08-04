@@ -10,7 +10,7 @@ class DepartmentRepository implements DepartmentRepositoryContract
 {
 
     /**
-     * 部門リソース取得
+     * 部門リソース取得.
      * @return mixed
      */
     public function departmentResources()
@@ -21,7 +21,7 @@ class DepartmentRepository implements DepartmentRepositoryContract
     }
 
     /**
-     * 更新
+     * 更新.
      * @param $request
      * @param Department $department
      * @return mixed
@@ -34,7 +34,7 @@ class DepartmentRepository implements DepartmentRepositoryContract
     }
 
     /**
-     * 新規作成
+     * 新規作成.
      * @param $request
      * @return mixed
      */

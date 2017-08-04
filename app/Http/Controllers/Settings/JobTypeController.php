@@ -9,9 +9,8 @@ use App\Contracts\Repositories\JobTypeRepositoryContract;
 
 class JobTypeController extends Controller
 {
-
     /**
-     * 勤務分類倉庫契約（インターフェース）
+     * 勤務分類倉庫契約（インターフェース）.
      * @var JobTypeRepositoryContract
      */
     protected $repository;
