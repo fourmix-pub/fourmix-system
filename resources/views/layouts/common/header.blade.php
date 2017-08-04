@@ -101,11 +101,11 @@
                             <i class="fa fa-caret-down " aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="{{ url('/admin/user') }}">担当者</a></li>
-                            <li role="presentation"><a href="{{ url('/admin/category') }}">作業分類</a></li>
-                            <li role="presentation"><a href="{{ url('/admin/department') }}">部門</a></li>
-                            <li role="presentation"><a href="{{ url('/admin/work') }}">勤務分類</a></li>
-                            <li role="presentation"><a href="{{ url('/admin/customer') }}">顧客</a></li>
+                            <li role="presentation"><a href="{{ url('/settings/users') }}">担当者</a></li>
+                            <li role="presentation"><a href="{{ url('/settings/work-types') }}">作業分類</a></li>
+                            <li role="presentation"><a href="{{ url('/settings/departments') }}">部門</a></li>
+                            <li role="presentation"><a href="{{ url('/settings/job-types') }}">勤務分類</a></li>
+                            <li role="presentation"><a href="{{ url('/settings/customers') }}">顧客</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -160,16 +160,16 @@
                             <i class="fa fa-caret-down " aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="{{ url('/admin/user') }}">担当者</a></li>
-                            <li role="presentation"><a href="{{ url('/admin/category') }}">作業分類</a></li>
-                            <li role="presentation"><a href="{{ url('/admin/department') }}">部門</a></li>
-                            <li role="presentation"><a href="{{ url('/admin/work') }}">勤務分類</a></li>
-                            <li role="presentation"><a href="{{ url('/admin/customer') }}">顧客</a></li>
+                            <li role="presentation"><a href="{{ url('/settings/users') }}">担当者</a></li>
+                            <li role="presentation"><a href="{{ url('/settings/work-types') }}">作業分類</a></li>
+                            <li role="presentation"><a href="{{ url('/settings/departments') }}">部門</a></li>
+                            <li role="presentation"><a href="{{ url('/settings/job-types') }}">勤務分類</a></li>
+                            <li role="presentation"><a href="{{ url('/settings/customers') }}">顧客</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="ユーザー">
-                            {{ Auth::user()->user_name }}&nbsp;
+                            {{ Auth::user()->name }}&nbsp;
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
