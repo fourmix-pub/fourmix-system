@@ -7,7 +7,7 @@ use App\Models\WorkType;
 interface WorkTypeRepositoryContract
 {
     /**
-     * リソース取得契約.
+     * 作業分類リソース取得契約.
      * @return mixed
      */
     public function workTypeResources();

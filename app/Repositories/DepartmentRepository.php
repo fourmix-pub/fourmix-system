@@ -10,7 +10,7 @@ class DepartmentRepository implements DepartmentRepositoryContract
 {
 
     /**
-     * リソース取得
+     * 部門リソース取得
      * @return mixed
      */
     public function departmentResources()

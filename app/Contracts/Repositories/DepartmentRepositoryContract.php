@@ -7,7 +7,7 @@ use App\Models\Department;
 interface DepartmentRepositoryContract
 {
     /**
-     * リソース取得契約
+     * 部門リソース取得契約
      * @return mixed
      */
     public function departmentResources();

@@ -11,6 +11,10 @@ use App\Http\Controllers\Controller;
 
 class DepartmentController extends Controller
 {
+    /**
+     * 部門倉庫契約
+     * @var DepartmentRepositoryContract
+     */
     protected $repository;
 
     /**

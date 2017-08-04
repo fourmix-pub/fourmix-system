@@ -8,7 +8,7 @@ use App\Contracts\Repositories\WorkTypeRepositoryContract;
 class WorkTypeRepository implements WorkTypeRepositoryContract
 {
     /**
-     * リソース取得.
+     * 作業分類リソース取得.
      * @return mixed
      */
     public function workTypeResources()
