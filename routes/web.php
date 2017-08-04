@@ -71,10 +71,10 @@ Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function () {
     Route::resource('work-types', 'WorkTypeController', ['except' => [
         'create', 'edit', 'show',
     ]]);
-//    //部門分類
-//    Route::resource('department', 'DepartmentController', ['except' => [
-//        'create', 'edit', 'show',
-//    ]]);
+    //部門分類
+    Route::resource('departments', 'DepartmentController', ['except' => [
+        'create', 'edit', 'show',
+    ]]);
     //勤務分類
     Route::resource('job-types', 'JobTypeController', ['except' => [
         'create', 'edit', 'show',

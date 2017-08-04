@@ -38,5 +38,10 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Contracts\Repositories\JobTypeRepositoryContract',
             'App\Repositories\JobTypeRepository'
         );
+        //部門分類レポジトリー契約登録
+        $this->app->bind(
+            'App\Contracts\Repositories\DepartmentRepositoryContract',
+            'App\Repositories\DepartmentRepository'
+        );
     }
 }

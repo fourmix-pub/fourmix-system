@@ -2,23 +2,23 @@
 
 namespace App\Contracts\Repositories;
 
-use App\Models\WorkType;
+use App\Models\Department;
 
-interface WorkTypeRepositoryContract
+interface DepartmentRepositoryContract
 {
     /**
-     * 作業分類リソース取得契約.
+     * 部門リソース取得契約.
      * @return mixed
      */
-    public function workTypeResources();
+    public function departmentResources();
 
     /**
      * 更新契約.
      * @param $request
-     * @param WorkType $workType
+     * @param Department $department
      * @return mixed
      */
-    public function update($request, WorkType $workType);
+    public function update($request, Department $department);
 
     /**
      * 新規作成契約.

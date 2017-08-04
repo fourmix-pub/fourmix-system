@@ -8,7 +8,7 @@ use App\Contracts\Repositories\JobTypeRepositoryContract;
 class JobTypeRepository implements JobTypeRepositoryContract
 {
     /**
-     * リソース取得.
+     * 勤務分類リソース取得.
      * @return mixed
      */
     public function jobTypeResources()
