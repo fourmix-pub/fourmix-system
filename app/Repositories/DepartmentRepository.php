@@ -2,13 +2,11 @@
 
 namespace App\Repositories;
 
-
-use App\Contracts\Repositories\DepartmentRepositoryContract;
 use App\Models\Department;
+use App\Contracts\Repositories\DepartmentRepositoryContract;
 
 class DepartmentRepository implements DepartmentRepositoryContract
 {
-
     /**
      * 部門リソース取得.
      * @return mixed

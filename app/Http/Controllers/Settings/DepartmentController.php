@@ -10,7 +10,7 @@ use App\Contracts\Repositories\DepartmentRepositoryContract;
 class DepartmentController extends Controller
 {
     /**
-     * 部門倉庫契約
+     * 部門倉庫契約.
      * @var DepartmentRepositoryContract
      */
     protected $repository;
