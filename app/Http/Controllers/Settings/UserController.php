@@ -2,11 +2,22 @@
 
 namespace App\Http\Controllers\Settings;
 
+use App\Contracts\Repositories\UserRepositoryContract;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
+    protected $repository;
+
+    /**
+     * UserController constructor.
+     */
+    public function __construct(UserRepositoryContract $repository)
+    {
+        $this->repository = $repository;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +25,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('settings.users.index');
+        return view('settings.users.index', $this->repository->userResources());
     }
 
     /**

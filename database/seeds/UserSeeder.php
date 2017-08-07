@@ -17,10 +17,10 @@ class UserSeeder extends Seeder
             'email'    => 'fourmix-system@fourmix.co.jp',
             'password' => bcrypt('123456'),
             'department_id' => 1,
-            'unit_cost' => 20,
-            'started_time' => '09:30:00',
-            'ended_time' => '18:30:00',
-            'resignation_flag' => 0,
+            'cost' => 20,
+            'start' => '09:30:00',
+            'end' => '18:30:00',
+            'is_resignation' => 0,
         ]);
 
         for ($i = 0; $i < 30; $i++) {
@@ -29,10 +29,10 @@ class UserSeeder extends Seeder
                 'email'    => str_random(10).'@fourmix.co.jp',
                 'password' => bcrypt('123456'),
                 'department_id' => rand(1,3),
-                'unit_cost' => 20,
-                'started_time' => '09:30:00',
-                'ended_time' => '18:30:00',
-                'resignation_flag' => rand(0,1),
+                'cost' => 20,
+                'start' => '09:30:00',
+                'end' => '18:30:00',
+                'is_resignation' => rand(0,1),
             ]);
         }
     }
