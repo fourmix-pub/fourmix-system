@@ -19,10 +19,10 @@ class CreateUsersTable extends Migration
             $table->string('email', 255)->unique();
             $table->string('password', 120);
             $table->integer('department_id');
-            $table->integer('unit_cost');
-            $table->time('started_time');
-            $table->time('ended_time');
-            $table->boolean('resignation_flag')->default(0)->nullable();
+            $table->integer('cost');
+            $table->time('start');
+            $table->time('end');
+            $table->boolean('is_resignation')->default(0)->nullable();
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

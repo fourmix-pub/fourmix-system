@@ -82,6 +82,10 @@ Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function () {
     Route::resource('customers', 'CustomerController', ['except' => [
         'create', 'edit', 'show',
     ]]);
+
+    Route::resource('users', 'UserController', ['except' => [
+        'create','show'
+    ]]);
 });
 
 /*

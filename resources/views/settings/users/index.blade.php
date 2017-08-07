@@ -43,19 +43,19 @@
 		@component('components.elements.accordion.accordion')
 			<form class="form-horizontal">
 
-				<?php
-				$users = ['櫻井翔','佐々木希','田中さくら'];
-				?>
-				@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
-					担当者
-				@endcomponent
+				{{--<?php--}}
+				{{--$users = ['櫻井翔','佐々木希','田中さくら'];--}}
+				{{--?>--}}
+				{{--@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])--}}
+					{{--担当者--}}
+				{{--@endcomponent--}}
 
-				<?php
-				$users = ['株式会社キャリアデザインセンター','株式会社リゾーム','株式会社アシックス'];
-				?>
-				@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])
-					部門名
-				@endcomponent
+				{{--<?php--}}
+				{{--$users = ['株式会社キャリアデザインセンター','株式会社リゾーム','株式会社アシックス'];--}}
+				{{--?>--}}
+				{{--@component('components.elements.form.select.select', ['items'=>$users,'search'=>'true'])--}}
+					{{--部門名--}}
+				{{--@endcomponent--}}
 
 
 				<div class="row text-center">
