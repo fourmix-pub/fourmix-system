@@ -43,5 +43,10 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Contracts\Repositories\DepartmentRepositoryContract',
             'App\Repositories\DepartmentRepository'
         );
+        //日報レポジトリー契約登録
+        $this->app->bind(
+            'App\Contracts\Repositories\DailyRepositoryContract',
+            'App\Repositories\DailyRepository'
+        );
     }
 }

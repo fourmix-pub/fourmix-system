@@ -12,8 +12,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index');
-
 Route::get('/home', 'Daily\DailyController@index');
 /*
 |--------------------------------------------------------------------------
@@ -28,14 +26,15 @@ Route::get('/home', 'Daily\DailyController@index');
 |--------------------------------------------------------------------------
 */
 
-Route::group(['prefix' => 'daily', 'namespace' => 'Daily'], function () {
-
-    // 日報入力
-    Route::get('/', 'DailyController@index');
-    // 日報一覧
-    Route::get('/view', 'DailyController@view');
-    // 日報集計
-    Route::get('/total', 'DailyController@total');
+Route::group(['prefix' => 'dailies', 'namespace' => 'Dailies'], function () {
+//    // 日報一覧
+//    Route::get('/view', 'DailyController@view');
+//    // 日報集計
+//    Route::get('/total', 'DailyController@total');
+    //日報一覧
+    Route::resource('/', 'DailyController', ['except' => [
+        'create', 'edit', 'show',
+    ]]);
 });
 
 /*

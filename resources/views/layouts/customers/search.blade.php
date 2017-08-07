@@ -9,6 +9,7 @@
             @foreach($customersSelect as $customer)
                 <option value="{{ $customer->id }}" @if((int)$customerId === (int)$customer->id) selected @endif>{{ $customer->name }}</option>
             @endforeach
+
         @endcomponent
 
         @include('layouts.customers.customer-types', ['customer' => null])
