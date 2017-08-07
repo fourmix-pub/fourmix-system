@@ -2,7 +2,6 @@
     <form action="{{ route('customers.index') }}" class="form-horizontal" method="get">
 
         @component('components.elements.form.select', ['name' => 'customer_id'])
-
             @slot('label')
                 企業名
             @endslot

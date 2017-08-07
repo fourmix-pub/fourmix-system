@@ -4,7 +4,7 @@ namespace App\Http\Requests\Settings;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class WorkTypeRequest extends FormRequest
+class UserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,12 +23,8 @@ class WorkTypeRequest extends FormRequest
      */
     public function rules()
     {
-//        return [
-//            'name' => 'required|max:20',
-//            '' => '',
-//            '' => '',
-//            '' => '',
-//            '' => '',
-//        ];
+        return [
+            ''
+        ];
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Settings;
 
 use App\Contracts\Repositories\UserRepositoryContract;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -36,7 +37,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return response()->save($this->repository->create($request));
     }
 
     /**
@@ -47,7 +48,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -57,9 +58,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        return response()->update($this->repository->update($request, $user));
     }
 
     /**
@@ -68,8 +69,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        return response()->delete($user->delete());
     }
 }

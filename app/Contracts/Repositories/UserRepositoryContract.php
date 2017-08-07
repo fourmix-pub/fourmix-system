@@ -3,6 +3,8 @@
 namespace App\Contracts\Repositories;
 
 
+use App\User;
+
 interface UserRepositoryContract
 {
     /**
@@ -10,4 +12,19 @@ interface UserRepositoryContract
      * @return mixed
      */
     public function userResources();
+
+    /**
+     * 担当者更新契約.
+     * @param $request
+     * @param User $user
+     * @return mixed
+     */
+    public function update($request, User $user);
+
+    /**
+     * 担当者新規作成契約.
+     * @param $request
+     * @return mixed
+     */
+    public function create($request);
 }
