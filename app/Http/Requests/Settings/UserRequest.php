@@ -24,7 +24,12 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            ''
+            'name'   => 'required|max:225',
+            'email'    => 'required',
+            'department_id' => 'required',
+            'cost' => 'required|numeric',
+            'start' => 'required',
+            'end' => 'required',
         ];
     }
 }

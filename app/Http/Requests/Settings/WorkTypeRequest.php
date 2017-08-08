@@ -23,12 +23,8 @@ class WorkTypeRequest extends FormRequest
      */
     public function rules()
     {
-//        return [
-//            'name' => 'required|max:20',
-//            '' => '',
-//            '' => '',
-//            '' => '',
-//            '' => '',
-//        ];
+        return [
+            'name' => 'required|max:20',
+        ];
     }
 }

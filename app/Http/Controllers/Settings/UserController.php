@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Settings;
 
 use App\Contracts\Repositories\UserRepositoryContract;
+use App\Http\Requests\Settings\UserRequest;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -36,7 +37,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
         return response()->save($this->repository->create($request));
     }
@@ -60,7 +61,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(UserRequest $request, User $user)
     {
         return response()->update($this->repository->update($request, $user));
     }
