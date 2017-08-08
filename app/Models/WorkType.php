@@ -12,6 +12,5 @@ class WorkType extends Model
 
     public function Users()
     {
-
     }
 }

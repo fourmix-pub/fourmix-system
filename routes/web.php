@@ -27,7 +27,7 @@ Route::get('/home', 'Daily\DailyController@index');
 */
 
 Route::group(['prefix' => 'dailies', 'namespace' => 'Dailies'], function () {
-//    // 日報一覧
+    //    // 日報一覧
 //    Route::get('/view', 'DailyController@view');
 //    // 日報集計
 //    Route::get('/total', 'DailyController@total');
@@ -84,7 +84,7 @@ Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function () {
     ]]);
 
     Route::resource('users', 'UserController', ['except' => [
-        'create','show'
+        'create', 'show',
     ]]);
     //プロフィール変更
     Route::patch('/profile/{user}', 'UserController@updateProfile')->name('update-profile');
