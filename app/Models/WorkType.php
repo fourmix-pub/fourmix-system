@@ -9,9 +9,4 @@ class WorkType extends Model
 {
     use SoftDeletes;
     protected $dates = ['deleted_at'];
-
-    public function Users()
-    {
-
-    }
 }

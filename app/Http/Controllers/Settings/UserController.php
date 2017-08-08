@@ -14,6 +14,7 @@ class UserController extends Controller
     protected $repository;
 
     /**
+     * 担当者倉庫契約（インターフェース）
      * UserController constructor.
      */
     public function __construct(UserRepositoryContract $repository)
