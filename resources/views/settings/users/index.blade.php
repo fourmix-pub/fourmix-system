@@ -53,26 +53,35 @@
 			@endslot
 
 			@slot('tbody')
-				@foreach($usersSelect as $user)
+				@foreach($users as $user)
 				<tr>
 					<th scope="row">{{ $user->id }}</th>
 					<td>{{ $user->name }}</td>
 					<td align="right">{{ $user->cost }}</td>
-					<td>{{ $user->department_id }}</td>
-					<td>{{ $user->is_resignation }}</td>
+					<td>{{ $user->department->name }}</td>
+					<td align="center">
+						@if($user->is_resignation == 1)
+							<span class="glyphicon glyphicon-ok-circle" style="color: red; font-size: large;"></span>
+						@endif
+					</td>
 					<td>
-						{{--@include('layouts.users.edit')--}}
+						@include('layouts.users.edit')
 						@include('layouts.users.delete')
 					</td>
 				@endforeach
 			@endslot
 		@endcomponent
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
+				{{ $users->links() }}
+			</div>
+		</div>
+
 	</div>
 
-	{{-- スマホ版サイドメニュー --}}
 	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 		@include('layouts.content.setting.side-menu')
 	</div>
-
 </div>
 @endsection

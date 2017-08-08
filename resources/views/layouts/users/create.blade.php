@@ -37,15 +37,6 @@
         メールアドレス
     @endcomponent
 
-    @component('components.elements.form.pass', ['name' => 'password'])
-    パスワード
-    @endcomponent
-
-    {{-- TODO:実装 --}}
-    {{--@component('components.elements.form.pass', ['name' => 'password_confirmation'])--}}
-    {{--パスワード確認--}}
-    {{--@endcomponent--}}
-
     @component('components.elements.form.time',['title'=>'始業時間', 'time'=>'09:30', 'name'=>'start'])
     @endcomponent
 

@@ -71,6 +71,6 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        return response()->delete($user->delete());
+        return response()->delete($this->repository->delete($user));
     }
 }

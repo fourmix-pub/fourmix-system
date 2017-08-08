@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Models\Daily;
+use App\Models\Department;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -10,54 +12,14 @@ class User extends Authenticatable
     use Notifiable;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
-    /**
      * 作業日報　取得
      * 1対多.
      *
      * @return  \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function Dailies()
+    public function dailies()
     {
-        return $this->hasMany('App\Model\Daily', 'user_id', 'id');
-    }
-
-    /**
-     * プロジェクト　取得
-     * 1対多.
-     *
-     * @return  \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function Projects()
-    {
-        return $this->hasMany('App\Model\Projects', 'project_id', 'id');
-    }
-
-    /**
-     * 個人予算　取得
-     * 1対多.
-     *
-     * @return  \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function ProjectUsers()
-    {
-        return $this->hasMany('App\Model\ProjectUsers', 'user_id', 'id');
+        return $this->hasMany(Daily::class, 'user_id', 'id');
     }
 
     /**
@@ -66,8 +28,8 @@ class User extends Authenticatable
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function Department()
+    public function department()
     {
-        return $this->hasOne('App\Model\Department', 'id', 'department_id');
+        return $this->hasOne(Department::class, 'id', 'department_id');
     }
 }

@@ -27,4 +27,11 @@ interface UserRepositoryContract
      * @return mixed
      */
     public function create($request);
+
+    /**
+     * 担当者削除契約
+     * @param User $user
+     * @return mixed
+     */
+    public function delete(User $user);
 }

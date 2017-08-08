@@ -26,6 +26,8 @@ class UserRepository implements UserRepositoryContract
             $users = $users->where('department_id', $departmentId);
         }
 
+        $users = $users->paginate(10);
+
         $usersSelect = User::all();
 
         $departments = Department::all();
@@ -43,12 +45,10 @@ class UserRepository implements UserRepositoryContract
     {
         $user->name = $request->get('name');
         $user->email = $request->get('email');
-        $user->password = $request->get('password');
         $user->department_id = $request->get('department_id');
         $user->cost = $request->get('cost');
         $user->start = $request->get('start');
         $user->end = $request->get('end');
-        $user->is_resignation = $request->get('is_resignation');
 
         return $user->update();
     }
@@ -64,13 +64,24 @@ class UserRepository implements UserRepositoryContract
 
         $user->name = $request->get('name');
         $user->email = $request->get('email');
-        $user->password = $request->get('password');
+        $user->password = str_random(10);
         $user->department_id = $request->get('department_id');
         $user->cost = $request->get('cost');
         $user->start = $request->get('start');
         $user->end = $request->get('end');
-        $user->is_resignation = $request->get('is_resignation');
 
         return $user->save();
+    }
+
+    /**
+     * 担当者削除契約
+     * @param User $user
+     * @return mixed
+     */
+    public function delete(User $user)
+    {
+        $user->is_resignation = 1;
+
+        return $user->update();
     }
 }
