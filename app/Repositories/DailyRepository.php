@@ -2,11 +2,10 @@
 
 namespace App\Repositories;
 
-
-use App\Contracts\Repositories\DailyRepositoryContract;
 use App\Models\Daily;
 use App\Models\JobType;
 use App\Models\WorkType;
+use App\Contracts\Repositories\DailyRepositoryContract;
 
 class DailyRepository implements DailyRepositoryContract
 {

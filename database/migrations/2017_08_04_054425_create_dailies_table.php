@@ -22,8 +22,8 @@ class CreateDailiesTable extends Migration
             $table->date('date');
             $table->time('start');
             $table->time('end');
-            $table->double('rest',2,1);
-            $table->double('time',2,1);
+            $table->double('rest', 2, 1);
+            $table->double('time', 2, 1);
             $table->integer('cost');
             $table->text('note');
             $table->timestamps();

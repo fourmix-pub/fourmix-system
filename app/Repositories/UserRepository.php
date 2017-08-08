@@ -2,14 +2,12 @@
 
 namespace App\Repositories;
 
-
-use App\Contracts\Repositories\UserRepositoryContract;
-use App\Models\Department;
 use App\User;
+use App\Models\Department;
+use App\Contracts\Repositories\UserRepositoryContract;
 
 class UserRepository implements UserRepositoryContract
 {
-
     /**
      * 担当者リソース取得.
      * @return mixed
@@ -18,11 +16,11 @@ class UserRepository implements UserRepositoryContract
     {
         $users = User::latest();
 
-        if($userId = request('user_id')){
+        if ($userId = request('user_id')) {
             $users = $users->where('id', $userId);
         }
 
-        if($departmentId = request('department_id')){
+        if ($departmentId = request('department_id')) {
             $users = $users->where('department_id', $departmentId);
         }
 
@@ -32,7 +30,7 @@ class UserRepository implements UserRepositoryContract
 
         $departments = Department::all();
 
-        return compact('users','usersSelect', 'departments', 'userId', 'departmentId');
+        return compact('users', 'usersSelect', 'departments', 'userId', 'departmentId');
     }
 
     /**
