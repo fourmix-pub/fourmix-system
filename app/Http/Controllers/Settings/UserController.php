@@ -11,10 +11,14 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+
+    /**
+     * 担当者倉庫契約（インターフェース)
+     * @var UserRepositoryContract
+     */
     protected $repository;
 
     /**
-     * 担当者倉庫契約（インターフェース）
      * UserController constructor.
      */
     public function __construct(UserRepositoryContract $repository)
