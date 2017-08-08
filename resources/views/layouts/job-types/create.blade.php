@@ -12,9 +12,6 @@
         {{ route('job-types.store') }}
     @endslot
 
-    @slot('method')
-    @endslot
-
     @component('components.elements.form.text',['name'=>'name'])
         勤務分類名
     @endcomponent

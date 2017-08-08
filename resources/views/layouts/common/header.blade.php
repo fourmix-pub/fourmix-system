@@ -45,7 +45,10 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="{{ url('/config') }}">
+                                @php
+                                    $user = Auth::user();
+                                @endphp
+                                <a href="{{ route('users.edit', compact('user')) }}">
                                     プロフィール
                                 </a>
                             </li>
@@ -127,9 +130,9 @@
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="{{ url('/daily') }}" >日報作成</a></li>
-                            <li role="presentation"><a href="{{ url('/daily/view') }}">日報閲覧</a></li>
-                            <li role="presentation"><a href="{{ url('/daily/total') }}">集計</a></li>
+                            <li role="presentation"><a href="{{ url('/dailies') }}" >日報作成</a></li>
+                            <li role="presentation"><a href="{{ url('/dailies/view') }}">日報閲覧</a></li>
+                            <li role="presentation"><a href="{{ url('/dailies/total') }}">集計</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">
@@ -138,10 +141,10 @@
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="{{ url('/project') }}">プロジェクト一覧</a></li>
-                            <li role="presentation"><a href="{{ url('/project/personal-budget') }}">個人予算</a></li>
-                            <li role="presentation"><a href="{{ url('/project/ledger') }}">台帳</a></li>
-                            <li role="presentation"><a href="{{ url('/project/project-budget') }}">予算対</a></li>
+                            <li role="presentation"><a href="{{ url('/projects') }}">プロジェクト一覧</a></li>
+                            <li role="presentation"><a href="{{ url('/projects/personal-budget') }}">個人予算</a></li>
+                            <li role="presentation"><a href="{{ url('/projects/ledger') }}">台帳</a></li>
+                            <li role="presentation"><a href="{{ url('/projects/project-budget') }}">予算対</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">
@@ -174,7 +177,7 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="{{ url('/config') }}">
+                                <a href="{{ route('users.edit', compact('user')) }}">
                                     プロフィール
                                 </a>
                             </li>

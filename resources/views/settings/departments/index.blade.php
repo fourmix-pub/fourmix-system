@@ -38,7 +38,7 @@
         </div>
 
         {{-- 一覧 --}}
-        @component('components.elements.table.setting.table')
+        @component('components.elements.table.table')
 
             @slot('thead')
                 <th class="active">

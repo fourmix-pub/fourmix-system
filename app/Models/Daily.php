@@ -2,16 +2,17 @@
 
 namespace App\Models;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Department extends Model
+class Daily extends Model
 {
     use SoftDeletes;
     protected $dates = ['deleted_at'];
 
-    public function users()
+    public function user()
     {
-        return $this->hasMany('App\Users', 'id', 'user_id');
+        return $this->hasOne(User::class, 'id', 'user_id');
     }
 }

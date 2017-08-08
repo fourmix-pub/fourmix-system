@@ -5,7 +5,7 @@
                 {{ $slot }}
             </label>
             <div>
-                <input id="{{ $name }}" type="text" class="form-control" name="{{ $name }}">
+                <input id="{{ $name }}" type="text" class="form-control" name="{{ $name }}" value="{{ $value }}">
                 @include('layouts.common.error-one', ['field' => $name])
             </div>
         </div>

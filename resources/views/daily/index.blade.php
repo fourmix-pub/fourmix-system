@@ -145,57 +145,57 @@ $next_month = $month + 1;
 
 
 {{-- モーダル：編集ボタン --}}
-@component('components.elements.modal.update', ['title'=>'日報編集'])
-    @component('components.elements.form.modal.day')
-        日付
-    @endcomponent
+{{--@component('components.elements.modal.update', ['title'=>'日報編集'])--}}
+    {{--@component('components.elements.form.modal.day')--}}
+        {{--日付--}}
+    {{--@endcomponent--}}
 
-    @php
-        $projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];
-    @endphp
-    @component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])
-        プロジェクト名
-    @endcomponent
+    {{--@php--}}
+        {{--$projects = ['社内ログ管理システム','株式会社リゾーム','株式会社アシックス'];--}}
+    {{--@endphp--}}
+    {{--@component('components.elements.form.select.select', ['items'=>$projects,'search'=>'true'])--}}
+        {{--プロジェクト名--}}
+    {{--@endcomponent--}}
 
-    @php
-        $works = ['調査','分析','営業'];
-    @endphp
-    @component('components.elements.form.select.select', ['items'=>$works,'search'=>'true'])
-        作業分類
-    @endcomponent
+    {{--@php--}}
+        {{--$works = ['調査','分析','営業'];--}}
+    {{--@endphp--}}
+    {{--@component('components.elements.form.select.select', ['items'=>$works,'search'=>'true'])--}}
+        {{--作業分類--}}
+    {{--@endcomponent--}}
 
-    @component('components.elements.form.modal.time',['title'=>'開始','time'=>'09:30'])
-    @endcomponent
+    {{--@component('components.elements.form.modal.time',['title'=>'開始','time'=>'09:30'])--}}
+    {{--@endcomponent--}}
 
-    @component('components.elements.form.modal.time',['title'=>'終了','time'=>'18:30'])
-    @endcomponent
+    {{--@component('components.elements.form.modal.time',['title'=>'終了','time'=>'18:30'])--}}
+    {{--@endcomponent--}}
 
-    @php
-        $jobs = ['通常','残業','休日'];
-    @endphp
-    @component('components.elements.form.select.select', ['items'=>$jobs,'search'=>'true'])
-        勤務分類
-    @endcomponent
+    {{--@php--}}
+        {{--$jobs = ['通常','残業','休日'];--}}
+    {{--@endphp--}}
+    {{--@component('components.elements.form.select.select', ['items'=>$jobs,'search'=>'true'])--}}
+        {{--勤務分類--}}
+    {{--@endcomponent--}}
 
-    @component('components.elements.form.modal.text', ['name'=>'break'])
-        休憩
-    @endcomponent
+    {{--@component('components.elements.form.modal.text', ['name'=>'break'])--}}
+        {{--休憩--}}
+    {{--@endcomponent--}}
 
-    <div class="form-group">
-        <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label" for="staff">
-            備考欄
-        </label>
-        <div class="col-xs-12 col-xs-12 col-sm-8 col-md-8 col-lg-8">
-            <textarea name="note" rows="1" style="resize: vertical;" class="form-control" placeholder="備考欄">
-            </textarea>
-        </div>
-    </div>
-@endcomponent
+    {{--<div class="form-group">--}}
+        {{--<label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label" for="staff">--}}
+            {{--備考欄--}}
+        {{--</label>--}}
+        {{--<div class="col-xs-12 col-xs-12 col-sm-8 col-md-8 col-lg-8">--}}
+            {{--<textarea name="note" rows="1" style="resize: vertical;" class="form-control" placeholder="備考欄">--}}
+            {{--</textarea>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--@endcomponent--}}
 
 {{-- モーダル：削除ボタン --}}
-@component('components.elements.modal.delete',['title'=>'日報削除'])
-    2016/7/31の日報
-@endcomponent
+{{--@component('components.elements.modal.delete',['title'=>'日報削除'])--}}
+    {{--2016/7/31の日報--}}
+{{--@endcomponent--}}
 
 
 
@@ -258,8 +258,8 @@ $next_month = $month + 1;
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                 <div class="table-responsive">
-                    <table class="table table-bordered table-hover daily-table">
-                        <thead>
+                    @component('components.elements.table.table')
+                        @slot('thead')
                             <tr class="active">
                                 <th>日付</th>
                                 <th>プロジェクト名</th>
@@ -270,8 +270,8 @@ $next_month = $month + 1;
                                 <th>勤務分類</th>
                                 <th></th>
                             </tr>
-                            </thead>
-                        <tbody>
+                        @endslot
+                        @slot('tbody')
                             <tr>
                                 <td>2016/07/31</td>
                                 <td>コメダコーヒー</td>
@@ -280,8 +280,7 @@ $next_month = $month + 1;
                                 <td>20:00</td>
                                 <td align="right">60</td>
                                 <td align="center"><span class="label label-info">普通</span></td>
-                                @component('components.elements.table.admin.button')
-                                @endcomponent
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>2016/08/21</td>
@@ -291,8 +290,7 @@ $next_month = $month + 1;
                                 <td>20:00</td>
                                 <td align="right">60</td>
                                 <td align="center"><span class="label label-info">普通</span></td>
-                                @component('components.elements.table.admin.button')
-                                @endcomponent
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>2016/08/21</td>
@@ -302,8 +300,7 @@ $next_month = $month + 1;
                                 <td>20:00</td>
                                 <td align="right">60</td>
                                 <td align="center"><span class="label label-info">普通</span></td>
-                                @component('components.elements.table.admin.button')
-                                @endcomponent
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>2016/08/31</td>
@@ -313,8 +310,7 @@ $next_month = $month + 1;
                                 <td>20:00</td>
                                 <td align="right">60</td>
                                 <td align="center"><span class="label label-info">普通</span></td>
-                                @component('components.elements.table.admin.button')
-                                @endcomponent
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>2016/07/31</td>
@@ -324,8 +320,7 @@ $next_month = $month + 1;
                                 <td>20:00</td>
                                 <td align="right">60</td>
                                 <td align="center"><span class="label label-info">普通</span></td>
-                                @component('components.elements.table.admin.button')
-                                @endcomponent
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>2016/07/31</td>
@@ -335,8 +330,7 @@ $next_month = $month + 1;
                                 <td>20:00</td>
                                 <td align="right">60</td>
                                 <td align="center"><span class="label label-info">普通</span></td>
-                                @component('components.elements.table.admin.button')
-                                @endcomponent
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>2016/07/31</td>
@@ -346,8 +340,7 @@ $next_month = $month + 1;
                                 <td>20:00</td>
                                 <td align="right">60</td>
                                 <td align="center"><span class="label label-info">普通</span></td>
-                                @component('components.elements.table.admin.button')
-                                @endcomponent
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>2016/07/31</td>
@@ -357,8 +350,7 @@ $next_month = $month + 1;
                                 <td>20:00</td>
                                 <td align="right">60</td>
                                 <td align="center"><span class="label label-info">普通</span></td>
-                                @component('components.elements.table.admin.button')
-                                @endcomponent
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>2016/07/31</td>
@@ -368,8 +360,7 @@ $next_month = $month + 1;
                                 <td>20:00</td>
                                 <td align="right">60</td>
                                 <td align="center"><span class="label label-info">普通</span></td>
-                                @component('components.elements.table.admin.button')
-                                @endcomponent
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>2016/07/31</td>
@@ -379,11 +370,10 @@ $next_month = $month + 1;
                                 <td>20:00</td>
                                 <td align="right">60</td>
                                 <td align="center"><span class="label label-info">普通</span></td>
-                                @component('components.elements.table.admin.button')
-                                @endcomponent
+                                <td></td>
                             </tr>
-                        </tbody>
-                    </table>
+                        @endslot
+                    @endcomponent
                 </div>
             </div>
         </div>

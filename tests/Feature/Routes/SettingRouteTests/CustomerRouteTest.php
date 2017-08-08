@@ -30,6 +30,7 @@ class CustomerRouteTest extends TestCase
     }
 
     /**
+     * 表示できる.
      * @test
      */
     public function it_can_access_index()
@@ -40,6 +41,7 @@ class CustomerRouteTest extends TestCase
     }
 
     /**
+     * 追加できる.
      * @test
      */
     public function it_can_add()
@@ -49,7 +51,7 @@ class CustomerRouteTest extends TestCase
             'type_id' => 1,
         ];
         $response = $this->actingAs($this->user)->post('/settings/customers', array_merge($data, ['_token' => csrf_token()]));
-//        $this->assertDatabaseHas('customers', $data);
+        $this->assertDatabaseHas('customers', $data);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
     }
@@ -71,6 +73,7 @@ class CustomerRouteTest extends TestCase
     }
 
     /**
+     * 編集できる.
      * @test
      */
     public function it_can_edit()
@@ -102,6 +105,7 @@ class CustomerRouteTest extends TestCase
     }
 
     /**
+     * 削除できる.
      * @test
      */
     public function it_can_delete()
@@ -111,6 +115,7 @@ class CustomerRouteTest extends TestCase
     }
 
     /**
+     * 検索できる.
      * @test
      */
     public function it_can_search()

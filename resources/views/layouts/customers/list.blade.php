@@ -1,4 +1,4 @@
-@component('components.elements.table.setting.table')
+@component('components.elements.table.table')
     @slot('thead')
         <th>ID</th>
         <th>企業名</th>

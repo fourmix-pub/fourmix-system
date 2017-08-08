@@ -41,5 +41,10 @@
 
 	{{-- 一覧 --}}
 	@include('layouts.customers.list')
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
+			{{ $customers->links() }}
+		</div>
+	</div>
 @endcomponent
 @endsection

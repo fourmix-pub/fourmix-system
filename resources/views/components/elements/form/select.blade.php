@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="form-group{{ $errors->has($name) ? ' has-error' : '' }}">
-            <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label text-right" for="{{ $name }}">
+            <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label" for="{{ $name }}">
                 {{ $label }}
             </label>
             <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateDailiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,19 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('dailies', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 32);
-            $table->string('email', 255)->unique();
-            $table->string('password', 120);
-            $table->integer('department_id');
-            $table->integer('cost');
+            $table->integer('user_id');
+            $table->integer('work_type_id');
+            $table->integer('job_type_id');
+            $table->integer('project_id');
+            $table->date('date');
             $table->time('start');
             $table->time('end');
-            $table->boolean('is_resignation')->default(0)->nullable();
-            $table->rememberToken();
+            $table->double('rest', 2, 1);
+            $table->double('time', 2, 1);
+            $table->integer('cost');
+            $table->text('note');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -36,6 +38,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('dailies');
     }
 }
