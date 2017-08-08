@@ -30,7 +30,7 @@ class CustomerRouteTest extends TestCase
     }
 
     /**
-     * 表示できる
+     * 表示できる.
      * @test
      */
     public function it_can_access_index()
@@ -41,7 +41,7 @@ class CustomerRouteTest extends TestCase
     }
 
     /**
-     * 追加できる
+     * 追加できる.
      * @test
      */
     public function it_can_add()
@@ -73,7 +73,7 @@ class CustomerRouteTest extends TestCase
     }
 
     /**
-     * 編集できる
+     * 編集できる.
      * @test
      */
     public function it_can_edit()
@@ -105,7 +105,7 @@ class CustomerRouteTest extends TestCase
     }
 
     /**
-     * 削除できる
+     * 削除できる.
      * @test
      */
     public function it_can_delete()
@@ -115,7 +115,7 @@ class CustomerRouteTest extends TestCase
     }
 
     /**
-     * 検索できる
+     * 検索できる.
      * @test
      */
     public function it_can_search()

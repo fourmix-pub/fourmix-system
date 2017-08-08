@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Settings;
 
-use App\Contracts\Repositories\UserRepositoryContract;
-use App\Http\Requests\Settings\UserRequest;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\Settings\UserRequest;
+use App\Contracts\Repositories\UserRepositoryContract;
 
 class UserController extends Controller
 {
@@ -52,6 +52,7 @@ class UserController extends Controller
     public function edit()
     {
         $user = Auth::user();
+
         return view('settings.profile.index', compact('user'));
     }
 
