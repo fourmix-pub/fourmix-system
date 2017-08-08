@@ -74,13 +74,29 @@ class UserRepository implements UserRepositoryContract
     }
 
     /**
-     * 担当者削除契約
+     * 担当者削除契約.
      * @param User $user
      * @return mixed
      */
     public function delete(User $user)
     {
         $user->is_resignation = 1;
+
+        return $user->update();
+    }
+
+    /**
+     * プロフィール更新.
+     * @param $request
+     * @param User $user
+     * @return mixed
+     */
+    public function updateProfile($request, User $user)
+    {
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        $user->start = $request->get('start');
+        $user->end = $request->get('end');
 
         return $user->update();
     }

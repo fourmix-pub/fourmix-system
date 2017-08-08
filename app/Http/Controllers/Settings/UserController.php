@@ -6,6 +6,7 @@ use App\Contracts\Repositories\UserRepositoryContract;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -46,9 +47,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-
+        $user = Auth::user();
+        return view('settings.profile.index', compact('user'));
     }
 
     /**
@@ -61,6 +63,11 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         return response()->update($this->repository->update($request, $user));
+    }
+
+    public function updateProfile(Request $request, User $user)
+    {
+        return response()->update($this->repository->updateProfile($request, $user));
     }
 
     /**

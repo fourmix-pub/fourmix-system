@@ -22,6 +22,14 @@ interface UserRepositoryContract
     public function update($request, User $user);
 
     /**
+     * プロフィール更新契約.
+     * @param $request
+     * @param User $user
+     * @return mixed
+     */
+    public function updateProfile($request, User $user);
+
+    /**
      * 担当者新規作成契約.
      * @param $request
      * @return mixed

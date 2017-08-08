@@ -23,7 +23,7 @@ class CustomerRepository implements CustomerRepositoryContract
             $customers = $customers->where('type_id', $type_id);
         }
 
-        $customers = $customers->get();
+        $customers = $customers->paginate(10);
 
         $customersSelect = Customer::all();
 

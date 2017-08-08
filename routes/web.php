@@ -86,6 +86,8 @@ Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function () {
     Route::resource('users', 'UserController', ['except' => [
         'create','show'
     ]]);
+    //プロフィール変更
+    Route::patch('/profile/{user}', 'UserController@updateProfile')->name('update-profile');
 });
 
 /*
@@ -95,8 +97,6 @@ Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function () {
 */
 
 Route::group(['prefix' => 'config', 'namespace' => 'Config'], function () {
-    // プロフィール
-    Route::get('/', 'ConfigController@index');
     // パスワード変更
     Route::get('/password', 'ConfigController@resetPassword');
 });
