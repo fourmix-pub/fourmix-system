@@ -2,7 +2,6 @@
 
 namespace App\Contracts\Repositories;
 
-
 use App\User;
 
 interface UserRepositoryContract
@@ -37,7 +36,7 @@ interface UserRepositoryContract
     public function create($request);
 
     /**
-     * 担当者削除契約
+     * 担当者削除契約.
      * @param User $user
      * @return mixed
      */
