@@ -4,9 +4,6 @@ namespace Tests\Feature\Routes\SettingRouteTests;
 
 use App\User;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class UserRouteTest extends TestCase
 {
@@ -32,7 +29,7 @@ class UserRouteTest extends TestCase
     }
 
     /**
-     * 表示できる
+     * 表示できる.
      * @test
      */
     public function it_can_access_index()
@@ -43,7 +40,7 @@ class UserRouteTest extends TestCase
     }
 
     /**
-     * 追加できる
+     * 追加できる.
      * @test
      */
     public function it_can_add()
@@ -83,7 +80,7 @@ class UserRouteTest extends TestCase
     }
 
     /**
-     * 編集できる
+     * 編集できる.
      * @test
      */
     public function it_can_edit()
@@ -123,7 +120,7 @@ class UserRouteTest extends TestCase
     }
 
     /**
-     * 削除できる
+     * 削除できる.
      * @test
      */
     public function it_can_delete()
@@ -133,7 +130,7 @@ class UserRouteTest extends TestCase
     }
 
     /**
-     * 検索できる
+     * 検索できる.
      * @test
      */
     public function it_can_search()
@@ -144,11 +141,11 @@ class UserRouteTest extends TestCase
 
         $response = $this->actingAs($this->user)->get('/settings/users', array_merge($data, ['_token' => csrf_token()]));
         $this->assertDatabaseHas('users', $data);
-        $response->assertViewHasAll(['users', 'usersSelect', 'userId','departments', 'departmentId']);
+        $response->assertViewHasAll(['users', 'usersSelect', 'userId', 'departments', 'departmentId']);
     }
 
     /**
-     * プロフィールの編集画面に遷移できる
+     * プロフィールの編集画面に遷移できる.
      * @test
      */
     public function it_can_edit_profile()
@@ -159,12 +156,12 @@ class UserRouteTest extends TestCase
     }
 
     /**
-     * プロフィールを変更できる
+     * プロフィールを変更できる.
      * @test
      */
     public function it_can_change_profile()
     {
-        $data =[
+        $data = [
             'name' => 'テスト二郎',
             'email' => 'test33333@fourmix.co.jp',
             'start' => '09:30:00',

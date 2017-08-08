@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers\Dailies;
 
-use App\Contracts\Repositories\DailyRepositoryContract;
-use App\Contracts\Repositories\DepartmentRepositoryContract;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Contracts\Repositories\DailyRepositoryContract;
 
 class DailyController extends Controller
 {
     /**
-     * 日報倉庫契約
+     * 日報倉庫契約.
      * @var DailyRepositoryContract
      */
     protected $repository;

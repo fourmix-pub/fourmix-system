@@ -12,6 +12,6 @@ class Department extends Model
 
     public function users()
     {
-        return $this->hasMany('App\Users','id','user_id');
+        return $this->hasMany('App\Users', 'id', 'user_id');
     }
 }
