@@ -120,7 +120,7 @@ class UserRouteTest extends TestCase
     }
 
     /**
-     * 削除できる.
+     * 削除できる(退職).
      * @test
      */
     public function it_can_delete()

@@ -112,5 +112,7 @@ class DepartmentRouteTest extends TestCase
         $response = $this->actingAs($this->user)->delete('/settings/departments/'.$this->department->id);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
+        $this->assertSoftDeleted('departments', $this->department->toArray());
+
     }
 }

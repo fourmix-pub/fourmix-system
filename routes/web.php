@@ -64,8 +64,6 @@ Route::group(['prefix' => 'project', 'namespace' => 'Project'], function () {
 */
 
 Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function () {
-    //担当者
-    Route::get('/user', 'UserController@index');
     //作業分類
     Route::resource('work-types', 'WorkTypeController', ['except' => [
         'create', 'edit', 'show',
@@ -82,7 +80,7 @@ Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function () {
     Route::resource('customers', 'CustomerController', ['except' => [
         'create', 'edit', 'show',
     ]]);
-
+    //担当者一覧
     Route::resource('users', 'UserController', ['except' => [
         'create', 'show',
     ]]);
