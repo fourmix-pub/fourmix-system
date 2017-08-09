@@ -11,6 +11,11 @@ class Daily extends Model
     use SoftDeletes;
     protected $dates = ['deleted_at'];
 
+    /**
+     * 担当者 取得.
+     * 1対1.
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
     public function user()
     {
         return $this->hasOne(User::class, 'id', 'user_id');

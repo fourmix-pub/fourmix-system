@@ -19,6 +19,7 @@ class CreatePersonalBudgetsTable extends Migration
             $table->integer('budget');
             $table->timestamps();
             $table->softDeletes();
+            $table->primary(['project_id', 'user_id']);
         });
     }
 
