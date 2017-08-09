@@ -16,7 +16,7 @@ class DailySeeder extends Seeder
         for ($i = 0; $i < 60; $i++) {
             \App\Models\Daily::create([
                 'user_id' => rand(1, 31),
-                'work_type_id' => rand(1,20),
+                'work_type_id' => rand(1, 20),
                 'job_type_id' => rand(1, 3),
                 'project_id' => rand(1, 30),
                 'date' => '2017-10-08',
