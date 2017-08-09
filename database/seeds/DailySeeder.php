@@ -11,7 +11,7 @@ class DailySeeder extends Seeder
      */
     public function run()
     {
-        //        DB::table('departments')->delete();
+//        DB::table('dailies')->delete();
 //
 //        for ($i = 0; $i < 3; $i++) {
 //            \App\Models\Daily::create([

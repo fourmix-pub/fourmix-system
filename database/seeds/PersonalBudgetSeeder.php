@@ -15,7 +15,7 @@ class PersonalBudgetSeeder extends Seeder
 
         for ($i = 0; $i < 30; $i++) {
             App\Models\PersonalBudget::create([
-                'project_id'   => rand(1, 30),
+                'project_id'   => $i,
                 'user_id'    => rand(1, 30),
                 'budget' => rand(200000, 500000),
             ]);
