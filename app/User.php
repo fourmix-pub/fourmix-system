@@ -3,9 +3,9 @@
 namespace App;
 
 use App\Models\Daily;
+use App\Models\Project;
 use App\Models\Department;
 use App\Models\PersonalBudget;
-use App\Models\Project;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

@@ -11,7 +11,6 @@ class Department extends Model
     use SoftDeletes;
     protected $dates = ['deleted_at'];
 
-
     /**
      * 1対多.
      * 担当者 取得.
