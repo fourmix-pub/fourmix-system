@@ -16,7 +16,7 @@ class ProjectSeeder extends Seeder
         for ($i = 0; $i < 30; $i++) {
             App\Models\Project::create([
                 'name' => 'プロジェクト'.$i,
-                'customer_id' => rand(1, 21),
+                'customer_id' => $i,
                 'cost' => rand(200000, 500000),
                 'budget' => rand(200000, 500000),
                 'user_id' => rand(1, 31),
