@@ -13,12 +13,12 @@ class DailySeeder extends Seeder
     {
         DB::table('dailies')->delete();
 
-        for ($i = 0; $i < 60; $i++) {
+        for ($i = 1; $i < 21; $i++) {
             \App\Models\Daily::create([
-                'user_id' => rand(1, 31),
-                'work_type_id' => rand(1,20),
+                'user_id' => $i,
+                'work_type_id' => $i,
                 'job_type_id' => rand(1, 3),
-                'project_id' => rand(1, 30),
+                'project_id' => $i,
                 'date' => '2017-10-08',
                 'start' => '09:00:00',
                 'end' => '18:30:00',
