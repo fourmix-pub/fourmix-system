@@ -141,6 +141,33 @@ class RelationTest extends TestCase
     }
 
     /**
+     * 日報ID から 勤務分類取得.
+     * @test
+     */
+    public function daily_has_one_job_type()
+    {
+        $this->assertRelation(Daily::find(1)->jobType, JobType::class);
+    }
+
+    /**
+     * 日報ID から 作業分類取得.
+     * @test
+     */
+    public function daily_has_one_work_type()
+    {
+        $this->assertRelation(Daily::find(1)->workType, WorkType::class);
+    }
+
+    /**
+     * 日報ID から プロジェクト取得.
+     * @test
+     */
+    public function daily_has_one_project()
+    {
+        $this->assertRelation(Daily::find(1)->project, Project::class);
+    }
+
+    /**
      * 勤務分類ID から 日報取得.
      * @test
      */
