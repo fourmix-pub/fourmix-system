@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -18,6 +19,6 @@ class Department extends Model
      */
     public function users()
     {
-        return $this->hasMany('App\Users', 'id', 'user_id');
+        return $this->hasMany(User::class, 'id', 'user_id');
     }
 }

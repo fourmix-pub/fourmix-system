@@ -12,7 +12,7 @@ class Customer extends Model
 
     /**
      * プロジェクト 取得.
-     * 多対多.
+     * 1対多.
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function projects()

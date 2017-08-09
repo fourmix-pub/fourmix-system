@@ -22,6 +22,16 @@ class Project extends Model
     }
 
     /**
+     * 多対多.
+     * 担当者 取得
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'personal_budgets', 'user_id', 'project_id');
+    }
+
+    /**
      * 1対多.
      * 個人予算 取得.
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -42,12 +52,12 @@ class Project extends Model
     }
 
     /**
-     * 多対多.
+     * 1対1.
      * 顧客 取得.
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function customers()
+    public function customer()
     {
-        return $this->hasMany(Customer::class, 'project_id', 'id');
+        return $this->hasOne(Customer::class, 'id', 'customer_id');
     }
 }

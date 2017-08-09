@@ -24,7 +24,7 @@ class User extends Authenticatable
     }
 
     /**
-     * 部門 取得
+     * 部門 取得.
      * 1対1.
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
@@ -34,7 +34,7 @@ class User extends Authenticatable
     }
 
     /**
-     * 個人予算 取得
+     * 個人予算 取得.
      * 1対多.
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -44,12 +44,22 @@ class User extends Authenticatable
     }
 
     /**
-     * 個人予算 取得
+     * プロジェクト(責任者) 取得.
      * 1対多.
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function projects()
+    public function projectsFromManager()
     {
         return $this->hasMany(Project::class, 'user_id', 'id');
+    }
+
+    /**
+     * プロジェクト 取得.
+     * 多対多.
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function projects()
+    {
+        return $this->belongsToMany(Project::class, 'personal_budgets', 'project_id', 'user_id');
     }
 }
