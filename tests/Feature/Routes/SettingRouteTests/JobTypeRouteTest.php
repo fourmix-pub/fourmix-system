@@ -118,5 +118,6 @@ class JobTypeRouteTest extends TestCase
         $response = $this->actingAs($this->user)->delete('/settings/job-types/'.$this->jobType->id);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
+        $this->assertSoftDeleted('job_types', $this->jobType->toArray());
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDailiesTable extends Migration
+class CreateProjectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,18 @@ class CreateDailiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('dailies', function (Blueprint $table) {
+        Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->integer('work_type_id');
-            $table->integer('job_type_id');
-            $table->integer('project_id');
-            $table->date('date');
-            $table->time('start');
-            $table->time('end');
-            $table->integer('rest');
-            $table->double('time', 2, 1);
+            $table->string('name');
+            $table->integer('customer_id');
             $table->integer('cost');
+            $table->integer('budget');
+            $table->integer('user_id');
+            $table->date('start');
+            $table->date('end');
+            $table->date('end_expect');
             $table->text('note');
+            $table->integer('can_display');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -38,6 +37,6 @@ class CreateDailiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dailies');
+        Schema::dropIfExists('projects');
     }
 }
