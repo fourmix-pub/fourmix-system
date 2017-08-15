@@ -73,7 +73,7 @@ $factory->define(App\Models\Daily::class, function (Faker\Generator $faker) {
         'user_id'=> rand(1, 31),
         'work_type_id' => rand(1, 20),
         'job_type_id' => rand(1, 3),
-        'project_id' => rand(1,30),
+        'project_id' => rand(1, 30),
         'date' => '2017-10-08',
         'start' => '09:00:00',
         'end' => '18:30:00',
