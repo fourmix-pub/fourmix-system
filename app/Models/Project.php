@@ -12,7 +12,9 @@ class Project extends Model
     protected $dates = ['deleted_at'];
 
     /**
-     * 担当者取得.
+     * �
+     * 当�
+     * 取得.
      * 1対1.
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
@@ -23,7 +25,9 @@ class Project extends Model
 
     /**
      * 多対多.
-     * 担当者 取得
+     * �
+     * 当�
+     * 取得.
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function users()
