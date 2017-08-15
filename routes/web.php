@@ -36,7 +36,9 @@ Route::group(['prefix' => 'dailies', 'namespace' => 'Dailies'], function () {
         'create', 'edit', 'show',
     ]]);
     //日報閲覧
-    Route::get('/view','DailyController@view')->name('daily.view');
+    Route::get('/view', 'DailyController@view')->name('daily.view');
+    Route::patch('/view/{daily}', 'DailyController@update')->name('daily.view.update');
+    Route::delete('/view/{daily}', 'DailyController@destroy')->name('daily.view.destroy');
 });
 
 /*

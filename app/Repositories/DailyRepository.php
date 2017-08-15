@@ -29,21 +29,39 @@ class DailyRepository implements DailyRepositoryContract
             $dailies = $dailies->where('project_id', $projectId);
         }
 
-        if($departmentId = request('department_id')){
-            $dailies = $dailies->where('department_id', $departmentId);
-        }
-
         if($workTypeId = request('work_type_id')){
             $dailies = $dailies->where('work_type_id', $workTypeId);
+        }
+
+        if($startDate = request('start_date')){
+            $dailies = $dailies->where('date', '>=', $startDate);
+        }
+
+        if($endDate = request('end_date')){
+            $dailies = $dailies->where('date', '<=', $endDate);
         }
 
         $dailies = $dailies->paginate(10);
         $users = User::all();
         $projects = Project::all();
-        $departments = Department::all();
         $workTypes = WorkType::all();
-        $jobTypes = JobType::all();
 
-        return compact('dailies', 'dailiesSelect', 'users', 'userId', 'projects', 'projectId', 'departments', 'departmentId', 'workTypes', 'workTypeId','jobTypes');
+        return compact('dailies', 'dailiesSelect', 'users', 'userId', 'projects', 'projectId', 'workTypes', 'workTypeId', 'startDate', 'endDate');
+    }
+
+    /**
+     * 日報更新.
+     * @return mixed
+     */
+    public function update($request, Daily $daily)
+    {
+        $daily->date = $request->get('date');
+        $daily->project_id = $request->get('project_id');
+        $daily->work_type_id = $request->get('work_type_id');
+        $daily->time = $request->get('time');
+        $daily->cost = $request->get('cost');
+        $daily->note = $request->get('note');
+
+        return $daily->update();
     }
 }
