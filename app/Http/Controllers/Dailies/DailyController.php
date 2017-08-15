@@ -11,7 +11,7 @@ use App\Contracts\Repositories\DailyRepositoryContract;
 class DailyController extends Controller
 {
     /**
-     * 日報倉庫契約.
+     * 日報倉庫契約（インターフェース）.
      * @var DailyRepositoryContract
      */
     protected $repository;

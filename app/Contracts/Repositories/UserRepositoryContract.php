@@ -7,16 +7,12 @@ use App\User;
 interface UserRepositoryContract
 {
     /**
-     * �
-     * 当�
      * リソース取得契約.
      * @return mixed
      */
     public function userResources();
 
     /**
-     * �
-     * 当�
      * 更新契約.
      * @param $request
      * @param User $user
@@ -33,8 +29,6 @@ interface UserRepositoryContract
     public function updateProfile($request, User $user);
 
     /**
-     * �
-     * 当�
      * 新規作成契約.
      * @param $request
      * @return mixed
@@ -42,8 +36,6 @@ interface UserRepositoryContract
     public function create($request);
 
     /**
-     * �
-     * 当�
      * 削除契約.
      * @param User $user
      * @return mixed

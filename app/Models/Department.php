@@ -13,9 +13,7 @@ class Department extends Model
 
     /**
      * 1対多.
-     * �
-     * 当�
-     * 取得.
+     * 担当者取得.
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function users()
