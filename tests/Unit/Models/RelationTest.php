@@ -15,7 +15,9 @@ use App\Models\PersonalBudget;
 class RelationTest extends TestCase
 {
     /**
-     * 担当者ID から 日報取得.
+     * �
+     * 当�
+     * ID から 日報取得.
      * @test
      */
     public function user_has_many_dailies()
@@ -26,7 +28,9 @@ class RelationTest extends TestCase
     }
 
     /**
-     * 担当者ID から 部門取得.
+     * �
+     * 当�
+     * ID から 部門取得.
      * @test
      */
     public function user_has_one_department()
@@ -35,7 +39,9 @@ class RelationTest extends TestCase
     }
 
     /**
-     * 担当者ID から 個人予算取得.
+     * �
+     * 当�
+     * ID から 個人予算取得.
      * @test
      */
     public function user_has_many_personal_budgets()
@@ -46,7 +52,10 @@ class RelationTest extends TestCase
     }
 
     /**
-     * 担当者ID(責任者) から プロジェクト取得.
+     * �
+     * 当�
+     * ID(責任�
+     * ) から プロジェクト取得.
      * @test
      */
     public function manager_has_many_projects()
@@ -57,7 +66,9 @@ class RelationTest extends TestCase
     }
 
     /**
-     * 担当者ID から プロジェクト取得.
+     * �
+     * 当�
+     * ID から プロジェクト取得.
      * @test
      */
     public function user_has_many_projects()
@@ -68,7 +79,10 @@ class RelationTest extends TestCase
     }
 
     /**
-     * プロジェクトID から 担当者(責任者)取得.
+     * プロジェクトID から �
+     * 当�
+     * (責任�
+     * )取得.
      * @test
      */
     public function project_has_one_user()
@@ -77,7 +91,9 @@ class RelationTest extends TestCase
     }
 
     /**
-     * プロジェクトID から 担当者取得.
+     * プロジェクトID から �
+     * 当�
+     * 取得.
      * @test
      */
     public function project_has_many_users()
@@ -130,7 +146,9 @@ class RelationTest extends TestCase
     }
 
     /**
-     * 日報ID から 担当者取得.
+     * 日報ID から �
+     * 当�
+     * 取得.
      * @test
      */
     public function daily_has_one_user()
@@ -188,7 +206,9 @@ class RelationTest extends TestCase
     }
 
     /**
-     * 部門ID から 担当者取得.
+     * 部門ID から �
+     * 当�
+     * 取得.
      * @test
      */
     public function department_has_many_users()
@@ -199,7 +219,9 @@ class RelationTest extends TestCase
     }
 
     /**
-     * 個人予算のID から 担当者取得.
+     * 個人予算のID から �
+     * 当�
+     * 取得.
      * @test
      */
     public function personal_budget_has_one_user()
