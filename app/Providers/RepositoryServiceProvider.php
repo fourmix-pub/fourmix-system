@@ -53,5 +53,10 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Contracts\Repositories\DailyRepositoryContract',
             'App\Repositories\DailyRepository'
         );
+        //プロジェクトレポジトリー契約
+        $this->app->bind(
+            'App\Contracts\Repositories\ProjectRepositoryContract',
+            'App\Repositories\ProjectRepository'
+        );
     }
 }
