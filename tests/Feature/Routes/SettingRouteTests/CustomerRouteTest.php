@@ -112,6 +112,7 @@ class CustomerRouteTest extends TestCase
     {
         $response = $this->actingAs($this->user)->delete('/settings/customers/'.$this->customer->id);
         $response->assertStatus(302);
+        $response->assertSessionHas('status');
         $this->assertSoftDeleted('customers', $this->customer->toArray());
     }
 
