@@ -49,7 +49,7 @@ class DailyViewRouteTest extends TestCase
     {
         $data = [
             'work_type_id' => rand(1, 20),
-            'project_id' => rand(1,30),
+            'project_id' => rand(1, 30),
             'date' => '2016-10-08',
             'time' => 8,
             'cost' => 6000,
@@ -70,7 +70,7 @@ class DailyViewRouteTest extends TestCase
     {
         $data = [
             'work_type_id' => rand(1, 20),
-            'project_id' => rand(1,30),
+            'project_id' => rand(1, 30),
             'date' => '',
             'time' => 8,
             'cost' => 6000,

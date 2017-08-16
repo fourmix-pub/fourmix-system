@@ -21,23 +21,23 @@ class DailyRepository implements DailyRepositoryContract
         $dailies = Daily::latest();
         $dailiesSelect = Daily::all();
 
-        if($userId = request('user_id')){
+        if ($userId = request('user_id')) {
             $dailies = $dailies->where('user_id', $userId);
         }
 
-        if($projectId = request('project_id')){
+        if ($projectId = request('project_id')) {
             $dailies = $dailies->where('project_id', $projectId);
         }
 
-        if($workTypeId = request('work_type_id')){
+        if ($workTypeId = request('work_type_id')) {
             $dailies = $dailies->where('work_type_id', $workTypeId);
         }
 
-        if($startDate = request('start_date')){
+        if ($startDate = request('start_date')) {
             $dailies = $dailies->where('date', '>=', $startDate);
         }
 
-        if($endDate = request('end_date')){
+        if ($endDate = request('end_date')) {
             $dailies = $dailies->where('date', '<=', $endDate);
         }
 
