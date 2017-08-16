@@ -20,4 +20,34 @@ class Daily extends Model
     {
         return $this->hasOne(User::class, 'id', 'user_id');
     }
+
+    /**
+     * プロジェクト取得.
+     * 1対1.
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function project()
+    {
+        return $this->hasOne(Project::class, 'id', 'project_id');
+    }
+
+    /**
+     * 作業分類取得.
+     * 1対1.
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function workType()
+    {
+        return $this->hasOne(WorkType::class, 'id', 'work_type_id');
+    }
+
+    /**
+     * 勤務分類取得.
+     * 1対1.
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function jobType()
+    {
+        return $this->hasOne(JobType::class, 'id', 'job_type_id');
+    }
 }

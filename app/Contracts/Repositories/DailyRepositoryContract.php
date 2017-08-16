@@ -2,6 +2,8 @@
 
 namespace App\Contracts\Repositories;
 
+use App\Models\Daily;
+
 interface DailyRepositoryContract
 {
     /**
@@ -9,4 +11,10 @@ interface DailyRepositoryContract
      * @return mixed
      */
     public function dailyResources();
+
+    /**
+     * 日報更新契約.
+     * @return mixed
+     */
+    public function update($request, Daily $daily);
 }

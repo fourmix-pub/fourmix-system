@@ -5,6 +5,7 @@
             <div class="col-xs-12 col-xs-12 col-sm-9 col-md-9 col-lg-9">
                 <div class='input-group time'>
                     <input type='text' class="form-control" value="{{ $time }}" name="{{ $name }}" />
+                    @include('layouts.common.error-one', ['field' => $name])
                     <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
                 </div>
             </div>

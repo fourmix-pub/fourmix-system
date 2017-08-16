@@ -3,7 +3,6 @@
         <div class="form-group{{ $errors->has($name) ? ' has-error' : '' }}">
              <label class="col-xs-12 col-md-3 col-sm-3 col-lg-3 control-label" for="staff">
                  {{ $slot }}
-                 <span class="text-danger">*</span>
              </label>
              <div class="col-xs-12 col-md-9 col-sm-9 col-lg-9">
                  <input type="text" class="form-control" id="staff" name="{{ $name }}" value="{{ $value ?? '' }}">
