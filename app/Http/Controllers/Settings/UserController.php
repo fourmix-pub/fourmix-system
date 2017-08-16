@@ -12,9 +12,7 @@ use App\Contracts\Repositories\UserRepositoryContract;
 class UserController extends Controller
 {
     /**
-     * �
-     * 当�
-     * 倉庫契約（インターフェース).
+     * 担当者倉庫契約（インターフェース).
      * @var UserRepositoryContract
      */
     protected $repository;

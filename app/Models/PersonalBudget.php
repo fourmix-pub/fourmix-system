@@ -13,9 +13,7 @@ class PersonalBudget extends Model
 
     /**
      * 1対1.
-     * �
-     * 当�
-     * 取得.
+     * 担当者取得.
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function user()
