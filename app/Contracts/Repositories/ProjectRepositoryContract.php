@@ -22,7 +22,7 @@ interface ProjectRepositoryContract
     public function update($request, Project $project);
 
     /**
-     * プロジェクト新規作成
+     * プロジェクト新規作成契約.
      * @param $request
      * @return mixed
      */

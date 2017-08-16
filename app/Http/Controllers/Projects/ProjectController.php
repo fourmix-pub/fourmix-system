@@ -11,7 +11,7 @@ use App\Http\Controllers\Controller;
 class ProjectController extends Controller
 {
     /**
-     * プロジェクト倉庫契約.
+     * プロジェクト倉庫契約（インンターフェース）.
      * @var ProjectRepositoryContract
      */
     protected $repository;

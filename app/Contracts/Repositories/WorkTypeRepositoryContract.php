@@ -7,13 +7,13 @@ use App\Models\WorkType;
 interface WorkTypeRepositoryContract
 {
     /**
-     * 作業分類リソース取得契約.
+     * 作業分類資源取得契約.
      * @return mixed
      */
     public function workTypeResources();
 
     /**
-     * 更新契約.
+     * 作業分類更新契約.
      * @param $request
      * @param WorkType $workType
      * @return mixed
@@ -21,7 +21,7 @@ interface WorkTypeRepositoryContract
     public function update($request, WorkType $workType);
 
     /**
-     * 新規作成契約.
+     * 作業分類新規作成契約.
      * @param $request
      * @return mixed
      */

@@ -7,7 +7,7 @@ use App\Models\Daily;
 interface DailyRepositoryContract
 {
     /**
-     * 日報リソース取得契約.
+     * 日報資源取得契約.
      * @return mixed
      */
     public function dailyResources();
