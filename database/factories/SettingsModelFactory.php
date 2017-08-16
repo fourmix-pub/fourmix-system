@@ -93,7 +93,7 @@ $factory->define(App\Models\Project::class, function (Faker\Generator $faker) {
         'customer_id' => rand(1, 20),
         'cost' => rand(2000000, 3000000),
         'budget' => rand(2000000, 3000000),
-        'user_id' => rand(1,31),
+        'user_id' => rand(1, 31),
         'start' => '2017-10-08',
         'end' => null,
         'end_expect' => '2017-12-08',

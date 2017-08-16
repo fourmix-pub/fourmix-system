@@ -2,7 +2,6 @@
 
 namespace App\Repositories;
 
-
 use App\Contracts\Repositories\ProjectRepositoryContract;
 use App\Models\Customer;
 use App\Models\Project;
@@ -19,15 +18,15 @@ class ProjectRepository implements ProjectRepositoryContract
     {
         $projects = Project::latest();
 
-        if($projectId = request('project_id')){
+        if ($projectId = request('project_id')) {
             $projects = $projects->where('id', $projectId);
         }
 
-        if($customerId = request('customer_id')){
+        if ($customerId = request('customer_id')) {
             $projects = $projects->where('customer_id', $customerId);
         }
 
-        if($userId = request('user_id')){
+        if ($userId = request('user_id')) {
             $projects = $projects->where('user_id', $userId);
         }
 
@@ -39,9 +38,9 @@ class ProjectRepository implements ProjectRepositoryContract
             $projects = $projects->where('end', '<=', $endDate);
         }
 
-        if ($status = request('status') AND $status == 'finished') {
+        if ($status = request('status') and $status == 'finished') {
             $projects = $projects->where('end', '<>', null);
-        } else if ($status == 'unfinished') {
+        } elseif ($status == 'unfinished') {
             $projects = $projects->where('end', null);
         }
 
@@ -53,7 +52,7 @@ class ProjectRepository implements ProjectRepositoryContract
         $users = User::all();
         $customers = Customer::all();
 
-        return compact('projects','projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status');
+        return compact('projects', 'projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status');
     }
 
     /**
