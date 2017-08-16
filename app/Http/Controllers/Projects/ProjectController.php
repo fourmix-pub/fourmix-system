@@ -42,7 +42,7 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return response()->save($this->repository->create($request));
     }
 
     /**

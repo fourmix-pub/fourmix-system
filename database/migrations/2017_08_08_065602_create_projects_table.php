@@ -24,7 +24,7 @@ class CreateProjectsTable extends Migration
             $table->date('end');
             $table->date('end_expect');
             $table->text('note');
-            $table->integer('can_display');
+            $table->integer('can_display')->default(0)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

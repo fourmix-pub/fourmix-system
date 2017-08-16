@@ -20,4 +20,11 @@ interface ProjectRepositoryContract
      * @return mixed
      */
     public function update($request, Project $project);
+
+    /**
+     * プロジェクト新規作成
+     * @param $request
+     * @return mixed
+     */
+    public function create($request);
 }
