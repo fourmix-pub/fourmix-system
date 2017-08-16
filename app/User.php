@@ -44,8 +44,7 @@ class User extends Authenticatable
     }
 
     /**
-     * プロジェクト(責任�
-     * ) 取得.
+     * プロジェクト(責任者) 取得.
      * 1対多.
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */

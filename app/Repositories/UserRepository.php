@@ -9,9 +9,7 @@ use App\Contracts\Repositories\UserRepositoryContract;
 class UserRepository implements UserRepositoryContract
 {
     /**
-     * �
-     * 当�
-     * リソース取得.
+     * 担当者リソース取得.
      * @return mixed
      */
     public function userResources()
@@ -36,9 +34,7 @@ class UserRepository implements UserRepositoryContract
     }
 
     /**
-     * �
-     * 当�
-     * 更新.
+     * 担当者更新.
      * @param $request
      * @param User $user
      * @return mixed
@@ -56,9 +52,7 @@ class UserRepository implements UserRepositoryContract
     }
 
     /**
-     * �
-     * 当�
-     * 新規作成.
+     * 担当者新規作成.
      * @param $request
      * @return mixed
      */
@@ -78,9 +72,7 @@ class UserRepository implements UserRepositoryContract
     }
 
     /**
-     * �
-     * 当�
-     * 削除.
+     * 担当者削除.
      * @param User $user
      * @return mixed
      */
