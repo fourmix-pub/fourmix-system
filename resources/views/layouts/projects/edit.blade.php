@@ -19,9 +19,18 @@
     <div class="form-group">
         <label class="col-xs-3 control-label" for="non-display_flag">非表示フラグ</label>
         <div class="col-xs-8 checkbox" style="margin-left: 20px;">
-            <input type="checkbox" value="1">
+            <input type="checkbox" name="can_display" value="1">
         </div>
     </div>
+
+    @component('components.elements.form.select', ['name' => 'customer_id'])
+        @slot('label')
+            顧客名
+        @endslot
+        @foreach($customers as $customer)
+            <option value="{{ $customer->id }}" @if($customer->id == $project->customer_id) selected @endif>{{ $customer->name }}</option>
+        @endforeach
+    @endcomponent
 
     @component('components.elements.form.select', ['name' => 'user_id'])
         @slot('label')

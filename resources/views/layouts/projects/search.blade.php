@@ -10,6 +10,15 @@
             @endforeach
         @endcomponent
 
+        @component('components.elements.form.select', ['name' => 'customer_id'])
+            @slot('label')
+                顧客名
+            @endslot
+            @foreach($customers as $customer)
+                <option value="{{ $customer->id }}" @if((int)$customerId === (int)$customer->id) selected @endif>{{ $customer->name }}</option>
+            @endforeach
+        @endcomponent
+
         @component('components.elements.form.select', ['name' => 'user_id'])
             @slot('label')
                 責任者名
@@ -25,13 +34,13 @@
 
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                 <label class="radio-inline">
-                    <input type="radio" name="project_status" value="">全て
+                    <input type="radio" name="status" value="all" @if($status == 'all') checked @endif>全て
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="project_status" value="">完了
+                    <input type="radio" name="status" value="finished" @if($status == 'finished') checked @endif>完了
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="project_status" value="">未完了
+                    <input type="radio" name="status" value="unfinished" @if($status == 'unfinished') checked @endif>未完了
                 </label>
             </div>
         </div>

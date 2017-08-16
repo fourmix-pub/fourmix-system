@@ -7,7 +7,6 @@
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <div class='input-group day'>
                     <input type='text' class="form-control" value="{{ $valueStart ?? '' }}" name="start_date" placeholder="開始日" />
-                    @include('layouts.common.error-one', ['field' => $name])
                     <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar">
                     </span></span>
@@ -19,7 +18,6 @@
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <div class='input-group day'>
                     <input type='text' class="form-control" value="{{ $valueEnd ?? '' }}" name="end_date" placeholder="終了日" />
-                    @include('layouts.common.error-one', ['field' => $name])
                     <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar">
                     </span></span>

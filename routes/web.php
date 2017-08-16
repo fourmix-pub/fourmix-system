@@ -26,15 +26,15 @@ Route::get('/home', 'Daily\DailyController@index');
 |--------------------------------------------------------------------------
 */
 
-Route::group(['prefix' => 'dailies', 'namespace' => 'Dailies'], function () {
+Route::group(['namespace' => 'Dailies'], function () {
     //日報一覧
-    Route::resource('/', 'DailyController', ['except' => [
+    Route::resource('dailies', 'DailyController', ['except' => [
         'create', 'edit', 'show',
     ]]);
     //日報閲覧
-    Route::get('/view', 'DailyController@view')->name('daily.view');
-    Route::patch('/view/{daily}', 'DailyController@update')->name('daily.view.update');
-    Route::delete('/view/{daily}', 'DailyController@destroy')->name('daily.view.destroy');
+    Route::get('dailies/view', 'DailyController@view')->name('daily.view');
+    Route::patch('dailies/view/{daily}', 'DailyController@update')->name('daily.view.update');
+    Route::delete('dailies/view/{daily}', 'DailyController@destroy')->name('daily.view.destroy');
 });
 
 /*
@@ -44,7 +44,7 @@ Route::group(['prefix' => 'dailies', 'namespace' => 'Dailies'], function () {
 |--------------------------------------------------------------------------
 */
 
-Route::group(['prefix' => 'projects', 'namespace' => 'Projects'], function () {
+Route::group(['namespace' => 'Projects'], function () {
     Route::resource('projects', 'ProjectController', ['expect' => [
         'create', 'edit', 'show',
     ]]);

@@ -23,6 +23,10 @@ class ProjectRepository implements ProjectRepositoryContract
             $projects = $projects->where('id', $projectId);
         }
 
+        if($customerId = request('customer_id')){
+            $projects = $projects->where('customer_id', $customerId);
+        }
+
         if($userId = request('user_id')){
             $projects = $projects->where('user_id', $userId);
         }
@@ -35,13 +39,21 @@ class ProjectRepository implements ProjectRepositoryContract
             $projects = $projects->where('end', '<=', $endDate);
         }
 
+        if ($status = request('status') AND $status == 'finished') {
+            $projects = $projects->where('end', '<>', null);
+        } else if ($status == 'unfinished') {
+            $projects = $projects->where('end', null);
+        }
+
+        $projects = $projects->where('can_display', 0);
+
         $projects = $projects->paginate(10);
 
         $projectsSelect = Project::all();
         $users = User::all();
         $customers = Customer::all();
 
-        return compact('projects','projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers');
+        return compact('projects','projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status');
     }
 
     /**
@@ -53,6 +65,7 @@ class ProjectRepository implements ProjectRepositoryContract
     public function update($request, Project $project)
     {
         $project->name = $request->get('name');
+        $project->customer_id = $request->get('customer_id');
         $project->user_id = $request->get('user_id');
         $project->cost = $request->get('cost');
         $project->budget = $request->get('budget');
@@ -60,6 +73,9 @@ class ProjectRepository implements ProjectRepositoryContract
         $project->end_expect = $request->get('end_expect');
         $project->end = $request->get('end');
         $project->note = $request->get('note');
+        if ($request->get('can_display') === 1) {
+            $project->can_display = $request->get('can_display');
+        }
 
         return $project->update();
     }

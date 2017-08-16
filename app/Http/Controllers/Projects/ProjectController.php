@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Projects;
 
 use App\Contracts\Repositories\ProjectRepositoryContract;
+use App\Http\Requests\Settings\ProjectRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -40,7 +41,7 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProjectRequest $request)
     {
         return response()->save($this->repository->create($request));
     }
@@ -52,7 +53,7 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Project $project)
+    public function update(ProjectRequest $request, Project $project)
     {
         return response()->update($this->repository->update($request, $project));
     }

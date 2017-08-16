@@ -21,9 +21,9 @@ class CreateProjectsTable extends Migration
             $table->integer('budget');
             $table->integer('user_id');
             $table->date('start');
-            $table->date('end');
+            $table->date('end')->default(null)->nullable();
             $table->date('end_expect');
-            $table->text('note');
+            $table->text('note')->default(null)->nullable();
             $table->integer('can_display')->default(0)->nullable();
             $table->timestamps();
             $table->softDeletes();
