@@ -34,7 +34,8 @@ class DailyController extends Controller
         return view('daily.index', $this->repository->dailyResources());
     }
 
-    public function view(){
+    public function view()
+    {
         return view('daily.view', $this->repository->dailyResources());
     }
 
