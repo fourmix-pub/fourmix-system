@@ -12,7 +12,7 @@ class Daily extends Model
     protected $dates = ['deleted_at'];
 
     /**
-     * 担当者取得.
+     * 担当者 取得.
      * 1対1.
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
@@ -26,8 +26,7 @@ class Daily extends Model
      * 1対1.
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function project()
-    {
+    public function project(){
         return $this->hasOne(Project::class, 'id', 'project_id');
     }
 
@@ -36,8 +35,7 @@ class Daily extends Model
      * 1対1.
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function workType()
-    {
+    public function workType(){
         return $this->hasOne(WorkType::class, 'id', 'work_type_id');
     }
 
@@ -46,8 +44,7 @@ class Daily extends Model
      * 1対1.
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function jobType()
-    {
+    public function jobType(){
         return $this->hasOne(JobType::class, 'id', 'job_type_id');
     }
 }

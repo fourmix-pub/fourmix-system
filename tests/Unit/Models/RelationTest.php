@@ -2,15 +2,17 @@
 
 namespace Tests\Unit\Models;
 
+use App\Models\Customer;
+use App\Models\Daily;
+use App\Models\Department;
+use App\Models\JobType;
+use App\Models\PersonalBudget;
+use App\Models\Project;
+use App\Models\WorkType;
 use App\User;
 use Tests\TestCase;
-use App\Models\Daily;
-use App\Models\JobType;
-use App\Models\Project;
-use App\Models\Customer;
-use App\Models\WorkType;
-use App\Models\Department;
-use App\Models\PersonalBudget;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class RelationTest extends TestCase
 {
