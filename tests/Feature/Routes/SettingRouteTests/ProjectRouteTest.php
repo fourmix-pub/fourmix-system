@@ -101,16 +101,46 @@ class ProjectRouteTest extends TestCase
     }
 
     /**
-     * 検索できる.
+     * 担当者IDによって検索できる.
      * @test
      */
-    public function it_can_search()
+    public function it_can_search_by_user_id()
     {
         $data = [
             'user_id' => 1,
         ];
 
-        $response = $this->actingAs($this->user)->get('/projects', array_merge($data, ['_token' => csrf_token()]));
+        $response = $this->actingAs($this->user)->get('/projects', array_merge($data));
+        $this->assertDatabaseHas('projects', $data);
+        $response->assertViewHasAll(['projects', 'projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status']);
+    }
+
+    /**
+     * 顧客IDによって検索できる.
+     * @test
+     */
+    public function it_can_search_by_period()
+    {
+        $data = [
+            'customer_id' => 1,
+        ];
+
+        $response = $this->actingAs($this->user)->get('/projects', array_merge($data));
+        $this->assertDatabaseHas('projects', $data);
+        $response->assertViewHasAll(['projects', 'projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status']);
+    }
+
+    /**
+     * 表示区分によって検索できる.
+     * @test
+     */
+    public function it_can_search_by_status()
+    {
+        $data = [
+            'end' => null
+        ];
+
+        $response = $this->actingAs($this->user)->get('/projects', array_merge($data));
         $this->assertDatabaseHas('projects', $data);
         $response->assertViewHasAll(['projects', 'projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status']);
     }
