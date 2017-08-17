@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Contracts\Repositories\ProjectRepositoryContract;
 use App\Models\Customer;
+use App\Models\Daily;
 use App\Models\Project;
 use Illuminate\Foundation\Auth\User;
 use PhpParser\ParserTest;
@@ -99,5 +100,50 @@ class ProjectRepository implements ProjectRepositoryContract
         $project->note = $request->get('note');
 
         return $project->save();
+    }
+
+    /**
+     * プロジェクト台帳資源取得.
+     * @return mixed
+     */
+    public function details()
+    {
+        $projects = Project::latest();
+
+        if ($projectId = request('project_id')) {
+            $projects = $projects->where('id', $projectId);
+        }
+
+        if ($customerId = request('customer_id')) {
+            $projects = $projects->where('customer_id', $customerId);
+        }
+
+        if ($userId = request('user_id')) {
+            $projects = $projects->where('user_id', $userId);
+        }
+
+        if ($startDate = request('start_date')) {
+            $projects = $projects->where('start', '>=', $startDate);
+        }
+
+        if ($endDate = request('end_date')) {
+            $projects = $projects->where('end', '<=', $endDate);
+        }
+
+        if ($status = request('status') and $status == 'finished') {
+            $projects = $projects->where('end', '<>', null);
+        } elseif ($status == 'unfinished') {
+            $projects = $projects->where('end', null);
+        }
+
+        $projects = $projects->where('can_display', 0);
+
+        $projects = $projects->paginate(10);
+
+        $projectsSelect = Project::all();
+        $users = User::all();
+        $customers = Customer::all();
+
+        return compact('projects', 'projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status');
     }
 }

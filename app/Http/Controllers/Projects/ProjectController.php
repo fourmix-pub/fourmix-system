@@ -68,4 +68,10 @@ class ProjectController extends Controller
     {
         return response()->delete($project->delete());
     }
+
+
+    public function details()
+    {
+        return view('project.details', $this->repository->details());
+    }
 }

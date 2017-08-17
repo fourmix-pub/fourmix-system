@@ -12,7 +12,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'Daily\DailyController@index');
 /*
 |--------------------------------------------------------------------------
 | モックルート
@@ -45,9 +44,11 @@ Route::group(['namespace' => 'Dailies'], function () {
 */
 
 Route::group(['namespace' => 'Projects'], function () {
-    Route::resource('projects', 'ProjectController', ['expect' => [
+    Route::resource('projects', 'ProjectController', ['except' => [
         'create', 'edit', 'show',
     ]]);
+
+    Route::get('/projects/details', 'ProjectController@details')->name('projects.details');
 });
 
 /*
