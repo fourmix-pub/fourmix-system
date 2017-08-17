@@ -26,19 +26,15 @@ Route::get('/home', 'Daily\DailyController@index');
 |--------------------------------------------------------------------------
 */
 
-Route::group(['prefix' => 'dailies', 'namespace' => 'Dailies'], function () {
-    //    // 日報一覧
-    //    Route::get('/view', 'DailyController@view');
-    //    // 日報集計
-    //    Route::get('/total', 'DailyController@total');
+Route::group(['namespace' => 'Dailies'], function () {
     //日報一覧
-    Route::resource('/', 'DailyController', ['except' => [
+    Route::resource('dailies', 'DailyController', ['except' => [
         'create', 'edit', 'show',
     ]]);
     //日報閲覧
-    Route::get('/view', 'DailyController@view')->name('daily.view');
-    Route::patch('/view/{daily}', 'DailyController@update')->name('daily.view.update');
-    Route::delete('/view/{daily}', 'DailyController@destroy')->name('daily.view.destroy');
+    Route::get('dailies/view', 'DailyController@view')->name('daily.view');
+    Route::patch('dailies/view/{daily}', 'DailyController@update')->name('daily.view.update');
+    Route::delete('dailies/view/{daily}', 'DailyController@destroy')->name('daily.view.destroy');
 });
 
 /*
@@ -48,15 +44,10 @@ Route::group(['prefix' => 'dailies', 'namespace' => 'Dailies'], function () {
 |--------------------------------------------------------------------------
 */
 
-Route::group(['prefix' => 'project', 'namespace' => 'Project'], function () {
-    // 一覧
-    Route::get('/', 'ProjectController@index');
-    // 個人予算
-    Route::get('/personal-budget', 'ProjectController@personalBudget');
-    // 台帳
-    Route::get('/ledger', 'ProjectController@ledger');
-    // 予算対
-    Route::get('/project-budget', 'ProjectController@projectBudget');
+Route::group(['namespace' => 'Projects'], function () {
+    Route::resource('projects', 'ProjectController', ['expect' => [
+        'create', 'edit', 'show',
+    ]]);
 });
 
 /*

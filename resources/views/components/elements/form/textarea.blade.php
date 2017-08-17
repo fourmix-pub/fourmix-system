@@ -5,7 +5,7 @@
                 {{ $slot }}
             </label>
             <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                <textarea name="{{ $name }}" rows="1" style="resize: vertical;" class="form-control" placeholder="備考欄">{{ $value }}</textarea>
+                <textarea name="{{ $name }}" rows="1" style="resize: vertical;" class="form-control" placeholder="備考欄">{{ $value ?? '' }}</textarea>
                 @include('layouts.common.error-one', ['field' => $name])
             </div>
         </div>
