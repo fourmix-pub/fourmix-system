@@ -28,7 +28,7 @@
 </div>
 
 <br>
-{{--@include('layouts.personal-budgets.search')--}}
+@include('layouts.personal-budgets.search')
 
 
 {{-- 一覧 --}}
@@ -43,7 +43,7 @@
 	@endslot
 	@slot('tbody')
 		@foreach($projects as $project)
-			@foreach($project->users as $user)
+			@foreach($project->budgetFilter($userId) as $user)
 				<tr>
 					<td>{{ $project->name }}</td>
 					<td>{{ $user->name }}</td>
@@ -58,10 +58,10 @@
 	@endslot
 @endcomponent
 
-<div class="row">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
-{{--		{{ $personalBudgets->links() }}--}}
-	</div>
-</div>
+{{--<div class="row">--}}
+	{{--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">--}}
+		{{--{{ $projects->links() }}--}}
+	{{--</div>--}}
+{{--</div>--}}
 
 @endsection

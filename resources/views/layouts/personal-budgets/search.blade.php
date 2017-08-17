@@ -5,7 +5,7 @@
             @slot('label')
                 プロジェクト名
             @endslot
-            @foreach($projects as $project)
+            @foreach($projectsSelect as $project)
                 <option value="{{ $project->id }}" @if((int)$projectId === (int)$project->id) selected @endif>{{ $project->name }}</option>
             @endforeach
         @endcomponent

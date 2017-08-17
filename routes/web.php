@@ -51,7 +51,7 @@ Route::group(['namespace' => 'Projects'], function () {
     //プロジェクト台帳
     Route::get('/projects/details', 'ProjectController@details')->name('projects.details');
     //プロジェクト個人予算
-    Route::get('projects/personal-budgets', 'PersonalBudgetController@index')->name('personal-budget.index');
+    Route::get('projects/personal-budgets', 'PersonalBudgetController@index')->name('personal-budgets.index');
 });
 
 /*

@@ -16,22 +16,20 @@ class PersonalBudgetRepository implements PersonalBudgetRepositoryContract
      */
     public function personalBudgetResources()
     {
-//        $personalBudgets = PersonalBudget::latest();
-//
-//        if($projectId = request('project_id')){
-//            $personalBudgets = $personalBudgets->where('project_id', $projectId);
-//        }
-//
-//        if($userId = request('user_id')){
-//            $personalBudgets = $personalBudgets->where('user_id', $userId);
-//        }
-//
-//        $personalBudgets = $personalBudgets->paginate(10);
 
-        $projects = Project::all();
+        $projects = Project::latest();
+
+        if($projectId = request('project_id')){
+            $projects = $projects->where('id', $projectId);
+        }
+
+        $userId = request('user_id');
+
+        $projects = $projects->get();
+        $projectsSelect = Project::all();
         $users = User::all();
 
-        return compact('projects', 'users', 'projectId', 'userId');
+        return compact('projects', 'users', 'projectId', 'userId', 'projectsSelect');
     }
 
     /**
