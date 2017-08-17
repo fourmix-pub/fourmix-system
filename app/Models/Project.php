@@ -22,8 +22,8 @@ class Project extends Model
     }
 
     /**
-     * 担当者取得.
      * 多対多.
+     * 担当者 取得.
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function users()

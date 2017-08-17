@@ -2,12 +2,13 @@
 
 namespace Tests\Feature\Routes\SettingRouteTests;
 
+use App\Models\Daily;
 use App\User;
 use Tests\TestCase;
-use App\Models\Daily;
 
 class DailyViewRouteTest extends TestCase
 {
+
     /**
      * テストユーザー
      * @var
@@ -15,13 +16,13 @@ class DailyViewRouteTest extends TestCase
     private $user;
 
     /**
-     * テスト用日報.
+     * テスト用日報
      * @var
      */
     private $daily;
 
     /**
-     * テストデータ作成.
+     * テストデータ作成
      * @before
      */
     public function create_test_data()
