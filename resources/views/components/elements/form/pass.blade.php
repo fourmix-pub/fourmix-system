@@ -5,7 +5,7 @@
                 {{ $slot }}
                 <span class="text-danger">*</span>
             </label>
-            <div class="ccol-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <div class="ccol-xs-12 col-sm-8 col-md-8 col-lg-8">
                 <input id="{{ $name }}" type="password" class="form-control" name="{{ $name }}">
                 @include('layouts.common.error-one', ['field' => $name])
             </div>
