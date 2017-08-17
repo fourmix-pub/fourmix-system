@@ -52,8 +52,8 @@
 				<th scope="row">{{ $project->id }}</th>
 				<td>{{ $project->name }}</td>
 				<td>{{ $project->user->name }}</td>
-				<td align="right">{{ $project->cost }}</td>
-				<td align="right">{{ $project->budget }}</td>
+				<td align="right">{{ number_format($project->cost) }}</td>
+				<td align="right">{{ number_format($project->budget) }}</td>
 				<td>{{ $project->start }}</td>
 				<td>{{ $project->end_expect }}</td>
 				<td>{{ $project->end }}</td>
