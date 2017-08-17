@@ -12,7 +12,7 @@ class Daily extends Model
     protected $dates = ['deleted_at'];
 
     /**
-     * 担当者取得.
+     * 担当者 取得.
      * 1対1.
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */

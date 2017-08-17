@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Dailies;
 
+use App\Http\Controllers\Controller;
+use App\Contracts\Repositories\DailyRepositoryContract;
+use App\Http\Requests\Settings\DailyViewRequest;
 use App\Models\Daily;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Settings\DailyViewRequest;
-use App\Contracts\Repositories\DailyRepositoryContract;
 
 class DailyController extends Controller
 {

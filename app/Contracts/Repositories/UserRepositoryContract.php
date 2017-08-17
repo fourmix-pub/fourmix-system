@@ -7,7 +7,7 @@ use App\User;
 interface UserRepositoryContract
 {
     /**
-     * 担当者資源取得契約.
+     * 担当者リソース取得契約.
      * @return mixed
      */
     public function userResources();
