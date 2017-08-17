@@ -58,5 +58,10 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Contracts\Repositories\ProjectRepositoryContract',
             'App\Repositories\ProjectRepository'
         );
+        //プロジェクト個人予算レポジトリー契約
+        $this->app->bind(
+            'App\Contracts\Repositories\PersonalBudgetRepositoryContract',
+            'App\Repositories\PersonalBudgetRepository'
+        );
     }
 }

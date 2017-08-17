@@ -83,7 +83,7 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li role="presentation"><a href="{{ url('/projects') }}">プロジェクト一覧</a></li>
-                            <li role="presentation"><a href="{{ url('/projects/personal-budget') }}">個人予算</a></li>
+                            <li role="presentation"><a href="{{ url('/projects/personal-budgets') }}">個人予算</a></li>
                             <li role="presentation"><a href="{{ url('/projects/details') }}">台帳</a></li>
                             <li role="presentation"><a href="{{ url('/projects/budget') }}">予算対</a></li>
                         </ul>
@@ -142,7 +142,7 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li role="presentation"><a href="{{ url('/projects') }}">プロジェクト一覧</a></li>
-                            <li role="presentation"><a href="{{ url('/projects/personal-budget') }}">個人予算</a></li>
+                            <li role="presentation"><a href="{{ url('/projects/personal-budgets') }}">個人予算</a></li>
                             <li role="presentation"><a href="{{ url('/projects/details') }}">台帳</a></li>
                             <li role="presentation"><a href="{{ url('/projects/budget') }}">予算対</a></li>
                         </ul>

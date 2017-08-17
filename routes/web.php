@@ -44,11 +44,14 @@ Route::group(['namespace' => 'Dailies'], function () {
 */
 
 Route::group(['namespace' => 'Projects'], function () {
+    //プロジェクト入力（一覧）
     Route::resource('projects', 'ProjectController', ['except' => [
         'create', 'edit', 'show',
     ]]);
-
+    //プロジェクト台帳
     Route::get('/projects/details', 'ProjectController@details')->name('projects.details');
+    //プロジェクト個人予算
+    Route::get('projects/personal-budgets', 'PersonalBudgetController@index')->name('personal-budget.index');
 });
 
 /*
@@ -95,5 +98,22 @@ Route::group(['prefix' => 'config', 'namespace' => 'Config'], function () {
 });
 
 Route::get('test', function () {
-    return view('test');
+    $project = \App\Models\Project::first();
+
+    try {
+        $project->users()->attach(100, ['budget' => 10000000]);
+        echo 'ok';
+    }catch (\Illuminate\Database\QueryException $exception) {
+        echo 'すでに存在する';
+    }
+
+    //dd($project->users()->find(1)->pivot->budget);
+
+    $budget = $project->users()->find(1);
+
+    //$budget->pivot->budget = 20000000;
+    //$budget->pivot->update();
+
+    $project->users()->detach(100);
+
 });

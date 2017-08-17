@@ -29,7 +29,9 @@ class Project extends Model
      */
     public function users()
     {
-        return $this->belongsToMany(User::class, 'personal_budgets', 'user_id', 'project_id');
+        return $this->belongsToMany(User::class, 'personal_budgets', 'project_id', 'user_id')
+            ->withPivot('budget')
+            ->withTimestamps();
     }
 
     /**

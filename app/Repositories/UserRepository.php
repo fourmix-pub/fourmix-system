@@ -72,7 +72,7 @@ class UserRepository implements UserRepositoryContract
     }
 
     /**
-     * 担当者削除契約.
+     * 担当者削除.
      * @param User $user
      * @return mixed
      */
