@@ -2,7 +2,6 @@
 
 namespace App\Repositories;
 
-
 use App\Contracts\Repositories\PersonalBudgetRepositoryContract;
 use App\Models\PersonalBudget;
 use App\Models\Project;
@@ -18,10 +17,9 @@ class PersonalBudgetRepository implements PersonalBudgetRepositoryContract
      */
     public function personalBudgetResources()
     {
-
         $projects = Project::latest();
 
-        if($projectId = request('project_id')){
+        if ($projectId = request('project_id')) {
             $projects = $projects->where('id', $projectId);
         }
 
@@ -62,9 +60,9 @@ class PersonalBudgetRepository implements PersonalBudgetRepositoryContract
 
             return true;
         } catch (\Exception $exception) {
-            if($exception instanceof QueryException){
+            if ($exception instanceof QueryException) {
                 return false;
-            }else{
+            } else {
                 Log::debug($exception->getMessage());
                 return false;
             }

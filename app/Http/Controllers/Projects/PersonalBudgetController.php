@@ -68,6 +68,6 @@ class PersonalBudgetController extends Controller
      */
     public function destroy(Request $request)
     {
-        return response()->delete( $project = Project::find($request->get('project_id'))->users()->detach($request->get('user_id')));
+        return response()->delete($project = Project::find($request->get('project_id'))->users()->detach($request->get('user_id')));
     }
 }

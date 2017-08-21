@@ -71,11 +71,10 @@ class Project extends Model
 
     public function budgetFilter($userId)
     {
-        if($userId){
+        if ($userId) {
             return $this->users()->where('user_id', $userId)->get();
-        }else{
+        } else {
             return $this->users;
         }
-
     }
 }

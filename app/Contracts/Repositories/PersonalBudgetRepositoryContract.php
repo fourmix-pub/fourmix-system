@@ -2,7 +2,6 @@
 
 namespace App\Contracts\Repositories;
 
-
 use App\Models\PersonalBudget;
 use App\Models\Project;
 
