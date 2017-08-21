@@ -7,6 +7,8 @@ use App\Contracts\Repositories\PersonalBudgetRepositoryContract;
 use App\Models\PersonalBudget;
 use App\Models\Project;
 use App\User;
+use Illuminate\Database\QueryException;
+use Log;
 
 class PersonalBudgetRepository implements PersonalBudgetRepositoryContract
 {
@@ -38,7 +40,7 @@ class PersonalBudgetRepository implements PersonalBudgetRepositoryContract
      * @param PersonalBudget $personalBudget
      * @return mixed
      */
-    public function update($request, PersonalBudget $personalBudget)
+    public function update($request)
     {
         $personalBudget->project_id = $request->project_id;
         $personalBudget->user_id = $request->user_id;
@@ -54,12 +56,19 @@ class PersonalBudgetRepository implements PersonalBudgetRepositoryContract
      */
     public function create($request)
     {
-        $personalBudget = new PersonalBudget();
+        $project = Project::find($request->get('project_id'));
 
-        $personalBudget->project_id = $request->project_id;
-        $personalBudget->user_id = $request->user_id;
-        $personalBudget->budget = $request->budget;
+        try {
+            $project->users()->attach($request->user_id, ['budget' => $request->budget]);
 
-        return $personalBudget->save();
+            return true;
+        } catch (\Exception $exception) {
+            if($exception instanceof QueryException){
+                return false;
+            }else{
+                Log::debug($exception->getMessage());
+                return false;
+            }
+        }
     }
 }

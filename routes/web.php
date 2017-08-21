@@ -52,6 +52,9 @@ Route::group(['namespace' => 'Projects'], function () {
     Route::get('/projects/details', 'ProjectController@details')->name('projects.details');
     //プロジェクト個人予算
     Route::get('projects/personal-budgets', 'PersonalBudgetController@index')->name('personal-budgets.index');
+    Route::patch('projects/personal-budgets/{personal-budgets}', 'PersonalBudgetController@update')->name('personal-budgets.update');
+    Route::post('projects/personal-budgets', 'PersonalBudgetController@store')->name('personal-budgets.store');
+    Route::delete('projects/personal-budgets/{personal-budgets}', 'PersonalBudgetController@destroy')->name('personal-budgets.destroy');
 });
 
 /*
@@ -101,7 +104,7 @@ Route::get('test', function () {
     $project = \App\Models\Project::first();
 
     try {
-        $project->users()->attach(100, ['budget' => 10000000]);
+        $project->users()->attach(10, ['budget' => 10000000]);
         echo 'ok';
     }catch (\Illuminate\Database\QueryException $exception) {
         echo 'すでに存在する';

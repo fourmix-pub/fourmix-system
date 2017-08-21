@@ -66,6 +66,6 @@ class PersonalBudgetController extends Controller
      */
     public function destroy(PersonalBudget $personalBudget)
     {
-        dd($personalBudget);
+
     }
 }

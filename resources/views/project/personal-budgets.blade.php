@@ -23,7 +23,7 @@
 		<button type="button" class="btn btn-primary pull-right" style="margin-right: 10px;" data-toggle="collapse" href="#search">
 			<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
 		</button>
-		{{--@include('layouts.personal-budgets.create')--}}
+		@include('layouts.personal-budgets.create')
 	</div>
 </div>
 

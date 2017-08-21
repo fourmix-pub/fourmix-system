@@ -19,7 +19,7 @@ interface PersonalBudgetRepositoryContract
      * @param PersonalBudget $personalBudget
      * @return mixed
      */
-    public function update($request, PersonalBudget $personalBudget);
+    public function update($request);
 
     /**
      * 個人予算新規作成契約.
