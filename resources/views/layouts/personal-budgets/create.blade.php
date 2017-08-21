@@ -29,7 +29,7 @@
         @slot('label')
             担当者名
         @endslot
-        @foreach($users as $user)
+        @foreach($usersSelect as $user)
             <option value="{{ $user->id }}">{{ $user->name }}</option>
         @endforeach
     @endcomponent

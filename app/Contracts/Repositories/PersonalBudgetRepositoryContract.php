@@ -4,6 +4,7 @@ namespace App\Contracts\Repositories;
 
 
 use App\Models\PersonalBudget;
+use App\Models\Project;
 
 interface PersonalBudgetRepositoryContract
 {
@@ -16,7 +17,6 @@ interface PersonalBudgetRepositoryContract
     /**
      * 個人予算更新契約.
      * @param $request
-     * @param PersonalBudget $personalBudget
      * @return mixed
      */
     public function update($request);

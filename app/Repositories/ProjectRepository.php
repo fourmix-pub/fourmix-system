@@ -127,7 +127,7 @@ class ProjectRepository implements ProjectRepositoryContract
         }
 
         if ($endDate = request('end_date')) {
-            $projects = $projects->where('end', '<=', $endDate);
+            $projects = $projects->where('start', '<=', $endDate);
         }
 
         if ($status = request('status') and $status == 'finished') {

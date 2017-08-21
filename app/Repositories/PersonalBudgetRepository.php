@@ -29,24 +29,23 @@ class PersonalBudgetRepository implements PersonalBudgetRepositoryContract
 
         $projects = $projects->paginate(3);
         $projectsSelect = Project::all();
-        $users = User::all();
+        $usersSelect = User::all();
 
-        return compact('projects', 'users', 'projectId', 'userId', 'projectsSelect');
+        return compact('projects', 'usersSelect', 'projectId', 'userId', 'projectsSelect');
     }
 
     /**
      * 個人予算更新.
      * @param $request
-     * @param PersonalBudget $personalBudget
      * @return mixed
      */
     public function update($request)
     {
-        $personalBudget->project_id = $request->project_id;
-        $personalBudget->user_id = $request->user_id;
-        $personalBudget->budget = $request->budget;
+        $project = Project::find($request->get('project_id'));
+        $budget = $project->users()->find($request->get('user_id'));
 
-        return $personalBudget->update();
+        $budget->pivot->budget = $request->get('budget');
+        return $budget->pivot->update();
     }
 
     /**

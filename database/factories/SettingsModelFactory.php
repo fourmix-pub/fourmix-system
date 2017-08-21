@@ -100,3 +100,14 @@ $factory->define(App\Models\Project::class, function (Faker\Generator $faker) {
         'note' => str_random(100),
     ];
 });
+
+/*
+ * 個人予算ダミーデータ
+ * @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\PersonalBudget::class, function (Faker\Generator $faker) {
+    return [
+        'project_id'=> 9,
+        'user_id' => 9,
+        'budget' => rand(20000, 30000),
+    ];
+});

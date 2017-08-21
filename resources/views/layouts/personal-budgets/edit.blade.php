@@ -1,4 +1,4 @@
-@component('components.modals.form', ['target' => 'editPersonalBudget-'.$personalBudget->project_id.'-'.$personalBudget->user_id, 'buttonColor' => 'btn-xs btn-warning'])
+@component('components.modals.form', ['target' => 'editPersonalBudget-'.$project->id.'-'.$user->id, 'buttonColor' => 'btn-xs btn-warning'])
 
     @slot('buttonIcon')
         <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
@@ -9,30 +9,15 @@
     @endslot
 
     @slot('url')
-        {{ route('personal-budgets.update', compact('personalBudget')) }}
+        {{ route('personal-budgets.update') }}
     @endslot
 
-    @component('components.elements.form.select', ['name' => 'project_id'])
-        @slot('label')
-            プロジェクト名
-        @endslot
-        @foreach($projects as $project)
-            <option value="{{ $project->id }}" @if($project->id == $personalBudget->project_id) selected @endif>{{ $project->name }}</option>
-        @endforeach
-    @endcomponent
-
-    @component('components.elements.form.select', ['name' => 'user_id'])
-        @slot('label')
-            担当者名
-        @endslot
-        @foreach($users as $user)
-            <option value="{{ $user->id }}" @if($user->id == $personalBudget->user_id) selected @endif>{{ $user->name }}</option>
-        @endforeach
-    @endcomponent
-
-    @component('components.elements.form.text',['name'=>'budget', 'value' => $personalBudget->budget])
+    @component('components.elements.form.text',['name'=>'budget', 'value' => $user->pivot->budget])
         個人予算
     @endcomponent
+
+    <input type="hidden" name="project_id" value="{{ $project->id }}">
+    <input type="hidden" name="user_id" value="{{ $user->id }}">
 
     @slot('modalFooter')
         {{ method_field('PATCH') }}

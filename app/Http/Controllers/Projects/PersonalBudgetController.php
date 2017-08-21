@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Projects;
 
 use App\Contracts\Repositories\PersonalBudgetRepositoryContract;
 use App\Http\Requests\Settings\PersonalBudgetRequest;
+use App\Http\Requests\Settings\PersonalBudgetUpdateRequest;
 use App\Models\PersonalBudget;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -53,9 +55,9 @@ class PersonalBudgetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(PersonalBudgetRequest $request, PersonalBudget $personalBudget)
+    public function update(PersonalBudgetUpdateRequest $request)
     {
-        return response()->update($this->repository->update($request, $personalBudget));
+        return response()->update($this->repository->update($request));
     }
 
     /**
@@ -64,8 +66,8 @@ class PersonalBudgetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PersonalBudget $personalBudget)
+    public function destroy(Request $request)
     {
-
+        return response()->delete( $project = Project::find($request->get('project_id'))->users()->detach($request->get('user_id')));
     }
 }

@@ -1,4 +1,4 @@
-@component('components.modals.form', ['target' => 'deletePersonalBudget-'.$personalBudget->project_id.'-'.$personalBudget->user_id, 'buttonColor' => 'btn-xs btn-danger'])
+@component('components.modals.form', ['target' => 'deletePersonalBudget-'.$project->id.'-'.$user->id, 'buttonColor' => 'btn-xs btn-danger'])
 
     @slot('buttonIcon')
         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
@@ -12,7 +12,10 @@
         {{ route('personal-budgets.destroy') }}
     @endslot
 
-    {{ $personalBudget->project->name }}　{{ $personalBudget->user->name }}　の個人予算を削除しますか？
+    {{ $project->name }}　{{ $user->name }}　の個人予算を削除しますか？
+
+    <input type="hidden" name="project_id" value="{{ $project->id }}">
+    <input type="hidden" name="user_id" value="{{ $user->id }}">
 
     @slot('modalFooter')
         {{ method_field('DELETE') }}

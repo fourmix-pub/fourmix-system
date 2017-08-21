@@ -52,9 +52,9 @@ Route::group(['namespace' => 'Projects'], function () {
     Route::get('/projects/details', 'ProjectController@details')->name('projects.details');
     //プロジェクト個人予算
     Route::get('projects/personal-budgets', 'PersonalBudgetController@index')->name('personal-budgets.index');
-    Route::patch('projects/personal-budgets/{personal-budgets}', 'PersonalBudgetController@update')->name('personal-budgets.update');
+    Route::patch('projects/personal-budgets/update', 'PersonalBudgetController@update')->name('personal-budgets.update');
     Route::post('projects/personal-budgets', 'PersonalBudgetController@store')->name('personal-budgets.store');
-    Route::delete('projects/personal-budgets/{personal-budgets}', 'PersonalBudgetController@destroy')->name('personal-budgets.destroy');
+    Route::delete('projects/personal-budgets/delete', 'PersonalBudgetController@destroy')->name('personal-budgets.destroy');
 });
 
 /*
