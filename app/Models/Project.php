@@ -5,6 +5,7 @@ namespace App\Models;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use DB;
 
 class Project extends Model
 {
@@ -28,7 +29,9 @@ class Project extends Model
      */
     public function users()
     {
-        return $this->belongsToMany(User::class, 'personal_budgets', 'user_id', 'project_id');
+        return $this->belongsToMany(User::class, 'personal_budgets', 'project_id', 'user_id')
+            ->withPivot('budget')
+            ->withTimestamps();
     }
 
     /**
@@ -59,5 +62,20 @@ class Project extends Model
     public function customer()
     {
         return $this->hasOne(Customer::class, 'id', 'customer_id');
+    }
+
+    public function sumByWorkType()
+    {
+        return $this->dailies()->select(DB::raw('work_type_id, sum(`time`) as `sum_time` , sum(`cost`) as `sum_cost`'))
+            ->groupBy('work_type_id');
+    }
+
+    public function budgetFilter($userId)
+    {
+        if ($userId) {
+            return $this->users()->where('user_id', $userId)->get();
+        } else {
+            return $this->users;
+        }
     }
 }

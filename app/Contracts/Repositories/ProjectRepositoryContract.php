@@ -26,4 +26,10 @@ interface ProjectRepositoryContract
      * @return mixed
      */
     public function create($request);
+
+    /**
+     * プロジェクト台帳資源取得契約.
+     * @return mixed
+     */
+    public function details();
 }

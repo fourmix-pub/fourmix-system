@@ -44,6 +44,30 @@ class ProjectRouteTest extends TestCase
     }
 
     /**
+     * 追加できる.
+     * @test
+     */
+    public function it_can_add()
+    {
+        $data = [
+            'name'=> 'テストプロジェクト１',
+            'customer_id' => 5,
+            'cost' => 3000000,
+            'budget' => 2000004,
+            'user_id' => 12,
+            'start' => '2017-10-11',
+            'end' => '2017-11-15',
+            'end_expect' => '2017-12-08',
+            'note' => 'テストテスト',
+        ];
+
+        $response = $this->actingAs($this->user)->post('/projects', array_merge($data, ['_token' => csrf_token()]));
+        $this->assertDatabaseHas('projects', $data);
+        $response->assertStatus(302);
+        $response->assertSessionHas('status');
+    }
+
+    /**
      * 編集できる.
      * @test
      */
@@ -141,6 +165,32 @@ class ProjectRouteTest extends TestCase
         ];
 
         $response = $this->actingAs($this->user)->get('/projects', array_merge($data));
+        $this->assertDatabaseHas('projects', $data);
+        $response->assertViewHasAll(['projects', 'projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status']);
+    }
+
+    /**
+     * プロジェクト台帳 表示できる.
+     * @test
+     */
+    public function it_can_access_view_detail()
+    {
+        $response = $this->actingAs($this->user)->get('/projects/details');
+        $response->assertStatus(200);
+        $response->assertViewHasAll(['projects', 'projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status']);
+    }
+
+    /**
+     * プロジェクト台帳 顧客IDによって検索できる.
+     * @test
+     */
+    public function it_can_search_detail_by_status()
+    {
+        $data = [
+            'customer_id' => 1,
+        ];
+
+        $response = $this->actingAs($this->user)->get('/projects/details', array_merge($data));
         $this->assertDatabaseHas('projects', $data);
         $response->assertViewHasAll(['projects', 'projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status']);
     }

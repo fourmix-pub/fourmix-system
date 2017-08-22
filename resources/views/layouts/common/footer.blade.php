@@ -4,9 +4,7 @@
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
             <div align="center" style="color: #ffffff">
-                &copy; {{ date('Y') }}
-                <a style="color: #ffffff" href="{{ url('/') }}" target="_blank">{{ config('app.name') }}</a>.
-                All rights reserved.
+                v1.0.0  Powered by <a style="color: #ffffff" href="{{ url('/') }}" target="_blank">{{ config('app.name') }}</a>.
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
@@ -24,9 +22,7 @@
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
             <div align="center">
-                &copy; {{ date('Y') }}
-                <a href="{{ url('/') }}" target="_blank">{{ config('app.name') }}</a>.
-                All rights reserved.
+                v1.0.0  Powered by <a href="{{ url('/') }}" target="_blank">{{ config('app.name') }}</a>.
             </div>
         </div>
     </div>

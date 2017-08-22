@@ -8,9 +8,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class PersonalBudget extends Model
 {
-    use SoftDeletes;
-    protected $dates = ['deleted_at'];
-
     /**
      * 1対1.
      * 担当者 取得.

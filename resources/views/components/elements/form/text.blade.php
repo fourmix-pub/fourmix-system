@@ -4,7 +4,7 @@
              <label class="col-xs-12 col-md-3 col-sm-3 col-lg-3 control-label" for="staff">
                  {{ $slot }}
              </label>
-             <div class="col-xs-12 col-md-9 col-sm-9 col-lg-9">
+             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                  <input type="text" class="form-control" id="staff" name="{{ $name }}" value="{{ $value ?? '' }}">
                  @include('layouts.common.error-one', ['field' => $name])
              </div>

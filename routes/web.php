@@ -12,7 +12,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'Daily\DailyController@index');
 /*
 |--------------------------------------------------------------------------
 | モックルート
@@ -45,9 +44,17 @@ Route::group(['namespace' => 'Dailies'], function () {
 */
 
 Route::group(['namespace' => 'Projects'], function () {
-    Route::resource('projects', 'ProjectController', ['expect' => [
+    //プロジェクト入力（一覧）
+    Route::resource('projects', 'ProjectController', ['except' => [
         'create', 'edit', 'show',
     ]]);
+    //プロジェクト台帳
+    Route::get('/projects/details', 'ProjectController@details')->name('projects.details');
+    //プロジェクト個人予算
+    Route::get('projects/personal-budgets', 'PersonalBudgetController@index')->name('personal-budgets.index');
+    Route::patch('projects/personal-budgets/update', 'PersonalBudgetController@update')->name('personal-budgets.update');
+    Route::post('projects/personal-budgets', 'PersonalBudgetController@store')->name('personal-budgets.store');
+    Route::delete('projects/personal-budgets/delete', 'PersonalBudgetController@destroy')->name('personal-budgets.destroy');
 });
 
 /*
@@ -93,47 +100,22 @@ Route::group(['prefix' => 'config', 'namespace' => 'Config'], function () {
     Route::get('/password', 'ConfigController@resetPassword');
 });
 
-/*
-|--------------------------------------------------------------------------
-| 管理者設定
-|--------------------------------------------------------------------------
-*/
-//Route::post('/register/', 'Auth\RegisterController@register ' );
-//Route::match(['get', 'head'], '/register/', 'Auth\RegisterController@showRegistrationForm ')->name('register');
 Route::get('test', function () {
-    return view('test');
-});
+    $project = \App\Models\Project::first();
 
-//プロジェクト関連
-Route::get('/project-personal', function () {
-    return view('project.project-personal');
-});
+    try {
+        $project->users()->attach(10, ['budget' => 10000000]);
+        echo 'ok';
+    } catch (\Illuminate\Database\QueryException $exception) {
+        echo 'すでに存在する';
+    }
 
-Route::get('/project-personal-budget', function () {
-    return view('project.project-personal-budget');
-});
+    //dd($project->users()->find(1)->pivot->budget);
 
-Route::get('/project-budget', function () {
-    return view('project.project-budget');
-});
+    $budget = $project->users()->find(1);
 
-//集計
-Route::get('/total', function () {
-    return view('daily.total');
-});
+    //$budget->pivot->budget = 20000000;
+    //$budget->pivot->update();
 
-Route::get('/total-project', function () {
-    return view('daily.total-project');
-});
-
-Route::get('/total-personal', function () {
-    return view('daily.total-personal');
-});
-
-Route::get('/personal-project', function () {
-    return view('daily.personal-project');
-});
-
-Route::get('/customer', function () {
-    return view('admin.customer.index');
+    $project->users()->detach(100);
 });

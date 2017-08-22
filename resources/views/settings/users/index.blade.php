@@ -57,7 +57,7 @@
 				<tr>
 					<th scope="row">{{ $user->id }}</th>
 					<td>{{ $user->name }}</td>
-					<td align="right">{{ $user->cost }}</td>
+					<td align="right">{{ number_format($user->cost) }}</td>
 					<td>{{ $user->department->name }}</td>
 					<td align="center">
 						@if($user->is_resignation == 1)

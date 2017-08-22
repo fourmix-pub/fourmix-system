@@ -4,7 +4,7 @@
             <label class="col-xs-12 col-sm-3 col-md-3 col-lg-3 control-label" for="{{ $name }}">
                 {{ $label }}
             </label>
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                 <select class="selectpicker" data-width="100%" data-live-search="true" name="{{ $name }}" id="{{ $name }}">
                     <option data-tokens="" value=>指定なし</option>
                     {{ $slot }}
