@@ -106,7 +106,7 @@ Route::get('test', function () {
     try {
         $project->users()->attach(10, ['budget' => 10000000]);
         echo 'ok';
-    }catch (\Illuminate\Database\QueryException $exception) {
+    } catch (\Illuminate\Database\QueryException $exception) {
         echo 'すでに存在する';
     }
 
@@ -118,5 +118,4 @@ Route::get('test', function () {
     //$budget->pivot->update();
 
     $project->users()->detach(100);
-
 });
