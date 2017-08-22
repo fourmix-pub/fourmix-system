@@ -42,9 +42,10 @@ class PersonalBudgetRepository implements PersonalBudgetRepositoryContract
     public function update($request)
     {
         $project = Project::find($request->get('project_id'));
-        $budget = $project->users()->find($request->get('user_id'));
 
+        $budget = $project->users()->find($request->get('user_id'));
         $budget->pivot->budget = $request->get('budget');
+
         return $budget->pivot->update();
     }
 

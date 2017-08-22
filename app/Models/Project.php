@@ -66,7 +66,8 @@ class Project extends Model
 
     public function sumByWorkType()
     {
-        return $this->dailies()->select(DB::raw('work_type_id, sum(`time`) as `sum_time` , sum(`cost`) as `sum_cost`'))->groupBy('work_type_id');
+        return $this->dailies()->select(DB::raw('work_type_id, sum(`time`) as `sum_time` , sum(`cost`) as `sum_cost`'))
+            ->groupBy('work_type_id');
     }
 
     public function budgetFilter($userId)
