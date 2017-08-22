@@ -195,4 +195,3 @@ class ProjectRouteTest extends TestCase
         $response->assertViewHasAll(['projects', 'projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status']);
     }
 }
-
