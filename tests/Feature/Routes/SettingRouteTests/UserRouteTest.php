@@ -125,7 +125,7 @@ class UserRouteTest extends TestCase
      */
     public function it_can_delete()
     {
-        $response = $this->actingAs($this->user)->delete('/settings/users/'.$this->testUser->id);
+        $response = $this->actingAs($this->user)->delete('/settings/users/'.$this->testUser->id, ['_token' => csrf_token()]);
         $response->assertStatus(302);
     }
 

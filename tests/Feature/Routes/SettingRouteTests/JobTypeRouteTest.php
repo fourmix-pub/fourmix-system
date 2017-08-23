@@ -115,7 +115,7 @@ class JobTypeRouteTest extends TestCase
      */
     public function it_can_delete()
     {
-        $response = $this->actingAs($this->user)->delete('/settings/job-types/'.$this->jobType->id);
+        $response = $this->actingAs($this->user)->delete('/settings/job-types/'.$this->jobType->id, ['_token' => csrf_token()]);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
         $this->assertSoftDeleted('job_types', $this->jobType->toArray());

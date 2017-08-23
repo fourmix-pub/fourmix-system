@@ -119,7 +119,7 @@ class ProjectRouteTest extends TestCase
      */
     public function it_can_delete()
     {
-        $response = $this->actingAs($this->user)->delete('/projects/'.$this->project->id);
+        $response = $this->actingAs($this->user)->delete('/projects/'.$this->project->id, ['_token' => csrf_token()]);
         $response->assertStatus(302);
         $this->assertSoftDeleted('projects', $this->project->toArray());
     }
@@ -184,13 +184,39 @@ class ProjectRouteTest extends TestCase
      * プロジェクト台帳 顧客IDによって検索できる.
      * @test
      */
-    public function it_can_search_detail_by_status()
+    public function it_can_search_detail_by_customer_id()
     {
         $data = [
             'customer_id' => 1,
         ];
 
         $response = $this->actingAs($this->user)->get('/projects/details', array_merge($data));
+        $this->assertDatabaseHas('projects', $data);
+        $response->assertViewHasAll(['projects', 'projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status']);
+    }
+
+    /**
+     * プロジェクト別予算対 表示できる.
+     * @test
+     */
+    public function it_can_access_view_budget()
+    {
+        $response = $this->actingAs($this->user)->get('/projects/project-budgets');
+        $response->assertStatus(200);
+        $response->assertViewHasAll(['projects', 'projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status']);
+    }
+
+    /**
+     * プロジェクト別予算対 顧客IDによって検索できる.
+     * @test
+     */
+    public function it_can_search_budget_by_customer_id()
+    {
+        $data = [
+            'customer_id' => 1,
+        ];
+
+        $response = $this->actingAs($this->user)->get('/projects/project-budgets', array_merge($data));
         $this->assertDatabaseHas('projects', $data);
         $response->assertViewHasAll(['projects', 'projectsSelect', 'projectId', 'users', 'userId', 'startDate', 'endDate', 'customers', 'customerId', 'status']);
     }

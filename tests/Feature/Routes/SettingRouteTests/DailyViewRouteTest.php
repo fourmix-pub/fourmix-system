@@ -87,7 +87,7 @@ class DailyViewRouteTest extends TestCase
      */
     public function it_can_delete()
     {
-        $response = $this->actingAs($this->user)->delete('/dailies/view/'.$this->daily->id);
+        $response = $this->actingAs($this->user)->delete('/dailies/view/'.$this->daily->id, ['_token' => csrf_token()]);
         $response->assertStatus(302);
         $this->assertSoftDeleted('dailies', $this->daily->toArray());
     }
