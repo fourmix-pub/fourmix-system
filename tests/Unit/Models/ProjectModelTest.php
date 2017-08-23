@@ -17,7 +17,10 @@ class ProjectModelTest extends TestCase
      * テスト用ダミーデータ
      * @var
      */
-    protected $project, $daily, $user, $personalBudget;
+    protected $project;
+    protected $daily;
+    protected $user;
+    protected $personalBudget;
 
     /**
      * @before
