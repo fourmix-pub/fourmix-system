@@ -24,7 +24,6 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-
 /**
  * レポジトリサービスバインドテスト
  * Class RepositoryServiceTest
@@ -38,10 +37,10 @@ class RepositoryServiceTest extends TestCase
     public function test_repository_bind()
     {
         $instance = app(UserRepositoryContract::class);
-        $this->assertBind($instance,UserRepository::class);
+        $this->assertBind($instance, UserRepository::class);
 
         $instance = app(CustomerRepositoryContract::class);
-        $this->assertBind($instance,CustomerRepository::class);
+        $this->assertBind($instance, CustomerRepository::class);
 
         $instance = app(WorkTypeRepositoryContract::class);
         $this->assertBind($instance, WorkTypeRepository::class);
