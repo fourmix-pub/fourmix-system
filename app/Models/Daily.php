@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Daily extends Model
 {
     use SoftDeletes;
-    protected $dates = ['deleted_at'];
+    protected $dates = ['deleted_at', 'date'];
 
     /**
      * 担当者 取得.

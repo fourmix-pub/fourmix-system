@@ -69,9 +69,21 @@ class ProjectController extends Controller
         return response()->delete($project->delete());
     }
 
-
+    /**
+     * プロジェクト台帳
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function details()
     {
         return view('project.details', $this->repository->details());
+    }
+
+    /**
+     * プロジェクト別予算対
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function projectBudgets()
+    {
+        return view('project.project-budgets', $this->repository->projectResources());
     }
 }

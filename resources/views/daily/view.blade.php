@@ -49,7 +49,7 @@
                 @foreach($dailies as $daily)
                     <tr>
                         <td>{{ $daily->user->name }}</td>
-                        <td>{{ $daily->date }}</td>
+                        <td>{{ $daily->date->format('Y/m/d') }}</td>
                         <td>{{ $daily->project->name }}</td>
                         <td>{{ $daily->workType->name }}</td>
                         <td align="right">{{ $daily->time }}</td>

@@ -30,7 +30,7 @@
 <div class="row">
 
 	{{-- アコーディオン：検索ボタン --}}
-	@include('layouts.project-ledgers.search')
+	@include('layouts.project-details.search')
 	<br>
 
 	{{-- 一覧 --}}
@@ -47,6 +47,7 @@
 					</div>
 				</div>
 				<div class="row">
+
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<div class="table-responsive">
 							<table class="table table-bordered table-hover">
@@ -63,9 +64,9 @@
 									<tr>
 										<td align="right">{{ number_format($project->cost) }}</td>
 										<td align="right">{{ number_format($project->budget) }}</td>
-										<td>{{ $project->start }}</td>
-										<td>{{ $project->end_expect }}</td>
-										<td>{{ $project->end }}</td>
+										<td>{{ $project->start->format('Y/m/d') }}</td>
+										<td>{{ $project->end_expect->format('Y/m/d') }}</td>
+										<td>{{ $project->end ? $project->end->format('Y/m/d') : $project->end }}</td>
 									</tr>
 								</tbody>
 							</table>

@@ -54,9 +54,9 @@
 				<td>{{ $project->user->name }}</td>
 				<td align="right">{{ number_format($project->cost) }}</td>
 				<td align="right">{{ number_format($project->budget) }}</td>
-				<td>{{ $project->start }}</td>
-				<td>{{ $project->end_expect }}</td>
-				<td>{{ $project->end }}</td>
+				<td>{{ $project->start->format('Y/m/d') }}</td>
+				<td>{{ $project->end_expect->format('Y/m/d') }}</td>
+				<td>{{ $project->end ? $project->end->format('Y/m/d') : $project->end }}</td>
 				<td>
 					@include('layouts.projects.edit')
 					@include('layouts.projects.delete')
