@@ -18,7 +18,10 @@ class AnalyticsFacadeTest extends TestCase
      * テスト用ダミーデータ
      * @var
      */
-    private $project, $daily, $user, $personalBudget;
+    private $project;
+    private $daily;
+    private $user;
+    private $personalBudget;
 
     /**
      * @before
@@ -61,7 +64,8 @@ class AnalyticsFacadeTest extends TestCase
      * ProjectAnalyticsTools::balanceBudgetRate メソッドテスト
      * @test
      */
-    public function testBalanceBudgetRate(){
+    public function testBalanceBudgetRate()
+    {
         $result = Analytics::balanceBudgetRate($this->project);
         $this->assertEquals(70, $result);
     }
