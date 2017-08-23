@@ -42,7 +42,12 @@ trait ProjectAnalyticsTools
         return (int)($user->pivot->budget - $project->sumByCostPersonal($project->id, $user->id)->sum_cost);
     }
 
-
+    /**
+     * 個人予算残高パーセント計算.
+     * @param Project $project
+     * @param User $user
+     * @return float|int
+     */
     public function balancePersonalBudgetRate(Project $project, User $user)
     {
         if ($user->pivot->budget !== 0) {

@@ -38,7 +38,7 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="text-center">
-			<h3>プロジェクト別予算対実績表</h3>
+			<h3>プロジェクト別プロジェクト予算対実績表</h3>
 		</div>
 	</div>
 </div>
