@@ -17,7 +17,10 @@ class AnalyticsToolsTest extends TestCase
      * テスト用ダミーデータ
      * @var
      */
-    private $project, $daily, $user, $personalBudget;
+    private $project;
+    private $daily;
+    private $user;
+    private $personalBudget;
 
     /**
      * AnalyticsToolsクラス
