@@ -24,7 +24,7 @@ class ToolServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('analytics',function(){
+        $this->app->singleton('analytics', function () {
             return $this->app->make(AnalyticsTools::class);
         });
     }

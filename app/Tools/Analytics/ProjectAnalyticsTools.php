@@ -2,7 +2,6 @@
 
 namespace App\Tools\Analytics;
 
-
 use App\Models\Project;
 use App\User;
 

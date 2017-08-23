@@ -105,5 +105,4 @@ Route::group(['prefix' => 'config', 'namespace' => 'Config'], function () {
 });
 
 Route::get('test', function () {
-
 });
