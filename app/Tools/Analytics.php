@@ -2,7 +2,6 @@
 
 namespace App\Tools;
 
-
 use Illuminate\Support\Facades\Facade;
 
 class Analytics extends Facade
