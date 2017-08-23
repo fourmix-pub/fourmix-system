@@ -16,6 +16,6 @@ class ToolServiceTest extends TestCase
     public function test_tool_bind()
     {
         $instance = app('analytics');
-        $this->assertBind($instance,AnalyticsTools::class);
+        $this->assertBind($instance, AnalyticsTools::class);
     }
 }
