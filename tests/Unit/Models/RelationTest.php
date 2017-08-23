@@ -204,7 +204,8 @@ class RelationTest extends TestCase
      */
     public function personal_budget_has_one_user()
     {
-        $this->assertRelation(PersonalBudget::where('project_id', 1)->where('user_id', 1)->first()->user, User::class);
+        $this->assertRelation(PersonalBudget::where('project_id', 1)
+            ->where('user_id', 1)->first()->user, User::class);
     }
 
     /**
@@ -213,6 +214,7 @@ class RelationTest extends TestCase
      */
     public function personal_budget_has_one_project()
     {
-        $this->assertRelation(PersonalBudget::where('project_id', 1)->where('user_id', 1)->first()->project, Project::class);
+        $this->assertRelation(PersonalBudget::where('project_id', 1)
+            ->where('user_id', 1)->first()->project, Project::class);
     }
 }

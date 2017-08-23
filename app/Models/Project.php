@@ -88,7 +88,7 @@ class Project extends Model
      * @param $userId
      * @return \Illuminate\Database\Eloquent\Collection|mixed
      */
-    public function budgetFilter($userId)
+    public function budgetFilter($userId = null)
     {
         if ($userId) {
             return $this->users()->where('user_id', $userId)->get();
