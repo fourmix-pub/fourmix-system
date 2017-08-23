@@ -6,6 +6,7 @@ use App\Models\Daily;
 use App\Models\PersonalBudget;
 use App\Models\Project;
 use App\User;
+use Illuminate\Support\Facades\Facade;
 use Tests\TestCase;
 use Analytics;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -85,5 +86,13 @@ class AnalyticsFacadeTest extends TestCase
     {
         $result = Analytics::balancePersonalBudgetRate($this->project,
                 $this->project->users()->where('user_id', $this->user->id)->first());
+    }
+
+
+    public function testAnalyticsFacadeClass()
+    {
+        $instance = new Analytics();
+        $this->assertTrue($instance instanceof Facade);
+        $this->assertEquals(Analytics::getFacadeAccessor(), 'analytics');
     }
 }
