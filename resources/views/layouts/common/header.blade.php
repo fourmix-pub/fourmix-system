@@ -13,13 +13,13 @@
             <!-- Branding Image -->
             @if (Auth::guest())
                 <div class="fourmix">
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ route('daily.view') }}">
                         <img src="{{ asset('img/fourmix_w.png') }}">
                     </a>
                 </div>
             @else
                 <div class="fourmix">
-                    <a class="navbar-brand" href="{{ url('/home') }}">
+                    <a class="navbar-brand" href="{{ route('daily.view') }}">
                         <img src="{{ asset('img/fourmix_w.png') }}">
                     </a>
                 </div>
@@ -85,7 +85,7 @@
                             <li role="presentation"><a href="{{ url('/projects') }}">プロジェクト一覧</a></li>
                             <li role="presentation"><a href="{{ url('/projects/personal-budgets') }}">個人予算</a></li>
                             <li role="presentation"><a href="{{ url('/projects/details') }}">台帳</a></li>
-                            <li role="presentation"><a href="{{ url('/projects/budget') }}">予算対</a></li>
+                            <li role="presentation"><a href="{{ url('/projects/project-budgets') }}">予算対</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">
@@ -144,7 +144,7 @@
                             <li role="presentation"><a href="{{ url('/projects') }}">プロジェクト一覧</a></li>
                             <li role="presentation"><a href="{{ url('/projects/personal-budgets') }}">個人予算</a></li>
                             <li role="presentation"><a href="{{ url('/projects/details') }}">台帳</a></li>
-                            <li role="presentation"><a href="{{ url('/projects/budget') }}">予算対</a></li>
+                            <li role="presentation"><a href="{{ url('/projects/project-budgets') }}">予算対</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">

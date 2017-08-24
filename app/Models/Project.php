@@ -10,7 +10,7 @@ use DB;
 class Project extends Model
 {
     use SoftDeletes;
-    protected $dates = ['deleted_at'];
+    protected $dates = ['deleted_at', 'start', 'end', 'end_expect'];
 
     /**
      * 担当者取得.
@@ -64,18 +64,46 @@ class Project extends Model
         return $this->hasOne(Customer::class, 'id', 'customer_id');
     }
 
+    /**
+     * 個人予算、作業分類別に取得
+     * @return $this
+     */
     public function sumByWorkType()
     {
         return $this->dailies()->select(DB::raw('work_type_id, sum(`time`) as `sum_time` , sum(`cost`) as `sum_cost`'))
             ->groupBy('work_type_id');
     }
 
-    public function budgetFilter($userId)
+
+    public function sumByCostPersonal($projectId, $userId)
+    {
+        return DB::table('dailies')->select(DB::raw('sum(`cost`) as `sum_cost`'))
+            ->where('project_id', $projectId)
+            ->where('user_id', $userId)
+            ->first();
+    }
+
+    /**
+     * ユーザーIDからユーザー情報取得.
+     * @param $userId
+     * @return \Illuminate\Database\Eloquent\Collection|mixed
+     */
+    public function budgetFilter($userId = null)
     {
         if ($userId) {
             return $this->users()->where('user_id', $userId)->get();
         } else {
             return $this->users;
         }
+    }
+
+    /**
+     * プロジェクト実績金額 取得.
+     * @param $projectId
+     * @return mixed
+     */
+    public function sumByCost($projectId)
+    {
+        return DB::table('dailies')->select(DB::raw('sum(`cost`) as `sum_cost`'))->where('project_id', '=', $projectId)->first();
     }
 }

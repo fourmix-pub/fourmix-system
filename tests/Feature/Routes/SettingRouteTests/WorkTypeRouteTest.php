@@ -109,7 +109,7 @@ class WorkTypeRouteTest extends TestCase
      */
     public function it_can_delete()
     {
-        $response = $this->actingAs($this->user)->delete('/settings/work-types/'.$this->workType->id);
+        $response = $this->actingAs($this->user)->delete('/settings/work-types/'.$this->workType->id, ['_token' => csrf_token()]);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
         $this->assertSoftDeleted('work_types', $this->workType->toArray());

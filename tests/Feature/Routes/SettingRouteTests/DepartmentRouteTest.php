@@ -109,7 +109,7 @@ class DepartmentRouteTest extends TestCase
      */
     public function it_can_delete()
     {
-        $response = $this->actingAs($this->user)->delete('/settings/departments/'.$this->department->id);
+        $response = $this->actingAs($this->user)->delete('/settings/departments/'.$this->department->id, ['_token' => csrf_token()]);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
         $this->assertSoftDeleted('departments', $this->department->toArray());

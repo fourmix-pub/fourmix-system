@@ -70,4 +70,13 @@ class PersonalBudgetController extends Controller
     {
         return response()->delete(Project::find($request->get('project_id'))->users()->detach($request->get('user_id')));
     }
+
+    /**
+     * 個人予算別予算対
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function projectPersonalBudgets()
+    {
+        return view('project.project-personal-budgets', $this->repository->personalBudgetResources());
+    }
 }

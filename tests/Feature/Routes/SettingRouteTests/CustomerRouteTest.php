@@ -110,7 +110,7 @@ class CustomerRouteTest extends TestCase
      */
     public function it_can_delete()
     {
-        $response = $this->actingAs($this->user)->delete('/settings/customers/'.$this->customer->id);
+        $response = $this->actingAs($this->user)->delete('/settings/customers/'.$this->customer->id, ['_token' => csrf_token()]);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
         $this->assertSoftDeleted('customers', $this->customer->toArray());

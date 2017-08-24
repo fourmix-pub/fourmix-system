@@ -154,4 +154,30 @@ class PersonalBudgetRouteTest extends TestCase
         $this->assertDatabaseHas('personal_budgets', $data);
         $response->assertViewHasAll(['projects', 'usersSelect', 'projectId', 'userId', 'projectsSelect']);
     }
+
+    /**
+     * 個人予算別予算対 表示できる.
+     * @test
+     */
+    public function it_can_access_view_personal_budget()
+    {
+        $response = $this->actingAs($this->user)->get('/projects/project-personal-budgets');
+        $response->assertStatus(200);
+        $response->assertViewHasAll(['projects', 'usersSelect', 'projectId', 'userId', 'projectsSelect']);
+    }
+
+    /**
+     * 個人予算別予算対 担当者IDによって検索できる.
+     * @test
+     */
+    public function it_can_search_personal_budget_by_user_id()
+    {
+        $data = [
+            'user_id' => 1,
+        ];
+
+        $response = $this->actingAs($this->user)->get('/projects/project-personal-budgets', array_merge($data));
+        $this->assertDatabaseHas('projects', $data);
+        $response->assertViewHasAll(['projects', 'usersSelect', 'projectId', 'userId', 'projectsSelect']);
+    }
 }
