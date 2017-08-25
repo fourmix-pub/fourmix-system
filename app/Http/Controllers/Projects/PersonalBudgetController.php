@@ -36,7 +36,8 @@ class PersonalBudgetController extends Controller
      */
     public function index()
     {
-        return view('project.personal-budgets', $this->repository->personalBudgetResources())->with('nav', $this->nav);;
+        return view('project.personal-budgets', $this->repository->personalBudgetResources())->with('nav', $this->nav);
+        ;
     }
 
     /**
