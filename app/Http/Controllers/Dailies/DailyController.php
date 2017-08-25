@@ -16,6 +16,8 @@ class DailyController extends Controller
      */
     protected $repository;
 
+    protected $nav = 'dailies';
+
     /**
      * DailyController constructor.
      */
@@ -27,16 +29,11 @@ class DailyController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
     public function index()
     {
-        return view('daily.index', $this->repository->dailyResources());
-    }
-
-    public function view()
-    {
-        return view('daily.view', $this->repository->dailyResources());
+        return view('daily.index', $this->repository->dailyResources())->with('nav', $this->nav);
     }
 
     /**
@@ -73,23 +70,48 @@ class DailyController extends Controller
         return response()->delete($daily->delete());
     }
 
+    /**
+     * 日報閲覧
+     * @return mixed
+     */
+    public function view()
+    {
+        return view('daily.view', $this->repository->dailyResources())->with('nav', $this->nav);
+    }
+
+    /**
+     * 集計表（プロジェクト別作業分類）
+     * @return mixed
+     */
     public function workTypesByProject()
     {
-        return view('daily.analytics-work-types-by-project', $this->repository->analyticsByProject());
+        return view('daily.analytics-work-types-by-project', $this->repository->analyticsByProject())->with('nav', $this->nav);
     }
 
+    /**
+     * 集計表（プロジェクト別担当者）
+     * @return mixed
+     */
     public function usersByProject()
     {
-        return view('daily.analytics-users-by-project', $this->repository->analyticsByProject());
+        return view('daily.analytics-users-by-project', $this->repository->analyticsByProject())->with('nav', $this->nav);
     }
 
+    /**
+     * 集計表（担当者別作業分類）
+     * @return mixed
+     */
     public function workTypesByUser()
     {
-        return view('daily.analytics-work-types-by-user', $this->repository->analyticsByUser());
+        return view('daily.analytics-work-types-by-user', $this->repository->analyticsByUser())->with('nav', $this->nav);
     }
 
+    /**
+     * 集計表（担当者別プロジェクト）
+     * @return mixed
+     */
     public function projectsByUser()
     {
-        return view('daily.analytics-projects-by-user', $this->repository->analyticsByUser());
+        return view('daily.analytics-projects-by-user', $this->repository->analyticsByUser())->with('nav', $this->nav);
     }
 }

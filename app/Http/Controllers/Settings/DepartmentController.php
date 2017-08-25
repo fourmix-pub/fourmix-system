@@ -10,10 +10,12 @@ use App\Contracts\Repositories\DepartmentRepositoryContract;
 class DepartmentController extends Controller
 {
     /**
-     * 部門倉庫契約.
+     * 部門倉庫契約（インターフェース）.
      * @var DepartmentRepositoryContract
      */
     protected $repository;
+
+    protected $nav = 'settings';
 
     /**
      * DepartmentController constructor.
@@ -26,11 +28,11 @@ class DepartmentController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
     public function index()
     {
-        return view('settings.departments.index', $this->repository->departmentResources());
+        return view('settings.departments.index', $this->repository->departmentResources())->with('nav', $this->nav);
     }
 
     /**

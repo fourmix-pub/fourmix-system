@@ -12,7 +12,8 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Fourmix.Co.,Ltd',
+    'name' => 'Fourmix.Co.,Ltd.',
+    'version' => '1.0.0',
 
     /*
     |--------------------------------------------------------------------------

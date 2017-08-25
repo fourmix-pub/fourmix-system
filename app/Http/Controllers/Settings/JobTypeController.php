@@ -15,6 +15,8 @@ class JobTypeController extends Controller
      */
     protected $repository;
 
+    protected $nav = 'settings';
+
     /**
      * JobTypeController constructor.
      */
@@ -26,11 +28,11 @@ class JobTypeController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
     public function index()
     {
-        return view('settings.job-types.index', $this->repository->jobTypeResources());
+        return view('settings.job-types.index', $this->repository->jobTypeResources())->with('nav', $this->nav);
     }
 
     /**

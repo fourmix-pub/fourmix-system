@@ -10,9 +10,12 @@ use App\Contracts\Repositories\CustomerRepositoryContract;
 class CustomerController extends Controller
 {
     /**
+     * 勤務分類倉庫契約（レポジトリー）.
      * @var CustomerRepositoryContract
      */
     protected $repository;
+
+    protected $nav = 'settings';
 
     /**
      * CustomerController constructor.
@@ -26,11 +29,11 @@ class CustomerController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
     public function index()
     {
-        return view('settings.customer.index', $this->repository->customerResources());
+        return view('settings.customer.index', $this->repository->customerResources())->with('nav', $this->nav);
     }
 
     /**

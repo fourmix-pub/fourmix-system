@@ -17,6 +17,8 @@ class UserController extends Controller
      */
     protected $repository;
 
+    protected $nav = 'settings';
+
     /**
      * UserController constructor.
      */
@@ -28,11 +30,11 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
     public function index()
     {
-        return view('settings.users.index', $this->repository->userResources());
+        return view('settings.users.index', $this->repository->userResources())->with('nav', $this->nav);
     }
 
     /**
@@ -50,13 +52,18 @@ class UserController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
     public function edit()
     {
         $user = Auth::user();
 
-        return view('settings.profile.index', compact('user'));
+        return view('settings.profile.index', compact('user'))->with('nav', $this->nav = 'users');
+    }
+
+    public function updateProfile(Request $request, User $user)
+    {
+        return response()->update($this->repository->updateProfile($request, $user));
     }
 
     /**
@@ -69,11 +76,6 @@ class UserController extends Controller
     public function update(UserRequest $request, User $user)
     {
         return response()->update($this->repository->update($request, $user));
-    }
-
-    public function updateProfile(Request $request, User $user)
-    {
-        return response()->update($this->repository->updateProfile($request, $user));
     }
 
     /**

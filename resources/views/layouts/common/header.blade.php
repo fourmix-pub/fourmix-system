@@ -124,7 +124,7 @@
                         </a>
                     </li>
                 @else
-                    <li role="presentation" class="dropdown active">{{-- TODO: active 実装 --}}
+                    <li role="presentation" class="dropdown @if($nav == 'dailies') active @endif">
                         <a href="#" class="dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="日報">
                             DAILY REPORTS&nbsp;
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -135,7 +135,7 @@
                             <li role="presentation"><a href="{{ route('daily.analytics.workTypes.byProject') }}">集計</a></li>
                         </ul>
                     </li>
-                    <li role="presentation" class="dropdown">
+                    <li role="presentation" class="dropdown @if($nav == 'projects') active @endif">
                         <a href="#" class="dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="プロジェクト">
                             PROJECTS&nbsp;
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
@@ -157,7 +157,7 @@
                             <li role="presentation"><a href="{{ url('http://www.maatwebsite.nl/laravel-excel/docs') }}" target="_blank">Laravel Excel</a></li>
                         </ul>
                     </li>
-                    <li role="presentation" class="dropdown">
+                    <li role="presentation" class="dropdown @if($nav == 'settings') active @endif">
                         <a href="#" class="dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="基本設定">
                             SETTINGS&nbsp;
                             <i class="fa fa-caret-down " aria-hidden="true"></i>
@@ -170,7 +170,7 @@
                             <li role="presentation"><a href="{{ route('customers.index') }}">顧客</a></li>
                         </ul>
                     </li>
-                    <li role="presentation" class="dropdown">
+                    <li role="presentation" class="dropdown @if($nav == 'users') active @endif">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="ユーザー">
                             {{ Auth::user()->name }}&nbsp;
                             <span class="caret"></span>
