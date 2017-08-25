@@ -17,7 +17,10 @@ class ProjectModelTest extends TestCase
      * テスト用ダミーデータ
      * @var
      */
-    protected $project, $daily, $user, $personalBudget;
+    protected $project;
+    protected $daily;
+    protected $user;
+    protected $personalBudget;
 
     /**
      * @before
@@ -81,6 +84,4 @@ class ProjectModelTest extends TestCase
         $result = $this->project->sumByCost($this->project->id);
         $this->assertEquals($result->sum_cost, 10000);
     }
-
-
 }
