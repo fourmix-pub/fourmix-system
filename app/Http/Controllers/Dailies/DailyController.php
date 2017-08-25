@@ -72,4 +72,24 @@ class DailyController extends Controller
     {
         return response()->delete($daily->delete());
     }
+
+    public function workTypesByProject()
+    {
+        return view('daily.analytics-work-types-by-project', $this->repository->analyticsByProject());
+    }
+
+    public function usersByProject()
+    {
+        return view('daily.analytics-users-by-project', $this->repository->analyticsByProject());
+    }
+
+    public function workTypesByUser()
+    {
+        return view('daily.analytics-work-types-by-user', $this->repository->analyticsByUser());
+    }
+
+    public function projectsByUser()
+    {
+        return view('daily.analytics-projects-by-user', $this->repository->analyticsByUser());
+    }
 }

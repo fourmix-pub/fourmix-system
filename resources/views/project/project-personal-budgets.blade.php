@@ -61,9 +61,9 @@
                 <tr>
                     <td>{{ $project->name }}</td>
                     <td>{{ $user->name }}</td>
-                    <td align="right">{{ number_format($user->pivot->budget) }}</td>
-                    <td align="right">{{ number_format($project->sumByCostPersonal($project->id, $user->id)->sum_cost) }}</td>
-                    <td align="right">{{ number_format(Analytics::balancePersonalBudget($project, $user)) }}</td>
+                    <td align="right">¥{{ number_format($user->pivot->budget) }}</td>
+                    <td align="right">¥{{ number_format($project->sumByCostPersonal($project->id, $user->id)->sum_cost) }}</td>
+                    <td align="right">¥{{ number_format(Analytics::balancePersonalBudget($project, $user)) }}</td>
                     <td align="right">{{ number_format(Analytics::balancePersonalBudgetRate($project, $user)) }}%</td>
                     <td>
                         @if($project->end)完了@endif

@@ -8,6 +8,7 @@ use App\Models\Department;
 use App\Models\PersonalBudget;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use DB;
 
 class User extends Authenticatable
 {
@@ -63,5 +64,25 @@ class User extends Authenticatable
         return $this->belongsToMany(Project::class, 'personal_budgets', 'user_id', 'project_id')
             ->withPivot('budget')
             ->withTimestamps();
+    }
+
+    /**
+     * 担当者毎の予算合計、作業分類別に取得
+     * @return $this
+     */
+    public function sumByWorkType()
+    {
+        return $this->dailies()->select(DB::raw('work_type_id, sum(`time`) as `sum_time` , sum(`cost`) as `sum_cost`'))
+            ->groupBy('work_type_id');
+    }
+
+    /**
+     * 担当者毎の予算合計、プロジェクト別に取得
+     * @return $this
+     */
+    public function sumByProject()
+    {
+        return $this->dailies()->select(DB::raw('project_id, sum(`time`) as `sum_time` , sum(`cost`) as `sum_cost`'))
+            ->groupBy('project_id');
     }
 }

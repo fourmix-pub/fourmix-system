@@ -65,7 +65,7 @@ class Project extends Model
     }
 
     /**
-     * 個人予算、作業分類別に取得
+     * プロジェクト毎の予算合計、作業分類別に取得
      * @return $this
      */
     public function sumByWorkType()
@@ -74,7 +74,22 @@ class Project extends Model
             ->groupBy('work_type_id');
     }
 
+    /**
+     * プロジェクト毎の予算合計、担当者別に取得
+     * @return $this
+     */
+    public function sumByUser()
+    {
+        return $this->dailies()->select(DB::raw('user_id, sum(`time`) as `sum_time` , sum(`cost`) as `sum_cost`'))
+            ->groupBy('user_id');
+    }
 
+    /**
+     * 個人予算、プロジェクトとユーザー毎に合計取得
+     * @param $projectId
+     * @param $userId
+     * @return mixed
+     */
     public function sumByCostPersonal($projectId, $userId)
     {
         return DB::table('dailies')->select(DB::raw('sum(`cost`) as `sum_cost`'))

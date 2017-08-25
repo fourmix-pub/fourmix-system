@@ -53,7 +53,7 @@
                         <td>{{ $daily->project->name }}</td>
                         <td>{{ $daily->workType->name }}</td>
                         <td align="right">{{ $daily->time }}</td>
-                        <td align="right">{{ number_format($daily->cost) }}</td>
+                        <td align="right">¥{{ number_format($daily->cost) }}</td>
                         <td>
                             @include('layouts.daily-view.delete')
                             @include('layouts.daily-view.edit')
