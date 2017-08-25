@@ -11,7 +11,9 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class UserModelTest extends TestCase
 {
-    protected $project, $daily, $user;
+    protected $project;
+    protected $daily;
+    protected $user;
 
     /**
      * @before
