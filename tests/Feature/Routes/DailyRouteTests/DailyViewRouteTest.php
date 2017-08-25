@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Routes\SettingRouteTests;
+namespace Tests\Feature\Routes\DailyRouteTests;
 
 use App\Models\Daily;
 use App\User;
