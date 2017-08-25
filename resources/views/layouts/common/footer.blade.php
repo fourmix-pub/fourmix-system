@@ -4,7 +4,8 @@
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
             <div align="center" style="color: #ffffff">
-                v1.0.0  Powered by <a style="color: #ffffff" href="{{ url('/') }}" target="_blank">{{ config('app.name') }}</a>.
+                Powered by <a style="color: #ffffff" href="{{ url('http://www.fourmix.co.jp/') }}" target="_blank">{{ config('app.name') }}</a> - Version
+                <a style="color: #ffffff" href="https://github.com/fourmix-pub/fourmix-system/releases">{{ config('app.version') }}</a>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
@@ -22,7 +23,7 @@
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
             <div align="center">
-                v1.0.0  Powered by <a href="{{ url('/') }}" target="_blank">{{ config('app.name') }}</a>.
+                Powered by <a href="{{ url('http://www.fourmix.co.jp/') }}" target="_blank">{{ config('app.name') }}</a>.
             </div>
         </div>
     </div>

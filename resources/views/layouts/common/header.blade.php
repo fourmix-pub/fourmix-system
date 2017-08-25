@@ -72,8 +72,8 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li role="presentation"><a href="{{ url('/dailies') }}" >日報作成</a></li>
-                            <li role="presentation"><a href="{{ url('/dailies/view') }}">日報閲覧</a></li>
-                            <li role="presentation"><a href="{{ url('/dailies/total') }}">集計</a></li>
+                            <li role="presentation"><a href="{{ route('daily.view') }}">日報閲覧</a></li>
+                            <li role="presentation"><a href="{{ route('daily.analytics.workTypes.byProject') }}">集計</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">
@@ -82,10 +82,10 @@
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="{{ url('/projects') }}">プロジェクト一覧</a></li>
-                            <li role="presentation"><a href="{{ url('/projects/personal-budgets') }}">個人予算</a></li>
-                            <li role="presentation"><a href="{{ url('/projects/details') }}">台帳</a></li>
-                            <li role="presentation"><a href="{{ url('/projects/project-budgets') }}">予算対</a></li>
+                            <li role="presentation"><a href="{{ route('projects.index') }}">プロジェクト一覧</a></li>
+                            <li role="presentation"><a href="{{ route('personal-budgets.index') }}">個人予算</a></li>
+                            <li role="presentation"><a href="{{ route('projects.details') }}">台帳</a></li>
+                            <li role="presentation"><a href="{{ route('projects.budgets.project') }}">予算対</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">
@@ -104,11 +104,11 @@
                             <i class="fa fa-caret-down " aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="{{ url('/settings/users') }}">担当者</a></li>
-                            <li role="presentation"><a href="{{ url('/settings/work-types') }}">作業分類</a></li>
-                            <li role="presentation"><a href="{{ url('/settings/departments') }}">部門</a></li>
-                            <li role="presentation"><a href="{{ url('/settings/job-types') }}">勤務分類</a></li>
-                            <li role="presentation"><a href="{{ url('/settings/customers') }}">顧客</a></li>
+                            <li role="presentation"><a href="{{ route('users.index') }}">担当者</a></li>
+                            <li role="presentation"><a href="{{ route('work-types.index') }}">作業分類</a></li>
+                            <li role="presentation"><a href="{{ route('departments.index') }}">部門</a></li>
+                            <li role="presentation"><a href="{{ route('job-types.index') }}">勤務分類</a></li>
+                            <li role="presentation"><a href="{{ route('customers.index') }}">顧客</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -124,27 +124,27 @@
                         </a>
                     </li>
                 @else
-                    <li role="presentation" class="dropdown active">{{-- TODO: active 実装 --}}
+                    <li role="presentation" class="dropdown @if($nav == 'dailies') active @endif">
                         <a href="#" class="dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="日報">
                             DAILY REPORTS&nbsp;
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li role="presentation"><a href="{{ url('/dailies') }}" >日報作成</a></li>
-                            <li role="presentation"><a href="{{ url('/dailies/view') }}">日報閲覧</a></li>
-                            <li role="presentation"><a href="{{ url('/dailies/total') }}">集計</a></li>
+                            <li role="presentation"><a href="{{ route('daily.view') }}">日報閲覧</a></li>
+                            <li role="presentation"><a href="{{ route('daily.analytics.workTypes.byProject') }}">集計</a></li>
                         </ul>
                     </li>
-                    <li role="presentation" class="dropdown">
+                    <li role="presentation" class="dropdown @if($nav == 'projects') active @endif">
                         <a href="#" class="dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="プロジェクト">
                             PROJECTS&nbsp;
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="{{ url('/projects') }}">プロジェクト一覧</a></li>
-                            <li role="presentation"><a href="{{ url('/projects/personal-budgets') }}">個人予算</a></li>
-                            <li role="presentation"><a href="{{ url('/projects/details') }}">台帳</a></li>
-                            <li role="presentation"><a href="{{ url('/projects/project-budgets') }}">予算対</a></li>
+                            <li role="presentation"><a href="{{ route('projects.index') }}">プロジェクト一覧</a></li>
+                            <li role="presentation"><a href="{{ route('personal-budgets.index') }}">個人予算</a></li>
+                            <li role="presentation"><a href="{{ route('projects.details') }}">台帳</a></li>
+                            <li role="presentation"><a href="{{ route('projects.budgets.project') }}">予算対</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">
@@ -157,20 +157,20 @@
                             <li role="presentation"><a href="{{ url('http://www.maatwebsite.nl/laravel-excel/docs') }}" target="_blank">Laravel Excel</a></li>
                         </ul>
                     </li>
-                    <li role="presentation" class="dropdown">
+                    <li role="presentation" class="dropdown @if($nav == 'settings') active @endif">
                         <a href="#" class="dropdown-toggle"  data-toggle="dropdown" data-placement="bottom" title="基本設定">
                             SETTINGS&nbsp;
                             <i class="fa fa-caret-down " aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="{{ url('/settings/users') }}">担当者</a></li>
-                            <li role="presentation"><a href="{{ url('/settings/work-types') }}">作業分類</a></li>
-                            <li role="presentation"><a href="{{ url('/settings/departments') }}">部門</a></li>
-                            <li role="presentation"><a href="{{ url('/settings/job-types') }}">勤務分類</a></li>
-                            <li role="presentation"><a href="{{ url('/settings/customers') }}">顧客</a></li>
+                            <li role="presentation"><a href="{{ route('users.index') }}">担当者</a></li>
+                            <li role="presentation"><a href="{{ route('work-types.index') }}">作業分類</a></li>
+                            <li role="presentation"><a href="{{ route('departments.index') }}">部門</a></li>
+                            <li role="presentation"><a href="{{ route('job-types.index') }}">勤務分類</a></li>
+                            <li role="presentation"><a href="{{ route('customers.index') }}">顧客</a></li>
                         </ul>
                     </li>
-                    <li role="presentation" class="dropdown">
+                    <li role="presentation" class="dropdown @if($nav == 'users') active @endif">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="ユーザー">
                             {{ Auth::user()->name }}&nbsp;
                             <span class="caret"></span>

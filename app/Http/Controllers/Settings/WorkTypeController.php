@@ -15,6 +15,8 @@ class WorkTypeController extends Controller
      */
     protected $repository;
 
+    protected $nav = 'settings';
+
     /**
      * WorkTypeController constructor.
      */
@@ -26,11 +28,11 @@ class WorkTypeController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
     public function index()
     {
-        return view('settings.work-types.index', $this->repository->workTypeResources());
+        return view('settings.work-types.index', $this->repository->workTypeResources())->with('nav', $this->nav);
     }
 
     /**

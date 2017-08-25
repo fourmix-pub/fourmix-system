@@ -47,7 +47,7 @@
 				<tr>
 					<td>{{ $project->name }}</td>
 					<td>{{ $user->name }}</td>
-					<td align="right">{{ number_format($user->pivot->budget) }}</td>
+					<td align="right">¥{{ number_format($user->pivot->budget) }}</td>
 					<td>
 					@include('layouts.personal-budgets.edit')
 					@include('layouts.personal-budgets.delete')

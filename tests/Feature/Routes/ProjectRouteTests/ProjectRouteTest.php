@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Routes\SettingRouteTests;
+namespace Tests\Feature\Routes\ProjectRouteTests;
 
 use App\Models\Project;
 use App\User;

@@ -64,4 +64,38 @@ class DailyRepository implements DailyRepositoryContract
 
         return $daily->update();
     }
+
+    /**
+     * プロジェクト別集計表資源取得契約.
+     * @return mixed
+     */
+    public function analyticsByProject()
+    {
+        $project = null;
+
+        if ($projectId = request('project_id')) {
+            $project = Project::where('id', $projectId)->get()->first();
+        }
+
+        $projectsSelect = Project::all();
+
+        return compact('projectsSelect', 'project', 'projectId');
+    }
+
+    /**
+     * 担当者別集計表資源取得契約.
+     * @return mixed
+     */
+    public function analyticsByUser()
+    {
+        $user = null;
+
+        if ($userId = request('user_id')) {
+            $user = User::where('id', $userId)->get()->first();
+        }
+
+        $usersSelect = User::all();
+
+        return compact('usersSelect', 'user', 'userId');
+    }
 }

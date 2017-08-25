@@ -38,7 +38,7 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="text-center">
-			<h3>プロジェクト別プロジェクト予算対実績表</h3>
+			<h3>プロジェクト別予算対実績表</h3>
 		</div>
 	</div>
 </div>
@@ -57,9 +57,9 @@
 		@foreach($projects as $project)
 			<tr>
 				<td>{{ $project->name }}</td>
-				<td align="right">{{ number_format($project->budget) }}</td>
-				<td align="right">{{ number_format($project->sumByCost($project->id)->sum_cost) }}</td>
-				<td align="right">{{ number_format(Analytics::balanceBudget($project)) }}</td>
+				<td align="right">¥{{ number_format($project->budget) }}</td>
+				<td align="right">¥{{ number_format($project->sumByCost($project->id)->sum_cost) }}</td>
+				<td align="right">¥{{ number_format(Analytics::balanceBudget($project)) }}</td>
 				<td align="right">{{ Analytics::balanceBudgetRate($project) }}%</td>
 				<td>
 					@if($project->end)完了@endif

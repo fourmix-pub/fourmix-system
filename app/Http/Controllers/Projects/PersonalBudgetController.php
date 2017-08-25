@@ -18,6 +18,8 @@ class PersonalBudgetController extends Controller
      */
     protected $repository;
 
+    protected $nav = 'projects';
+
     /**
      * PersonalBudgetController constructor.
      */
@@ -30,11 +32,12 @@ class PersonalBudgetController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
     public function index()
     {
-        return view('project.personal-budgets', $this->repository->personalBudgetResources());
+        return view('project.personal-budgets', $this->repository->personalBudgetResources())->with('nav', $this->nav);
+        ;
     }
 
     /**
@@ -77,6 +80,6 @@ class PersonalBudgetController extends Controller
      */
     public function projectPersonalBudgets()
     {
-        return view('project.project-personal-budgets', $this->repository->personalBudgetResources());
+        return view('project.project-personal-budgets', $this->repository->personalBudgetResources())->with('nav', $this->nav);
     }
 }

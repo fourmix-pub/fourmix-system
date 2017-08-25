@@ -34,6 +34,15 @@ Route::group(['namespace' => 'Dailies'], function () {
     Route::get('dailies/view', 'DailyController@view')->name('daily.view');
     Route::patch('dailies/view/{daily}', 'DailyController@update')->name('daily.view.update');
     Route::delete('dailies/view/{daily}', 'DailyController@destroy')->name('daily.view.destroy');
+    //集計表
+    //プロジェクト別作業分類
+    Route::get('dailies/analytics/work-types-by-project', 'DailyController@workTypesByProject')->name('daily.analytics.workTypes.byProject');
+    //プロジェクト別担当者
+    Route::get('dailies/analytics/users-by-project', 'DailyController@usersByProject')->name('daily.analytics.users.byProject');
+    //担当者別作業分類
+    Route::get('dailies/analytics/work-types-by-user', 'DailyController@workTypesByUser')->name('daily.analytics.workTypes.byUser');
+    //担当者別プロジェクト
+    Route::get('dailies/analytics/projects-by-user', 'DailyController@projectsByUser')->name('daily.analytics.projects.byUser');
 });
 
 /*

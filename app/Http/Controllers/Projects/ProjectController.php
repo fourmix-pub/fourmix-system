@@ -16,6 +16,8 @@ class ProjectController extends Controller
      */
     protected $repository;
 
+    protected $nav = 'projects';
+
     /**
      * ProjectController constructor.
      */
@@ -28,11 +30,12 @@ class ProjectController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
     public function index()
     {
-        return view('project.index', $this->repository->projectResources());
+        return view('project.index', $this->repository->projectResources())->with('nav', $this->nav);
+        ;
     }
 
     /**
@@ -75,7 +78,7 @@ class ProjectController extends Controller
      */
     public function details()
     {
-        return view('project.details', $this->repository->details());
+        return view('project.details', $this->repository->details())->with('nav', $this->nav);
     }
 
     /**
@@ -84,6 +87,6 @@ class ProjectController extends Controller
      */
     public function projectBudgets()
     {
-        return view('project.project-budgets', $this->repository->projectResources());
+        return view('project.project-budgets', $this->repository->projectResources())->with('nav', $this->nav);
     }
 }

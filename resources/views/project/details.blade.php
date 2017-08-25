@@ -62,8 +62,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td align="right">{{ number_format($project->cost) }}</td>
-										<td align="right">{{ number_format($project->budget) }}</td>
+										<td align="right">¥{{ number_format($project->cost) }}</td>
+										<td align="right">¥{{ number_format($project->budget) }}</td>
 										<td>{{ $project->start->format('Y/m/d') }}</td>
 										<td>{{ $project->end_expect->format('Y/m/d') }}</td>
 										<td>{{ $project->end ? $project->end->format('Y/m/d') : $project->end }}</td>
@@ -90,7 +90,7 @@
 									<tr>
 										<td>{{ $daily->workType->name }}</td>
 										<td align="right">{{ $daily->sum_time }}</td>
-										<td align="right">{{ number_format($daily->sum_cost) }}</td>
+										<td align="right">¥{{ number_format($daily->sum_cost) }}</td>
 									</tr>
 								@endforeach
 							</tbody>

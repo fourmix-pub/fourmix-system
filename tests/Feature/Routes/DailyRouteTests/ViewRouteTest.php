@@ -6,7 +6,7 @@ use App\Models\Daily;
 use App\User;
 use Tests\TestCase;
 
-class DailyViewRouteTest extends TestCase
+class ViewRouteTest extends TestCase
 {
 
     /**
