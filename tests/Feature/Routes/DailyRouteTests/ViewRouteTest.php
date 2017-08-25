@@ -1,12 +1,12 @@
 <?php
 
-namespace Tests\Feature\Routes\DailyRouteTests;
+namespace Tests\Feature\Routes\SettingRouteTests;
 
 use App\Models\Daily;
 use App\User;
 use Tests\TestCase;
 
-class DailyViewRouteTest extends TestCase
+class ViewRouteTest extends TestCase
 {
 
     /**
