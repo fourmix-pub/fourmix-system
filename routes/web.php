@@ -96,9 +96,10 @@ Route::group(['prefix' => 'settings', 'namespace' => 'Settings'], function () {
     ]]);
     //担当者一覧
     Route::resource('users', 'UserController', ['except' => [
-        'create', 'show',
+        'create', 'show','edit'
     ]]);
     //プロフィール変更
+    Route::get('/profile', 'UserController@editProfile')->name('profile');
     Route::patch('/profile/{user}', 'UserController@updateProfile')->name('update-profile');
 });
 

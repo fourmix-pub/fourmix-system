@@ -45,10 +45,7 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                @php
-                                    $user = Auth::user();
-                                @endphp
-                                <a href="{{ route('users.edit', compact('user')) }}">
+                                <a href="{{ route('profile') }}">
                                     プロフィール
                                 </a>
                             </li>
@@ -175,7 +172,7 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="{{ route('users.edit', compact('user')) }}">
+                                <a href="{{ route('profile') }}">
                                     プロフィール
                                 </a>
                             </li>
