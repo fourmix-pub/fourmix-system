@@ -113,5 +113,4 @@ Route::group(['prefix' => 'config', 'namespace' => 'Config'], function () {
     Route::get('/password', 'ConfigController@resetPassword');
 });
 
-Route::get('test', function () {
-});
+Route::get('test', 'TestController@index');
