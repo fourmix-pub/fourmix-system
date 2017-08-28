@@ -95,7 +95,6 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li role="presentation"><a href="{{ url('http://localhost/phpmyadmin/') }}" target="_blank">phpMyAdmin</a></li>
-                            <li role="presentation"><a href="{{ url('http://www.maatwebsite.nl/laravel-excel/docs') }}" target="_blank">Laravel Excel</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">
@@ -154,7 +153,6 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li role="presentation"><a href="{{ url('http://localhost/phpmyadmin/') }}" target="_blank">phpMyAdmin</a></li>
-                            <li role="presentation"><a href="{{ url('http://www.maatwebsite.nl/laravel-excel/docs') }}" target="_blank">Laravel Excel</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown @if($nav == 'settings') active @endif">
