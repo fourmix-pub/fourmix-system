@@ -73,30 +73,31 @@
 						</div>
 					</div>
 
-					<br>
-
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<div class="table-responsive">
-						<table class="table table-bordered table-hover">
-							<thead>
-								<tr class="active">
-									<th>作業分類名</th>
-									<th>作業時間</th>
-									<th>作業金額</th>
-								</tr>
-							</thead>
-							<tbody>
-								@foreach($project->sumByWorkType()->get() as $daily)
-									<tr>
-										<td>{{ $daily->workType->name }}</td>
-										<td align="right">{{ $daily->sum_time }}</td>
-										<td align="right">¥{{ number_format($daily->sum_cost) }}</td>
+					@if(count($project->dailies) > 0)
+						<br>
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="table-responsive">
+							<table class="table table-bordered table-hover">
+								<thead>
+									<tr class="active">
+										<th>作業分類名</th>
+										<th>作業時間</th>
+										<th>作業金額</th>
 									</tr>
-								@endforeach
-							</tbody>
-						</table>
+								</thead>
+								<tbody>
+									@foreach($project->sumByWorkType()->get() as $daily)
+										<tr>
+											<td>{{ $daily->workType->name }}</td>
+											<td align="right">{{ $daily->sum_time }}</td>
+											<td align="right">¥{{ number_format($daily->sum_cost) }}</td>
+										</tr>
+									@endforeach
+								</tbody>
+							</table>
+							</div>
 						</div>
-					</div>
+					@endif
 
 				</div>
 			</div>
