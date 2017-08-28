@@ -28,7 +28,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+                            <form class="form-horizontal" role="form" method="POST" action="{{ url('login') }}">
                                 {{ csrf_field() }}
 
                                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
