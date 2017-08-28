@@ -26,7 +26,8 @@ class PersonalBudgetRepository implements PersonalBudgetRepositoryContract
         $userId = request('user_id');
 
         $projects = $projects->paginate(3);
-        $projectsSelect = Project::all();
+        $projectsSelect = Project::has('personalBudgets')->get();
+        ;
         $usersSelect = User::all();
 
         return compact('projects', 'usersSelect', 'projectId', 'userId', 'projectsSelect');

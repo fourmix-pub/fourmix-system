@@ -78,7 +78,7 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="text-right">
-									<button type="submit" class="btn btn-primary">登録</button>
+									<button type="submit" class="btn btn-primary">編集</button>
 								</div>
 							</div>
 						</div>

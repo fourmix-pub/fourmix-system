@@ -45,10 +45,7 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                @php
-                                    $user = Auth::user();
-                                @endphp
-                                <a href="{{ route('users.edit', compact('user')) }}">
+                                <a href="{{ route('profile') }}">
                                     プロフィール
                                 </a>
                             </li>
@@ -95,7 +92,6 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li role="presentation"><a href="{{ url('http://localhost/phpmyadmin/') }}" target="_blank">phpMyAdmin</a></li>
-                            <li role="presentation"><a href="{{ url('http://www.maatwebsite.nl/laravel-excel/docs') }}" target="_blank">Laravel Excel</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">
@@ -154,7 +150,6 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li role="presentation"><a href="{{ url('http://localhost/phpmyadmin/') }}" target="_blank">phpMyAdmin</a></li>
-                            <li role="presentation"><a href="{{ url('http://www.maatwebsite.nl/laravel-excel/docs') }}" target="_blank">Laravel Excel</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown @if($nav == 'settings') active @endif">
@@ -177,7 +172,7 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="{{ route('users.edit', compact('user')) }}">
+                                <a href="{{ route('profile') }}">
                                     プロフィール
                                 </a>
                             </li>
