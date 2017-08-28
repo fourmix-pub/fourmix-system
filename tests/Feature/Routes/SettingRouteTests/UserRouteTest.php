@@ -150,7 +150,7 @@ class UserRouteTest extends TestCase
      */
     public function it_can_edit_profile()
     {
-        $response = $this->actingAs($this->user)->get('/settings/users/'.$this->testUser->id.'/edit');
+        $response = $this->actingAs($this->user)->get('/settings/profile');
         $response->assertStatus(200);
         $response->assertViewHasAll(['user']);
     }
