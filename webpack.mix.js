@@ -86,7 +86,8 @@ mix.styles([
     'resources/assets/css/radius.css',
     'resources/assets/css/daily.css',
     'resources/assets/css/modal.css',
-    'resources/assets/css/pageloader.css'
+    'resources/assets/css/pageloader.css',
+    'resources/assets/css/fullcalendar.css'
 ], 'public/css/app.css');
 
 
@@ -95,5 +96,6 @@ mix.scripts([
     'resources/assets/js/moment.js',
     'resources/assets/js/locales.js',
     'resources/assets/js/jquery.js',
-    'resources/assets/js/pageloader.js'
+    'resources/assets/js/pageloader.js',
+    'resources/assets/js/fullcalendar.js',
 ], 'public/js/lib.js');

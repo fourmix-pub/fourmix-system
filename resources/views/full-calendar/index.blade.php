@@ -1,127 +1,3 @@
-<?php
-
-if(empty($_GET['month'])){
-
-    $month = date('n');
-    $year = date('Y');
-
-    if(isset($_GET['month'])){
-        $year = $_GET['year'] - 1;
-        $month = 12;
-    }
-
-}else{
-
-    $year = $_GET['year'];
-
-    switch ($_GET['month']){
-
-        case 1:
-            $month_eng = "Jan";
-            break;
-
-        case 2:
-            $month_eng = "Feb";
-            break;
-
-        case 3:
-            $month_eng = "Mar";
-            break;
-
-        case 4:
-            $month_eng = "Apr";
-            break;
-
-        case 5:
-            $month_eng = "May";
-            break;
-
-        case 6:
-            $month_eng = "Jun";
-            break;
-
-        case 7:
-            $month_eng = "Jul";
-            break;
-
-        case 8:
-            $month_eng = "Aug";
-            break;
-
-        case 9:
-            $month_eng = "Sep";
-            break;
-
-        case 10:
-            $month_eng = "Oct";
-            break;
-
-        case 11:
-            $month_eng = "Nov";
-            break;
-
-        case 12:
-            $month_eng = "Dec";
-            break;
-
-        case 13:
-            $month_eng = "Jan";
-            $year += 1;
-    }
-
-    $month = date('n', strtotime("$month_eng $year"));
-}
-
-
-
-// 月末日を取得
-$last_day = date('j', mktime(0, 0, 0, $month + 1, 0, $year));
-
-$calendar = array();
-$j = 0;
-
-// 月末日までループ
-for ($i = 1; $i < $last_day + 1; $i++) {
-
-    // 曜日を取得
-    $week = date('w', mktime(0, 0, 0, $month, $i, $year));
-
-    // 1日の場合
-    if ($i == 1) {
-
-        // 1日目の曜日までをループ
-        for ($s = 1; $s <= $week; $s++) {
-
-            // 前半に空文字をセット
-            $calendar[$j]['day'] = '';
-            $j++;
-
-        }
-
-    }
-
-    // 配列に日付をセット
-    $calendar[$j]['day'] = $i;
-    $j++;
-
-    // 月末日の場合
-    if ($i == $last_day) {
-
-        // 月末日から残りをループ
-        for ($e = 1; $e <= 6 - $week; $e++) {
-
-            // 後半に空文字をセット
-            $calendar[$j]['day'] = '';
-            $j++;
-        }
-    }
-}
-
-$previous_month = $month - 1;
-$next_month = $month + 1;
-?>
-
-
 @extends('layouts.app')
 
 @section('title')
@@ -129,6 +5,23 @@ $next_month = $month + 1;
 @endsection
 
 @section('content')
+<script>
+    $(document).ready(function() {
+        // page is now ready, initialize the calendar...
+        $('#calendar').fullCalendar({
+            header: { center: 'month,agendaDay' },
+            events: [
+                // events go here
+            ],
+            resources: [
+                { id: 'a', title: 'Room A' },
+                { id: 'b', title: 'Room B' },
+                { id: 'c', title: 'Room C' },
+                { id: 'd', title: 'Room D' }
+            ],
+        })
+    });
+</script>
 
 {{-- タイトル --}}
 <div class="row">
@@ -143,59 +36,16 @@ $next_month = $month + 1;
     </div>
 </div>
 
+
 {{-- コンテンツ --}}
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <h4 style="padding: 8px"><?php echo $year; ?>年<?php echo $month; ?>月のカレンダー</h4>
-
-                <table class="calendar">
-                    <tr>
-                        <th>日</th>
-                        <th>月</th>
-                        <th>火</th>
-                        <th>水</th>
-                        <th>木</th>
-                        <th>金</th>
-                        <th>土</th>
-                    </tr>
-
-                    <tr>
-                        <?php $cnt = 0; ?>
-                        <?php foreach ($calendar as $key => $value): ?>
-
-                        <td>
-                            <?php $cnt++; ?>
-                            <?php echo $value['day']; ?>
-                        </td>
-
-                        <?php if ($cnt == 7): ?>
-                    </tr>
-                    <tr>
-                        <?php $cnt = 0; ?>
-                        <?php endif; ?>
-
-                        <?php endforeach; ?>
-                    </tr>
-                </table>
+                <h4 style="padding: 8px">カレンダー</h4>
+                <div id='calendar'></div>
             </div>
-
-            <style type="text/css">
-                table.calendar {
-                    width: 100%;
-                }
-                table.calendar th {
-                    background: #EEEEEE;
-                }
-                table.calendar th,
-                table.calendar td {
-                    border: 2px solid #CCCCCC;
-                    text-align: center;
-                    padding: 5px;
-                }
-            </style>
 
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                 <h4 style="padding: 8px">日報一覧</h4>

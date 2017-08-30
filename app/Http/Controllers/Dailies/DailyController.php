@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dailies;
 
 use App\Http\Controllers\Controller;
 use App\Contracts\Repositories\DailyRepositoryContract;
+use App\Http\Requests\Settings\DailyRequest;
 use App\Http\Requests\Settings\DailyViewRequest;
 use App\Models\Daily;
 use Illuminate\Http\Request;
@@ -33,7 +34,7 @@ class DailyController extends Controller
      */
     public function index()
     {
-        return view('daily.index', $this->repository->dailyResources())->with('nav', $this->nav);
+        return view('daily.index', $this->repository->dailyResourcesForIndex())->with('nav', $this->nav);
     }
 
     /**
@@ -42,9 +43,9 @@ class DailyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DailyRequest $request)
     {
-        //
+        return response()->save($this->repository->create($request));
     }
 
     /**
@@ -76,7 +77,7 @@ class DailyController extends Controller
      */
     public function view()
     {
-        return view('daily.view', $this->repository->dailyResources())->with('nav', $this->nav);
+        return view('daily.view', $this->repository->dailyResourcesForView())->with('nav', $this->nav);
     }
 
     /**
