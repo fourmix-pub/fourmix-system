@@ -55,7 +55,7 @@ class DailyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(DailyViewRequest $request, Daily $daily)
+    public function update(Request $request, Daily $daily)
     {
         return response()->update($this->repository->update($request, $daily));
     }

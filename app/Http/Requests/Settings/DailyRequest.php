@@ -28,10 +28,10 @@ class DailyRequest extends FormRequest
             'job_type_id' => 'required',
             'project_id' => 'required',
             'date' => 'required',
-            'rest' => 'required|numeric',
+            'rest' => 'numeric|nullable',
             'note' => 'max: 200',
-            'start' => 'required',
-            'end' => 'required',
+            'start' => 'required|startTime|date_format:H:i',
+            'end' => 'required|after:start|date_format:H:i',
         ];
     }
 }

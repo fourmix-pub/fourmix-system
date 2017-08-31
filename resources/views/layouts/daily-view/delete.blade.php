@@ -12,7 +12,7 @@
         {{ route('daily.view.destroy', compact('daily')) }}
     @endslot
 
-    {{ $daily->date }} の日報を削除しますか？
+    {{ $daily->date->format('Y/m/d') }} の日報を削除しますか？
 
     @slot('modalFooter')
         {{ method_field('DELETE') }}

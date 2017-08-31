@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -49,5 +50,10 @@ class Daily extends Model
     public function jobType()
     {
         return $this->hasOne(JobType::class, 'id', 'job_type_id');
+    }
+
+    public function start()
+    {
+            return Carbon::createFromFormat('H:i:s', $this->start);
     }
 }

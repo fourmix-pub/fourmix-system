@@ -71,7 +71,7 @@ class DailyRepository implements DailyRepositoryContract
      */
     public function dailyResourcesForIndex()
     {
-        $dailies = Daily::where('work_type_id', 2)->get();
+        $dailies = Daily::where('date', Carbon::now()->toDateString())->get();
 
         $projects = Project::all();
         $workTypes = WorkType::all();
@@ -89,8 +89,6 @@ class DailyRepository implements DailyRepositoryContract
         $daily->date = $request->get('date');
         $daily->project_id = $request->get('project_id');
         $daily->work_type_id = $request->get('work_type_id');
-        $daily->time = $request->get('time');
-        $daily->cost = $request->get('cost');
         $daily->note = $request->get('note');
 
         return $daily->update();

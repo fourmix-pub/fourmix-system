@@ -124,5 +124,5 @@ return [
         'new-password'          => '新しいパスワード',
         'project-pass'          => 'プロジェクトパスワード',
     ],
-
+    'start_time' => '時間が重複しています。',
 ];

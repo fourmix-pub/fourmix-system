@@ -180,8 +180,9 @@ return [
         App\Providers\RepositoryServiceProvider::class,
         App\Providers\ResponseMacroServiceProvider::class,
         App\Providers\ToolServiceProvider::class,
+        App\Providers\ValidationServiceProvider::class,
 
-    ],
+],
 
     /*
     |--------------------------------------------------------------------------

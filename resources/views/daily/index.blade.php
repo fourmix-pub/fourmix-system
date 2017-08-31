@@ -66,14 +66,17 @@
                         @slot('tbody')
                             @foreach($dailies as $daily)
                                 <tr>
-                                    <td>{{ $daily->date }}</td>
+                                    <td>{{ $daily->date->format('Y/m/d') }}</td>
                                     <td>{{ $daily->project->name }}</td>
                                     <td>{{ $daily->workType->name }}</td>
-                                    <td>{{ $daily->start }}</td>
-                                    <td>{{ $daily->end }}</td>
+                                    <td>{{ $daily->start()->format('H:i') }}</td>
+                                    <td>{{ \Carbon\Carbon::createFromFormat('H:i:s', $daily->end)->format('H:i') }}</td>
                                     <td align="right">{{ $daily->rest }}</td>
                                     <td align="center"><span class="label label-info">{{ $daily->jobType->name }}</span></td>
-                                    <td></td>
+                                    <td>
+                                        @include('layouts.daily-view.edit')
+                                        @include('layouts.daily-view.delete')
+                                    </td>
                                 </tr>
                             @endforeach
                         @endslot
