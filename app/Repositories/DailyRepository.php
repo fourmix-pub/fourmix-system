@@ -76,8 +76,50 @@ class DailyRepository implements DailyRepositoryContract
         $projects = Project::all();
         $workTypes = WorkType::all();
         $jobTypes = JobType::all();
+        $date = Carbon::now()->format('Y-m-d');
 
-        return compact('dailies', 'projects', 'workTypes', 'jobTypes');
+        $dailiesMonth = Daily::where('date', '>=', Carbon::now()->startOfMonth()->format('Y-m-d'))
+            ->where('date', '<=', Carbon::now()->endOfMonth()->format('Y-m-d'))->get();
+        $dailiesJson = [];
+        foreach ($dailiesMonth as $daily){
+            $dailyJson = [
+                'title' => $daily->project->name.'：'.$daily->workType->name,
+                'start' => $daily->date->format('Y-m-d').'T'.$daily->start,
+                'end' => $daily->date->format('Y-m-d').'T'.$daily->end,
+            ];
+            $dailiesJson[] = $dailyJson;
+        }
+        $dailiesJson = json_encode($dailiesJson);
+
+        return compact('dailies', 'projects', 'workTypes', 'jobTypes', 'date', 'dailiesJson');
+    }
+
+    /**
+     * 日報日付検索用資源取得（インデックス用）.
+     * @return mixed
+     */
+    public function dailySearchByDate()
+    {
+        $date = request('date');
+        $dailies = Daily::where('date', $date)->get();
+        $projects = Project::all();
+        $workTypes = WorkType::all();
+        $jobTypes = JobType::all();
+
+        $dailiesMonth = Daily::where('date', '>=', Carbon::parse($date)->startOfMonth()->format('Y-m-d'))
+            ->where('date', '<=', Carbon::parse($date)->endOfMonth()->format('Y-m-d'))->get();
+        $dailiesJson = [];
+        foreach ($dailiesMonth as $daily){
+            $dailyJson = [
+                'title' => $daily->project->name.'：'.$daily->workType->name,
+                'start' => $daily->date->format('Y-m-d').'T'.$daily->start,
+                'end' => $daily->date->format('Y-m-d').'T'.$daily->end,
+            ];
+            $dailiesJson[] = $dailyJson;
+        }
+        $dailiesJson = json_encode($dailiesJson);
+
+        return compact('dailies', 'projects', 'workTypes', 'jobTypes', 'date', 'dailiesJson');
     }
 
     /**

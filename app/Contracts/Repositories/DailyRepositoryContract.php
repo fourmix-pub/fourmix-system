@@ -19,6 +19,12 @@ interface DailyRepositoryContract
     public function dailyResourcesForIndex();
 
     /**
+     * 日報日付検索用資源取得契約（インデックス用）.
+     * @return mixed
+     */
+    public function dailySearchByDate();
+
+    /**
      * 日報更新契約.
      * @return mixed
      */

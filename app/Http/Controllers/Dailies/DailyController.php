@@ -8,6 +8,7 @@ use App\Http\Requests\Settings\DailyRequest;
 use App\Http\Requests\Settings\DailyViewRequest;
 use App\Models\Daily;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class DailyController extends Controller
 {
@@ -37,6 +38,11 @@ class DailyController extends Controller
         return view('daily.index', $this->repository->dailyResourcesForIndex())->with('nav', $this->nav);
     }
 
+    public function searchByDate()
+    {
+        return view('daily.index', $this->repository->dailySearchByDate())->with('nav', $this->nav);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -45,7 +51,12 @@ class DailyController extends Controller
      */
     public function store(DailyRequest $request)
     {
-        return response()->save($this->repository->create($request));
+        //追加成功/失敗レスポンスマクロ
+        if ($this->repository->create($request)) {
+            return redirect()->to(route('dailies.search', ['date' => $request->date], false))->with('status', '追加しました');
+        } else {
+            return redirect()->to(route('dailies.search', ['date' => $request->date], false))->withErrors('追加できませんでした');
+        }
     }
 
     /**

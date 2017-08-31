@@ -30,6 +30,7 @@ Route::group(['namespace' => 'Dailies'], function () {
     Route::resource('dailies', 'DailyController', ['except' => [
         'create', 'edit', 'show',
     ]]);
+    Route::get('dailies/search', 'DailyController@searchByDate')->name('dailies.search');
     //日報閲覧
     Route::get('dailies/view', 'DailyController@view')->name('daily.view');
     Route::patch('dailies/view/{daily}', 'DailyController@update')->name('daily.view.update');
