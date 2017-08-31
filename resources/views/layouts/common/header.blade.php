@@ -91,7 +91,9 @@
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="{{ url('http://localhost/phpmyadmin/') }}" target="_blank">phpMyAdmin</a></li>
+                            @foreach(config('menu.tools') as $key => $value)
+                                <li role="presentation"><a href="{{ $value }}" target="_blank">{{ $key }}</a></li>
+                            @endforeach
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">
@@ -149,7 +151,9 @@
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="{{ url('http://localhost/phpmyadmin/') }}" target="_blank">phpMyAdmin</a></li>
+                            @foreach(config('menu.tools') as $key => $value)
+                                <li role="presentation"><a href="{{ $value }}" target="_blank">{{ $key }}</a></li>
+                            @endforeach
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown @if($nav == 'settings') active @endif">
