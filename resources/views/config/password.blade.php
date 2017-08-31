@@ -36,32 +36,31 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="panel panel-default">
 					<div class="panel-body">
-                        <div class="row">
-                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-
-                                <form>
-                                    @component('components.elements.form.password', ['name' => 'old_password'])
-                                        現在のパスワード
-                                    @endcomponent
-                                    @component('components.elements.form.password', ['name' => 'password'])
-                                        新しいパスワード
-                                    @endcomponent
-                                    @component('components.elements.form.password', ['name' => 'password_confirmation'])
-                                        パスワード確認
-                                    @endcomponent
-                                </form>
-
-                            </div>
-                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <div class="text-right">
-                                    <button type="submit" class="btn btn-primary">登録</button>
-                                </div>
-                            </div>
-                        </div>
+						<form action="{{ route('password.edit') }}" method="POST" >
+							{{ csrf_field() }}
+							<div class="row">
+								<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+									@component('components.elements.form.password', ['name' => 'old_password'])
+										現在のパスワード
+									@endcomponent
+									@component('components.elements.form.password', ['name' => 'password'])
+										新しいパスワード
+									@endcomponent
+									@component('components.elements.form.password', ['name' => 'password_confirmation'])
+										パスワード確認
+									@endcomponent
+								</div>
+								<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									<div class="text-right">
+										<button type="submit" class="btn btn-primary">編集</button>
+									</div>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>

@@ -6,8 +6,6 @@
 |--------------------------------------------------------------------------
 */
 
-//Auth::routes();
-
 Route::middleware(['auth'])->group(function () {
 
     /*
@@ -124,7 +122,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::group(['prefix' => 'config', 'namespace' => 'Config'], function () {
         // パスワード変更
-        Route::get('/password', 'ConfigController@resetPassword');
+        Route::get('/password', 'ConfigController@editPassword')->name('password.edit');
+        Route::post('/password', 'ConfigController@resetPassword')->name('password.store');;
     });
 });
 
