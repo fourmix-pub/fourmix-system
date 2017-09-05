@@ -2,7 +2,6 @@
 
 namespace App\Contracts\Tools;
 
-
 use App\Models\Daily;
 use App\User;
 

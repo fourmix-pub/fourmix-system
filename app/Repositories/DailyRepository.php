@@ -81,7 +81,7 @@ class DailyRepository implements DailyRepositoryContract
         $dailiesMonth = Daily::where('date', '>=', Carbon::now()->startOfMonth()->format('Y-m-d'))
             ->where('date', '<=', Carbon::now()->endOfMonth()->format('Y-m-d'))->get();
         $dailiesJson = [];
-        foreach ($dailiesMonth as $daily){
+        foreach ($dailiesMonth as $daily) {
             $dailyJson = [
                 'title' => $daily->project->name.'：'.$daily->workType->name,
                 'start' => $daily->date->format('Y-m-d').'T'.$daily->start,
@@ -109,7 +109,7 @@ class DailyRepository implements DailyRepositoryContract
         $dailiesMonth = Daily::where('date', '>=', Carbon::parse($date)->startOfMonth()->format('Y-m-d'))
             ->where('date', '<=', Carbon::parse($date)->endOfMonth()->format('Y-m-d'))->get();
         $dailiesJson = [];
-        foreach ($dailiesMonth as $daily){
+        foreach ($dailiesMonth as $daily) {
             $dailyJson = [
                 'title' => $daily->project->name.'：'.$daily->workType->name,
                 'start' => $daily->date->format('Y-m-d').'T'.$daily->start,

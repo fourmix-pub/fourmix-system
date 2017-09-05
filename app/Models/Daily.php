@@ -54,6 +54,6 @@ class Daily extends Model
 
     public function start()
     {
-            return Carbon::createFromFormat('H:i:s', $this->start);
+        return Carbon::createFromFormat('H:i:s', $this->start);
     }
 }
