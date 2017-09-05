@@ -22,11 +22,10 @@ class ProjectModelTest extends TestCase
     protected $user;
     protected $personalBudget;
 
-    /**
-     * @before
-     */
-    public function create_test_data()
+    public function setUp()
     {
+        parent::setUp();
+
         $this->project = factory(Project::class)->create([
             'id' => 30000,
         ]);

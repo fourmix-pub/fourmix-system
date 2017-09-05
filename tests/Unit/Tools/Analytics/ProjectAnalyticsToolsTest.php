@@ -25,11 +25,10 @@ class ProjectAnalyticsToolsTest extends TestCase
     private $user;
     private $personalBudget;
 
-    /**
-     * @before
-     */
-    public function create_test_data()
+    public function setUp()
     {
+        parent::setUp();
+
         $this->project = factory(Project::class)->create([
             'id' => 30000,
             'budget' => 10000,

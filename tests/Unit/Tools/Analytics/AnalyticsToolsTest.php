@@ -28,11 +28,10 @@ class AnalyticsToolsTest extends TestCase
      */
     private $analyticsTools;
 
-    /**
-     * @before
-     */
-    public function create_test_data()
+    public function setUp()
     {
+        parent::setUp();
+
         $this->project = factory(Project::class)->create([
             'id'     => 30000,
             'budget' => 10000,
@@ -98,5 +97,7 @@ class AnalyticsToolsTest extends TestCase
         $result = $this->analyticsTools
             ->balancePersonalBudgetRate($this->project,
                 $this->project->users()->where('user_id', $this->user->id)->first());
+
+        $this->assertEquals(40, $result);
     }
 }

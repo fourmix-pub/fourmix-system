@@ -16,12 +16,9 @@ class PasswordRouteTest extends TestCase
      */
     private $user;
 
-    /**
-     * テストデータ作成.
-     * @before
-     */
-    public function create_test_data()
+    public function setUp()
     {
+        parent::setUp();
         $this->user = User::find(1);
     }
 

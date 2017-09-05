@@ -15,11 +15,10 @@ class UserModelTest extends TestCase
     protected $daily;
     protected $user;
 
-    /**
-     * @before
-     */
-    public function create_test_data()
+    public function setUp()
     {
+        parent::setUp();
+
         $this->project = factory(Project::class)->create([
             'id' => 30000,
         ]);

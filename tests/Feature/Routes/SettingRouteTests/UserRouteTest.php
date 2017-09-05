@@ -19,11 +19,9 @@ class UserRouteTest extends TestCase
      */
     private $testUser;
 
-    /**
-     * @before
-     */
-    public function create_test_data()
+    public function setUp()
     {
+        parent::setUp();
         $this->user = factory(User::class)->create();
         $this->testUser = factory(User::class)->create();
     }

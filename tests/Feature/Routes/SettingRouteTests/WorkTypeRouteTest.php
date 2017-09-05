@@ -20,12 +20,9 @@ class WorkTypeRouteTest extends TestCase
      */
     private $workType;
 
-    /**
-     * テストデータ作成.
-     * @before
-     */
-    public function create_test_data()
+    public function setUp()
     {
+        parent::setUp();
         $this->user = factory(User::class)->create();
         $this->workType = factory(WorkType::class)->create();
     }

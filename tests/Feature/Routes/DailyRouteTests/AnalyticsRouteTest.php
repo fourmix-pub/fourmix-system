@@ -17,12 +17,9 @@ class AnalyticsRouteTest extends TestCase
      */
     private $user;
 
-    /**
-     * テストデータ作成
-     * @before
-     */
-    public function create_test_data()
+    public function setUp()
     {
+        parent::setUp();
         $this->user = factory(User::class)->create();
     }
 
