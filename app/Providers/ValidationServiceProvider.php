@@ -17,7 +17,6 @@ class ValidationServiceProvider extends ServiceProvider
     public function boot()
     {
         Validator::extend('startTime', function ($attribute, $value, $parameters, $validator) {
-
             if ($daily = Daily::where('date', request('date'))->orderBy('end', 'desc')->first()) {
                 $value = Carbon::parse($value);
                 $end = Carbon::parse($daily->end);
