@@ -15,26 +15,26 @@ Route::middleware(['auth'])->group(function () {
     |--------------------------------------------------------------------------
     */
   
-  Route::group(['namespace' => 'Dailies'], function () {
-    //日報一覧
-    Route::resource('dailies', 'DailyController', ['except' => [
+    Route::group(['namespace' => 'Dailies'], function () {
+        //日報一覧
+        Route::resource('dailies', 'DailyController', ['except' => [
         'create', 'edit', 'show',
     ]]);
-    Route::get('dailies/search', 'DailyController@searchByDate')->name('dailies.search');
-    //日報閲覧
-    Route::get('dailies/view', 'DailyController@view')->name('daily.view');
-    Route::patch('dailies/view/{daily}', 'DailyController@update')->name('daily.view.update');
-    Route::delete('dailies/view/{daily}', 'DailyController@destroy')->name('daily.view.destroy');
-    //集計表
-    //プロジェクト別作業分類
-    Route::get('dailies/analytics/work-types-by-project', 'DailyController@workTypesByProject')->name('daily.analytics.workTypes.byProject');
-    //プロジェクト別担当者
-    Route::get('dailies/analytics/users-by-project', 'DailyController@usersByProject')->name('daily.analytics.users.byProject');
-    //担当者別作業分類
-    Route::get('dailies/analytics/work-types-by-user', 'DailyController@workTypesByUser')->name('daily.analytics.workTypes.byUser');
-    //担当者別プロジェクト
-    Route::get('dailies/analytics/projects-by-user', 'DailyController@projectsByUser')->name('daily.analytics.projects.byUser');
-  });
+        Route::get('dailies/search', 'DailyController@searchByDate')->name('dailies.search');
+        //日報閲覧
+        Route::get('dailies/view', 'DailyController@view')->name('daily.view');
+        Route::patch('dailies/view/{daily}', 'DailyController@update')->name('daily.view.update');
+        Route::delete('dailies/view/{daily}', 'DailyController@destroy')->name('daily.view.destroy');
+        //集計表
+        //プロジェクト別作業分類
+        Route::get('dailies/analytics/work-types-by-project', 'DailyController@workTypesByProject')->name('daily.analytics.workTypes.byProject');
+        //プロジェクト別担当者
+        Route::get('dailies/analytics/users-by-project', 'DailyController@usersByProject')->name('daily.analytics.users.byProject');
+        //担当者別作業分類
+        Route::get('dailies/analytics/work-types-by-user', 'DailyController@workTypesByUser')->name('daily.analytics.workTypes.byUser');
+        //担当者別プロジェクト
+        Route::get('dailies/analytics/projects-by-user', 'DailyController@projectsByUser')->name('daily.analytics.projects.byUser');
+    });
 
     /*
     |--------------------------------------------------------------------------
@@ -118,7 +118,8 @@ Route::middleware(['auth'])->group(function () {
     Route::group(['prefix' => 'config', 'namespace' => 'Config'], function () {
         // パスワード変更
         Route::get('/password', 'ConfigController@editPassword')->name('password.edit');
-        Route::post('/password', 'ConfigController@resetPassword')->name('password.store');;
+        Route::post('/password', 'ConfigController@resetPassword')->name('password.store');
+        ;
     });
 });
 
