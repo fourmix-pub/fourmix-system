@@ -8,7 +8,9 @@
 
 </head>
 <body>
-        @include('layouts.pageloader')
+        @if(!app()->environment('testing'))
+            @include('layouts.pageloader')
+        @endif
         @include('layouts.common.header')
 
         <div class="container">
