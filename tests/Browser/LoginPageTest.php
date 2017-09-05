@@ -28,7 +28,6 @@ class LoginPageTest extends DuskTestCase
                 ->type('password', '123456')
                 ->press('LOGIN')
                 ->pause(2000)
-                ->assertPathIs('/dailies')
                 ->assertSee('DAILY REPORTS');
         });
     }

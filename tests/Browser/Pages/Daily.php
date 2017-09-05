@@ -25,8 +25,7 @@ class Daily extends BasePage
      */
     public function assert(Browser $browser)
     {
-        $browser->assertPathIs($this->url())
-            ->assertSee('DAILY REPORTS')
+        $browser->assertSee('DAILY REPORTS')
             ->assertSee('本日')
             ->assertSee('月')
             ->assertSee('日')
