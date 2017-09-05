@@ -34,7 +34,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('settings.users.index', $this->repository->userResources())->with('nav', $this->nav);
+        return view('settings.users.index', $this->repository->userResources())->with('nav', $this->nav = 'settings');
     }
 
     /**
@@ -54,7 +54,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return mixed
      */
-    public function edit()
+    public function editProfile()
     {
         $user = Auth::user();
 
