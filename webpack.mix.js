@@ -71,6 +71,8 @@ mix.copy(
 mix.js('resources/assets/js/app.js', 'public/js')
     .sass('resources/assets/sass/app.scss', '../resources/assets/css/lib.css');
 
+mix.sass('resources/assets/sass/materialFullCalendar.scss', '../resources/assets/css/calendar.css');
+
 mix.styles([
     'resources/assets/css/lib.css',
     'resources/assets/css/main.css',
@@ -87,7 +89,7 @@ mix.styles([
     'resources/assets/css/daily.css',
     'resources/assets/css/modal.css',
     'resources/assets/css/pageloader.css',
-    'resources/assets/css/fullcalendar.css'
+    'resources/assets/css/fullcalendar.css',
 ], 'public/css/app.css');
 
 
@@ -98,4 +100,5 @@ mix.scripts([
     'resources/assets/js/jquery.js',
     'resources/assets/js/pageloader.js',
     'resources/assets/js/fullcalendar.js',
+    'resources/assets/js/ja.js',
 ], 'public/js/lib.js');

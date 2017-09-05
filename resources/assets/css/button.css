@@ -129,3 +129,7 @@ button {
 .btn.focus, .btn:focus, .btn:active:focus {
   outline: none;
 }
+
+.btn{
+  border-radius: initial;
+}

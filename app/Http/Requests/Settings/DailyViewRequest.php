@@ -27,8 +27,6 @@ class DailyViewRequest extends FormRequest
             'date' => 'required',
             'project_id' => 'required',
             'work_type_id' => 'required',
-            'time' => 'required|numeric',
-            'cost' => 'required|numeric',
             'note' => 'max:255',
         ];
     }
