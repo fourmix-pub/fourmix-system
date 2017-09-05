@@ -2,7 +2,6 @@
 
 namespace App\Tools\Analytics;
 
-
 use App\Contracts\Tools\CalculateContract;
 use App\Models\Daily;
 use App\User;
