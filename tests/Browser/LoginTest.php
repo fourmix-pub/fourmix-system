@@ -13,7 +13,7 @@ class LoginTest extends DuskTestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testLoginPage()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
@@ -25,8 +25,9 @@ class LoginTest extends DuskTestCase
                 ->clickLink('パスワードを忘れた方')
                 ->assertSee('PASSWORD RESET')
                 ->assertSee('E-MAIL')
-                ->assertSee('メール送信')
-                ->visit('/')
+                ->assertSee('メール送信');
+
+            $browser->visit('/')
                 ->type('email', 'fourmix-system@fourmix.co.jp')
                 ->type('password', '123456')
                 ->press('LOGIN')
