@@ -34,6 +34,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('dailies/analytics/work-types-by-user', 'DailyController@workTypesByUser')->name('daily.analytics.workTypes.byUser');
     //担当者別プロジェクト
     Route::get('dailies/analytics/projects-by-user', 'DailyController@projectsByUser')->name('daily.analytics.projects.byUser');
+  });
 
     /*
     |--------------------------------------------------------------------------
