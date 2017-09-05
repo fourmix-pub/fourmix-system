@@ -34,14 +34,6 @@
         @endforeach
     @endcomponent
 
-    @component('components.elements.form.text',['name'=>'time', 'value'=> $daily->time])
-        作業時間
-    @endcomponent
-
-    @component('components.elements.form.text',['name'=>'cost', 'value'=> $daily->cost])
-        作業金額
-    @endcomponent
-
     @component('components.elements.form.textarea',['name'=>'note', 'value'=>$daily->note])
         備考欄
     @endcomponent

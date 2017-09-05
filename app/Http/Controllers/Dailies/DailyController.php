@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Dailies;
 
 use App\Http\Controllers\Controller;
 use App\Contracts\Repositories\DailyRepositoryContract;
+use App\Http\Requests\Settings\DailyRequest;
 use App\Http\Requests\Settings\DailyViewRequest;
 use App\Models\Daily;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class DailyController extends Controller
 {
@@ -33,7 +35,12 @@ class DailyController extends Controller
      */
     public function index()
     {
-        return view('daily.index', $this->repository->dailyResources())->with('nav', $this->nav);
+        return view('daily.index', $this->repository->dailyResourcesForIndex())->with('nav', $this->nav);
+    }
+
+    public function searchByDate()
+    {
+        return view('daily.index', $this->repository->dailySearchByDate())->with('nav', $this->nav);
     }
 
     /**
@@ -42,9 +49,14 @@ class DailyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DailyRequest $request)
     {
-        //
+        //追加成功/失敗レスポンスマクロ
+        if ($this->repository->create($request)) {
+            return redirect()->to(route('dailies.search', ['date' => $request->date], false))->with('status', '追加しました');
+        } else {
+            return redirect()->to(route('dailies.search', ['date' => $request->date], false))->withErrors('追加できませんでした');
+        }
     }
 
     /**
@@ -76,7 +88,7 @@ class DailyController extends Controller
      */
     public function view()
     {
-        return view('daily.view', $this->repository->dailyResources())->with('nav', $this->nav);
+        return view('daily.view', $this->repository->dailyResourcesForView())->with('nav', $this->nav);
     }
 
     /**
