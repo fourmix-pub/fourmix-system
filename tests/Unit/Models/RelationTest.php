@@ -3,6 +3,7 @@
 namespace Tests\Unit\Models;
 
 use App\User;
+use Illuminate\Database\Eloquent\Collection;
 use Tests\TestCase;
 use App\Models\Daily;
 use App\Models\JobType;
@@ -193,9 +194,7 @@ class RelationTest extends TestCase
      */
     public function department_has_many_users()
     {
-        foreach (Department::find(1)->users as $user) {
-            $this->assertRelation($user, User::class);
-        }
+        $this->assertRelation(Department::find(1)->users, Collection::class);
     }
 
     /**

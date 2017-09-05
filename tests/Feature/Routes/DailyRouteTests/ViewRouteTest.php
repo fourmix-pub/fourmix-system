@@ -21,12 +21,9 @@ class ViewRouteTest extends TestCase
      */
     private $daily;
 
-    /**
-     * テストデータ作成
-     * @before
-     */
-    public function create_test_data()
+    public function setUp()
     {
+        parent::setUp();
         $this->user = factory(User::class)->create();
         $this->daily = factory(Daily::class)->create();
     }

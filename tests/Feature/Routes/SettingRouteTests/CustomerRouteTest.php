@@ -20,11 +20,9 @@ class CustomerRouteTest extends TestCase
      */
     private $customer;
 
-    /**
-     * @before
-     */
-    public function create_test_data()
+    public function setUp()
     {
+        parent::setUp();
         $this->user = factory(User::class)->create();
         $this->customer = factory(Customer::class)->create();
     }

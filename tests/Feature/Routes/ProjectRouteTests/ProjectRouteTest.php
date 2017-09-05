@@ -23,12 +23,9 @@ class ProjectRouteTest extends TestCase
      */
     private $project;
 
-    /**
-     * テストデータ作成.
-     * @before
-     */
-    public function create_test_data()
+    public function setUp()
     {
+        parent::setUp();
         $this->user = factory(User::class)->create();
         $this->project = factory(Project::class)->create();
     }

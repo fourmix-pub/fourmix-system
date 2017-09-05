@@ -20,12 +20,9 @@ class DepartmentRouteTest extends TestCase
      */
     private $department;
 
-    /**
-     * テストデータ作成.
-     * @before
-     */
-    public function create_test_data()
+    public function setUp()
     {
+        parent::setUp();
         $this->user = factory(User::class)->create();
         $this->department = factory(Department::class)->create();
     }

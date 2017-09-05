@@ -20,12 +20,9 @@ class JobTypeRouteTest extends TestCase
      */
     private $jobType;
 
-    /**
-     * テストデータ作成.
-     * @before
-     */
-    public function create_test_data()
+    public function setUp()
     {
+        parent::setUp();
         $this->user = factory(User::class)->create();
         $this->jobType = factory(JobType::class)->create();
     }
