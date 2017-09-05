@@ -7,7 +7,7 @@ use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class LoginTest extends DuskTestCase
+class LoginPageTest extends DuskTestCase
 {
     /**
      * A Dusk test example.
@@ -27,7 +27,9 @@ class LoginTest extends DuskTestCase
                 ->type('email', 'fourmix-system@fourmix.co.jp')
                 ->type('password', '123456')
                 ->press('LOGIN')
-                ->assertPathIs('/dailies');
+                ->pause(2000)
+                ->assertPathIs('/dailies')
+                ->assertSee('DAILY REPORTS');
         });
     }
 }

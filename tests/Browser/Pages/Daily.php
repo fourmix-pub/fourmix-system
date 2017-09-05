@@ -14,7 +14,7 @@ class Daily extends BasePage
      */
     public function url()
     {
-        return '/';
+        return '/dailies';
     }
 
     /**
@@ -27,8 +27,17 @@ class Daily extends BasePage
     {
         $browser->assertPathIs($this->url())
             ->assertSee('DAILY REPORTS')
-            ->assertSee('9月 2017')
+            ->assertSee('本日')
+            ->assertSee('月')
+            ->assertSee('日')
             ->assertSee('日報一覧')
+            ->assertSee('日付')
+            ->assertSee('プロジェクト名')
+            ->assertSee('作業分類')
+            ->assertSee('開始時刻')
+            ->assertSee('終了時刻')
+            ->assertSee('休憩時間(分)')
+            ->assertSee('勤務分類')
             ->assertSee('登録');
     }
 
@@ -40,6 +49,7 @@ class Daily extends BasePage
     public function elements()
     {
         return [
+            //
         ];
     }
 }

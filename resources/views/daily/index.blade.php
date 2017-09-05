@@ -100,9 +100,9 @@
                 <br class="visible-xs-inline">
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" align="right">
                     <div class="input-group">
-                        <input type='text' name="date" class="form-control day" value="{{ $date }}"/>
+                        <input type='text' id="date-search-input" name="date" class="form-control day" value="{{ $date }}"/>
                         <span class="input-group-btn">
-                                <button type="submit" class="btn btn-primary" style="padding-top: 8px; padding-bottom: 6px;">
+                                <button id="date-search-submit" type="submit" class="btn btn-primary" style="padding-top: 8px; padding-bottom: 6px;">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
                             </span>
