@@ -8,7 +8,9 @@
 
 </head>
 <body>
-        @include('layouts.pageloader')
+        @if(!app()->environment('testing'))
+            @include('layouts.pageloader')
+        @endif
         @include('layouts.common.header')
 
         <div class="container">
@@ -24,8 +26,9 @@
                 </div>
             </div>
         </div>
-
-        @include('layouts.common.footer')
+        @if(!app()->environment('testing'))
+            @include('layouts.common.footer')
+        @endif
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

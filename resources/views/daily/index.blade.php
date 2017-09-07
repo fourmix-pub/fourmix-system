@@ -102,7 +102,7 @@
                     <div class="input-group">
                         <input type='text' name="date" class="form-control day" value="{{ $date }}"/>
                         <span class="input-group-btn">
-                                <button type="submit" class="btn btn-primary" style="padding-top: 8px; padding-bottom: 6px;">
+                                <button type="submit" name="submit" class="btn btn-primary" style="padding-top: 8px; padding-bottom: 6px;">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
                             </span>
@@ -173,7 +173,7 @@
             <div class="panel-body">
 
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 daily">
                         <form method="post" action="{{ route('dailies.store') }}">
                             {{ csrf_field() }}
                             <div class="row daily-form">
@@ -227,7 +227,7 @@
                             <br>
 
                             <div align="middle">
-                                <button type="submit" class="btn registration-daily">登録</button>
+                                <button type="submit" id="registration-daily" class="btn registration-daily">登録</button>
                             </div>
                         </form>
                     </div>

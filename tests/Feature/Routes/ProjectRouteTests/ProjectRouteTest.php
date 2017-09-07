@@ -118,7 +118,7 @@ class ProjectRouteTest extends TestCase
     {
         $response = $this->actingAs($this->user)->delete('/projects/'.$this->project->id, ['_token' => csrf_token()]);
         $response->assertStatus(302);
-        $this->assertSoftDeleted('projects', $this->project->toArray());
+        $this->assertSoftDeleted('projects', ['id' => $this->project->id]);
     }
 
     /**
