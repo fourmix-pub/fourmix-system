@@ -1,0 +1,8 @@
+[
+    {
+        "level": "SEVERE",
+        "message": "http:\/\/localhost\/js\/lib.js 9:20101 Uncaught TypeError: Cannot read property 'scrollLeft' of null",
+        "source": "javascript",
+        "timestamp": 1504662704972
+    }
+]
