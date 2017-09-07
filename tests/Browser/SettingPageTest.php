@@ -15,7 +15,7 @@ class SettingPageTest extends DuskTestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testSettingFunction()
     {
         $this->browse(function (Browser $browser) {
             $browser->loginAs(User::find(1))
