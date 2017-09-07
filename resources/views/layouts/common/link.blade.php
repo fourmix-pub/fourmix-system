@@ -10,8 +10,6 @@
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('/css/test.css') }}" rel="stylesheet">
 
-
-
 <!--fonts-->
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
@@ -53,6 +51,4 @@
             dayViewHeaderFormat : 'YYYY年M月'
         });
     });
-
-
 </script>

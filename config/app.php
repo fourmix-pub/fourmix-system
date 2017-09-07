@@ -10,9 +10,11 @@ return [
     | This value is the name of your application. This value is used when the
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
+    |
     */
 
-    'name' => 'Fourmix.Co.,Ltd',
+    'name' => 'Fourmix.Co.,Ltd.',
+    'version' => '1.0.0',
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +79,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ja',
 
     /*
     |--------------------------------------------------------------------------
@@ -90,7 +92,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'ja',
 
     /*
     |--------------------------------------------------------------------------
@@ -167,6 +169,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Lindelea\Support\Aws\Elb\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -176,8 +179,12 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\RepositoryServiceProvider::class,
+        App\Providers\ResponseMacroServiceProvider::class,
+        App\Providers\ToolServiceProvider::class,
+        App\Providers\ValidationServiceProvider::class,
 
-    ],
+],
 
     /*
     |--------------------------------------------------------------------------
@@ -225,6 +232,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Analytics' => App\Tools\Analytics::class,
 
     ],
 

@@ -2,72 +2,91 @@
 
 namespace App;
 
+use App\Models\Daily;
+use App\Models\Project;
+use App\Models\Department;
+use App\Models\PersonalBudget;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use DB;
 
 class User extends Authenticatable
 {
     use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'department_id', 'cost', 'start', 'end', 'is_resignation'
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
-    /**
-     * 作業日報　取得
+     * 作業日報 取得.
      * 1対多.
-     *
      * @return  \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function Dailies()
+    public function dailies()
     {
-        return $this->hasMany('App\Model\Daily', 'user_id', 'id');
+        return $this->hasMany(Daily::class, 'user_id', 'id');
     }
 
     /**
-     * プロジェクト　取得
-     * 1対多.
-     *
-     * @return  \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function Projects()
-    {
-        return $this->hasMany('App\Model\Projects', 'project_id', 'id');
-    }
-
-    /**
-     * 個人予算　取得
-     * 1対多.
-     *
-     * @return  \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function ProjectUsers()
-    {
-        return $this->hasMany('App\Model\ProjectUsers', 'user_id', 'id');
-    }
-
-    /**
-     * 部門 取得
+     * 部門 取得.
      * 1対1.
-     *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function Department()
+    public function department()
     {
-        return $this->hasOne('App\Model\Department', 'id', 'department_id');
+        return $this->hasOne(Department::class, 'id', 'department_id');
+    }
+
+    /**
+     * 個人予算 取得.
+     * 1対多.
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function personalBudgets()
+    {
+        return $this->hasMany(PersonalBudget::class, 'user_id', 'id');
+    }
+
+    /**
+     * プロジェクト(責任者) 取得.
+     * 1対多.
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function projectsFromManager()
+    {
+        return $this->hasMany(Project::class, 'user_id', 'id');
+    }
+
+    /**
+     * プロジェクト 取得.
+     * 多対多.
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function projects()
+    {
+        return $this->belongsToMany(Project::class, 'personal_budgets', 'user_id', 'project_id')
+            ->withPivot('budget')
+            ->withTimestamps();
+    }
+
+    /**
+     * 担当者毎の予算合計、作業分類別に取得
+     * @return $this
+     */
+    public function sumByWorkType()
+    {
+        return $this->dailies()->select(DB::raw('work_type_id, sum(`time`) as `sum_time` , sum(`cost`) as `sum_cost`'))
+            ->groupBy('work_type_id');
+    }
+
+    /**
+     * 担当者毎の予算合計、プロジェクト別に取得
+     * @return $this
+     */
+    public function sumByProject()
+    {
+        return $this->dailies()->select(DB::raw('project_id, sum(`time`) as `sum_time` , sum(`cost`) as `sum_cost`'))
+            ->groupBy('project_id');
     }
 }

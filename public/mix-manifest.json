@@ -2,5 +2,6 @@
   "/js/app.js": "/js/app.js",
   "/../resources/assets/css/lib.css": "/../resources/assets/css/lib.css",
   "/css/app.css": "/css/app.css",
-  "/js/lib.js": "/js/lib.js"
+  "/js/lib.js": "/js/lib.js",
+  "/../resources/assets/css/calendar.css": "/../resources/assets/css/calendar.css"
 }
