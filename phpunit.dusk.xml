@@ -25,8 +25,8 @@
         <env name="APP_LOG_LEVEL" value="debug"/>
         <env name="APP_URL" value="http://127.0.0.1:8000"/>
         <env name="BROADCAST_DRIVER" value="log"/>
-        <env name="CACHE_DRIVER" value="database"/>
-        <env name="SESSION_DRIVER" value="database"/>
+        <env name="CACHE_DRIVER" value="file"/>
+        <env name="SESSION_DRIVER" value="file"/>
         <env name="QUEUE_DRIVER" value="sync"/>
     </php>
 </phpunit>
