@@ -19,7 +19,7 @@
         </whitelist>
     </filter>
     <php>
-        <env name="APP_ENV" value="local"/>
+        <env name="APP_ENV" value="testing"/>
         <env name="APP_KEY" value="base64:a1VELTBr4EJ03Q5rv1HDFrTPwTGT6aeWIjwEf5Xa+ps="/>
         <env name="APP_DEBUG" value="true"/>
         <env name="APP_LOG_LEVEL" value="debug"/>
