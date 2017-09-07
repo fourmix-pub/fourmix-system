@@ -1,4 +1,4 @@
-@component('components.modals.form', ['target' => 'deleteUser-'.$user->id, 'buttonColor' => 'btn-xs btn-danger'])
+@component('components.modals.form', ['buttonId' => $user->id,'target' => 'deleteUser-'.$user->id, 'buttonColor' => 'btn-xs btn-danger'])
 
     @slot('buttonIcon')
         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>

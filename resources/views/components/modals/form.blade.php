@@ -1,4 +1,4 @@
-<button type="button" class="btn {{ $buttonColor }}" {{ $design ?? '' }} data-toggle="modal" data-target="#{{ $target }}" style="margin: 4px">
+<button type="button" @if(isset($buttonId)) id="{{ $buttonId }}" @endif class="btn {{ $buttonColor }}" {{ $design ?? '' }} data-toggle="modal" data-target="#{{ $target }}" style="margin: 4px">
     {{ $buttonIcon }}
 </button>
 

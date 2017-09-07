@@ -33,7 +33,7 @@
 
         <div class="row form text-center">
             <div class="btn-group">
-                <button type="submit" class="btn">
+                <button type="submit" class="btn" id="daily-search">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
                 </button>
             </div>

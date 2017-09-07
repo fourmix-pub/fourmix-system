@@ -1,4 +1,4 @@
-@component('components.modals.form', ['target' => 'editJobType-'.$user->id, 'buttonColor' => 'btn-xs btn-warning'])
+@component('components.modals.form', ['buttonId' =>$user->id ,'target' => 'editJobType-'.$user->id, 'buttonColor' => 'btn-xs btn-warning'])
 
     @slot('buttonIcon')
         <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>

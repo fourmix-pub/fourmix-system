@@ -68,6 +68,7 @@
 						@include('layouts.users.edit')
 						@include('layouts.users.delete')
 					</td>
+				</tr>
 				@endforeach
 			@endslot
 		@endcomponent
