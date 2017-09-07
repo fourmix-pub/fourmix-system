@@ -14,6 +14,10 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $fillable = [
+        'name', 'email', 'password', 'department_id', 'cost', 'start', 'end', 'is_resignation'
+    ];
+
     /**
      * 作業日報 取得.
      * 1対多.

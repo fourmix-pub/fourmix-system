@@ -169,6 +169,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Lindelea\Support\Aws\Elb\ServiceProvider::class,
 
         /*
          * Application Service Providers...
