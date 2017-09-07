@@ -35,10 +35,10 @@ class SystemInstall extends Command
         $this->comment(PHP_EOL.'フォーミックス社内ログシステム');
         if ($this->confirm('システムをインストールしますか？')) {
             $install_pass = $this->secret('インストールパスワードを入力してください。（パスワード ：fourmix）');
-            if(Hash::check($install_pass, self::INSTALL_PASS)){
+            if (Hash::check($install_pass, self::INSTALL_PASS)) {
                 $this->line(PHP_EOL.'<info>✔</info> 確認しました。');
                 if ($this->confirm('もう一度環境設定を確認して、本当にインストールでよろしいですか？')) {
-                    try{
+                    try {
                         $this->comment(PHP_EOL.'<info>インストールしています...</info>');
                         $this->comment(PHP_EOL.'<info>Step 1/6: マイグレーションしています。</info>');
                         Artisan::call('migrate');
@@ -58,17 +58,17 @@ class SystemInstall extends Command
                         $this->comment(PHP_EOL.'<info>Step 6/6: ソースコンパイルしています。</info>');
                         Artisan::call('optimize');
                         $this->comment(PHP_EOL.'インストール完了しました。ありがとうございました。 <info>✔</info>');
-                    }catch (\Exception $e){
+                    } catch (\Exception $e) {
                         $this->line($e);
                         $this->line(PHP_EOL.'<error>✘</error> システムエラー。インストールできませんでした');
                         exit;
                     }
                 }
-            }else{
+            } else {
                 $this->line(PHP_EOL.'<error>✘</error> パスワードが間違っています。インストールできませんでした');
                 exit;
             }
-        }else{
+        } else {
             $this->comment(PHP_EOL.'ありがとうございました。');
             exit;
         }
