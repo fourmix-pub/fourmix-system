@@ -40,7 +40,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">サーバーにアクセスできません.</div>
+                <div class="title">メンテナンス中です。</div>
             </div>
         </div>
     </body>
