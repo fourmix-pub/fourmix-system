@@ -2,11 +2,11 @@
 
 namespace App;
 
-use App\Events\ModelEvents\UserCreated;
 use App\Models\Daily;
 use App\Models\Project;
 use App\Models\Department;
 use App\Models\PersonalBudget;
+use App\Notifications\ResetPasswordNotification;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use DB;
@@ -25,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $events = [
-        'created' => UserCreated::class,
+        'created' => UserSaved::class,
     ];
 
     /**
@@ -98,5 +98,10 @@ class User extends Authenticatable
     {
         return $this->dailies()->select(DB::raw('project_id, sum(`time`) as `sum_time` , sum(`cost`) as `sum_cost`'))
             ->groupBy('project_id');
+    }
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token));
     }
 }
