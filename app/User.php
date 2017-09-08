@@ -100,4 +100,15 @@ class User extends Authenticatable
         return $this->dailies()->select(DB::raw('project_id, sum(`time`) as `sum_time` , sum(`cost`) as `sum_cost`'))
             ->groupBy('project_id');
     }
+
+
+    /**
+     * パスワード再設定用メール
+     * @param string $token
+     * @override
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token));
+    }
 }
