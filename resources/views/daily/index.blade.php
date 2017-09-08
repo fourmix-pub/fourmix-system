@@ -100,10 +100,10 @@
                     <div class="input-group">
                         <input type='text' name="date" class="form-control day" value="{{ $date }}"/>
                         <span class="input-group-btn">
-                                <button type="submit" class="btn btn-primary" style="padding-top: 8px; padding-bottom: 6px;">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </button>
-                            </span>
+                            <button type="submit" class="btn btn-primary" style="padding-top: 8px; padding-bottom: 6px;">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </span>
                     </div>
                 </div>
 
