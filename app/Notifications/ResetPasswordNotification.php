@@ -49,6 +49,7 @@ class ResetPasswordNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
+            ->subject('【社内システム】パスワードの再設定が要求されました。')
             ->line('あなたのアカウントでパスワードの再設定が要求されました。')
             ->action('パスワード再設定', url(config('app.url').route('password.reset', $this->token, false)))
             ->line('このメールに見覚えがない場合、お手数ですが削除して下さい。');
