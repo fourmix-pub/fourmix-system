@@ -109,6 +109,6 @@ class WorkTypeRouteTest extends TestCase
         $response = $this->actingAs($this->user)->delete('/settings/work-types/'.$this->workType->id, ['_token' => csrf_token()]);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
-        $this->assertSoftDeleted('work_types', $this->workType->toArray());
+        $this->assertSoftDeleted('work_types', $this->workType->id);
     }
 }

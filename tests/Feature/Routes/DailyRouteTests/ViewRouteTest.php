@@ -82,7 +82,7 @@ class ViewRouteTest extends TestCase
     {
         $response = $this->actingAs($this->user)->delete('/dailies/view/'.$this->daily->id, ['_token' => csrf_token()]);
         $response->assertStatus(302);
-        $this->assertSoftDeleted('dailies', $this->daily->toArray());
+        $this->assertSoftDeleted('dailies', $this->daily->id);
     }
 
     /**
