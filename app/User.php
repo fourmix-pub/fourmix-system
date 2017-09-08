@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Events\ModelEvents\UserCreated;
 use App\Models\Daily;
 use App\Models\Project;
 use App\Models\Department;
@@ -24,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $events = [
-        'created' => UserSaved::class,
+        'created' => UserCreated::class,
     ];
 
     /**
