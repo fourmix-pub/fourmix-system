@@ -12,7 +12,6 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        Event::fake();
         DB::table('users')->delete();
         App\User::create([
             'name'   => 'Admin',
