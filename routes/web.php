@@ -132,6 +132,8 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('auth/token/{token}', 'Auth\SetPasswordController@showSetForm')->name('password.set');
+Route::post('password/set', 'Auth\SetPasswordController@setPassword')->name('password.update');
 
 
 /*
@@ -144,3 +146,9 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+
+
+
+Route::get('/mailable', function () {
+    return new \App\Mail\InviteMail(\App\Tools\Authenticates\LoginToken::generateFor(\App\User::find(1)));
+});

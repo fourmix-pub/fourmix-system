@@ -19,6 +19,15 @@ class User extends Authenticatable
     ];
 
     /**
+     * タイミングイベント定義。
+     *
+     * @var array
+     */
+    protected $events = [
+        'created' => UserSaved::class,
+    ];
+
+    /**
      * 作業日報 取得.
      * 1対多.
      * @return  \Illuminate\Database\Eloquent\Relations\HasMany
