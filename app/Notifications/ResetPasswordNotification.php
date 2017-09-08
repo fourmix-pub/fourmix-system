@@ -51,6 +51,6 @@ class ResetPasswordNotification extends Notification
         return (new MailMessage)
             ->line('あなたのアカウントでパスワードの再設定が要求されました。')
             ->action('パスワード再設定', url(config('app.url').route('password.reset', $this->token, false)))
-            ->line('もし、このメールに心当たりがない場合、なにも操作されなくて結構です。');
+            ->line('このメールに見覚えがない場合、お手数ですが削除して下さい。');
     }
 }

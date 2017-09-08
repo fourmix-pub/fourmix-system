@@ -40,7 +40,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">メンテナンス中です。</div>
+                <div class="title">申し訳ありません。ただいまメンテナンス中です。</div>
             </div>
         </div>
     </body>

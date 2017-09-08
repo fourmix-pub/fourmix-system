@@ -19,8 +19,6 @@ class SendInviteMail
      */
     public function handle(UserCreated $event)
     {
-        if (!app()->environment('testing')) {
-            $this->invite($event->user);
-        }
+        $this->invite($event->user);
     }
 }
