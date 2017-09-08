@@ -38,7 +38,7 @@ class DepartmentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param DepartmentRequest|\Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(DepartmentRequest $request)
@@ -49,9 +49,10 @@ class DepartmentController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param DepartmentRequest|\Illuminate\Http\Request $request
+     * @param Department $department
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
     public function update(DepartmentRequest $request, Department $department)
     {
@@ -61,8 +62,9 @@ class DepartmentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param Department $department
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
     public function destroy(Department $department)
     {

@@ -7,6 +7,7 @@ use App\Models\Daily;
 use App\Models\Project;
 use App\Models\Department;
 use App\Models\PersonalBudget;
+use App\Notifications\ResetPasswordNotification;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use DB;
@@ -24,8 +25,8 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $dispatchesEvents = [
-        'saved' => UserCreated::class,
+    protected $events = [
+        'created' => UserCreated::class,
     ];
 
     /**
