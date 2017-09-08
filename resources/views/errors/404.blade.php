@@ -40,7 +40,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">申し訳ありません。お探しのページは現在、見ることができません。</div>
+                <div class="title">お探しのページは存在しません。</div>
             </div>
         </div>
     </body>
