@@ -13,7 +13,7 @@ class JobTypeRepository implements JobTypeRepositoryContract
      */
     public function jobTypeResources()
     {
-        $jobTypes = JobType::latest()->paginate(10);
+        $jobTypes = JobType::paginate(10);
 
         return compact('jobTypes');
     }
