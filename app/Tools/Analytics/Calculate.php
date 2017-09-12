@@ -20,7 +20,7 @@ class Calculate implements CalculateContract
         $start = Carbon::parse($daily->start);
         $end = Carbon::parse($daily->end);
 
-        return (double)(round( ($start->diffInMinutes($end) - $daily->rest) / 60 , 1) );
+        return (double)(round(($start->diffInMinutes($end) - $daily->rest) / 60, 1));
     }
 
     /**
@@ -30,6 +30,6 @@ class Calculate implements CalculateContract
      */
     public function dailyCost(Daily $daily, User $user)
     {
-        return (int)( ($daily->time * $user->cost) * $daily->jobType->unit_betting_rate);
+        return (int)(($daily->time * $user->cost) * $daily->jobType->unit_betting_rate);
     }
 }
