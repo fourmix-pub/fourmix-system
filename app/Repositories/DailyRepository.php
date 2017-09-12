@@ -11,6 +11,7 @@ use App\Models\WorkType;
 use App\Contracts\Repositories\DailyRepositoryContract;
 use App\User;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class DailyRepository implements DailyRepositoryContract
 {
@@ -71,7 +72,7 @@ class DailyRepository implements DailyRepositoryContract
      */
     public function dailyResourcesForIndex()
     {
-        $dailies = Daily::where('date', Carbon::now()->toDateString())->get();
+        $dailies = Daily::where('date', Carbon::now()->toDateString())->where('user_id', Auth::user()->id)->get();
 
         $projects = Project::all();
         $workTypes = WorkType::all();
