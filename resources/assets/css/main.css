@@ -1,10 +1,22 @@
 @CHARSET "UTF-8";
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
+/* fontawesome */
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+[class*="fontawesome-"]:before {
+	font-family: 'FontAwesome', sans-serif;
+}
+
 body{
     font-family: 'Nunito','Rounded Mplus 1c', 'Noto Sans', sans-serif;
 	word-wrap: break-word;
 	padding-bottom: 56px;
 	padding-top: 56px;
 }
+
+/* Simple Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 .pagination>li:first-child>a, .pagination>li:first-child>span {
 	border-bottom-left-radius: initial !important;

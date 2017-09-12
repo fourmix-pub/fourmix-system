@@ -46,8 +46,8 @@ class DailyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param DailyRequest|Request $request
+     * @return Response
      */
     public function store(DailyRequest $request)
     {
@@ -62,9 +62,10 @@ class DailyController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param DailyViewRequest|Request $request
+     * @param Daily $daily
+     * @return Response
+     * @internal param int $id
      */
     public function update(DailyViewRequest $request, Daily $daily)
     {
