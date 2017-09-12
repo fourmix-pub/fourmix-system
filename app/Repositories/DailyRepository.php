@@ -72,7 +72,6 @@ class DailyRepository implements DailyRepositoryContract
      */
     public function dailyResourcesForIndex()
     {
-        dd(Auth::user()->id);
         $dailies = Daily::where('date', Carbon::now()->toDateString())->where('user_id', Auth::user()->id)->get();
 
         $projects = Project::all();
