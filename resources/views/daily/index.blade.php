@@ -14,6 +14,16 @@
     .fc-event-container{
         pointer-events:auto; /*events*/
     }
+    .fc-event {
+        border-radius: 0;
+    }
+    .fc-day-number {
+        color: #ff5810;
+    }
+    .fc-day-header {
+        background-color: #0d6ecf;
+        color: #FFFFFF;
+    }
 </style>
 <script>
     $(document).ready(function() {
@@ -30,8 +40,14 @@
             events:{!! $dailiesJson !!},
             navLinks: true,
             dayClick: function(date, jsEvent, view) {
-
                 document.location.href = "/dailies/search?date=" + date.format();
+            },
+            eventClick: function(calEvent, jsEvent, view) {
+
+                alert(calEvent.title);
+
+                // change the border color just for fun
+                $(this).css('border-color', '#ff5810');
 
             },
             dayRender: function(date, cell){
@@ -43,14 +59,16 @@
                 $('#changeToDay').addClass('active');
                 $('#changeToMonth').removeClass('active');
                 $('#calendar').fullCalendar('changeView', 'agendaDay', date.format());
-            }
-        })
+            },
+            eventColor: "#0d6ecf",
+            displayEventEnd: true
+        });
         $('#changeToDay').click(function () {
             $('#calendar').fullCalendar('changeView', 'agendaDay');
-        })
+        });
         $('#changeToMonth').click(function () {
             $('#calendar').fullCalendar('changeView', 'month');
-        })
+        });
     });
 
 </script>
