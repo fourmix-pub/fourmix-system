@@ -25,7 +25,7 @@
             部門
         @endslot
         @foreach($departments as $department)
-            @if(old('department_id'))
+            @if(old('department_id') and old('form_id') == 'user_'.$user->id)
                 <option value="{{ $department->id }}"  @if((int)old('department_id') === (int)$department->id) selected @endif>{{ $department->name }}</option>
             @else
                 <option value="{{ $department->id }}"  @if($department->id == $user->department_id) selected @endif>{{ $department->name }}</option>
@@ -46,6 +46,7 @@
     @slot('modalFooter')
         {{ method_field('PATCH') }}
         {{ csrf_field() }}
+        <input type="hidden" name="form_id" value="{{'user_'.$user->id}}">
         <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
         <button type="submit" class="btn btn-primary">編集</button>
     @endslot
