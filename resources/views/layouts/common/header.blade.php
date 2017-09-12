@@ -41,7 +41,7 @@
                     <li><br class="visible-xs-block"></li>
                     <li class="dropdown visible-xs-block">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <h3>{{ Auth::user()->user_name }} </h3>
+                            <h3>{{ Auth::user()->name }} </h3>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
