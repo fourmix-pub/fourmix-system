@@ -15,7 +15,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="padding-bottom: 7px;">
                                     <select class="selectpicker" name="project_id" data-width="100%" data-live-search="true" title="プロジェクト名">
                                         @foreach($projects as $project)
-                                            <option value="{{ $project->id }}" data-tokens="fourmix-system">{{ $project->name }}</option>
+                                            <option value="{{ $project->id }}" data-tokens="fourmix-system">{{ '#'.$project->id.' '.$project->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>

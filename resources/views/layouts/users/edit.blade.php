@@ -25,8 +25,8 @@
             部門
         @endslot
         @foreach($departments as $department)
-            @if(old('user_id'))
-                <option value="{{ $department->id }}"  @if((int)old('user_id') === (int)$user->id) selected@endif>{{ $department->name }}</option>
+            @if(old('department_id'))
+                <option value="{{ $department->id }}"  @if((int)old('department_id') === (int)$department->id) selected @endif>{{ $department->name }}</option>
             @else
                 <option value="{{ $department->id }}"  @if($department->id == $user->department_id) selected @endif>{{ $department->name }}</option>
             @endif
