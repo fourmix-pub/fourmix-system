@@ -21,7 +21,11 @@
             プロジェクト名
         @endslot
         @foreach($projects as $project)
-            <option value="{{ $project->id }}" @if($project->id == $daily->project_id) selected @endif>{{ $project->name }}</option>
+            @if(old('project_id'))
+                <option value="{{ $project->id }}" @if((int)old('project_id') === (int)$project->id) selected @endif>{{ '#'.$project->id.' '.$project->name }}</option>
+            @else
+                <option value="{{ $project->id }}" @if($project->id == $daily->project_id) selected @endif>{{ '#'.$project->id.' '.$project->name }}</option>
+            @endif
         @endforeach
     @endcomponent
 
@@ -30,7 +34,11 @@
             作業分類名
         @endslot
         @foreach($workTypes as $workType)
-            <option value="{{ $workType->id }}" @if($workType->id == $daily->work_type_id) selected @endif>{{ $workType->name }}</option>
+            @if(old('work_type_id'))
+                <option value="{{ $workType->id }}" @if((int)old('work_type_id') === (int)$workType->id) selected @endif>{{ $workType->name }}</option>
+            @else
+                <option value="{{ $workType->id }}" @if($workType->id == $daily->work_type_id) selected @endif>{{ $workType->name }}</option>
+            @endif
         @endforeach
     @endcomponent
 
