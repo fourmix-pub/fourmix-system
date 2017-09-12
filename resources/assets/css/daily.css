@@ -3,9 +3,14 @@
     border-radius: 0 !important;
 }
 
-.daily-form{
+.daily-lg-form{
     padding-left: 11px;
-    padding-right: 2px;
+    padding-right: 11px;
+}
+
+.daily-sm-form{
+    padding-left: 11px;
+    padding-right: 11px;
 }
 
 .daily-form > div{
@@ -23,7 +28,6 @@
 
 .panel{
     border-radius: 0 !important;
-
 }
 
 .pagination>.active>a{

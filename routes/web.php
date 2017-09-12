@@ -132,6 +132,8 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('auth/token/{token}', 'Auth\SetPasswordController@showSetForm')->name('password.set');
+Route::post('password/set', 'Auth\SetPasswordController@setPassword')->name('password.update');
 
 
 /*

@@ -2,10 +2,12 @@
 
 namespace App;
 
+use App\Events\ModelEvents\UserCreated;
 use App\Models\Daily;
 use App\Models\Project;
 use App\Models\Department;
 use App\Models\PersonalBudget;
+use App\Notifications\ResetPasswordNotification;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use DB;
@@ -16,6 +18,15 @@ class User extends Authenticatable
 
     protected $fillable = [
         'name', 'email', 'password', 'department_id', 'cost', 'start', 'end', 'is_resignation'
+    ];
+
+    /**
+     * タイミングイベント定義。
+     *
+     * @var array
+     */
+    protected $dispatchesEvents = [
+        'created' => UserCreated::class,
     ];
 
     /**
@@ -88,5 +99,16 @@ class User extends Authenticatable
     {
         return $this->dailies()->select(DB::raw('project_id, sum(`time`) as `sum_time` , sum(`cost`) as `sum_cost`'))
             ->groupBy('project_id');
+    }
+
+
+    /**
+     * パスワード再設定用メール
+     * @param string $token
+     * @override
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token));
     }
 }

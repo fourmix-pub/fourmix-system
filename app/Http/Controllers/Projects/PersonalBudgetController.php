@@ -42,7 +42,7 @@ class PersonalBudgetController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param PersonalBudgetRequest|Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(PersonalBudgetRequest $request)
@@ -53,9 +53,9 @@ class PersonalBudgetController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param PersonalBudgetUpdateRequest|Request $request
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
     public function update(PersonalBudgetUpdateRequest $request)
     {
@@ -65,8 +65,9 @@ class PersonalBudgetController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param Request $request
      * @return \Illuminate\Http\Response
+     * @internal param int $id
      */
     public function destroy(Request $request)
     {

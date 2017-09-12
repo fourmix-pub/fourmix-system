@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', '4mixパスワードリマインダー'),
+        'address' => env('MAIL_FROM_ADDRESS', 'fourmix-system@fourmix.co.jp'),
+        'name' => env('MAIL_FROM_NAME', '社内ログシステム'),
     ],
 
     /*
