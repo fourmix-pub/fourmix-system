@@ -28,7 +28,11 @@
             顧客名
         @endslot
         @foreach($customers as $customer)
-            <option value="{{ $customer->id }}" @if($customer->id == $project->customer_id) selected @endif>{{ $customer->name }}</option>
+            @if(old('customer_id'))
+                <option value="{{ $customer->id }}" @if((int)old('customer_id') === (int)$customer->id) selected @endif>{{ $customer->name }}</option>
+            @else
+                <option value="{{ $customer->id }}" @if($customer->id == $project->customer_id) selected @endif>{{ $customer->name }}</option>
+            @endif
         @endforeach
     @endcomponent
 
@@ -37,7 +41,7 @@
             責任者名
         @endslot
         @foreach($users as $user)
-            <option value="{{ $user->id }}" @if($user->id == $project->user_id) selected @endif>{{ $user->name }}</option>
+            <option value="{{ $user->id }}"  @if((int)old('user_id') === (int)$user->id) selected @elseif($user->id == $project->user_id) selected @endif>{{ $user->name }}</option>
         @endforeach
     @endcomponent
 
