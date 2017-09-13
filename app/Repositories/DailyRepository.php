@@ -72,14 +72,13 @@ class DailyRepository implements DailyRepositoryContract
      */
     public function dailyResourcesForIndex()
     {
-        $dailies = Daily::where('date', Carbon::now()->toDateString())->where('user_id', Auth::user()->id)->get();
-
+        $dailies = request()->user()->dailies()->where('date', Carbon::now()->toDateString())->get();
         $projects = Project::all();
         $workTypes = WorkType::all();
         $jobTypes = JobType::all();
         $date = Carbon::now()->format('Y-m-d');
 
-        $dailiesMonth = Daily::where('date', '>=', Carbon::now()->startOfMonth()->format('Y-m-d'))
+        $dailiesMonth = request()->user()->dailies()->where('date', '>=', Carbon::now()->startOfMonth()->format('Y-m-d'))
             ->where('date', '<=', Carbon::now()->endOfMonth()->format('Y-m-d'))->get();
         $dailiesJson = [];
         foreach ($dailiesMonth as $daily) {
