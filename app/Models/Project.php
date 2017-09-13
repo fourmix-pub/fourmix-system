@@ -19,7 +19,7 @@ class Project extends Model
      */
     public function user()
     {
-        return $this->hasOne(User::class, 'id', 'user_id');
+        return $this->hasOne(User::class, 'id', 'user_id')->withTrashed();
     }
 
     /**
@@ -61,12 +61,12 @@ class Project extends Model
      */
     public function customer()
     {
-        return $this->hasOne(Customer::class, 'id', 'customer_id');
+        return $this->hasOne(Customer::class, 'id', 'customer_id')->withTrashed();
     }
 
     /**
      * プロジェクト毎の予算合計、作業分類別に取得
-     * @return $this
+     * @return mixed
      */
     public function sumByWorkType()
     {
@@ -76,7 +76,7 @@ class Project extends Model
 
     /**
      * プロジェクト毎の予算合計、担当者別に取得
-     * @return $this
+     * @return mixed
      */
     public function sumByUser()
     {

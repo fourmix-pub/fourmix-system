@@ -29,7 +29,7 @@ class Daily extends Model
      */
     public function project()
     {
-        return $this->hasOne(Project::class, 'id', 'project_id');
+        return $this->hasOne(Project::class, 'id', 'project_id')->withTrashed();
     }
 
     /**
@@ -39,7 +39,7 @@ class Daily extends Model
      */
     public function workType()
     {
-        return $this->hasOne(WorkType::class, 'id', 'work_type_id');
+        return $this->hasOne(WorkType::class, 'id', 'work_type_id')->withTrashed();
     }
 
     /**
@@ -49,7 +49,7 @@ class Daily extends Model
      */
     public function jobType()
     {
-        return $this->hasOne(JobType::class, 'id', 'job_type_id');
+        return $this->hasOne(JobType::class, 'id', 'job_type_id')->withTrashed();
     }
 
     public function start()

@@ -15,7 +15,7 @@ class PersonalBudget extends Model
      */
     public function user()
     {
-        return $this->hasOne(User::class, 'id', 'user_id');
+        return $this->hasOne(User::class, 'id', 'user_id')->withTrashed();
     }
 
     /**
@@ -25,6 +25,6 @@ class PersonalBudget extends Model
      */
     public function project()
     {
-        return $this->hasOne(Project::class, 'id', 'project_id');
+        return $this->hasOne(Project::class, 'id', 'project_id')->withTrashed();
     }
 }

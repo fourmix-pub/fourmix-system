@@ -46,7 +46,7 @@ class User extends Authenticatable
      */
     public function department()
     {
-        return $this->hasOne(Department::class, 'id', 'department_id');
+        return $this->hasOne(Department::class, 'id', 'department_id')->withTrashed();
     }
 
     /**
@@ -83,7 +83,7 @@ class User extends Authenticatable
 
     /**
      * 担当者毎の予算合計、作業分類別に取得
-     * @return $this
+     * @return mixed
      */
     public function sumByWorkType()
     {
@@ -93,7 +93,7 @@ class User extends Authenticatable
 
     /**
      * 担当者毎の予算合計、プロジェクト別に取得
-     * @return $this
+     * @return mixed
      */
     public function sumByProject()
     {
