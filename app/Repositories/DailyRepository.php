@@ -101,12 +101,12 @@ class DailyRepository implements DailyRepositoryContract
     public function dailySearchByDate()
     {
         $date = request('date');
-        $dailies = Daily::where('date', $date)->get();
+        $dailies = request()->user()->dailies()->where('date', $date)->get();
         $projects = Project::all();
         $workTypes = WorkType::all();
         $jobTypes = JobType::all();
 
-        $dailiesMonth = Daily::where('date', '>=', Carbon::parse($date)->startOfMonth()->format('Y-m-d'))
+        $dailiesMonth = request()->user()->dailies()->where('date', '>=', Carbon::parse($date)->startOfMonth()->format('Y-m-d'))
             ->where('date', '<=', Carbon::parse($date)->endOfMonth()->format('Y-m-d'))->get();
         $dailiesJson = [];
         foreach ($dailiesMonth as $daily) {
