@@ -37,7 +37,7 @@
                                 </div>
 
                                 <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1" style="padding-bottom: 7px;">
-                                    <input type='text' class="form-control" name="rest" placeholder="休憩(分)" value=@if(old('rest'))"{{ old('rest') }}"@else "0" @endif>
+                                    <input type='text' class="form-control" name="rest" placeholder="休憩(分)" value=@if(old('submit') == 'submit' and old('rest') == null) '0' @else{{ old('rest') }}@endif>
                                 </div>
 
                                 <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" style="padding-bottom: 7px;">
@@ -58,6 +58,7 @@
                             <br>
 
                             <div align="middle">
+                                <input type="hidden" name="submit" value="submit">
                                 <button type="submit" class="btn registration-daily">登録</button>
                             </div>
                         </form>

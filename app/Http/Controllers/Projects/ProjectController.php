@@ -71,7 +71,11 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        return response()->delete($project->delete());
+        if((int)$project->dailies()->count() === 0) {
+            return response()->delete($project->delete());
+        } else {
+            return redirect()->back()->withErrors('このプロジェクトには日報が存在するため、削除できません');
+        }
     }
 
     /**
