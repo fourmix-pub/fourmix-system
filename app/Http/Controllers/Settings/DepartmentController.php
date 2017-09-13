@@ -32,7 +32,7 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        return view('settings.departments.index', $this->repository->departmentResources())->with('nav', $this->nav);
+        return view('settings.departments.index', $this->repository->departmentResources())->with('nav', $this->nav)->with('mode', 'department');
     }
 
     /**

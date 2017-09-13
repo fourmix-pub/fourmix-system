@@ -34,7 +34,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('settings.users.index', $this->repository->userResources())->with('nav', $this->nav = 'settings');
+        return view('settings.users.index', $this->repository->userResources())->with('nav', $this->nav)->with('mode', 'user');
     }
 
     /**
