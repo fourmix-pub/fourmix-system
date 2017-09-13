@@ -28,7 +28,7 @@
             顧客名
         @endslot
         @foreach($customers as $customer)
-            @if(old('customer_id'))
+            @if(old('customer_id') and old('form_id') == 'project_'.$project->id)
                 <option value="{{ $customer->id }}" @if((int)old('customer_id') === (int)$customer->id) selected @endif>{{ $customer->name }}</option>
             @else
                 <option value="{{ $customer->id }}" @if($customer->id == $project->customer_id) selected @endif>{{ $customer->name }}</option>
@@ -41,7 +41,11 @@
             責任者名
         @endslot
         @foreach($users as $user)
-            <option value="{{ $user->id }}"  @if((int)old('user_id') === (int)$user->id) selected @elseif($user->id == $project->user_id) selected @endif>{{ $user->name }}</option>
+            @if(old('user_id') and old('form_id') == 'project_'.$project->id)
+                <option value="{{ $user->id }}" @if((int)old('user_id') === (int)$user->id) selected @endif>{{ $user->name }}</option>
+            @else
+                <option value="{{ $user->id }}" @if($user->id == $project->user_id) selected @endif>{{ $user->name }}</option>
+            @endif
         @endforeach
     @endcomponent
 
@@ -72,6 +76,7 @@
     @slot('modalFooter')
         {{ method_field('PATCH') }}
         {{ csrf_field() }}
+        <input type="hidden" name="form_id" value="project_{{ $project->id }}">
         <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
         <button type="submit" class="btn btn-primary">編集</button>
     @endslot
