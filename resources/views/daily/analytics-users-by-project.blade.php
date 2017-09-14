@@ -47,7 +47,7 @@
                                         プロジェクト名
                                     @endslot
                                     @foreach($projectsSelect as $projectSelect)
-                                        <option value="{{ $projectSelect->id }}" @if((int)$projectId === (int)$projectSelect->id) selected @endif>{{ '#'.$projectSelect->id.' '.$projectSelect->name }}</option>
+                                        <option value="{{ $projectSelect->id }}" data-subtext="{{ $projectSelect->customer ? $projectSelect->customer->name : '' }}" @if((int)$projectId === (int)$projectSelect->id) selected @endif>{{ '#'.$projectSelect->id.' '.$projectSelect->name }}</option>
                                     @endforeach
                                 @endcomponent
 
@@ -79,7 +79,7 @@
                                         <h3 class="text-center">
                                             プロジェクト別担当者集計表
                                             <br>
-                                            <small>{{ $project->name }}</small>
+                                            <small>{{ $project->customer->name }}：{{ $project->name }}</small>
                                         </h3>
                                     </div>
                                 </div>

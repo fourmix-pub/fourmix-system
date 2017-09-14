@@ -43,7 +43,7 @@
 							<h3 class="text-center">
 								{{ $project->name }}
 								<br>
-								<small>担当者：{{ $project->user->name }}</small>
+								<small>顧客名：{{ $project->customer ? $project->customer->name : '' }}　　担当者：{{ $project->user->name }}</small>
 							</h3>
 						</div>
 					</div>
