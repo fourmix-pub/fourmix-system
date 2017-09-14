@@ -126,7 +126,7 @@ Route::middleware(['auth'])->group(function () {
 /*
 |--------------------------------------------------------------------------
 | ログイン関連ルート
-|----
+|--------------------------------------------------------------------------
 */
 
 Route::get('/', 'Auth\LoginController@showLoginForm')->name('login');
@@ -139,7 +139,7 @@ Route::post('password/set', 'Auth\SetPasswordController@setPassword')->name('pas
 /*
 |--------------------------------------------------------------------------
 | パスワード関連ルート
-|----
+|--------------------------------------------------------------------------
 */
 
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
