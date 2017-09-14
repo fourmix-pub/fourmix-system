@@ -14,7 +14,7 @@
                                 </div>
 
                                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="padding-bottom: 7px;">
-                                    <select class="selectpicker" name="project_id" data-width="100%" data-live-search="true" title="プロジェクト名" data-size="10">
+                                    <select class="selectpicker" name="project_id" data-width="100%" data-live-search="true" title="プロジェクト名" data-size="10" data-container="body">
                                         @foreach($projects as $project)
                                             <option value="{{ $project->id }}" data-subtext="{{ $project->customer ? $project->customer->name : '' }}" @if((int)old('project_id') === $project->id) selected @endif>{{ '#'.$project->id.' '.$project->name }}</option>
                                         @endforeach
