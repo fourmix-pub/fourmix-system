@@ -32,7 +32,7 @@ class WorkTypeController extends Controller
      */
     public function index()
     {
-        return view('settings.work-types.index', $this->repository->workTypeResources())->with('nav', $this->nav);
+        return view('settings.work-types.index', $this->repository->workTypeResources())->with('nav', $this->nav)->with('mode', 'work-type');
     }
 
     /**

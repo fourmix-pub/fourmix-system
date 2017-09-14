@@ -32,7 +32,7 @@ class JobTypeController extends Controller
      */
     public function index()
     {
-        return view('settings.job-types.index', $this->repository->jobTypeResources())->with('nav', $this->nav);
+        return view('settings.job-types.index', $this->repository->jobTypeResources())->with('nav', $this->nav)->with('mode', 'job-type');
     }
 
     /**

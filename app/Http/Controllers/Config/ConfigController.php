@@ -17,7 +17,7 @@ class ConfigController extends Controller
      */
     public function editPassword()
     {
-        return view('config.password')->with('nav', $this->nav);
+        return view('config.password')->with('nav', $this->nav)->with('mode', 'password');
     }
 
     /**

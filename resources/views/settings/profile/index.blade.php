@@ -22,7 +22,7 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 
-		{{-- SP 版サイドメニュー --}}
+		{{-- スマホ版サイドメニュー --}}
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				@include('layouts.content.config.xs-side-menu')

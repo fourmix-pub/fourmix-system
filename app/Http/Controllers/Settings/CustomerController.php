@@ -33,7 +33,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return view('settings.customer.index', $this->repository->customerResources())->with('nav', $this->nav);
+        return view('settings.customer.index', $this->repository->customerResources())->with('nav', $this->nav)->with('mode', 'customer');
     }
 
     /**
