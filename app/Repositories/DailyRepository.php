@@ -187,7 +187,7 @@ class DailyRepository implements DailyRepositoryContract
         $daily->note = $request->get('note');
         $daily->start = $request->get('start');
         $daily->end = $request->get('end');
-        $daily->rest = $request->get('rest');
+        $daily->rest = (int)$request->get('rest');
 
         $daily->time = $this->calculate->dailyTime($daily);
         $daily->cost = $this->calculate->dailyCost($daily, $request->user());

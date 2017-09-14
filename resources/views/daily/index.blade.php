@@ -169,7 +169,7 @@
                                         <td>{{ $daily->start()->format('H:i') }}</td>
                                         <td>{{ \Carbon\Carbon::createFromFormat('H:i:s', $daily->end)->format('H:i') }}</td>
                                         <td align="right">{{ $daily->rest }}</td>
-                                        <td align="center"><span class="label label-info">{{ $daily->jobType->name }}</span></td>
+                                        <td align="center"><span class="label label-primary">{{ $daily->jobType->name }}</span></td>
                                         <td>
                                             @include('layouts.daily-view.edit')
                                             @include('layouts.daily-view.delete')
