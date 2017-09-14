@@ -58,7 +58,7 @@ class UserController extends Controller
     {
         $user = Auth::user();
 
-        return view('settings.profile.index', compact('user'))->with('nav', $this->nav = 'users');
+        return view('settings.profile.index', compact('user'))->with('nav', $this->nav = 'users')->with('mode', 'profile');
     }
 
     public function updateProfile(Request $request, User $user)
