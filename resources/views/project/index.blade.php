@@ -36,6 +36,7 @@
 	@slot('thead')
 		<tr class="active">
 			<th>ID</th>
+			<th>顧客名</th>
 			<th>プロジェクト名</th>
 			<th style="width: 88px;">責任者</th>
 			<th>受注金額</th>
@@ -50,6 +51,7 @@
 		@foreach($projects as $project)
 			<tr>
 				<th scope="row">{{ $project->id }}</th>
+				<td>{{ $project->customer ? $project->customer->name : '' }}</td>
 				<td>{{ $project->name }}</td>
 				<td>{{ $project->user->name }}</td>
 				<td align="right">¥{{ number_format($project->cost) }}</td>

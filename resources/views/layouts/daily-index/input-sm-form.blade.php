@@ -13,17 +13,17 @@
                                 </div>
 
                                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="padding-bottom: 7px;">
-                                    <select class="selectpicker" name="project_id" data-width="100%" data-live-search="true" title="プロジェクト名">
+                                    <select class="selectpicker" name="project_id" data-width="100%" data-live-search="true" title="プロジェクト名" data-size="10">
                                         @foreach($projects as $project)
-                                            <option value="{{ $project->id }}" data-tokens="fourmix-system" @if((int)old('project_id') === $project->id) selected @endif>{{ '#'.$project->id.' '.$project->name }}</option>
+                                            <option value="{{ $project->id }}" data-subtext="{{ $project->customer ? $project->customer->name : '' }}" @if((int)old('project_id') === $project->id) selected @endif>{{ '#'.$project->id.' '.$project->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
 
                                 <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" style="padding-bottom: 7px;">
-                                    <select class="selectpicker" name="work_type_id" data-width="100%" data-live-search="true" title="作業分類">
+                                    <select class="selectpicker" name="work_type_id" data-width="100%" data-live-search="true" title="作業分類" data-size="10">
                                         @foreach($workTypes as $workType)
-                                            <option value="{{ $workType->id }}" data-tokens="fourmix-system" @if((int)old('work_type_id') === $workType->id) selected @endif>{{ '#'.$workType->id.' '.$workType->name }}</option>
+                                            <option value="{{ $workType->id }}" @if((int)old('work_type_id') === $workType->id) selected @endif>{{ '#'.$workType->id.' '.$workType->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -43,7 +43,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" style="padding-bottom: 7px;">
                                     <select class="selectpicker" name="job_type_id" data-width="100%" data-live-search="true" title="勤務分類">
                                         @foreach($jobTypes as $jobType)
-                                            <option value="{{ $jobType->id }}" data-tokens="fourmix-system" @if((int)old('job_type_id') === $jobType->id) selected @endif>{{ '#'.$jobType->id.' '.$jobType->name }}</option>
+                                            <option value="{{ $jobType->id }}" @if((int)old('job_type_id') === $jobType->id) selected @endif>{{ '#'.$jobType->id.' '.$jobType->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>

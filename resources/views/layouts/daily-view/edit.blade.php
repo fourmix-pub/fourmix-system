@@ -22,9 +22,9 @@
         @endslot
         @foreach($projects as $project)
             @if(old('project_id') and old('form_id') == 'daily_'.$daily->id)
-                <option value="{{ $project->id }}" @if((int)old('project_id') === (int)$project->id) selected @endif>{{ '#'.$project->id.' '.$project->name }}</option>
+                <option value="{{ $project->id }}" data-subtext="{{ $project->customer ? $project->customer->name : '' }}" @if((int)old('project_id') === (int)$project->id) selected @endif>{{ '#'.$project->id.' '.$project->name }}</option>
             @else
-                <option value="{{ $project->id }}" @if($project->id == $daily->project_id) selected @endif>{{ '#'.$project->id.' '.$project->name }}</option>
+                <option value="{{ $project->id }}" data-subtext="{{ $project->customer ? $project->customer->name : '' }}" @if($project->id == $daily->project_id) selected @endif>{{ '#'.$project->id.' '.$project->name }}</option>
             @endif
         @endforeach
     @endcomponent
