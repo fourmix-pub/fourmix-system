@@ -79,7 +79,7 @@
                                     <h3 class="text-center">
                                         プロジェクト別作業分類集計表
                                         <br>
-                                        <small>{{ $project->name }}</small>
+                                        <small>{{ $project->customer->name }}：{{ $project->name }}</small>
                                     </h3>
                                 </div>
                             </div>
