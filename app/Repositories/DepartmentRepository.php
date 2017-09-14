@@ -13,7 +13,7 @@ class DepartmentRepository implements DepartmentRepositoryContract
      */
     public function departmentResources()
     {
-        $departments = Department::latest()->paginate(10);
+        $departments = Department::paginate(10);
 
         return compact('departments');
     }

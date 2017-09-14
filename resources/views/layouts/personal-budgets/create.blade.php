@@ -21,7 +21,7 @@
             プロジェクト名
         @endslot
         @foreach($projects as $project)
-            <option value="{{ $project->id }}">{{ $project->name }}</option>
+            <option value="{{ $project->id }}" data-subtext="{{ $project->customer ? $project->customer->name : '' }}" @if((int)old('project_id') === (int)$project->id) selected @endif>{{ $project->name }}</option>
         @endforeach
     @endcomponent
 

@@ -38,6 +38,7 @@
             <tr class="active">
                 <th>担当者</th>
                 <th>日付</th>
+                <th>顧客名</th>
                 <th>プロジェクト名</th>
                 <th>作業分類</th>
                 <th>作業時間</th>
@@ -50,6 +51,7 @@
                     <tr>
                         <td>{{ $daily->user->name }}</td>
                         <td>{{ $daily->date->format('Y/m/d') }}</td>
+                        <td>{{ $daily->project->customer ? $daily->project->customer->name : '' }}</td>
                         <td>{{ $daily->project->name }}</td>
                         <td>{{ $daily->workType->name }}</td>
                         <td align="right">{{ $daily->time }}</td>

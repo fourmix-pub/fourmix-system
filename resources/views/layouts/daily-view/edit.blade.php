@@ -21,7 +21,11 @@
             プロジェクト名
         @endslot
         @foreach($projects as $project)
-            <option value="{{ $project->id }}" @if($project->id == $daily->project_id) selected @endif>{{ $project->name }}</option>
+            @if(old('project_id') and old('form_id') == 'daily_'.$daily->id)
+                <option value="{{ $project->id }}" data-subtext="{{ $project->customer ? $project->customer->name : '' }}" @if((int)old('project_id') === (int)$project->id) selected @endif>{{ '#'.$project->id.' '.$project->name }}</option>
+            @else
+                <option value="{{ $project->id }}" data-subtext="{{ $project->customer ? $project->customer->name : '' }}" @if($project->id == $daily->project_id) selected @endif>{{ '#'.$project->id.' '.$project->name }}</option>
+            @endif
         @endforeach
     @endcomponent
 
@@ -30,7 +34,11 @@
             作業分類名
         @endslot
         @foreach($workTypes as $workType)
-            <option value="{{ $workType->id }}" @if($workType->id == $daily->work_type_id) selected @endif>{{ $workType->name }}</option>
+            @if(old('work_type_id') and old('form_id') == 'daily_'.$daily->id)
+                <option value="{{ $workType->id }}" @if((int)old('work_type_id') === (int)$workType->id) selected @endif>{{ $workType->name }}</option>
+            @else
+                <option value="{{ $workType->id }}" @if($workType->id == $daily->work_type_id) selected @endif>{{ $workType->name }}</option>
+            @endif
         @endforeach
     @endcomponent
 
@@ -41,6 +49,7 @@
     @slot('modalFooter')
         {{ method_field('PATCH') }}
         {{ csrf_field() }}
+        <input type="hidden" name="form_id" value="{{'daily_'.$daily->id}}">
         <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
         <button type="submit" class="btn btn-primary">編集</button>
     @endslot

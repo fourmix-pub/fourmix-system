@@ -11,6 +11,7 @@ use App\Models\WorkType;
 use App\Contracts\Repositories\DailyRepositoryContract;
 use App\User;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class DailyRepository implements DailyRepositoryContract
 {
@@ -71,14 +72,13 @@ class DailyRepository implements DailyRepositoryContract
      */
     public function dailyResourcesForIndex()
     {
-        $dailies = Daily::where('date', Carbon::now()->toDateString())->get();
-
+        $dailies = request()->user()->dailies()->where('date', Carbon::now()->toDateString())->get();
         $projects = Project::all();
         $workTypes = WorkType::all();
         $jobTypes = JobType::all();
         $date = Carbon::now()->format('Y-m-d');
 
-        $dailiesMonth = Daily::where('date', '>=', Carbon::now()->startOfMonth()->format('Y-m-d'))
+        $dailiesMonth = request()->user()->dailies()->where('date', '>=', Carbon::now()->startOfMonth()->format('Y-m-d'))
             ->where('date', '<=', Carbon::now()->endOfMonth()->format('Y-m-d'))->get();
         $dailiesJson = [];
         foreach ($dailiesMonth as $daily) {
@@ -101,12 +101,12 @@ class DailyRepository implements DailyRepositoryContract
     public function dailySearchByDate()
     {
         $date = request('date');
-        $dailies = Daily::where('date', $date)->get();
+        $dailies = request()->user()->dailies()->where('date', $date)->get();
         $projects = Project::all();
         $workTypes = WorkType::all();
         $jobTypes = JobType::all();
 
-        $dailiesMonth = Daily::where('date', '>=', Carbon::parse($date)->startOfMonth()->format('Y-m-d'))
+        $dailiesMonth = request()->user()->dailies()->where('date', '>=', Carbon::parse($date)->startOfMonth()->format('Y-m-d'))
             ->where('date', '<=', Carbon::parse($date)->endOfMonth()->format('Y-m-d'))->get();
         $dailiesJson = [];
         foreach ($dailiesMonth as $daily) {
@@ -187,7 +187,7 @@ class DailyRepository implements DailyRepositoryContract
         $daily->note = $request->get('note');
         $daily->start = $request->get('start');
         $daily->end = $request->get('end');
-        $daily->rest = $request->get('rest');
+        $daily->rest = (int)$request->get('rest');
 
         $daily->time = $this->calculate->dailyTime($daily);
         $daily->cost = $this->calculate->dailyCost($daily, $request->user());

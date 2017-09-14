@@ -25,22 +25,17 @@
             部門
         @endslot
         @foreach($departments as $department)
-            <option value="{{ $department->id }}" @if($department->id == $user->department_id) selected @endif>{{ $department->name }}</option>
+            @if(old('department_id') and old('form_id') == 'user_'.$user->id)
+                <option value="{{ $department->id }}"  @if((int)old('department_id') === (int)$department->id) selected @endif>{{ $department->name }}</option>
+            @else
+                <option value="{{ $department->id }}"  @if($department->id == $user->department_id) selected @endif>{{ $department->name }}</option>
+            @endif
         @endforeach
     @endcomponent
 
     @component('components.elements.form.text',['name'=>'email', 'value'=> $user->email])
         メールアドレス
     @endcomponent
-
-    {{--@component('components.elements.form.pass', ['name' => 'password'])--}}
-        {{--パスワード--}}
-    {{--@endcomponent--}}
-
-    {{-- TODO:実装 --}}
-    {{--@component('components.elements.form.pass', ['name' => 'password_confirmation'])--}}
-    {{--パスワード確認--}}
-    {{--@endcomponent--}}
 
     @component('components.elements.form.time',['title'=>'始業時間', 'time'=>$user->start, 'name'=>'start'])
     @endcomponent
@@ -51,6 +46,7 @@
     @slot('modalFooter')
         {{ method_field('PATCH') }}
         {{ csrf_field() }}
+        <input type="hidden" name="form_id" value="{{'user_'.$user->id}}">
         <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
         <button type="submit" class="btn btn-primary">編集</button>
     @endslot

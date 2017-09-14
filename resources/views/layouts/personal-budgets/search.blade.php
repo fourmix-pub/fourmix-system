@@ -6,7 +6,7 @@
                 プロジェクト名
             @endslot
             @foreach($projectsSelect as $project)
-                <option value="{{ $project->id }}" @if((int)$projectId === (int)$project->id) selected @endif>{{ $project->name }}</option>
+                <option value="{{ $project->id }}" data-subtext="{{ $project->customer ? $project->customer->name : '' }}" @if((int)$projectId === (int)$project->id) selected @endif>{{ '#'.$project->id.' '.$project->name }}</option>
             @endforeach
         @endcomponent
 

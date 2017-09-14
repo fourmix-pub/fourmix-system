@@ -6,7 +6,7 @@
 
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                 <div class='input-group day'>
-                    <input type='text' class="form-control" value="{{ $valueStart ?? '' }}" name="start_date" placeholder="開始日" />
+                    <input type='text' class="form-control" value="{{ old('start_date') ?? $valueStart ?? '' }}" name="start_date" placeholder="開始日" />
                     <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar">
                     </span></span>
@@ -17,7 +17,7 @@
             <label class="visible-xs col-xs-12 control-label" style="text-align: center">　</label>
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                 <div class='input-group day'>
-                    <input type='text' class="form-control" value="{{ $valueEnd ?? '' }}" name="end_date" placeholder="終了日" />
+                    <input type='text' class="form-control" value="{{ old('end_date') ?? $valueEnd ?? '' }}" name="end_date" placeholder="終了日" />
                     <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar">
                     </span></span>

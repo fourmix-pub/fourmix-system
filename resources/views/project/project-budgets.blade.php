@@ -45,6 +45,7 @@
 @component('components.elements.table.table')
 	@slot('thead')
 		<tr class="active">
+			<th>顧客名</th>
 			<th>プロジェクト</th>
 			<th>実行予算</th>
 			<th>実績金額</th>
@@ -56,6 +57,7 @@
 	@slot('tbody')
 		@foreach($projects as $project)
 			<tr>
+				<td>{{ $project->customer ? $project->customer->name : '' }}</td>
 				<td>{{ $project->name }}</td>
 				<td align="right">¥{{ number_format($project->budget) }}</td>
 				<td align="right">¥{{ number_format($project->sumByCost($project->id)->sum_cost) }}</td>

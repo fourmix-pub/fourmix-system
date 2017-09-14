@@ -13,13 +13,13 @@
             <!-- Branding Image -->
             @if (Auth::guest())
                 <div class="fourmix">
-                    <a class="navbar-brand" href="{{ route('daily.view') }}">
+                    <a class="navbar-brand" href="{{ route('dailies.index') }}">
                         <img src="{{ asset('img/fourmix_w.png') }}">
                     </a>
                 </div>
             @else
                 <div class="fourmix">
-                    <a class="navbar-brand" href="{{ route('daily.view') }}">
+                    <a class="navbar-brand" href="{{ route('dailies.index') }}">
                         <img src="{{ asset('img/fourmix_w.png') }}">
                     </a>
                 </div>
@@ -41,7 +41,7 @@
                     <li><br class="visible-xs-block"></li>
                     <li class="dropdown visible-xs-block">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <h3>{{ Auth::user()->user_name }} </h3>
+                            <h3>{{ Auth::user()->name }} </h3>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
@@ -68,7 +68,7 @@
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="{{ url('/dailies') }}" >日報作成</a></li>
+                            <li role="presentation"><a href="{{ route('dailies.index') }}" >日報作成</a></li>
                             <li role="presentation"><a href="{{ route('daily.view') }}">日報閲覧</a></li>
                             <li role="presentation"><a href="{{ route('daily.analytics.workTypes.byProject') }}">集計</a></li>
                         </ul>
@@ -128,7 +128,7 @@
                             <i class="fa fa-caret-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="{{ url('/dailies') }}" >日報作成</a></li>
+                            <li role="presentation"><a href="{{ route('dailies.index') }}" >日報作成</a></li>
                             <li role="presentation"><a href="{{ route('daily.view') }}">日報閲覧</a></li>
                             <li role="presentation"><a href="{{ route('daily.analytics.workTypes.byProject') }}">集計</a></li>
                         </ul>

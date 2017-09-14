@@ -88,6 +88,7 @@
                                 @component('components.elements.table.table')
                                     @slot('thead')
                                         <tr class="active">
+                                            <th>顧客名</th>
                                             <th>プロジェクト</th>
                                             <th>作業時間</th>
                                             <th>作業金額</th>
@@ -96,6 +97,7 @@
                                     @slot('tbody')
                                         @foreach($user->sumByProject as $daily)
                                             <tr>
+                                                <td>{{ $daily->project->customer ? $daily->project->customer->name : '' }}</td>
                                                 <td>{{ $daily->project->name }}</td>
                                                 <td align="right">{{ $daily->sum_time }}</td>
                                                 <td align="right">¥{{ number_format($daily->sum_cost) }}</td>

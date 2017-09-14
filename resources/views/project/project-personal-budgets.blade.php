@@ -46,6 +46,7 @@
 @component('components.elements.table.table')
     @slot('thead')
         <tr class="active">
+            <th>顧客名</th>
             <th>プロジェクト</th>
             <th>担当者</th>
             <th>個人予算</th>
@@ -59,6 +60,7 @@
         @foreach($projects as $project)
             @foreach($project->budgetFilter($userId) as $user)
                 <tr>
+                    <td>{{ $project->customer ? $project->customer->name : '' }}</td>
                     <td>{{ $project->name }}</td>
                     <td>{{ $user->name }}</td>
                     <td align="right">¥{{ number_format($user->pivot->budget) }}</td>

@@ -24,7 +24,7 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 
-		{{-- PC版サイドメニュー --}}
+		{{-- スマホ --}}
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				@include('layouts.content.config.xs-side-menu')
@@ -68,7 +68,7 @@
 
 	</div>
 
-	{{-- スマホ版サイドメニュー --}}
+	{{-- PC版サイドメニュー --}}
 	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 		@include('layouts.content.config.side-menu')
 	</div>
