@@ -12,11 +12,11 @@
         {{ route('customers.update', compact('customer')) }}
     @endslot
 
-    @component('components.elements.form.text',['name'=>'name','value'=>$customer->name])
+    @component('components.elements.form.text',['name' => 'name','value' => $customer->name])
         顧客名
     @endcomponent
 
-    @include('layouts.customers.customer-types')
+    @include('layouts.customers.register-customer-types', ['customer' => $customer])
 
     @slot('modalFooter')
         {{ method_field('PATCH') }}

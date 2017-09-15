@@ -2,7 +2,7 @@
     @slot('thead')
         <th>ID</th>
         <th>企業名</th>
-        <th>クライアント種類</th>
+        <th>顧客種類</th>
         <th></th>
     @endslot
     @slot('tbody')
