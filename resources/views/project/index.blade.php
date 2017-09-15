@@ -44,6 +44,7 @@
 			<th>開始日</th>
 			<th>完了予定日</th>
 			<th>完了日</th>
+			<th>非表示</th>
 			<th></th>
 		</tr>
 	@endslot
@@ -59,6 +60,11 @@
 				<td>{{ $project->start->format('Y/m/d') }}</td>
 				<td>{{ $project->end_expect->format('Y/m/d') }}</td>
 				<td>{{ $project->end ? $project->end->format('Y/m/d') : $project->end }}</td>
+				<td align="center">
+					@if($project->can_display == 1)
+						<span class="glyphicon glyphicon-ok-circle" style="color: red; font-size: large;"></span>
+					@endif
+				</td>
 				<td>
 					@include('layouts.projects.edit')
 					@include('layouts.projects.delete')

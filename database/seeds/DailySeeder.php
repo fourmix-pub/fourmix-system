@@ -13,7 +13,7 @@ class DailySeeder extends Seeder
     {
         DB::table('dailies')->delete();
 
-        for ($i = 1; $i < 21; $i++) {
+        for ($i = 1; $i <= 30; $i++) {
             \App\Models\Daily::create([
                 'user_id' => $i,
                 'work_type_id' => $i,

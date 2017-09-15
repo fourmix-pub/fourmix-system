@@ -19,7 +19,7 @@
     <div class="form-group">
         <label class="col-xs-3 control-label" for="non-display_flag">非表示フラグ</label>
         <div class="col-xs-8 checkbox" style="margin-left: 20px;">
-            <input type="checkbox" name="can_display" value="1">
+            <input type="checkbox" name="can_display" value="1" @if($project->can_display == 1) checked @endif>
         </div>
     </div>
 

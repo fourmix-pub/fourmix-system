@@ -12,7 +12,7 @@
         {{ route('projects.destroy', compact('project')) }}
     @endslot
 
-    {{ $project->name }} を削除しますか？
+    {{ $project->customer->name.'：'.$project->name }} を削除しますか？
 
     @slot('modalFooter')
         {{ method_field('DELETE') }}
