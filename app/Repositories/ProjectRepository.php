@@ -45,8 +45,6 @@ class ProjectRepository implements ProjectRepositoryContract
             $projects = $projects->where('end', null);
         }
 
-        $projects = $projects->where('can_display', 0);
-
         $projects = $projects->paginate(10);
 
         $projectsSelect = Project::all();
@@ -140,7 +138,7 @@ class ProjectRepository implements ProjectRepositoryContract
 
         $projects = $projects->paginate(10);
 
-        $projectsSelect = Project::all();
+        $projectsSelect = Project::all()->where('can_display', 0);
         $users = User::all();
         $customers = Customer::all();
 

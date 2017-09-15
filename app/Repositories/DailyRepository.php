@@ -60,7 +60,7 @@ class DailyRepository implements DailyRepositoryContract
 
         $dailies = $dailies->paginate(10);
         $users = User::all();
-        $projects = Project::all();
+        $projects = Project::all()->where('can_display', 0);
         $workTypes = WorkType::all();
 
         return compact('dailies', 'dailiesSelect', 'users', 'userId', 'projects', 'projectId', 'workTypes', 'workTypeId', 'startDate', 'endDate');
@@ -73,7 +73,7 @@ class DailyRepository implements DailyRepositoryContract
     public function dailyResourcesForIndex()
     {
         $dailies = request()->user()->dailies()->where('date', Carbon::now()->toDateString())->get();
-        $projects = Project::all();
+        $projects = Project::all()->where('can_display', 0);
         $workTypes = WorkType::all();
         $jobTypes = JobType::all();
         $date = Carbon::now()->format('Y-m-d');
@@ -102,7 +102,7 @@ class DailyRepository implements DailyRepositoryContract
     {
         $date = request('date');
         $dailies = request()->user()->dailies()->where('date', $date)->get();
-        $projects = Project::all();
+        $projects = Project::all()->where('can_display', 0);
         $workTypes = WorkType::all();
         $jobTypes = JobType::all();
 
@@ -145,10 +145,11 @@ class DailyRepository implements DailyRepositoryContract
         $project = null;
 
         if ($projectId = request('project_id')) {
-            $project = Project::where('id', $projectId)->get()->first();
+            $project = Project::where('id', $projectId)
+                ->where('can_display', 0)->get()->first();
         }
 
-        $projectsSelect = Project::all();
+        $projectsSelect = Project::all()->where('can_display', 0);
 
         return compact('projectsSelect', 'project', 'projectId');
     }
