@@ -20,7 +20,7 @@ class CustomerSeeder extends Seeder
             ]);
         }
 
-        for ($i = 11; $i <= 20; $i++) {
+        for ($i = 11; $i <= 30; $i++) {
             \App\Models\Customer::create([
                 'name' => '企業'.$i,
                 'type_id' => 2,
