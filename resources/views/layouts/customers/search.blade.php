@@ -11,7 +11,7 @@
 
         @endcomponent
 
-        @include('layouts.customers.customer-types', ['customer' => null])
+        @include('layouts.customers.customer-types')
 
         <div class="row form text-center">
             <div class="btn-group">

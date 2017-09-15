@@ -19,15 +19,15 @@ class CustomerRepository implements CustomerRepositoryContract
             $customers = $customers->where('id', $customerId);
         }
 
-        if ($type_id = request('type_id')) {
-            $customers = $customers->where('type_id', $type_id);
+        if ($typeId = request('type_id')) {
+            $customers = $customers->where('type_id', $typeId);
         }
 
         $customers = $customers->paginate(10);
 
         $customersSelect = Customer::all();
 
-        return compact('customers', 'customersSelect', 'customerId');
+        return compact('customers', 'customersSelect', 'customerId', 'typeId');
     }
 
     /**

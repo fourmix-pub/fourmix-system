@@ -17,7 +17,7 @@ class PersonalBudgetRepository implements PersonalBudgetRepositoryContract
      */
     public function personalBudgetResources()
     {
-        $projects = Project::latest();
+        $projects = Project::has('personalBudgets')->latest();
 
         if ($projectId = request('project_id')) {
             $projects = $projects->where('id', $projectId);
@@ -27,7 +27,6 @@ class PersonalBudgetRepository implements PersonalBudgetRepositoryContract
 
         $projects = $projects->paginate(3);
         $projectsSelect = Project::has('personalBudgets')->get();
-        ;
         $usersSelect = User::all();
 
         return compact('projects', 'usersSelect', 'projectId', 'userId', 'projectsSelect');

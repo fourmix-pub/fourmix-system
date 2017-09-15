@@ -8,7 +8,7 @@
             <div class="col-xs-12 col-md-8 col-sm-8 col-lg-8">
                 @foreach(config('system.customer.name') as $key => $value)
                     <label class="radio-inline">
-                        <input type="radio" name="type_id" id="type_id" value="{{ $key }}" @if(($customer ? (int)$customer->type_id : 999) === (int)$key) checked @endif>{{ $value }}
+                        <input type="radio" name="type_id" id="type_id" value="{{ $key }}" @if(($typeId != null ? (int)$typeId : 999) === (int)$key) checked @endif>{{ $value }}
                     </label>
                 @endforeach
                 @include('layouts.common.error-one', ['field' => 'type_id'])
