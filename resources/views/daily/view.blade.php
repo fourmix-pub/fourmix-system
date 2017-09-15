@@ -63,7 +63,7 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td colspan="6">備考：{{ $daily->note }}</td>
+                        <td colspan="7">備考：{{ $daily->note }}</td>
                     </tr>
                 @endforeach
             @endslot
