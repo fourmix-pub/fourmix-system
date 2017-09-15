@@ -20,7 +20,7 @@
         顧客名
     @endcomponent
 
-    @include('layouts.customers.customer-types')
+    @include('layouts.customers.customer-types', ['typeId' => null])
 
     @slot('modalFooter')
         {{ csrf_field() }}

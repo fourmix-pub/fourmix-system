@@ -22,7 +22,7 @@
 		<button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;" data-toggle="collapse" href="#search">
 			<i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
 		</button>
-		@include('layouts.customers.add', ['customer' => null])
+		@include('layouts.customers.add')
 	</div>
 </div>
 
