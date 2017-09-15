@@ -13,7 +13,7 @@ class PersonalBudgetSeeder extends Seeder
     {
         DB::table('personal_budgets')->delete();
 
-        for ($i = 4; $i < 10; $i++) {
+        for ($i = 1; $i < 7; $i++) {
             for ($j = 1; $j < 6; $j++) {
                 App\Models\PersonalBudget::create([
                     'project_id' => $i,
