@@ -73,7 +73,7 @@ class ProjectRepository implements ProjectRepositoryContract
         $project->note = $request->get('note');
         if ((int)$request->get('can_display') === 1) {
             $project->can_display = $request->get('can_display');
-        } elseif ((int)$request->get('can_display') === 0) {
+        } else if ((int)$request->get('can_display') === 0) {
             $project->can_display = $request->get('can_display');
         }
 

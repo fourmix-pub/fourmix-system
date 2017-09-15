@@ -13,7 +13,7 @@ class WorkTypeSeeder extends Seeder
     {
         DB::table('work_types')->delete();
 
-        for ($i = 1; $i < 30; $i++) {
+        for ($i = 1; $i <= 30; $i++) {
             \App\Models\WorkType::create([
                 'name' => '作業'.$i,
             ]);
