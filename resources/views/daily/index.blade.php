@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    作業日報入力
+    作業日報作成
 @endsection
 
 @section('content')
@@ -79,7 +79,7 @@
         <div class="page-header">
             <div>
                 <h2>
-                    DAILY REPORTS
+                    日報作成
                 </h2>
             </div>
         </div>
