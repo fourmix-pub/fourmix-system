@@ -70,7 +70,7 @@
                         <ul class="dropdown-menu" role="menu">
                             <li role="presentation"><a href="{{ route('dailies.index') }}" >日報作成</a></li>
                             <li role="presentation"><a href="{{ route('daily.view') }}">日報閲覧</a></li>
-                            <li role="presentation"><a href="{{ route('daily.analytics.workTypes.byProject') }}">集計</a></li>
+                            <li role="presentation"><a href="{{ route('daily.analytics.workTypes.byProject') }}">集計表</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">
@@ -130,7 +130,7 @@
                         <ul class="dropdown-menu" role="menu">
                             <li role="presentation"><a href="{{ route('dailies.index') }}" >日報作成</a></li>
                             <li role="presentation"><a href="{{ route('daily.view') }}">日報閲覧</a></li>
-                            <li role="presentation"><a href="{{ route('daily.analytics.workTypes.byProject') }}">集計</a></li>
+                            <li role="presentation"><a href="{{ route('daily.analytics.workTypes.byProject') }}">集計表</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown @if($nav == 'projects') active @endif">

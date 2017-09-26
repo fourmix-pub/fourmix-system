@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Settings;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UserRequest extends FormRequest
 {
@@ -23,13 +24,27 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name'   => 'required|max:225',
-            'email'    => 'required',
-            'department_id' => 'required',
-            'cost' => 'required|numeric',
-            'start' => 'required',
-            'end' => 'required',
-        ];
+        if ($this->getMethod() == 'PATCH') {
+            return [
+                'name'          => 'required|max:225',
+                'department_id' => 'required',
+                'cost'          => 'required|numeric',
+                'start'         => 'required',
+                'end'           => 'required',
+                'email'         => [
+                    'required',
+                    Rule::unique('users')->ignore($this->route('user')->id),
+                ],
+            ];
+        } else {
+            return [
+                'name'          => 'required|max:225',
+                'department_id' => 'required',
+                'cost'          => 'required|numeric',
+                'start'         => 'required',
+                'end'           => 'required',
+                'email'         => 'required|unique:users',
+            ];
+        }
     }
 }

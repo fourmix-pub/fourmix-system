@@ -11,7 +11,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="page-header">
 			<h2 align="center">
-				PROJECTS
+				プロジェクト一覧
 			</h2>
 		</div>
 	</div>
