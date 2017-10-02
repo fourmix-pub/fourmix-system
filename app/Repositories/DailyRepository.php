@@ -62,8 +62,9 @@ class DailyRepository implements DailyRepositoryContract
         $users = User::all();
         $projects = Project::all()->where('can_display', 0);
         $workTypes = WorkType::all();
+        $jobTypes = JobType::all();
 
-        return compact('dailies', 'dailiesSelect', 'users', 'userId', 'projects', 'projectId', 'workTypes', 'workTypeId', 'startDate', 'endDate');
+        return compact('dailies', 'dailiesSelect', 'users', 'userId', 'projects', 'projectId', 'workTypes', 'jobTypes', 'workTypeId', 'startDate', 'endDate');
     }
 
     /**
@@ -131,7 +132,14 @@ class DailyRepository implements DailyRepositoryContract
         $daily->date = $request->get('date');
         $daily->project_id = $request->get('project_id');
         $daily->work_type_id = $request->get('work_type_id');
+        $daily->start = $request->get('start');
+        $daily->end = $request->get('end');
+        $daily->rest = $request->get('rest');
+        $daily->job_type_id = $request->get('job_type_id');
         $daily->note = $request->get('note');
+
+        $daily->time = $this->calculate->dailyTime($daily);
+        $daily->cost = $this->calculate->dailyCost($daily, $request->user());
 
         return $daily->update();
     }

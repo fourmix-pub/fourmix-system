@@ -42,6 +42,42 @@
         @endforeach
     @endcomponent
 
+    @component('components.elements.form.time', ['name' => 'start'])
+        @slot('title')
+            開始時刻
+        @endslot
+        @slot('time')
+            {{ $daily->start }}
+        @endslot
+    @endcomponent
+
+    @component('components.elements.form.time', ['name' => 'end'])
+        @slot('title')
+            終了時刻
+        @endslot
+        @slot('time')
+            {{ $daily->end }}
+        @endslot
+    @endcomponent
+
+    @component('components.elements.form.text', ['name' => 'rest', 'value' => $daily->rest])
+        休憩時間
+    @endcomponent
+
+
+    @component('components.elements.form.select', ['name' => 'job_type_id'])
+        @slot('label')
+            勤務分類名
+        @endslot
+        @foreach($jobTypes as $jobType)
+            @if(old('job_type_id') and old('form_id') == 'daily_'.$daily->id)
+                <option value="{{ $jobType->id }}" @if((int)old('job_type_id') === (int)$jobType->id) selected @endif>{{ $jobType->name }}</option>
+            @else
+                <option value="{{ $jobType->id }}" @if($jobType->id == $daily->job_type_id) selected @endif>{{ $jobType->name }}</option>
+            @endif
+        @endforeach
+    @endcomponent
+
     @component('components.elements.form.textarea',['name'=>'note', 'value'=>$daily->note])
         備考欄
     @endcomponent
