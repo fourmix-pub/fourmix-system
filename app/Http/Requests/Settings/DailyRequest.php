@@ -30,7 +30,7 @@ class DailyRequest extends FormRequest
             'date' => 'required',
             'rest' => 'numeric|nullable',
             'note' => 'max: 200',
-            'start' => 'required|startTime|date_format:H:i',
+            'start' => 'required|date_format:H:i',
             'end' => 'required|after:start|date_format:H:i',
         ];
     }
