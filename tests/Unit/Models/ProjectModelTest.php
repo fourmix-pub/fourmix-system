@@ -47,7 +47,7 @@ class ProjectModelTest extends TestCase
 
     public function testSumByWorkType()
     {
-        $result = $this->project->sumByWorkType()->get()->first();
+        $result = $this->project->sumByWorkType()->first();
 
         $this->assertTrue($result instanceof Daily);
         $this->assertEquals($result->work_type_id, 2);
@@ -57,7 +57,7 @@ class ProjectModelTest extends TestCase
 
     public function testSumByUser()
     {
-        $result = $this->project->sumByUser()->get()->first();
+        $result = $this->project->sumByUser()->first();
 
         $this->assertTrue($result instanceof Daily);
         $this->assertEquals($result->user_id, 20000);

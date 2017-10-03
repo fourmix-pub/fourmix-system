@@ -60,7 +60,7 @@ class DailyRepository implements DailyRepositoryContract
 
         $dailies = $dailies->paginate(10);
         $users = User::all();
-        $projects = Project::all()->where('can_display', 0);
+        $projects = Project::where('can_display', 0)->get();
         $workTypes = WorkType::all();
         $jobTypes = JobType::all();
 
@@ -74,7 +74,7 @@ class DailyRepository implements DailyRepositoryContract
     public function dailyResourcesForIndex()
     {
         $dailies = request()->user()->dailies()->where('date', Carbon::now()->toDateString())->orderBy('start', 'asc')->get();
-        $projects = Project::all()->where('can_display', 0);
+        $projects = Project::where('can_display', 0)->get();
         $workTypes = WorkType::all();
         $jobTypes = JobType::all();
         $date = Carbon::now()->format('Y-m-d');
@@ -103,7 +103,7 @@ class DailyRepository implements DailyRepositoryContract
     {
         $date = request('date');
         $dailies = request()->user()->dailies()->where('date', $date)->orderBy('start', 'asc')->get();
-        $projects = Project::all()->where('can_display', 0);
+        $projects = Project::where('can_display', 0)->get();
         $workTypes = WorkType::all();
         $jobTypes = JobType::all();
 
@@ -154,10 +154,10 @@ class DailyRepository implements DailyRepositoryContract
 
         if ($projectId = request('project_id')) {
             $project = Project::where('id', $projectId)
-                ->where('can_display', 0)->get()->first();
+                ->where('can_display', 0)->first();
         }
 
-        $projectsSelect = Project::all()->where('can_display', 0);
+        $projectsSelect = Project::where('can_display', 0)->get();
 
         return compact('projectsSelect', 'project', 'projectId');
     }
@@ -171,7 +171,7 @@ class DailyRepository implements DailyRepositoryContract
         $user = null;
 
         if ($userId = request('user_id')) {
-            $user = User::where('id', $userId)->get()->first();
+            $user = User::where('id', $userId)->first();
         }
 
         $usersSelect = User::all();

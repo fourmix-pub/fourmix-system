@@ -71,9 +71,7 @@ class ProjectRepository implements ProjectRepositoryContract
         $project->end_expect = $request->get('end_expect');
         $project->end = $request->get('end');
         $project->note = $request->get('note');
-        if ((int)$request->get('can_display') === 1) {
-            $project->can_display = $request->get('can_display');
-        } elseif ((int)$request->get('can_display') === 0) {
+        if ((int)$request->get('can_display') !== null) {
             $project->can_display = $request->get('can_display');
         }
 
@@ -140,7 +138,7 @@ class ProjectRepository implements ProjectRepositoryContract
 
         $projects = $projects->paginate(10);
 
-        $projectsSelect = Project::all()->where('can_display', 0);
+        $projectsSelect = Project::where('can_display', 0)->get();
         $users = User::all();
         $customers = Customer::all();
 
