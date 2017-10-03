@@ -92,10 +92,14 @@ class DailyRouteTest extends TestCase
     public function it_can_edit()
     {
         $data = [
-            'work_type_id' => rand(1, 20),
-            'project_id' => rand(1, 30),
-            'date' => '2016-10-08',
-            'note' => 'テストテストテストテストテストテスト',
+            'work_type_id' => 2,
+            'job_type_id' => 2,
+            'project_id' => 1,
+            'date' => '2017-11-22',
+            'rest' => '30',
+            'note' => 'テストテストテストテスト',
+            'start' => '12:52',
+            'end' => '16:22',
         ];
 
         $response = $this->actingAs($this->user)->patch('/dailies/view/'.$this->daily->id, array_merge($data, ['_token' => csrf_token()]));
