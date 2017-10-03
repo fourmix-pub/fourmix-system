@@ -73,7 +73,7 @@ class DailyRepository implements DailyRepositoryContract
      */
     public function dailyResourcesForIndex()
     {
-        $dailies = request()->user()->dailies()->where('date', Carbon::now()->toDateString())->get();
+        $dailies = request()->user()->dailies()->where('date', Carbon::now()->toDateString())->orderBy('start', 'asc')->get();
         $projects = Project::all()->where('can_display', 0);
         $workTypes = WorkType::all();
         $jobTypes = JobType::all();
@@ -102,7 +102,7 @@ class DailyRepository implements DailyRepositoryContract
     public function dailySearchByDate()
     {
         $date = request('date');
-        $dailies = request()->user()->dailies()->where('date', $date)->get();
+        $dailies = request()->user()->dailies()->where('date', $date)->orderBy('start', 'asc')->get();
         $projects = Project::all()->where('can_display', 0);
         $workTypes = WorkType::all();
         $jobTypes = JobType::all();
