@@ -71,7 +71,7 @@ class ProjectRepository implements ProjectRepositoryContract
         $project->end_expect = $request->get('end_expect');
         $project->end = $request->get('end');
         $project->note = $request->get('note');
-        if ((int)$request->get('can_display') !== null) {
+        if ($request->get('can_display') != '') {
             $project->can_display = $request->get('can_display');
         }
 
