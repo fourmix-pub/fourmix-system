@@ -31,7 +31,7 @@ class DailyViewRequest extends FormRequest
             'rest' => 'numeric|nullable',
             'note' => 'max: 200',
             'start' => 'required|date_format:H:i',
-            'end' => 'required|date_format:H:i',
+            'end' => 'required|after:start|date_format:H:i',
         ];
     }
 }
