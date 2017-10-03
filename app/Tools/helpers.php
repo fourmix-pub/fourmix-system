@@ -15,10 +15,10 @@ if (! function_exists('bg_img')) {
     }
 }
 
-if(! function_exists('start_time')) {
+if (! function_exists('start_time')) {
     function start_time($dailies, $date)
     {
-        if ($dailies->isEmpty() ) {
+        if ($dailies->isEmpty()) {
             return '';
         } else {
             return Daily::where('date', $date)->where('user_id', $dailies->first()->user_id)->latest()->first()->end;
