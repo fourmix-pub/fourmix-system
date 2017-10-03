@@ -18,8 +18,8 @@ if (! function_exists('bg_img')) {
 if(! function_exists('start_time')) {
     function start_time($dailies, $date)
     {
-        if ($dailies->isEmpty() ) {
-            return '';
+        if ((int)$dailies->count() === 0) {
+            return \Carbon\Carbon::now('Japan')->format('H:i');
         } else {
             return Daily::where('date', $date)->where('user_id', $dailies->first()->user_id)->latest()->first()->end;
         }
