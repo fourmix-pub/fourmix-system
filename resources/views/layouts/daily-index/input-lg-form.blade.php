@@ -30,11 +30,11 @@
                                 </div>
 
                                 <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1" style="padding-bottom: 7px;">
-                                    <input type='text' class="form-control time" name="start" value="{{ old('start') ??  \Illuminate\Support\Carbon::now('Japan')->format('H:i') }}" placeholder="開始"/>
+                                    <input type='text' class="form-control time" name="start" value="{{ old('start') ?? start_time($dailies, $date) }}" placeholder="開始"/>
                                 </div>
 
                                 <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1" style="padding-bottom: 7px;">
-                                    <input type='text' class="form-control time" name="end" placeholder="終了" value="{{ old('end') }}" >
+                                    <input type='text' class="form-control time" name="end" placeholder="終了" value="{{ old('end') ?? \Illuminate\Support\Carbon::now('Japan')->format('H:i')}}" >
                                 </div>
 
                                 <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1" style="padding-bottom: 7px;">

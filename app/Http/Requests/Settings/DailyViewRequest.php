@@ -24,10 +24,14 @@ class DailyViewRequest extends FormRequest
     public function rules()
     {
         return [
-            'date' => 'required',
-            'project_id' => 'required',
             'work_type_id' => 'required',
-            'note' => 'max:255',
+            'job_type_id' => 'required',
+            'project_id' => 'required',
+            'date' => 'required',
+            'rest' => 'numeric|nullable',
+            'note' => 'max: 200',
+            'start' => 'required|date_format:H:i',
+            'end' => 'required|date_format:H:i',
         ];
     }
 }
