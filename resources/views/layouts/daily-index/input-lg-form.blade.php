@@ -44,7 +44,13 @@
                                 <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" style="padding-bottom: 7px;">
                                     <select class="selectpicker" name="job_type_id" data-width="100%" data-live-search="true" title="勤務分類">
                                         @foreach($jobTypes as $jobType)
-                                            <option value="{{ $jobType->id }}" @if((int)old('job_type_id') === $jobType->id) selected @endif>{{ '#'.$jobType->id.' '.$jobType->name }}</option>
+                                            <option value="{{ $jobType->id }}"
+                                                    @if(old('job_type_id') != '')
+                                                    @if((int)old('job_type_id') === $jobType->id) selected @endif
+                                                    @else
+                                                    @if($loop->first) selected @endif
+                                                    @endif>{{ '#'.$jobType->id.' '.$jobType->name }}
+                                            </option>
                                         @endforeach
                                     </select>
                                 </div>

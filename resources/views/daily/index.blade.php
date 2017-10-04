@@ -29,6 +29,7 @@
     $(document).ready(function() {
         // page is now ready, initialize the calendar...
         $('#calendar').fullCalendar({
+            timeFormat: 'H(:mm)',
             themeSystem: 'bootstrap3',
             defaultDate: '{{ $date }}',
             locale: 'ja',
