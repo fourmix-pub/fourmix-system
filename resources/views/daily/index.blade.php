@@ -102,7 +102,7 @@
                     </a>
                     <a href="{{ route('dailies.search', ['date' => \Carbon\Carbon::parse($date)->addMonth()->format('Y-m-d')]) }}" class="btn btn-primary" style="padding-top: 8px; padding-bottom: 6px;">
                         <span class="glyphicon glyphicon-menu-right"></span>
-                    </a>　
+                    </a>
                     <div class="btn-group" data-toggle="buttons">
                         <label class="btn btn-primary active" id="changeToMonth">
                             <input type="radio" name="options" id="option2" autocomplete="off"> 月
@@ -111,6 +111,9 @@
                             <input type="radio" name="options" id="option1" autocomplete="off" checked> 日
                         </label>
                     </div>
+                    <a href="#to-input" class="btn btn-primary" style="padding-top: 8px; padding-bottom: 6px;">
+                        日報入力
+                    </a>
                 </div>
                 <br class="visible-xs-inline">
                 <br class="visible-xs-inline">
@@ -141,7 +144,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h4 style="margin: 10px">日報一覧</h4>
+                <h4 id="to-input" style="margin: 10px">日報一覧</h4>
             </div>
         </div>
         @if($dailies->first())
