@@ -19,7 +19,7 @@ if (! function_exists('start_time')) {
     function start_time($dailies, $date)
     {
         if ((int)$dailies->count() === 0) {
-            return \Carbon\Carbon::now('Japan')->format('H:i');
+            return '09:30';
         } else {
             return Daily::where('date', $date)->where('user_id', $dailies->first()->user_id)->latest()->first()->end;
         }
