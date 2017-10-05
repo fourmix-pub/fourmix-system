@@ -24,7 +24,7 @@ class UserRepository implements UserRepositoryContract
             $users = $users->where('department_id', $departmentId);
         }
 
-        $users = $users->paginate(10);
+        $users = $users->paginate(50);
 
         $usersSelect = User::all();
 

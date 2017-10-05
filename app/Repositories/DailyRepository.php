@@ -58,7 +58,7 @@ class DailyRepository implements DailyRepositoryContract
             $dailies = $dailies->where('date', '<=', $endDate);
         }
 
-        $dailies = $dailies->paginate(10);
+        $dailies = $dailies->paginate(50);
         $users = User::all();
         $projects = Project::where('can_display', 0)->get();
         $workTypes = WorkType::all();
