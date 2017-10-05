@@ -17,14 +17,24 @@ class ValidationServiceProvider extends ServiceProvider
     public function boot()
     {
         Validator::extend('startTime', function ($attribute, $value, $parameters, $validator) {
-            if ($daily = request()->user()->dailies()->where('date', request('date'))->orderBy('end', 'desc')->first()) {
-                $value = Carbon::parse($value);
-                $end = Carbon::parse($daily->end);
+            $value = Carbon::parse($value);
+            return request()->user()->dailies()
+                    ->where('date', request('date'))
+                    ->where('start', '<', $value)
+                    ->where('end', '>', $value)
+                    ->orWhere(function ($query) {
+                        $query->where('start', '>=', request('start'))
+                            ->where('end', '<=', request('end'));
+                    })
+                    ->count() === 0;
+        });
 
-                return $value->gte($end);
-            } else {
-                return true;
-            }
+        Validator::extend('endTime', function ($attribute, $value, $parameters, $validator) {
+            $value = Carbon::parse($value);
+            return request()->user()->dailies()
+                    ->where('date', request('date'))
+                    ->where('start', '<', $value)
+                    ->where('end', '>', $value)->count() === 0;
         });
     }
 
