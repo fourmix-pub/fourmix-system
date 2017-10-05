@@ -13,7 +13,7 @@ class WorkTypeRepository implements WorkTypeRepositoryContract
      */
     public function workTypeResources()
     {
-        $workTypes = WorkType::paginate(10);
+        $workTypes = WorkType::paginate(50);
 
         return compact('workTypes');
     }
