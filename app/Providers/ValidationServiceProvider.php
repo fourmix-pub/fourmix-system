@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Daily;
 use Carbon\Carbon;
+use function foo\func;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
 
@@ -19,16 +20,17 @@ class ValidationServiceProvider extends ServiceProvider
         Validator::extend('startTime', function ($attribute, $value, $parameters, $validator) {
             $value = Carbon::parse($value);
             $date = Carbon::parse(request('date'));
-            return request()->user()->dailies()
+            return request()->user()
+                    ->dailies()
                     ->where('date', $date)
-                    ->where('start', '<', $value)
-                    ->where('end', '>', $value)
-                    ->orWhere(function ($query) use ($date) {
-                        $query->where('date', $date)
-                            ->where('start', '>=', request('start'))
-                            ->where('end', '<=', request('end'));
-                    })
-                    ->count() === 0;
+                    ->where(function ($query) use ($value) {
+                        $query->where('start', '<', $value)
+                            ->where('end', '>', $value)
+                            ->orWhere(function ($query) {
+                                $query->where('start', '>=', request('start'))
+                                    ->where('end', '<=', request('end'));
+                            });
+                    })->count() === 0;
         });
 
         Validator::extend('endTime', function ($attribute, $value, $parameters, $validator) {
