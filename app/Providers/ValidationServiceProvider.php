@@ -18,12 +18,14 @@ class ValidationServiceProvider extends ServiceProvider
     {
         Validator::extend('startTime', function ($attribute, $value, $parameters, $validator) {
             $value = Carbon::parse($value);
+            $date = Carbon::parse(request('date'));
             return request()->user()->dailies()
-                    ->where('date', request('date'))
+                    ->where('date', $date)
                     ->where('start', '<', $value)
                     ->where('end', '>', $value)
                     ->orWhere(function ($query) {
-                        $query->where('start', '>=', request('start'))
+                        $query->where('date', $date)
+                            ->where('start', '>=', request('start'))
                             ->where('end', '<=', request('end'));
                     })
                     ->count() === 0;
@@ -31,8 +33,9 @@ class ValidationServiceProvider extends ServiceProvider
 
         Validator::extend('endTime', function ($attribute, $value, $parameters, $validator) {
             $value = Carbon::parse($value);
+            $date = Carbon::parse(request('date'));
             return request()->user()->dailies()
-                    ->where('date', request('date'))
+                    ->where('date', $date)
                     ->where('start', '<', $value)
                     ->where('end', '>', $value)->count() === 0;
         });
