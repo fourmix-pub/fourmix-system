@@ -23,7 +23,7 @@ class ValidationServiceProvider extends ServiceProvider
                     ->where('date', $date)
                     ->where('start', '<', $value)
                     ->where('end', '>', $value)
-                    ->orWhere(function ($query) {
+                    ->orWhere(function ($query) use ($date) {
                         $query->where('date', $date)
                             ->where('start', '>=', request('start'))
                             ->where('end', '<=', request('end'));
