@@ -14,7 +14,7 @@ return [
     */
 
     'name' => 'Fourmix.Co.,Ltd.',
-    'version' => '1.2.4',
+    'version' => '1.2.5',
     'mail-title' => 'Fourmix 社内システム',
 
     /*
@@ -186,8 +186,7 @@ return [
         App\Providers\ResponseMacroServiceProvider::class,
         App\Providers\ToolServiceProvider::class,
         App\Providers\ValidationServiceProvider::class,
-
-],
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -201,7 +200,6 @@ return [
     */
 
     'aliases' => [
-
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
@@ -236,7 +234,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Analytics' => App\Tools\Analytics::class,
-
     ],
 
 ];
