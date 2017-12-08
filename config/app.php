@@ -14,7 +14,7 @@ return [
     */
 
     'name' => 'Fourmix.Co.,Ltd.',
-    'version' => '1.2.6',
+    'version' => '1.2.7',
     'mail-title' => 'Fourmix 社内システム',
 
     /*
@@ -93,7 +93,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'ja',
+    'fallback_locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
