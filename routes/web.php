@@ -146,3 +146,11 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+
+/*
+|--------------------------------------------------------------------------
+| Mock関連ルート
+|--------------------------------------------------------------------------
+*/
+
+Route::view('/test', 'mocks.test');
