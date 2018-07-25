@@ -154,3 +154,5 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 */
 
 Route::view('/test', 'mocks.test');
+Route::view('/events', 'mocks.events.events');
+Route::view('/lunch', 'mocks.lunch');
