@@ -25,6 +25,11 @@
     </div>
 
     {{-- コンテンツ --}}
+    <button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;">
+        <span>新規メール作成</span>
+    </button>
+    <br>
+
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="table-responsive">
