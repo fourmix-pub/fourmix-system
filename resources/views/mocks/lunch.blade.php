@@ -16,7 +16,7 @@
             <div class="page-header">
                 <div>
                     <h2>
-                        イベント一覧
+                        ランチマッチング
                     </h2>
                 </div>
             </div>

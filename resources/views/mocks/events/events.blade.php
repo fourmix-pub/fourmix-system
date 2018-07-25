@@ -35,7 +35,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <table class="table table-bordered">
                 <thead>
-                <th>イベント名</th>
+                <th><a href="#">イベント名</a></th>
                 <th>主催者</th>
                 <th>開催予定日</th>
                 <th>開催場所</th>
@@ -44,7 +44,7 @@
                 </th>
                 </thead>
                 <tr>
-                    <td>イベント名</td>
+                    <td><a href="#">イベント名</a></td>
                     <td>主催者</td>
                     <td>開催予定日</td>
                     <td>開催場所</td>
@@ -53,7 +53,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>イベント名</td>
+                    <td><a href="#">イベント名</a></td>
                     <td>主催者</td>
                     <td>開催予定日</td>
                     <td>開催場所</td>
@@ -62,7 +62,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>イベント名</td>
+                    <td><a href="#">イベント名</a></td>
                     <td>主催者</td>
                     <td>開催予定日</td>
                     <td>開催場所</td>
