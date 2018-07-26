@@ -90,6 +90,7 @@ mix.styles([
     'resources/assets/css/modal.css',
     'resources/assets/css/pageloader.css',
     'resources/assets/css/fullcalendar.css',
+    'resources/assets/css/lunch.css',
 ], 'public/css/app.css');
 
 

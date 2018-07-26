@@ -33,44 +33,7 @@
 
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <table class="table table-bordered">
-                <thead>
-                <th><a href="#">イベント名</a></th>
-                <th>主催者</th>
-                <th>開催予定日</th>
-                <th>開催場所</th>
-                <th>開催時刻</th>
-                <th>
-                </th>
-                </thead>
-                <tr>
-                    <td><a href="#">イベント名</a></td>
-                    <td>主催者</td>
-                    <td>開催予定日</td>
-                    <td>開催場所</td>
-                    <td>開催時刻</td>
-                    <td>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="#">イベント名</a></td>
-                    <td>主催者</td>
-                    <td>開催予定日</td>
-                    <td>開催場所</td>
-                    <td>開催時刻</td>
-                    <td>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="#">イベント名</a></td>
-                    <td>主催者</td>
-                    <td>開催予定日</td>
-                    <td>開催場所</td>
-                    <td>開催時刻</td>
-                    <td>
-                    </td>
-                </tr>
-            </table>
+
         </div>
     </div>
 
