@@ -48,13 +48,12 @@
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 people">
                         <img src="{{ asset('/img/hitoA.png') }}" >
                     </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 people">
+                        <img src="{{ asset('/img/hitoC.png') }}" >
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 people">
                         <img src="{{ asset('/img/hitoB.png') }}">
                     </div>
-
                 </div>
             </div>
         </div>
