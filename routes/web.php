@@ -154,8 +154,15 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 */
 
 Route::view('/test', 'mocks.test');
+
+//イベント管理
 Route::view('/events', 'mocks.events.events');
+Route::view('/event-detail', 'mocks.events.detail');
+Route::view('/event-create', 'mocks.events.create');
+
+//ランチマッチング
 Route::view('/lunch', 'mocks.lunch');
+
 //安否確認
 Route::view('/test/safety-mails', 'mocks.safety-mails.index');
 Route::view('/test/mail-create', 'mocks.safety-mails.create');
