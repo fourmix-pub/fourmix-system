@@ -36,7 +36,7 @@
             </div>
             <div class="row">
                 <div align="right">
-                    <a href="schedule_create.blade.php">
+                    <a href="#">
                         <span class="glyphicon glyphicon-trash">削除　　</span>
                     </a>
                     <a href="schedule_create">

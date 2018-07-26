@@ -31,17 +31,15 @@
                     <h3><small>名前：山田太郎</small></h3>
                 </div>
                 <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <!-- Split button -->
+                    <!-- Single button -->
                     <div class="btn-group">
-                        <button type="button" class="btn btn-danger">name</button>
                         <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="caret"></span>
-                            <span class="sr-only">Toggle Dropdown</span>
+                        name　<span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a href="schedule_view">名前</a></li>
-                            <li><a href="schedule_view">名前</a></li>
-                            <li><a href="schedule_view">名前</a></li>
+                            <li><a href="schedule_view">山田太郎</a></li>
+                            <li><a href="schedule_view">東京花子</a></li>
+                            <li><a href="schedule_view">天王洲アイル</a></li>
                         </ul>
                     </div>
                     <br>
@@ -186,7 +184,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class=""></a>
-                                <span class="hidden-xs hidden-sm"></span>
+                                <span class="hidden-xs hidden-sm"></span>　
                                 コメント内容
                             </div>
 
