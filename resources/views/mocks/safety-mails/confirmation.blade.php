@@ -32,7 +32,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>氏名</th>
+                                    <th></th>
                                     <th></th>
                                     <th>再送信</th>
                                 </tr>
