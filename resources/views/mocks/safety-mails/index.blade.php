@@ -98,7 +98,7 @@
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
-                                    80%　Confirmed (8/10)
+                                    <span class="safety-mails-ratio">80</span>%　Confirmed (8/10)
                                 </div>
                             </div>
                             <div class="row">
@@ -140,7 +140,7 @@
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
-                                    100%　Confirmed (10/10)
+                                    <span class="safety-mails-ratio">100</span>%　Confirmed (10/10)
                                 </div>
                             </div>
                             <div class="row">
@@ -182,7 +182,7 @@
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
-                                    100%　Confirmed (10/10)
+                                    <span class="safety-mails-ratio">100</span>%　Confirmed (10/10)
                                 </div>
                             </div>
                             <div class="row">

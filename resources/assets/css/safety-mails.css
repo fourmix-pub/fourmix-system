@@ -1,3 +1,23 @@
-.safety-mails-ratio {
-    font-size: 30px;
+.safety-mails-ratio{
+    font-size: 25px;
+}
+
+.mail-form-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-top-width: 8px;
+    border-radius: 3px;
+}
+
+.mail-form-callout {
+    border-top-color: #d9534f;
+}
+
+.mail-create-button{
+    font-size: 20px;
+}
+
+.mail-confirmation{
+    font-size: 20px;
 }

@@ -24,35 +24,38 @@
     </div>
 
     {{-- コンテンツ --}}
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <form action="#">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" style="padding-bottom: 7px;">
-                                        タイトル
-                                        <input type="text" class="form-control" placeholder="20文字以内">
-                                    </div>
+    <div class="mail-form-callout">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" style="padding-bottom: 7px;">
+                                    <h4>タイトル</h4>
+                                    <input type="text" class="form-control" placeholder="20文字以内">
                                 </div>
-                                <div class="row">
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <h4>本文</h4>
+                                    <textarea name="contents" rows="15"  class="form-control" placeholder="1000文字以内"></textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div align="middle">
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        本文
-                                        <textarea name="contents" rows="15"  class="form-control" placeholder="1000文字以内"></textarea>
+                                        <button type="button" class="btn btn-danger" style="margin-right: 10px;">
+                                            <span class="mail-create-button">
+                                            <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+                                            送信
+                                            </span>
+                                        </button>
                                     </div>
                                 </div>
-                                <br>
-                                <div class="row">
-                                    <div align="middle">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <button type="submit" class="btn registration-daily">送信</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

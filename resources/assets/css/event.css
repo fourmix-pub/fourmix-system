@@ -1,0 +1,29 @@
+.event-name {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-size:25px;
+    background: #FBF8EF;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+.event-name p {
+    margin: auto;
+    padding: 1.5em;
+}
+
+.event-detail {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    font-size: 20px;
+    text-align: center;
+    background: #fff8e8;
+    border-right: solid 20px coral;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+.event-detail p {
+    margin: auto;
+    padding: 1.5em;
+    line-height: 2em;
+}
