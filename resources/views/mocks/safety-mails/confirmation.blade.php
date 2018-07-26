@@ -25,14 +25,14 @@
 
     {{-- コンテンツ --}}
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <div class="table-responsive">
+                    <div class="table-responsive table-confirmation">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>氏名</th>
+                                    <th></th>
                                     <th></th>
                                     <th>再送信</th>
                                 </tr>

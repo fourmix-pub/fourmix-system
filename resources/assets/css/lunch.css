@@ -1,0 +1,27 @@
+.bg{
+    background:linear-gradient(#fff,#fff,#FFF0EA,#FFA584);
+}
+
+.tableware img{
+    width: 40%;
+    height: 40%;
+}
+
+.glass img{
+    width: 30%;
+    height: 30%;
+}
+
+.hands img{
+    width: 80%;
+    height: 80%;
+}
+
+.people img{
+    width: 95%;
+    height: 95%;
+}
+.lunch-btn{
+    width: 180px;
+    height: 80px;
+}
