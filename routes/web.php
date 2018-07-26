@@ -159,3 +159,9 @@ Route::view('/lunch', 'mocks.lunch');
 //安否確認
 Route::view('/test/safety-mails', 'mocks.safety-mails.index');
 Route::view('/test/mail-create', 'mocks.safety-mails.create');
+Route::view('/test/mail-confirmation', 'mocks.safety-mails.confirmation');
+Route::view('/test/my_schedule', 'mocks.my_schedule');
+Route::view('/test/schedule_create', 'mocks.schedule_create');
+Route::view('/test/schedule_view', 'mocks.schedule_view');
+Route::view('/test/schedule_detail', 'mocks.schedule_detail');
+Route::view('/test/comment', 'mocks.comment');
