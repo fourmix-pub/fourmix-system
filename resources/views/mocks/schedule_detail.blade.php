@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            <div class="bs-callout bs-callout-default">
+            <div class="bs-callout bs-callout-default schedule-contents">
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
                     </div>
@@ -64,7 +64,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass-half"></a>
-                                <span class="hidden-xs hidden-sm">今週の予定：</span>
+                                <span class="hidden-xs hidden-sm">週予定：</span>
                                 開発
                             </div>
 
@@ -89,7 +89,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass"></a>
-                                <span class="hidden-xs hidden-sm">先週の結果：</span>
+                                <span class="hidden-xs hidden-sm">結果：</span>
                                 開発
                             </div>
 
@@ -140,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="bs-callout bs-callout-default">
+            <div class="bs-callout bs-callout-default schedule-contents">
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
                     </div>

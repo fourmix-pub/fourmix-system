@@ -39,7 +39,7 @@
 
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="form-group">
-            <label class="control-label">今週の予定</label>
+            <label class="control-label">週予定</label>
             <div>
                 <div class="panel-body">
                     <div class="panel panel-default">
