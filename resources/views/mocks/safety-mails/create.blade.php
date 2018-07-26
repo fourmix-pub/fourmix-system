@@ -34,7 +34,7 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" style="padding-bottom: 7px;">
                                         タイトル
-                                        <input type='text' class="form-control day" name="title" placeholder="20文字以内"/>
+                                        <input type="text" class="form-control" placeholder="20文字以内">
                                     </div>
                                 </div>
                                 <div class="row">
