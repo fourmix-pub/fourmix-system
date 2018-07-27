@@ -27,7 +27,7 @@
     {{-- コンテンツ --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <button type="button" class="btn btn-success pull-right" style="margin-right: 10px;">
+            <button type="button" class="btn btn-success pull-right" onclick="location.href='./mail-create'" style="margin-right: 10px;">
                 <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i> <span>新規メール作成</span>
             </button>
         </div>
@@ -36,7 +36,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body test" data-test="1">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             2017.02.01
@@ -71,6 +71,14 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    $(function(){
+                        $(".test").click(function () {
+                            let id = $(this).data('test');
+                            location.href = 'mail/' + id;
+                        });
+                    });
+                </script>
             </div>
         </div>
     </div>
@@ -174,7 +182,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <h4>
                                         <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
-                                        台風16号 関東上陸
+                                        <a href="./mail-confirmation">台風16号 関東上陸</a>
                                     </h4>
                                 </div>
                             </div>

@@ -14,14 +14,18 @@
     border-top-color: #d9534f;
 }
 
-.mail-create-button{
+.mail-create-button {
     font-size: 20px;
 }
 
-.mail-confirmation{
+.mail-confirmation {
     font-size: 20px;
 }
 
-.schedule-contents{
+.schedule-contents {
     font-size: 20px;
+}
+
+.safety-status {
+    font-size: 18px;
 }

@@ -31,7 +31,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <form action="#">
                             <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" style="padding-bottom: 7px;">
+                                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" style="padding-bottom: 7px;">
                                     <h4>タイトル</h4>
                                     <input type="text" class="form-control" placeholder="20文字以内">
                                 </div>
