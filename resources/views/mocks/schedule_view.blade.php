@@ -247,7 +247,8 @@
                 </div>
             </div>
             <div class="row">
-                <div align="right">
+                <div align="middle">
+
                     <nav aria-label="...">
                         <ul class="pagination">
                             <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
