@@ -30,117 +30,116 @@
                 <table class="table table-bordered">
 
                     <thead>
-                    <tr class="active">
-                        <th>氏名</th>
-                        <th>所属</th>
-                        <th>安否</th>
-                        <th>再送信</th>
-                    </tr>
+                        <tr class="active">
+                            <th>氏名</th>
+                            <th>所属</th>
+                            <th>安否</th>
+                            <th>再送信</th>
+                        </tr>
                     </thead>
 
                     <tbody>
-                    <tr>
-                        <td>大澤乃梨子</td>
-                        <td>システムデザイングループ</td>
-                        <td class="table-center">
-                            <span class="label label-success safety-status">
-                                <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認
+                        <tr>
+                            <td>大澤乃梨子</td>
+                            <td>システムデザイングループ</td>
+                            <td class="table-center">
+                                <span class="label label-success safety-status">
+                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認
+                                </span>
+                            </td>
+                            <td class="table-center">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>大澤乃梨子</td>
+                            <td>システムデザイングループ</td>
+                            <td class="table-center">
+                            <span class="label label-default safety-status">
+                                <i class="glyphicon glyphicon-question-sign" aria-hidden="true"></i> 未確認
                             </span>
-                        </td>
-                        <td class="table-center">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
+                            </td>
+                            <td class="table-center">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>大澤乃梨子</td>
-                        <td>システムデザイングループ</td>
-                        <td class="table-center">
-                        <span class="label label-default safety-status">
-                            <i class="glyphicon glyphicon-question-sign" aria-hidden="true"></i> 未確認
-                        </span>
-                        </td>
-                        <td class="table-center">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>大澤乃梨子</td>
+                            <td>システムデザイングループ</td>
+                            <td class="table-center">
+                                <span class="label label-success safety-status">
+                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認
+                                </span>
+                            </td>
+                            <td class="table-center">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>大澤乃梨子</td>
-                        <td>システムデザイングループ</td>
-                        <td class="table-center">
-                            <span class="label label-success safety-status">
-                                <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認
-                            </span>
-                        </td>
-                        <td class="table-center">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>大澤乃梨子</td>
+                            <td>システムデザイングループ</td>
+                            <td class="table-center">
+                                <span class="label label-success safety-status">
+                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認
+                                </span>
+                            </td>
+                            <td class="table-center">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>大澤乃梨子</td>
-                        <td>システムデザイングループ</td>
-                        <td class="table-center">
-                            <span class="label label-success safety-status">
-                                <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認
-                            </span>
-                        </td>
-                        <td class="table-center">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>大澤乃梨子</td>
+                            <td>システムデザイングループ</td>
+                            <td class="table-center">
+                                <span class="label label-default safety-status">
+                                    <i class="glyphicon glyphicon-question-sign" aria-hidden="true"></i> 未確認
+                                </span>
+                            </td>
+                            <td class="table-center">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>大澤乃梨子</td>
-                        <td>システムデザイングループ</td>
-                        <td class="table-center">
-                        <span class="label label-default safety-status">
-                            <i class="glyphicon glyphicon-question-sign" aria-hidden="true"></i> 未確認
-                        </span>
-                        </td>
-                        <td class="table-center">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>大澤乃梨子</td>
-                        <td>システムデザイングループ</td>
-                        <td class="table-center">
-                            <span class="label label-success safety-status">
-                                <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認
-                            </span>
-                        </td>
-                        <td class="table-center">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
-
+                        <tr>
+                            <td>大澤乃梨子</td>
+                            <td>システムデザイングループ</td>
+                            <td class="table-center">
+                                <span class="label label-success safety-status">
+                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認
+                                </span>
+                            </td>
+                            <td class="table-center">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

@@ -36,47 +36,53 @@
                                     <input type="text" class="form-control" placeholder="20文字以内">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <h4>本文</h4>
-                                    <textarea name="contents" rows="15"  class="form-control textarea-resize" data-provide="markdown" placeholder=" Markdown" placeholder="1000文字以内"></textarea>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div align="middle">
+                            <form>
+                                <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <input type="email" class="form-control" placeholder="メールアドレスを入力">
-                                        <button type="button" class="btn registration-daily" style="margin-right: 10px;">
-                                            <span>
-                                                <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
-                                                テスト送信
-                                            </span>
-                                        </button>
+                                        <h4>本文</h4>
+                                        <textarea name="contents" rows="15"  class="form-control textarea-resize" data-provide="markdown" placeholder=" Markdown" placeholder="1000文字以内"></textarea>
                                     </div>
                                 </div>
-                            </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <input type="email" class="form-control" placeholder="メールアドレスを入力">
+                                    </div>
+                                </div>
+                            </form>
                             <br>
                             <div class="row">
-                                <div align="middle">
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <button type="button" class="btn registration-daily" style="margin-right: 10px;" data-toggle="modal" data-target=".bs-example-modal-lg">
-                                            <span>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
+                                    <button type="button" class="btn registration-daily" style="margin-right: 10px;">
+                                        <span>
                                             <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
-                                            確認
-                                            </span>
-                                        </button>
+                                            テスト送信
+                                        </span>
+                                    </button>
+                                    <button type="button" class="btn registration-daily" data-toggle="modal" data-target="#confirmation">
+                                        <span>
+                                            <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+                                            送信
+                                        </span>
+                                    </button>
 
-                                        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                                            <div class="modal-dialog modal-lg" role="document">
-                                                <div class="modal-content">
-                                                    以下の内容で送信してもよろしいですか？
-                                                    <br>
-                                                    内容内容内容..........
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="confirmation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h3 class="modal-title" id="myModalLabel">安否確認メール</h3>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h4>送信します。よろしいですか？</h4>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                                                    <button type="button" class="btn btn-danger">送信する</button>
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
