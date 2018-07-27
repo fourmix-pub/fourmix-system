@@ -7,11 +7,11 @@
     margin: 20px 0;
     border: 1px solid #eee;
     border-top-width: 8px;
-    border-radius: 3px;
+    border-radius: 0px;
 }
 
 .mail-form-callout {
-    border-top-color: #d9534f;
+    border-top-color: #ff5810;
 }
 
 .mail-create-button {
@@ -31,4 +31,13 @@
 
 .panel-body.mail-panel:hover {
     background: #ececec;
+}
+
+.table-center {
+    text-align: center;
+}
+
+.textarea-resize {
+    resize: vertical;
+    width: 100%;
 }
