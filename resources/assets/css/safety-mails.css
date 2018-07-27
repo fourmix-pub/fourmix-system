@@ -29,3 +29,10 @@
 .safety-status {
     font-size: 18px;
 }
+.icon-color{
+    color: #ff5810;
+}
+
+.panel-body.mail-panel:hover {
+    background: #ececec;
+}

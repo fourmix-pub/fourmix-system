@@ -27,7 +27,7 @@
     {{-- コンテンツ --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <button type="button" class="btn btn-success pull-right" onclick="location.href='./mail-create'" style="margin-right: 10px;">
+            <button type="button" class="btn registration-daily pull-right" onclick="location.href='./mail-create'" style="margin-right: 10px;">
                 <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i> <span>新規メール作成</span>
             </button>
         </div>
@@ -36,7 +36,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-body test" data-test="1">
+                <div class="panel-body mail-panel mail-onclick" data-mail_id="1">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             2017.02.01
@@ -47,7 +47,7 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <h4>
-                                        <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+                                        <i class="glyphicon glyphicon-envelope icon-color" aria-hidden="true"></i>
                                         大雪の影響による交通機関の乱れ
                                     </h4>
                                 </div>
@@ -73,9 +73,9 @@
                 </div>
                 <script>
                     $(function(){
-                        $(".test").click(function () {
-                            let id = $(this).data('test');
-                            location.href = 'mail/' + id;
+                        $(".mail-onclick").click(function () {
+                            let id = $(this).data('mail_id');
+                            location.href = './mail-confirmation';
                         });
                     });
                 </script>
@@ -86,7 +86,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body mail-panel mail-onclick" data-mail_id="1">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             2015.05.05
@@ -97,7 +97,7 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <h4>
-                                        <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+                                        <i class="glyphicon glyphicon-envelope icon-color" aria-hidden="true"></i>
                                         千葉を震源とする大型地震の発生
                                     </h4>
                                 </div>
@@ -128,7 +128,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body mail-panel mail-onclick" data-mail_id="1">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             2012.08.23
@@ -139,7 +139,7 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <h4>
-                                        <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+                                        <i class="glyphicon glyphicon-envelope icon-color" aria-hidden="true"></i>
                                         台風16号 関東上陸
                                     </h4>
                                 </div>
@@ -170,7 +170,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body mail-panel mail-onclick" data-mail_id="1">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             2012.08.23
@@ -181,8 +181,8 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <h4>
-                                        <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
-                                        <a href="./mail-confirmation">台風16号 関東上陸</a>
+                                        <i class="glyphicon glyphicon-envelope icon-color" aria-hidden="true"></i>
+                                        台風16号 関東上陸
                                     </h4>
                                 </div>
                             </div>
