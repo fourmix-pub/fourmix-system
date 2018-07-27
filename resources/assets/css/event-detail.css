@@ -1,0 +1,7 @@
+.participant{
+    text-align: center;
+    background: coral;
+    border-top: solid 2px #000;
+    border-bottom: solid 2px #000;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}

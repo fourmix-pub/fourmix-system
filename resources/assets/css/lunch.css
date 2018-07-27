@@ -1,5 +1,6 @@
-.bg{
-    background:linear-gradient(#fff,#fff,#FFF0EA,#FFA584);
+
+html,body{
+    background:linear-gradient(#fff 0%,#fff,#FFF0EA,#FFA584 100%);
 }
 
 .tableware img{
@@ -24,4 +25,9 @@
 .lunch-btn{
     width: 180px;
     height: 80px;
+}
+
+.title{
+    color: coral;
+    text-align: center;
 }
