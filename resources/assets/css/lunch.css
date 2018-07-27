@@ -1,33 +1,29 @@
 
-html,body{
-    background:linear-gradient(#fff 0%,#fff,#FFF0EA,#FFA584 100%);
+#lunch {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/creative.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+button.back {
+    width: 56px;
+    height: 48px;
 }
 
-.tableware img{
-    width: 40%;
-    height: 40%;
+div.lunch-content > p {
+    font-size: 24px;
 }
 
-.glass img{
-    width: 30%;
-    height: 30%;
+button.lunch-btn {
+    font-size: 32px;
+    width: 240px;
+    height: 64px;
 }
 
-.hands img{
-    width: 80%;
-    height: 80%;
-}
-
-.people img{
-    width: 95%;
-    height: 95%;
-}
-.lunch-btn{
-    width: 180px;
-    height: 80px;
-}
-
-.title{
-    color: coral;
-    text-align: center;
+h3.lunch-end {
+    color: #ff5810;
 }
