@@ -196,7 +196,6 @@
                             </div>
                         </div>
                         <div class="row">
-                        <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <span class="glyphicon glyphicon-share"></span>
                                 <span class="hidden-xs hidden-sm">共有事項：</span>
