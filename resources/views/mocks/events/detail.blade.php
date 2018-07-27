@@ -44,16 +44,73 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    Panel content
+    <div class="row participant">
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="panel panel-default p-panel">
+                    <div class="panel-body">
+                        参加者名
+                    </div>
+                    <div class="panel-footer">◯</div>
                 </div>
-                <div class="panel-footer">Panel footer</div>
             </div>
-
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="panel panel-default p-panel">
+                    <div class="panel-body">
+                        参加者名
+                    </div>
+                    <div class="panel-footer">◯</div>
+                </div>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="panel panel-default p-panel">
+                    <div class="panel-body">
+                        参加者名
+                    </div>
+                    <div class="panel-footer">×</div>
+                </div>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="panel panel-default p-panel">
+                    <div class="panel-body">
+                        参加者名
+                    </div>
+                    <div class="panel-footer">△</div>
+                </div>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="panel panel-default p-panel">
+                    <div class="panel-body">
+                        参加者名
+                    </div>
+                    <div class="panel-footer">△</div>
+                </div>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="panel panel-default p-panel">
+                    <div class="panel-body">
+                        参加者名
+                    </div>
+                    <div class="panel-footer">△</div>
+                </div>
+            </div>
         </div>
-    </div>
-
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="btn-group btn-group-lg answer" role="group" aria-label="...">
+                <button type="button" class="btn btn-success">
+                    <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-warning">
+                    <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        </div>
+</div>
 @endsection

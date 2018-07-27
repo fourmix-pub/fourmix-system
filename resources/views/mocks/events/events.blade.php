@@ -35,12 +35,18 @@
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             <div class="panel panel-default event-name">
                 <div class="panel-body">
+                    <span class="pin">
+                       <img src="{{ asset('img/pin.png') }}">
+                   </span>
                     <p><a href="{{ url('/event-detail') }}">イベント名</a> </p>
                 </div>
             </div>
         </div>
         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
             <div class="panel panel-default event-detail">
+                <span class="pin">
+                       <img src="{{ asset('img/pin.png') }}">
+                   </span>
                 <div class="panel-body">
                     <p>主催者：山田太郎　　開催場所：T.Y.HARVOR
                         <br>
@@ -54,13 +60,19 @@
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             <div class="panel panel-default event-name">
                 <div class="panel-body">
-                    <p><a href="#">イベント名</a> </p>
+                   <span class="pin">
+                       <img src="{{ asset('img/pin.png') }}">
+                   </span>
+                    <p><a href="#">小林さん結婚お祝いパーティ</a> </p>
                 </div>
             </div>
         </div>
         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
             <div class="panel panel-default event-detail">
                 <div class="panel-body">
+                <span class="pin">
+                       <img src="{{ asset('img/pin.png') }}">
+                   </span>
                     <p>主催者：山田太郎　　開催場所：T.Y.HARVOR
                         <br>
                         開催予定日：8月7日（火）　開催時刻：19:00~
@@ -73,6 +85,9 @@
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             <div class="panel panel-default event-name">
                 <div class="panel-body">
+                    <span class="pin">
+                       <img src="{{ asset('img/pin.png') }}">
+                   </span>
                     <p><a href="#">イベント名</a> </p>
                 </div>
             </div>
