@@ -27,19 +27,22 @@
 
     <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"style="padding-bottom: 7px;">
         <div class="form-group">
-            <label class="control-label">日付</label>
+            <label class="control-label schedule-contents">日付</label>
             <div>
-                <div class="input-group date">
-                    <input type="text" class="form-control day" name="date" value="2018-07-26">
-                </div>
+                <select class="form-control">
+                    <option>7/2</option>
+                    <option>7/9</option>
+                    <option>7/17</option>
+                    <option>7/23</option>
+                    <option>7/30</option>
+                </select>
             </div>
         </div>
     </div>
 
-
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="form-group">
-            <label class="control-label">週予定</label>
+            <label class="control-label schedule-contents">週予定</label>
             <div>
                 <div class="panel-body">
                     <div class="panel panel-default">
@@ -59,7 +62,7 @@
             </div>
         </div>
             <div class="form-group">
-                <label class="control-label">共有事項</label>
+                <label class="control-label schedule-contents">共有事項</label>
                 <div>
                     <div class="panel-body">
                         <div class="panel panel-default">
@@ -78,7 +81,9 @@
                     </div>
                 </div>
             </div>
+            <div align="middle">
             <button type="button" class="btn registration-daily" onclick="location.href='./my_schedule'">登録</button>
+            </div>
         </div>
     </div>
 @endsection

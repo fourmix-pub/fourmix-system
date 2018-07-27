@@ -28,13 +28,13 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <h3><small>名前：山田太郎</small></h3>
+                    <h1><small>名前：山田太郎</small></h1>
                 </div>
                 <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <!-- Single button -->
                     <div class="btn-group">
                         <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        name　<span class="caret"></span>
+                        山田太郎　<span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
                             <li><a href="schedule_view">山田太郎</a></li>
@@ -53,7 +53,18 @@
                     <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <h4>2018/07/30</h4>
+                                <h3>2018/07/30</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
                             </div>
                         </div>
                         <div class="row">
@@ -63,8 +74,8 @@
                         <br>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass-half"></a>
-                                <span class="hidden-xs hidden-sm">週予定：</span>
+                                <a class="fa fa-hourglass icon-color"></a>
+                                <span class="hidden-xs hidden-sm">週の予定：</span>
                                 開発
                             </div>
 
@@ -88,7 +99,7 @@
                         <br>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass"></a>
+                                <a class="fa fa-hourglass icon-color"></a>
                                 <span class="hidden-xs hidden-sm">結果：</span>
                                 開発
                             </div>
@@ -113,28 +124,11 @@
                         <br>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="glyphicon glyphicon-share"></a>
+                                <a class="glyphicon glyphicon-share icon-color"></a>
                                 <span class="hidden-xs hidden-sm">共有事項：</span>
                                 7/23 有給休暇
                             </div>
                         </div>
-                        <br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
-                    </div>
-                    <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            </div>
-                        </div>
-                        <br>
-
                         <br>
                     </div>
                 </div>
@@ -158,7 +152,7 @@
                         <br>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="glyphicon glyphicon-pencil"></a>
+                                <a class="glyphicon glyphicon-pencil icon-color"></a>
                                 <span class="">コメント</span>
 
                             </div>
@@ -195,7 +189,9 @@
             </div>
 
     {{-- Modal --}}
+            <div align="middle">
             <button type="button" class="btn registration-daily" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">コメント作成</button>
+            </div>
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -221,8 +217,10 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn registration-daily" data-dismiss="modal">コメント送信</button>
+                            <div align="middle">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">コメント送信</button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -16,7 +16,7 @@
             <div class="page-header">
                 <div>
                     <h2>
-                        予定閲覧
+                        個人別予定確認2018
                     </h2>
                 </div>
             </div>
@@ -28,13 +28,13 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                <h3><small>名前：山田太郎</small></h3>
+                <h1><small>名前：山田太郎</small></h1>
                 </div>
                 <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <!-- Single button -->
                     <div class="btn-group">
                         <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            name　<span class="caret"></span>
+                            山田太郎　<span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
                             <li><a href="schedule_view">山田太郎</a></li>
@@ -54,7 +54,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <a href="schedule_detail">
-                                    <h4>2018/07/30</h4>
+                                    <h3>2018/07/30</h3>
                                 </a>
                             </div>
                         </div>
@@ -65,19 +65,19 @@
                         <br>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass-half"></a>
+                                <a class="fa fa-hourglass-half icon-color"></a>
                                 <span class="hidden-xs hidden-sm">週の予定：</span>
                                 開発
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass"></a>
+                                <a class="fa fa-hourglass icon-color"></a>
                                 <span class="hidden-xs hidden-sm">結果：</span>
                                 開発
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="glyphicon glyphicon-share icon-color"></span>
                                 <span class="hidden-xs hidden-sm">共有事項：</span>
                                 7/30 有給休暇
                             </div>
@@ -94,7 +94,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <a href="">
-                                    <h4>2018/07/23</h4>
+                                    <h3>2018/07/23</h3>
                                 </a>
                             </div>
                         </div>
@@ -105,19 +105,19 @@
                         <br>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass-half"></a>
+                                <a class="fa fa-hourglass-half icon-color"></a>
                                 <span class="hidden-xs hidden-sm">週の予定：</span>
                                 開発
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass"></a>
+                                <a class="fa fa-hourglass icon-color"></a>
                                 <span class="hidden-xs hidden-sm">結果：</span>
                                 開発
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="glyphicon glyphicon-share icon-color"></span>
                                 <span class="hidden-xs hidden-sm">共有事項：</span>
                                 7/23 有給休暇
                             </div>
@@ -134,7 +134,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <a href="">
-                                    <h4>2018/07/17</h4>
+                                    <h3>2018/07/17</h3>
                                 </a>
                             </div>
                         </div>
@@ -145,19 +145,19 @@
                         <br>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass-half"></a>
+                                <a class="fa fa-hourglass-half icon-color"></a>
                                 <span class="hidden-xs hidden-sm">今週の予定：</span>
                                 開発
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass"></a>
+                                <a class="fa fa-hourglass icon-color"></a>
                                 <span class="hidden-xs hidden-sm">先週の結果：</span>
                                 開発
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="glyphicon glyphicon-share icon-color"></span>
                                 <span class="hidden-xs hidden-sm">共有事項：</span>
                                 7/17 有給休暇
                             </div>
@@ -174,7 +174,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <a href="">
-                                    <h4>2018/07/09</h4>
+                                    <h3>2018/07/09</h3>
                                 </a>
                             </div>
                         </div>
@@ -185,19 +185,19 @@
                         <br>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass-half"></a>
+                                <a class="fa fa-hourglass-half icon-color"></a>
                                 <span class="hidden-xs hidden-sm">今週の予定：</span>
                                 開発
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass"></a>
+                                <a class="fa fa-hourglass icon-color"></a>
                                 <span class="hidden-xs hidden-sm">先週の結果：</span>
                                 開発
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="glyphicon glyphicon-share icon-color"></span>
                                 <span class="hidden-xs hidden-sm">共有事項：</span>
                                 7/10 有給休暇
                             </div>
@@ -214,7 +214,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <a href="">
-                                    <h4>2018/07/02</h4>
+                                    <h3>2018/07/02</h3>
                                 </a>
                             </div>
                         </div>
@@ -225,19 +225,19 @@
                         <br>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass-half"></a>
+                                <a class="fa fa-hourglass-half icon-color"></a>
                                 <span class="hidden-xs hidden-sm">今週の予定：</span>
                                 開発
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass"></a>
+                                <a class="fa fa-hourglass icon-color"></a>
                                 <span class="hidden-xs hidden-sm">先週の結果：</span>
                                 開発
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="glyphicon glyphicon-share icon-color"></span>
                                 <span class="hidden-xs hidden-sm">共有事項：</span>
                                 7/02 有給休暇
                             </div>
