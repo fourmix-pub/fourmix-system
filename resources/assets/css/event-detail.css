@@ -14,7 +14,6 @@ div.event-title > p {
     line-height: 2;
 }
 .panel-default>.panel-heading {
-    color: #fff;
-    background-color: #ff5810;
-    border-color: #ddd;
+    font-size: 16px;
+    color: #ff5810;
 }
