@@ -68,8 +68,6 @@
                                 <span class="hidden-xs hidden-sm">予定：</span>
                                 開発
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                     <a class="fa fa-hourglass icon-color"></a>
                                     <span class="hidden-xs hidden-sm">結果：</span>
