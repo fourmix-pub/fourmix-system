@@ -44,17 +44,21 @@
                         </div>
                         <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                             <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <h3>スレッドタイトル1</h3>
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <h4>作成者：大澤乃梨子</h4>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <hr>
-                                    最終更新：
+                                    <div class="thread-date">
+                                        <hr>
+                                        <h5>最終更新：2018/07/25 12:00</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
