@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            <div class="bs-callout bs-callout-default schedule-contents">
+            <div class="bs-callout bs-callout-default bs-callout-primary">
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
                     </div>
@@ -133,23 +133,31 @@
                     </div>
                 </div>
             </div>
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">東京花子</h3>
-                </div>
-                <div class="panel-body">
-                    コメント内容<br>
-                    コメント内容
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">東京花子</h3>
+                        </div>
+                        <div class="panel-body">
+                            コメント内容<br>
+                            コメント内容
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">山田太郎</h3>
-                </div>
-                <div class="panel-body">
-                    コメント内容<br>
-                    コメント内容
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">山田太郎</h3>
+                        </div>
+                        <div class="panel-body">
+                            コメント内容<br>
+                            コメント内容
+                        </div>
+                    </div>
                 </div>
             </div>
 

@@ -32,7 +32,10 @@
                         <div class="fc-left"></div>
                         <div class="fc-right">
                             <a href="schedule_create">
-                            <button type="button" class="btn btn-primary">予定入力</button>
+                                <button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal" data-target="#create-">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                    <span class="hidden-xs">追加</span>
+                                </button>
                             </a>
                         </div>
                     </div>
@@ -53,14 +56,20 @@
                                         </a>
                                     </div>
                                     <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <button type="button" class="btn btn-xs btn-warning schedule-contents" onclick="location.href='./schedule_editing'" data-toggle="modal" data-target="#" style="margin: 4px">
-                                            <span class="glyphicon glyphicon-edit schedule-contents" aria-hidden="true">編集</span>
-                                        </button>
-    {{-- Modal（削除） --}}
-                                       <button type="button" class="btn btn-xs btn-danger schedule-contents" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="margin: 4px">
-                                           <span class="glyphicon glyphicon-trash schedule-contents" aria-hidden="true">削除</span>
-                                       </button>
+                                        <a href="schedule_editing">
+                                            <button type="button" class="btn btn-warning" style="margin-right: 10px;" data-toggle="modal" data-target="#create">
+                                                <i class="glyphicon glyphicon-edit" aria-hidden="true"></i>
+                                                <span class="hidden-xs">編集</span>
+                                            </button>
+                                        </a>
 
+    {{-- Modal（削除） --}}
+                                        <a href="#">
+                                            <button type="button" class="btn btn-danger" style="margin-right: 10px;" data-toggle="modal" data-target="#exampleModal">
+                                                <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                                                <span class="hidden-xs">削除</span>
+                                            </button>
+                                        </a>
                                        <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -148,12 +157,41 @@
                                 </a>
                             </div>
                             <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <button type="button" class="btn btn-xs btn-warning schedule-contents" data-toggle="modal" data-target="#editDaily-5044" style="margin: 4px">
-                                    <span class="glyphicon glyphicon-edit" aria-hidden="true">編集</span>
-                                </button>
-                                <button type="button" class="btn btn-xs btn-danger schedule-contents" data-toggle="modal" data-target="#deleteDaily-5044" style="margin: 4px">
-                                    <span class="glyphicon glyphicon-trash" aria-hidden="true">削除</span>
-                                </button>
+                                <a href="schedule_editing">
+                                    <button type="button" class="btn btn-warning" style="margin-right: 10px;" data-toggle="modal" data-target="#create">
+                                        <i class="glyphicon glyphicon-edit" aria-hidden="true"></i>
+                                        <span class="hidden-xs">編集</span>
+                                    </button>
+                                </a>
+
+                                {{-- Modal（削除） --}}
+                                <a href="#">
+                                    <button type="button" class="btn btn-danger" style="margin-right: 10px;" data-toggle="modal" data-target="#exampleModal">
+                                        <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                                        <span class="hidden-xs">削除</span>
+                                    </button>
+                                </a>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                                <h4 class="modal-title" align="left">予定削除</h4>
+                                            </div>
+                                            <form class="form-horizontal" action="#" method="" style="display: inline;">
+                                                <div class="modal-body" align="left">
+                                                    2018/07/30 の予定を削除しますか？
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <input type="hidden" name="" value="">
+                                                    <input type="hidden" name="" value="">
+                                                    <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
+                                                    <button type="submit" class="btn btn-danger">削除</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
@@ -208,12 +246,41 @@
                                 </a>
                             </div>
                             <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <button type="button" class="btn btn-xs btn-warning schedule-contents" data-toggle="modal" data-target="#editDaily-5044" style="margin: 4px">
-                                    <span class="glyphicon glyphicon-edit" aria-hidden="true">編集</span>
-                                </button>
-                                <button type="button" class="btn btn-xs btn-danger schedule-contents" data-toggle="modal" data-target="#deleteDaily-5044" style="margin: 4px">
-                                    <span class="glyphicon glyphicon-trash" aria-hidden="true">削除</span>
-                                </button>
+                                <a href="schedule_editing">
+                                    <button type="button" class="btn btn-warning" style="margin-right: 10px;" data-toggle="modal" data-target="#create">
+                                        <i class="glyphicon glyphicon-edit" aria-hidden="true"></i>
+                                        <span class="hidden-xs">編集</span>
+                                    </button>
+                                </a>
+
+                                {{-- Modal（削除） --}}
+                                <a href="#">
+                                    <button type="button" class="btn btn-danger" style="margin-right: 10px;" data-toggle="modal" data-target="#exampleModal">
+                                        <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                                        <span class="hidden-xs">削除</span>
+                                    </button>
+                                </a>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                                <h4 class="modal-title" align="left">予定削除</h4>
+                                            </div>
+                                            <form class="form-horizontal" action="#" method="" style="display: inline;">
+                                                <div class="modal-body" align="left">
+                                                    2018/07/30 の予定を削除しますか？
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <input type="hidden" name="" value="">
+                                                    <input type="hidden" name="" value="">
+                                                    <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
+                                                    <button type="submit" class="btn btn-danger">削除</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
@@ -259,12 +326,41 @@
                                     </a>
                                 </div>
                                 <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <button type="button" class="btn btn-xs btn-warning schedule-contents" data-toggle="modal" data-target="#editDaily-5044" style="margin: 4px">
-                                        <span class="glyphicon glyphicon-edit" aria-hidden="true">編集</span>
-                                    </button>
-                                    <button type="button" class="btn btn-xs btn-danger schedule-contents" data-toggle="modal" data-target="#deleteDaily-5044" style="margin: 4px">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true">削除</span>
-                                    </button>
+                                    <a href="schedule_editing">
+                                        <button type="button" class="btn btn-warning" style="margin-right: 10px;" data-toggle="modal" data-target="#create">
+                                            <i class="glyphicon glyphicon-edit" aria-hidden="true"></i>
+                                            <span class="hidden-xs">編集</span>
+                                        </button>
+                                    </a>
+
+                                    {{-- Modal（削除） --}}
+                                    <a href="#">
+                                        <button type="button" class="btn btn-danger" style="margin-right: 10px;" data-toggle="modal" data-target="#exampleModal">
+                                            <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                                            <span class="hidden-xs">削除</span>
+                                        </button>
+                                    </a>
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                                    <h4 class="modal-title" align="left">予定削除</h4>
+                                                </div>
+                                                <form class="form-horizontal" action="#" method="" style="display: inline;">
+                                                    <div class="modal-body" align="left">
+                                                        2018/07/30 の予定を削除しますか？
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <input type="hidden" name="" value="">
+                                                        <input type="hidden" name="" value="">
+                                                        <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
+                                                        <button type="submit" class="btn btn-danger">削除</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -310,12 +406,41 @@
                                         </a>
                                     </div>
                                     <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <button type="button" class="btn btn-xs btn-warning schedule-contents" data-toggle="modal" data-target="#editDaily-5044" style="margin: 4px">
-                                            <span class="glyphicon glyphicon-edit" aria-hidden="true">編集</span>
-                                        </button>
-                                        <button type="button" class="btn btn-xs btn-danger schedule-contents" data-toggle="modal" data-target="#deleteDaily-5044" style="margin: 4px">
-                                            <span class="glyphicon glyphicon-trash" aria-hidden="true">削除</span>
-                                        </button>
+                                        <a href="schedule_editing">
+                                            <button type="button" class="btn btn-warning" style="margin-right: 10px;" data-toggle="modal" data-target="#create">
+                                                <i class="glyphicon glyphicon-edit" aria-hidden="true"></i>
+                                                <span class="hidden-xs">編集</span>
+                                            </button>
+                                        </a>
+
+                                        {{-- Modal（削除） --}}
+                                        <a href="#">
+                                            <button type="button" class="btn btn-danger" style="margin-right: 10px;" data-toggle="modal" data-target="#exampleModal">
+                                                <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                                                <span class="hidden-xs">削除</span>
+                                            </button>
+                                        </a>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                                        <h4 class="modal-title" align="left">予定削除</h4>
+                                                    </div>
+                                                    <form class="form-horizontal" action="#" method="" style="display: inline;">
+                                                        <div class="modal-body" align="left">
+                                                            2018/07/30 の予定を削除しますか？
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <input type="hidden" name="" value="">
+                                                            <input type="hidden" name="" value="">
+                                                            <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
+                                                            <button type="submit" class="btn btn-danger">削除</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
