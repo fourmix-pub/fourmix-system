@@ -94,6 +94,7 @@ mix.styles([
     'resources/assets/css/safety-mails.css',
     'resources/assets/css/event-detail.css',
     'resources/assets/css/lunch.css',
+    'resources/assets/css/thread.css',
 ], 'public/css/app.css');
 
 
