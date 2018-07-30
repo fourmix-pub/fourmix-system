@@ -141,34 +141,61 @@
                     コメントコメント
                 </div>
                 <div class="panel-footer">
-                    名前
-                    <span>投稿日時</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="panel-body">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <form action="" method="" role="form" enctype="multipart/form-data">
-                            <input type="hidden" name="" value="">
-                                <div class="form-group">
-                                    <div>
-                                        <textarea class="form-control" rows="8" name="content" data-provide="markdown" placeholder=" Markdown"></textarea>
-                                    </div>
-                                </div>
-                        </form>
-                        <div align="center">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">コメント送信</button>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                        名前：山田太郎
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+                        <span class="right">投稿日時：2018/03/03</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    コメント<br>
+                    コメントコメント
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                            名前：東京花子
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+                            <span class="right">投稿日時：2018/02/02</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    コメント<br>
+                    コメントコメント
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                            名前：天王洲アイル
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+                            <span class="right">投稿日時：2018/01/01</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     {{-- ページ --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
