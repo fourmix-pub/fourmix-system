@@ -159,14 +159,16 @@ Route::view('/test', 'mocks.test');
 Route::view('/events', 'mocks.events.events');
 Route::view('/event-detail', 'mocks.events.detail');
 Route::view('/event-create', 'mocks.events.create');
-
 //ランチマッチング
 Route::view('/lunch', 'mocks.lunch');
-
 //安否確認
 Route::view('/test/safety-mails', 'mocks.safety-mails.index');
 Route::view('/test/mail-create', 'mocks.safety-mails.create');
 Route::view('/test/mail-confirmation', 'mocks.safety-mails.confirmation');
+//掲示板
+Route::view('/test/threads', 'mocks.threads.index');
+Route::view('/test/threads-create', 'mocks.threads.create');
+Route::view('/test/threads-detail', 'mocks.threads.detail');
 //予定確認
 Route::view('/test/my_schedule', 'mocks.my_schedule');
 Route::view('/test/schedule_create', 'mocks.schedule_create');
