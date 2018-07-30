@@ -7,13 +7,18 @@ div.event-title > p {
     width: 72px;
 }
 
-.btn-group-vertical>.btn, .btn-group>.btn {
-    border-radius: 0!important;
-    width: 64px;
-    font-size: 24px;
-    line-height: 2;
-}
 .panel-default>.panel-heading {
     font-size: 16px;
     color: #ff5810;
+}
+
+th {
+    background-color: #ff5810;
+    color: #fff;
+}
+button.btn.btn-success.btn-lg.ev-ans-btn {
+    width: 126px;
+    height: 64px;
+    font-size: 24px;
+    align-content: center;
 }
