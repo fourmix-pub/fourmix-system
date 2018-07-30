@@ -53,7 +53,7 @@
                     <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <h3>2018/07/30</h3>
+                                <h3>2018/07/30　<small>の週</small></h3>
                             </div>
                         </div>
                     </div>
@@ -74,8 +74,8 @@
                         <br>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass icon-color"></a>
-                                <span class="hidden-xs hidden-sm">週の予定：</span>
+                                <a class="fa fa-hourglass-half icon-color schedule-contents"></a>
+                                <span class="hidden-xs hidden-sm">予定：</span>
                                 開発
                             </div>
 
@@ -134,57 +134,22 @@
                 </div>
             </div>
 
-            <div class="bs-callout bs-callout-default schedule-contents">
-                <div class="row">
-                    <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
-                    </div>
-                    <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            </div>
-                            名前：東京花子
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="glyphicon glyphicon-pencil icon-color"></a>
-                                <span class="">コメント</span>
-
-                            </div>
-
-                        </div>
-                        <br>
-                    </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">東京花子</h3>
                 </div>
-                <div class="row">
-                    <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
-                    </div>
-                    <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class=""></a>
-                                <span class="hidden-xs hidden-sm"></span>　
-                                コメント内容
-                            </div>
-
-                        </div>
-                        <br>
-                    </div>
+                <div class="panel-body">
+                    コメント内容<br>
+                    コメント内容
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">山田太郎</h3>
+                </div>
+                <div class="panel-body">
+                    コメント内容<br>
+                    コメント内容
                 </div>
             </div>
 

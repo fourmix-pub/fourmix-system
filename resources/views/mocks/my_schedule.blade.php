@@ -33,6 +33,7 @@
                         <div class="fc-right">
                             <a href="schedule_create">
                             <button type="button" class="btn btn-primary">予定入力</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -41,7 +42,7 @@
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="bs-callout bs-callout-default">
+                    <div class="bs-callout bs-callout-default bs-callout-primary">
                         <div class="row">
                             <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1"></div>
                             <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
@@ -52,9 +53,12 @@
                                         </a>
                                     </div>
                                     <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <button type="button" class="btn btn-xs btn-warning schedule-contents" onclick="location.href='./schedule_editing'" data-toggle="modal" data-target="#" style="margin: 4px">
+                                            <span class="glyphicon glyphicon-edit schedule-contents" aria-hidden="true">編集</span>
+                                        </button>
     {{-- Modal（削除） --}}
-                                       <button type="button" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
-                                           <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                       <button type="button" class="btn btn-xs btn-danger schedule-contents" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="margin: 4px">
+                                           <span class="glyphicon glyphicon-trash schedule-contents" aria-hidden="true">削除</span>
                                        </button>
 
                                        <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;">
@@ -78,17 +82,13 @@
                                                 </div>
                                             </div>
                                        </div>
-
-                                       <button type="button" class="btn btn-xs btn-warning" onclick="location.href='./schedule_editing'" data-toggle="modal" data-target="#editDaily-5044" style="margin: 4px">
-                                           <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                                       </button>
                                    </div>
                                 </div>
                                 <br>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         <a class="fa fa-hourglass-half icon-color schedule-contents"></a>
-                                        <span class="hidden-xs hidden-sm schedule-contents">今週の予定</span>
+                                        <span class="hidden-xs hidden-sm schedule-contents">予定</span>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                 開発<br>
@@ -110,7 +110,7 @@
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         <a class="fa fa-hourglass icon-color schedule-contents"></a>
-                                        <span class="hidden-xs hidden-sm schedule-contents">先週の結果</span>
+                                        <span class="hidden-xs hidden-sm schedule-contents">結果</span>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                             開発
@@ -136,7 +136,7 @@
                 </div>
             </div>
 
-            <div class="bs-callout bs-callout-default">
+            <div class="bs-callout bs-callout-default bs-callout-primary">
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
                     </div>
@@ -148,11 +148,11 @@
                                 </a>
                             </div>
                             <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <button type="button" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#deleteDaily-5044" style="margin: 4px">
-                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                <button type="button" class="btn btn-xs btn-warning schedule-contents" data-toggle="modal" data-target="#editDaily-5044" style="margin: 4px">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true">編集</span>
                                 </button>
-                                <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#editDaily-5044" style="margin: 4px">
-                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                <button type="button" class="btn btn-xs btn-danger schedule-contents" data-toggle="modal" data-target="#deleteDaily-5044" style="margin: 4px">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true">削除</span>
                                 </button>
                             </div>
                         </div>
@@ -164,7 +164,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass-half icon-color schedule-contents"></a>
-                                <span class="hidden-xs hidden-sm schedule-contents">今週の予定</span>
+                                <span class="hidden-xs hidden-sm schedule-contents">予定</span>
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         開発
@@ -173,7 +173,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass icon-color schedule-contents"></a>
-                                <span class="hidden-xs hidden-sm schedule-contents">先週の結果</span>
+                                <span class="hidden-xs hidden-sm schedule-contents">結果</span>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                     開発
@@ -196,7 +196,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bs-callout bs-callout-default">
+            <div class="bs-callout bs-callout-default bs-callout-primary">
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
                     </div>
@@ -208,11 +208,11 @@
                                 </a>
                             </div>
                             <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                <button type="button" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#deleteDaily-5044" style="margin: 4px">
-                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                <button type="button" class="btn btn-xs btn-warning schedule-contents" data-toggle="modal" data-target="#editDaily-5044" style="margin: 4px">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true">編集</span>
                                 </button>
-                                <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#editDaily-5044" style="margin: 4px">
-                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                <button type="button" class="btn btn-xs btn-danger schedule-contents" data-toggle="modal" data-target="#deleteDaily-5044" style="margin: 4px">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true">削除</span>
                                 </button>
                             </div>
                         </div>
@@ -224,13 +224,13 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass-half icon-color"></a>
-                                <span class="hidden-xs hidden-sm">今週の予定</span>
+                                <span class="hidden-xs hidden-sm">予定</span>
                                 <br>
                                 開発
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass icon-color"></a>
-                                <span class="hidden-xs hidden-sm">先週の結果</span>
+                                <span class="hidden-xs hidden-sm">結果</span>
                                 <br>
                                 開発
                             </div>
@@ -247,7 +247,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bs-callout bs-callout-default">
+            <div class="bs-callout bs-callout-default bs-callout-primary">
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
                     </div>
@@ -259,11 +259,11 @@
                                     </a>
                                 </div>
                                 <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <button type="button" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#deleteDaily-5044" style="margin: 4px">
-                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                    <button type="button" class="btn btn-xs btn-warning schedule-contents" data-toggle="modal" data-target="#editDaily-5044" style="margin: 4px">
+                                        <span class="glyphicon glyphicon-edit" aria-hidden="true">編集</span>
                                     </button>
-                                    <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#editDaily-5044" style="margin: 4px">
-                                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                    <button type="button" class="btn btn-xs btn-danger schedule-contents" data-toggle="modal" data-target="#deleteDaily-5044" style="margin: 4px">
+                                        <span class="glyphicon glyphicon-trash" aria-hidden="true">削除</span>
                                     </button>
                                 </div>
                             </div>
@@ -275,13 +275,13 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                     <a class="fa fa-hourglass-half icon-color"></a>
-                                    <span class="hidden-xs hidden-sm">今週の予定</span>
+                                    <span class="hidden-xs hidden-sm">予定</span>
                                     <br>
                                     開発
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         <a class="fa fa-hourglass icon-color"></a>
-                                        <span class="hidden-xs hidden-sm">先週の結果</span>
+                                        <span class="hidden-xs hidden-sm">結果</span>
                                         <br>
                                         開発
                                     </div>
@@ -298,7 +298,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bs-callout bs-callout-default">
+                    <div class="bs-callout bs-callout-default bs-callout-primary">
                         <div class="row">
                             <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
                             </div>
@@ -310,11 +310,11 @@
                                         </a>
                                     </div>
                                     <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <button type="button" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#deleteDaily-5044" style="margin: 4px">
-                                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                        <button type="button" class="btn btn-xs btn-warning schedule-contents" data-toggle="modal" data-target="#editDaily-5044" style="margin: 4px">
+                                            <span class="glyphicon glyphicon-edit" aria-hidden="true">編集</span>
                                         </button>
-                                        <button type="button" class="btn btn-xs btn-warning" data-toggle="modal" data-target="#editDaily-5044" style="margin: 4px">
-                                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                        <button type="button" class="btn btn-xs btn-danger schedule-contents" data-toggle="modal" data-target="#deleteDaily-5044" style="margin: 4px">
+                                            <span class="glyphicon glyphicon-trash" aria-hidden="true">削除</span>
                                         </button>
                                     </div>
                                 </div>
@@ -326,13 +326,13 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         <a class="fa fa-hourglass-half icon-color"></a>
-                                        <span class="hidden-xs hidden-sm">今週の予定</span>
+                                        <span class="hidden-xs hidden-sm">予定</span>
                                         <br>
                                         開発
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         <a class="fa fa-hourglass icon-color"></a>
-                                        <span class="hidden-xs hidden-sm">先週の結果</span>
+                                        <span class="hidden-xs hidden-sm">結果</span>
                                         <br>
                                         開発
                                     </div>
