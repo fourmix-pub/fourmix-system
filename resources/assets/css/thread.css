@@ -1,3 +1,7 @@
 .thread-index:hover {
     background: #ececec;
 }
+
+.thread-date {
+    text-align: right;
+}

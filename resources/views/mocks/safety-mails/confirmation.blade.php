@@ -42,7 +42,7 @@
                             <td>システムデザイングループ</td>
                             <td>
                                 <span class="label label-success safety-status">
-                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認
+                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認済
                                 </span>
                             </td>
                             <td>
@@ -76,7 +76,7 @@
                             <td>システムデザイングループ</td>
                             <td>
                                 <span class="label label-success safety-status">
-                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認
+                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認済
                                 </span>
                             </td>
                             <td>
@@ -93,7 +93,7 @@
                             <td>システムデザイングループ</td>
                             <td>
                                 <span class="label label-success safety-status">
-                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認
+                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認済
                                 </span>
                             </td>
                             <td>
@@ -127,7 +127,7 @@
                             <td>システムデザイングループ</td>
                             <td class="table-center">
                                 <span class="label label-success safety-status">
-                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認
+                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認済
                                 </span>
                             </td>
                             <td>
