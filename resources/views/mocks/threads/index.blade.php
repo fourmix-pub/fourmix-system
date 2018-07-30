@@ -38,7 +38,7 @@
     {{-- スレッド表示 --}}
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="bs-callout bs-callout-default schedule-contents　thread-onclick" data-thread_id="1">
+                <div class="bs-callout bs-callout-default thread-index thread-onclick" data-thread_id="1">
                     <div class="row">
                         <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
                         </div>

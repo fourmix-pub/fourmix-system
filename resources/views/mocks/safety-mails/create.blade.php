@@ -36,7 +36,6 @@
                                     <input type="text" class="form-control" placeholder="20文字以内">
                                 </div>
                             </div>
-                            <form>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <h4>本文</h4>
@@ -46,7 +45,7 @@
                                 <br>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <input type="email" class="form-control" placeholder="メールアドレスを入力">
+                                        <input type="email" class="form-control" placeholder="メールアドレスを入力(テスト送信用)">
                                     </div>
                                 </div>
                             </form>

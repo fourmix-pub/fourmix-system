@@ -46,7 +46,27 @@
                                 <h5>スレッドの説明</h5>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <h5>最終更新：　作成日時：</h5>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- 投稿内容 --}}
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    コメント<br>
+                    コメントコメント
+                </div>
+                <div class="panel-footer">
+                    名前
+                    <span>投稿日時</span>
                 </div>
             </div>
         </div>

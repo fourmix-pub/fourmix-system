@@ -151,7 +151,7 @@
             </button>
         </div>
     </div>
-
+    {{-- ページ --}}
     <div class="row">
         <div align="center">
             <nav aria-label="...">
