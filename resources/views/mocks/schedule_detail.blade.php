@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            <div class="bs-callout bs-callout-default schedule-contents">
+            <div class="bs-callout bs-callout-default bs-callout-primary">
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
                     </div>
