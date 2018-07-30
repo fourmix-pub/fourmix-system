@@ -28,7 +28,7 @@
     <div align="right">
         <button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-plus" aria-hidden="true"></i>
-            <span class="hidden-xs">追加</span>
+            <span class="hidden-xs">コメント投稿</span>
         </button>
     </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -102,7 +102,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <button type="button" class="btn btn-danger pull-right" data-toggle="collapse" href="#search">
-                <i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
+                <i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">コメント投稿</span>
             </button>
         </div>
     </div>
