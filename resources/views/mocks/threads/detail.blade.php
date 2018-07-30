@@ -101,8 +101,8 @@
     <br>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <button type="button" class="btn btn-primary pull-right" data-toggle="collapse" href="#search">
-                <i class="fa fa-pulse" aria-hidden="true"></i> <span class="hidden-xs">コメント追加</span>
+            <button type="button" class="btn btn-danger pull-right" data-toggle="collapse" href="#search">
+                <i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">追加</span>
             </button>
         </div>
     </div>
@@ -123,9 +123,10 @@
                             </div>
                         </div>
                     </div>
-
-
                 </form>
+                <div align="center">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">コメント送信</button>
+                </div>
             </div>
         </div>
     </div>
