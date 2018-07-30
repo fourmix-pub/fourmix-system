@@ -59,7 +59,8 @@
                                             テスト送信
                                         </span>
                                     </button>
-                                    <button type="button" class="btn registration-daily" data-toggle="modal" data-target="#confirmation">
+                                    <button type="button" class="btn registration-daily"
+                                            data-toggle="modal" data-target="#confirmation">
                                         <span>
                                             <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
                                             送信
@@ -67,18 +68,23 @@
                                     </button>
 
                                     <!-- Modal -->
-                                    <div class="modal fade" id="confirmation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal fade" id="confirmation" tabindex="-1" role="dialog"
+                                         aria-labelledby="myModalLabel">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
                                                     <h3 class="modal-title" id="myModalLabel">安否確認メール</h3>
                                                 </div>
                                                 <div class="modal-body">
                                                     <h4>送信します。よろしいですか？</h4>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                        閉じる
+                                                    </button>
                                                     <button type="button" class="btn btn-danger">送信する</button>
                                                 </div>
                                             </div>

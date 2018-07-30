@@ -28,8 +28,8 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="table-responsive">
                 <table class="table table-bordered">
-
                     <thead>
+
                         <tr class="active">
                             <th>氏名</th>
                             <th>所属</th>
@@ -37,7 +37,6 @@
                             <th>再送信</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         <tr>
                             <td>大澤乃梨子</td>

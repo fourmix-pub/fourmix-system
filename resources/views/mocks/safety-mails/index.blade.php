@@ -33,6 +33,7 @@
         </div>
     </div>
     <br>
+    {{-- 一覧表示 --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default">
@@ -207,7 +208,7 @@
             </div>
         </div>
     </div>
-
+    {{-- ページ --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div align="center">
