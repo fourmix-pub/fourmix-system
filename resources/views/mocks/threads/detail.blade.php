@@ -25,6 +25,45 @@
 
     {{-- コンテンツ --}}
     {{-- スレッドの説明 --}}
+    <div align="right">
+        <button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <span class="hidden-xs">コメント</span>
+        </button>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">コメント</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form action="" method="" role="form" enctype="multipart/form-data">
+                                <input type="hidden" name="" value="">
+
+                                <div class="form-group">
+                                    <div>
+                                        <textarea class="form-control" rows="8" name="content" data-provide="markdown" placeholder=" Markdown"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div align="center">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">コメント送信</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="bs-callout bs-callout-default schedule-contents">
@@ -73,6 +112,28 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="panel-body">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form action="" method="" role="form" enctype="multipart/form-data">
+                            <input type="hidden" name="" value="">
+                                <div class="form-group">
+                                    <div>
+                                        <textarea class="form-control" rows="8" name="content" data-provide="markdown" placeholder=" Markdown"></textarea>
+                                    </div>
+                                </div>
+                        </form>
+                        <div align="center">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">コメント送信</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     {{-- ページ --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
