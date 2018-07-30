@@ -28,7 +28,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <h1><small>名前：山田太郎</small></h1>
+                    <h2><small>名前：山田太郎</small></h2>
                 </div>
                 <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <!-- Single button -->
@@ -36,7 +36,7 @@
                         <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         山田太郎　<span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu dropdown-menu-right">
                             <li><a href="schedule_view">山田太郎</a></li>
                             <li><a href="schedule_view">東京花子</a></li>
                             <li><a href="schedule_view">天王洲アイル</a></li>
@@ -189,7 +189,7 @@
             </div>
 
     {{-- Modal --}}
-            <div align="middle">
+            <div align="center">
             <button type="button" class="btn registration-daily" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">コメント作成</button>
             </div>
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -217,7 +217,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <div align="middle">
+                            <div align="center">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">コメント送信</button>
                             </div>
