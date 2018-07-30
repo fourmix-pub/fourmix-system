@@ -1,11 +1,7 @@
 .event-name {
-    padding: 0.5em 1em;
-    margin: 2em 0;
-    font-size:25px;
-    background: #FBF8EF;
-    border-radius: 10px;
+    font-size:24px;
     text-align: center;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+    color: #ff5810;
 }
 .event-name p {
     margin: auto;
@@ -13,22 +9,18 @@
 }
 
 .event-detail {
-    padding: 0.5em 1em;
+    padding: .5em 1em;
     margin: 2em 0;
     color: #232323;
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
-    background: #fff8e8;
-    border-right: solid 40px coral;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+    border-right: solid 24px #ff5810;
 }
 .event-detail p {
-    margin: auto;
-    padding: 1.5em;
-    line-height: 2em;
+margin: auto;
+padding: 1.5em;
+line-height: 2em;
 }
-.pin img{
-    width: 10%;
-    height: 10%;
-    align-content: center;
+span.glyphicon.glyphicon-pushpin {
+    font-size: 24px;
 }
