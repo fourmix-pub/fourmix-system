@@ -27,13 +27,11 @@
 
     <div class="row">
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-            <div class="panel panel-default event-detail-detail">
-                <div class="panel-body">
-                    <p>
-                        説明文説明文説明文
-                    </p>
-                </div>
-            </div>
+            <p>
+                小林さんの結婚を祝ってみんなで楽しく飲みましょう。
+                説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文
+                説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文
+            </p>
         </div>
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
             <button type="button" class="btn btn-warning" aria-label="right Align"
