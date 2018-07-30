@@ -46,7 +46,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span></button>
+                                <span aria-hidden="true">&times</span></button>
                             <h4 class="modal-title" id="myModalLabel">イベント編集</h4>
                         </div>
                         <div class="modal-body">
@@ -77,8 +77,8 @@
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">編集</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
                         </div>
                     </div>
                 </div>
@@ -102,8 +102,9 @@
                             削除しますか？
                         </div>
                         <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('events') }}'">
+                                削除</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
-                            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('events') }}'">削除</button>
                         </div>
                     </div>
                 </div>
@@ -115,7 +116,7 @@
          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
              <div class="panel panel-default">
                  <!-- Default panel contents -->
-                 <div class="panel-heading">8月7日</div>
+                 <div class="panel-heading">8月7日 19:00~</div>
                  <table class="table ans-table">
                      <tr>
                          <td>
@@ -165,7 +166,7 @@
          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
              <div class="panel panel-default">
                  <!-- Default panel contents -->
-                 <div class="panel-heading">8月8日</div>
+                 <div class="panel-heading">8月8日 19:30~</div>
                  <table class="table ans-table">
                      <tr>
                          <td>
