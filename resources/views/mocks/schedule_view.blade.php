@@ -28,7 +28,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                <h1><small>名前：山田太郎</small></h1>
+                <h2><small>名前：山田太郎</small></h2>
                 </div>
                 <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <!-- Single button -->
@@ -36,13 +36,12 @@
                         <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             山田太郎　<span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu dropdown-menu-right">
                             <li><a href="schedule_view">山田太郎</a></li>
                             <li><a href="schedule_view">東京花子</a></li>
                             <li><a href="schedule_view">天王洲アイル</a></li>
                         </ul>
                     </div>
-                    <br>
                 </div>
             </div>
             
@@ -69,10 +68,12 @@
                                 <span class="hidden-xs hidden-sm">週の予定：</span>
                                 開発
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass icon-color"></a>
-                                <span class="hidden-xs hidden-sm">結果：</span>
-                                開発
+                                    <a class="fa fa-hourglass icon-color"></a>
+                                    <span class="hidden-xs hidden-sm">結果：</span>
+                                    開発
                             </div>
                         </div>
                         <div class="row">
@@ -146,12 +147,12 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass-half icon-color"></a>
-                                <span class="hidden-xs hidden-sm">今週の予定：</span>
+                                <span class="hidden-xs hidden-sm">週の予定：</span>
                                 開発
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass icon-color"></a>
-                                <span class="hidden-xs hidden-sm">先週の結果：</span>
+                                <span class="hidden-xs hidden-sm">結果：</span>
                                 開発
                             </div>
                         </div>
@@ -186,12 +187,12 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass-half icon-color"></a>
-                                <span class="hidden-xs hidden-sm">今週の予定：</span>
+                                <span class="hidden-xs hidden-sm">週の予定：</span>
                                 開発
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass icon-color"></a>
-                                <span class="hidden-xs hidden-sm">先週の結果：</span>
+                                <span class="hidden-xs hidden-sm">結果：</span>
                                 開発
                             </div>
                         </div>
@@ -226,12 +227,12 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass-half icon-color"></a>
-                                <span class="hidden-xs hidden-sm">今週の予定：</span>
+                                <span class="hidden-xs hidden-sm">週の予定：</span>
                                 開発
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass icon-color"></a>
-                                <span class="hidden-xs hidden-sm">先週の結果：</span>
+                                <span class="hidden-xs hidden-sm">結果：</span>
                                 開発
                             </div>
                         </div>
