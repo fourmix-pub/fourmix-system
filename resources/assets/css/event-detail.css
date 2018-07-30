@@ -1,7 +1,19 @@
-.participant{
-    text-align: center;
-    background: coral;
-    border-top: solid 2px #000;
-    border-bottom: solid 2px #000;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+div.event-title > p {
+    font-size: 40px;
+}
+
+.ans-btn {
+    font-size: 32px;
+    width: 72px;
+}
+
+.btn-group-vertical>.btn, .btn-group>.btn {
+    border-radius: 0!important;
+    width: 64px;
+    font-size: 24px;
+    line-height: 2;
+}
+.panel-default>.panel-heading {
+    font-size: 16px;
+    color: #ff5810;
 }

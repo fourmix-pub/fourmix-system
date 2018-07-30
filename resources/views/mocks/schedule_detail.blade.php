@@ -10,19 +10,6 @@
 
 @section('content')
 
-    {{-- タイトル --}}
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="page-header">
-                <div>
-                    <h2>
-                        個人予定詳細ページ
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </div>
-
     {{-- コンテンツ --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -135,7 +122,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="panel panel-default">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">東京花子</h3>
                         </div>
@@ -149,7 +136,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-                    <div class="panel panel-default">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">山田太郎</h3>
                         </div>
@@ -182,7 +169,7 @@
 
                                         <div class="form-group">
                                             <div>
-                                                <textarea class="form-control" rows="8" name="content" data-provide="markdown" placeholder=" Markdown"></textarea>
+                                                <textarea class="form-control" rows="16" name="content" data-provide="markdown" placeholder=" Markdown"></textarea>
                                             </div>
                                         </div>
                                     </form>

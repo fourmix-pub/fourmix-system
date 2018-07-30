@@ -175,4 +175,3 @@ Route::view('/test/schedule_create', 'mocks.schedule_create');
 Route::view('/test/schedule_editing', 'mocks.schedule_editing');
 Route::view('/test/schedule_view', 'mocks.schedule_view');
 Route::view('/test/schedule_detail', 'mocks.schedule_detail');
-Route::view('/test/comment', 'mocks.comment');
