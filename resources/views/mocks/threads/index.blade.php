@@ -27,12 +27,19 @@
     {{-- 検索ボタン --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <button type="button" class="btn btn-primary pull-right" style="margin-right: 5%;" data-toggle="collapse" href="#search">
+            <button type="button" class="btn btn-primary pull-right" data-toggle="collapse" href="#search">
                 <i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
             </button>
             <button type="button" class="btn registration-daily pull-right" onclick="location.href='./threads-create'" style="margin-right: 10px;">
                 <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i> <span>新規作成</span>
             </button>
+        </div>
+    </div>
+
+    <div class="collapse" id="search">
+        <div class="well">
+            ...
+        </div>
     </div>
 
     {{-- スレッド表示 --}}
