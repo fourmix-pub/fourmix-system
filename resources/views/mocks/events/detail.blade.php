@@ -27,13 +27,11 @@
 
     <div class="row">
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-            <div class="panel panel-default event-detail-detail">
-                <div class="panel-body">
-                    <p>
-                        説明文説明文説明文
-                    </p>
-                </div>
-            </div>
+            <p>
+                小林さんの結婚を祝ってみんなで楽しく飲みましょう。
+                説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文
+                説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文
+            </p>
         </div>
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
             <button type="button" class="btn btn-warning" aria-label="right Align"
@@ -113,7 +111,7 @@
 
     </div>
      <div class="row">
-         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
              <div class="panel panel-default">
                  <!-- Default panel contents -->
                  <div class="panel-heading">8月7日 19:00~</div>
@@ -163,57 +161,59 @@
                  </table>
              </div>
          </div>
-         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-             <div class="panel panel-default">
-                 <!-- Default panel contents -->
-                 <div class="panel-heading">8月8日 19:30~</div>
-                 <table class="table ans-table">
-                     <tr>
-                         <td>
-                             藍上丘季
-                         </td>
-                         <td>
-                             ×
-                         </td>
-                         <td>
-                             ◯
-                         </td>
-                         <td>
-                             ×
-                         </td>
-                     </tr>
-                     <tr>
-                         <td>
-                             玖家小差
-                         </td>
-                         <td>
-                             △
-                         </td>
-                         <td>
-                             △
-                         </td>
-                         <td>
-                             ◯
-                         </td>
-                     </tr>
-                     <tr>
-                         <td>
-                             周世其達
-                         </td>
-                         <td>
-                             △
-                         </td>
-                         <td>
-                             ×
-                         </td>
-                         <td>
-                             ◯
-                         </td>
-                     </tr>
-                 </table>
-             </div>
-         </div>
      </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">8月7日 19:00~</div>
+                <table class="table ans-table">
+                    <tr>
+                        <td>
+                            藍上丘季
+                        </td>
+                        <td>
+                            ×
+                        </td>
+                        <td>
+                            ◯
+                        </td>
+                        <td>
+                            ×
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            玖家小差
+                        </td>
+                        <td>
+                            △
+                        </td>
+                        <td>
+                            △
+                        </td>
+                        <td>
+                            ◯
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            周世其達
+                        </td>
+                        <td>
+                            △
+                        </td>
+                        <td>
+                            ×
+                        </td>
+                        <td>
+                            ◯
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <!-- Button trigger modal -->
