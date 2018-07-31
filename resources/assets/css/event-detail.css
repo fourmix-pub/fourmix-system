@@ -12,7 +12,7 @@ div.event-title > p {
     color: #ff5810;
 }
 
-th {
+.ans-table th {
     background-color: #ff5810;
     color: #fff;
 }
