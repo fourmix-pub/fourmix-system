@@ -32,9 +32,10 @@
             </p>
         </div>
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <button type="button" class="btn btn-warning btn-xs" aria-label="right Align"
+            <button type="button" class="btn btn-warning btn-sm" aria-label="right Align"
                     data-toggle="modal" data-target="#ev-edit-Modal">
                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                <span class="hidden-xs">編集</span>
             </button>
             <!-- Modal -->
             <div class="modal fade" id="ev-edit-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -66,9 +67,10 @@
             </div>
 
             <!-- 編集ボタン -->
-            <button type="button" class="btn btn-xs btn-danger" aria-label="right Align"
+            <button type="button" class="btn btn-sm btn-danger" aria-label="right Align"
                     data-toggle="modal" data-target="#ev-del-Modal">
                 <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                <span class="hidden-xs">削除</span>
             </button>
             <!-- Modal -->
             <div class="modal fade" id="ev-del-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
