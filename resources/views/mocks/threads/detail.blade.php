@@ -26,9 +26,17 @@
     {{-- コンテンツ --}}
     {{-- スレッドの説明 --}}
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="fc-toolbar fc-header-toolbar">
-                <div class="fc-left"></div>
+                <div class="fc-left">
+                    <button type="button" class="btn btn-primary" onclick="location.href='./threads'">
+                        <i class="glyphicon glyphicon-arrow-left" aria-hidden="true"></i><span>戻る</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="fc-toolbar fc-header-toolbar">
                 <div class="fc-right">
                     <button type="button" class="btn btn-danger" data-toggle="modal"
                             data-target="#th-deleteModal">
@@ -68,8 +76,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="bs-callout bs-callout-orange schedule-contents">
                 <div class="row">
-                    <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
-                    </div>
+                    <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1"></div>
                     <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
@@ -82,9 +89,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <hr class="thread-hr">
-                                <h5>スレッドの説明スレッドの説明<br>
-                                    スレッドの説明スレッドの説明
-                                </h5>
+                                <h5>スレッドの説明スレッドの説明</h5>
                             </div>
                         </div>
                         <div class="row">
@@ -102,6 +107,7 @@
             </div>
         </div>
     </div>
+    <br>
 
         {{-- 投稿内容 --}}
     <div class="row">
@@ -109,47 +115,48 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
-                        名前：山田太郎
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2">
-                            <div class="fc-toolbar fc-header-toolbar">
-                                <div class="fc-right">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                    名前：山田太郎
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                                     <span>投稿日時：2018/03/03</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2">
-                            <div class="fc-toolbar fc-header-toolbar">
-                                <div class="fc-right">
-                                    <button type="button" class="btn btn-danger" data-toggle="modal"
-                                            data-target="#exampleModal">
-                                        <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
-                                        <span class="hidden-xs">削除</span>
-                                    </button>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="fc-toolbar fc-header-toolbar">
+                                    <div class="fc-right">
+                                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                                                data-target="#exampleModal">
+                                            <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                                            <span class="hidden-xs">削除</span>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            {{-- モーダル --}}
-                            <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">×</button>
-                                            <h4 class="modal-title" align="left">コメント削除</h4>
+                                {{-- モーダル --}}
+                                <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                                <h4 class="modal-title" align="left">コメント削除</h4>
+                                            </div>
+                                            <form class="form-horizontal" action="#" method="" style="display: inline;">
+                                                <div class="modal-body" align="left">
+                                                    削除してもよろしいですか？
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <input type="hidden" name="" value="">
+                                                    <button type="button" class="btn btn-default closed" data-dismiss="modal">
+                                                        閉じる
+                                                    </button>
+                                                    <button type="submit" class="btn btn-danger">削除</button>
+                                                </div>
+                                            </form>
                                         </div>
-                                        <form class="form-horizontal" action="#" method="" style="display: inline;">
-                                            <div class="modal-body" align="left">
-                                                削除してもよろしいですか？
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input type="hidden" name="" value="">
-                                                <input type="hidden" name="" value="">
-                                                <button type="button" class="btn btn-default closed" data-dismiss="modal">
-                                                    閉じる
-                                                </button>
-                                                <button type="submit" class="btn btn-danger">削除</button>
-                                            </div>
-                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -157,56 +164,78 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    コメントコメントコメントコメントコメントコメントコメントコメントコメント<br>
-                    コメントコメントコメントコメントコメントコメント
+                    コメントコメントコメントコメントコメントコメントコメントコメントコメント
                 </div>
             </div>
         </div>
     </div>
+
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                            名前：東京花子
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                    名前：山田太郎
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                    <span>投稿日時：2018/03/03</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                            <span>投稿日時：2018/02/02</span>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-1">
-                            <button type="button" class="btn btn-danger" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
-                                <span class="hidden-xs">削除</span>
-                            </button>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="fc-toolbar fc-header-toolbar">
+                                    <div class="fc-right">
+                                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                                                data-target="#exampleModal">
+                                            <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                                            <span class="hidden-xs">削除</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="panel-body">
-                    コメントコメントコメントコメントコメントコメントコメントコメントコメント<br>
-                    コメントコメントコメントコメントコメントコメント
+                    コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント<br>
+                    コメントコメントコメントコメントコメントコメント<br>
+                    コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント
                 </div>
             </div>
         </div>
     </div>
+
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                            名前：山田太郎
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                    名前：山田太郎
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                    <span>投稿日時：2018/03/03</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                            <span>投稿日時：2018/01/01</span>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-1">
-                            <button type="button" class="btn btn-danger" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
-                                <span class="hidden-xs">削除</span>
-                            </button>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="fc-toolbar fc-header-toolbar">
+                                    <div class="fc-right">
+                                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                                                data-target="#exampleModal">
+                                            <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                                            <span class="hidden-xs">削除</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -221,8 +250,8 @@
     {{-- コメントフォーム --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="panel-body">
-                <div class="panel panel-default">
+            <div class="panel panel-default">
+                <div class="panel-body">
                     <div class="panel-body">
                         <form action="" method="" role="form" enctype="multipart/form-data">
                             <input type="hidden" name="" value="">
@@ -234,9 +263,8 @@
                             </div>
                         </form>
                         <div align="center">
-                            <button type="button" class="btn btn-danger" onclick="location.href='#'">コメント送信</button>
+                            <button type="button" class="btn registration-daily" onclick="location.href='#'">コメント送信</button>
                         </div>
-
                     </div>
                 </div>
             </div>
