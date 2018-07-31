@@ -47,7 +47,7 @@
                             <br>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
-                                    <button type="button" class="btn registration-daily"
+                                    <button type="button" class="btn registration-daily" onclick="location.href='./threads'"
                                             data-toggle="modal" data-target="#confirmation">
                                         <span>
                                             <i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
