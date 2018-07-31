@@ -43,11 +43,18 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times</span></button>
-                            <h4 class="modal-title" id="myModalLabel">イベント編集</h4>
+                            <h4 class="modal-title" id="myModalLabel">参加受け付けの設定</h4>
                         </div>
                         <div class="modal-body">
                             <form>
-
+                                <div class="btn" data-toggle="buttons">
+                                    <label class="btn btn-danger">
+                                        <input type="radio" autocomplete="off">OPEN
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" autocomplete="off">CLOSE
+                                    </label>
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -110,13 +117,13 @@
                              藍上丘季
                          </td>
                          <td>
-                             <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+                             <span class="glyphicon ev-ans ev-ok glyphicon-ok-sign" aria-hidden="true"></span>
                          </td>
                          <td>
-                             <span class="glyphicon glyphicon-trash-sign" aria-hidden="true"></span>
+                             <span class="glyphicon ev-ans ev-ng glyphicon-remove-sign" aria-hidden="true"></span>
                          </td>
                          <td>
-                             <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+                             <span class="glyphicon ev-ans ev-q glyphicon-question-sign" aria-hidden="true"></span>
                          </td>
                      </tr>
                      <tr>
@@ -124,13 +131,13 @@
                              玖家小差
                          </td>
                          <td>
-                             <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+                             <span class="glyphicon ev-ans ev-q glyphicon-question-sign" aria-hidden="true"></span>
                          </td>
                          <td>
-                             △
+                             <span class="glyphicon ev-ans ev-ng glyphicon-remove-sign" aria-hidden="true"></span>
                          </td>
                          <td>
-                             ◯
+                             <span class="glyphicon ev-ans ev-ok glyphicon-ok-sign" aria-hidden="true"></span>
                          </td>
                      </tr>
                      <tr>
@@ -138,13 +145,13 @@
                              周世其達
                          </td>
                          <td>
-                             △
+                             <span class="glyphicon ev-ans ev-q glyphicon-question-sign" aria-hidden="true"></span>
                          </td>
                          <td>
-                             ×
+                             <span class="glyphicon ev-ans ev-ng glyphicon-remove-sign" aria-hidden="true"></span>
                          </td>
                          <td>
-                             ◯
+                             <span class="glyphicon ev-ans ev-ok glyphicon-ok-sign" aria-hidden="true"></span>
                          </td>
                      </tr>
                  </table>
@@ -156,6 +163,7 @@
             <!-- Button trigger modal -->
             <div align="center">
             <button type="button" class="btn btn-success btn-lg ev-ans-btn" data-toggle="modal" data-target="#myModal">
+                <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
                 出欠
             </button>
             </div>
@@ -169,34 +177,55 @@
                             <h4 class="modal-title" id="myModalLabel">出欠確認</h4>
                         </div>
                         <div class="modal-body">
-                            <div class="day1">
-                                8月7日
-                                <button type="button" class="btn btn-success" data-dismiss="modal">
-                                    <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
-                                </button>
-                                <button type="button" class="btn btn-warning" data-dismiss="modal">
-                                    <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
-                                </button>
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">
-                                    <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
-                                </button>
-                            </div>
-                            <div class="day1">
-                                8月8日
-                                <button type="button" class="btn btn-success" data-dismiss="modal">
-                                    <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
-                                </button>
-                                <button type="button" class="btn btn-warning" data-dismiss="modal">
-                                    <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
-                                </button>
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">
-                                    <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
-                                </button>
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                   <div class="row">
+                                       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                           <div class="day1">
+                                               8月7日
+                                               <div class="btn-group" data-toggle="buttons">
+                                                   <label class="btn btn-success">
+                                                       <input type="radio" autocomplete="off">
+                                                       <span class="glyphicon ev-ans glyphicon-ok-sign" aria-hidden="true"></span>
+                                                   </label>
+                                                   <label class="btn btn-warning">
+                                                       <input type="radio" autocomplete="off">
+                                                       <span class="glyphicon ev-ans glyphicon-question-sign" aria-hidden="true"></span>
+                                                   </label>
+                                                   <label class="btn btn-danger">
+                                                       <input type="radio" autocomplete="off">
+                                                       <span class="glyphicon ev-ans glyphicon-remove-sign" aria-hidden="true"></span>
+                                                   </label>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                           <div class="day2">
+                                               8月8日
+                                               <div class="btn-group" data-toggle="buttons">
+                                                   <label class="btn btn-success">
+                                                       <input type="radio" autocomplete="off">
+                                                       <span class="glyphicon ev-ans glyphicon-ok-sign" aria-hidden="true"></span>
+                                                   </label>
+                                                   <label class="btn btn-warning">
+                                                       <input type="radio" autocomplete="off">
+                                                       <span class="glyphicon ev-ans glyphicon-question-sign" aria-hidden="true"></span>
+                                                   </label>
+                                                   <label class="btn btn-danger">
+                                                       <input type="radio" autocomplete="off">
+                                                       <span class="glyphicon ev-ans glyphicon-remove-sign" aria-hidden="true"></span>
+                                                   </label>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
                             </div>
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                            <button type="button" class="btn btn-success" data-dismiss="modal">閉じる</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">送信</button>
                         </div>
                     </div>
                 </div>
