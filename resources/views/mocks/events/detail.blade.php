@@ -144,7 +144,7 @@
                      </tr>
                      <tr>
                          <td>
-                             須瀬曽太刀
+                             周世其達
                          </td>
                          <td>
                              <span class="glyphicon ev-ans ev-q glyphicon-question-sign" aria-hidden="true"></span>
@@ -156,10 +156,8 @@
                              <span class="glyphicon ev-ans ev-ok glyphicon-ok-sign" aria-hidden="true"></span>
                          </td>
                      </tr>
-                     <tfoot class="ev-foot">
                      <tr>
                          <td>
-                             <b>集計</b>
                          </td>
                          <td>
                              <span class="glyphicon ev-ok glyphicon-ok-sign" aria-hidden="true"></span>
@@ -180,7 +178,6 @@
                              1名
                          </td>
                      </tr>
-                     </tfoot>
                  </table>
              </div>
          </div>

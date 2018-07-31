@@ -40,19 +40,40 @@
                     <label for="event-location">開催場所</label>
                     <input type="text" class="form-control" id="event-location">
                 </div>
-                <div class="form-group">
-
-                    <script>
-                        $(function(){
-                            $('#event-datetime').datetimepicker();
-                        });
-                    </script>
-                    <label for="event-datetime">開催日時</label>
-                    <input type="text" class="form-control" id="event-datetime">
-                </div>
-                <button type="button" class="btn btn-success" onclick="location.href='{{ url('test/events') }}'">戻る</button>
-                <button type="button" class="btn btn-primary" onclick="location.href='{{ url('test/events') }}'">作成</button>
             </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="event-datetime">開催日時</label>
+                <div class="add-input">
+                    <input type="text" class="form-control event-datetime" name="date[]">
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label class="hidden-xs hidden-sm">　</label>
+                <button type="button" id="add-input-button" class="btn btn-success form-control">
+                    開催日時候補追加
+                </button>
+            </div>
+            <script>
+                $(function(){
+                    $('.event-datetime').datetimepicker();
+                    $("#add-input-button").click(function () {
+                        $(".add-input").append('<input type="text" class="form-control event-datetime" name="date[]">');
+                        $('.event-datetime').datetimepicker();
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <button type="button" class="btn btn-success" onclick="location.href='{{ url('test/events') }}'">戻る</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('test/events') }}'">作成</button>
         </div>
     </div>
 

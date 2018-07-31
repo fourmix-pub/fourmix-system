@@ -3,6 +3,7 @@
     text-align: center;
     color: #ff5810;
 }
+
 .event-name p {
     margin: auto;
     padding: 1.5em;
@@ -16,11 +17,17 @@
     text-align: center;
     border-right: solid 24px #ff5810;
 }
+
 .event-detail p {
-margin: auto;
-padding: 1.5em;
-line-height: 2em;
+    margin: auto;
+    padding: 1.5em;
+    line-height: 2em;
 }
+
 span.glyphicon.glyphicon-pushpin {
     font-size: 24px;
+}
+
+div.add-input > input {
+    margin-bottom: 8px;
 }
