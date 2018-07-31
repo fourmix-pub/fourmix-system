@@ -50,7 +50,7 @@
                             <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1"></div>
                             <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                                 <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                         <a href="schedule_detail">
                                             <h3>2018/07/30</h3>
                                         </a>
@@ -152,7 +152,7 @@
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                         <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                 <a href="schedule_detail">
                                     <h3>2018/07/23</h3>
                                 </a>
@@ -242,7 +242,7 @@
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                         <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                 <a href="schedule_detail">
                                     <h3>2018/07/17</h3>
                                 </a>
@@ -323,7 +323,7 @@
                     </div>
                         <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                             <div class="row">
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                     <a href="schedule_detail">
                                         <h3>2018/07/9</h3>
                                     </a>
@@ -404,7 +404,7 @@
                             </div>
                             <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                                 <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                         <a href="schedule_detail">
                                             <h3>2018/07/2</h3>
                                         </a>
