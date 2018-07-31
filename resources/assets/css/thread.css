@@ -21,3 +21,8 @@
 .thread-callout h4 {
     color: #777;
 }
+
+.thread-hr {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
