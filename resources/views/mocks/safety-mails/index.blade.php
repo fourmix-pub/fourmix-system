@@ -27,7 +27,7 @@
     {{-- コンテンツ --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <button type="button" class="btn registration-daily pull-right" onclick="location.href='./mail-create'" style="margin-right: 10px;">
+            <button type="button" class="btn registration-daily pull-right" onclick="location.href='./mail-create'">
                 <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i> <span>新規メール作成</span>
             </button>
         </div>
