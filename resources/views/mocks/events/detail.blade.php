@@ -32,7 +32,7 @@
             </p>
         </div>
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <button type="button" class="btn btn-warning btn-sm" aria-label="right Align"
+            <button type="button" class="btn btn-warning" aria-label="right Align"
                     data-toggle="modal" data-target="#ev-edit-Modal">
                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
                 <span class="hidden-xs">編集</span>
@@ -48,11 +48,12 @@
                         </div>
                         <div class="modal-body">
                             <form>
-                                <div class="btn" data-toggle="buttons">
+                                <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-danger">
                                         <input type="radio" autocomplete="off">OPEN
                                     </label>
-                                    <label class="btn btn-primary">
+                                    　
+                                    <label class="btn btn-primary"style=" border: none">
                                         <input type="radio" autocomplete="off">CLOSE
                                     </label>
                                 </div>
@@ -66,8 +67,8 @@
                 </div>
             </div>
 
-            <!-- 編集ボタン -->
-            <button type="button" class="btn btn-sm btn-danger" aria-label="right Align"
+            <!-- 削除ボタン -->
+            <button type="button" class="btn btn-danger" aria-label="right Align"
                     data-toggle="modal" data-target="#ev-del-Modal">
                 <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                 <span class="hidden-xs">削除</span>
@@ -93,7 +94,11 @@
                 </div>
             </div>
         </div>
-
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            　
+        </div>
+    </div>
     </div>
      <div class="row">
          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -208,7 +213,7 @@
                                            <div class="day1">
                                                8月7日
                                                <div class="btn-group" data-toggle="buttons">
-                                                   <label class="btn btn-success">
+                                                   <label class="btn btn-success" style="border: none">
                                                        <input type="radio" autocomplete="off">
                                                        <span class="glyphicon ev-ans glyphicon-ok-sign" aria-hidden="true"></span>
                                                    </label>
@@ -227,7 +232,7 @@
                                            <div class="day2">
                                                8月8日
                                                <div class="btn-group" data-toggle="buttons">
-                                                   <label class="btn btn-success">
+                                                   <label class="btn btn-success" style="border: none">
                                                        <input type="radio" autocomplete="off">
                                                        <span class="glyphicon ev-ans glyphicon-ok-sign" aria-hidden="true"></span>
                                                    </label>
