@@ -154,6 +154,28 @@
                              <span class="glyphicon ev-ans ev-ok glyphicon-ok-sign" aria-hidden="true"></span>
                          </td>
                      </tr>
+                     <tr>
+                         <td>
+                         </td>
+                         <td>
+                             <span class="glyphicon ev-ok glyphicon-ok-sign" aria-hidden="true"></span>
+                             1名
+                             <span class="glyphicon ev-ans ev-ok glyphicon-ok-sign" aria-hidden="true"></span>
+                             2名
+                         </td>
+                         <td>
+                             <span class="glyphicon ev-ok glyphicon-ok-sign" aria-hidden="true"></span>
+                             1名
+                             <span class="glyphicon ev-ans ev-ok glyphicon-ok-sign" aria-hidden="true"></span>
+                             2名
+                         </td>
+                         <td>
+                             <span class="glyphicon ev-ok glyphicon-ok-sign" aria-hidden="true"></span>
+                             1名
+                             <span class="glyphicon ev-ans ev-ok glyphicon-ok-sign" aria-hidden="true"></span>
+                             2名
+                         </td>
+                     </tr>
                  </table>
              </div>
          </div>
