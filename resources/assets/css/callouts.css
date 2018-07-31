@@ -54,3 +54,10 @@
 .bs-callout-info h4 {
     color: #5bc0de;
 }
+
+.bs-callout-orange {
+    border-left-color: #ff5810;
+}
+.bs-callout-orange h4 {
+    color: #777;
+}

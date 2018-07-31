@@ -31,7 +31,7 @@
                 <i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
             </button>
             <button type="button" class="btn registration-daily pull-right" onclick="location.href='./threads-create'" style="margin-right: 10px;">
-                <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i> <span>新規作成</span>
+                <i class="glyphicon glyphicon-plus" aria-hidden="true"></i> <span>新規作成</span>
             </button>
         </div>
     </div>
@@ -99,12 +99,11 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="btn-group table-center">
-                                <button type="submit" class="btn registration-daily pull-right">
-                                    <i class="glyphicon glyphicon-search" aria-hidden="true"></i> <span>検索</span>
+                            <div align="center">
+                                <button type="button" class="btn registration-daily" onclick="location.href='./threads-create'" style="margin-right: 10px;">
+                                    <i class="fa fa-search" aria-hidden="true"></i> <span>検索</span>
                                 </button>
                             </div>
                         </div>
@@ -116,44 +115,138 @@
 
 
     {{-- スレッド表示 --}}
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="bs-callout bs-callout-default thread-index thread-onclick" data-thread_id="1">
-                    <div class="row">
-                        <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="thread-callout thread-index thread-onclick" data-thread_id="1">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <h3>スレッドタイトル1</h3>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                <h4>作成者：大澤乃梨子</h4>
+                            </div>
                         </div>
-                        <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <h3>スレッドタイトル1</h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <h4>作成者：大澤乃梨子</h4>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <div class="thread-date">
-                                        <hr>
-                                        <h4>最終更新：2018/07/25 12:00</h4>
-                                    </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <hr>
+                                <div class="thread-date">
+                                    <h4>最終更新：2018/07/25 12:00</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <script>
-                        $(function(){
-                            $(".thread-onclick").click(function () {
-                                let id = $(this).data('thread_id');
-                                location.href = './threads-detail';
-                            });
+                </div>
+                <script>
+                    $(function(){
+                        $(".thread-onclick").click(function () {
+                            let id = $(this).data('thread_id');
+                            location.href = './threads-detail';
                         });
-                    </script>
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="thread-callout thread-index thread-onclick" data-thread_id="1">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <h3>スレッドタイトル2</h3>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                <h4>作成者：大澤乃梨子</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <hr>
+                                <div class="thread-date">
+                                    <h4>最終更新：2018/07/25 12:00</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="thread-callout thread-index thread-onclick" data-thread_id="1">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <h3>スレッドタイトル3</h3>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                <h4>作成者：大澤乃梨子</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <hr>
+                                <div class="thread-date">
+                                    <h4>最終更新：2018/07/25 12:00</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="thread-callout thread-index thread-onclick" data-thread_id="1">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <h3>スレッドタイトル4</h3>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                <h4>作成者：大澤乃梨子</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <hr>
+                                <div class="thread-date">
+                                    <h4>最終更新：2018/07/25 12:00</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
         {{-- ページ --}}
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

@@ -5,3 +5,19 @@
 .thread-date {
     text-align: right;
 }
+
+.thread-callout {
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 0px;
+}
+
+.thread-callout {
+    border-left-color: #ff5810;
+}
+
+.thread-callout h4 {
+    color: #777;
+}

@@ -50,7 +50,7 @@
                                     <button type="button" class="btn registration-daily"
                                             data-toggle="modal" data-target="#confirmation">
                                         <span>
-                                            <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+                                            <i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
                                             作成
                                         </span>
                                     </button>
