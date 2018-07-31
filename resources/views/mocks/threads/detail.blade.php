@@ -26,6 +26,21 @@
     {{-- コンテンツ --}}
     {{-- スレッドの説明 --}}
     <div class="row">
+        <div class="fc-toolbar fc-header-toolbar">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="fc-left"></div>
+                <div class="fc-right">
+                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                            data-target="#exampleModal">
+                        <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                        <span class="hidden-xs">削除</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="bs-callout bs-callout-orange schedule-contents">
                 <div class="row">
@@ -63,42 +78,6 @@
             </div>
         </div>
     </div>
-
-    {{-- コメントフォーム --}}
-    <br>
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <button type="button" class="btn btn-danger pull-right" data-toggle="collapse" href="#search">
-                <i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-xs">コメント投稿</span>
-            </button>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="collapse" id="search">
-                <div class="panel-body">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <form action="" method="" role="form" enctype="multipart/form-data">
-                                <input type="hidden" name="" value="">
-
-                                <div class="form-group">
-                                    <div>
-                                        <textarea class="form-control" rows="9" name="content" data-provide="markdown" placeholder=" Markdown"></textarea>
-                                    </div>
-                                </div>
-                            </form>
-                            <div align="center">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">コメント送信</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
         {{-- 投稿内容 --}}
     <div class="row">
@@ -208,7 +187,30 @@
             </div>
         </div>
     </div>
+    {{-- コメントフォーム --}}
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="panel-body">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form action="" method="" role="form" enctype="multipart/form-data">
+                            <input type="hidden" name="" value="">
 
+                            <div class="form-group">
+                                <div>
+                                    <textarea class="form-control" rows="8" name="content" data-provide="markdown" placeholder=" Markdown"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                        <div align="center">
+                            <button type="button" class="btn btn-danger" onclick="location.href='#'">コメント送信</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     {{-- ページ --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
