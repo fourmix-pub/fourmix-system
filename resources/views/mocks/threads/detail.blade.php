@@ -42,13 +42,20 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <hr>
-                                <h5>スレッドの説明</h5>
+                                <hr class="thread-hr">
+                                <h5>スレッドの説明スレッドの説明<br>
+                                    スレッドの説明スレッドの説明
+                                </h5>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <h5>最終更新：2018/07/20　作成日時：2018/07/01</h5>
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <h5>最終更新：2018/07/20</h5>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <h5>作成日時：2018/07/01</h5>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             </div>
                         </div>
                     </div>
@@ -79,7 +86,7 @@
 
                             <div class="form-group">
                                 <div>
-                                    <textarea class="form-control" rows="16" name="content" data-provide="markdown" placeholder=" Markdown"></textarea>
+                                    <textarea class="form-control" rows="9" name="content" data-provide="markdown" placeholder=" Markdown"></textarea>
                                 </div>
                             </div>
                         </form>

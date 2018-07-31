@@ -173,7 +173,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <hr>
+                                <hr class="thread-hr">
                                 <div class="thread-date">
                                     <h4>最終更新：2018/07/25 12:00</h4>
                                 </div>
@@ -204,7 +204,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <hr>
+                                <hr class="thread-hr">
                                 <div class="thread-date">
                                     <h4>最終更新：2018/07/25 12:00</h4>
                                 </div>
@@ -235,7 +235,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <hr>
+                                <hr class="thread-hr">
                                 <div class="thread-date">
                                     <h4>最終更新：2018/07/25 12:00</h4>
                                 </div>
