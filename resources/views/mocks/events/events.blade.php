@@ -28,7 +28,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
-            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('event-create') }}'">＋追加</button>
+            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('test/event-create') }}'">＋追加</button>
         </div>
     </div>
     <div class="row">
@@ -37,7 +37,7 @@
                 <div class="panel-body">
                     <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
                     <p>
-                       <a href="{{ url('event-detail') }}" class="event-name">小林さん結婚お祝いパーティ</a>
+                       <a href="{{ url('test/event-detail') }}" class="event-name">小林さん結婚お祝いパーティ</a>
                         <span class="label label-danger">OPEN</span>
                         <br>
                         主催者：山田太郎
@@ -54,7 +54,7 @@
                 <div class="panel-body">
                     <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
                     <p>
-                        <a href="{{ url('event-detail') }}" class="event-name">イベント名</a>
+                        <a href="{{ url('test/event-detail') }}" class="event-name">イベント名</a>
                         <span class="label label-danger">OPEN</span>
                         <br>
                         主催者：山田太郎
@@ -71,7 +71,7 @@
                 <div class="panel-body">
                     <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
                     <p>
-                        <a href="{{ url('event-detail') }}" class="event-name">イベント名</a>
+                        <a href="{{ url('test/event-detail') }}" class="event-name">イベント名</a>
                         <span class="label label-primary">CLOSE</span>
                         <br>
                         主催者：藍上丘季
