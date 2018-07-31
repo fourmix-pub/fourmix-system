@@ -64,20 +64,41 @@
                         <br>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <a class="fa fa-hourglass-half icon-color"></a>
-                                <span>予定：</span>
-                                開発
+                                <a class="fa fa-hourglass-half icon-color schedule-contents"></a>
+                                <span class="schedule-contents">予定</span>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                        開発<br>
+                                        ・要件定義<br>
+                                        ・設計<br>
+                                        開発<br>
+                                        ・テスト<br>
+                                        ・修正<br>
+                                        ・保守<br>
+                                        ・開発<br>
+                                        開発<br>
+                                        ・開発<br>
+                                        ・開発<br>
+                                        ・開発<br>
+                                        ・開発<br>
+                                        ・開発<br>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                    <a class="fa fa-hourglass icon-color"></a>
-                                    <span>結果：</span>
-                                    開発
+                                <a class="fa fa-hourglass icon-color schedule-contents"></a>
+                                <span class="schedule-contents">結果</span>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                        開発
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <span class="glyphicon glyphicon-share icon-color"></span>
-                                <span>共有事項：</span>
+                                <span class="schedule-contents">共有事項</span>
                                 7/30 有給休暇
                             </div>
                         </div>
@@ -105,19 +126,19 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass-half icon-color"></a>
-                                <span>予定：</span>
+                                <span class="schedule-contents">予定</span>
                                 開発
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass icon-color"></a>
-                                <span>結果：</span>
+                                <span class="schedule-contents">結果</span>
                                 開発
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <span class="glyphicon glyphicon-share icon-color"></span>
-                                <span>共有事項：</span>
+                                <span class="schedule-contents">共有事項</span>
                                 7/23 有給休暇
                             </div>
                         </div>
