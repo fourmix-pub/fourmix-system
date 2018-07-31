@@ -35,7 +35,6 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default event-detail">
                 <div class="panel-body">
-                    <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
                     <p>
                        <a href="{{ url('test/event-detail') }}" class="event-name">小林さん結婚お祝いパーティ</a>
                         <span class="label label-danger">OPEN</span>
@@ -52,7 +51,6 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default event-detail">
                 <div class="panel-body">
-                    <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
                     <p>
                         <a href="{{ url('test/event-detail') }}" class="event-name">イベント名</a>
                         <span class="label label-danger">OPEN</span>
@@ -69,7 +67,6 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default event-detail">
                 <div class="panel-body">
-                    <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
                     <p>
                         <a href="{{ url('test/event-detail') }}" class="event-name">イベント名</a>
                         <span class="label label-primary">CLOSE</span>
