@@ -123,19 +123,25 @@
                     <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <h3>スレッドタイトル1</h3>
+                                <h4>スレッドタイトル1</h4>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                                <h3><small>作成者：大澤乃梨子</small></h3>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <h5>作成者：大澤乃梨子</h5>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <hr class="thread-hr">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                 <div class="thread-date">
-                                    <h4>最終更新：2018/07/25 12:00</h4>
+                                    <h5>最終更新：2018/07/25 12:00</h5>
                                 </div>
                             </div>
                         </div>
@@ -162,19 +168,25 @@
                     <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <h3>スレッドタイトル2</h3>
+                                <h4>スレッドタイトル1</h4>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                                <h3><small>作成者：大澤乃梨子</small></h3>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <h5>作成者：大澤乃梨子</h5>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <hr class="thread-hr">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                 <div class="thread-date">
-                                    <h4>最終更新：2018/07/25 12:00</h4>
+                                    <h5>最終更新：2018/07/25 12:00</h5>
                                 </div>
                             </div>
                         </div>
@@ -193,19 +205,25 @@
                     <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <h3>スレッドタイトル3</h3>
+                                <h4>スレッドタイトル1</h4>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                                <h3><small>作成者：大澤乃梨子</small></h3>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <h5>作成者：大澤乃梨子</h5>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <hr class="thread-hr">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                 <div class="thread-date">
-                                    <h4>最終更新：2018/07/25 12:00</h4>
+                                    <h5>最終更新：2018/07/25 12:00</h5>
                                 </div>
                             </div>
                         </div>
@@ -224,19 +242,25 @@
                     <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <h3>スレッドタイトル4</h3>
+                                <h4>スレッドタイトル1</h4>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                                <h3><small>作成者：大澤乃梨子</small></h3>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <h5>作成者：大澤乃梨子</h5>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <hr class="thread-hr">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                 <div class="thread-date">
-                                    <h4>最終更新：2018/07/25 12:00</h4>
+                                    <h5>最終更新：2018/07/25 12:00</h5>
                                 </div>
                             </div>
                         </div>
@@ -247,26 +271,26 @@
     </div>
 
         {{-- ページ --}}
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div align="center">
-                    <nav aria-label="...">
-                        <ul class="pagination">
-                            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                                <a href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div align="center">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
+    </div>
 
 @endsection
