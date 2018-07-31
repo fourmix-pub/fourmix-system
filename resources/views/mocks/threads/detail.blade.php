@@ -84,7 +84,7 @@
                                 </div>
                             </div>
                         </form>
-                        <div align="right">
+                        <div align="center">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">コメント送信</button>
                         </div>
                     </div>
