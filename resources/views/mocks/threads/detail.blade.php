@@ -37,6 +37,7 @@
                                 <h3>スレッドタイトル1</h3>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <br>
                                 <h4>作成者：大澤乃梨子</h4>
                             </div>
                         </div>
@@ -71,25 +72,25 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
         <div class="collapse" id="search">
-        <div class="panel panel-default">
             <div class="panel-body">
-                <form action="#" class="form-horizontal" method="get">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form action="" method="" role="form" enctype="multipart/form-data">
+                            <input type="hidden" name="" value="">
+
                             <div class="form-group">
                                 <div>
-                                    <textarea class="form-control" rows="8" name="content" data-provide="markdown" placeholder=" Markdown"></textarea>
+                                    <textarea class="form-control" rows="16" name="content" data-provide="markdown" placeholder=" Markdown"></textarea>
                                 </div>
                             </div>
+                        </form>
+                        <div align="right">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">コメント送信</button>
                         </div>
                     </div>
-                </form>
-                <div align="center">
-                    <button type="button" class="btn registration-daily" data-dismiss="modal">コメント送信</button>
                 </div>
             </div>
         </div>
-    </div>
 
 
         {{-- 投稿内容 --}}
