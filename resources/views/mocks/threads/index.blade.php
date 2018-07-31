@@ -27,11 +27,13 @@
     {{-- 検索ボタン --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <button type="button" class="btn btn-primary pull-right" data-toggle="collapse" href="#search">
+            <button type="button" class="btn btn-primary pull-right" data-toggle="collapse" href="#search" style="margin-right: 10px;">
                 <i class="fa fa-search" aria-hidden="true"></i> <span class="hidden-xs">検索</span>
             </button>
-            <button type="button" class="btn registration-daily pull-right" onclick="location.href='./threads-create'" style="margin-right: 10px;">
-                <i class="glyphicon glyphicon-plus" aria-hidden="true"></i> <span>新規作成</span>
+            <button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal"
+                    data-target="#create-" onclick="location.href='./threads-create'">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <span class="hidden-xs">追加</span>
             </button>
         </div>
     </div>
