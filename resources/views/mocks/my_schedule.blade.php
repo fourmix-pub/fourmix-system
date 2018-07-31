@@ -209,27 +209,6 @@
                                         <span class="hidden-xs">削除</span>
                                     </button>
                                 </a>
-                                <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">×</button>
-                                                <h4 class="modal-title" align="left">予定削除</h4>
-                                            </div>
-                                            <form class="form-horizontal" action="#" method="" style="display: inline;">
-                                                <div class="modal-body" align="left">
-                                                    2018/07/30 の予定を削除しますか？
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <input type="hidden" name="" value="">
-                                                    <input type="hidden" name="" value="">
-                                                    <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
-                                                    <button type="submit" class="btn btn-danger">削除</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <br>
@@ -290,27 +269,6 @@
                                         <span class="hidden-xs">削除</span>
                                     </button>
                                 </a>
-                                <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">×</button>
-                                                <h4 class="modal-title" align="left">予定削除</h4>
-                                            </div>
-                                            <form class="form-horizontal" action="#" method="" style="display: inline;">
-                                                <div class="modal-body" align="left">
-                                                    2018/07/30 の予定を削除しますか？
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <input type="hidden" name="" value="">
-                                                    <input type="hidden" name="" value="">
-                                                    <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
-                                                    <button type="submit" class="btn btn-danger">削除</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <br>
@@ -371,27 +329,6 @@
                                                 <span class="hidden-xs">削除</span>
                                             </button>
                                         </a>
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal">×</button>
-                                                        <h4 class="modal-title" align="left">予定削除</h4>
-                                                    </div>
-                                                    <form class="form-horizontal" action="#" method="" style="display: inline;">
-                                                        <div class="modal-body" align="left">
-                                                            2018/07/30 の予定を削除しますか？
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <input type="hidden" name="" value="">
-                                                            <input type="hidden" name="" value="">
-                                                            <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
-                                                            <button type="submit" class="btn btn-danger">削除</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <br>
@@ -452,27 +389,6 @@
                                                 <span class="hidden-xs">削除</span>
                                             </button>
                                         </a>
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal">×</button>
-                                                        <h4 class="modal-title" align="left">予定削除</h4>
-                                                    </div>
-                                                    <form class="form-horizontal" action="#" method="" style="display: inline;">
-                                                        <div class="modal-body" align="left">
-                                                            2018/07/30 の予定を削除しますか？
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <input type="hidden" name="" value="">
-                                                            <input type="hidden" name="" value="">
-                                                            <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
-                                                            <button type="submit" class="btn btn-danger">削除</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <br>

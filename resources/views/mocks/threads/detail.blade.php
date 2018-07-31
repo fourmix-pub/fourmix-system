@@ -83,13 +83,9 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-body">
-                    コメントコメントコメントコメントコメントコメントコメントコメントコメント<br>
-                    コメントコメントコメントコメントコメントコメント
-                </div>
-                <div class="panel-footer">
+                <div class="panel-heading">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                         名前：山田太郎
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
@@ -97,7 +93,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-2 col-lg-1">
                             <button type="button" class="btn btn-danger" data-toggle="modal"
-                                                  data-target="#exampleModal">
+                                    data-target="#exampleModal">
                                 <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
                                 <span class="hidden-xs">削除</span>
                             </button>
@@ -128,24 +124,23 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="panel panel-default">
                 <div class="panel-body">
                     コメントコメントコメントコメントコメントコメントコメントコメントコメント<br>
                     コメントコメントコメントコメントコメントコメント
                 </div>
-                <div class="panel-footer">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
-                            名前：山田太郎
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                            名前：東京花子
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                            <span>投稿日時：2018/03/03</span>
+                            <span>投稿日時：2018/02/02</span>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-2 col-lg-1">
                             <button type="button" class="btn btn-danger" data-toggle="modal"
@@ -156,24 +151,23 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="panel panel-default">
                 <div class="panel-body">
                     コメントコメントコメントコメントコメントコメントコメントコメントコメント<br>
                     コメントコメントコメントコメントコメントコメント
                 </div>
-                <div class="panel-footer">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                             名前：山田太郎
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                            <span>投稿日時：2018/03/03</span>
+                            <span>投稿日時：2018/01/01</span>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-2 col-lg-1">
                             <button type="button" class="btn btn-danger" data-toggle="modal"
@@ -184,9 +178,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="panel-body">
+                    コメントコメントコメントコメントコメントコメントコメントコメントコメント<br>
+                    コメントコメントコメントコメントコメントコメント
+                </div>
             </div>
         </div>
     </div>
+
     {{-- コメントフォーム --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
