@@ -28,7 +28,7 @@
     <div class="row">
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
             <p>
-                小林さんの結婚を祝ってみんなで楽しく飲みましょう。
+                小林さんのご結婚を祝って、みんなで楽しく飲みましょう。
             </p>
         </div>
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
@@ -59,7 +59,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success" data-dismiss="modal">閉じる</button>
+                            <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">編集</button>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                             イベント1：小林さん結婚お祝いパーティ を削除しますか？
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success" data-dismiss="modal">閉じる</button>
+                            <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
                             <button type="button" class="btn btn-danger" onclick="location.href='{{ url('events') }}'">
                                 削除</button>
                         </div>
@@ -251,7 +251,7 @@
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success" data-dismiss="modal">閉じる</button>
+                            <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">送信</button>
                         </div>
                     </div>
