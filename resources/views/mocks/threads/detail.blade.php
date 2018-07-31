@@ -26,15 +26,39 @@
     {{-- コンテンツ --}}
     {{-- スレッドの説明 --}}
     <div class="row">
-        <div class="fc-toolbar fc-header-toolbar">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="fc-toolbar fc-header-toolbar">
                 <div class="fc-left"></div>
                 <div class="fc-right">
                     <button type="button" class="btn btn-danger" data-toggle="modal"
-                            data-target="#exampleModal">
+                            data-target="#th-deleteModal">
                         <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
-                        <span class="hidden-xs">削除</span>
+                        <span class="hidden-xs">スレッド削除</span>
                     </button>
+                    {{-- モーダル --}}
+                    <div class="modal fade" id="th-deleteModal" tabindex="-1" style="display: none;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h4 class="modal-title" align="left">スレッド削除</h4>
+                                </div>
+                                <form class="form-horizontal" action="#" method="" style="display: inline;">
+                                    <div class="modal-body" align="left">
+                                        スレッドを削除してもよろしいですか？
+                                    </div>
+                                    <div class="modal-footer">
+                                        <input type="hidden" name="" value="">
+                                        <input type="hidden" name="" value="">
+                                        <button type="button" class="btn btn-default closed" data-dismiss="modal">
+                                            閉じる
+                                        </button>
+                                        <button type="submit" class="btn btn-danger">削除</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,18 +109,26 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
                         名前：山田太郎
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                            <span>投稿日時：2018/03/03</span>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2">
+                            <div class="fc-toolbar fc-header-toolbar">
+                                <div class="fc-right">
+                                    <span>投稿日時：2018/03/03</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-1">
-                            <button type="button" class="btn btn-danger" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
-                                <span class="hidden-xs">削除</span>
-                            </button>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2">
+                            <div class="fc-toolbar fc-header-toolbar">
+                                <div class="fc-right">
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                            data-target="#exampleModal">
+                                        <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                                        <span class="hidden-xs">削除</span>
+                                    </button>
+                                </div>
+                            </div>
                             {{-- モーダル --}}
                             <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;">
                                 <div class="modal-dialog">
