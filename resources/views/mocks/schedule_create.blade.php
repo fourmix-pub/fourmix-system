@@ -58,9 +58,9 @@
             <div class="form-group">
                 <label class="control-label schedule-contents">予定</label>
                 <div>
-                    <div class="panel-body">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="panel panel-default">
                                 <form action="" method="" role="form" enctype="multipart/form-data">
                                     <input type="hidden" name="" value="">
 
@@ -82,9 +82,9 @@
             <div class="form-group">
                 <label class="control-label schedule-contents">結果</label>
                 <div>
-                    <div class="panel-body">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="panel panel-default">
                                 <form action="" method="" role="form" enctype="multipart/form-data">
                                     <input type="hidden" name="" value="">
 
@@ -106,9 +106,9 @@
             <div class="form-group">
                 <label class="control-label schedule-contents">共有事項</label>
                 <div>
-                    <div class="panel-body">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="panel panel-default">
                                 <form action="" method="" role="form" enctype="multipart/form-data">
                                     <input type="hidden" name="" value="">
 
