@@ -187,6 +187,10 @@
                                 </div>
                             </div>
                         </form>
+                        <div align="center">
+                            <button type="button" class="btn btn-danger" onclick="location.href='#'">コメント送信</button>
+                        </div>
+
                     </div>
                 </div>
             </div>
