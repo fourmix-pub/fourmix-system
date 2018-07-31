@@ -60,7 +60,7 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         <a class="fa fa-hourglass-half icon-color schedule-contents"></a>
-                                        <span class="hidden-xs hidden-sm schedule-contents">予定</span>
+                                        <span>予定</span>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                 開発<br>
@@ -82,7 +82,7 @@
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         <a class="fa fa-hourglass icon-color schedule-contents"></a>
-                                        <span class="hidden-xs hidden-sm schedule-contents">結果</span>
+                                        <span>結果</span>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                             開発
@@ -93,7 +93,7 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         <span class="glyphicon glyphicon-share icon-color schedule-contents"></span>
-                                        <span class="hidden-xs hidden-sm schedule-contents">共有事項</span>
+                                        <span class=>共有事項</span>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                                 7/30 有給休暇
@@ -166,7 +166,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass-half icon-color schedule-contents"></a>
-                                <span class="hidden-xs hidden-sm schedule-contents">予定</span>
+                                <span>予定</span>
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         開発
@@ -175,7 +175,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass icon-color schedule-contents"></a>
-                                <span class="hidden-xs hidden-sm schedule-contents">結果</span>
+                                <span>結果</span>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                     開発
@@ -186,7 +186,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <span class="glyphicon glyphicon-share icon-color schedule-contents"></span>
-                                <span class="hidden-xs hidden-sm schedule-contents">共有事項</span>
+                                <span>共有事項</span>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         7/23 午後休
@@ -256,13 +256,13 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass-half icon-color"></a>
-                                <span class="hidden-xs hidden-sm">予定</span>
+                                <span>予定</span>
                                 <br>
                                 開発
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <a class="fa fa-hourglass icon-color"></a>
-                                <span class="hidden-xs hidden-sm">結果</span>
+                                <span>結果</span>
                                 <br>
                                 開発
                             </div>
@@ -270,7 +270,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <span class="glyphicon glyphicon-share icon-color"></span>
-                                <span class="hidden-xs hidden-sm">共有事項</span>
+                                <span>共有事項</span>
                                 <br>
                                 7/17 有給休暇
                             </div>
@@ -337,13 +337,13 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                     <a class="fa fa-hourglass-half icon-color"></a>
-                                    <span class="hidden-xs hidden-sm">予定</span>
+                                    <span>予定</span>
                                     <br>
                                     開発
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         <a class="fa fa-hourglass icon-color"></a>
-                                        <span class="hidden-xs hidden-sm">結果</span>
+                                        <span>結果</span>
                                         <br>
                                         開発
                                     </div>
@@ -351,7 +351,7 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         <span class="glyphicon glyphicon-share icon-color"></span>
-                                        <span class="hidden-xs hidden-sm">共有事項</span>
+                                        <span>共有事項</span>
                                         <br>
                                         7/9 有給休暇
                                     </div>
@@ -418,13 +418,13 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         <a class="fa fa-hourglass-half icon-color"></a>
-                                        <span class="hidden-xs hidden-sm">予定</span>
+                                        <span>予定</span>
                                         <br>
                                         開発
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         <a class="fa fa-hourglass icon-color"></a>
-                                        <span class="hidden-xs hidden-sm">結果</span>
+                                        <span>結果</span>
                                         <br>
                                         開発
                                     </div>
@@ -432,7 +432,7 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                         <span class="glyphicon glyphicon-share icon-color"></span>
-                                        <span class="hidden-xs hidden-sm">共有事項</span>
+                                        <span>共有事項</span>
                                         <br>
                                         7/2 有給休暇
                                     </div>
