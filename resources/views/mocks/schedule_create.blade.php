@@ -25,6 +25,18 @@
 
     {{-- コンテンツ --}}
     <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="fc-toolbar fc-header-toolbar">
+                <div class="fc-left">
+                    <button type="button" class="btn btn-primary" onclick="location.href='./my_schedule'">
+                        <i class="glyphicon glyphicon-arrow-left" aria-hidden="true"></i><span>戻る</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"style="padding-bottom: 7px;">
             <div class="form-group">
                 <label class="control-label schedule-contents">日付</label>
