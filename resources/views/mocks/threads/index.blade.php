@@ -101,13 +101,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div align="center">
-                                <button type="button" class="btn registration-daily" onclick="location.href='./threads-create'" style="margin-right: 10px;">
-                                    <i class="fa fa-search" aria-hidden="true"></i> <span>検索</span>
-                                </button>
-                            </div>
+                    <div class="row form text-center">
+                        <div class="btn-group">
+                            <button type="submit" class="btn">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;&nbsp;検索
+                            </button>
                         </div>
                     </div>
                 </form>
