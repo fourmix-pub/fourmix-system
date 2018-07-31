@@ -76,27 +76,28 @@
     <br>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="collapse" id="search">
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form action="" method="" role="form" enctype="multipart/form-data">
+                                <input type="hidden" name="" value="">
 
-        <div class="collapse" id="search">
-            <div class="panel-body">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <form action="" method="" role="form" enctype="multipart/form-data">
-                            <input type="hidden" name="" value="">
-
-                            <div class="form-group">
-                                <div>
-                                    <textarea class="form-control" rows="9" name="content" data-provide="markdown" placeholder=" Markdown"></textarea>
+                                <div class="form-group">
+                                    <div>
+                                        <textarea class="form-control" rows="9" name="content" data-provide="markdown" placeholder=" Markdown"></textarea>
+                                    </div>
                                 </div>
+                            </form>
+                            <div align="right">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">コメント送信</button>
                             </div>
-                        </form>
-                        <div align="right">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">コメント送信</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
         {{-- 投稿内容 --}}
@@ -136,7 +137,9 @@
                                             <div class="modal-footer">
                                                 <input type="hidden" name="" value="">
                                                 <input type="hidden" name="" value="">
-                                                <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
+                                                <button type="button" class="btn btn-default closed" data-dismiss="modal">
+                                                    閉じる
+                                                </button>
                                                 <button type="submit" class="btn btn-danger">削除</button>
                                             </div>
                                         </form>
