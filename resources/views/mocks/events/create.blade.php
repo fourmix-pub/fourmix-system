@@ -50,7 +50,7 @@
                     <label for="event-datetime">開催日時</label>
                     <input type="text" class="form-control" id="event-datetime">
                 </div>
-                <button type="button" class="btn btn-default closed" onclick="location.href='{{ url('test/events') }}'">戻る</button>
+                <button type="button" class="btn btn-success" onclick="location.href='{{ url('test/events') }}'">戻る</button>
                 <button type="button" class="btn btn-primary" onclick="location.href='{{ url('test/events') }}'">作成</button>
             </form>
         </div>
