@@ -129,7 +129,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                                <h4>作成者：大澤乃梨子</h4>
+                                <h3><small>作成者：大澤乃梨子</small></h3>
                             </div>
                         </div>
                         <div class="row">
@@ -168,7 +168,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                                <h4>作成者：大澤乃梨子</h4>
+                                <h3><small>作成者：大澤乃梨子</small></h3>
                             </div>
                         </div>
                         <div class="row">
@@ -199,7 +199,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                                <h4>作成者：大澤乃梨子</h4>
+                                <h3><small>作成者：大澤乃梨子</small></h3>
                             </div>
                         </div>
                         <div class="row">
@@ -230,7 +230,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                                <h4>作成者：大澤乃梨子</h4>
+                                <h3><small>作成者：大澤乃梨子</small></h3>
                             </div>
                         </div>
                         <div class="row">
