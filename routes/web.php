@@ -160,7 +160,7 @@ Route::view('/test/events', 'mocks.events.events');
 Route::view('/test/event-detail', 'mocks.events.detail');
 Route::view('/test/event-create', 'mocks.events.create');
 //ランチマッチング
-Route::view('/lunch', 'mocks.lunch');
+Route::view('/test/lunch', 'mocks.lunch');
 //安否確認
 Route::view('/test/safety-mails', 'mocks.safety-mails.index');
 Route::view('/test/mail-create', 'mocks.safety-mails.create');

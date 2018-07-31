@@ -33,3 +33,7 @@ span.ev-ok{
 span.ev-ng {
     color: #d9534f;
 }
+
+.ev-info {
+    font-size: 16px;
+}

@@ -8,6 +8,7 @@
     background-position: 0 50%;
     background-attachment: fixed;
     background-size: cover;
+    opacity: 0.5%;
 }
 button.back {
     width: 56px;
