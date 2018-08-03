@@ -15,6 +15,9 @@ class CreateSafetyMailsTable extends Migration
     {
         Schema::create('safety_mails', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
+            $table->string('title', 20);
+            $table->string('contents', 1000);
             $table->timestamps();
         });
     }

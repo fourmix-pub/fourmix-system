@@ -15,6 +15,9 @@ class CreateSafetyConfirmationsTable extends Migration
     {
         Schema::create('safety_confirmations', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
+            $table->integer('mail_id');
+            $table->tinyInteger('confirmation');
             $table->timestamps();
         });
     }
