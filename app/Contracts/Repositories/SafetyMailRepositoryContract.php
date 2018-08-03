@@ -2,8 +2,6 @@
 
 namespace App\Contracts\Repositories;
 
-use App\SafetyMail;
-
 interface SafetyMailRepositoryContract
 {
     /**

@@ -4,7 +4,7 @@ namespace App\Repositories;
 
 
 use App\Contracts\Repositories\SafetyMailRepositoryContract;
-use App\SafetyMail;
+use App\Models\SafetyMail;
 
 class SafetyMailRepository implements SafetyMailRepositoryContract
 {
@@ -14,7 +14,7 @@ class SafetyMailRepository implements SafetyMailRepositoryContract
      */
     public function safetyMailResources()
     {
-        $safetyMails = SafetyMail::latest();
+        $safetyMails = SafetyMail::latest()->get();
         return compact('safetyMails');
     }
 }

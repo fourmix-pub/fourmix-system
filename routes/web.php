@@ -73,7 +73,7 @@ Route::middleware(['auth'])->group(function () {
     |--------------------------------------------------------------------------
     */
 
-    Route::resource('safety-mails', 'SafetyMailController');
+    Route::resource('safety-mails', 'SafetyMails\SafetyMailController');
 
     /*
     |--------------------------------------------------------------------------

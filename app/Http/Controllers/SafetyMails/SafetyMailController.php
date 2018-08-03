@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\SafetyMails;
 
 use App\Contracts\Repositories\SafetyMailRepositoryContract;
-use App\SafetyMail;
+use App\Http\Controllers\Controller;
+use App\Models\SafetyMail;
 use Illuminate\Http\Request;
 
 class SafetyMailController extends Controller
