@@ -15,4 +15,9 @@ class SafetyMail extends Model
     {
         return $this->hasMany(SafetyConfirmation::class, 'mail_id', 'id');
     }
+
+    public function user()
+    {
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
 }

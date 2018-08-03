@@ -2,11 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use App\Contracts\Repositories\SafetyMailRepositoryContract;
 use App\SafetyMail;
 use Illuminate\Http\Request;
 
 class SafetyMailController extends Controller
 {
+    /**
+     * 安否確認倉庫契約(インターフェース).
+     * @var SafetyMailRepositoryContract
+     */
+    protected $repository;
+
+    /**
+     * SafetyMailController constructor.
+     * @param SafetyMailRepositoryContract $repository
+     */
+    public function __construct(SafetyMailRepositoryContract $repository)
+    {
+        $this->repository = $repository;
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +31,7 @@ class SafetyMailController extends Controller
      */
     public function index()
     {
-        return view('safety-mail.index');
+        return view('safety-mail.index', $this->repository->safetyMailResources());
     }
 
     /**
