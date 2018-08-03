@@ -175,3 +175,11 @@ Route::view('/test/schedule_create', 'mocks.schedule_create');
 Route::view('/test/schedule_editing', 'mocks.schedule_editing');
 Route::view('/test/schedule_view', 'mocks.schedule_view');
 Route::view('/test/schedule_detail', 'mocks.schedule_detail');
+
+/*
+|--------------------------------------------------------------------------
+| 予定確認関連ルート
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/schedules/view', 'Schedules\WeekScheduleController@index')->name('week-schedules.view');

@@ -11,6 +11,7 @@ use App\Notifications\ResetPasswordNotification;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use DB;
+use App\Models\WeekSchedule;
 
 class User extends Authenticatable
 {
@@ -111,4 +112,14 @@ class User extends Authenticatable
     {
         $this->notify(new ResetPasswordNotification($token));
     }
+
+    /**
+     * 予定 取得
+     * １対多
+     */
+    public function weekSchedules()
+    {
+        return $this->hasMany(WeekSchedule::class, 'user_id', 'id');
+    }
+
 }
