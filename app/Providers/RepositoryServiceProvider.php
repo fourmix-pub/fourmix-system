@@ -68,5 +68,10 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Contracts\Tools\CalculateContract',
             'App\Tools\Analytics\Calculate'
         );
+        //
+        $this->app->bind(
+            'App\Contracts\Repositories\EventRepositoryContract',
+            'App\Repositories\EventRepository'
+        );
     }
 }

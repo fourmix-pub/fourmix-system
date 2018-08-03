@@ -149,29 +149,9 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 
 /*
 |--------------------------------------------------------------------------
-| Mock関連ルート
+| イベント管理関連ルート
 |--------------------------------------------------------------------------
 */
 
-Route::view('/test', 'mocks.test');
-
-//イベント管理
-Route::view('/test/events', 'mocks.events.events');
-Route::view('/test/event-detail', 'mocks.events.detail');
-Route::view('/test/event-create', 'mocks.events.create');
-//ランチマッチング
-Route::view('/test/lunch', 'mocks.lunch');
-//安否確認
-Route::view('/test/safety-mails', 'mocks.safety-mails.index');
-Route::view('/test/mail-create', 'mocks.safety-mails.create');
-Route::view('/test/mail-confirmation', 'mocks.safety-mails.confirmation');
-//掲示板
-Route::view('/test/threads', 'mocks.threads.index');
-Route::view('/test/threads-create', 'mocks.threads.create');
-Route::view('/test/threads-detail', 'mocks.threads.detail');
-//予定確認
-Route::view('/test/my_schedule', 'mocks.my_schedule');
-Route::view('/test/schedule_create', 'mocks.schedule_create');
-Route::view('/test/schedule_editing', 'mocks.schedule_editing');
-Route::view('/test/schedule_view', 'mocks.schedule_view');
-Route::view('/test/schedule_detail', 'mocks.schedule_detail');
+//一覧表示
+Route::get('events','Events\EventController@index')->name('events.events');
