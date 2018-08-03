@@ -38,7 +38,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-body mail-panel mail-onclick" data-mail_id="1">
+                <div class="panel-body mail-panel mail-onclick" data-mail_id={{ $safetyMail->id }}>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             {{ $safetyMail->created_at }}
@@ -73,6 +73,14 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    $(function(){
+                        $(".mail-onclick").click(function () {
+                            let id = $(this).data('mail_id');
+                            location.href = './mail-confirmation' + id;
+                        });
+                    });
+                </script>
             </div>
         </div>
     </div>

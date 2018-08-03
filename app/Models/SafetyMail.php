@@ -11,7 +11,7 @@ class SafetyMail extends Model
      * 1対多.
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function dailies()
+    public function Confirmations()
     {
         return $this->hasMany(SafetyConfirmation::class, 'mail_id', 'id');
     }
