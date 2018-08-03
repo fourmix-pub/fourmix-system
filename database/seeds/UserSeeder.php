@@ -13,18 +13,28 @@ class UserSeeder extends Seeder
     public function run()
     {
         Event::fake();
-        DB::table('events')->delete();
-        App\Events::create([
-            'title'   => '藍上さん結婚お祝いパーティー',
-            'contents'    => '藍上さんのご結婚を祝って、みんなで楽しく飲みましょう。',
-            'location' => 'T.Y.HARVOR',
+        DB::table('users')->delete();
+        App\User::create([
+            'name'   => 'Admin',
+            'email'    => 'fourmix-system@fourmix.co.jp',
+            'password' => bcrypt('123456'),
+            'department_id' => 1,
+            'cost' => 20,
+            'start' => '09:30:00',
+            'end' => '18:30:00',
+            'is_resignation' => 0,
         ]);
 
         for ($i = 0; $i < 30; $i++) {
-            App\Events::create([
-                'title'   => str_random(10),
-                'contents'    => str_random(100),
-                'locaton' => str_random(50),
+            App\User::create([
+                'name'   => str_random(10),
+                'email'    => str_random(10).'@fourmix.co.jp',
+                'password' => bcrypt('123456'),
+                'department_id' => rand(1, 3),
+                'cost' => 20,
+                'start' => '09:30:00',
+                'end' => '18:30:00',
+                'is_resignation' => rand(0, 1),
             ]);
         }
     }
