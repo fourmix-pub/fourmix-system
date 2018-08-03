@@ -121,6 +121,13 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/password', 'ConfigController@resetPassword')->name('password.store');
         ;
     });
+
+    /*
+    |--------------------------------------------------------------------------
+    | 安否確認機能
+    |--------------------------------------------------------------------------
+    */
+    Route::resource('safety-mails', 'SafetyMailController');
 });
 
 /*
