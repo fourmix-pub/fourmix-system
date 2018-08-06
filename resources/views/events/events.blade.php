@@ -28,7 +28,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="right">
-            <button type="button" class="btn btn-danger" onclick="location.href='{{ route('events.create', compact('event')) }}'">
+            <button type="button" class="btn btn-danger" onclick="location.href='{{ route('events.create')}}'">
                 <i class="fa fa-plus" aria-hidden="true"></i>
                 追加
             </button>
@@ -50,9 +50,9 @@
                         </a>
                             <span class="label label-danger">OPEN</span>
                         <br>
-                        主催者：：{{ $event->user->name }}
+                        主催者：{{ $event->user->name }}
                         <br>
-                        開催場所：：{{ $event->location }}
+                        開催場所：{{ $event->location }}
                     </p>
                 </div>
             </div>

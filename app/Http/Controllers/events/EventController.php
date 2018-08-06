@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Events;
 use App\Contracts\Repositories\EventRepositoryContract;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Settings\EventRequest;
 
 
 class EventController extends Controller
