@@ -15,4 +15,9 @@ class Event extends Model
     {
         return $this->hasOne(User::class, 'id', 'user_id');
     }
+
+    public function eventDates()
+    {
+        return $this->hasMany(EventDate::class, 'event_id', 'id');
+    }
 }

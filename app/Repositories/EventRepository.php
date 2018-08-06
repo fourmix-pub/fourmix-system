@@ -5,6 +5,7 @@ namespace App\Repositories;
 
 use App\Contracts\Repositories\EventRepositoryContract;
 use App\Models\Event;
+use App\Models\EventDate;
 
 class EventRepository implements EventRepositoryContract
 {
@@ -25,8 +26,25 @@ class EventRepository implements EventRepositoryContract
      */
     public function create($request)
     {
-        // TODO: Implement create() method.
+        $event = new Event();
+
+        $event->title = $request->get('title');
+        $event->contents = $request->get('contents');
+        $event->user_id = auth()->user()->id;
+        $event->location = $request->get('location');
+
+         $event->save();
+
+         foreach($request->get('dates') as $date) {
+             $eventDate = new EventDate();
+             $eventDate->date = $date;
+             $eventDate->event_id = $event->id;
+             $eventDate->save();
+         }
+         return true;
     }
+
+
 
     /**
      * 詳細を取得する

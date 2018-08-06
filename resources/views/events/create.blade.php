@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group">
                     <label for="event-comment">コメント（任意）</label>
-                    <textarea class="form-control" name="comment" rows="3">{{ old('comment') }}</textarea>
+                    <textarea class="form-control" name="contents" rows="3">{{ old('comment') }}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="event-location">開催場所</label>
@@ -46,7 +46,7 @@
             <div class="form-group">
                 <label for="event-datetime">開催日時</label>
                 <div class="add-input">
-                    <input type="text" class="form-control event-datetime" name="date[]" value="{{ old('date[]') }}">
+                    <input type="text" class="form-control event-datetime" name="dates[]" value="{{ old('dates[]') }}">
                 </div>
             </div>
         </div>
@@ -59,10 +59,20 @@
             </div>
             <script>
                 $(function(){
-                    $('.event-datetime').datetimepicker();
+                    $('.event-datetime').datetimepicker({
+                        format : 'YYYY-MM-DD H:m:ss',
+                        locale : 'ja',
+                    });
+                    var count = 0;
                     $("#add-input-button").click(function () {
-                        $(".add-input").append('<input type="text" class="form-control event-datetime" name="date[]">');
-                        $('.event-datetime').datetimepicker();
+                        count++;
+                        console.log(count);
+                        $(".add-input").append('<input type="text" class="form-control event-datetime" name=dates['+count+']>');
+                        $('.event-datetime').datetimepicker({
+                            format : 'YYYY-MM-DD H:m:ss',
+                            locale : 'ja',
+                        });
+
                     });
                 });
             </script>

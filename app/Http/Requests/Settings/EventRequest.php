@@ -25,8 +25,7 @@ class EventRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'contents' => '->nullable',
-            'user_id' => 'required',
+            'contents' => 'nullable',
             'location' => 'required',
         ];
     }

@@ -32,7 +32,7 @@ class EventController extends Controller
 
     public function store(EventRequest $request)
     {
-        return response()->save($this->repository->create($request));
+        return response()->save($this->eventRepository->create($request));
     }
 
     public function detail()
