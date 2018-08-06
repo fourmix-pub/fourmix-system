@@ -14,9 +14,13 @@ class WeekScheduleRepository implements WeekSchedulesRepositoryContract
      */
     public function weekScheduleResources()
     {
-        $user = User::find(1);
-        $weekSchedules = $user->weekSchedules;
         $userId = request('user_id');
-        return compact( 'userId', 'user', 'weekSchedules');
+        if (request('user_id') == null){
+            $userId = auth()->user()->id;
+        }
+        $user = User::find($userId);
+        $weekSchedules = WeekSchedule::where('user_id', $user->id)->orderBy('date', 'desc')->paginate(5);
+        $users = User::all();
+        return compact( 'userId', 'user', 'weekSchedules', 'users');
     }
 }

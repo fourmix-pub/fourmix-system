@@ -31,16 +31,15 @@
                     <h2><small>名前：{{ $user->name }}</small></h2>
                 </div>
                 <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <!-- Single button -->
                     <div class="btn-group">
-                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ $user->name }}　<span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <li><a href="schedule_view">山田太郎</a></li>
-                            <li><a href="schedule_view">東京花子</a></li>
-                            <li><a href="schedule_view">天王洲アイル</a></li>
-                        </ul>
+                        <form action="{{ route('week-schedules.view') }}">
+                            <select name="user_id" class="selectpicker" data-width="100%" data-live-search="true">
+                                @foreach($users as $userData)
+                                <option value="{{ $userData->id }}">{{ $userData->name }}</option>
+                                @endforeach
+                            </select>
+                            <input class="btn btn-danger" type="submit" value="検索">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -54,8 +53,8 @@
                     <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <a href="schedule_detail">
-                                    <h3>2018/07/30</h3>
+                                <a href="#">
+                                    <h3>{{ $weekSchedule->date }}</h3>
                                 </a>
                             </div>
                         </div>
@@ -88,7 +87,11 @@
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <span class="glyphicon glyphicon-share icon-color"></span>
                                 <span class="schedule-contents">共有事項</span>
-                                {{ $weekSchedule->share }}
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                        {{ $weekSchedule->share }}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <br>
@@ -99,22 +102,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div align="middle">
-
-                        <nav aria-label="...">
-                            <ul class="pagination">
-                                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                        {{ $weekSchedules->links() }}
                     </div>
                 </div>
             </div>

@@ -183,3 +183,4 @@ Route::view('/test/schedule_detail', 'mocks.schedule_detail');
 */
 
 Route::get('/schedules/view', 'Schedules\WeekScheduleController@index')->name('week-schedules.view');
+
