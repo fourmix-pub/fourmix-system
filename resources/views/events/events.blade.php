@@ -47,6 +47,7 @@
                     <p>
                         <a href="{{ route('events.detail', compact('event')) }}">
                             {{ $event->title }}
+                        </a>
                             <span class="label label-danger">OPEN</span>
                         <br>
                         主催者：：{{ $event->user->name }}

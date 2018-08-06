@@ -14,7 +14,7 @@ class EventRepository implements EventRepositoryContract
      */
     public function eventResources()
     {
-        $events = Event::paginate(10);
+        $events = Event::with('user')->get();
         return compact('events');
     }
 

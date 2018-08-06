@@ -155,3 +155,5 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 
 //一覧表示
 Route::get('events','Events\EventController@index')->name('events.events');
+Route::get('events/detail','Events\EventController@show')->name('events.detail');
+Route::get('events/create', 'Events\EventController@create')->name('events.create');

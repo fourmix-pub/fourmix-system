@@ -29,4 +29,8 @@ class EventController extends Controller
         return view('events.events', $this->eventRepository->eventResources());
     }
 
+    public function store(EventRequest $request)
+    {
+        return response()->save($this->repository->create($request));
+    }
 }
