@@ -72,8 +72,8 @@
     </div>
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <button type="button" class="btn btn-success" onclick="location.href='{{ url('test/events') }}'">戻る</button>
-            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('test/events') }}'">作成</button>
+            <button type="button" class="btn btn-success" onclick="location.href='{{ route('events') }}'">戻る</button>
+            <button type="submit" class="btn btn-primary">作成</button>
         </div>
     </div>
 

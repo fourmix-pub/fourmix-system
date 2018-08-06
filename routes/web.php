@@ -14,12 +14,12 @@ Route::middleware(['auth'])->group(function () {
     |	入力、閲覧、集計
     |--------------------------------------------------------------------------
     */
-  
+
     Route::group(['namespace' => 'Dailies'], function () {
         //日報一覧
         Route::resource('dailies', 'DailyController', ['except' => [
-        'create', 'edit', 'show',
-    ]]);
+            'create', 'edit', 'show',
+        ]]);
         Route::get('dailies/search', 'DailyController@searchByDate')->name('dailies.search');
         //日報閲覧
         Route::get('dailies/view', 'DailyController@view')->name('daily.view');
@@ -147,6 +147,7 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 
+
 /*
 |--------------------------------------------------------------------------
 | イベント管理関連ルート
@@ -155,5 +156,5 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 
 //一覧表示
 Route::get('events','Events\EventController@index')->name('events.events');
-Route::get('events/detail','Events\EventController@show')->name('events.detail');
+Route::get('events/detail','Events\EventController@detail')->name('events.detail');
 Route::get('events/create', 'Events\EventController@create')->name('events.create');

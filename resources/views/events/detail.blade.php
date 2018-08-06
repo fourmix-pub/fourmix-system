@@ -16,7 +16,7 @@
             <div class="page-header">
                 <div>
                     <h2>
-                        小林さん結婚お祝いパーティ
+                        {{ $event->title }}
                     </h2>
                 </div>
             </div>
@@ -28,7 +28,7 @@
     <div class="row">
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
             <p class="ev-info">
-                小林さんのご結婚を祝って、みんなで楽しく飲みましょう。
+                {{ $event->contents }}
             </p>
         </div>
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
@@ -86,7 +86,7 @@
                                 <h4 class="modal-title" id="myModalLabel">イベント削除</h4>
                             </div>
                             <div class="modal-body">
-                                イベント1：小林さん結婚お祝いパーティ を削除しますか？
+                                イベント {{ $event->id }}： {{ $event->title }} を削除しますか？
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
