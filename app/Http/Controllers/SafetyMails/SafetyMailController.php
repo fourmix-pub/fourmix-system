@@ -42,7 +42,7 @@ class SafetyMailController extends Controller
      */
     public function create()
     {
-        //
+        return view('safety-mail.create');
     }
 
     /**
@@ -62,9 +62,10 @@ class SafetyMailController extends Controller
      * @param  \App\SafetyMail  $safetyMail
      * @return \Illuminate\Http\Response
      */
-    public function show(SafetyMail $safetyMail)
+    public function show()
     {
-        //
+        $safetyMail = SafetyMail::find(1);
+        return view('safety-mail.show', compact('safetyMail'));
     }
 
     /**

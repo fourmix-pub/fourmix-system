@@ -12,7 +12,7 @@ class SafetyMail extends Model
      * 1対多.
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function Confirmations()
+    public function safetyConfirmations()
     {
         return $this->hasMany(SafetyConfirmation::class, 'mail_id', 'id');
     }
@@ -28,14 +28,13 @@ class SafetyMail extends Model
     }
 
     /**
-     * 安否確認の割合を求める
+     * 安否確認済の割合を求める
      * @param User $user
-     * @return int
      */
     public function confirmationRateRatio(User $user)
     {
-        $users = $user::table('users')->count();
-        $confirmation = $this->Confirmations()->count();
-        $ratio = $confirmation / $users * 100;
+        $userNum = $user::table('users')->count();
+        $confirmationNum = $this->Confirmations()->count();
+        $ratio = $confirmationNum / $userNum * 100;
     }
 }

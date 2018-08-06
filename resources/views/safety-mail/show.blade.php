@@ -37,13 +37,20 @@
                         </tr>
                     </thead>
                     <tbody>
+                    @foreach($safetyMail->safetyConfirmations as $safetyConfirmation)
                         <tr>
-                            <td>大澤乃梨子</td>
+                            <td>{{$safetyConfirmation->user->name}}</td>
                             <td>システムデザイングループ</td>
                             <td>
+                                @if ($safetyConfirmation->confirmation === 1)
                                 <span class="label label-success safety-status">
                                     <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認済
                                 </span>
+                                @else
+                                <span class="label label-default safety-status">
+                                <i class="glyphicon glyphicon-question-sign" aria-hidden="true"></i> 未確認
+                                </span>
+                                @endif
                             </td>
                             <td>
                                 <div class="checkbox">
@@ -53,6 +60,7 @@
                                 </div>
                             </td>
                         </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
