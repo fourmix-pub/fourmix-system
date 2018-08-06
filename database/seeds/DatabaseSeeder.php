@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(DailySeeder::class);
         $this->call(ProjectSeeder::class);
         $this->call(PersonalBudgetSeeder::class);
-        factory(\App\Models\SafetyMail::class, 10)->create();
+        factory(\App\Models\SafetyMail::class, 12)->create();
         factory(\App\Models\SafetyConfirmation::class, 10)->create();
     }
 }

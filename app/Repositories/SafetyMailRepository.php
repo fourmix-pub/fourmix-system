@@ -14,7 +14,7 @@ class SafetyMailRepository implements SafetyMailRepositoryContract
      */
     public function safetyMailResources()
     {
-        $safetyMails = SafetyMail::latest()->get();
+        $safetyMails = SafetyMail::latest()->paginate(5);
         return compact('safetyMails');
     }
 }
