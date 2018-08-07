@@ -6,6 +6,7 @@ use App\Contracts\Repositories\EventRepositoryContract;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Settings\EventRequest;
+use App\Models\Event;
 
 
 class EventController extends Controller
@@ -35,9 +36,9 @@ class EventController extends Controller
         return response()->save($this->eventRepository->create($request));
     }
 
-    public function detail()
+    public function detail(Event $event)
     {
-        return view('events.detail', $this->eventRepository->eventResources());
+        return view('events.detail', compact('event'));
     }
 
     public function create()

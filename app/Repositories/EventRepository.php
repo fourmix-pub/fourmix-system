@@ -52,6 +52,7 @@ class EventRepository implements EventRepositoryContract
      */
     public function details()
     {
-        // TODO: Implement details() method.
+        $event = Event::with('user')->where('id');
+        return compact('event');
     }
 }

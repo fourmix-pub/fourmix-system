@@ -259,7 +259,7 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary" onclick="location.href='{{ url('test/events') }}'">戻る</button>
+            <a href="{{ route('events.events') }}" class="btn btn-primary">戻る</a>
         </div>
     </div>
 @endsection

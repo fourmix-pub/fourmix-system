@@ -85,7 +85,6 @@
                     戻る
                 </a>
                 <button type="submit" class="btn btn-primary">作成</button>
-
             </div>
         </div>
     </form>
