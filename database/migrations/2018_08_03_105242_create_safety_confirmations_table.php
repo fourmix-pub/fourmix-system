@@ -17,7 +17,7 @@ class CreateSafetyConfirmationsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('mail_id');
-            $table->boolean('is_confirmed');
+            $table->boolean('is_confirmed')->default(false);
             $table->timestamps();
         });
     }

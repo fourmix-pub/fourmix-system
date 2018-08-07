@@ -29,11 +29,11 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <form action="#">
+                        <form action="{{ route('safety-mails.store', compact('safety_mail')) }}" method="POST">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 7px;">
                                     <h4>タイトル</h4>
-                                    <input type="text" class="form-control" placeholder="20文字以内">
+                                    <input type="text" name="title" class="form-control" placeholder="20文字以内">
                                 </div>
                             </div>
                             <div class="row">
@@ -45,7 +45,8 @@
                             <br>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <input type="email" class="form-control" placeholder="メールアドレスを入力(テスト送信用)">
+                                    <input type="email" name="testMail" class="form-control"
+                                           placeholder="メールアドレスを入力(テスト送信用)">
                                 </div>
                             </div>
                         </form>

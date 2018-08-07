@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class SafetyMail extends Model
 {
     /**
-     * 作成者取得.
+     * 作成者取得方法.
      * 1対1.
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
@@ -25,7 +25,8 @@ class SafetyMail extends Model
     }
 
     /**
-     * 安否確認済の割合を求める
+     * 安否確認済の割合を求める方法
+     * @return int
      */
     public function confirmationRate(): int
     {

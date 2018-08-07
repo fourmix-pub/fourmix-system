@@ -12,9 +12,16 @@ use App\Models\Customer;
 use App\Models\WorkType;
 use App\Models\Department;
 use App\Models\PersonalBudget;
+use Event;
 
 class RelationTest extends TestCase
 {
+    public function setUp()
+    {
+        parent::setUp();
+        Event::fake();
+    }
+
     /**
      * 担当者ID から 日報取得.
      * @test
@@ -215,5 +222,22 @@ class RelationTest extends TestCase
     {
         $this->assertRelation(PersonalBudget::where('project_id', 1)
             ->where('user_id', 1)->first()->project, Project::class);
+    }
+
+    /**
+     * 安否確認メールID から ユーザ取得
+     * @test
+     */
+    public function safety_mail_belongs_to_user()
+    {
+        $user = factory(User::class)->create();
+        $safetyMail = factory(\App\Models\SafetyMail::class)->create();
+        factory(\App\Models\SafetyConfirmation::class)->create([
+            'mail_id' => $safetyMail->id,
+            'user_id' => $user->id,
+        ]);
+
+        $this->assertTrue($safetyMail->users->first() instanceof User);
+        $this->assertEquals($safetyMail->users->first()->id, $user->id);
     }
 }
