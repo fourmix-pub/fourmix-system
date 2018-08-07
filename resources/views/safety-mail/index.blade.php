@@ -57,17 +57,28 @@
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
-                                    <span class="safety-mails-ratio">100</span>%　Confirmed (10/10)
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <span class="safety-mails-ratio">{{ $safetyMail->confirmationRate() }}</span>
+                                    % Confirmed
+                                    ({{ $safetyMail->users()->wherePivot('is_confirmed', true)->count() }}
+                                    /{{ $safetyMail->users->count() }})
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                            <span class="sr-only">100% Complete (success)</span>
+                                        <div class="progress-bar progress-bar-success progress-bar-striped"
+                                             role="progressbar" aria-valuenow="{{ $safetyMail->confirmationRate() }}"
+                                             aria-valuemin="0" aria-valuemax="100" style="width: {{ $safetyMail->confirmationRate() }}%">
+                                            <span class="sr-only">
+                                                {{ $safetyMail->confirmationRate() }}% Complete (success)
+                                            </span>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
                                 </div>
                             </div>
                         </div>

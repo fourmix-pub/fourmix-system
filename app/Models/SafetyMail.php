@@ -8,33 +8,34 @@ use Illuminate\Database\Eloquent\Model;
 class SafetyMail extends Model
 {
     /**
-     * 安否情報取得.
-     * 1対多.
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function safetyConfirmations()
-    {
-        return $this->hasMany(SafetyConfirmation::class, 'mail_id', 'id');
-    }
-
-    /**
      * 作成者取得.
      * 1対1.
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function user()
+    public function users()
     {
-        return $this->hasOne(User::class, 'id', 'user_id');
+        return $this->belongsToMany(
+            User::class,
+            'safety_confirmations',
+            'mail_id',
+            'user_id')
+            ->as('confirmations')
+            ->withPivot('is_confirmed')
+            ->withTimestamps();
     }
 
     /**
      * 安否確認済の割合を求める
-     * @param User $user
      */
-    public function confirmationRateRatio(User $user)
+    public function confirmationRate(): int
     {
-        $userNum = $user::table('users')->count();
-        $confirmationNum = $this->Confirmations()->count();
-        $ratio = $confirmationNum / $userNum * 100;
+        $users = $this->users();
+        $allCount = $users->count();
+
+        if ($allCount > 0) {
+            return (int)$users->wherePivot('is_confirmed', true)->count() / $allCount * 100;
+        }
+
+        return 0;
     }
 }
