@@ -29,7 +29,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <form action="{{ route('safety-mails.store', compact('safety_mail')) }}" method="POST">
+                        <form action="">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 7px;">
                                     <h4>タイトル</h4>

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class SafetyMail extends Model
 {
     /**
-     * 作成者取得方法.
+     * 安否回答者取得方法.
      * 1対1.
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
@@ -22,6 +22,16 @@ class SafetyMail extends Model
             ->as('confirmations')
             ->withPivot('is_confirmed')
             ->withTimestamps();
+    }
+
+    /**
+     * 安否情報取得方法.
+     * 1対多.
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function confirmations()
+    {
+        return $this->hasMany(SafetyConfirmation::class, 'mail_id', 'id');
     }
 
     /**

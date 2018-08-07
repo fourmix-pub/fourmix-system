@@ -8,6 +8,7 @@ use App\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Event;
 
 class SafetyMailTest extends TestCase
 {
@@ -20,6 +21,7 @@ class SafetyMailTest extends TestCase
     public function setUp()
     {
         parent::setUp();
+        Event::fake();
         $this->user = factory(User::class)->create();
     }
 
@@ -30,6 +32,6 @@ class SafetyMailTest extends TestCase
     {
         $response = $this->actingAs($this->user)->get('/safety-mails');
         $response->assertStatus(200);
-        $response->assertViewHas(['safetyMail']);
+        $response->assertViewHas(['safetyMails']);
     }
 }
