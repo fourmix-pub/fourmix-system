@@ -153,8 +153,10 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 | イベント管理関連ルート
 |--------------------------------------------------------------------------
 */
-
+//一覧表示
 Route::get('events','Events\EventController@index')->name('events.events');
+//詳細表示
 Route::get('events/detail','Events\EventController@detail')->name('events.detail');
+//
 Route::get('events/create', 'Events\EventController@create')->name('events.create');
 Route::post('events','Events\EventController@store')->name('events.store');

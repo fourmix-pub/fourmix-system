@@ -24,10 +24,9 @@
     </div>
 
     {{-- コンテンツ --}}
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <form action="{{ route('events.store') }}" method="post">
+    <form action="{{ route('events.store') }}" method="post">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="event-title">イベント名</label>
@@ -41,49 +40,54 @@
                     <label for="event-location">開催場所</label>
                     <input type="text" class="form-control" name="location" id="event-location" value="{{ old('location') }}">
                 </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="form-group">
-                <label for="event-datetime">開催日時</label>
-                <div class="add-input">
-                    <input type="text" class="form-control event-datetime" name="dates[]" value="{{ old('dates[]') }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                    <label for="event-datetime">開催日時</label>
+                    <div class="add-input">
+                        <input type="text" class="form-control event-datetime" name="dates[]" value="{{ old('dates[]') }}">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="form-group">
-                <label class="hidden-xs hidden-sm">　</label>
-                <button type="button" id="add-input-button" class="btn btn-success form-control">
-                    開催日時候補追加
-                </button>
-            </div>
-            <script>
-                $(function(){
-                    $('.event-datetime').datetimepicker({
-                        format : 'YYYY-MM-DD H:m:ss',
-                        locale : 'ja',
-                    });
-                    var count = 0;
-                    $("#add-input-button").click(function () {
-                        count++;
-                        console.log(count);
-                        $(".add-input").append('<input type="text" class="form-control event-datetime" name=dates['+count+']>');
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                    <label class="hidden-xs hidden-sm">　</label>
+                    <button type="button" id="add-input-button" class="btn btn-success form-control">
+                        開催日時候補追加
+                    </button>
+                </div>
+                <script>
+                    $(function(){
                         $('.event-datetime').datetimepicker({
-                            format : 'YYYY-MM-DD H:m:ss',
+                            format : 'YYYY-MM-DD H:m',
                             locale : 'ja',
                         });
+                        var count = 0;
+                        $("#add-input-button").click(function () {
+                            count++;
+                            console.log(count);
+                            $(".add-input").append('<input type="text" class="form-control event-datetime" name=dates['+count+']>');
+                            $('.event-datetime').datetimepicker({
+                                format : 'YYYY-MM-DD H:m',
+                                locale : 'ja',
+                            });
 
+                        });
                     });
-                });
-            </script>
+                </script>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <button type="button" class="btn btn-success" onclick="location.href='{{ route('events.events') }}'">戻る</button>
-            <button type="submit" class="btn btn-primary">作成</button>
-            </form>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <a href="{{ route('events.events') }}" class="btn btn-success" style="border: none">
+                    戻る
+                </a>
+                <button type="submit" class="btn btn-primary">作成</button>
+
+            </div>
         </div>
-    </div>
+    </form>
 
 @endsection
