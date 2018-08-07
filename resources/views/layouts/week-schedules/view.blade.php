@@ -33,7 +33,7 @@
                 <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <div class="btn-group">
                         <form action="{{ route('week-schedules.view') }}">
-                            <select name="user_id" class="selectpicker" data-width="100%" data-live-search="true">
+                            <select name="user_id" class="selectpicker" data-live-search="true">
                                 @foreach($users as $userData)
                                 <option value="{{ $userData->id }}">{{ $userData->name }}</option>
                                 @endforeach

@@ -10,4 +10,15 @@ interface WeekSchedulesRepositoryContract
      */
     public function weekScheduleResources();
 
-}
+    /**
+     * 個人予定新規作成 資源取得契約.
+     *
+     */
+    public function createResources();
+
+    /**
+     * 個人予定新規作成
+     *
+     */
+    public function create($request);
+    }

@@ -182,6 +182,9 @@ Route::view('/test/schedule_detail', 'mocks.schedule_detail');
 |--------------------------------------------------------------------------
 */
 
+//予定閲覧
 Route::get('/schedules/view', 'Schedules\WeekScheduleController@index')->name('week-schedules.view');
 Route::get('/schedules/my-schedule', 'Schedules\MyScheduleController@index')->name('my-schedules.view');
-
+//新規追加、編集
+Route::get('/schedules/add', 'Schedules\MyScheduleController@create')->name('week-schedules.add');
+Route::post('/schedules/add', 'Schedules\MyScheduleController@store')->name('week-schedules.store');
