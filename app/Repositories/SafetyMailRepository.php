@@ -2,7 +2,6 @@
 
 namespace App\Repositories;
 
-
 use App\Contracts\Repositories\SafetyMailRepositoryContract;
 use App\Models\SafetyMail;
 
