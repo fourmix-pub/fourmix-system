@@ -2,7 +2,6 @@
 
 namespace App\Repositories;
 
-
 use App\Contracts\Repositories\EventRepositoryContract;
 use App\Models\Event;
 use App\Models\EventDate;
@@ -32,15 +31,15 @@ class EventRepository implements EventRepositoryContract
         $event->contents = $request->get('contents');
         $event->user_id = auth()->user()->id;
         $event->location = $request->get('location');
-         $event->save();
+        $event->save();
 
-         foreach($request->get('dates') as $date) {
-             $eventDate = new EventDate();
-             $eventDate->date = $date;
-             $eventDate->event_id = $event->id;
-             $eventDate->save();
-         }
-         return true;
+        foreach ($request->get('dates') as $date) {
+            $eventDate = new EventDate();
+            $eventDate->date = $date;
+            $eventDate->event_id = $event->id;
+            $eventDate->save();
+        }
+        return true;
     }
 
 
@@ -51,7 +50,7 @@ class EventRepository implements EventRepositoryContract
      */
     public function details()
     {
-        $event = Event::with('user','event_date','event_entries');
+        $event = Event::with('user', 'event_date', 'event_entries');
         return compact('event');
     }
 }
