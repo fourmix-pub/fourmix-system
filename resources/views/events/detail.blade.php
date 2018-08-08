@@ -55,7 +55,7 @@
                                     <div class="btn-group" data-toggle="buttons">
                                         <label class="btn btn-danger">
                                             <input type="radio" autocomplete="off">OPEN
-                                        </label>
+                                        </label>　
                                         　
                                         <label class="btn btn-primary"style=" border: none">
                                             <input type="radio" autocomplete="off">CLOSE
@@ -117,7 +117,7 @@
                          </th>
                          @endforeach
                      </tr>
-                     @foreach ($users as $user)
+                   @foreach ($users as $user)
                          <tr>
                              <td>
                                  {{ $user->name }}

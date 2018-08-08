@@ -32,7 +32,6 @@ class EventRepository implements EventRepositoryContract
         $event->contents = $request->get('contents');
         $event->user_id = auth()->user()->id;
         $event->location = $request->get('location');
-
          $event->save();
 
          foreach($request->get('dates') as $date) {

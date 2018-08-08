@@ -37,7 +37,9 @@ class User extends Authenticatable
      */
     public function dailies()
     {
+        dd($this->hasMany(Daily::class, 'user_id', 'id'));
         return $this->hasMany(Daily::class, 'user_id', 'id');
+
     }
 
     /**

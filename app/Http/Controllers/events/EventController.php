@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Controllers\Events;
 
 use App\Contracts\Repositories\EventRepositoryContract;
