@@ -43,5 +43,4 @@ class EventRouteTest extends TestCase
         $response->assertStatus(200);
         $response->assertViewHasAll(['events']);
     }
-
 }

@@ -14,6 +14,7 @@ use App\Models\Event;
 class EventController extends Controller
 {
     protected $eventRepository;
+
     /**
      * Create a new controller instance.
      *
@@ -23,6 +24,7 @@ class EventController extends Controller
     {
         $this->eventRepository = $eventRepository;
     }
+
     /**
      * Display a listing of the resource.
      * 一覧表示機能
