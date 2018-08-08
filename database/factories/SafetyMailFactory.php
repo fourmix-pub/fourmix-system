@@ -9,4 +9,3 @@ $factory->define(\App\Models\SafetyMail::class, function (Faker $faker) {
         'contents' => $faker->realText(200, 5),
     ];
 });
-
