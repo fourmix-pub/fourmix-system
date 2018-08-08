@@ -8,8 +8,7 @@
     $nav = 'tools';
 @endphp
 
-@section('content')
-
+@section('js')
     <script>
         $(function(){
             $(".mail-onclick").click(function () {
@@ -18,6 +17,9 @@
             });
         });
     </script>
+@endsection
+
+@section('content')
 
     {{-- タイトル --}}
     <div class="row">
