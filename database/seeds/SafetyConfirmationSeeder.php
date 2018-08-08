@@ -11,6 +11,6 @@ class SafetyConfirmationSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Models\SafetyConfirmation::class, 10)->create();
+        factory(\App\Models\SafetyConfirmation::class, 30)->create();
     }
 }

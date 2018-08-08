@@ -59,13 +59,10 @@ class SafetyMailController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\SafetyMail  $safetyMail
-     * @return \Illuminate\Http\Response
+     * @return void
      */
     public function show()
     {
-        $safetyMail = SafetyMail::find(1);
-        return view('safety-mail.show', compact('safetyMail'));
     }
 
     /**

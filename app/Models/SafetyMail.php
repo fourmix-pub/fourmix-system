@@ -25,16 +25,6 @@ class SafetyMail extends Model
     }
 
     /**
-     * 安否情報取得方法.
-     * 1対多.
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function confirmations()
-    {
-        return $this->hasMany(SafetyConfirmation::class, 'mail_id', 'id');
-    }
-
-    /**
      * 安否確認済の割合を求める方法
      * @return int
      */
