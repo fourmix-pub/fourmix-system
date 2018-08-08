@@ -18,6 +18,9 @@ class SafetyMailTest extends TestCase
      */
     private $user;
 
+    /**
+     * テストユーザーを作成
+     */
     public function setUp()
     {
         parent::setUp();
@@ -26,6 +29,7 @@ class SafetyMailTest extends TestCase
     }
 
     /**
+     * インデックスページにアクセスできる.
      * @test
      */
     public function it_can_access_index()

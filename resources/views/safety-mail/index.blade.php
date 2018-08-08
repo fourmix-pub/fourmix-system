@@ -10,6 +10,15 @@
 
 @section('content')
 
+    <script>
+        $(function(){
+            $(".mail-onclick").click(function () {
+                let id = $(this).data('mail_id');
+                location.href = '#' + id;
+            });
+        });
+    </script>
+
     {{-- タイトル --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -26,7 +35,7 @@
     {{-- コンテンツ --}}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <a type="button" href="#" class="btn registration-daily pull-right" >
+            <a type="button" href="{{ route('safety-mails.create') }}" class="btn registration-daily pull-right" >
                 <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i> <span>新規メール作成</span>
             </a>
         </div>
@@ -84,14 +93,6 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    $(function(){
-                        $(".mail-onclick").click(function () {
-                            let id = $(this).data('mail_id');
-                            location.href = '#' + id;
-                        });
-                    });
-                </script>
             </div>
         </div>
     </div>
