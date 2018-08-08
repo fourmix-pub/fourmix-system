@@ -2,7 +2,6 @@
 
 namespace App\Contracts\Repositories;
 
-
 interface EventRepositoryContract
 {
 
@@ -24,6 +23,4 @@ interface EventRepositoryContract
      * @return mixed
      */
     public function details();
-
-
 }

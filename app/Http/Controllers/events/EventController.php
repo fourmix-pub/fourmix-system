@@ -10,7 +10,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Settings\EventRequest;
 use App\Models\Event;
 
-
 class EventController extends Controller
 {
     protected $eventRepository;
