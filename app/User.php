@@ -111,4 +111,14 @@ class User extends Authenticatable
     {
         $this->notify(new ResetPasswordNotification($token));
     }
+
+    /**
+     * 勤務者取得スコープ
+     * @param $query
+     * @return mixed
+     */
+    public function scopeNotResignation($query)
+    {
+        return $query->where('is_resignation', false);
+    }
 }

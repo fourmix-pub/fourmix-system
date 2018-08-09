@@ -13,8 +13,13 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
+        // ユーザー作成したらメールを送信する
         'App\Events\ModelEvents\UserCreated' => [
             'App\Listeners\ModelEventListener\User\SendInviteMail',
+        ],
+        // 安否確認メールを作成したらメール送信する
+        'App\Events\ModelEvents\SafetyMailCreated' => [
+            'App\Listeners\ModelEventListener\SafetyMail\SendSafetyMail',
         ],
     ];
 

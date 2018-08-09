@@ -2,11 +2,21 @@
 
 namespace App\Models;
 
+use App\Events\ModelEvents\SafetyMailCreated;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class SafetyMail extends Model
 {
+    /**
+     * タイミングイベント定義。
+     *
+     * @var array
+     */
+    protected $dispatchesEvents = [
+        'created' => SafetyMailCreated::class,
+    ];
+
     /**
      * 安否回答者取得方法.
      * 1対1.

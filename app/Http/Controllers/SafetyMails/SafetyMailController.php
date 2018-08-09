@@ -4,8 +4,11 @@ namespace App\Http\Controllers\SafetyMails;
 
 use App\Contracts\Repositories\SafetyMailRepositoryContract;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SafetyMailRequest;
 use App\Models\SafetyMail;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class SafetyMailController extends Controller
 {
@@ -46,14 +49,14 @@ class SafetyMailController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * メールの新規作成の方法
+     * @param SafetyMailRequest $request
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(SafetyMailRequest $request)
     {
-        //
+        $this->repository->create($request);
+        return redirect()->route('safety-mails.index')->with('status', '追加しました');
     }
 
     /**

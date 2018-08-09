@@ -9,4 +9,11 @@ interface SafetyMailRepositoryContract
      * @return mixed
      */
     public function safetyMailResources();
+
+    /**
+     * 安否確認メール新規作成契約
+     * @param $request
+     * @return mixed
+     */
+    public function create($request);
 }
