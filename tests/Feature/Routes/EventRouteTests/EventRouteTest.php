@@ -62,7 +62,7 @@ class EventRouteTest extends TestCase
             ],
         ];
 
-        $response = $this->actingAs($this->user)->post('/events', array_merge($data,$date, ['_token' => csrf_token()]));
+        $response = $this->actingAs($this->user)->post('/events', array_merge($data, $date, ['_token' => csrf_token()]));
         $this->assertDatabaseHas('events', $data);
         $this->assertDatabaseHas('event_dates', ['date' => Carbon::today()]);
         $response->assertStatus(302);
@@ -86,7 +86,7 @@ class EventRouteTest extends TestCase
             ],
         ];
 
-        $response = $this->actingAs($this->user)->post('/events', array_merge($data, $date,['_token' => csrf_token()]));
+        $response = $this->actingAs($this->user)->post('/events', array_merge($data, $date, ['_token' => csrf_token()]));
         $response->assertStatus(302);
         $response->assertSessionHasErrors(['title','location','dates.0']);
     }
