@@ -75,7 +75,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('safety-mails', 'SafetyMails\SafetyMailController', [
         'only' => [
-            'index',
+            'index','create','store',
         ]
     ]);
 
@@ -159,3 +159,6 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+
+Route::get('safety-mails/confirmation-update/{token}', 'SafetyMails\ConfirmationUpdateController@update')
+    ->name('confirmation');

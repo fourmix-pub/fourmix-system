@@ -1,12 +1,15 @@
 @component('mail::message')
-# Introduction
+# {{ $safetyMail->title }}
 
-The body of your message.
+{{ $safetyMail->contents }}
 
-@component('mail::button', ['url' => ''])
-Button Text
+@component(
+'mail::button',
+['url' => route('confirmation', ['token' => encrypt($safetyMail->id.'/'.$user->id)])]
+)
+安全
 @endcomponent
 
-Thanks,<br>
+宜しくお願いします。<br>
 {{ config('app.name') }}
 @endcomponent

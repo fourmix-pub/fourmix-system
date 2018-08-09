@@ -40,5 +40,7 @@
             $('[data-toggle="popover"]').popover();
         });
     </script>
+
+    @yield('js')
 </body>
 </html>
