@@ -27,5 +27,4 @@ interface WeekSchedulesRepositoryContract
      *
      */
     public function update($request);
-
-    }
+}
