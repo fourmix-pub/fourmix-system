@@ -31,7 +31,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="fc-left"></div>
                         <div class="fc-right">
-                            <a href="{{ route('week-schedules.add') }}">
+                            <a href="{{ route('week-schedules.create') }}">
                                 <button type="button" class="btn btn-danger pull-right" style="margin-right: 10px;" data-toggle="modal" data-target="#create-">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                     <span class="hidden-xs">追加</span>
@@ -52,7 +52,7 @@
                             <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                        <a href="{{ route('#') }}">
+                                        <a href="#">
                                             <h3>{{ $weekSchedule->date }}</h3>
                                         </a>
                                     </div>

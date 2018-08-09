@@ -183,8 +183,11 @@ Route::view('/test/schedule_detail', 'mocks.schedule_detail');
 */
 
 //予定閲覧
-Route::get('/schedules/view', 'Schedules\WeekScheduleController@index')->name('week-schedules.view');
-Route::get('/schedules/my-schedule', 'Schedules\MyScheduleController@index')->name('my-schedules.view');
-//新規追加、編集
-Route::get('/schedules/add', 'Schedules\MyScheduleController@create')->name('week-schedules.add');
-Route::post('/schedules/add', 'Schedules\MyScheduleController@store')->name('week-schedules.store');
+Route::get('/schedules/index', 'Schedules\WeekScheduleController@index')->name('week-schedules.index');
+Route::get('/schedules/my-schedule', 'Schedules\MyScheduleController@index')->name('my-schedules.index');
+//新規追加
+Route::get('/schedules/create', 'Schedules\MyScheduleController@create')->name('week-schedules.create');
+Route::post('/schedules/create', 'Schedules\MyScheduleController@store')->name('week-schedules.store');
+//編集
+Route::get('/schedules/edit{schedule}', 'Schedules\MyScheduleController@edit')->name('week-schedule.edit');
+Route::put('/schedules/{schedule}', 'Schedules\MyScheduleController@update')->name('week-schedule.update');

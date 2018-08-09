@@ -26,6 +26,7 @@ class ProjectRouteTest extends TestCase
     public function setUp()
     {
         parent::setUp();
+        \Event::fake();
         $this->user = factory(User::class)->create();
         $this->project = factory(Project::class)->create();
     }

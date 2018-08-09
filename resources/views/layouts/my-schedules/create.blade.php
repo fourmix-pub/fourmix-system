@@ -28,7 +28,7 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="fc-toolbar fc-header-toolbar">
                 <div class="fc-left">
-                    <button type="button" class="btn btn-primary" onclick="location.href= '{{ route('my-schedules.view') }}'">
+                    <button type="button" class="btn btn-primary" onclick="location.href= '{{ route('my-schedules.index') }}'">
                         <i class="glyphicon glyphicon-arrow-left" aria-hidden="true"></i><span>戻る</span>
                     </button>
                 </div>
@@ -96,7 +96,7 @@
         </div>
     </div>
             <div align="center">
-                <button type="submit" class="btn registration-daily" onclick="location.href= '{{ route('my-schedules.view') }}'">登録</button>
+                <button type="submit" class="btn registration-daily" onclick="location.href= '{{ route('my-schedules.index') }}'">登録</button>
             </div>
     </form>
 @endsection

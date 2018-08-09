@@ -21,4 +21,11 @@ interface WeekSchedulesRepositoryContract
      *
      */
     public function create($request);
+
+    /**
+     * 個人予定更新.
+     *
+     */
+    public function update($request);
+
     }

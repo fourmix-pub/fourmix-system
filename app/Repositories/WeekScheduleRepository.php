@@ -57,4 +57,20 @@ class WeekScheduleRepository implements WeekSchedulesRepositoryContract
 
         return $schedule->save();
     }
+
+    /**
+     * 個人予定更新.
+     *
+     */
+    public function update($request)
+    {
+        $schedule = new WeekSchedule();
+        $schedule->user_id = auth()->user()->id;
+        $schedule->date = $request->get('date');
+        $schedule->schedule = $request->get('schedule');
+        $schedule->result = $request->get('result');
+        $schedule->share = $request->get('share');
+
+        return $schedule->update();
+    }
 }
