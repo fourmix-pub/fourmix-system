@@ -36,7 +36,7 @@ class ScheduleRouteTest extends TestCase
      */
     public function it_can_access_index()
     {
-        $response = $this->actingAs($this->user)->get('/schedules/view');
+        $response = $this->actingAs($this->user)->get('/schedules/index');
         $response->assertStatus(200);
         $response->assertViewHasAll(['userId', 'user', 'weekSchedules', 'users']);
     }
@@ -46,9 +46,9 @@ class ScheduleRouteTest extends TestCase
      */
     public function it_can_access_create()
     {
-        $response = $this->actingAs($this->user)->get('/schedules/add');
+        $response = $this->actingAs($this->user)->get('/schedules/create');
         $response->assertStatus(200);
-        $response->assertViewIs('layouts.my-schedules.add');
+        $response->assertViewIs('layouts.my-schedules.create');
         $response->assertViewHasAll(['collections']);
     }
 
@@ -68,7 +68,7 @@ class ScheduleRouteTest extends TestCase
         //保存するためのデータをPOSTする
         //URL（week-schedules.store）を流す
         $response = $this->actingAs($this->user)
-            ->post('/schedules/add', array_merge($value, ['_token' => csrf_token()]));
+            ->post('/schedules/create', array_merge($value, ['_token' => csrf_token()]));
 
         //コントローラを呼ぶ
         //コントローラで保存される
