@@ -14,7 +14,9 @@ class EventEntryPivotTest extends TestCase
      * イベントエントリーモデル（3パターン）
      * @var
      */
-    protected $eventEntryOne, $eventEntryTwo, $eventEntryThree;
+    protected $eventEntryOne;
+    protected $eventEntryTwo;
+    protected $eventEntryThree;
 
     /**
      * イベントエントリーモデル（例外）
