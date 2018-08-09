@@ -121,5 +121,4 @@ class User extends Authenticatable
     {
         return $this->hasMany(WeekSchedule::class, 'user_id', 'id');
     }
-
 }

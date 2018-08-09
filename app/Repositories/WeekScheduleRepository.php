@@ -16,13 +16,13 @@ class WeekScheduleRepository implements WeekSchedulesRepositoryContract
     public function weekScheduleResources()
     {
         $userId = request('user_id');
-        if (request('user_id') == null){
+        if (request('user_id') == null) {
             $userId = auth()->user()->id;
         }
         $user = User::find($userId);
         $weekSchedules = WeekSchedule::where('user_id', $user->id)->orderBy('date', 'desc')->paginate(5);
         $users = User::all();
-        return compact( 'userId', 'user', 'weekSchedules', 'users');
+        return compact('userId', 'user', 'weekSchedules', 'users');
     }
 
     /**
@@ -32,13 +32,13 @@ class WeekScheduleRepository implements WeekSchedulesRepositoryContract
 
     public function createResources()
     {
-            $collections = collect ([]);
-            $weeks = 4;
-            for ($cont = 0; $cont < $weeks; $cont++) {
-                $date = \Carbon\Carbon::now()->addWeeks($cont)->startOfWeek();
-                $collections->push(['key'=>$date->format('Y-m-d'), 'value'=>$date->format('m月d日')]);
-            }
-            return compact('collections');
+        $collections = collect([]);
+        $weeks = 4;
+        for ($cont = 0; $cont < $weeks; $cont++) {
+            $date = \Carbon\Carbon::now()->addWeeks($cont)->startOfWeek();
+            $collections->push(['key'=>$date->format('Y-m-d'), 'value'=>$date->format('m月d日')]);
+        }
+        return compact('collections');
     }
 
     /**
