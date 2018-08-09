@@ -77,7 +77,5 @@ class ScheduleRouteTest extends TestCase
         $this->assertDatabaseHas('week_schedules', $value);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
-
     }
-
 }
