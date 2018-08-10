@@ -4,11 +4,15 @@ namespace App\Http\Controllers\SafetyMails;
 
 use App\Models\SafetyConfirmation;
 use Illuminate\Contracts\Encryption\DecryptException;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class ConfirmationUpdateController extends Controller
 {
+    /**
+     * 安否確認情報を更新する方法
+     * @param $token
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function update($token)
     {
         $data = explode('/', decrypt($token));

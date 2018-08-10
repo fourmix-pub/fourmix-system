@@ -15,6 +15,31 @@
                 $("#safetyMail-form").method = "post";
                 $("#safetyMail-form").submit();
             });
+
+            $("#send-test-mail").click(function () {
+                let title = $("#safetyMail-form [name=title]").val();
+                let contents = $("#safetyMail-form [name=contents]").val();
+                let testMail = $("#test-mail").val();
+
+                axios.post('{{ route('ajax.safety-mails.test-mail') }}', {
+                    title: title,
+                    contents: contents,
+                    email: testMail,
+                }).then(function (response) {
+                    if (response.data.status === 'OK') {
+                        alert('送信が完了しました');
+                    }
+                }).catch(function (error) {
+                    let errors = error.response.data.errors;
+                    var messages = '送信に失敗しました' + '\n';
+                    $.each(errors, function (index, obj) {
+                        $.each(obj, function (index, message) {
+                            messages += message + '\n';
+                        })
+                    });
+                    alert(messages);
+                });
+            });
         });
     </script>
 @endsection
@@ -45,19 +70,20 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 7px;">
                                     <h4>タイトル</h4>
-                                    <input type="text" name="title" class="form-control" placeholder="20文字以内">
+                                    <input type="text" name="title" class="form-control" placeholder="20文字以内"
+                                    value="{{ old('title') }}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <h4>本文</h4>
-                                    <textarea name="contents" rows="15"  class="form-control textarea-resize" data-provide="markdown" placeholder=" Markdown" placeholder="1000文字以内"></textarea>
+                                    <textarea name="contents" rows="15"  class="form-control textarea-resize" data-provide="markdown" placeholder=" Markdown" placeholder="1000文字以内">{{ old('contents') }}</textarea>
                                 </div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <input type="email" name="testMail" class="form-control"
+                                    <input id="test-mail" type="email" name="testMail" class="form-control"
                                            placeholder="メールアドレスを入力(テスト送信用)">
                                 </div>
                             </div>
@@ -67,7 +93,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" align="center">
-                                <button type="button" class="btn registration-daily">
+                                <button id="send-test-mail" type="button" class="btn registration-daily">
                                     <span>
                                         <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
                                         テスト送信

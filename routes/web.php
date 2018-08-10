@@ -8,6 +8,10 @@
 
 Route::middleware(['auth'])->group(function () {
 
+    Route::group(['prefix' => 'ajax'], function () {
+        Route::post('safety-mails/send-test', 'SafetyMails\SafetyMailController@ajaxSendTestMail')->name('ajax.safety-mails.test-mail');
+    });
+
     /*
     |--------------------------------------------------------------------------
     | 作業日報
@@ -159,6 +163,13 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+
+
+/*
+|--------------------------------------------------------------------------
+| 安否確認機能　安否情報の更新ルート
+|--------------------------------------------------------------------------
+*/
 
 Route::get('safety-mails/confirmation-update/{token}', 'SafetyMails\ConfirmationUpdateController@update')
     ->name('confirmation');

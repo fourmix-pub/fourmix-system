@@ -23,15 +23,13 @@ class SafetyMailRepository implements SafetyMailRepositoryContract
      * @param $request
      * @return mixed
      */
-    public function create($request): SafetyMail
+    public function create($request)
     {
         $safetyMail = new SafetyMail();
         $safetyMail->contents = $request->contents;
         $safetyMail->title = $request->title;
         $safetyMail->user_id = $request->user()->id;
         $safetyMail->save();
-
         $safetyMail->users()->attach(User::notResignation()->get());
-        return $safetyMail;
     }
 }

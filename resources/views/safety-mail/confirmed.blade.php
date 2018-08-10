@@ -1,6 +1,1 @@
-@component('mail::message')
-# ご協力ありがとうございました。
-
-
-{{ config('app.name') }}
-@endcomponent
+ご協力ありがとうございます。

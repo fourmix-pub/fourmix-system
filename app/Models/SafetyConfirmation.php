@@ -5,6 +5,9 @@ namespace App\Models;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property  user_id
+ */
 class SafetyConfirmation extends Model
 {
     /**

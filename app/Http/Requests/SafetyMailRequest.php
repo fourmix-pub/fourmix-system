@@ -26,7 +26,6 @@ class SafetyMailRequest extends FormRequest
         return [
             'title' => 'required|string|max: 20',
             'contents' => 'required|string|max: 1000',
-            'testMail' => 'nullable|email',
         ];
     }
 }

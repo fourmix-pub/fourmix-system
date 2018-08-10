@@ -5,8 +5,8 @@ namespace App\Http\Controllers\SafetyMails;
 use App\Contracts\Repositories\SafetyMailRepositoryContract;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SafetyMailRequest;
+use App\Mail\SafetyTestMail;
 use App\Models\SafetyMail;
-use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -100,5 +100,16 @@ class SafetyMailController extends Controller
     public function destroy(SafetyMail $safetyMail)
     {
         //
+    }
+
+    public function ajaxSendTestMail(Request $request)
+    {
+        $this->validate($request, [
+            'title' => 'required|string|max: 20',
+            'contents' => 'required|string|max: 1000',
+            'email' => 'required|email',
+        ]);
+
+        return response()->json(['status' => 'OK'], 200);
     }
 }
