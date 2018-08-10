@@ -12,5 +12,4 @@ use App\Contracts\Repositories\SafetyConfirmationRepositoryContract;
 
 class SafetyConfirmationRepository implements SafetyConfirmationRepositoryContract
 {
-
 }
