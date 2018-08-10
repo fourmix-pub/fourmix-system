@@ -60,17 +60,17 @@ class WeekScheduleRepository implements WeekSchedulesRepositoryContract
 
     /**
      * 個人予定更新.
-     *
+     * @param $request
+     * @param WeekSchedule $weekSchedule
+     * @return bool
      */
-    public function update($request)
+    public function update($request, WeekSchedule $weekSchedule): bool
     {
-        $schedule = new WeekSchedule();
-        $schedule->user_id = auth()->user()->id;
-        $schedule->date = $request->get('date');
-        $schedule->schedule = $request->get('schedule');
-        $schedule->result = $request->get('result');
-        $schedule->share = $request->get('share');
+        $weekSchedule->user_id = auth()->user()->id;
+        $weekSchedule->schedule = $request->get('schedule');
+        $weekSchedule->result = $request->get('result');
+        $weekSchedule->share = $request->get('share');
 
-        return $schedule->update();
+        return $weekSchedule->update();
     }
 }

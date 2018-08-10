@@ -137,6 +137,9 @@ return [
         'end_expect'            => '完了予定日',
         'department_id'         => '部署',
         'type_id'               => '顧客種類',
+        'schedule'              =>'予定',
+        'result'                =>'結果',
+        'share'                 =>'共有事項',
 
     ],
     'start_time' => '時間が重複しています。',

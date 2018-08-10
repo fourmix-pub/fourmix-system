@@ -187,7 +187,10 @@ Route::get('/schedules/index', 'Schedules\WeekScheduleController@index')->name('
 Route::get('/schedules/my-schedule', 'Schedules\MyScheduleController@index')->name('my-schedules.index');
 //新規追加
 Route::get('/schedules/create', 'Schedules\MyScheduleController@create')->name('week-schedules.create');
-Route::post('/schedules/create', 'Schedules\MyScheduleController@store')->name('week-schedules.store');
+Route::post('/schedules', 'Schedules\MyScheduleController@store')->name('week-schedules.store');
 //編集
-Route::get('/schedules/edit{schedule}', 'Schedules\MyScheduleController@edit')->name('week-schedule.edit');
-Route::put('/schedules/{schedule}', 'Schedules\MyScheduleController@update')->name('week-schedule.update');
+Route::put('/schedules/{weekSchedule}', 'Schedules\MyScheduleController@update')->name('my-schedules.update');
+Route::get('/schedules/{weekSchedule}/edit', 'Schedules\MyScheduleController@edit')->name('my-schedules.edit');
+//詳細
+Route::get('/schedules/show/{weekSchedule}', 'Schedules\WeekScheduleController@show')->name('week-schedules.show');
+Route::get('show/schedules/{weekSchedule}', 'Schedules\MyScheduleController@show')->name('my-schedules.show');

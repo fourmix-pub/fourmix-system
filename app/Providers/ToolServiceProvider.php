@@ -27,5 +27,8 @@ class ToolServiceProvider extends ServiceProvider
         $this->app->singleton('analytics', function () {
             return $this->app->make(AnalyticsTools::class);
         });
+        $this->app->singleton('markdown', function () {
+            return $this->app->make(\ParsedownExtra::class);
+        });
     }
 }

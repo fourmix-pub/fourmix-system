@@ -2,6 +2,8 @@
 
 namespace App\Contracts\Repositories;
 
+use App\Models\WeekSchedule;
+
 interface WeekSchedulesRepositoryContract
 {
 
@@ -17,14 +19,17 @@ interface WeekSchedulesRepositoryContract
     public function createResources();
 
     /**
-     * 個人予定新規作成
-     *
+     * 個人予定新規作成.
+     * @param $request
+     * @return
      */
     public function create($request);
 
     /**
      * 個人予定更新.
-     *
+     * @param $request
+     * @param WeekSchedule $weekSchedule
+     * @return bool
      */
-    public function update($request);
+    public function update($request, WeekSchedule $weekSchedule): bool;
 }

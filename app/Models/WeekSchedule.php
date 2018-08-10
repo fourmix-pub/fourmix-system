@@ -20,4 +20,9 @@ class WeekSchedule extends Model
         return $this->hasOne(User::class, 'id', 'user_id');
     }
 
+    /**
+     * create()やupdate()で入力させない ブラックリスト
+     */
+    protected $guarded = [];
+
 }

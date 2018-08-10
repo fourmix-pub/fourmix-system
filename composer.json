@@ -14,6 +14,7 @@
     "require": {
         "php": ">=7.0.0",
         "aws/aws-sdk-php": "^3.45",
+        "erusev/parsedown-extra": "^0.7.1",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",

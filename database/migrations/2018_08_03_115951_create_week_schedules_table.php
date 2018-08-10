@@ -18,7 +18,7 @@ class CreateWeekSchedulesTable extends Migration
             $table->integer('user_id');
             $table->date('date');
             $table->string('schedule', 300);
-            $table->string('result', 300);
+            $table->string('result', 300)->nullable();
             $table->string('share', 500);
             $table->timestamps();
             $table->softDeletes();

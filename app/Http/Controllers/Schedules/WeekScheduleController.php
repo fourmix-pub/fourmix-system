@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Schedules;
 
-use App\WeekSchedule;
+use App\Models\WeekSchedule;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Contracts\Repositories\WeekSchedulesRepositoryContract;
@@ -31,7 +31,7 @@ class WeekScheduleController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
     public function create()
     {
@@ -41,8 +41,8 @@ class WeekScheduleController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  \Illuminate\Http\Request $request
+     * @return void
      */
     public function store(Request $request)
     {
@@ -52,19 +52,20 @@ class WeekScheduleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\WeekSchedule  $weekSchedule
+     * @param WeekSchedule $weekSchedule
      * @return \Illuminate\Http\Response
      */
     public function show(WeekSchedule $weekSchedule)
     {
-        //
+        return view('layouts.week-schedules.show', compact('weekSchedule'),
+            $this->repository->weekScheduleResources());
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\WeekSchedule  $weekSchedule
-     * @return \Illuminate\Http\Response
+     * @param WeekSchedule $weekSchedule
+     * @return void
      */
     public function edit(WeekSchedule $weekSchedule)
     {
@@ -74,9 +75,9 @@ class WeekScheduleController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\WeekSchedule  $weekSchedule
-     * @return \Illuminate\Http\Response
+     * @param  \Illuminate\Http\Request $request
+     * @param WeekSchedule $weekSchedule
+     * @return void
      */
     public function update(Request $request, WeekSchedule $weekSchedule)
     {
@@ -86,8 +87,8 @@ class WeekScheduleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\WeekSchedule  $weekSchedule
-     * @return \Illuminate\Http\Response
+     * @param WeekSchedule $weekSchedule
+     * @return void
      */
     public function destroy(WeekSchedule $weekSchedule)
     {

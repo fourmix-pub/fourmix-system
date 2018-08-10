@@ -52,7 +52,7 @@
                             <div class="col-xs-10 col-sm-10 col-md-11 col-lg-11">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                        <a href="#">
+                                        <a href="{{ route('my-schedules.show', compact('weekSchedule')) }}">
                                             <h3>{{ $weekSchedule->date }}</h3>
                                         </a>
                                     </div>
@@ -64,7 +64,7 @@
                                         <span class="schedule-contents">予定</span>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                {{ $weekSchedule->schedule }}
+                                                {{ markdown($weekSchedule->schedule) }}
                                             </div>
                                         </div>
                                     </div>
@@ -73,7 +73,7 @@
                                         <span class="schedule-contents">結果</span>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                {{ $weekSchedule->result }}
+                                                {{ markdown($weekSchedule->result) }}
                                             </div>
                                         </div>
                                     </div>
@@ -84,13 +84,13 @@
                                         <span class="schedule-contents">共有事項</span>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                                {{ $weekSchedule->share }}
+                                                {{ markdown($weekSchedule->share) }}
                                             </div>
                                         </div>
                                     </div>
                                     <br>
                                     <div align="right" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <a href="schedule_editing">
+                                        <a href="{{ route('my-schedules.edit', compact('weekSchedule')) }}">
                                             <button type="button" class="btn btn-warning" style="margin-right: 10px;" data-toggle="modal" data-target="#create">
                                                 <i class="glyphicon glyphicon-edit" aria-hidden="true"></i>
                                                 <span class="hidden-xs">編集</span>
