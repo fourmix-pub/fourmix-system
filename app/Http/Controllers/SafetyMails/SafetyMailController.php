@@ -111,7 +111,7 @@ class SafetyMailController extends Controller
         ]);
 
         Mail::to($request->input('email'))
-            ->send(new SafetyTestMail($request->input('title'),$request->input('contents')));
+            ->send(new SafetyTestMail($request->input('title'), $request->input('contents')));
         return response()->json(['status' => 'OK'], 200);
     }
 }

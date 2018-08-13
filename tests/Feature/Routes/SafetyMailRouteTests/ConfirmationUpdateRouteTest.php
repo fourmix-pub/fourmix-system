@@ -44,7 +44,6 @@ class ConfirmationUpdateRouteTest extends TestCase
      */
     public function it_can_update()
     {
-
         $data = [
             'mail_id' => 10000,
             'user_id' => 10000,

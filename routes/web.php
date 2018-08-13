@@ -7,7 +7,6 @@
 */
 
 Route::middleware(['auth'])->group(function () {
-
     Route::group(['prefix' => 'ajax'], function () {
         Route::post('safety-mails/send-test', 'SafetyMails\SafetyMailController@ajaxSendTestMail')
             ->name('ajax.safety-mails.test-mail');
