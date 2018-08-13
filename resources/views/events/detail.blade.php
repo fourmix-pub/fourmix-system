@@ -25,15 +25,6 @@
 
     {{-- コンテンツ --}}
     <div class="row">
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-            <p class="ev-info">
-                {{ $event->contents }}
-            </p>
-        </div>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-        </div>
-    </div>
-    <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <button type="button" class="btn btn-warning pull-right" aria-label="right Align"
                     data-toggle="modal" data-target="#ev-edit-Modal">
@@ -101,6 +92,16 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+            <p class="ev-info">
+                {{ $event->contents }}
+            </p>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        </div>
+    </div>
+    <div class="row">
     </div>
     <br>
     <div class="row">
