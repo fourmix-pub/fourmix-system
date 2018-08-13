@@ -161,4 +161,4 @@ Route::get('events/detail/{event}', 'Events\EventController@detail')->name('even
 Route::get('events/create', 'Events\EventController@create')->name('events.create');
 Route::post('events', 'Events\EventController@store')->name('events.store');
 //出欠登録
-Route::post('events/{event}/entry','Events\EventController@entry')->name('events.entry');
+Route::post('events/{event}/entry', 'Events\EventController@entry')->name('events.entry');

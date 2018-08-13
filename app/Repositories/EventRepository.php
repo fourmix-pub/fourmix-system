@@ -62,7 +62,7 @@ class EventRepository implements EventRepositoryContract
     public function entry($request, $event)
     {
         foreach ($request->get('day') as $key => $participation) {
-             EventEntry::updateOrCreate(
+            EventEntry::updateOrCreate(
                 ['user_id' => auth()->user()->id, 'date_id' => $key,],
                 ['participation' => $participation, 'updated_at' => Carbon::now()]
             );
