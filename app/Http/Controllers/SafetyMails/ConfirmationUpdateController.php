@@ -34,6 +34,6 @@ class ConfirmationUpdateController extends Controller
         $safetyConfirmation->is_confirmed = true;
         $safetyConfirmation->update();
 
-        return view('safety-mail.confirmed');
+        return view ('safety-mail.confirmed');
     }
 }

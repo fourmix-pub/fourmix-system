@@ -7,7 +7,7 @@
 'mail::button',
 ['url' => route('confirmation', ['token' => encrypt($safetyMail->id.'/'.$user->id)])]
 )
-安全
+    安全
 @endcomponent
 
 宜しくお願いします。<br>
