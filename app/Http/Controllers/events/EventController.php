@@ -4,6 +4,8 @@
 namespace App\Http\Controllers\Events;
 
 use App\Contracts\Repositories\EventRepositoryContract;
+use App\Http\Requests\Settings\EventEntryRequest;
+use App\Models\EventEntry;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -69,5 +71,16 @@ class EventController extends Controller
     public function create()
     {
         return view('events.create', $this->eventRepository->eventResources());
+    }
+
+    /**
+     * 出欠情報を保存
+     * @param  EventEntryRequest $request
+     * @param Event $event
+     * @return response
+     */
+    public function entry(EventEntryRequest $request, Event $event)
+    {
+        return response()->save($this->eventRepository->entry($request, $event));
     }
 }

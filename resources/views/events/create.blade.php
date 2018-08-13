@@ -38,7 +38,8 @@
                 </div>
                 <div class="form-group">
                     <label for="event-location">開催場所</label>
-                    <input type="text" class="form-control" name="location" id="event-location" value="{{ old('location') }}">
+                    <input type="text" class="form-control" name="location"
+                           id="event-location" value="{{ old('location') }}">
                 </div>
             </div>
         </div>
@@ -47,7 +48,8 @@
                 <div class="form-group">
                     <label for="event-datetime">開催日時</label>
                     <div class="add-input">
-                        <input type="text" class="form-control event-datetime" name="dates[]" value="{{ old('dates[]') }}">
+                        <input type="text" class="form-control event-datetime"
+                               name="dates[]" value="{{ old('dates[]') }}">
                     </div>
                 </div>
             </div>
@@ -68,12 +70,14 @@
                         $("#add-input-button").click(function () {
                             count++;
                             console.log(count);
-                            $(".add-input").append('<input type="text" class="form-control event-datetime" name=dates['+count+']>');
+                            $(".add-input").append(
+                                '<input type="text" class="form-control event-datetime"' +
+                                'name=dates['+count+']>'
+                            );
                             $('.event-datetime').datetimepicker({
                                 format : 'YYYY-MM-DD H:m',
                                 locale : 'ja',
                             });
-
                         });
                     });
                 </script>

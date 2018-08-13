@@ -1,12 +1,13 @@
 <?php
 
-
 namespace Tests\Feature\Routes\EventRouteTests;
 
 use App\Models\Event as EventModel;
 use Carbon\Carbon;
 use Tests\TestCase;
 use App\User;
+use App\Models\EventEntry;
+
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Event;
@@ -100,5 +101,28 @@ class EventRouteTest extends TestCase
         $response = $this->actingAs($this->user)->get('events/detail/1');
         $response->assertStatus(200);
         $response->assertViewHasAll(['event']);
+    }
+
+    /**
+     * 出欠の登録ができる
+     * @test
+     */
+    public function it_can_entry()
+    {
+        $data = [
+            "day" => [
+                4 => "1",
+                5 => "1",
+                6 => "1",
+             ]
+        ];
+        $response = $this->actingAs($this->user)->post(
+            'events/1/entry', array_merge($data, ['_token' => csrf_token()])
+        );
+        $this->assertDatabaseHas('event_entry', ['date_id' => 4, 'participation' => 1,]);
+        $this->assertDatabaseHas('event_entry', ['date_id' => 5, 'participation' => 1,]);
+        $this->assertDatabaseHas('event_entry', ['date_id' => 6, 'participation' => 1,]);
+        $response->assertStatus(302);
+        $response->assertSessionHas('status');
     }
 }

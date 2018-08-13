@@ -24,7 +24,7 @@ class EventDate extends Model
     {
         return $this->belongsToMany(
             User::class,
-            'event_entries',
+            'event_entry',
             'date_id',
             'user_id')
             ->withPivot('participation')

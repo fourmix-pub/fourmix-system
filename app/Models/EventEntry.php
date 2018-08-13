@@ -37,4 +37,13 @@ class EventEntry extends Pivot
                 break;
         }
     }
+
+    /**
+     * 更新日時定義
+     * @return string
+     */
+    public function getUpdatedAtColumn()
+    {
+        return 'updated_at';
+    }
 }

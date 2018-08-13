@@ -126,9 +126,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(
             EventDate::class,
-            'event_entries',
+            'event_entry',
             'user_id',
             'date_id'
-        );
+        )
+        ->withTimestamps();
     }
 }
