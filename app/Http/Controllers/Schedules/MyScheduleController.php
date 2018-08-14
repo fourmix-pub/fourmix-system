@@ -11,7 +11,7 @@ use App\Http\Requests\Settings\WeekScheduleRequest;
 
 class MyScheduleController extends Controller
 {
-    protected  $repository;
+    protected $repository;
 
     public function __construct(WeekSchedulesRepositoryContract $repository)
     {
@@ -95,5 +95,4 @@ class MyScheduleController extends Controller
         //return response()->delete(WeekSchedule::find($request->get('weekSchedule'))
         //->users()->detach($request->get('user_id')));
     }
-
 }
