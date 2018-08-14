@@ -3,13 +3,17 @@
 namespace Tests\Feature\Routes\SafetyMailRouteTests;
 
 use App\Events\ModelEvents\SafetyMailCreated;
+use App\Mail\SafetyTestMail;
 use App\Models\SafetyConfirmation;
-use App\Models\SafetyMail;
 use App\User;
+use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Event;
+use App\Mail\SafetyMail;
+
+
 
 class SafetyMailRouteTest extends TestCase
 {
@@ -70,9 +74,9 @@ class SafetyMailRouteTest extends TestCase
     }
 
     /**
- * 新規追加できない
- * @test
- */
+     * 新規追加できない
+     * @test
+     */
     public function it_can_not_add()
     {
         $value = [
@@ -92,16 +96,24 @@ class SafetyMailRouteTest extends TestCase
      */
     public function it_can_send_testMail()
     {
+        Mail::fake();
+
         $value = [
             'title' => 'テストメール',
             'contents' => 'テストテストテストテストテストテストテスト',
             'email' => 'test@fourmix.co.jp',
         ];
 
-
         $response = $this->actingAs($this->user)
             ->post(route('ajax.safety-mails.test-mail', array_merge($value, ['_token' => csrf_token()])));
         $response->assertStatus(200);
         $response->assertJson(['status' => 'OK']);
+
+        Mail::assertSent(SafetyTestMail::class, function ($mail) use ($value) {
+            return $mail->build()->viewData['title'] === $value['title'];
+        });
+        Mail::assertSent(SafetyTestMail::class, function ($mail) use ($value) {
+            return $mail->hasTo($value['email']);
+        });
     }
 }
