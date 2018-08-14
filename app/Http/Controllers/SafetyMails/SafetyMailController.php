@@ -66,6 +66,7 @@ class SafetyMailController extends Controller
      */
     public function show()
     {
+
     }
 
     /**
