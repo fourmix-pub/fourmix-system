@@ -24,5 +24,4 @@ class WeekSchedule extends Model
      * create()やupdate()で入力させない ブラックリスト
      */
     protected $guarded = [];
-
 }
