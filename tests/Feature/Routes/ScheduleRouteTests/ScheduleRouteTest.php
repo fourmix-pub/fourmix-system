@@ -29,6 +29,7 @@ class ScheduleRouteTest extends TestCase
         Event::fake();
         $this->user = factory(User::class)->create();
         $this->weekSchedule = WeekSchedule::create([
+            'id' => 11111,
             "schedule" => "予定テスト",
             "date" => "2018-08-10",
             "user_id" => 1,
@@ -115,7 +116,7 @@ class ScheduleRouteTest extends TestCase
      */
     public function it_can_access_detail()
     {
-        $response = $this->actingAs($this->user)->get('/schedules/show/1');
+        $response = $this->actingAs($this->user)->get('/schedules/show/11111');
         $response->assertStatus(200);
         $response->assertViewHasAll(['userId', 'user', 'weekSchedules', 'users']);
     }
