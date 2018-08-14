@@ -26,8 +26,8 @@ class SafetyMailRepository implements SafetyMailRepositoryContract
     public function create($request)
     {
         $safetyMail = new SafetyMail();
-        $safetyMail->contents = $request->contents;
-        $safetyMail->title = $request->title;
+        $safetyMail->contents = $request->input('contents');
+        $safetyMail->title = $request->input('title');
         $safetyMail->user_id = $request->user()->id;
         $safetyMail->save();
         $safetyMail->users()->attach(User::notResignation()->get());

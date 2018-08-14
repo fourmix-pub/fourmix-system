@@ -52,7 +52,7 @@ class ConfirmationUpdateRouteTest extends TestCase
         ];
 
         $response = $this->get(route('confirmation', [
-            'token' => encrypt($this->safetyConfirmation->user_id.'/'.$this->safetyConfirmation->mail_id)
+            'token' => encrypt($this->safetyConfirmation->mail_id.'/'.$this->safetyConfirmation->user_id)
         ]));
         $this->assertDatabaseHas('safety_confirmations', $data);
         $response->assertStatus(200);

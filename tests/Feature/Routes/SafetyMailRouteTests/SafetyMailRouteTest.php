@@ -68,9 +68,9 @@ class SafetyMailRouteTest extends TestCase
     }
 
     /**
-     * 新規追加できない
-     * @test
-     */
+ * 新規追加できない
+ * @test
+ */
     public function it_can_not_add()
     {
         $value = [
@@ -82,5 +82,23 @@ class SafetyMailRouteTest extends TestCase
             ->post('/safety-mails', array_merge($value, ['_token' => csrf_token()]));
         $response->assertStatus(302);
         $response->assertSessionHasErrors('title');
+    }
+
+    /**
+     * テストメールを送信できる
+     * @test
+     */
+    public function it_can_send_testMail()
+    {
+        $value = [
+            'title' => 'テストメール',
+            'contents' => 'テストテストテストテストテストテストテスト',
+            'email' => 'test@fourmix.co.jp',
+        ];
+
+        $response = $this->actingAs($this->user)
+            ->post(route('ajax.safety-mails.test-mail', array_merge($value, ['_token' => csrf_token()])));
+        $response->assertStatus(200);
+        $response->assertJson(['status' => 'OK']);
     }
 }
