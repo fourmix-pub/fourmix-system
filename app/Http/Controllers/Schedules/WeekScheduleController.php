@@ -8,11 +8,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Contracts\Repositories\WeekSchedulesRepositoryContract;
 
-
 class WeekScheduleController extends Controller
 {
-
-   protected  $repository;
+    protected $repository;
 
     public function __construct(WeekSchedulesRepositoryContract $repository)
     {
@@ -95,6 +93,4 @@ class WeekScheduleController extends Controller
     {
         //
     }
-
-
 }
