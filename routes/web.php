@@ -194,3 +194,6 @@ Route::get('/schedules/{weekSchedule}/edit', 'Schedules\MyScheduleController@edi
 //詳細
 Route::get('/schedules/show/{weekSchedule}', 'Schedules\WeekScheduleController@show')->name('week-schedules.show');
 Route::get('show/schedules/{weekSchedule}', 'Schedules\MyScheduleController@show')->name('my-schedules.show');
+//コメント
+//Route::get('/schedules/{weekSchedule}/comment', 'WeekScheduleController@create')->name('comments.create');
+//Route::post('/schedules/{weekSchedule}/comment', 'WeekScheduleController@store')->name('comments.store');

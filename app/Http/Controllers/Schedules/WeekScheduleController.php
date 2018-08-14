@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Schedules;
 
+use App\Http\Requests\Settings\WeekScheduleRequest;
 use App\Models\WeekSchedule;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -31,22 +32,22 @@ class WeekScheduleController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return void
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        return view('schedule.show', $this->repository->commentCreate());
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param WeekScheduleRequest $request
      * @return void
      */
-    public function store(Request $request)
+    public function store(WeekScheduleRequest $request)
     {
-        //
+        return response()->save($this->repository->create($request));
     }
 
     /**

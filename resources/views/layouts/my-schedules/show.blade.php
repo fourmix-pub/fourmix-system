@@ -174,7 +174,7 @@
                         <div class="modal-footer">
                             <div align="center">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">コメント送信</button>
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal">コメント送信</button>
                             </div>
                         </div>
                     </div>

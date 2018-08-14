@@ -19,7 +19,7 @@ class CreateWeekSchedulesTable extends Migration
             $table->date('date');
             $table->string('schedule', 300);
             $table->string('result', 300)->nullable();
-            $table->string('share', 500);
+            $table->string('share', 500)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

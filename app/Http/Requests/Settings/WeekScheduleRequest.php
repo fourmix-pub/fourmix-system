@@ -28,8 +28,8 @@ class WeekScheduleRequest extends FormRequest
                 {
                     return [
                         'schedule' => 'required|string|max:300',
-                        'result' => 'required|string|max:300',
-                        'share' => 'required|string|max:500',
+                        'result' => 'nullable|string|max:300',
+                        'share' => 'nullable|string|max:500',
                         'date' => 'required|date'
                     ];
                 }
@@ -39,7 +39,7 @@ class WeekScheduleRequest extends FormRequest
                     return [
                         'schedule' => 'required|string|max:300',
                         'result' => 'required|string|max:300',
-                        'share' => 'required|string|max:500',
+                        'share' => 'nullable|string|max:500',
                     ];
                 }
             case 'GET':

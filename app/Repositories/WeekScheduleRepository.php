@@ -73,4 +73,20 @@ class WeekScheduleRepository implements WeekSchedulesRepositoryContract
 
         return $weekSchedule->update();
     }
+
+    /**
+     * コメント作成
+     * @param $request
+     * @param WeekSchedule $weekSchedule
+     * @return
+     */
+    public function commentCreate($request, WeekSchedule $weekSchedule)
+    {
+        $comment = new Comment();
+        $comment->name = $request->input('name');
+        $comment->content = $request->input('content');
+        $comment->weekSchedule_id = $weekSchedule->id;
+
+        return $comment->save();
+    }
 }

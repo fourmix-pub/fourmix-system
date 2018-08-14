@@ -32,7 +32,7 @@ if (! function_exists('markdown')) {
      * @param $text
      * @return mixed
      */
-    function markdown(string $text): \Illuminate\Support\HtmlString
+    function markdown(?string $text): \Illuminate\Support\HtmlString
     {
         return new \Illuminate\Support\HtmlString(app('markdown')->text($text));
     }

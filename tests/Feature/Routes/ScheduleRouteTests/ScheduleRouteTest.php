@@ -30,7 +30,6 @@ class ScheduleRouteTest extends TestCase
         $this->user = factory(User::class)->create();
         $this->weekSchedule = WeekSchedule::create([
             "schedule" => "予定テスト",
-            "share" => "共有テスト",
             "date" => "2018-08-10",
             "user_id" => 1,
         ]);
@@ -107,5 +106,17 @@ class ScheduleRouteTest extends TestCase
         $this->assertDatabaseHas('week_schedules', $value);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
+    }
+
+    /**
+     * 個人予定
+     * 詳細表示
+     * @test
+     */
+    public function it_can_access_detail()
+    {
+        $response = $this->actingAs($this->user)->get('/schedules/show/1');
+        $response->assertStatus(200);
+        $response->assertViewHasAll(['userId', 'user', 'weekSchedules', 'users']);
     }
 }
