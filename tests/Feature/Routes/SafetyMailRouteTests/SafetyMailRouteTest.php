@@ -13,8 +13,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Event;
 use App\Mail\SafetyMail;
 
-
-
 class SafetyMailRouteTest extends TestCase
 {
     /**
