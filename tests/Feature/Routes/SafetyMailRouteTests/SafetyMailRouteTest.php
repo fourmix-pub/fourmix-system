@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Routes\SafetyMailRouteTests;
 
+use App\Events\ModelEvents\SafetyMailCreated;
 use App\Models\SafetyConfirmation;
 use App\Models\SafetyMail;
 use App\User;
@@ -65,6 +66,7 @@ class SafetyMailRouteTest extends TestCase
         $this->assertDatabaseHas('safety_mails', $value);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
+        Event::assertDispatched(SafetyMailCreated::class);
     }
 
     /**
@@ -95,6 +97,7 @@ class SafetyMailRouteTest extends TestCase
             'contents' => 'テストテストテストテストテストテストテスト',
             'email' => 'test@fourmix.co.jp',
         ];
+
 
         $response = $this->actingAs($this->user)
             ->post(route('ajax.safety-mails.test-mail', array_merge($value, ['_token' => csrf_token()])));
