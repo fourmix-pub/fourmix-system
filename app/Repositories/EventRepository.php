@@ -69,4 +69,17 @@ class EventRepository implements EventRepositoryContract
         }
         return true;
     }
+
+    /**
+     * OPEN/CLOSEの編集
+     * @param $request
+     * @param Event $event
+     * @return bool
+     */
+    public function update($request, Event $event)
+    {
+        $event->is_opened = $request->get('is_opened');
+
+        return $event->save();
+    }
 }

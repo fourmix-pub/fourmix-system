@@ -18,6 +18,7 @@ class CreateEventsTable extends Migration
             $table->string('title', 100);
             $table->string('contents', 1000)->nullable();
             $table->integer('user_id');
+            $table->boolean('is_opened')->default(true);
             $table->string('location', 100);
             $table->timestamps();
         });

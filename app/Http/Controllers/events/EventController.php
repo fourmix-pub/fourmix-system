@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Events;
 
 use App\Contracts\Repositories\EventRepositoryContract;
 use App\Http\Requests\Settings\EventEntryRequest;
+use App\Http\Requests\settings\EventUpdateRequest;
 use App\Models\EventEntry;
 use App\User;
 use Illuminate\Http\Request;
@@ -82,5 +83,16 @@ class EventController extends Controller
     public function entry(EventEntryRequest $request, Event $event)
     {
         return response()->save($this->eventRepository->entry($request, $event));
+    }
+
+    /**
+     * OPEN/CLOSEの編集
+     * @param EventUpdateRequest $request
+     * @param Event $event
+     * @return mixed
+     */
+    public function update(EventUpdateRequest $request, Event $event)
+    {
+        return response()->update($this->eventRepository->update($request, $event));
     }
 }

@@ -162,3 +162,5 @@ Route::get('events/create', 'Events\EventController@create')->name('events.creat
 Route::post('events', 'Events\EventController@store')->name('events.store');
 //出欠登録
 Route::post('events/{event}/entry', 'Events\EventController@entry')->name('events.entry');
+//OPEN/CLOSEの変更
+Route::put ('events/{event}/update', 'Events\EventController@update')->name('events.update');

@@ -9,6 +9,7 @@ $factory->define(App\Models\Event::class, function () use ($faker) {
         'title' => $faker->text(25),
         'contents' => $faker->realText(20, 5),
         'user_id' => 1,
+        'is_opened' => true,
         'location' => $faker->realText(20, 5),
     ];
 });

@@ -125,4 +125,37 @@ class EventRouteTest extends TestCase
         $response->assertStatus(302);
         $response->assertSessionHas('status');
     }
+
+    /**
+     * 編集できる
+     * @test
+     */
+    public function it_can_edit()
+    {
+        $data =[
+            'is_opened' => 1,
+        ];
+        $response = $this->actingAs($this->user)->put(
+            'events/'.$this->event->id.'/update', array_merge($data, ['_token' => csrf_token()]
+            ));
+        $this->assertDatabaseHas('events', $data);
+        $response->assertStatus(302);
+        $response->assertSessionHas('status');
+    }
+
+    /**
+     *　編集できない.
+     * @test
+     */
+    public function it_can_not_edit()
+    {
+        $data = [
+            'is_opened' => '3',
+        ];
+        $response = $this->actingAs($this->user)->put(
+            'events/'.$this->event->id.'/update', array_merge($data, ['_token' => csrf_token()])
+        );
+        $response->assertStatus(302);
+        $response->assertSessionHasErrors('is_opened');
+    }
 }

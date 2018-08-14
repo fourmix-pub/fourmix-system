@@ -114,7 +114,7 @@ class User extends Authenticatable
     }
 
     /**
-     * イベントテーブル
+     * イベントエントリーテーブル
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function events()

@@ -48,7 +48,11 @@
                         <a href="{{ route('events.detail', compact('event')) }}">
                             {{ $event->title }}
                         </a>
+                        @if ($event->is_opened)
                             <span class="label label-danger">OPEN</span>
+                           @else
+                            <span class="label label-primary">CLOSE</span>
+                        @endif
                         <br>
                         主催者：{{ $event->user->name }}
                         <br>
