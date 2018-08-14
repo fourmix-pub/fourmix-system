@@ -68,5 +68,10 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Contracts\Tools\CalculateContract',
             'App\Tools\Analytics\Calculate'
         );
+        //予定管理レポジトリー契約
+        $this->app->bind(
+            'App\Contracts\Repositories\WeekSchedulesRepositoryContract',
+            'App\Repositories\WeekScheduleRepository'
+        );
     }
 }

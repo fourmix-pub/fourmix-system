@@ -5,7 +5,7 @@ namespace Tests;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
-abstract class TestCase extends BaseTestCase
+class TestCase extends BaseTestCase
 {
     use CreatesApplication, DatabaseTransactions;
 
@@ -17,6 +17,7 @@ abstract class TestCase extends BaseTestCase
 
     protected function assertBind($instance, $class)
     {
-        $this->assertTrue($instance instanceof $class, get_class($instance).' is not instanceof '.$class.'. assert bind failed');
+        $this->assertTrue($instance instanceof $class,
+            get_class($instance) . ' is not instanceof ' . $class . '. assert bind failed');
     }
 }

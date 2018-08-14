@@ -25,3 +25,15 @@ if (! function_exists('start_time')) {
         }
     }
 }
+
+if (! function_exists('markdown')) {
+    /**
+     * Text to Html.
+     * @param $text
+     * @return mixed
+     */
+    function markdown(?string $text): \Illuminate\Support\HtmlString
+    {
+        return new \Illuminate\Support\HtmlString(app('markdown')->text($text));
+    }
+}

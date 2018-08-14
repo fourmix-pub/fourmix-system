@@ -1,0 +1,30 @@
+
+#lunch {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/creative.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.5%;
+}
+button.back {
+    width: 56px;
+    height: 48px;
+}
+
+div.lunch-content > p {
+    font-size: 24px;
+}
+
+button.lunch-btn {
+    font-size: 32px;
+    width: 240px;
+    height: 64px;
+}
+
+h3.lunch-end {
+    color: #ff5810;
+}

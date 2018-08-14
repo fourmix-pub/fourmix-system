@@ -146,3 +146,54 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+
+/*
+|--------------------------------------------------------------------------
+| Mock関連ルート
+|--------------------------------------------------------------------------
+*/
+
+Route::view('/test', 'mocks.test');
+
+//イベント管理
+Route::view('/test/events', 'mocks.events.events');
+Route::view('/test/event-detail', 'mocks.events.detail');
+Route::view('/test/event-create', 'mocks.events.create');
+//ランチマッチング
+Route::view('/test/lunch', 'mocks.lunch');
+//安否確認
+Route::view('/test/safety-mails', 'mocks.safety-mails.index');
+Route::view('/test/mail-create', 'mocks.safety-mails.create');
+Route::view('/test/mail-confirmation', 'mocks.safety-mails.confirmation');
+//掲示板
+Route::view('/test/threads', 'mocks.threads.index');
+Route::view('/test/threads-create', 'mocks.threads.create');
+Route::view('/test/threads-detail', 'mocks.threads.detail');
+//予定確認
+Route::view('/test/my_schedule', 'mocks.my_schedule');
+Route::view('/test/schedule_create', 'mocks.schedule_create');
+Route::view('/test/schedule_editing', 'mocks.schedule_editing');
+Route::view('/test/schedule_view', 'mocks.schedule_view');
+Route::view('/test/schedule_detail', 'mocks.schedule_detail');
+
+/*
+|--------------------------------------------------------------------------
+| 予定確認関連ルート
+|--------------------------------------------------------------------------
+*/
+
+//予定閲覧
+Route::get('/schedules/index', 'Schedules\WeekScheduleController@index')->name('week-schedules.index');
+Route::get('/schedules/my-schedule', 'Schedules\MyScheduleController@index')->name('my-schedules.index');
+//新規追加
+Route::get('/schedules/create', 'Schedules\MyScheduleController@create')->name('week-schedules.create');
+Route::post('/schedules', 'Schedules\MyScheduleController@store')->name('week-schedules.store');
+//編集
+Route::put('/schedules/{weekSchedule}', 'Schedules\MyScheduleController@update')->name('my-schedules.update');
+Route::get('/schedules/{weekSchedule}/edit', 'Schedules\MyScheduleController@edit')->name('my-schedules.edit');
+//詳細
+Route::get('/schedules/show/{weekSchedule}', 'Schedules\WeekScheduleController@show')->name('week-schedules.show');
+Route::get('show/schedules/{weekSchedule}', 'Schedules\MyScheduleController@show')->name('my-schedules.show');
+//コメント
+//Route::get('/schedules/{weekSchedule}/comment', 'WeekScheduleController@create')->name('comments.create');
+//Route::post('/schedules/{weekSchedule}/comment', 'WeekScheduleController@store')->name('comments.store');
