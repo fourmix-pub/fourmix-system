@@ -12,7 +12,7 @@ class SafetyMailRepository implements SafetyMailRepositoryContract
      * 安否確認メール取得契約.
      * @return mixed
      */
-    public function safetyMailResources()
+    public function safetyMailResources(): array
     {
         $safetyMails = SafetyMail::latest()->paginate(5);
         return compact('safetyMails');
@@ -35,12 +35,15 @@ class SafetyMailRepository implements SafetyMailRepositoryContract
 
     /**
      * 安否確認メール取得契約(ビュー用).
-     * @param $id
-     * @return SafetyMail
+     * @param SafetyMail $safetyMail
+     * @return array
      */
-    public function safetyMailResourcesForShow($id): SafetyMail
+    public function safetyMailResourcesForShow(SafetyMail $safetyMail): array
     {
-        $safetyMail = SafetyMail::where('id', $id)->first();
-        return $safetyMail;
+        $safetyMail->load(['users' => function ($query) {
+            $query->with(['department']);
+        }]);
+
+        return compact('safetyMail');
     }
 }

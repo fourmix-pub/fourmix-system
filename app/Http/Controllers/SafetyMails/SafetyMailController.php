@@ -61,13 +61,12 @@ class SafetyMailController extends Controller
     }
 
     /**
-     * @param $id
+     * @param SafetyMail $safetyMail
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show($id)
+    public function show(SafetyMail $safetyMail)
     {
-        $users = $this->repository->safetyMailResourcesForShow($id)->users()->paginate(15);
-        return view('safety-mail.show', compact('users'));
+        return view('safety-mail.show', $this->repository->safetyMailResourcesForShow($safetyMail));
     }
 
     /**
@@ -104,6 +103,10 @@ class SafetyMailController extends Controller
         //
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function ajaxSendTestMail(Request $request)
     {
         $this->validate($request, [

@@ -79,10 +79,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('safety-mails', 'SafetyMails\SafetyMailController', [
         'only' => [
-            'index','create','store',
+            'index','create','store','show',
         ]
     ]);
-    Route::get('/safety-mails/show/{id}','SafetyMails\SafetyMailController@show');
 
     /*
     |--------------------------------------------------------------------------

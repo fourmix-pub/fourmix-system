@@ -37,14 +37,20 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($users as $user)
+                    @foreach($safetyMail->users as $user)
                     <tr>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->department->name }}</td>
                         <td>
+                            @if ( $user->confirmations->is_confirmed === 1 )
                                 <span class="label label-success safety-status">
-                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認済
+                                    <i class="glyphicon glyphicon-ok-sign" aria-hidden="true"></i> 確認済み
                                 </span>
+                            @else
+                                <span class="label label-default safety-status">
+                                    <i class="glyphicon glyphicon-question-sign" aria-hidden="true"></i> 未確認
+                                </span>
+                            @endif
                         </td>
                         <td>
                             <div class="checkbox">
@@ -55,22 +61,6 @@
                         </td>
                     </tr>
                     @endforeach
-                    <tr>
-                        <td>大澤乃梨子</td>
-                        <td>システムデザイングループ</td>
-                        <td>
-                                <span class="label label-default safety-status">
-                                    <i class="glyphicon glyphicon-question-sign" aria-hidden="true"></i> 未確認
-                                </span>
-                        </td>
-                        <td>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -82,14 +72,6 @@
             <button type="button" class="btn registration-daily pull-right" style="margin-right: 10px;">
                 <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i> <span>メール再送信</span>
             </button>
-        </div>
-    </div>
-    {{-- ページ --}}
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div align="center">
-                {{ $users->links() }}
-            </div>
         </div>
     </div>
 

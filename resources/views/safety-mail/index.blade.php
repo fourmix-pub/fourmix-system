@@ -13,7 +13,7 @@
         $(function(){
             $(".mail-onclick").click(function () {
                 let id = $(this).data('mail_id');
-                location.href = '/safety-mails/show/' + id;
+                location.href = '/safety-mails/' + id;
             });
         });
     </script>

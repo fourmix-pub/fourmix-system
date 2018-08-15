@@ -2,13 +2,15 @@
 
 namespace App\Contracts\Repositories;
 
+use App\Models\SafetyMail;
+
 interface SafetyMailRepositoryContract
 {
     /**
      * 安否確認メール取得契約.
      * @return mixed
      */
-    public function safetyMailResources();
+    public function safetyMailResources(): array;
 
     /**
      * 安否確認メール新規作成契約
@@ -19,8 +21,8 @@ interface SafetyMailRepositoryContract
 
     /**
      * 安否確認メール取得契約(ビュー用).
-     * @param $id
+     * @param SafetyMail $safetyMail
      * @return mixed
      */
-    public function safetyMailResourcesForShow($id);
+    public function safetyMailResourcesForShow(SafetyMail $safetyMail): array;
 }
