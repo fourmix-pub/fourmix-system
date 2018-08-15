@@ -158,4 +158,13 @@ class EventRouteTest extends TestCase
         $response->assertStatus(302);
         $response->assertSessionHasErrors('is_opened');
     }
+
+    public function it_can_delete()
+    {
+        $response = $this->actingAs($this->user)->delete(
+            'events/{event}/delete'.$this->event->id, ['_token' => csrf_token()]
+        );
+        $response->assertStatus(302);
+        $response->assertSessionHas('status');
+    }
 }

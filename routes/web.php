@@ -164,3 +164,5 @@ Route::post('events', 'Events\EventController@store')->name('events.store');
 Route::post('events/{event}/entry', 'Events\EventController@entry')->name('events.entry');
 //OPEN/CLOSEの変更
 Route::put('events/{event}/update', 'Events\EventController@update')->name('events.update');
+//イベント削除
+Route::delete('events/{event}/delete', 'Events\EventController@destroy')->name('events.destroy');

@@ -95,4 +95,16 @@ class EventController extends Controller
     {
         return response()->update($this->eventRepository->update($request, $event));
     }
+
+    /**
+     * イベント削除
+     * @param Event $event
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
+     */
+    public function destroy(Event $event)
+    {
+        $event->delete();
+        return redirect()->route('events.events')->with('status', '削除しました。');
+    }
 }

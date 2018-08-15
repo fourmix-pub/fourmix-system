@@ -82,12 +82,16 @@
                         <div class="modal-body">
                             イベント {{ $event->id }}： {{ $event->title }} を削除しますか？
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
-                            <button type="button" class="btn btn-danger" onclick="location.href='{{ url('events') }}'">
+                        <form action="{{ route('events.destroy', compact('event')) }}" method="post">
+                            {{ csrf_field() }}
+                            {{ method_field('delete') }}
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default closed" data-dismiss="modal">閉じる</button>
+                                <button type="submit" class="btn btn-danger">
                                 削除
-                            </button>
-                        </div>
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
