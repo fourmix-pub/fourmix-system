@@ -82,7 +82,7 @@ Route::middleware(['auth'])->group(function () {
             'index','create','store',
         ]
     ]);
-    Route::get('/safety-mails/show/{id}','SafetyMails\SafetyMailController@show');
+    Route::get('/safety-mails/show/{id}', 'SafetyMails\SafetyMailController@show');
 
     /*
     |--------------------------------------------------------------------------
