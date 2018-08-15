@@ -5,6 +5,7 @@ namespace Tests\Feature\Routes\SafetyMailRouteTests;
 use App\Events\ModelEvents\SafetyMailCreated;
 use App\Mail\SafetyTestMail;
 use App\Models\SafetyConfirmation;
+use App\Models\SafetyMail;
 use App\User;
 use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
@@ -110,5 +111,17 @@ class SafetyMailRouteTest extends TestCase
             return $mail->build()->viewData['title'] === $formData['title']
                 && $mail->hasTo($formData['email']);
         });
+    }
+
+    /**
+     * メール詳細を表示できる
+     * @test
+     */
+    public function it_can_access_show()
+    {
+        $safetyMail = factory(SafetyMail::class)->create();
+        $response = $this->actingAs($this->user)->get('/safety-mails/'.$safetyMail->id);
+        $response->assertStatus(200);
+        $response->assertViewHas(['safetyMail']);
     }
 }
