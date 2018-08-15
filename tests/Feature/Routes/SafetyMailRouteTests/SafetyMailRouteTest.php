@@ -11,7 +11,6 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Event;
-use App\Mail\SafetyMail;
 
 
 
@@ -60,14 +59,14 @@ class SafetyMailRouteTest extends TestCase
      */
     public function it_can_add()
     {
-        $value = [
+        $formData = [
             'title' => 'テストテストテストテスト',
             'contents' => 'テストテストテストテストテスト',
         ];
 
         $response = $this->actingAs($this->user)
-            ->post('/safety-mails', array_merge($value, ['_token' => csrf_token()]));
-        $this->assertDatabaseHas('safety_mails', $value);
+            ->post('/safety-mails', array_merge($formData, ['_token' => csrf_token()]));
+        $this->assertDatabaseHas('safety_mails', $formData);
         $response->assertStatus(302);
         $response->assertSessionHas('status');
         Event::assertDispatched(SafetyMailCreated::class);
@@ -79,13 +78,13 @@ class SafetyMailRouteTest extends TestCase
      */
     public function it_can_not_add()
     {
-        $value = [
+        $formData = [
             'title' => 'テストテストテストテストテストテストテストテスト',
             'contents' => 'テストテストテストテストテスト',
         ];
 
         $response = $this->actingAs($this->user)
-            ->post('/safety-mails', array_merge($value, ['_token' => csrf_token()]));
+            ->post('/safety-mails', array_merge($formData, ['_token' => csrf_token()]));
         $response->assertStatus(302);
         $response->assertSessionHasErrors('title');
     }
@@ -98,22 +97,20 @@ class SafetyMailRouteTest extends TestCase
     {
         Mail::fake();
 
-        $value = [
+        $formData = [
             'title' => 'テストメール',
             'contents' => 'テストテストテストテストテストテストテスト',
             'email' => 'test@fourmix.co.jp',
         ];
 
         $response = $this->actingAs($this->user)
-            ->post(route('ajax.safety-mails.test-mail', array_merge($value, ['_token' => csrf_token()])));
+            ->post(route('ajax.safety-mails.test-mail', array_merge($formData, ['_token' => csrf_token()])));
         $response->assertStatus(200);
         $response->assertJson(['status' => 'OK']);
 
-        Mail::assertSent(SafetyTestMail::class, function ($mail) use ($value) {
-            return $mail->build()->viewData['title'] === $value['title'];
-        });
-        Mail::assertSent(SafetyTestMail::class, function ($mail) use ($value) {
-            return $mail->hasTo($value['email']);
+        Mail::assertSent(SafetyTestMail::class, function ($mail) use ($formData) {
+            return $mail->build()->viewData['title'] === $formData['title']
+                && $mail->hasTo($formData['email']);
         });
     }
 }

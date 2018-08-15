@@ -16,4 +16,11 @@ interface SafetyMailRepositoryContract
      * @return mixed
      */
     public function create($request);
+
+    /**
+     * 安否確認メール取得契約(ビュー用).
+     * @param $id
+     * @return mixed
+     */
+    public function safetyMailResourcesForShow($id);
 }

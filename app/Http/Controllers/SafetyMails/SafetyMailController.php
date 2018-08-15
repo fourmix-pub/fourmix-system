@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\SafetyMailRequest;
 use App\Mail\SafetyTestMail;
 use App\Models\SafetyMail;
+use function GuzzleHttp\Promise\all;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -60,13 +61,13 @@ class SafetyMailController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @return void
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show()
+    public function show($id)
     {
-
+        $users = $this->repository->safetyMailResourcesForShow($id)->users()->paginate(15);
+        return view('safety-mail.show', compact('users'));
     }
 
     /**
