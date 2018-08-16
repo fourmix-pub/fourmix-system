@@ -19,5 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(DailySeeder::class);
         $this->call(ProjectSeeder::class);
         $this->call(PersonalBudgetSeeder::class);
+        $this->call(SafetyMailSeeder::class);
+        $this->call(SafetyConfirmationSeeder::class);
     }
 }

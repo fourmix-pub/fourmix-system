@@ -68,5 +68,10 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Contracts\Tools\CalculateContract',
             'App\Tools\Analytics\Calculate'
         );
+        //安否確認レポジトリー契約
+        $this->app->bind(
+            'App\Contracts\Repositories\SafetyMailRepositoryContract',
+            'App\Repositories\SafetyMailRepository'
+        );
     }
 }

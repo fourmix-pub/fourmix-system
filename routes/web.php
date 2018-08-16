@@ -7,6 +7,10 @@
 */
 
 Route::middleware(['auth'])->group(function () {
+    Route::group(['prefix' => 'ajax'], function () {
+        Route::post('safety-mails/send-test', 'SafetyMails\SafetyMailController@ajaxSendTestMail')
+            ->name('ajax.safety-mails.test-mail');
+    });
 
     /*
     |--------------------------------------------------------------------------
@@ -65,6 +69,20 @@ Route::middleware(['auth'])->group(function () {
         Route::get('projects/project-personal-budgets',
             'PersonalBudgetController@projectPersonalBudgets')->name('projects.budgets.personal');
     });
+
+    /*
+    |--------------------------------------------------------------------------
+    | ツール
+    |	安否確認ツール
+    |--------------------------------------------------------------------------
+    */
+
+    Route::resource('safety-mails', 'SafetyMails\SafetyMailController', [
+        'only' => [
+            'index','create','store','show',
+        ]
+    ]);
+    Route::post('safety-mails/resend{safetyMail}', 'SafetyMails\SafetyMailController@resend')->name('safety-mails.resend');
 
     /*
     |--------------------------------------------------------------------------
@@ -146,3 +164,13 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+
+
+/*
+|--------------------------------------------------------------------------
+| 安否確認機能　安否情報の更新ルート
+|--------------------------------------------------------------------------
+*/
+
+Route::get('safety-mails/confirmation-update/{token}', 'SafetyMails\ConfirmationUpdateController@update')
+    ->name('confirmation');
