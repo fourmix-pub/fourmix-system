@@ -82,6 +82,7 @@ Route::middleware(['auth'])->group(function () {
             'index','create','store','show',
         ]
     ]);
+    Route::post('safety-mails/resend{safetyMail}', 'SafetyMails\SafetyMailController@resend')->name('safety-mails.resend');
 
     /*
     |--------------------------------------------------------------------------

@@ -104,6 +104,15 @@ class SafetyMailController extends Controller
     }
 
     /**
+     * メール再送信
+     * @param Request $request
+     */
+    public function resend(Request $request, SafetyMail $safetyMail)
+    {
+        dd($request->usersId);
+    }
+
+    /**
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
