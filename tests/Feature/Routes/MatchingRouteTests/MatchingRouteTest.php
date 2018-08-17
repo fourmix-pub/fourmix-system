@@ -19,7 +19,7 @@ class MatchingRouteTest extends TestCase
     private $user;
 
     /**
-     * テスト用マッチング
+     * テストマッチング
      * @var
      */
     private $match;
