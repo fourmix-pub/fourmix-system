@@ -9,7 +9,6 @@ use App\User;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-
 class MatchingRouteTest extends TestCase
 {
     /**
