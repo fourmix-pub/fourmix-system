@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    test
+    イベント詳細
 @endsection
 
 @php
@@ -42,8 +42,9 @@
                             <h4 class="modal-title" id="myModalLabel">参加受け付けの設定</h4>
                         </div>
                         <div class="modal-body">
-                            <form action="{{ route('events.update', compact('event'))}}" method="put">
+                            <form action="{{ route('events.update', compact('event'))}}" method="post">
                                 {{ csrf_field() }}
+                                {{ method_field('put') }}
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-danger" style=" border: none; margin-bottom: 10px">
                                         <input type="radio" name="is_opened" value="1" autocomplete="off">OPEN

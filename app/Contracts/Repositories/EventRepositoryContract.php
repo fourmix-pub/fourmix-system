@@ -4,7 +4,6 @@ namespace App\Contracts\Repositories;
 
 interface EventRepositoryContract
 {
-
     /**
      * イベントのリソースを取得する
      * @return mixed

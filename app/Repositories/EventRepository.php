@@ -79,7 +79,6 @@ class EventRepository implements EventRepositoryContract
     public function update($request, Event $event)
     {
         $event->is_opened = $request->get('is_opened');
-
         return $event->save();
     }
 }

@@ -1,17 +1,25 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    @include('layouts.common.link')
-    <title>ランチマッチング</title>
-</head>
+@extends('layouts.app')
+
+@section('title')
+    ランチマッチング
+@endsection
+
+@php
+    $nav = 'tools';
+@endphp
+
+@include('layouts.common.link')
+
+
+@section('content')
+
     <body id="lunch">
-        @include('layouts.pageloader')
         <div class="container">
             <div class="row">
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
                     <div class="arrow">
                         <button type="button" class="btn btn-success back"
-                                onClick="location.href='http://fourmix-system.app/dailies'">
+                                onClick="location.href='http://fourmix-system.test/dailies'">
                             <span class="glyphicon glyphicon-arrow-left" aria-hidden="true">
                             </span>
                         </button>
@@ -46,14 +54,27 @@
                 </div>
             </div>
             <br>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
-                    <button type="button" class="btn btn-primary btn-lg lunch-btn">
-                        参加
-                    </button>
+            @if($match->participation ?? null)
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
+                        <div class="alert alert-info match-alt" role="alert"
+                             style="border: none; width: 320px; font-size: 24px;"> すでに参加登録済です</div>
+                    </div>
                 </div>
-            </div>
-            <br>
+            @else
+                <form action="{{ route('matching.entry') }}" method="post">
+                    {{ csrf_field() }}
+                    {{ method_field('put') }}
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
+                            <button type="submit" name="participation" value="1" class="btn btn-primary btn-lg lunch-btn">
+                                参加
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            @endif
+                <br>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
                     <h3 class="lunch-end">
@@ -64,4 +85,4 @@
         </div>
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
-</html>
+@endsection

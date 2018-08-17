@@ -166,3 +166,13 @@ Route::post('events/{event}/entry', 'Events\EventController@entry')->name('event
 Route::put('events/{event}/update', 'Events\EventController@update')->name('events.update');
 //イベント削除
 Route::delete('events/{event}/delete', 'Events\EventController@destroy')->name('events.destroy');
+
+
+/*
+|--------------------------------------------------------------------------
+| ランチマッチング関連ルート
+|--------------------------------------------------------------------------
+*/
+//参加申し込み
+Route::get('matching', 'Matches\MatchController@index')->name('matching');
+Route::put('matching/entry', 'Matches\MatchController@update')->name('matching.entry');
