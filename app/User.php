@@ -4,6 +4,8 @@ namespace App;
 
 use App\Events\ModelEvents\UserCreated;
 use App\Models\Daily;
+use App\Models\EventDate;
+use App\Models\Match;
 use App\Models\Project;
 use App\Models\Department;
 use App\Models\PersonalBudget;
@@ -110,5 +112,34 @@ class User extends Authenticatable
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new ResetPasswordNotification($token));
+    }
+
+    /**
+     * イベントエントリーテーブル
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function events()
+    {
+        return $this->hasMany(Event::class, 'user_id', 'id');
+    }
+
+    public function eventDates()
+    {
+        return $this->belongsToMany(
+            EventDate::class,
+            'event_entry',
+            'user_id',
+            'date_id'
+        )
+        ->withTimestamps();
+    }
+
+    /**
+     * マッチングテーブル
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function matches()
+    {
+        return $this->hasMany(Match::class, 'user_id', 'id');
     }
 }

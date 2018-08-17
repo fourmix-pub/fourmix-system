@@ -1,0 +1,28 @@
+div.event-title > p {
+    font-size: 40px;
+}
+
+.ans-btn {
+    font-size: 32px;
+    width: 72px;
+}
+
+.ans-table th {
+    background-color: #ff5810;
+    color: #ffffff;
+}
+button.btn.btn-success.btn-lg.ev-ans-btn {
+    width: 126px;
+    height: 64px;
+    font-size: 24px;
+    align-content: center;
+}
+
+
+.ev-ans {
+    font-size: 24px;
+}
+
+.ev-info {
+    font-size: 16px;
+}

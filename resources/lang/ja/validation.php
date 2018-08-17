@@ -15,6 +15,7 @@ return [
     'accepted'             => ':attributeを承認してください。',
     'active_url'           => ':attributeは、有効な URL ではありません。',
     'after'                => ':attributeには、:date 以降の日付を指定してください。',
+    'after_or_equal'       => ':attributeは:date以降の日付にしてください。',
     'alpha'                => ':attributeには、アルファベッドのみ使用できます。',
     'alpha_dash'           => ":attributeには、英数字 ('A-Z','a-z','0-9') とハイフンと下線 ('-','_') が使用できます。",
     'alpha_num'            => ":attributeには、英数字('A-Z','a-z','0-9')が使用できます。",
@@ -116,6 +117,7 @@ return [
         'title'                 => 'タイトル',
         'content'               => '内容',
         'date'                  => '日付',
+        'dates.*'                  => '開催日時',
         'time'                  => '時間',
         'nickname'              => 'ニックネーム',
         'body'                  => '内容',
@@ -137,6 +139,7 @@ return [
         'end_expect'            => '完了予定日',
         'department_id'         => '部署',
         'type_id'               => '顧客種類',
+        'location'              => '開催場所',
 
     ],
     'start_time' => '時間が重複しています。',

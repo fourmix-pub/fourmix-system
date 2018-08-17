@@ -14,12 +14,12 @@ Route::middleware(['auth'])->group(function () {
     |	入力、閲覧、集計
     |--------------------------------------------------------------------------
     */
-  
+
     Route::group(['namespace' => 'Dailies'], function () {
         //日報一覧
         Route::resource('dailies', 'DailyController', ['except' => [
-        'create', 'edit', 'show',
-    ]]);
+            'create', 'edit', 'show',
+        ]]);
         Route::get('dailies/search', 'DailyController@searchByDate')->name('dailies.search');
         //日報閲覧
         Route::get('dailies/view', 'DailyController@view')->name('daily.view');
@@ -146,3 +146,33 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+
+
+/*
+|--------------------------------------------------------------------------
+| イベント管理関連ルート
+|--------------------------------------------------------------------------
+*/
+//一覧表示
+Route::get('events', 'Events\EventController@index')->name('events.events');
+//詳細表示
+Route::get('events/detail/{event}', 'Events\EventController@detail')->name('events.detail');
+//新規作成
+Route::get('events/create', 'Events\EventController@create')->name('events.create');
+Route::post('events', 'Events\EventController@store')->name('events.store');
+//出欠登録
+Route::post('events/{event}/entry', 'Events\EventController@entry')->name('events.entry');
+//OPEN/CLOSEの変更
+Route::put('events/{event}/update', 'Events\EventController@update')->name('events.update');
+//イベント削除
+Route::delete('events/{event}/delete', 'Events\EventController@destroy')->name('events.destroy');
+
+
+/*
+|--------------------------------------------------------------------------
+| ランチマッチング関連ルート
+|--------------------------------------------------------------------------
+*/
+//参加申し込み
+Route::get('matching', 'Matches\MatchController@index')->name('matching');
+Route::put('matching/entry', 'Matches\MatchController@update')->name('matching.entry');
