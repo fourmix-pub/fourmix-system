@@ -88,4 +88,13 @@ class UserController extends Controller
     {
         return response()->delete($this->repository->delete($user));
     }
+
+    /**
+     * 開発向け設定
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function developer()
+    {
+        return view('settings.developer.index')->with('nav', $this->nav)->with('mode', 'developer');
+    }
 }
