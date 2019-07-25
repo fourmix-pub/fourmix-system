@@ -18,13 +18,13 @@ class DailyResource extends Resource
             'id' => $this->id,
             'attributes' => $this->resource->attributes(),
             'relationships' => [
-                'user' => '',
-                'work_type' => new WorkTypeResource($this->workTypeId),
-                'job_type' => new JobTypeResource($this->jobTypeId),
-                'project' => ''
+                'user' => new UserResource($this->user),
+                'work_type' => new WorkTypeResource($this->workType),
+                'job_type' => new JobTypeResource($this->jobType),
+                'project' => new ProjectResource($this->project),
             ],
             'links' => [
-                'self' => route('dailyApi', ['daily' => $this->id]),
+                'self' => null,
             ]
         ];
     }

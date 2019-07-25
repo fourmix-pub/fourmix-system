@@ -18,7 +18,7 @@ class WorkTypePreProjectAnalysisResource extends Resource
             'id' => $this->id,
             'attributes' => $this->resource->attributes(),
             'relationships' => [
-                'project' => new ProjectResource($this->project)
+                'project' => new ProjectResource($this->project),
             ],
             'links' => [
                 'self' => null,

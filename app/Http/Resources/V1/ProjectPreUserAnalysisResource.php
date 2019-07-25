@@ -18,7 +18,7 @@ class ProjectPreUserAnalysisResource extends Resource
             'id' => $this->id,
             'attributes' => $this->resource->attributes(),
             'relationships' => [
-                'user' => ''
+                'user' => new UserResource($this->user),
             ],
             'links' => [
                 'self' => null,

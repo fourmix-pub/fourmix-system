@@ -19,7 +19,7 @@ class CustomerResource extends Resource
             'attributes' => $this->resource->attributes(),
             'relationships' => [],
             'links' => [
-                'self' => route('customerApi'),
+                'self' => null,
             ]
         ];
     }

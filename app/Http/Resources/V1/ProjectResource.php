@@ -19,7 +19,7 @@ class ProjectResource extends Resource
             'attributes' => $this->resource->attributes(),
             'relationships' => [
                 'customer' => new  CustomerResource($this->customer),
-                'user' => ''
+                'user' => new UserResource($this->user),
             ],
             'links' => [
                 'self' => null,
