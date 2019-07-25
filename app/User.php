@@ -21,6 +21,10 @@ class User extends Authenticatable
         'name', 'email', 'password', 'department_id', 'cost', 'start', 'end', 'is_resignation'
     ];
 
+    protected $hidden = [
+        'password', 'id', 'remember_token'
+    ];
+
     /**
      * タイミングイベント定義。
      *
@@ -111,5 +115,24 @@ class User extends Authenticatable
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new ResetPasswordNotification($token));
+    }
+
+    /**
+     * カラム配列で取得
+     * @return array
+     */
+    public function attributes()
+    {
+        return $this->attributesToArray();
+    }
+
+    /**
+     * モデルデータをリフレッシュする
+     * @param array $with
+     * @return mixed
+     */
+    public function reload($with = [])
+    {
+        return static::whereId($this->id)->with($with)->first();
     }
 }
