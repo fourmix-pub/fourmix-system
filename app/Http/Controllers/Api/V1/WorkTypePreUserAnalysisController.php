@@ -3,18 +3,18 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Resources\V1\WorkTypePreUserAnalysisResource;
-use Illuminate\Http\Request;
+use App\Models\Daily;
 use App\Http\Controllers\Controller;
 
 class WorkTypePreUserAnalysisController extends Controller
 {
     /**
      * 担当者別に作業分類を取得
-     * @param Request $request
-     * @return WorkTypePreUserAnalysisResource
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
-    public function index(Request $request)
+    public function index()
     {
-        return WorkTypePreUserAnalysisResource::collection($request->user()->sumByWorkType());
+
+        return WorkTypePreUserAnalysisResource::collection(Daily::userFilter()->get());
     }
 }

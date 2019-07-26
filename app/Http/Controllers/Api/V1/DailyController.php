@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Contracts\Tools\CalculateContract;
 use App\Http\Resources\V1\DailyResource;
 use App\Models\Daily;
 use Illuminate\Http\Request;
@@ -9,33 +10,24 @@ use App\Http\Controllers\Controller;
 
 class DailyController extends Controller
 {
-    /**
-     * 日報一覧を取得するAPI
-     * @param Request $request
-     * @return mixed
-     */
-    public function index(Request $request)
-    {
-        return DailyResource::collection($request->user()->dailies()->with(['user'])->latest()->get());
-    }
 
     /**
-     * 日報を1件取得するAPI
-     * @param Daily $daily
-     * @return DailyResource
+     * 日報一覧を取得するAPI
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
-    public function show(Daily $daily)
+    public function index()
     {
-        $daily->load(['user']);
-        return new DailyResource($daily);
+        return DailyResource::collection(Daily::filter()->latest()->paginate(50));
     }
+
+
 
     /**
      * 日報を作成するAPI
      * @param Request $request
      * @return mixed
      */
-    public function store(Request $request)
+    public function store(Request $request, CalculateContract $contract)
     {
         $this->validate($request , [
             'user_id' =>'required|int',
@@ -45,9 +37,7 @@ class DailyController extends Controller
             'date' => 'required|String',
             'start' => 'required|String',
             'end' => 'required|String',
-            'rest' => 'required|String',
-            'time' => 'required|double',
-            'cost' => 'required|int',
+            'rest' => 'int|nullable',
             'note' => 'required|String'
         ]);
 
@@ -61,9 +51,10 @@ class DailyController extends Controller
         $daily->start = $request->input('start');
         $daily->end = $request->input('end');
         $daily->rest = $request->input('rest');
-        $daily->time = $request->input('time');
-        $daily->cost = $request->input('cost');
         $daily->note = $request->input('note');
+
+        $daily->time = $contract->dailyTime($daily);
+        $daily->cost = $contract->dailyCost($daily, $request->user());
 
         $daily->save();
 
@@ -79,7 +70,7 @@ class DailyController extends Controller
      * @param Daily $daily
      * @return DailyResource
      */
-    public function update(Request $request, Daily $daily)
+    public function update(Request $request, Daily $daily, CalculateContract $contract)
     {
         $this->validate($request , [
             'user_id' =>'required|int',
@@ -89,9 +80,7 @@ class DailyController extends Controller
             'date' => 'required|String',
             'start' => 'required|String',
             'end' => 'required|String',
-            'rest' => 'required|String',
-            'time' => 'required|double',
-            'cost' => 'required|int',
+            'rest' => 'int|nullable',
             'note' => 'required|String'
         ]);
 
@@ -119,15 +108,12 @@ class DailyController extends Controller
         if ($request->has('rest')) {
             $daily->rest = $request->input('rest');
         }
-        if ($request->has('time')) {
-            $daily->time = $request->input('time');
-        }
-        if ($request->has('cost')) {
-            $daily->cost = $request->input('cost');
-        }
         if ($request->has('note')) {
             $daily->note = $request->input('note');
         }
+
+        $daily->time = $contract->dailyTime($daily);
+        $daily->cost = $contract->dailyCost($daily, $request->user());
 
         $daily->update();
 

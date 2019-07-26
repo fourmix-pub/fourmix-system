@@ -3,18 +3,17 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Resources\V1\WorkTypePreProjectAnalysisResource;
-use Illuminate\Http\Request;
+use App\Models\Daily;
 use App\Http\Controllers\Controller;
 
 class WorkTypePreProjectAnalysisController extends Controller
 {
     /**
      * プロジェクト別に作業分類を取得
-     * @param Request $request
-     * @return WorkTypePreProjectAnalysisResource
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
-    public function index(Request $request)
+    public function index()
     {
-        return WorkTypePreProjectAnalysisResource::collection($request->projrct()->sumByWorkType());
+        return WorkTypePreProjectAnalysisResource::collection(Daily::projectFilter()->get());
     }
 }

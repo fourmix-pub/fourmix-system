@@ -3,18 +3,19 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Resources\V1\ProjectResource;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class ProjectController extends Controller
 {
+
     /**
      * プロジェクト一覧取得
-     * @param Request $request
-     * @return ProjectResource
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
-    public function index(Request $request)
+    public function index()
     {
-        return ProjectResource::collection($request->project());
+        return ProjectResource::collection(Project::all());
     }
 }
