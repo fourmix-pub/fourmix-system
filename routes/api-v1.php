@@ -8,10 +8,12 @@ use Illuminate\Http\Request;
 |--------------------------------------------------------------------------
 */
 Route::middleware(['auth:api'])->group(function () {
-    Route::get('/users/profile', 'UserController@index')->name('userProfileApi');
-    Route::get('/users', 'UserController@index')->name('uesrApi');
-    Route::get('/users/profile', 'UserController@index')->name('updateUserProfileApi');
-    Route::get('/users/dailies', 'UserController@dailies')->name('userDailiesApi');
+    Route::get('/users/profile', 'UserController@profile')->name('profileApi');
+    Route::get('/users', 'UserController@index')->name('usersApi');
+    Route::patch('/users/profile/{user}', 'UserController@update')->name('updateUserApi');
+    Route::get('/users/dailies', 'UserController@myDailies')->name('myDailiesApi');
+
+    Route::get('/departments', 'DepartmentController@index')->name('departmentApi');
 
     Route::get('/dailies', 'DailyController@index')->name('dailiesApi');
     Route::post('/dailies', 'DailyController@store')->name('storeDailyApi');
