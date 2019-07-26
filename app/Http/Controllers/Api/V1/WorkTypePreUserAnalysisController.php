@@ -14,7 +14,6 @@ class WorkTypePreUserAnalysisController extends Controller
      */
     public function index()
     {
-
         return WorkTypePreUserAnalysisResource::collection(Daily::userFilter()->get());
     }
 }
