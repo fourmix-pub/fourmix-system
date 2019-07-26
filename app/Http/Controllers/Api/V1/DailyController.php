@@ -29,7 +29,7 @@ class DailyController extends Controller
      */
     public function store(Request $request, CalculateContract $contract)
     {
-        $this->validate($request , [
+        $this->validate($request, [
             'user_id' =>'required|int',
             'work_type_id' => 'required|int',
             'job_type_id' => 'required|int',
@@ -72,7 +72,7 @@ class DailyController extends Controller
      */
     public function update(Request $request, Daily $daily, CalculateContract $contract)
     {
-        $this->validate($request , [
+        $this->validate($request, [
             'user_id' =>'required|int',
             'work_type_id' => 'required|int',
             'job_type_id' => 'required|int',
@@ -132,6 +132,6 @@ class DailyController extends Controller
     {
         $daily->delete();
 
-        return response(null,204);
+        return response(null, 204);
     }
 }

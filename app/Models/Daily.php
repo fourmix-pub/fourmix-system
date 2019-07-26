@@ -86,7 +86,6 @@ class Daily extends Model
         $query->when($filter->get('ended_time'), function ($query, $value) {
             $query->where('ended_time', '<=', $value);
         });
-
     }
 
     /**
