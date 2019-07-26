@@ -33,7 +33,8 @@ class UserController extends Controller
      * @param User $user
      * @return UserResource
      */
-    public  function update(Request $request, User $user) {
+    public function update(Request $request, User $user)
+    {
         $this->validate($request, [
             'name' => 'required|String|min:1|max:50',
             'email' => 'required|String|min:1',
@@ -45,6 +46,5 @@ class UserController extends Controller
         $user->update();
 
         return new UserResource($user);
-
     }
 }
