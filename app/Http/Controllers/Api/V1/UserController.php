@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Http\Resources\V1\DailyResource;
 use App\Http\Resources\V1\UserResource;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -24,7 +26,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return UserResource::collection();
+        return UserResource::collection(User::with(['department'])->get());
     }
 
     /**
@@ -36,8 +38,8 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $this->validate($request, [
-            'name' => 'required|String|min:1|max:50',
-            'email' => 'required|String|min:1',
+            'name' => 'sometimes|required|string|min:1|max:50',
+            'email' => 'sometimes|required|email|min:1',
         ]);
 
         $user->name = $request->input('name');
@@ -46,5 +48,10 @@ class UserController extends Controller
         $user->update();
 
         return new UserResource($user);
+    }
+
+    public function myDailies(Request $request)
+    {
+        return DailyResource::collection($request->user()->dailies()->latest()->paginate(50));
     }
 }
