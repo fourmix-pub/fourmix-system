@@ -38,7 +38,7 @@ class DailyController extends Controller
             'start' => 'required|String',
             'end' => 'required|String',
             'rest' => 'int|nullable',
-            'note' => 'required|String'
+            'note' => 'String|nullable'
         ]);
 
         $daily = new Daily();

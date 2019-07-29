@@ -16,10 +16,14 @@ class ProjectPreUserAnalysisResource extends Resource
     {
         return [
             'id' => $this->id,
-            'attributes' => $this->resource->attributes(),
-            'relationships' => [
-                'user' => new UserResource($this->user),
+            'attributes' => [
+                'customer_name' => $this->resource->project->customer->name,
+                'project_name' => $this->resource->project->name,
+                'work_time' => $this->resource->sum_time,
+                'work_cost' => $this->resource->sum_cost,
+                'work_cost_with_format' => number_format($this->resource->sum_cost),
             ],
+            'relationships' => null,
             'links' => [
                 'self' => null,
             ]

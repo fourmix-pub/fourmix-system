@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Resources\V1\WorkTypePreProjectAnalysisResource;
-use App\Models\Daily;
 use App\Http\Controllers\Controller;
+use App\Models\Project;
 
 class WorkTypePreProjectAnalysisController extends Controller
 {
@@ -14,6 +14,13 @@ class WorkTypePreProjectAnalysisController extends Controller
      */
     public function index()
     {
-        return WorkTypePreProjectAnalysisResource::collection(Daily::projectFilter()->get());
+        $project = null;
+
+        if ($projectId = request('project_id')) {
+            $project = Project::where('id', $projectId)
+                ->where('can_display', 0)->first();
+        }
+
+        return WorkTypePreProjectAnalysisResource::collection($project->sumByWorkType);
     }
 }

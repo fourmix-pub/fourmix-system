@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Resources\V1\WorkTypePreUserAnalysisResource;
-use App\Models\Daily;
 use App\Http\Controllers\Controller;
+use App\User;
 
 class WorkTypePreUserAnalysisController extends Controller
 {
@@ -14,6 +14,12 @@ class WorkTypePreUserAnalysisController extends Controller
      */
     public function index()
     {
-        return WorkTypePreUserAnalysisResource::collection(Daily::userFilter()->get());
+        $user = null;
+
+        if ($userId = request('user_id')) {
+            $user = User::where('id', $userId)->first();
+        }
+
+        return WorkTypePreUserAnalysisResource::collection($user->sumByWorkType);
     }
 }
