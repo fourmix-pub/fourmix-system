@@ -23,6 +23,7 @@ class ProjectPreUserAnalysisResource extends Resource
                 'work_cost' => $this->resource->sum_cost,
                 'work_cost_with_format' => number_format($this->resource->sum_cost),
             ],
+            'relationships' => [],
             'links' => [
                 'self' => null,
             ]
