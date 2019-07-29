@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Resources\V1\UserPreProjectAnalysisResource;
-use App\Models\Daily;
 use App\Http\Controllers\Controller;
+use App\Models\Project;
 
 class UserPreProjectAnalysisController extends Controller
 {
@@ -14,6 +14,13 @@ class UserPreProjectAnalysisController extends Controller
      */
     public function index()
     {
-        return UserPreProjectAnalysisResource::collection(Daily::projectFilter()->get());
+        $project = null;
+
+        if ($projectId = request('project_id')) {
+            $project = Project::where('id', $projectId)
+                ->where('can_display', 0)->first();
+        }
+
+        return UserPreProjectAnalysisResource::collection($project->sumByUser);
     }
 }
