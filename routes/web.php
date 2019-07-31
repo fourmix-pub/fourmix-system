@@ -5,7 +5,7 @@
 | Web Routes
 |--------------------------------------------------------------------------
 */
-
+Route::view('/privacy', 'pages.privacy');
 Route::middleware(['auth'])->group(function () {
 
     /*
