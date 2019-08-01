@@ -62,8 +62,6 @@ class Daily extends Model
     {
         $filter = collect(request()->input('filter', []));
 
-        info("$filter", [$filter]);
-
         // 担当者ID
         $query->when($filter->get('user_id'), function ($query, $value) {
             $query->where('user_id', $value);
