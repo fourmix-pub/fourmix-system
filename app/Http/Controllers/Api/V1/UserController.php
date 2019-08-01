@@ -47,11 +47,11 @@ class UserController extends Controller
             'password' => 'nullable|min:6|max:15|confirmed',
         ]);
 
-        if($request->input('name')) {
+        if ($request->input('name')) {
             $user->name = $request->input('name');
         }
 
-        if($request->input('password')) {
+        if ($request->input('password')) {
             if (Hash::check($request->input('old_password'), $user->password)) {
                 $user->password = bcrypt($request->input('password'));
             } else {

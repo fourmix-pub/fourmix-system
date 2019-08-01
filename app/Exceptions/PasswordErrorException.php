@@ -3,7 +3,6 @@
 
 namespace App\Exceptions;
 
-
 class PasswordErrorException extends \Exception
 {
     public function render($request)
