@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Resources\V1\ProjectPreUserAnalysisResource;
-use App\Models\Daily;
 use App\Http\Controllers\Controller;
+use App\User;
 
 class ProjectPreUserAnalysisController extends Controller
 {
@@ -14,6 +14,12 @@ class ProjectPreUserAnalysisController extends Controller
      */
     public function index()
     {
-        return ProjectPreUserAnalysisResource::collection(Daily::userFilter()->get());
+        $user = null;
+
+        if ($userId = request('user_id')) {
+            $user = User::where('id', $userId)->first();
+        }
+
+        return ProjectPreUserAnalysisResource::collection($user->sumByProject);
     }
 }
