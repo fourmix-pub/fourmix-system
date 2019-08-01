@@ -17,7 +17,7 @@ class DailyController extends Controller
      */
     public function index()
     {
-        return DailyResource::collection(Daily::filter()->latest()->paginate(50));
+        return DailyResource::collection(Daily::filter()->latest('date')->latest('end')->paginate(50));
     }
 
 
@@ -30,20 +30,19 @@ class DailyController extends Controller
     public function store(Request $request, CalculateContract $contract)
     {
         $this->validate($request, [
-            'user_id' =>'required|int',
             'work_type_id' => 'required|int',
             'job_type_id' => 'required|int',
             'project_id' => 'required|int',
-            'date' => 'required|String',
-            'start' => 'required|String',
-            'end' => 'required|String',
-            'rest' => 'int|nullable',
-            'note' => 'String|nullable'
+            'date' => 'required|string|date_format:Y-m-d',
+            'start' => 'required|string|startTime|date_format:H:i',
+            'end' => 'required|string|endTime|after:start|date_format:H:i',
+            'rest' => 'nullable|int',
+            'note' => 'nullable|string'
         ]);
 
         $daily = new Daily();
 
-        $daily->user_id = $request->input('user_id');
+        $daily->user_id = $request->user()->id;
         $daily->work_type_id = $request->input('work_type_id');
         $daily->job_type_id = $request->input('job_type_id');
         $daily->project_id = $request->input('project_id');
@@ -73,20 +72,16 @@ class DailyController extends Controller
     public function update(Request $request, Daily $daily, CalculateContract $contract)
     {
         $this->validate($request, [
-            'user_id' =>'required|int',
-            'work_type_id' => 'required|int',
-            'job_type_id' => 'required|int',
-            'project_id' => 'required|int',
-            'date' => 'required|String',
-            'start' => 'required|String',
-            'end' => 'required|String',
-            'rest' => 'int|nullable',
-            'note' => 'required|String'
+            'work_type_id' => 'nullable|int',
+            'job_type_id' => 'nullable|int',
+            'project_id' => 'nullable|int',
+            'date' => 'nullable|string|date_format:Y-m-d',
+            'start' => 'nullable|string|date_format:H:i',
+            'end' => 'nullable|string|after:start|date_format:H:i',
+            'rest' => 'nullable|int',
+            'note' => 'nullable|string'
         ]);
 
-        if ($request->has('user_id')) {
-            $daily->user_id = $request->input('user_id');
-        }
         if ($request->has('work_type_id')) {
             $daily->work_type_id = $request->input('work_type_id');
         }
