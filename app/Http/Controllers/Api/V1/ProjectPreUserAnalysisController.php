@@ -20,6 +20,17 @@ class ProjectPreUserAnalysisController extends Controller
             $user = User::where('id', $userId)->first();
         }
 
-        return ProjectPreUserAnalysisResource::collection($user->sumByProject);
+        try {
+            return ProjectPreUserAnalysisResource::collection($user->sumByProject);
+        } catch (\Exception $exception) {
+            return response()->json([
+                'message' => 'ErrorException',
+                'errors' => [
+                    'project_id' => [
+                        '該当するデータが存在しません。'
+                    ]
+                ]
+            ], 422);
+        }
     }
 }

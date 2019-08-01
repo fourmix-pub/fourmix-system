@@ -20,6 +20,17 @@ class WorkTypePreUserAnalysisController extends Controller
             $user = User::where('id', $userId)->first();
         }
 
-        return WorkTypePreUserAnalysisResource::collection($user->sumByWorkType);
+        try {
+            return WorkTypePreUserAnalysisResource::collection($user->sumByWorkType);
+        } catch (\Exception $exception) {
+            return response()->json([
+                'message' => 'ErrorException',
+                'errors' => [
+                    'project_id' => [
+                        '該当するデータが存在しません。'
+                    ]
+                ]
+            ], 422);
+        }
     }
 }

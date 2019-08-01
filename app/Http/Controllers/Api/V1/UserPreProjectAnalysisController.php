@@ -21,6 +21,17 @@ class UserPreProjectAnalysisController extends Controller
                 ->where('can_display', 0)->first();
         }
 
-        return UserPreProjectAnalysisResource::collection($project->sumByUser);
+        try {
+            return UserPreProjectAnalysisResource::collection($project->sumByUser);
+        } catch (\Exception $exception) {
+            return response()->json([
+                'message' => 'ErrorException',
+                'errors' => [
+                    'project_id' => [
+                        '該当するデータが存在しません。'
+                    ]
+                ]
+            ], 422);
+        }
     }
 }

@@ -17,7 +17,7 @@ class DailyController extends Controller
      */
     public function index()
     {
-        return DailyResource::collection(Daily::filter()->latest('date')->latest('end')->paginate(50));
+        return DailyResource::collection(Daily::filter()->latest('date')->latest('end')->paginate(500));
     }
 
 

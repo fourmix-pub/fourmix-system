@@ -21,6 +21,17 @@ class WorkTypePreProjectAnalysisController extends Controller
                 ->where('can_display', 0)->first();
         }
 
-        return WorkTypePreProjectAnalysisResource::collection($project->sumByWorkType);
+        try {
+            return WorkTypePreProjectAnalysisResource::collection($project->sumByWorkType);
+        } catch (\Exception $exception) {
+            return response()->json([
+                'message' => 'ErrorException',
+                'errors' => [
+                    'project_id' => [
+                        '該当するデータが存在しません。'
+                    ]
+                ]
+            ], 422);
+        }
     }
 }
