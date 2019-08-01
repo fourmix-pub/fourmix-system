@@ -79,12 +79,12 @@ class Daily extends Model
 
         // 開始日
         $query->when($filter->get('started_time'), function ($query, $value) {
-            $query->where('started_time', '>=', $value);
+            $query->where('date', '>=', $value);
         });
 
         // 終了日
         $query->when($filter->get('ended_time'), function ($query, $value) {
-            $query->where('ended_time', '<=', $value);
+            $query->where('date', '<=', $value);
         });
     }
 
