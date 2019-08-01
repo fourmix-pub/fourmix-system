@@ -32,7 +32,5 @@ class WorkTypePreUserAnalysisController extends Controller
                 ]
             ], 422);
         }
-
-
     }
 }
