@@ -62,6 +62,8 @@ class Daily extends Model
     {
         $filter = collect(request()->input('filter', []));
 
+        info("$filter", [$filter]);
+
         // 担当者ID
         $query->when($filter->get('user_id'), function ($query, $value) {
             $query->where('user_id', $value);
@@ -79,12 +81,12 @@ class Daily extends Model
 
         // 開始日
         $query->when($filter->get('started_time'), function ($query, $value) {
-            $query->where('started_time', '>=', $value);
+            $query->where('date', '>=', $value);
         });
 
         // 終了日
         $query->when($filter->get('ended_time'), function ($query, $value) {
-            $query->where('ended_time', '<=', $value);
+            $query->where('date', '<=', $value);
         });
     }
 
