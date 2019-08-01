@@ -66,6 +66,6 @@ class UserController extends Controller
 
     public function myDailies(Request $request)
     {
-        return DailyResource::collection($request->user()->dailies()->latest('date')->latest('end')->paginate(1));
+        return DailyResource::collection($request->user()->dailies()->latest('date')->latest('end')->paginate(50));
     }
 }
