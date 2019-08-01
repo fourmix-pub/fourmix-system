@@ -11,13 +11,18 @@ use App\Notifications\ResetPasswordNotification;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use DB;
+use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use HasApiTokens, Notifiable;
 
     protected $fillable = [
         'name', 'email', 'password', 'department_id', 'cost', 'start', 'end', 'is_resignation'
+    ];
+
+    protected $hidden = [
+        'password', 'id', 'remember_token'
     ];
 
     /**
@@ -110,5 +115,24 @@ class User extends Authenticatable
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new ResetPasswordNotification($token));
+    }
+
+    /**
+     * カラム配列で取得
+     * @return array
+     */
+    public function attributes()
+    {
+        return $this->attributesToArray();
+    }
+
+    /**
+     * モデルデータをリフレッシュする
+     * @param array $with
+     * @return mixed
+     */
+    public function reload($with = [])
+    {
+        return static::whereId($this->id)->with($with)->first();
     }
 }

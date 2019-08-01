@@ -5,7 +5,7 @@
 | Web Routes
 |--------------------------------------------------------------------------
 */
-
+Route::view('/privacy', 'pages.privacy');
 Route::middleware(['auth'])->group(function () {
 
     /*
@@ -107,6 +107,8 @@ Route::middleware(['auth'])->group(function () {
         //プロフィール変更
         Route::get('/profile', 'UserController@editProfile')->name('profile');
         Route::patch('/profile/{user}', 'UserController@updateProfile')->name('update-profile');
+        //開発向け設定
+        Route::get('/developer', 'UserController@developer')->name('developer');
     });
 
     /*

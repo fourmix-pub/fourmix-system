@@ -14,6 +14,12 @@
                     <span class="hidden-xs">パスワード変更</span>
                 </a>
             </li>
+            <li role="presentation" class="@if($mode == 'developer') active @endif">
+                <a href="{{ route('developer') }}">
+                    <i class="fa fa-jpy" aria-hidden="true"></i>&nbsp;
+                    <span class="hidden-xs">開発向け設定</span>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
