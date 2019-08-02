@@ -19,7 +19,7 @@ class ProjectPreUserAnalysisResource extends Resource
             'attributes' => [
                 'customer_name' => $this->resource->project->customer->name,
                 'project_name' => $this->resource->project->name,
-                'work_time' => $this->resource->sum_time,
+                'work_time' => round($this->resource->sum_time),
                 'work_cost' => (int)$this->resource->sum_cost,
                 'work_cost_with_format' => number_format($this->resource->sum_cost),
             ],
