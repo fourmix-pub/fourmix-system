@@ -17,7 +17,18 @@ class DailyController extends Controller
      */
     public function index()
     {
-        return DailyResource::collection(Daily::filter()->latest('date')->latest('end')->paginate(500));
+        return DailyResource::collection(
+            Daily::filter()
+                ->with([
+                    'user',
+                    'project',
+                    'workType',
+                    'jobType',
+                ])
+                ->latest('date')
+                ->latest('end')
+                ->paginate(500)
+        );
     }
 
 
@@ -56,6 +67,13 @@ class DailyController extends Controller
         $daily->cost = $contract->dailyCost($daily, $request->user());
 
         $daily->save();
+
+        $daily->reload([
+            'user',
+            'project',
+            'workType',
+            'jobType',
+        ]);
 
         return (new DailyResource($daily))
             ->response()
@@ -111,6 +129,13 @@ class DailyController extends Controller
         $daily->cost = $contract->dailyCost($daily, $request->user());
 
         $daily->update();
+
+        $daily->reload([
+            'user',
+            'project',
+            'workType',
+            'jobType',
+        ]);
 
         return (new DailyResource($daily))
             ->response()
