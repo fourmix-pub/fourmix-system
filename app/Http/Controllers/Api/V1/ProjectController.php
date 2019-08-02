@@ -16,6 +16,6 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return ProjectResource::collection(Project::latest()->get());
+        return ProjectResource::collection(Project::with(['user','customer'])->latest()->get());
     }
 }
