@@ -68,14 +68,12 @@ class DailyController extends Controller
 
         $daily->save();
 
-        $daily->reload([
+        return (new DailyResource($daily->reload([
             'user',
             'project',
             'workType',
             'jobType',
-        ]);
-
-        return (new DailyResource($daily))
+        ])))
             ->response()
             ->setStatusCode(201);
     }
@@ -130,14 +128,12 @@ class DailyController extends Controller
 
         $daily->update();
 
-        $daily->reload([
+        return (new DailyResource($daily->reload([
             'user',
             'project',
             'workType',
             'jobType',
-        ]);
-
-        return (new DailyResource($daily))
+        ])))
             ->response()
             ->setStatusCode(201);
     }
