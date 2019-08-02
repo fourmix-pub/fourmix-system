@@ -14,7 +14,7 @@ return [
     */
 
     'name' => 'Fourmix.Co.,Ltd.',
-    'version' => '3.0.2',
+    'version' => '3.0.3',
     'mail-title' => 'Fourmix 社内システム',
 
     /*
