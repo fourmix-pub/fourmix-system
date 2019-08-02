@@ -64,8 +64,25 @@ class UserController extends Controller
         return new UserResource($user);
     }
 
+    /**
+     * ユーザーの日報一覧
+     * @param Request $request
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     */
     public function myDailies(Request $request)
     {
-        return DailyResource::collection($request->user()->dailies()->latest('date')->latest('end')->paginate(50));
+        return DailyResource::collection(
+            $request->user()
+                ->dailies()
+                ->with([
+                    'user',
+                    'project',
+                    'workType',
+                    'jobType',
+                ])
+                ->latest('date')
+                ->latest('end')
+                ->paginate(50)
+        );
     }
 }
