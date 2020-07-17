@@ -15,7 +15,7 @@
     "cross-env": "^5.0.1",
     "jquery": "^3.4.0",
     "laravel-mix": "^1.0",
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.19",
     "vue": "^2.1.10",
     "font-awesome": "^4.7.0",
     "bootstrap-select": "^1.12.1",
