@@ -20,7 +20,7 @@
     "font-awesome": "^4.7.0",
     "bootstrap-select": "^1.12.1",
     "eonasdan-bootstrap-datetimepicker": "^4.17.42",
-    "moment": "^2.17.1",
+    "moment": "^2.29.4",
     "bootstrap-markdown": "^2.10.0",
     "marked": "^0.3.18"
   },
